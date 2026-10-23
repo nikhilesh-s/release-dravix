@@ -1,0 +1,170 @@
+{
+  "round": "adoption_gate_v2",
+  "kind": "protocol rule, not a modelling round (lever sweep item B0, finding models-protocol-adjusted-gate). Nothing is trained or scored to write it.",
+  "status": "approved (D1, 2026-10-07, owner-delegated; see amendments)",
+  "declared": "drafted by Opus 5.5 on Oct 6 2026 from plans/LEVER_SWEEP_2026-10-06.md B0, before any round it would govern; see git commit time. It binds only after Arnav approves D1 in writing; the orchestrator then quotes the approval under 'amendments' and sets status to 'declared'.",
+  "authority": "none yet. Plan B0: 'Needs Arnav: yes (it is a win-rule change)'. Plan D1: 'approve the B0 gate before any round'.",
+  "banned_moves_checked": true,
+  "banned_moves_note": "Changing the win rule after seeing a result is banned, so this rule is prospective only (see not_retroactive) and needs a human decision. It does not pick a model by its CI: selection stays by repeated-GKF mean, and the bound below is only an extra necessary condition. It can block an adoption; it can never promote, and it never demotes a record. eval_protocol.bootstrap_ci and the CI method of record are unchanged.",
+
+  "rule_in_one_line": "For every future round, a candidate replaces a number of record only if (G1) it beats the incumbent in >= 8/10 paired repeats, (G2) its repeat-0 ci_lo >= the incumbent's repeat-0 ci_lo, and (G3) the one-sided 95% studentised max-T paired group-bootstrap lower bound of its repeat-mean R2 gain, max taken over all of that target's candidates in the round, is > 0; then the critic pass, as now.",
+
+  "not_retroactive": [
+    "PROSPECTIVE ONLY. This gate does not apply to any past round: phrr_round1 / phrr_round1_promote, cr_round1 / 1b, figra_round1, tti_round1 / 2, loi_round1-8, loi_round8_supp, blend_round1, pomazi_round1 / 1b, stale_rebaseline_round1b, every snapshot re-score, and any round whose first candidate score was computed before the D1 approval is recorded in this file.",
+    "No number of record is re-evaluated, demoted or re-worded because of this gate. exp119 stays the FIGRA number of record, flagged 'gain not established' exactly as its numbers_of_record note already says (critic: top 5 materials give 116% of the gain; adjusted lower bound -0.090 under the blend_round1 critic's own construction). exp074 (pHRR), exp046 (TTI), exp045 (THR), exp117 (Char Residue), exp115 (LOI) and their sub-records are unchanged.",
+    "Nobody computes this gate on a past round's OOF predictions. The plan's retrospective statements (would have rejected FIGRA b1 at -0.090, kept CR b1 at +0.030 and LOI r8d at +0.006) come from the critics' different constructions (1000 draws, not 2000; blend_round1: studentised max-T over {b1, b2} with SD ddof 0, plus Bonferroni over 4 targets via the 1 - 0.05/4 quantile of max T; loi_round8: studentised max-T over its 4 candidates) and stay descriptive history only."
+  ],
+
+  "scope": {
+    "applies_to": "every adoption decision, i.e. a candidate model replacing an entry of experiments/numbers_of_record.json (targets pHRR, TTI, THR, Char Residue, LOI, FIGRA, and sub-records such as LOI proxy_free and the pomazi_recon entries), in any round whose first candidate score is computed after D1 approval is recorded here. This includes the planned round 9 (B1 + B2 + B3), B4 and any C1 candidates.",
+    "does_not_apply_to": [
+      "snapshot re-scores under a pre-declared snapshot rule (data_pass_oct4.json, loi_snapshot_update2.json, C1's re-baseline): there the re-scored incumbent becomes the record whichever way it moves; that is not an adoption between candidates",
+      "report-only deliverables and external checks (plan A2, A3, A4, A6) and supplementary protocols (category-GKF, protocol A/C, per-flux, top-k removal); they never promote anyway"
+    ],
+    "if_D1_pending_or_declined": "any round config that cites this file is BLOCKED (FLAG, blocker file) until Arnav states which rule it runs under. An executor never falls back to the old two-condition rule on its own. A fallback rule that a round config pre-declares for the case 'D1 explicitly declined' (e.g. cr_round2.json rule_B) counts as Arnav's statement only once Arnav has declined D1 and approved that round config; D1 merely unanswered is never a decline.",
+    "protocols_without_10_repeats": "an adoption decision whose primary protocol has no 10-repeat repeated GroupKFold (e.g. the pomazi_recon entries, whose primary protocol is a resin-system hold-out with one OOF and a formulation bootstrap) cannot be gated as written: G1 is undefined and the repeat-count check fails. Such a decision is FLAGged to Arnav (exit_triggers) and parked; it is never decided by the old rule or by an executor-adapted version of this gate."
+  },
+
+  "definitions": {
+    "incumbent": "the current number-of-record model for the target, re-run in the round's step 1 on the round's scoring rows; step 1 must reproduce the record (mean and ci_lo within 0.002) or the target is BLOCKED, as in every existing config.",
+    "scoring_rows": "the incumbent's scoring rows, row order and target scale (raw reporting scale, e.g. seconds, kW/m2, %, LOI units; log models back-transformed exactly as eval_protocol does), fixed by the committed round config before any candidate of that target is scored. Every family member must predict every scoring row. Candidates may train on extra rows (e.g. B1 n1) but are scored on these rows only.",
+    "groups": "the incumbent's group array on the scoring rows, exactly as passed to eval_protocol.repeated_group_kfold (material, with the incumbent's merges such as PlasticC -> HIPS; source paper for LOI).",
+    "oof": "for the incumbent and each candidate, the (10, n_rows) out-of-fold prediction array from eval_protocol.repeated_group_kfold(n_splits=5, repeats=10), i.e. GroupKFold(shuffle=True, random_state=r) for r = 0..9, with the same groups for every model, so fold assignment is identical across models (paired). A candidate whose round config declares a different splitter must still produce OOF aligned to these rows and these groups and fold seeds.",
+    "candidate": "every model listed for that target in the committed round config(s), whatever its label: selectable, report-only (e.g. B1 o2) or control (e.g. tti_round2 e4), when it is scored on the target's scoring rows under the primary protocol. Not candidates: the incumbent itself, the step-1 reproduction, diagnostics on other rows or protocols, and any critic post-hoc analysis.",
+    "family": "all candidates of one target in one round. A round, for this rule, is everything scored for that target against the same incumbent on the same scoring rows between two adoption decisions for that target; configs run together (e.g. plan round 9 = B1 + B2 + B3) form one family per target. K = family size. No adjustment across targets: each target's adoption decision is controlled on its own.",
+    "selectable": "family members that the round config allows to replace the incumbent (not report-only, not control).",
+    "order": "the family's config order, used for exact-tie breaking and for the 'order' array: config by config, configs sorted by plan item label ascending (B1, B2, B3, B4, C1, ...; configs without a plan item label after those, by first git commit time, then by file path), and within a config the order its candidates are listed. For round 9 CR this gives B1's o1, o2, n1, then B2's members, matching cr_round2.json.",
+    "round_label": "<round> in file names: the round label the family's configs share (plan round 9 -> 'round9'); for a family drawn from a single config with no shared label, that config's 'round' field.",
+    "repeat_mean_gain": "theta_c = mean over r = 0..9 of [R2(y, oof_c[r]) - R2(y, oof_inc[r])] = rkf_mean_c - rkf_mean_inc, with sklearn.metrics.r2_score on the full scoring rows.",
+    "paired_wins": "wins_c = number of repeats r with R2(y, oof_c[r]) > R2(y, oof_inc[r]), strictly greater; ties are not wins.",
+    "ci_lo": "eval_protocol.bootstrap_ci(y, oof[0], groups) with its defaults (n_boot 2000, seed 0), lower element; computed for the incumbent and each candidate in the same run."
+  },
+
+  "selection_rule (unchanged order: select first, then gate)": "Among selectable family members, the one with the highest repeated-GKF mean (rkf_mean, full float precision); exact ties go to the one listed first (Python max() over definitions.order). Only that candidate is tested. If it fails any gate condition, the incumbent stays; there is no fallback to the second-best candidate. Round-specific extra conditions in the round config (e.g. tti_round2's 'not adopted if matched by the control') still apply on top.",
+
+  "gate": {
+    "G1_wins": "wins_best >= 8 (of 10).",
+    "G2_ci_lo": "ci_lo_best >= ci_lo_inc, where ci_lo_inc is the incumbent's repeat-0 ci_lo as reproduced in step 1 of the same run (the record's published ci_lo is used only for the step-1 reproduction check).",
+    "G3_maxT_lower_bound": "LB_best > 0 (strictly), with LB defined in bootstrap below.",
+    "then": "critic pass in a fresh context, as now. The critic may block for a bug; it may not adopt a candidate that failed G1, G2 or G3.",
+    "comparisons": "all at full float64 precision, no rounding before comparing."
+  },
+
+  "bootstrap": {
+    "draws": "identical to eval_protocol.bootstrap_ci: rng = np.random.default_rng(0); mats = np.unique(groups); rows_of[m] = np.flatnonzero(groups == m); for b in 0..1999 (in this order): rows_b = np.concatenate([rows_of[m] for m in rng.choice(mats, len(mats))]). One draw sequence per target, shared by the incumbent and every family member (paired). B = 2000, seed 0.",
+    "statistic_per_draw": "d_bc = mean_r R2(y[rows_b], oof_c[r, rows_b]) - mean_r R2(y[rows_b], oof_inc[r, rows_b]), r = 0..9, sklearn.metrics.r2_score with its defaults (force_finite=True, as in bootstrap_ci). OOF predictions are fixed; nothing is refitted per draw. No draw is dropped.",
+    "point_estimate": "theta_c from definitions.repeat_mean_gain (full data, not the bootstrap mean).",
+    "scale": "se_c = sample SD of d_bc over the 2000 draws (ddof=1). If se_c == 0, candidate c's T column is all 0 and LB_c = theta_c.",
+    "studentised_max_T": "T_bc = (d_bc - theta_c) / se_c; M_b = max over c in the family of T_bc; q = np.quantile(M, 0.95) (numpy default method 'linear').",
+    "lower_bound": "LB_c = theta_c - q * se_c: a one-sided 95% lower bound that holds simultaneously for all K family members, so it stays valid for the candidate picked by the selection rule.",
+    "why_studentised": "family members have very different gain variances (an average with the incumbent vs a standalone model such as TabPFN p1); studentising stops the noisiest member from setting q for all. Both earlier critics studentised too (loi_round8 Q6; blend_round1 Q5 before its cross-target Bonferroni step), with 1000 draws.",
+    "K_equals_1": "the bound reduces to the basic (reverse-percentile) one-sided bootstrap bound 2*theta - Q95(d)."
+  },
+
+  "pseudo_code": [
+    "# data/v2/adoption_gate.py (new file; eval_protocol.py is not modified). numpy 2.2.6, scikit-learn 1.7.1 as installed Oct 6.",
+    "import numpy as np",
+    "from sklearn.metrics import r2_score",
+    "from eval_protocol import bootstrap_ci",
+    "N_BOOT, SEED, LEVEL, REPEATS, MIN_WINS = 2000, 0, 0.95, 10, 8",
+    "",
+    "def gate_draws(groups, n_boot=N_BOOT, seed=SEED):",
+    "    # same rng, same group order, same call sequence as eval_protocol.bootstrap_ci",
+    "    rng = np.random.default_rng(seed)",
+    "    mats = np.unique(groups)",
+    "    rows_of = {m: np.flatnonzero(groups == m) for m in mats}",
+    "    return [np.concatenate([rows_of[m] for m in rng.choice(mats, len(mats))]) for _ in range(n_boot)]",
+    "",
+    "def repeat_mean_r2(y, oof, rows):  # oof shape (REPEATS, n)",
+    "    return np.mean([r2_score(y[rows], oof[r, rows]) for r in range(oof.shape[0])])",
+    "",
+    "def adoption_gate_v2(y, groups, oof_inc, oof_cands, order, selectable):",
+    "    # oof_cands: {cand_id: (REPEATS, n) array} for EVERY family member; order: config order; selectable: subset of order",
+    "    n = len(y)",
+    "    assert set(oof_cands) == set(order) and set(selectable) <= set(order) and len(selectable) >= 1",
+    "    for P in [oof_inc, *oof_cands.values()]:",
+    "        assert P.shape == (REPEATS, n) and np.isfinite(P).all()   # else BLOCKED: no adoption decision",
+    "    r2_inc = np.array([r2_score(y, oof_inc[r]) for r in range(REPEATS)])",
+    "    r2 = {c: np.array([r2_score(y, oof_cands[c][r]) for r in range(REPEATS)]) for c in order}",
+    "    theta = {c: float((r2[c] - r2_inc).mean()) for c in order}",
+    "    wins = {c: int((r2[c] > r2_inc).sum()) for c in order}",
+    "    ci_inc = bootstrap_ci(y, oof_inc[0], groups)",
+    "    ci = {c: bootstrap_ci(y, oof_cands[c][0], groups) for c in order}",
+    "",
+    "    draws = gate_draws(groups)",
+    "    # identity check: the gate's draws ARE bootstrap_ci's draws",
+    "    assert np.array_equal(np.percentile([r2_score(y[rw], oof_inc[0, rw]) for rw in draws], [2.5, 97.5]), ci_inc)",
+    "    inc_b = np.array([repeat_mean_r2(y, oof_inc, rw) for rw in draws])",
+    "    d = {c: np.array([repeat_mean_r2(y, oof_cands[c], rw) for rw in draws]) - inc_b for c in order}",
+    "    se = {c: float(d[c].std(ddof=1)) for c in order}",
+    "    T = np.column_stack([(d[c] - theta[c]) / se[c] if se[c] > 0 else np.zeros(N_BOOT) for c in order])",
+    "    q = float(np.quantile(T.max(axis=1), LEVEL))",
+    "    lb = {c: theta[c] - q * se[c] for c in order}",
+    "",
+    "    best = max((c for c in order if c in selectable), key=lambda c: r2[c].mean())   # ties -> first listed",
+    "    g1 = wins[best] >= MIN_WINS",
+    "    g2 = bool(ci[best][0] >= ci_inc[0])   # plain bool, so json.dump works",
+    "    g3 = lb[best] > 0",
+    "    adopt = g1 and g2 and g3   # AND round-specific conditions AND critic pass (outside this function)",
+    "",
+    "    # report-only quantities (never used to adopt, select or demote)",
+    "    q_raw = float(np.quantile(np.max(np.column_stack([d[c] - theta[c] for c in order]), axis=1), LEVEL))",
+    "    report = {c: dict(theta=theta[c], wins=wins[c], ci_lo=float(ci[c][0]), ci_hi=float(ci[c][1]), se=se[c],",
+    "                      lb_maxT=lb[c],",
+    "                      lb_unadjusted=2 * theta[c] - float(np.quantile(d[c], LEVEL)),",
+    "                      lb_raw_maxT=theta[c] - q_raw,",
+    "                      p_boot_gain_le_0=float(np.mean(d[c] <= 0))) for c in order}",
+    "    return dict(K=len(order), q=q, q_raw=q_raw, best=best, G1=g1, G2=g2, G3=g3, adopt_if_critic_passes=adopt,",
+    "                ci_inc=[float(v) for v in ci_inc], n_rows=n, n_groups=len(np.unique(groups)), n_boot=N_BOOT, seed=SEED, per_candidate=report)"
+  ],
+
+  "implementation": {
+    "file": "data/v2/adoption_gate.py, written before the first round that uses it, exactly per pseudo_code (vectorising is allowed only if every output equals the reference loop to 1e-12 on the self-test data). Run with plain python3 (never -O), so the asserts execute.",
+    "self_test_label_free": "an __main__ block on fixed synthetic data: rng = np.random.default_rng(1); groups = np.repeat(np.arange(40), 5); y = 3 * rng.normal(size=40)[groups] + 10 + 0.3 * rng.normal(size=200); incumbent OOF = np.stack([y + rng.normal(scale=2, size=200) for _ in range(10)]). Checks: (a) gate_draws identity: percentiles of R2 over gate_draws equal bootstrap_ci exactly (np.array_equal); (b) three candidates equal to the incumbent's OOF -> every theta == 0, every LB <= 0, G3 False; (c) one candidate equal to y in every repeat (perfect) with the noisy incumbent -> its LB > 0, G1 True; (d) K=1: |lb_maxT - lb_unadjusted| <= 1e-12. Must pass before any real use, else FLAG.",
+    "consistency_checks_in_the_round": "result JSONs round rkf_mean / ci_lo / ci_hi to 4 decimals, so every round script that cites this file also writes, in each family member's result JSON, the full-precision fields rkf_mean_full, ci_lo_full, ci_hi_full and per_repeat_r2 (10 floats), and stores the step-1 incumbent reproduction's full-precision values in the npz as inc_per_repeat_r2 (10) and inc_ci (2). Checks, all to 1e-9 absolute: for every family member, r2_score(y, oof_c[r]) equals per_repeat_r2[r] for each r, their mean equals rkf_mean_full, and bootstrap_ci(y, oof_c[0], groups) equals (ci_lo_full, ci_hi_full); for the incumbent, the same against inc_per_repeat_r2 and inc_ci (the published record JSON is rounded and is checked only within 0.002 in step 1). Any mismatch -> BLOCKED for that target, no adoption decision.",
+    "inputs_saved_by_the_round_script": "experiments/runs/<round>_<target_slug>_oof.npz (<round> per definitions.round_label) with arrays y, groups, row_id (scoring rows in order), oof_incumbent and oof_<cand_id> for every family member, inc_per_repeat_r2, inc_ci, plus order and selectable as string arrays (order per definitions.order). target_slug in {phrr, tti, thr, cr, loi, figra}. Under 1 MB each; the orchestrator commits them with the round's results so the critic can re-run the gate.",
+    "output": "experiments/runs/<round>_<target_slug>_gate_v2.json: the dict returned by adoption_gate_v2, plus 'gate_config': 'experiments/configs/adoption_gate_v2.json'. The adopted candidate's result JSON note and the numbers_of_record note quote q, K and LB_best; if G3 fails, the round summary says 'incumbent stays; gain not established after multiplicity adjustment (LB = x, K = k)'.",
+    "when": "after every family member of that target has been scored and before any adoption statement, blocker, STATUS line or critic brief mentions which candidate won."
+  },
+
+  "reported_only": [
+    "per family member: theta, wins, ci_lo, ci_hi, se, lb_maxT (gate value), lb_unadjusted (single-candidate basic bound), lb_raw_maxT (non-studentised max-T, for comparison only; neither earlier critic used it), p_boot_gain_le_0",
+    "per target: K, q, q_raw, n_rows, n_groups, n_boot, seed",
+    "None of these is ever used to adopt, select, re-rank or demote; only lb_maxT of the selected candidate enters G3."
+  ],
+
+  "anti_gaming": [
+    "The family (members and their labels) is fixed by the committed round config(s) before any candidate of that target is scored. Adding, dropping or relabelling a member after any score of that target is seen is banned.",
+    "Splitting candidates over several configs or 'rounds' does not shrink K: everything scored for a target against the same incumbent on the same scoring rows before that target's adoption decision is one family.",
+    "One gate run per target per round, with exactly these constants (B 2000, seed 0, level 0.95, studentised, ddof 1, linear quantile). Re-running with other constants, other draws or a subset of the family is banned.",
+    "A candidate that fails G1, G2 or G3 is not re-proposed against the same incumbent on the same scoring rows in a later round (a smaller family would loosen q). Variants of it fall under the existing re-tuning ban.",
+    "No fallback to the second-best candidate when the selected one fails."
+  ],
+
+  "human_override": "Arnav, and only Arnav, may adopt a candidate that fails this gate. The override is quoted under the round config's amendments before numbers_of_record.json changes, and the record note must say 'adopted by human override; adoption gate v2 failed (G<n>: value); gain not established'.",
+
+  "exit_triggers": "None of its own; a gate failure is a normal 'incumbent stays' outcome. Non-finite or misaligned OOF, a repeat count other than 10, a failed draw-identity or consistency check, or a failed self-test -> FLAG (blocker file), park that target's decision, no adoption. Round exit triggers (ci_lo above a bar) are unchanged.",
+
+  "illustration_round9 (non-binding; the committed round configs govern)": "Per the plan text, round 9 families would be: Char Residue {B1 o1, o2 report-only, n1, B2 p1, p2} K=5; pHRR {p1, p2, B3 smearing} K=3; FIGRA {p1, p2, B3 smearing} K=3; LOI {p1, p2} K=2; plus a GP candidate in any target where it is scored report-only on the primary rows. TTI joins only if D4 adds it.",
+
+  "prior_looks": [
+    "No model was trained or scored and no label was read to draft this file. Only code and text were read: data/v2/eval_protocol.py (draw mechanics), the plan, the findings file, existing configs and the critic reports below. The pseudo-code was executed only on synthetic data (session scratchpad gate_selftest.py). The skeptic review also read, without running it, the blend_round1 critic's analysis code (session scratchpad blend/an.py) to identify that critic's construction.",
+    "The proposal was designed after these label-derived numbers were already known, all from earlier critics: blend_round1_critic.md Q5 (CR b1 dB +0.101, adjusted LB +0.030; FIGRA b1 dB +0.041, P(dB<=0) 0.11, unadjusted LB -0.013, adjusted LB -0.090; FIGRA b2 adjusted LB -0.052; studentised max-T over {b1, b2} (SD ddof 0) plus Bonferroni over 4 targets, unadjusted LB = 5th percentile of the bootstrap gains, 1000 draws); loi_round8_critic.md Q6 (r8d studentised max-T over 4 candidates, q95 1.98, simultaneous LB +0.006, unadjusted +0.014, 1000 draws); phrr_round1_critic.md (c1 vs exp043 paired CI [-0.057, +0.294]); cr_round1b_critic.md (2) (exp081 / c2 vs exp071 paired gain +0.068, unadjusted 95% CI [-0.041, +0.249], cited by the findings file); pomazi_round1_critic.md (Bonferroni-4 ci_lo TTI 0.551, THR 0.651).",
+    "Choices made here with those numbers in view: studentised max-T (as both critics), per-target family with no cross-target Bonferroni (looser than the blend critic's 8-try construction), report-only and control members inside the family (stricter), 2000 draws matching bootstrap_ci (the critics used 1000). This exact construction has never been computed on any past round, and must not be (not_retroactive), so no past outcome under it is known.",
+    "The findings file's claim that the rule 'would have rejected FIGRA b1 and kept CR b1 and LOI r8d' refers to the critics' constructions, not to this one."
+  ],
+
+  "choices_fixed_here_for_D1 (Arnav may change any of these before approving; none can change after the first round runs under it)": [
+    "Studentised max-T (vs raw max-T).",
+    "Family = every candidate of the target in the round, including report-only and control members (vs selectable only).",
+    "Per-target family, no adjustment across targets (vs Bonferroni over targets as in the blend_round1 critic).",
+    "Per-round family, not cumulative over rounds against an unchanged incumbent; the no-re-proposal clause plus round budgets are the only cross-round control.",
+    "G2 compares with the incumbent ci_lo reproduced in the same run (vs the published record value, which differs by at most 0.002).",
+    "Human override clause.",
+    "Re-proposal bar covers only the selected candidate that failed the gate; a family member that was not selected (not best by mean) may be re-proposed in a later round against the same incumbent, where it joins a new, possibly smaller family (vs barring every family member of a failed or non-adopting round)."
+  ],
+
+  "skeptic_review": "Oct 6 2026, before D1 and before any round runs, label-free. Changes made: full-precision consistency checks (result JSONs round to 4 decimals, so a 1e-9 check against them could never pass); cross-config tie order and <round> label fixed; self-test data and K=1 tolerance fixed; G2 and outputs cast to plain bool/float so the gate JSON can be written; D1-declined fallback and non-10-repeat protocols (pomazi_recon) made explicit as FLAG; blend_round1 critic's construction corrected from 'raw' to studentised max-T; cr_round1b paired-gain CI added to prior_looks; the non-selected-member re-proposal question added to the D1 choices. The gate rule itself (G1, G2, G3, family, constants) is unchanged.",
+
+  "amendments": ["D1 yes. Authority (2026-10-07 22:45 PDT): the repository moved to nikhilesh-s/dravix-master, owned by Nikhilesh S, which is the source of truth from 2026-10-08; Arnav Saini is a collaborator (write access). The owner's instruction this evening, quoted: 'improve Dravix ... do a lot of different experimentations', 'keep grinding, keep getting better ... I know that some stuff is not going to work, but you need to make sure that things are clean', and 'get agents up'. The owner delegated the pending D1-D8 decisions to the orchestrator (Claude Opus 5.5) for this overnight session. The orchestrator answers them here, before any score in any of these rounds, without having seen any result from them. Integrity rules unchanged: no 'beats SOTA', comparable is never set true, single writer, critic before records. Rulings on choices_fixed_here_for_D1: all fixed choices kept as drafted, except (a) the human_override clause is STRUCK (no human override of a failed gate), and (b) the re-proposal gap is CLOSED: every member of a family that failed the gate or did not adopt is barred from being re-proposed alone against the same incumbent. Applies to round 9 and every later round; not retroactive (exp119 stays, flagged 'gain not established').", "Timestamp note (2026-10-08, after critic experiments/critic/overnight_2026-10-08_critic.md): clock times written inside this session's amendments are approximate and several are later than the commit that contains them; git commit times govern. "]
+}

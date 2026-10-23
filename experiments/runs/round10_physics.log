@@ -1,0 +1,460 @@
+=== round 10 --target pHRR (2026-10-07 22:54:13 PDT) ===
+round10 self-test OK (FGC PC/ABS example 280.1 J/g-K; wrappers: shapes, finite, offset identity, median fallback, MonoImp == make_pipeline when unconstrained, monotone +1 holds, StrEnc in-fold)
+numbers_of_record.json pHRR: exp074; config incumbent exp074
+new features (label-free): mcc_t_end_C NaN 0/191, range [376.1, 574.0] C; mcc_fgc_JgK NaN 0/191, range [29.3, 980.7] J/g-K; peak min 20.72 W/g
+pHRR: 191 rows / 64 groups / 10 features; log1p: True; incumbent exp074; sklearn 1.7.1, numpy 2.2.6, python 3.12.12; OMP 3, LOKY_MAX_CPU_COUNT 3
+inc exp074     GKF 0.6113 +- 0.0893 CI [0.5155, 0.8376] pooled [0.4346, 0.8221]  seed0 R2 0.7227 MAE 205.5 RMSE 331.3  category-GKF 0.3917 [-0.149, 0.529]  (46s)
+REPRO exp074 ok within 0.001: mean 0.611289 ci [0.515501, 0.837643] (record (0.6113, 0.5155, 0.8376))
+  category-GKF 0.3917 vs record 0.3917 (report only)
+r10_phrr_o1    GKF 0.4445 +- 0.1320 CI [0.1319, 0.8160] pooled [0.1372, 0.7800]  seed0 R2 0.5871 MAE 242.8 RMSE 404.3  d -0.1668 wins 1/10  category-GKF 0.4994 [0.314, 0.621]  (58s)
+r10_phrr_g2    GKF 0.4733 +- 0.1228 CI [0.0837, 0.7569] pooled [0.3078, 0.7931]  seed0 R2 0.4605 MAE 246.4 RMSE 462.1  d -0.1380 wins 1/10  category-GKF 0.2423 [-0.517, 0.443]  gp_warnings {'ConvergenceWarning': 133}  (114s)
+r10_phrr_g1    GKF 0.0566 +- 0.2292 CI [-1.0971, 0.4378] pooled [-0.1029, 0.7212]  seed0 R2 -0.1144 MAE 386 RMSE 664.1  d -0.5547 wins 0/10  category-GKF -0.1957 [-1.142, 0.252]  gp_warnings {'ConvergenceWarning': 133}  (62s)
+r10_phrr_f1    GKF 0.5624 +- 0.0824 CI [0.3745, 0.7794] pooled [0.3982, 0.7881]  seed0 R2 0.6197 MAE 228.6 RMSE 388  d -0.0488 wins 2/10  category-GKF 0.3589 [-0.182, 0.545]  (50s)
+wrote experiments/results/r10_phrr_o1.json  top-k: {"drop_top1": {"mean_gain": -0.22502610590542593, "wins": 0}, "drop_top3": {"mean_gain": -0.2863832549951383, "wins": 0}, "drop_top5": {"mean_gain": -0.3292424209013444, "wins": 0}}
+wrote experiments/results/r10_phrr_g2.json  top-k: {"drop_top1": {"mean_gain": -0.15608549977597624, "wins": 0}, "drop_top3": {"mean_gain": -0.17191945427506333, "wins": 0}, "drop_top5": {"mean_gain": -0.21267308093507964, "wins": 0}}
+wrote experiments/results/r10_phrr_g1.json  top-k: {"drop_top1": {"mean_gain": -0.5617066903196304, "wins": 0}, "drop_top3": {"mean_gain": -0.573691986235432, "wins": 0}, "drop_top5": {"mean_gain": -0.5817343638689974, "wins": 0}}
+wrote experiments/results/r10_phrr_f1.json  top-k: {"drop_top1": {"mean_gain": -0.05665781103005988, "wins": 2}, "drop_top3": {"mean_gain": -0.07998173122992949, "wins": 1}, "drop_top5": {"mean_gain": -0.09815855591316522, "wins": 1}}
+incumbent (reproduced): {"rkf_mean_full": 0.6112891588698508, "per_repeat_r2": [0.7226585909533443, 0.741850624481924, 0.49279396840668843, 0.46033837689429913, 0.581727914570296, 0.5449949930673511, 0.6090653018199561, 0.611852365369544, 0.6882425223433271, 0.6593669307917782], "ci": [0.5155008220158991, 0.837642834653652], "seed0_r2": 0.7226585909533443, "seed0_mae": 205.5470494095045, "seed0_rmse": 331.3085091716843, "category-GKF": {"mean": 0.3916837955859014, "std": 0.08717578412082473, "ci": [-0.1489334933132331, 0.5286146903722203]}}
+wrote experiments/runs/round10_phrr_oof.npz
+consistency checks passed (1e-9) for incumbent + ['r10_phrr_o1', 'r10_phrr_g2', 'r10_phrr_g1', 'r10_phrr_f1']
+{
+ "K": 4,
+ "q": 1.7316281950746986,
+ "q_raw": 0.26913753133316964,
+ "best": "r10_phrr_f1",
+ "G1": false,
+ "G2": false,
+ "G3": false,
+ "adopt_if_critic_passes": false,
+ "ci_inc": [
+  0.5155008220158991,
+  0.837642834653652
+ ],
+ "n_rows": 191,
+ "n_groups": 64,
+ "n_boot": 2000,
+ "seed": 0,
+ "gate_config": "experiments/configs/adoption_gate_v2.json",
+ "order": [
+  "r10_phrr_o1",
+  "r10_phrr_g2",
+  "r10_phrr_g1",
+  "r10_phrr_f1"
+ ],
+ "selectable": [
+  "r10_phrr_o1",
+  "r10_phrr_g2",
+  "r10_phrr_f1"
+ ],
+ "npz": "experiments/runs/round10_phrr_oof.npz"
+}
+  r10_phrr_o1 theta -0.1668 wins 1/10 ci_lo 0.1319 se 0.1741 lb_maxT -0.4682 lb_unadj -0.4086 p(d<=0) 0.846
+  r10_phrr_g2 theta -0.1380 wins 1/10 ci_lo 0.0837 se 0.0630 lb_maxT -0.2471 lb_unadj -0.2290 p(d<=0) 0.996
+  r10_phrr_g1 theta -0.5547 wins 0/10 ci_lo -1.0971 se 0.2071 lb_maxT -0.9133 lb_unadj -0.7857 p(d<=0) 1.000
+  r10_phrr_f1 theta -0.0488 wins 2/10 ci_lo 0.3745 se 0.0442 lb_maxT -0.1253 lb_unadj -0.1150 p(d<=0) 0.843
+wrote ~/dravix/experiments/runs/round10_phrr_gate_v2.json
+GATE pHRR: best r10_phrr_f1; G1 False G2 False G3 False -> NOT adopted; exp074 stays
+runtime 365s
+.venv312/bin/python data/v2/train_round10_physics.py --target pHRR  370.98s user 52.93s system 114% cpu 6:10.46 total
+=== round 10 --target FIGRA (2026-10-07 23:00:36 PDT) ===
+round10 self-test OK (FGC PC/ABS example 280.1 J/g-K; wrappers: shapes, finite, offset identity, median fallback, MonoImp == make_pipeline when unconstrained, monotone +1 holds, StrEnc in-fold)
+numbers_of_record.json FIGRA: exp119; config incumbent exp119
+new features (label-free): mcc_t_onset_C NaN 0/197 range [171.5, 476.6]; mcc_t_end_C NaN 0/197 range [376.1, 574.0]; mcc_fgc_JgK NaN 0/197 range [29.3, 980.7]
+FIGRA: 197 rows / 67 groups / 9 features; log1p: True; incumbent exp119; sklearn 1.7.1, numpy 2.2.6, python 3.12.12; OMP 3, LOKY_MAX_CPU_COUNT 3
+inc exp119     GKF 0.4975 +- 0.0324 CI [0.3464, 0.6475] pooled [0.3593, 0.6488]  seed0 R2 0.5019 MAE 5.412 RMSE 9.046  (59s)
+REPRO exp119 ok within 0.001: mean 0.497507 ci [0.346372, 0.647530] (record (0.4975, 0.3464, 0.6475))
+r10_figra_g1   GKF 0.4997 +- 0.0384 CI [0.3523, 0.6535] pooled [0.3645, 0.6469]  seed0 R2 0.5141 MAE 5.352 RMSE 8.935  d +0.0022 wins 7/10  (54s)
+wrote experiments/results/r10_figra_g1.json  top-k: {"drop_top1": {"mean_gain": -0.0035547319485314645, "wins": 4}, "drop_top3": {"mean_gain": -0.01175145938354899, "wins": 1}, "drop_top5": {"mean_gain": -0.016299961925777318, "wins": 0}}
+incumbent (reproduced): {"rkf_mean_full": 0.4975069695164474, "per_repeat_r2": [0.5019169109701818, 0.4704081623701485, 0.5256327502967815, 0.4642411335845288, 0.5366470884622597, 0.4418778688308983, 0.5475528649638679, 0.4768837625000527, 0.49573134281233977, 0.5141778103734153], "ci": [0.3463717183379393, 0.6475304232733776], "seed0_r2": 0.5019169109701818, "seed0_mae": 5.412038789600113, "seed0_rmse": 9.046278520447757}
+wrote experiments/runs/round10_figra_oof.npz
+consistency checks passed (1e-9) for incumbent + ['r10_figra_g1']
+{
+ "K": 1,
+ "q": 1.5523163552725456,
+ "q_raw": 0.014152783656282544,
+ "best": "r10_figra_g1",
+ "G1": false,
+ "G2": true,
+ "G3": false,
+ "adopt_if_critic_passes": false,
+ "ci_inc": [
+  0.3463717183379393,
+  0.6475304232733776
+ ],
+ "n_rows": 197,
+ "n_groups": 67,
+ "n_boot": 2000,
+ "seed": 0,
+ "gate_config": "experiments/configs/adoption_gate_v2.json",
+ "order": [
+  "r10_figra_g1"
+ ],
+ "selectable": [
+  "r10_figra_g1"
+ ],
+ "npz": "experiments/runs/round10_figra_oof.npz"
+}
+  r10_figra_g1 theta +0.0022 wins 7/10 ci_lo 0.3523 se 0.0091 lb_maxT -0.0120 lb_unadj -0.0120 p(d<=0) 0.391
+wrote ~/dravix/experiments/runs/round10_figra_gate_v2.json
+GATE FIGRA: best r10_figra_g1; G1 False G2 True G3 False -> NOT adopted; exp119 stays
+runtime 124s
+.venv312/bin/python data/v2/train_round10_physics.py --target $t  188.94s user 33.90s system 171% cpu 2:10.19 total
+=== round 10 --target CR (2026-10-07 23:02:46 PDT) ===
+round10 self-test OK (FGC PC/ABS example 280.1 J/g-K; wrappers: shapes, finite, offset identity, median fallback, MonoImp == make_pipeline when unconstrained, monotone +1 holds, StrEnc in-fold)
+numbers_of_record.json Char Residue: exp117; config incumbent exp117
+CR rows with all three STA residues NaN (median fallback): 0
+Char Residue: 567 rows / 61 groups / 11 features; log1p: False; incumbent exp117; sklearn 1.7.1, numpy 2.2.6, python 3.12.12; OMP 3, LOKY_MAX_CPU_COUNT 3
+inc exp117     GKF 0.6504 +- 0.0146 CI [0.4389, 0.7893] pooled [0.4459, 0.8055]  seed0 R2 0.6513 MAE 8.889 RMSE 14.16  (50s)
+REPRO exp117 ok within 0.001: mean 0.650403 ci [0.438897, 0.789283] (record (0.6504, 0.4389, 0.7893))
+r10_cr_g2      GKF 0.6458 +- 0.0192 CI [0.4097, 0.7913] pooled [0.4384, 0.8074]  seed0 R2 0.6414 MAE 8.869 RMSE 14.36  d -0.0046 wins 3/10  gp_warnings {'ConvergenceWarning': 98}  (231s)
+r10_cr_g1      GKF 0.5214 +- 0.0606 CI [0.0629, 0.7136] pooled [0.3058, 0.7549]  seed0 R2 0.4783 MAE 10.69 RMSE 17.32  d -0.1290 wins 0/10  gp_warnings {'ConvergenceWarning': 98}  (174s)
+r10_cr_m1      GKF 0.6478 +- 0.0143 CI [0.4093, 0.7813] pooled [0.4349, 0.8048]  seed0 R2 0.6352 MAE 9.073 RMSE 14.48  d -0.0026 wins 4/10  (50s)
+wrote experiments/results/r10_cr_g2.json  top-k: {"drop_top1": {"mean_gain": -0.010703531844106506, "wins": 0}, "drop_top3": {"mean_gain": -0.015854190429914018, "wins": 0}, "drop_top5": {"mean_gain": -0.018600244487808802, "wins": 0}}
+wrote experiments/results/r10_cr_g1.json  top-k: {"drop_top1": {"mean_gain": -0.1608580510590084, "wins": 0}, "drop_top3": {"mean_gain": -0.1749287355070639, "wins": 0}, "drop_top5": {"mean_gain": -0.1812135423959019, "wins": 0}}
+wrote experiments/results/r10_cr_m1.json  top-k: {"drop_top1": {"mean_gain": -0.005583141451040108, "wins": 3}, "drop_top3": {"mean_gain": -0.009266820822259936, "wins": 2}, "drop_top5": {"mean_gain": -0.01166454958811558, "wins": 0}}
+incumbent (reproduced): {"rkf_mean_full": 0.6504032272129915, "per_repeat_r2": [0.6513295807253681, 0.6746751862345546, 0.6731272042501669, 0.6466121242813527, 0.6524894798743257, 0.6293357708776133, 0.6487932412202339, 0.6558685625429717, 0.6434007830542463, 0.628400339069082], "ci": [0.43889737894271874, 0.7892826489871326], "seed0_r2": 0.6513295807253681, "seed0_mae": 8.889073306521682, "seed0_rmse": 14.16065966675116}
+wrote experiments/runs/round10_cr_oof.npz
+consistency checks passed (1e-9) for incumbent + ['r10_cr_g2', 'r10_cr_g1', 'r10_cr_m1']
+{
+ "K": 3,
+ "q": 1.8318115420971732,
+ "q_raw": 0.07141438828756759,
+ "best": "r10_cr_m1",
+ "G1": false,
+ "G2": false,
+ "G3": false,
+ "adopt_if_critic_passes": false,
+ "ci_inc": [
+  0.43889737894271874,
+  0.7892826489871326
+ ],
+ "n_rows": 567,
+ "n_groups": 61,
+ "n_boot": 2000,
+ "seed": 0,
+ "gate_config": "experiments/configs/adoption_gate_v2.json",
+ "order": [
+  "r10_cr_g2",
+  "r10_cr_g1",
+  "r10_cr_m1"
+ ],
+ "selectable": [
+  "r10_cr_g2",
+  "r10_cr_m1"
+ ],
+ "npz": "experiments/runs/round10_cr_oof.npz"
+}
+  r10_cr_g2 theta -0.0046 wins 3/10 ci_lo 0.4097 se 0.0105 lb_maxT -0.0239 lb_unadj -0.0199 p(d<=0) 0.678
+  r10_cr_g1 theta -0.1290 wins 0/10 ci_lo 0.0629 se 0.0580 lb_maxT -0.2353 lb_unadj -0.2004 p(d<=0) 1.000
+  r10_cr_m1 theta -0.0026 wins 4/10 ci_lo 0.4093 se 0.0066 lb_maxT -0.0147 lb_unadj -0.0133 p(d<=0) 0.670
+wrote ~/dravix/experiments/runs/round10_cr_gate_v2.json
+GATE Char Residue: best r10_cr_m1; G1 False G2 False G3 False -> NOT adopted; exp117 stays
+runtime 522s
+.venv312/bin/python data/v2/train_round10_physics.py --target $t  663.58s user 59.08s system 137% cpu 8:46.00 total
+merged 652 rows / 109 papers from 13 parts
+benchmark of record (LOI present, not figure-read): 606 rows / 107 papers
+  loading parsed: 93%; element features complete: 72%; iso default used on 122 rows
+FR names without element entry (62): [('SA (sodium alginate)', 10), ('DOPO-HSBP', 10), ('PTOK (tung oil-based polyol modified by KH-602)', 6), ('SFP/LG (sunflower press cake vacuum-impregnated with liquid glass 1:1; LG Na2O 29%, SiO2 29%)', 6), ('T-D (N-containing polyol)', 6), ('ESBO-DYM (P/N soy polyol)', 6), ('polyetherol from melamine cyanurate + ethylene carbonate (MC/EC)', 5), ('PNC (aminophosphorylated cellulose)', 4), ('MOF/MWCNTs (Cu-doped ZIF-67 on MWCNTs)', 4), ('DPTP (from KH-550 aminopropyltriethoxysilane + chlorodiphenylphosphine)', 4), ('POFPL (palm oil-based flame retardant polyol)', 4), ('LigW coated with liquid glass, LigW/LG 1/1', 4), ('LigW coated with liquid glass, LigW/LG 1/2', 4), ('FR-047 (organic phosphate mixture)', 4), ('P-polyol (transesterification of DEEP diethyl ethylphosphonate and THPO tris(hydroxymethyl)phosphine oxide)', 3), ('Cloisite 20A (organoclay)', 3), ('DFD (DOPO-based reactive P diol)', 3), ('sugar beet pulp impregnated with APIB-POSS', 3), ('MMT-modified SO filler', 3), ('PTOP (DOPO-modified tung oil polyol)', 2), ('PTOSi (DPSD-modified tung oil polyol)', 2), ('PN-Cl (spiro-type cyclic phosphazene derivative)', 2), ('PN-Br (spiro-type cyclic phosphazene derivative)', 2), ('C-MOF/MWCNTs (carbonized MOF/MWCNTs)', 2), ('AM (aluminum phosphate micro-capsule)', 2), ('SiM (silica micro-capsule)', 2), ('SiE (SiO2 grafted with epoxidized monoglyceride of tung oil)', 2), ('PTFM (phosphorus-triazole reactive FR monomer, tris-triazole phosphate polyol)', 2), ('Roflam B7 (brominated phosphate ester)', 2), ('Roflam PLO (phosphorus-based liquid additive)', 2), ('aluminum phytate (PA-Al)', 2), ('iron phytate (PA-Fe)', 2), ('eFAPE-PA (phosphorylated canola oil polyol)', 2), ('SO', 2), ('aluminium trihydroxide (ATH)', 2), ('Exolit OP 1240 (aluminium diethylphosphinate)', 2), ('PN-H (spiro-type cyclic phosphazene derivative)', 1), ('LS (lignosulfonate)', 1), ('PTOK (tung oil-based polyol modified by KH-602, 25 g)', 1), ('BSQPS (bentonite modified with butyltriphenylphosphonium chloride)', 1)]
+=== round 10 --target LOI (2026-10-07 23:11:31 PDT) ===
+round10 self-test OK (FGC PC/ABS example 280.1 J/g-K; wrappers: shapes, finite, offset identity, median fallback, MonoImp == make_pipeline when unconstrained, monotone +1 holds, StrEnc in-fold)
+numbers_of_record.json LOI: exp115; config incumbent exp115
+stage ~/dravix/data/v2/loi_rpuf_parts/wave4_staging: 4 row files, element additions True, structure additions True
+stage ~/dravix/data/v2/loi_rpuf_parts/wave5_staging: 1 row files, element additions True, structure additions True
+snapshot: 606 benchmark rows / 107 papers
+sanity: table-only recompute == committed el_* columns on all 652 rows
+element-feature coverage (benchmark rows with all el_* non-NaN): before 436/460 -> after 437/460
+rows with >=1 resolved FR (struct features non-NaN): 56/460; mean resolved_fr_wt_share over rows with FRs and loading ok: 0.088
+
+F7 class-prior table (median element mass fraction %, over 585 resolved FR mentions; no LOI used):
+class                           n        P        N       Si        B  halogen    metal
+N-additive                     15     0.00    66.63     0.00     0.00     0.00     0.00
+P-N                            79    15.03    21.21     0.00     0.00     0.00     0.00
+P-additive                    139     9.55     0.00     0.00     0.00     0.00     0.00
+P-reactive                     22    10.90     0.00     0.00     0.00     0.00     0.00
+bio-based                      53     0.00     0.00     0.00     0.00     0.00     0.00
+boron                          11     0.00     0.00     0.00    12.85     0.00    15.56
+carbon_nano(graphene/CNT)       1     0.00     0.00     0.00    17.48     0.00     0.00
+expandable_graphite           111     0.00     0.00     0.00     0.00     0.00     0.00
+halogen                        18     0.00     0.00     0.00     0.00    19.41     0.00
+intumescent(APP-based)         54    31.93    14.44     0.00     0.00     0.00     0.00
+metal_hydroxide                14     0.00     0.00     0.00     0.00     0.00    33.84
+metal_oxide/salt               29     0.00     0.00     0.00     0.00     0.00    46.48
+nanoclay                       10     0.00     0.00     0.00     0.00     0.00     0.00
+other                          27     0.00     0.00     0.00     0.00     0.00     0.00
+silicon                         2     0.00     0.00    46.74     0.00     0.00     0.00
+GLOBAL (fallback)             585     5.38     0.00     0.00     0.00     0.00     0.00
+REPRO exp089: B 0.3255 CI [0.2339, 0.4900] (record B 0.3542, CI [0.1694, 0.4666]) in 48s
+BLOCKED: exp089 not reproduced within 0.002 (expected on an expanded snapshot; reported, not stopped).
+Reproduction within 0.002: True
+
+=== AUDIT: polyol_type, every unique polyol string (n = rows in benchmark 460 / all rows) ===
+          2/2   polyether           -> polyether           | PPG4110 100 g
+CHANGED   1/1   polyether           -> unknown             | PPG4110 40 g + PTOP 60 g  [chosen comp: PTOP 60 g]
+CHANGED   1/1   polyether           -> unknown             | PPG4110 20 g + PTOP 80 g  [chosen comp: PTOP 80 g]
+CHANGED   1/1   polyether           -> unknown             | PPG4110 40 g + PTOSi 60 g  [chosen comp: PTOSi 60 g]
+CHANGED   1/1   polyether           -> unknown             | PPG4110 20 g + PTOSi 80 g  [chosen comp: PTOSi 80 g]
+         10/10  unknown             -> unknown             | Smooth-On FOAM-IT! 5 B-side (polyol blend)
+          7/7   unknown             -> unknown             | Polyol A : Polyol B 60:40 wt% premix (identities not in available text)
+          4/6   bio_based           -> bio_based           | soybean oil polyol (OH 450 +/-30) 15 wt% + polyether polyol 330N  [chosen comp: soybean oil polyol (OH 450 +/-30) 15 wt%]
+         17/17  polyether           -> polyether           | LY-4110 polyether polyol 100 g
+          1/1   unknown             -> unknown             | HPC/glycidol/ethylene carbonate polyol with H3PO3-DEG phosphite ester
+          1/1   unknown             -> unknown             | HPC/glycidol/ethylene glycol/ethylene carbonate polyol
+          1/1   unknown             -> unknown             | HPC/glycidol/triethylene glycol/ethylene carbonate polyol
+          4/4   polyether           -> polyether           | polyether polyol 4110A (OH 450)
+          5/5   unknown             -> unknown             | MCOP 80 g + PEG-200 20 g  [chosen comp: MCOP 80 g]
+          3/3   unknown             -> unknown             | MCOP 35 g + PEG-200 20 g + TBPBP 45 g  [chosen comp: TBPBP 45 g]
+          2/2   unknown             -> unknown             | DEG (diethylene glycol) 40 g
+          5/5   unknown             -> unknown             | Polyol 4500 series (OH ca. 400-455 mg KOH/g)
+          1/1   polyether           -> polyether           | polyether polyol 4110 10 g + P-polyol 0 g  [chosen comp: polyether polyol 4110 10 g]
+          1/1   polyether           -> polyether           | polyether polyol 4110 8 g + P-polyol 2 g  [chosen comp: polyether polyol 4110 8 g]
+          1/1   polyether           -> polyether           | polyether polyol 4110 6 g + P-polyol 4 g  [chosen comp: polyether polyol 4110 6 g]
+CHANGED   1/1   polyether           -> unknown             | polyether polyol 4110 4 g + P-polyol 6 g  [chosen comp: P-polyol 6 g]
+         10/10  polyether           -> polyether           | polyether polyol 100 g
+          1/7   polyether           -> polyether           | PPG4110 75 g + PTOK 25 g  [chosen comp: PPG4110 75 g]
+          5/5   polyester_aromatic  -> polyester_aromatic  | STEPANPOL PS-2352 aromatic polyester polyol (OH 240) 100 parts
+          5/5   polyether           -> polyether           | HF-4110H 70 + HF-4110 30 phr (polyether, OH 430)  [chosen comp: HF-4110H 70]
+         10/10  polyester_aromatic  -> polyester_aromatic  | polyester polyols Isoexter 4530 + 4537 and polyether Isoter 842G (2:2:1)  [chosen comp: polyester polyols Isoexter 4530]
+          5/5   polyether           -> polyether           | Rokopol G441 (Mn ~440) + ethylene glycol chain extender  [chosen comp: Rokopol G441 (Mn ~440)]
+         25/25  polyether           -> polyether           | PET-4110 polyether polyol
+          9/9   unknown             -> unknown             | polypropylene glycol (MCNS), contains n-pentane
+          5/5   polyether           -> polyether           | HF-4110 30 + HF-4110H 70 (polyether polyols)  [chosen comp: HF-4110H 70 (polyether polyols)]
+          1/1   polyether           -> polyether           | polyether polyol R4110
+CHANGED   1/1   unknown             -> polyether           | oligoetherol mixture 50% H2SiO3:GL:WE=1:4:3 + 50% Mel:WP=1:20 (100 g)  [chosen comp: oligoetherol mixture 50% H2SiO3:GL:WE=1:4:3]
+          1/1   polyether           -> polyether           | Rokopol RF551 66.80 g (1.0 R)
+          1/1   bio_based           -> bio_based           | Rokopol RF551 26.72 g (0.4 R) + PG3 white mustard oil/2,2-mercaptodiethanol bio-polyol 45.20 g (0.6 R)  [chosen comp: PG3 white mustard oil/2,2-mercaptodiethanol bio-polyol 45.20]
+         18/18  polyether           -> polyether           | polyether component 100 g (Rokopol T 45 + Rokopol RF 35 40 + Rokopol G 100 15 pbw)
+          8/8   bio_based           -> bio_based           | liquefied bamboo biopolyol 100
+          1/1   polyester_aromatic  -> polyester_aromatic  | aromatic polyester polyol P-1 (50 wt% rPET; terephthalic/orthophthalic units) 100 g
+          1/1   polyester_aromatic  -> polyester_aromatic  | aromatic polyester polyol P-2 (40 wt% rPET; terephthalic/orthophthalic units) 100 g
+          1/1   polyester_aromatic  -> polyester_aromatic  | aromatic polyester polyol P-3 (30 wt% rPET; terephthalic/orthophthalic units) 100 g
+          1/1   polyester_aromatic  -> polyester_aromatic  | aromatic polyester polyol P-4 (20 wt% rPET; terephthalic/orthophthalic units) 100 g
+          1/1   polyester_aromatic  -> polyester_aromatic  | aromatic polyester polyol P-5 (10 wt% rPET; terephthalic/orthophthalic units) 100 g
+CHANGED   1/1   polyester_aromatic  -> unknown             | aromatic polyester polyol P-6 (0 wt% rPET; terephthalic/orthophthalic units) 100 g
+          1/1   unknown             -> unknown             | polyol (unspecified) 100 wt% PU (polyol/isocyanate 100 g/134 g)
+          1/1   unknown             -> unknown             | polyol (unspecified) 90 wt% PU (polyol/isocyanate 100 g/134 g)
+          1/1   unknown             -> unknown             | polyol (unspecified) 89 wt% PU (polyol/isocyanate 100 g/134 g)
+          1/1   unknown             -> unknown             | polyol (unspecified) 87 wt% PU (polyol/isocyanate 100 g/134 g)
+          1/1   unknown             -> unknown             | polyol (unspecified) 85 wt% PU (polyol/isocyanate 100 g/134 g)
+CHANGED   2/2   unknown             -> polyether           | liquefied pine wood polyol (PEG-600/glycol, 170 C) 20 g
+          1/1   polyether           -> polyether           | Rokopol RF 551 100 g
+          4/4   polyether           -> polyether           | Rokopol RF 551 90 g
+          4/4   polyether           -> polyether           | Rokopol RF 551 80 g
+          4/4   polyether           -> polyether           | Rokopol RF 551 70 g
+          3/3   polyether           -> polyether           | Rokopol RF 551 60 g
+          3/3   bio_based           -> bio_based           | hydroxylated castor polyol (OHV 310 mg KOH/g) 10 g
+CHANGED   4/4   unknown             -> polyether           | liquefied apricot stone shell polyol (PEG-400/glycerin liquefaction)
+          1/1   unknown             -> unknown             | synthetic (petroleum) polyol foam, not specified
+CHANGED   3/3   unknown             -> polyether           | oligoetherol from MPP + alkylene carbonates (mMPP:EC = 1:22) 100  [chosen comp: oligoetherol from MPP]
+CHANGED   3/3   unknown             -> polyether           | oligoetherol from MPP + alkylene carbonates (mMPP:EC:PC = 1:10:6) 100  [chosen comp: oligoetherol from MPP]
+CHANGED   1/1   polyether           -> unknown             | D-24 63.4 + Rokopol TD-34 42.3  [chosen comp: D-24 63.4]
+CHANGED   1/1   polyether           -> unknown             | D-24 59.8 + Rokopol TD-34 39.2  [chosen comp: D-24 59.8]
+CHANGED   1/1   polyether           -> unknown             | D-24 57.9 + Rokopol TD-34 38.6  [chosen comp: D-24 57.9]
+CHANGED   1/1   polyether           -> unknown             | D-24 55.9 + Rokopol TD-34 37.3  [chosen comp: D-24 55.9]
+CHANGED   1/1   polyether           -> unknown             | D-24 59.6 + Rokopol TD-34 39.7  [chosen comp: D-24 59.6]
+CHANGED   1/1   polyether           -> unknown             | D-24 57.6 + Rokopol TD-34 38.4  [chosen comp: D-24 57.6]
+CHANGED   1/1   polyether           -> unknown             | D-24 55.4 + Rokopol TD-34 36.9  [chosen comp: D-24 55.4]
+CHANGED   1/1   polyether           -> unknown             | D-24 48.3 + Rokopol TD-34 32  [chosen comp: D-24 48.3]
+CHANGED   1/1   polyether           -> unknown             | D-24 36.6 + Rokopol TD-34 24.4  [chosen comp: D-24 36.6]
+CHANGED   1/1   polyether           -> unknown             | D-24 24.8 + Rokopol TD-34 16.5  [chosen comp: D-24 24.8]
+CHANGED   6/6   bio_based           -> unknown             | rapeseed oil bio-polyol (RP, 70 wt% of polyol) + Lupranol 3422  [chosen comp: Lupranol 3422]
+          8/8   unknown             -> unknown             | B3 commercial two-component system, polyol component (Pluskim; FR-free)
+         13/13  polyester_aromatic  -> polyester_aromatic  | Stepanpol PS-2352 100
+          1/1   polyether           -> polyether           | Rokopol RF-55 1 R (55.65 g)
+          1/1   polyether           -> polyether           | Rokopol RF-55 0.9 R (50.98 g) + boron polyol 0.1 R (6.26 g)  [chosen comp: Rokopol RF-55 0.9 R (50.98 g)]
+CHANGED   1/1   polyether           -> unknown             | Rokopol RF-55 0.5 R (9.40 g) + boron polyol 0.5 R (31.31 g)  [chosen comp: boron polyol 0.5 R (31.31 g)]
+         14/14  bio_based           -> bio_based           | BioPolyol RD (rapeseed, OHv 350) 60 + PETOL 400-4G (sucrose, OHv 421) 40 (parts by weight)  [chosen comp: BioPolyol RD (rapeseed, OHv 350) 60]
+          6/6   polyether           -> polyether           | Rokopol RF-551 (sorbitol polyether, LOH 420) 66.8 g
+          4/4   polyether           -> polyether           | Polyether polyol 1012a
+         14/14  polyether           -> polyether           | Rokopol RF-551 (polyether polyol) 100 g
+          2/2   polyether           -> polyether           | Polyether polyol R4110
+          6/6   polyester_aromatic  -> polyester_aromatic  | Stapanpol PS-2352 (polyester polyol) 100 wt.%
+          1/1   polyether           -> polyether           | Rokopol RF551 1.0 Eq (66.79 g)
+CHANGED   6/6   bio_based           -> polyether           | MCOP (modified castor oil polyol) + PEG-200 (20 g)  [chosen comp: PEG-200 (20 g)]
+         12/12  polyether           -> polyether           | Polyether polyol (OH 54.5-58.5 mg/g) 20 ml
+          4/4   polyether           -> polyether           | Polyether polyol Cst-1076-B (includes blowing agent, surfactant) 50 g
+          2/2   unknown             -> unknown             | Oligodiol DZS (glycolyzed waste PET with diethylene glycol/ZnSO4) 66.0 g
+          7/7   polyether           -> polyether           | Polyether polyol 4110 (OH 430 mg KOH/g) 100 php
+          2/2   polyether           -> polyether           | Sucrose polyether NJ-8250 200 g + water-blown polyether XYF30 150 g (in 522.5 g white material)  [chosen comp: Sucrose polyether NJ-8250 200 g]
+CHANGED   2/6   polyester_aromatic  -> polyether           | Polyol-1 heteroaromatic (isocyanurate-based) polyether polyol 60 pbw (assumed matrix of DMMP series)
+          3/3   polyester_aromatic  -> polyester_aromatic  | Polyol blend 100 (phthalic anhydride polyester OH 330; pentaerythritol polyether OH 400; sucrose+glycerine pol
+          8/8   polyester_aromatic  -> polyester_aromatic  | Isoexter 4530 + Isoexter 4537 (polyesters) + Isoter 842G (polyether), weight ratio 2:2:1  [chosen comp: Isoexter 4537 (polyesters)]
+          4/4   polyester_aromatic  -> polyester_aromatic  | Stepanol PS-3152 (polyester polyol, OH value 315 mg/g)
+          6/6   polyester_aromatic  -> polyester_aromatic  | Stepanpol PS-2352
+          4/5   unknown             -> unknown             | commercial component A (polyol + catalysts, surfactants, foaming agent; Shandong Jiuyun)
+          5/6   polyether           -> polyether           | Petrochemical polyether polyol 635 (OH value 490 +/- 15 mgKOH/g)
+         12/12  bio_based           -> bio_based           | HSBP (soy oil-based polyol from epoxidized soybean oil + water, OH number 420 mg KOH/g)
+          4/4   polyester_aromatic  -> polyester_aromatic  | STEPANPOL PS-2352
+          6/9   polyether           -> polyether           | Polyether polyol 4110
+          8/8   polyether           -> polyether           | 450L (DSU-450L polyether polyol, OH value 450 +/- 10 mg KOH/g)
+          5/5   polyether           -> polyether           | LY-4110 (polyether polyol) + LCN-403 (as listed) + EUMF as polyol-substitute  [chosen comp: LY-4110 (polyether polyol)]
+          5/5   bio_based           -> bio_based           | GCO (glycerolysis palm oil) / POFPL blend
+         12/12  polyether           -> polyether           | LY-4110 (OH number 430 mg KOH/g)
+         13/13  polyether           -> polyether           | RB2005-101 (polyether polyol mixture)
+CHANGED   0/9   bio_based           -> polyether           | Rokopol RF-551 (petrochemical, OH 420 mgKOH/g) + bio-polyol 1.6Hex (rapeseed oil, OH 217 mgKOH/g)  [chosen comp: Rokopol RF-551 (petrochemical, OH 420 mgKOH/g)]
+          7/7   polyether           -> polyether           | HK-4110 polyether polyol 100 g
+CHANGED   4/4   polyether           -> unknown             | EMF 100 phr + LY-4110 20 phr + LCN-403 30 phr  [chosen comp: EMF 100 phr]
+          0/4   bio_based           -> bio_based           | palm kernel oil polyol (Maskimiol PK317) 50 g
+          5/5   polyether           -> polyether           | LY-4110 polyether polyol 100 phr
+          1/1   bio_based           -> bio_based           | 3GP (canola-oil polyol) 100 parts
+          1/1   unknown             -> unknown             | eFAPE-PA 50 + 3GP 50 parts  [chosen comp: eFAPE-PA 50]
+          1/1   unknown             -> unknown             | eFAPE-PA 100 parts
+CHANGED   1/1   unknown             -> polyether           | Laprol-503 + Laprol-805 oxypropylated polyols + Lapromol-294/dimethylethanolamine catalyst  [chosen comp: Laprol-503]
+          5/5   polyester_aromatic  -> polyester_aromatic  | KPX glycerin-based polyester polyol (f=3, Mn 400) 100 g
+CHANGED   2/2   unknown             -> polyether           | RF-551 100 g
+         11/11  polyether           -> polyether           | Voranol 345-375 OH 50 g + Voranol 400-425 OH 50 g (RH360/RN411)  [chosen comp: Voranol 345-375 OH 50 g]
+CHANGED   2/2   unknown             -> polyether           | PTMEG (OH 440 mgKOH/g, f=3.0) 100 pph
+          1/1   unknown             -> unknown             | SA1_TOFA 67.0 + SA1_ETOFA 33.0  [chosen comp: SA1_TOFA 67.0]
+          1/1   unknown             -> unknown             | SA2_TOFA 67.0 + SA2_ETOFA 33.0  [chosen comp: SA2_TOFA 67.0]
+          1/1   unknown             -> unknown             | SA3_TOFA 67.0 + SA3_ETOFA 33.0  [chosen comp: SA3_TOFA 67.0]
+CHANGED   1/1   unknown             -> polyether           | oligoetherol from 6-aminouracil:ethylene carbonate:propylene oxide 1:5:3, 100 g
+CHANGED   1/1   bio_based           -> polyether           | biopolyol (liquefied pine sawdust, PEG/glycerol) 100 pbw
+          2/2   bio_based           -> bio_based           | biopolyol 100 pbw
+          1/1   unknown             -> unknown             | industrial polyol Poliuretan Spray S-303HF
+          1/1   polyether           -> polyether           | polyether PETOL PZ 400-4G / ESBO-DYM wt% = 70.0 / 0.0  [chosen comp: polyether PETOL PZ 400-4G]
+          1/1   polyether           -> polyether           | polyether PETOL PZ 400-4G / ESBO-DYM wt% = 66.5 / 3.5  [chosen comp: polyether PETOL PZ 400-4G]
+          1/1   polyether           -> polyether           | polyether PETOL PZ 400-4G / ESBO-DYM wt% = 59.5 / 10.5  [chosen comp: polyether PETOL PZ 400-4G]
+          1/1   polyether           -> polyether           | polyether PETOL PZ 400-4G / ESBO-DYM wt% = 52.5 / 17.5  [chosen comp: polyether PETOL PZ 400-4G]
+          1/1   polyether           -> polyether           | polyether PETOL PZ 400-4G / ESBO-DYM wt% = 35.0 / 35.0  [chosen comp: polyether PETOL PZ 400-4G]
+CHANGED   1/1   polyether           -> unknown             | polyether PETOL PZ 400-4G / ESBO-DYM wt% = 15.5 / 52.5  [chosen comp: ESBO-DYM]
+CHANGED   1/1   polyether           -> unknown             | polyether PETOL PZ 400-4G / ESBO-DYM wt% = 0.0 / 70.0  [chosen comp: ESBO-DYM]
+          5/5   unknown             -> unknown             | EKOPRODUR PM4032 system (PCC Group) component A
+          5/5   polyether           -> polyether           | Rokopol RF-551 100 g
+         14/14  polyether           -> polyether           | Rokopol RF-551 66.80 g
+         16/16  polyester_aromatic  -> polyester_aromatic  | Stepanpol PS2352 100
+          3/4   bio_based           -> bio_based           | BioPolyol RD 60 + Petol PZ 400-4G 40 pbw  [chosen comp: BioPolyol RD 60]
+CHANGED   3/5   unknown             -> polyether           | Voracor CR 765 (OH 360)
+CHANGED   0/6   unknown             -> polyether           | oligoetherol from 6-aminouracil/ethylene carbonate/propylene oxide (1:5:3)
+          3/3   polyether           -> polyether           | LY-4110 (35% of mix)
+         13/13  bio_based           -> bio_based           | BioPolyol RD (rapeseed, OH 350) + PETOL 400-4G (sucrose, OH 421)  [chosen comp: BioPolyol RD (rapeseed, OH 350)]
+CHANGED   1/1   unknown             -> polyether           | oligoetherol BHEU:BA:EC 1:2:12 (boron/uracil-based, 100 g)
+CHANGED   1/1   unknown             -> polyether           | oligoetherol BHEU:BA:EC 1:3:12 (boron/uracil-based, 100 g)
+CHANGED   1/1   unknown             -> polyether           | oligoetherol DOPDEDHB:EC 1:12 (boron/uracil-based, 100 g)
+CHANGED   1/1   unknown             -> polyether           | oligoetherol DOPDEDHB:EC 1:16 (boron/uracil-based, 100 g)
+          1/1   polyether           -> polyether           | Rokopol RF-551 100.00 g
+CHANGED   1/1   polyether           -> other_polyester     | Rokopol RF-551 50.00 g + PLA0.4DEG eco-polyol 80.41 g (0.5 Eq each)  [chosen comp: PLA0.4DEG eco-polyol 80.41 g (0.5 Eq each)]
+CHANGED   1/1   polyether           -> other_polyester     | Rokopol RF-551 50.00 g + PLA0.3DEG eco-polyol 100.24 g (0.5 Eq each)  [chosen comp: PLA0.3DEG eco-polyol 100.24 g (0.5 Eq each)]
+CHANGED   1/1   polyether           -> other_polyester     | Rokopol RF-551 33.39 g + PLA0.4DEG 53.60 g (0.5 Eq each)  [chosen comp: PLA0.4DEG 53.60 g (0.5 Eq each)]
+CHANGED   1/1   polyether           -> other_polyester     | Rokopol RF-551 33.39 g + PLA0.3DEG 66.83 g (0.5 Eq each)  [chosen comp: PLA0.3DEG 66.83 g (0.5 Eq each)]
+          1/1   unknown             -> unknown             | MSA-based polyol (metasilicic acid) 100 g
+          1/1   unknown             -> unknown             | MSA-based polyol 50 g + PLA-based polyol 50 g  [chosen comp: MSA-based polyol 50 g]
+          1/1   polyether           -> polyether           | Rokopol RF-551 66.80 g + PLA-polyol 0.00 g  [chosen comp: Rokopol RF-551 66.80 g]
+          1/1   polyether           -> polyether           | Rokopol RF-551 60.12 g + PLA-polyol 8.60 g  [chosen comp: Rokopol RF-551 60.12 g]
+          1/1   polyether           -> polyether           | Rokopol RF-551 53.44 g + PLA-polyol 17.21 g  [chosen comp: Rokopol RF-551 53.44 g]
+          1/1   polyether           -> polyether           | Rokopol RF-551 46.76 g + PLA-polyol 25.81 g  [chosen comp: Rokopol RF-551 46.76 g]
+          1/1   polyether           -> polyether           | Rokopol RF-551 40.08 g + PLA-polyol 34.42 g  [chosen comp: Rokopol RF-551 40.08 g]
+CHANGED   1/1   polyether           -> other_polyester     | Rokopol RF-551 33.4 g + PLA-polyol 43.02 g  [chosen comp: PLA-polyol 43.02 g]
+          4/4   polyether           -> polyether           | polyether polyol (OH 20 mg KOH/g, Mw 6000)
+CHANGED   1/1   bio_based           -> polyether           | Rokopol RF-551 66.8 g + evening primrose biopolyol (EPB) 0 g  [chosen comp: Rokopol RF-551 66.8 g]
+CHANGED   1/1   bio_based           -> polyether           | Rokopol RF-551 60.12 g + evening primrose biopolyol (EPB) 15.38 g  [chosen comp: Rokopol RF-551 60.12 g]
+CHANGED   1/1   bio_based           -> polyether           | Rokopol RF-551 53.44 g + evening primrose biopolyol (EPB) 30.76 g  [chosen comp: Rokopol RF-551 53.44 g]
+CHANGED   1/1   bio_based           -> polyether           | Rokopol RF-551 46.76 g + evening primrose biopolyol (EPB) 46.14 g  [chosen comp: Rokopol RF-551 46.76 g]
+          1/1   bio_based           -> bio_based           | Rokopol RF-551 40.08 g + evening primrose biopolyol (EPB) 61.52 g  [chosen comp: evening primrose biopolyol (EPB) 61.52 g]
+          4/4   unknown             -> unknown             | oligo-ester-ether-diol from PET glycolysis (r-PUF) / commercial polyol (c-PUF)
+          2/2   polyether           -> polyether           | Rokopol RF-551 1.0 Eq (66.80 g)
+CHANGED   2/2   bio_based           -> polyether           | Rokopol RF-551 0.6 Eq (40.08 g) + mustard-oil bio-polyol PG1 0.4 Eq (38.37 g)  [chosen comp: Rokopol RF-551 0.6 Eq (40.08 g)]
+          4/4   polyester_aromatic  -> polyester_aromatic  | Stepanpol PS-2352 100 pbw
+          7/7   polyether           -> polyether           | polyether polyol 4110 (OH 430+/-30) 10 g + glycerol + triethanolamine  [chosen comp: polyether polyol 4110 (OH 430+/-30) 10 g]
+          1/6   polyether           -> polyether           | polyether polyol 54.39 g
+          1/1   polyether           -> polyether           | MC/EC polyetherol / Rokopol D2002 = 80/20 wt parts
+          0/1   polyether           -> polyether           | MC/EC polyetherol / Rokopol G500 = 50/50 wt parts
+          0/1   polyether           -> polyether           | MC/EC polyetherol / Rokopol G500 = 80/20 wt parts
+          1/1   polyester_aromatic  -> polyester_aromatic  | MC/EC polyetherol / Polyester 350 = 50/50 wt parts
+          1/1   polyester_aromatic  -> polyester_aromatic  | MC/EC polyetherol / Polyester 350 = 80/20 wt parts
+          1/1   polyether           -> polyether           | Rokopol RF-55 (sorbitol polyether, LOH 495) 1.0 chemical equivalent
+          1/1   polyether           -> polyether           | Rokopol RF-55 (sorbitol polyether, LOH 495) 0.9 chemical equivalent
+          1/1   polyether           -> polyether           | Rokopol RF-55 (sorbitol polyether, LOH 495) 0.8 chemical equivalent
+          1/1   polyether           -> polyether           | Rokopol RF-55 (sorbitol polyether, LOH 495) 0.7 chemical equivalent
+          1/1   polyether           -> polyether           | Rokopol RF-55 (sorbitol polyether, LOH 495) 0.6 chemical equivalent
+
+unique polyol strings: 177; changed strings: 50; changed benchmark rows: 75/460
+polyol_type counts, benchmark 460 rows (round 4 -> fixed):
+  polyether             319 ->  333
+  polyester_aromatic     94 ->   91
+  bio_based              86 ->   67
+  other_polyester         0 ->    5
+  unknown               107 ->  110
+
+=== AUDIT: iso_index_num (rows where round-4 and fixed differ) ===
+    7 rows  '70 (R 3.7:1, PU/PIR)': 0.700 -> 3.700
+  changed rows (all/benchmark): 7/7
+
+=== AUDIT: is_PIR (rows where round-4 and fixed differ) ===
+  0 -> 1: 7 rows; strings: ['Rokopol RF-551 66.80 g / iso=70 (R 3.7:1, PU/PIR)']
+  1 -> 0: 6 rows; strings: ['Polyol-1 heteroaromatic (isocyanurate-based) polyether polyol 60 pbw ( / iso=']
+  is_PIR=1 count, benchmark rows: 58 -> 63; changed rows (all/benchmark): 13/9
+iso_index_num non-null benchmark: 203 -> 203
+
+loi_standard one-hot counts (benchmark): std_ASTM_D2863=184, std_GB_T_2406=60, std_ISO_4589=121, std_other_unknown=241
+features: exp089 45, c1 46, c2 51
+
+REPRO exp092: B 0.3378 CI [0.2588, 0.4875] (record B 0.3738, CI [0.2007, 0.4700]) in 49s
+BLOCKED: exp092 not reproduced within 0.002 (expected on an expanded snapshot; reported, not stopped).
+Reproduction within 0.002: True
+
+=== AUDIT (round 6): polyol strings whose label changes F6_fixed -> F6_v6 (benchmark rows / all rows) ===
+    5/5   unknown             -> bio_based           | MCOP 80 g + PEG-200 20 g  [chosen: MCOP 80 g]
+    9/9   unknown             -> polyether           | polypropylene glycol (MCNS), contains n-pentane  [chosen: polypropylene glycol (MCNS), contains n-pentane]
+    6/6   polyether           -> bio_based           | MCOP (modified castor oil polyol) + PEG-200 (20 g)  [chosen: MCOP (modified castor oil polyol)]
+    2/2   unknown             -> polyester_aromatic  | Oligodiol DZS (glycolyzed waste PET with diethylene glycol/ZnSO4) 66.0 g  [chosen: Oligodiol DZS (glycolyzed waste PET with diethylen]
+    1/1   polyether           -> bio_based           | biopolyol (liquefied pine sawdust, PEG/glycerol) 100 pbw  [chosen: biopolyol (liquefied pine sawdust, PEG/glycerol) 1]
+    1/1   unknown             -> bio_based           | polyether PETOL PZ 400-4G / ESBO-DYM wt% = 15.5 / 52.5  [chosen: ESBO-DYM]
+    1/1   unknown             -> bio_based           | polyether PETOL PZ 400-4G / ESBO-DYM wt% = 0.0 / 70.0  [chosen: ESBO-DYM]
+    4/4   unknown             -> polyester_aromatic  | oligo-ester-ether-diol from PET glycolysis (r-PUF) / commercial polyol (c-PUF)  [chosen: oligo-ester-ether-diol from PET glycolysis (r-PUF)]
+changed benchmark rows: 29/460
+  polyether             333 ->  335
+  polyester_aromatic     91 ->   97
+  bio_based              67 ->   81
+  other_polyester         5 ->    5
+  unknown               110 ->   88
+5-level standard counts (benchmark): std5_ASTM_D2863=184, std5_GB_T_2406=60, std5_ISO_4589=107, std5_ISO_4589_3=14, std5_other_unknown=241
+features: exp092 51, c3 47, c4 47, c5 52
+fr_names: 114 rows 'none', 224 distinct strings
+LOI: 606 rows / 107 groups / 51 features; log1p: False; incumbent exp115; sklearn 1.7.1, numpy 2.2.6, python 3.12.12; OMP 3, LOKY_MAX_CPU_COUNT 3
+inc exp115     GKF 0.3875 +- 0.0384 CI [0.3124, 0.5289] pooled [0.2398, 0.4883]  seed0 R2 0.4410 MAE 1.88 RMSE 2.527  protocol C 0.2475 [-0.120, 0.299]  (145s)
+REPRO exp115 ok within 0.001: mean 0.387494 ci [0.312381, 0.528881] (record (0.3875, 0.3124, 0.5289))
+  protocol C 0.2475 vs record 0.2475 (report only)
+r10_loi_m1     GKF 0.4024 +- 0.0376 CI [0.3269, 0.5411] pooled [0.2520, 0.5035]  seed0 R2 0.4556 MAE 1.857 RMSE 2.494  d +0.0149 wins 10/10  protocol C 0.2531 [-0.118, 0.296]  (149s)
+r10_loi_m0     GKF 0.3954 +- 0.0376 CI [0.3252, 0.5415] pooled [0.2434, 0.4971]  seed0 R2 0.4547 MAE 1.858 RMSE 2.496  d +0.0079 wins 8/10  protocol C 0.2565 [-0.103, 0.308]  (137s)
+r10_loi_s1     GKF 0.3911 +- 0.0438 CI [0.3271, 0.5492] pooled [0.2412, 0.4991]  seed0 R2 0.4563 MAE 1.847 RMSE 2.492  d +0.0036 wins 6/10  protocol C 0.2330 [-0.110, 0.286]  (160s)
+wrote experiments/results/r10_loi_m1.json  top-k: {"drop_top1": {"mean_gain": 0.008426192227878392, "wins": 9}, "drop_top3": {"mean_gain": 0.0017920691946206047, "wins": 7}, "drop_top5": {"mean_gain": -0.002129359896198657, "wins": 3}}
+wrote experiments/results/r10_loi_m0.json  top-k: {"drop_top1": {"mean_gain": 0.0005611198211137758, "wins": 5}, "drop_top3": {"mean_gain": -0.0035074208032817244, "wins": 4}, "drop_top5": {"mean_gain": -0.006079356963701976, "wins": 3}}
+wrote experiments/results/r10_loi_s1.json  top-k: {"drop_top1": {"mean_gain": 5.5902613645730795e-05, "wins": 4}, "drop_top3": {"mean_gain": -0.00844498639533674, "wins": 3}, "drop_top5": {"mean_gain": -0.01578296430664492, "wins": 2}}
+incumbent (reproduced): {"rkf_mean_full": 0.38749388255528905, "per_repeat_r2": [0.44103495885100286, 0.336011923088413, 0.4169592772291727, 0.3858768224225765, 0.42913802837935655, 0.3750482364844524, 0.3986575059427776, 0.40688697219601555, 0.3113133731995208, 0.37401172775960323], "ci": [0.3123809283732589, 0.5288811418557986], "seed0_r2": 0.44103495885100286, "seed0_mae": 1.8795016964385098, "seed0_rmse": 2.52678564178831, "protocol C": {"mean": 0.24750529630164725, "std": 0.07991278199955408, "ci": [-0.11980472750293059, 0.29910725645435915]}}
+wrote experiments/runs/round10_loi_oof.npz
+consistency checks passed (1e-9) for incumbent + ['r10_loi_m1', 'r10_loi_m0', 'r10_loi_s1']
+{
+ "K": 3,
+ "q": 2.093914852340577,
+ "q_raw": 0.022495783536541098,
+ "best": "r10_loi_m1",
+ "G1": true,
+ "G2": true,
+ "G3": false,
+ "adopt_if_critic_passes": false,
+ "ci_inc": [
+  0.3123809283732589,
+  0.5288811418557986
+ ],
+ "n_rows": 606,
+ "n_groups": 107,
+ "n_boot": 2000,
+ "seed": 0,
+ "gate_config": "experiments/configs/adoption_gate_v2.json",
+ "order": [
+  "r10_loi_m1",
+  "r10_loi_m0",
+  "r10_loi_s1"
+ ],
+ "selectable": [
+  "r10_loi_m1",
+  "r10_loi_s1"
+ ],
+ "npz": "experiments/runs/round10_loi_oof.npz"
+}
+  r10_loi_m1 theta +0.0149 wins 10/10 ci_lo 0.3269 se 0.0097 lb_maxT -0.0055 lb_unadj -0.0012 p(d<=0) 0.060
+  r10_loi_m0 theta +0.0079 wins 8/10 ci_lo 0.3252 se 0.0079 lb_maxT -0.0086 lb_unadj -0.0045 p(d<=0) 0.189
+  r10_loi_s1 theta +0.0036 wins 6/10 ci_lo 0.3271 se 0.0127 lb_maxT -0.0230 lb_unadj -0.0176 p(d<=0) 0.389
+wrote ~/dravix/experiments/runs/round10_loi_gate_v2.json
+GATE LOI: best r10_loi_m1; G1 True G2 True G3 False -> NOT adopted; exp115 stays
+runtime 605s
+.venv312/bin/python data/v2/train_round10_physics.py --target $t  1742.96s user 43.68s system 252% cpu 11:48.93 total

@@ -1,0 +1,256 @@
+{
+ "slug": "samedata_ma_jmi2025_r0_P1",
+ "target": "LOI (%), polypropylene + halogen-free FR composites (iteration 1 of their active-learning loop)",
+ "round_config": "experiments/configs/samedata_ma_jmi2025.json",
+ "shared_config": "experiments/configs/samedata_common.json",
+ "dataset": "Ma W., ..., Song N., Ding P. J. Mater. Inform. 5 (2025), doi:10.20517/jmi.2025.09 (Shanghai University), CC BY 4.0; data/sources/incoming/ma_jmi2025/Data_LOI.xlsx (217 rows)",
+ "features": [
+  "PP",
+  "PAPP",
+  "TCA",
+  "ZHS",
+  "ZS",
+  "Mg(OH)2",
+  "DOPO",
+  "MPP",
+  "Pentaerythritol",
+  "APP",
+  "EBS",
+  "Anti-drip-agent",
+  "silane coupling agent",
+  "Al(OH)3",
+  "SiO2",
+  "ZnB",
+  "AHP",
+  "XiuCheng",
+  "wollastonite",
+  "imvite",
+  "XS-FR-8310",
+  "XS-HFFR-8332",
+  "ZBS-PV-OA",
+  "EPFR-1100NT",
+  "M-2200B",
+  "FP-250S",
+  "CFA",
+  "ammonium octamolybdate",
+  "antimony oxides",
+  "antioxidant"
+ ],
+ "model": "their published model (reproduction control); see round_config 'r0 (reproduction control)'",
+ "hyperparameters": "StandardScaler() fit on the training part -> Ridge(alpha=0.1) (code '3.Model optimization.py' and '7. Model stability validation.py').",
+ "code": "data/v2/train_samedata.py",
+ "n_rows": 217,
+ "n_groups": null,
+ "protocol": "P1: train_test_split(X, y, test_size=0.2, random_state=s), s = 0..9, on the 217 rows; StandardScaler inside the training part for r0 (c1-c3 per common). Test R2 (primary), RMSE, MAE. Same splits on the 227-row sensitivity set use the same seeds.",
+ "sota": 0.919,
+ "sota_source": "Ma W., ..., Song N., Ding P. J. Mater. Inform. 5 (2025), doi:10.20517/jmi.2025.09 (Shanghai University), CC BY 4.0",
+ "status": "ok",
+ "blocked_reason": "",
+ "external_check": true,
+ "not_a_dravix_target": "same-data comparison; never enters leaderboard.csv / numbers_of_record.json",
+ "r2_mean": 0.9406990679396181,
+ "r2_sd": 0.02327159393525959,
+ "r2_repeat0": 0.952385797521928,
+ "rmse_mean": 1.8788860239666523,
+ "rmse_sd": 0.28556612139468457,
+ "mae_mean": 1.4088894947329387,
+ "mae_sd": 0.23148894733876688,
+ "sd_ddof": 0,
+ "per_repeat": [
+  {
+   "seed": 0,
+   "n_train": 173,
+   "n_test": 44,
+   "r2": 0.952385797521928,
+   "rmse": 1.8284221847764603,
+   "mae": 1.3414210418720245
+  },
+  {
+   "seed": 1,
+   "n_train": 173,
+   "n_test": 44,
+   "r2": 0.9078407914659905,
+   "rmse": 2.357293427685063,
+   "mae": 1.7632042790629472
+  },
+  {
+   "seed": 2,
+   "n_train": 173,
+   "n_test": 44,
+   "r2": 0.8917372208148141,
+   "rmse": 2.428120265399662,
+   "mae": 1.8719136397140395
+  },
+  {
+   "seed": 3,
+   "n_train": 173,
+   "n_test": 44,
+   "r2": 0.953883450321674,
+   "rmse": 1.59230142375232,
+   "mae": 1.2087464791225808
+  },
+  {
+   "seed": 4,
+   "n_train": 173,
+   "n_test": 44,
+   "r2": 0.9561211100159608,
+   "rmse": 1.6661073381079294,
+   "mae": 1.282884732949674
+  },
+  {
+   "seed": 5,
+   "n_train": 173,
+   "n_test": 44,
+   "r2": 0.9532498136958435,
+   "rmse": 1.7261105733713618,
+   "mae": 1.3605719605930746
+  },
+  {
+   "seed": 6,
+   "n_train": 173,
+   "n_test": 44,
+   "r2": 0.9575507085802996,
+   "rmse": 1.675334609072543,
+   "mae": 1.3212143961888918
+  },
+  {
+   "seed": 7,
+   "n_train": 173,
+   "n_test": 44,
+   "r2": 0.9634342117987601,
+   "rmse": 1.6613035808774057,
+   "mae": 1.0855351036312484
+  },
+  {
+   "seed": 8,
+   "n_train": 173,
+   "n_test": 44,
+   "r2": 0.9491017650210062,
+   "rmse": 1.788616103542623,
+   "mae": 1.3261022837453194
+  },
+  {
+   "seed": 9,
+   "n_train": 173,
+   "n_test": 44,
+   "r2": 0.9216858101599064,
+   "rmse": 2.065250733081153,
+   "mae": 1.5273010304495853
+  }
+ ],
+ "sklearn_version": "1.7.1",
+ "numpy_version": "2.2.6",
+ "torch_version": "2.8.0",
+ "wall_time_s": 0.0,
+ "sensitivity_all227": {
+  "note": "P1 on all 227 rows (no exclusion), same seeds; reported only, never selected on, never the claim",
+  "r2_mean": 0.9187450147591463,
+  "r2_sd": 0.0431395754066277,
+  "r2_repeat0": 0.9425187094151463,
+  "rmse_mean": 2.1411207852374554,
+  "rmse_sd": 0.49930666430484155,
+  "mae_mean": 1.521572468648159,
+  "mae_sd": 0.24074515947505049,
+  "per_repeat": [
+   {
+    "seed": 0,
+    "n_train": 181,
+    "n_test": 46,
+    "r2": 0.9425187094151463,
+    "rmse": 1.9966489502769125,
+    "mae": 1.3763180383509528
+   },
+   {
+    "seed": 1,
+    "n_train": 181,
+    "n_test": 46,
+    "r2": 0.9383173406303387,
+    "rmse": 2.0221704893036847,
+    "mae": 1.4975263572850552
+   },
+   {
+    "seed": 2,
+    "n_train": 181,
+    "n_test": 46,
+    "r2": 0.9353529255494737,
+    "rmse": 1.8736397379895056,
+    "mae": 1.4578776385266576
+   },
+   {
+    "seed": 3,
+    "n_train": 181,
+    "n_test": 46,
+    "r2": 0.9268526205833975,
+    "rmse": 2.106127829467341,
+    "mae": 1.4503155539311992
+   },
+   {
+    "seed": 4,
+    "n_train": 181,
+    "n_test": 46,
+    "r2": 0.938371609133407,
+    "rmse": 1.9039805268804217,
+    "mae": 1.4793074557247965
+   },
+   {
+    "seed": 5,
+    "n_train": 181,
+    "n_test": 46,
+    "r2": 0.8325953014087135,
+    "rmse": 3.1894159724938027,
+    "mae": 1.9965983259246718
+   },
+   {
+    "seed": 6,
+    "n_train": 181,
+    "n_test": 46,
+    "r2": 0.9367592552519547,
+    "rmse": 1.8955064254975547,
+    "mae": 1.3342434472390312
+   },
+   {
+    "seed": 7,
+    "n_train": 181,
+    "n_test": 46,
+    "r2": 0.9676704116636593,
+    "rmse": 1.501908668126911,
+    "mae": 1.2106699693993483
+   },
+   {
+    "seed": 8,
+    "n_train": 181,
+    "n_test": 46,
+    "r2": 0.9316790911011463,
+    "rmse": 1.9333255834512937,
+    "mae": 1.4602280235140856
+   },
+   {
+    "seed": 9,
+    "n_train": 181,
+    "n_test": 46,
+    "r2": 0.8373328828542247,
+    "rmse": 2.9884836688871297,
+    "mae": 1.9526398765857944
+   }
+  ]
+ },
+ "loocv_train_r2": [
+  0.9346176192789961,
+  0.9500880991642761,
+  0.9315426433363171,
+  0.9117642145348913,
+  0.9357431890129322,
+  0.9329714619470361,
+  0.9211493799385299,
+  0.9281758935688402,
+  0.9300462563141654,
+  0.9411432739699275
+ ],
+ "loocv_train_r2_mean": 0.9317242031065913,
+ "gate_interval": [
+  0.889,
+  0.949
+ ],
+ "gate_pass": true,
+ "note": "r0 P1: R2 mean 0.9407 sd 0.0233 rep0 0.9524; external same-data check vs 0.919 (samedata_ma_jmi2025)"
+}

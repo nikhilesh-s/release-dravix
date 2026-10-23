@@ -1,0 +1,20 @@
+litcone_gt_round1 (REAL) -- rows after merge/dedupe 5015, after form filter 4529, papers 806; snapshot cone_lit_benchmark_v1.csv sha256 0b2af8e1817bdda1
+matrix categories (>=3 papers): ['ABS', 'EP', 'EPDM', 'EVA', 'FPUF', 'HDPE', 'HIPS', 'LDPE', 'LLDPE', 'NR', 'PA6', 'PA66', 'PBT', 'PC', 'PET', 'PF', 'PLA', 'PMMA', 'PP', 'PS', 'PVC', 'RPUF', 'SBR', 'SR', 'TPU', 'UPR', 'VER', 'WPC', 'other:CR/BR', 'other:LDPE/EVA', 'other:NBR', 'other:PA11', 'other:PBS', 'other:PVA', 'other:WPU', 'other:asphalt', 'other:calcium alginate']; forms: ['bulk', 'fibre_composite', 'film', 'foam', 'other', 'wood_plastic']; features 175
+
+=== TTI: 3368 rows / 598 papers; competitor 0.95 (training-data fit, their rows not released)
+  primary         P1 [THEIR PROTOCOL: computed on training data; not held-out evidence] ensemble 0.555 in-sample 0.585 | P2 random 5x10 0.376 +- 0.042 CI [0.137, 0.505] | P3 paper-grouped 5x10 -0.247 +- 0.117 CI [-0.153, 0.250]  (543s)
+  variant_C       P1 [THEIR PROTOCOL: computed on training data; not held-out evidence] ensemble 0.765 in-sample 0.780 | P2 random 5x10 0.659 +- 0.018 CI [0.590, 0.759] | P3 paper-grouped 5x10 -0.047 +- 0.348 CI [-2.376, 0.516]  (489s)
+
+=== pHRR: 4017 rows / 725 papers; competitor 0.94 (training-data fit, their rows not released)
+  primary         P1 [THEIR PROTOCOL: computed on training data; not held-out evidence] ensemble 0.697 in-sample 0.711 | P2 random 5x10 0.604 +- 0.003 CI [0.582, 0.638] | P3 paper-grouped 5x10 0.286 +- 0.058 CI [0.188, 0.442]  (719s)
+  variant_C       P1 [THEIR PROTOCOL: computed on training data; not held-out evidence] ensemble 0.895 in-sample 0.901 | P2 random 5x10 0.851 +- 0.006 CI [0.837, 0.870] | P3 paper-grouped 5x10 0.711 +- 0.023 CI [0.628, 0.797]  (518s)
+
+=== THR: 3355 rows / 619 papers; competitor 0.97 (training-data fit, their rows not released)
+  primary         P1 [THEIR PROTOCOL: computed on training data; not held-out evidence] ensemble 0.780 in-sample 0.791 | P2 random 5x10 0.683 +- 0.010 CI [0.670, 0.723] | P3 paper-grouped 5x10 0.244 +- 0.055 CI [-0.090, 0.334]  (443s)
+  variant_C       P1 [THEIR PROTOCOL: computed on training data; not held-out evidence] ensemble 0.927 in-sample 0.932 | P2 random 5x10 0.887 +- 0.003 CI [0.874, 0.900] | P3 paper-grouped 5x10 0.724 +- 0.011 CI [0.643, 0.784]  (483s)
+
+=== avg_HRR: 759 rows / 130 papers; competitor 0.96 (training-data fit, their rows not released)
+  primary         P1 [THEIR PROTOCOL: computed on training data; not held-out evidence] ensemble 0.828 in-sample 0.845 | P2 random 5x10 0.677 +- 0.017 CI [0.630, 0.735] | P3 paper-grouped 5x10 0.234 +- 0.042 CI [0.051, 0.324]  (207s)
+  variant_C       P1 [THEIR PROTOCOL: computed on training data; not held-out evidence] ensemble 0.946 in-sample 0.950 | P2 random 5x10 0.894 +- 0.008 CI [0.865, 0.913] | P3 paper-grouped 5x10 0.746 +- 0.014 CI [0.637, 0.822]  (267s)
+
+runtime 3674s; wrote ~/Dravix/dravix-master/experiments/runs/litcone_gt_round1.json

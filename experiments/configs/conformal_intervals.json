@@ -1,0 +1,257 @@
+{
+  "round": "conformal_intervals",
+  "item": "A4 (plans/LEVER_SWEEP_2026-10-06.md, Tier A); finding models-conformal-intervals in plans/LEVER_SWEEP_2026-10-06_findings.json",
+  "status": "declared",
+  "declared": "Drafted by Opus 5.5 on Oct 6 during the lever-sweep A5 drafting pass. Repo HEAD at drafting: 4f92df1. It was written before any conformal interval, coverage figure or interval width had been computed for any target; the git commit time is the timestamp. It must be committed before any code in it runs.",
+  "authority": "plans/LEVER_SWEEP_2026-10-06.md A4: 'Needs Arnav: no'. Tier A, so no number of record changes.",
+  "what": "This is not a modelling round and is report-only. Each of the six records gets 90% group-conformal prediction intervals by group-weighted CV+ (Barber et al. 2021, Ann Stat 49:486). The weighting follows Dunn, Wasserman & Ramdas (JASA 2023, two-layer hierarchical conformal). Coverage is measured in a nested repeated GroupKFold 5x10 evaluation. Heat-flux Mondrian strata are used for the five FSRI targets. Group-level and row-level coverage are both reported, plus a report-only CQR variant (Romano et al. 2019, NeurIPS). The pHRR intervals are wired into demo/predict.py. No R2, CI, leaderboard row or number of record changes.",
+  "banned_moves_checked": true,
+  "banned_moves_note": "Checked experiments/banned_moves.md. No new feature, join or row exclusion: every record is re-fit on its own rows, features, groups and hyperparameters. No win-rule or R2-CI change: coverage CIs are new report-only statistics and never promote or demote anything. No 'beats SOTA' wording, and coverage is never set against any bar. Nothing is written to experiments/results/, because scripts/update_trackers.py would ingest it as an experiment. leaderboard.csv and the xlsx files are untouched. TTI keeps the 681-row record population; the 6 operator-flagged rows (B4 / D4) are not dropped, because that is Arnav's decision.",
+
+  "prior_looks": {
+    "conformal": "None. No conformal interval, coverage or width has ever been computed in this repo: the finding's grep found 0 hits, and a re-grep while drafting (data, scripts, demo, reports, experiments, models, STATUS.md) found 0 hits. The result JSONs carry no OOF arrays, so the per-row residual tables needed here do not exist yet.",
+    "residual_structure_already_seen (label-touching, by earlier rounds and the lever sweep)": [
+      "TTI exp046 (tti-1, tti-2, tti-3 in the findings):",
+      "  Within-flux seconds R2 is 0.042, 0.274 and 0.283 at 25, 50 and 75 kW/m2. Log R2 is 0.025, 0.018 and -0.006.",
+      "  The 25 kW/m2 rows hold 85.2% of target SS and 97.8% of repeat-0 OOF SSE. The 3 Masonite 15 kW/m2 rows hold 74.5% of the non-25 SS.",
+      "  Five materials hold 61% of SSE. Latex_Pillow_Foam at 25 kW/m2 is predicted 378 s against 10-21.5 s observed.",
+      "  The replicate ceilings at 25 kW/m2 are LORO 0.558 and an own-50/75 oracle of 0.29-0.49.",
+      "LOI exp115: paper offsets dominate (GKF 0.388 vs random split 0.717). The round-8 gain sits in a few papers (M079). The proxy costs almost nothing (exp116 0.386).",
+      "CR exp117: Ridge predicts outside 0-100% on 8% of rows (clipping changes R2 by 0.0001). The gain is partly concentrated in mineral wool (29% of it). B1 research looks (not used here): y minus the STA baseline is above 0 on 46% of rows; the baseline-only R2 is 0.596.",
+      "FIGRA exp119: the top 5 materials give 116% of the blend gain.",
+      "pHRR exp074: category-grouped GKF 0.392; per-category tables in the critic."
+    ],
+    "consequence": "The heat-flux Mondrian strata were chosen knowing that TTI error concentrates at 25 kW/m2. The choice was therefore not blind to labels. It is the plan's stated design, and the unstratified variant V1 is always reported beside it. Nothing here is ever selected, so this look cannot move any number of record.",
+    "this_drafting_session": "Ran the record data-prep functions (train_blend_round1.data_phrr/data_cr/data_figra/data_tti and the THR prep from train_thr_v1_replicates.py) and inspected only shapes: rows and groups per heat flux, rows per (flux, group) and NaN counts per feature. No label values, predictions, residuals or scores were looked at. Counts seen: pHRR 191/64, rows per flux {15:1, 25:60, 35:5, 50:62, 75:62, 100:1}. CR 567/61 {15:3, 25:196, 35:12, 50:182, 75:174}. FIGRA 197/67 {15:1, 25:60, 35:5, 50:64, 75:64, 100:3}. TTI 681/76 {15:3, 25:223, 35:16, 50:221, 75:217, 100:1}. THR 191/65 {15:1, 25:60, 35:5, 50:62, 75:62, 100:1}. LOI 606/107 from numbers_of_record.json (not rebuilt).",
+    "skeptic_pass": "The Oct 6 skeptic read code, the plan, the findings, the leaderboard record rows and the existing rescore_loi_train_loi_rescore_r8_snap606.log. It loaded models/v2/phrr_hgb_v4.joblib only to compare its feature list with T.BASE + T.PHYS (equal). No labels, predictions, residuals or scores were computed."
+  },
+
+  "records (exact code paths; data prep imported, never re-implemented)": {
+    "pHRR": {
+      "exp_id": "exp074",
+      "record": [0.6113, 0.516, 0.838],
+      "reproduce_per_run_numbers_of_record_sh": "train_phrr_promote_c2.py",
+      "data": "train_blend_round1.data_phrr(): train_phrr_v3_robust.load(replicate_target=True) with EXTRAS hr=total_hr_bc_kJg, onset=t_onset_bc_C; has_mcc rows; features T.BASE + T.PHYS. 191 rows; groups = material with PlasticC -> HIPS (64).",
+      "model": "train_phrr_v3_robust.hgb(): HistGradientBoostingRegressor(learning_rate=0.05, max_iter=200, max_leaf_nodes=15, min_samples_leaf=10, random_state=0)",
+      "fit_scale": "log1p(y)",
+      "score_scale": "s = log1p(y); s_hat = model output (log1p scale)",
+      "back_transform": "expm1",
+      "display_clip": "[0, inf)",
+      "mondrian": true,
+      "demo": true
+    },
+    "TTI": {
+      "exp_id": "exp046",
+      "record": [0.3133, 0.071, 0.496],
+      "reproduce_per_run_numbers_of_record_sh": "train_tti_v5_physics.py --onset-bc --replicate-table (C6 Poisson GLM row)",
+      "data": "train_blend_round1.data_tti(): imports train_tti_v5_physics with sys.argv = [argv0, '--onset-bc', '--replicate-table']; v5.df; features v5.PHYS. 681 rows; groups = material (76). Flux comes from v5.df['heat_flux_kWm2'].",
+      "model": "v5.linear(PoissonRegressor(alpha=0.01, max_iter=3000)) = SimpleImputer(median, add_indicator) + StandardScaler + PoissonRegressor",
+      "fit_scale": "raw seconds (Poisson deviance, log link), as the record",
+      "score_scale": "s = ln(y), s_hat = ln(mu_hat): the GLM's log-link scale. y > 0 is asserted by v5, and mu_hat > 0 by the log link.",
+      "back_transform": "exp",
+      "display_clip": "[0, inf)",
+      "mondrian": true,
+      "demo": false
+    },
+    "Char Residue": {
+      "exp_id": "exp117",
+      "record": [0.6504, 0.4389, 0.7893],
+      "reproduce_per_run_numbers_of_record_sh": "train_blend_round1.py --target CR",
+      "data": "train_blend_round1.data_cr(): 567 rows; groups = material with PlasticC -> HIPS (61); features base + 5 category flags.",
+      "model": "train_blend_round1.Avg([data_cr()['inc'] (HGB lr 0.05, 300 iter, 15 leaves, min_samples_leaf 10, rs 0), et() (ExtraTrees 500, min_samples_leaf 2, rs 0, n_jobs -1), ridge() (median impute + indicators + StandardScaler + Ridge alpha 10)])",
+      "fit_scale": "raw % (log_target False)",
+      "score_scale": "s = y (cone residue %)",
+      "back_transform": "identity",
+      "display_clip": "[0, 100]",
+      "mondrian": true,
+      "demo": false
+    },
+    "LOI": {
+      "exp_id": "exp115",
+      "record": [0.3875, 0.3124, 0.5289],
+      "reproduce_per_run_numbers_of_record_sh": "rescore_loi_snapshot.py --stage data/v2/loi_rpuf_parts/wave4_staging --stage data/v2/loi_rpuf_parts/wave5_staging --script data/v2/train_loi_rescore_r8.py",
+      "data": "Snapshot 3 (606 rows / 107 papers), built only by rescore_loi_snapshot.py with both stages, in its throwaway copy with patch_build (W032 exclusion + basis() fix) and patch_round6 (asserts generalised to 606/107). Features DATA['c2'][0] = FEAT_C2 (the exp092 features); y = loi_pct; groups = ref_id (107).",
+      "model": "Avg([rf() (RF 500, min_samples_leaf 2, rs 0, n_jobs -1), et(), ridge()]) exactly as train_loi_rescore_r8.py r8d",
+      "fit_scale": "raw LOI %",
+      "score_scale": "s = y (LOI %)",
+      "back_transform": "identity",
+      "display_clip": "[0, 100]",
+      "mondrian": false,
+      "mondrian_note": "LOI has no heat flux, so there is a single stratum. No other stratifier is introduced.",
+      "demo": false,
+      "not_covered": "The exp116 proxy-free supplementary is not covered. Only the number of record is."
+    },
+    "FIGRA": {
+      "exp_id": "exp119",
+      "record": [0.4975, 0.3464, 0.6475],
+      "reproduce_per_run_numbers_of_record_sh": "train_blend_round1.py --target FIGRA",
+      "data": "train_blend_round1.data_figra(): 197 rows; groups = material (67); features f2.",
+      "model": "Avg([data_figra()['inc'] (HGB 300 iter, lr 0.05, 15 leaves, min_samples_leaf 5, rs 0), et(), ridge()]); the whole Avg is fitted on log1p(y), as in the record",
+      "fit_scale": "log1p(y)",
+      "score_scale": "s = log1p(y)",
+      "back_transform": "expm1",
+      "display_clip": "[0, inf)",
+      "mondrian": true,
+      "demo": false
+    },
+    "THR": {
+      "exp_id": "exp045",
+      "record": [0.953, 0.918, 0.975],
+      "reproduce_per_run_numbers_of_record_sh": "train_thr_v1_replicates.py (needs data/v2/raw FSRI clone at a432697)",
+      "data": "The data-prep lines of train_thr_v1_replicates.py, which has module-level code and so cannot be imported. They are copied verbatim, using train_thr_v1.build_features and scalar_table (importable; __main__-guarded): replicate-mean thr_MJm2 per material x flux over replicates that are neither did_not_ignite nor early_stop; phys_MJm2 = mpa_flux_kgm2 * hc_bc_kJg; core = rows with phys_MJm2 notna. 191 rows; groups = material (65, unmerged, as the record).",
+      "model": "train_thr_v1.LIN = LinearRegression(fit_intercept=False) on [phys_MJm2]",
+      "fit_scale": "raw MJ/m2",
+      "score_scale": "s = y (MJ/m2)",
+      "back_transform": "identity",
+      "display_clip": "[0, inf)",
+      "mondrian": true,
+      "demo": false
+    }
+  },
+
+  "step1_reproduction": "Before any conformal computation, and for each target separately, reproduce the record with eval_protocol.repeated_group_kfold(model, X, y, groups, log_target=<record>), where log_target is True for pHRR and FIGRA and False otherwise, then eval_protocol.bootstrap_ci(y, oof[0], groups). The mean and both CI bounds must lie within 0.002 of 'record'. If they do not, that target is BLOCKED: write a blocker per the exit protocol and continue with the others. This re-computes known numbers only. Keep the repeat-0 OOF for the per-row CSV and for the pHRR artifact check.",
+
+  "method": {
+    "nominal": "90% two-sided (alpha = 0.10). This is fixed; there is no alpha flag anywhere.",
+    "score": "R_i = |s_i - s_hat_{-k(i)}(x_i)| on the score scale above, where s_hat_{-k(i)} is the model of the fold that held out row i's group.",
+    "mondrian_strata": "FSRI targets: stratum = nearest anchor in {25, 50, 75} kW/m2 to the row's heat flux, ties to the lower anchor. So 15 and 35 -> 25 and 100 -> 75. Calibration rows and the test row must share a stratum. LOI: one stratum. Per-stratum counts of rows and groups must be printed. The 15/35/100 rows are too few for their own strata, since a finite 90% bound needs at least 9 groups.",
+    "group_weights": "Primary: within a stratum, w_i = 1 / (number of calibration rows of group g(i) in that stratum), so each material or paper carries total weight 1. W = sum of w_i = G_s, the number of calibration groups in the stratum.",
+    "cv_plus_bounds": "Test x in stratum s; fold models mu_k, k = 1..5; calibration rows i in stratum s.",
+    "cv_plus_formulas": [
+      "u_i = mu_{k(i)}(x) + R_i and l_i = mu_{k(i)}(x) - R_i.",
+      "tau = (1 - alpha) * (W + 1).",
+      "upper(x) = the smallest u_i such that the summed weight of {j : u_j <= u_i} is >= tau.",
+      "lower(x) = the largest l_i such that the summed weight of {j : l_j >= l_i} is >= tau.",
+      "If W < tau, the bound is +inf / -inf; count and report these.",
+      "Use 1e-12 tolerance on the weight sums.",
+      "With all w_i = 1 this is exactly Barber et al.'s CV+: the ceil((1-alpha)(n+1))-th smallest u_i and the floor(alpha(n+1))-th smallest l_i."
+    ],
+    "interval_units": "Bounds are computed on the score scale. Coverage = 1[lower <= s <= upper] on the score scale, which equals raw-scale coverage because the back-transform is monotone. Raw-unit bounds = back_transform(bound), then clipped to display_clip for display and raw widths only. Coverage always uses the unclipped bounds.",
+    "theory_note": "CV+ guarantees at least 1 - 2*alpha (80%) under exchangeability, and is about 90% in practice. Exchangeability holds only between groups, so the group-weighted version is an approximation to Dunn et al.'s pooled-CDF estimator. The measured nested coverage is the evidence; the theory is not."
+  },
+
+  "deployed_interval (what the demo and model docs use)": "One stated repeat: GroupKFold(n_splits=5, shuffle=True, random_state=0) on all rows with the record's groups. These are exactly the record's repeat-0 folds. Use the 5 fold models plus each row's repeat-0 OOF residual, with group-weighted CV+ and Mondrian as above. It is built for pHRR only (demo).",
+
+  "nested_coverage_evaluation (the evidence)": {
+    "outer": "For r in 0..9: GroupKFold(n_splits=5, shuffle=True, random_state=r).split(X, y, groups). These are the eval_protocol / record splits.",
+    "inner": "For each outer fold, take the outer-train rows only. Run GroupKFold(n_splits=5, shuffle=True, random_state=r) on their groups to get 5 inner models, fitted on clones of the record model on the fit scale. Each inner model predicts (a) its inner held-out rows, giving the inner OOF scores R_i, and (b) every outer-test row.",
+    "interval": "Each outer-test row gets the group-weighted Mondrian CV+ interval from the 5 inner models and the inner OOF scores of its stratum. The outer test groups are never in any inner fit or calibration set.",
+    "asserts": [
+      "Outer train and test groups are disjoint.",
+      "Inner train and inner held-out groups are disjoint, and every inner row is an outer-train row.",
+      "Every row gets exactly one interval per repeat.",
+      "pHRR deployed artifact: its repeat-0 OOF equals the step-1 repeat-0 OOF (atol 1e-8 kW/m2)."
+    ],
+    "fits": "250 record-model fits per target (10 x 5 x 5), plus 500 HGB-quantile fits for CQR, plus 50 for step 1. Expected total under an hour: LOI and CR are the slow ones (blends with 500-tree forests).",
+    "note": "Inner models train on about 64% of the groups. The coverage measured is that of the procedure, slightly pessimistic relative to the deployed 80%-of-groups fold models.",
+    "deviation_from_finding": "The finding's sketch calibrates a held-out fold on the other folds' OOF residuals from the same repeat; those residuals come from models that trained on the held-out fold's groups, so the test groups would touch calibration. The nested design replaces it, declared before any result. It is stricter, not a choice made after looking."
+  },
+
+  "metrics (fixed; headline order follows the plan's 'lead with group coverage')": {
+    "group_all_coverage": "The finding's 'group coverage': the fraction of groups (materials or papers) whose rows are all inside their intervals. Per repeat, mean over groups of min over the group's rows of the coverage indicator.",
+    "group_mean_coverage": "Mean over groups of the within-group fraction of rows covered, with each group weighted equally. This is the estimand the primary per-row interval is calibrated for (a random row of a new material or paper). It is the one compared with the nominal 0.90.",
+    "row_coverage": "The fraction of rows covered (pooled).",
+    "width": "Mean and median of (upper - lower) on the score scale, unclipped; mean and median raw-unit width after display clipping. For log-scale targets, also the median of exp(score width), which is (1+hi)/(1+lo) for log1p and hi/lo for TTI. Widths (all forms) are averaged over bounded intervals only, with n_unbounded printed beside them; unbounded intervals still count in coverage (they cover on their open side). An interval with lower > upper (possible only for CQR) is empty: coverage 0, width 0, counted as n_empty and printed. Widths get no CI.",
+    "aggregation": "Each metric per repeat, then the mean over the 10 repeats (the headline) with min and max over repeats.",
+    "uncertainty": "Group-bootstrap 95% CI for the three coverage metrics: 2000 draws, a fresh np.random.default_rng(0) for each CI (each variant x metric x overall-or-stratum cell), rng.choice(unique_groups, G) as in eval_protocol.bootstrap_ci, percentiles 2.5 and 97.5. Per-stratum CIs resample only the groups that have rows in that stratum (G = their count). The statistic is computed on per-group values averaged over repeats: for group_mean, the group's mean over repeats of its within-group fraction; for group_all, the fraction of repeats in which all its rows were covered; row_coverage uses each row's repeat-mean indicator, with groups resampled. Also print the binomial reference SD sqrt(0.9*0.1/G): about 0.038 at G=61 and 0.029 at G=107, a 95% band of about +-6-7.5 points. The plan's '+-4%' is about one SD.",
+    "breakdowns": "All metrics are also reported per stratum (25/50/75 for FSRI), where group_all means all of the group's rows in that stratum. A diagnostic table gives row coverage and n per raw heat-flux value (15/25/35/50/75/100), without CIs.",
+    "reading_rule (fixed, report-only)": "Applied to group_mean_coverage, for every variant, overall and per stratum: 'consistent with nominal' if its 95% CI contains 0.90; 'under-covers' if the CI upper bound is below 0.90; 'conservative' if the CI lower bound is above 0.90. For group_all, wherever groups have more than one row in the cell (overall for every target, since FSRI materials have rows at several fluxes; per stratum for TTI, CR, LOI and wherever 15/35/100 kW/m2 rows join an anchor), say it is expected to fall below 0.90, because the primary interval is per-row, not simultaneous; group_all gets no reading-rule label. No variant is ever called better or worse; the tables are only juxtaposed."
+  },
+
+  "variants": {
+    "P (primary, deployed)": "Group-weighted CV+, Mondrian by flux anchor (FSRI) or a single stratum (LOI), score as in 'records'.",
+    "V1_no_mondrian (report-only, FSRI only)": "P with one stratum.",
+    "V2_row_weighted (report-only)": "P with all w_i = 1 (W = n_s rows), i.e. textbook row-exchangeable CV+. It shows what ignoring the grouping does. It reuses P's fits.",
+    "V3_tti_pearson (report-only, TTI only)": "The Poisson-normalised score R_i = |y_i - mu_{k(i)}(x_i)| / sqrt(mu_{k(i)}(x_i)) in seconds, with u_i = mu_{k(i)}(x) + R_i*sqrt(mu_{k(i)}(x)) and l_i = mu_{k(i)}(x) - R_i*sqrt(mu_{k(i)}(x)). Group-weighted and Mondrian. Coverage and widths are in seconds. It reuses P's fits.",
+    "CQR (report-only)": {
+      "quantile_models": "HistGradientBoostingRegressor(loss='quantile', quantile=0.05 and 0.95 as two models, learning_rate=0.05, max_iter=300, max_leaf_nodes=15, min_samples_leaf=10, random_state=0). One spec for all six targets. Each is fitted on the score scale s with the record's feature matrix X (NaN-native).",
+      "score": "E_i = max(qlo_{k(i)}(x_i) - s_i, s_i - qhi_{k(i)}(x_i)), using inner OOF quantile predictions.",
+      "bounds": "u_i = qhi_{k(i)}(x) + E_i and l_i = qlo_{k(i)}(x) - E_i, with the same weighted CV+ rule, group weights and strata as P, inside the same nested outer/inner splits.",
+      "reported": "The same metrics as P."
+    },
+    "never_used_for_selection": "P is the deployed method whatever the results. No variant replaces P without a new committed config and Arnav's approval. No coverage or width enters any adoption rule, numbers_of_record.json, the leaderboard, or model choice for any target."
+  },
+
+  "demo_wiring (pHRR only: demo/predict.py serves only the pHRR record)": {
+    "artifact": "models/v2/phrr_hgb_v4_conformal.joblib, written by conformal_intervals.py --target pHRR. models/v2/phrr_hgb_v4.joblib is never touched; assert its mtime is unchanged.",
+    "artifact_keys": [
+      "fold_models: 5 hgb() models fitted on log1p(y) on the repeat-0 folds",
+      "fold_of_group",
+      "features (must equal phrr_hgb_v4 bundle features, asserted)",
+      "scale = 'log1p'",
+      "alpha = 0.10",
+      "anchors = [25, 50, 75]",
+      "calib: per-row arrays material, group, fold, stratum, R (log1p) and weight",
+      "coverage: the nested P summary for pHRR (overall with CIs, and per stratum)",
+      "method: a text description",
+      "config = 'experiments/configs/conformal_intervals.json'"
+    ],
+    "point_estimate": "Unchanged: phrr_hgb_v4.joblib's full-data prediction. The interval is not re-centred on it.",
+    "path_new_material (--features; unknown --material names still stop with the existing error)":"Use the deployed CV+ (all 5 fold models, all calibration rows in the query's stratum). Print '90% prediction interval: [lo, hi] kW/m2', followed by the method, the stratum used, the number of calibration materials, and the measured nested coverage for that stratum and overall: group_mean with CI, group_all, row. If the full-data point lies outside the interval, also print one line saying so.",
+    "path_in_data_material (--material present in the table, any flux)": "k* = repeat-0 fold of the material's merged group. Print 'Held-out prediction (repeat-0 fold model that never saw this material)' = expm1(mu_{k*}(x)). Then print a held-out 90% interval = expm1(mu_{k*}(x) +- q), clipped at 0. Here the calibration set is the rows in the query's stratum whose group != own group, with the usual group weights; G'_s is the number of those groups; q is the smallest R_i in that set such that the summed weight of {j in the set : R_j <= R_i} is >= 0.9 * (G'_s + 1) (1e-12 tolerance). If no R_i qualifies, print the held-out interval as unbounded. If a measured value exists at that flux, print whether it is inside the held-out interval. The existing in-sample point line and its caveat stay.",
+    "flux_stratum": "Nearest anchor (ties to lower). If the flux is outside the data's 15-100 kW/m2, print a line saying the interval is calibrated on the nearest stratum only and is an extrapolation.",
+    "missing_artifact": "Print the point estimate as today, plus one line: 'interval artifact missing: run data/v2/conformal_intervals.py --target pHRR'. Exit 0.",
+    "fixed_wording": "Always say 'nominal 90%' and give the measured coverage. Never say 'guaranteed'. Print one line saying the calibration assumes materials exchangeable with the 64 FSRI material groups, so inputs from other populations or labs are not covered.",
+    "docs": "Update demo/README.md (interval semantics, the two paths, measured coverage, and the caveats below) and add a section to models/v2/README.md for the new artifact."
+  },
+
+  "code (to write; executor)": {
+    "data/v2/conformal.py": "Pure numpy, no data access: weighted CV+ bounds (P/V1/V2/V3/CQR forms), group weights, stratum mapping, and coverage/width metrics with the group bootstrap.",
+    "data/v2/conformal_intervals.py": "--target {pHRR,TTI,CR,FIGRA,THR} (required, one per run). Imports the data functions and models named in 'records', runs step 1, the nested evaluation and the outputs. The pHRR run also writes the demo artifact. Never writes to experiments/results/.",
+    "data/v2/conformal_loi_snapshot.py": "Lines 1-635 of data/v2/train_loi_rescore_r8.py verbatim (round-6 prefix plus the round-8 Avg/et/ridge definitions; it must keep the strings patch_round6 replaces). After that comes a conformal section that asserts (len(y), n_papers) == (606, 107), runs step 1 for exp115 and the nested evaluation (P, V2, CQR), and writes outputs under its own ROOT/experiments/runs/conformal/. Run it only through rescore_loi_snapshot.py; it writes no JSON to experiments/results/. The verbatim prefix prints 'BLOCKED: exp089/exp092 not reproduced within 0.002 (expected on an expanded snapshot; reported, not stopped)' lines, exactly as in experiments/runs/rescore_loi_train_loi_rescore_r8_snap606.log. Those are known, already-logged numbers and are not a step-1 failure; LOI step 1 is the exp115 check only."
+  },
+
+  "run (executor)": [
+    "For each target in pHRR TTI CR FIGRA THR: OMP_NUM_THREADS=1 python3 data/v2/conformal_intervals.py --target <t> 2>&1 | tee experiments/runs/conformal_<t lowercase>.log",
+    "Then: python3 data/v2/rescore_loi_snapshot.py --stage data/v2/loi_rpuf_parts/wave4_staging --stage data/v2/loi_rpuf_parts/wave5_staging --script data/v2/conformal_loi_snapshot.py --keep. It logs to experiments/runs/rescore_loi_conformal_loi_snapshot_snap606.log.",
+    "Next, copy <printed scratch path>/experiments/runs/conformal/loi_* into experiments/runs/conformal/, then delete the scratch copy.",
+    "Interpreter: the one that reproduces the numbers of record (scikit-learn 1.7.1 per requirements.txt). Step 1 is the guard.",
+    "Record files unchanged: git diff must be empty for eval_protocol.py, train_blend_round1.py, train_tti_v5_physics.py, train_thr_v1.py, train_phrr_v3_robust.py, train_loi_rescore_r8.py and rescore_loi_snapshot.py."
+  ],
+
+  "seeds": "Outer GKF random_state r = 0..9. Inner GKF random_state r. Deployed folds random_state 0. All models random_state 0, with n_jobs as in the records (ET/RF -1). Bootstrap np.random.default_rng(0), 2000 draws. OMP_NUM_THREADS=1.",
+
+  "outputs": {
+    "experiments/runs/conformal/<t>_summary.json (t in phrr, tti, cr, figra, thr, loi)": "config, exp_id, n_rows, n_groups, group definition, score scale, strata counts, step1 (mean, ci_lo, ci_hi, ref, ok), then for each variant: overall metrics (headline order: group_all, group_mean, row, widths; with CIs, per-repeat min/max, reading-rule label, n_unbounded), by_stratum, by_raw_flux diagnostic, and expected binomial SD. Also runtime_s and versions (python, sklearn, numpy, pandas). This is not the tracker schema, and it is never placed in experiments/results/.",
+    "experiments/runs/conformal/<t>_rows.csv": "Written with pandas.to_csv or the csv module, never string concatenation. Columns:",
+    "rows_csv_columns": [
+      "row_index",
+      "group",
+      "material (or row_id and ref_id for LOI)",
+      "heat_flux_kWm2 and stratum (FSRI)",
+      "y",
+      "step-1 repeat-0 record OOF prediction (raw units)",
+      "P repeat-0 nested interval lo and hi (raw units, unclipped)",
+      "P, V1, V2, V3, CQR coverage frequency over the 10 repeats",
+      "P mean score-scale width"
+    ],
+    "models/v2/phrr_hgb_v4_conformal.joblib": "The demo artifact (pHRR only).",
+    "reports/conformal_intervals.md": "One table per target with P's headline metrics, overall and per stratum: group_all, group_mean [CI], row, and mean/median width in score and raw units. For FSRI, the lead sentence gives P's median raw-unit width (display-clipped, nested, mean over repeats) in the 25, 50 and 75 kW/m2 strata. Then a report-only variants table (V1, V2, V3, CQR), the caveats below, and this config's prior_looks.",
+    "logs": "experiments/runs/conformal_<t>.log and experiments/runs/rescore_loi_conformal_loi_snapshot_snap606.log",
+    "critic": "A fresh-context critic writes experiments/critic/conformal_intervals_critic.md before the orchestrator commits the demo wiring and report.",
+    "critic_checklist": [
+      "step-1 reproductions",
+      "nested disjointness asserts",
+      "no file in experiments/results/",
+      "group-level coverage leads and the reading rule is applied verbatim",
+      "the demo wording follows fixed_wording"
+    ]
+  },
+  "not_written": "experiments/results/*, experiments/leaderboard.csv, the xlsx files, experiments/numbers_of_record.json and models/v2/phrr_hgb_v4.joblib. STATUS.md and reports/model_cards/* are the orchestrator's: after the critic it may add one line per card linking reports/conformal_intervals.md, but no R2 or status text changes.",
+
+  "honesty_caveats (must appear in the report and the demo README)": [
+    "Exchangeability holds only between groups (materials or papers). Rows within a group are correlated, so the group-level numbers lead.",
+    "With 61-107 groups, a coverage estimate has a sampling SD of about 3-4 points (95% band about +-6-7.5).",
+    "The intervals are calibrated to the FSRI or RPUF-literature populations. They say nothing about new labs or other populations (MaCFP, cone-db).",
+    "Wide intervals are the honest form of known weaknesses: TTI at 25 kW/m2, and LOI paper offsets. They are not a defect of the method.",
+    "This is report-only. It never selects, promotes or changes any R2 or number of record.",
+    "TTI uses the 681-row record population. If D4 makes 675 rows canonical, re-run this config unchanged."
+  ],
+  "rerun_rule": "Whenever a number of record changes (a B or C round, or LOI snapshot 4 under the snapshot rule), re-run this config's method unchanged on the new record before any interval claim is made for it. Method changes need a new config.",
+  "selection_rule": "None. This is report-only and nothing is selected or adopted.",
+  "exit_triggers": "None from coverage or width. If a step-1 reproduction fails, that target is FLAGged with a blocker and the others continue. A failed nested-disjointness assert stops the run with a blocker.",
+  "open_questions_for_arnav (do not block execution)": [
+    "The demo serves only pHRR. Extending demo/predict.py to the other five targets (per-target feature lookup and CLI) is outside A4. Until then their intervals live only in the report and the summaries.",
+    "The plan says to lead with 'group coverage', which the finding defines as all rows of a group covered. This config leads with that number, but the deployed interval is per-prediction and is judged against 90% on group-mean coverage. If simultaneous coverage (all replicates of a new material) is the wanted guarantee, a group-max-score variant needs its own config."
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "slug": "r9_tabpfn_loi_p2",
+  "target": "LOI (%) RPUF literature",
+  "round_config": "experiments/configs/round9_tabpfn_smearing.json",
+  "dataset": "LOI snapshot 3 (606 rows / 107 papers), built by rescore_loi_snapshot.py (wave4 + wave5 staging); exp115 rows",
+  "features": [
+    "total_fr_wtpct",
+    "cls_P-additive",
+    "cls_P-reactive",
+    "cls_N-additive",
+    "cls_P-N",
+    "cls_intumescent(APP-based)",
+    "cls_expandable_graphite",
+    "cls_metal_hydroxide",
+    "cls_metal_oxide/salt",
+    "cls_silicon",
+    "cls_boron",
+    "cls_halogen",
+    "cls_nanoclay",
+    "cls_carbon_nano(graphene/CNT)",
+    "cls_bio-based",
+    "cls_other",
+    "el_P",
+    "el_N",
+    "el_Si",
+    "el_B",
+    "el_halogen",
+    "el_metal",
+    "density_kgm3",
+    "n_frs",
+    "has_EG",
+    "has_APP",
+    "reactive",
+    "fr_arom_frac",
+    "fr_fsp3",
+    "fr_PO_per_kDa",
+    "fr_PN_per_kDa",
+    "fr_mollogp",
+    "fr_tpsa_per_kDa",
+    "resolved_fr_wt_share",
+    "pt_polyether",
+    "pt_polyester_aromatic",
+    "pt_bio_based",
+    "pt_other_polyester",
+    "pt_unknown",
+    "iso_index_num",
+    "is_PIR",
+    "el_imputed_share",
+    "syn_PxN",
+    "syn_P_over_N",
+    "syn_EG_x_P",
+    "syn_totfr_x_dens",
+    "std_ASTM_D2863",
+    "std_GB_T_2406",
+    "std_ISO_4589",
+    "std_other_unknown",
+    "log_density"
+  ],
+  "model": "Avg([exp115 model (Avg(RF, ET, Ridge)), TabPFN V2]) raw scale, nested (RF/ET/Ridge 1/6 each, TabPFN 1/2)",
+  "hyperparameters": "TabPFNRegressor.create_default_for_version(ModelVersion.V2, device='cpu', random_state=0); package defaults, tabpfn 9.1.0",
+  "code": "data/v2/train_round9_tabpfn_loi.py",
+  "n_rows": 606,
+  "n_groups": 107,
+  "protocol": "gkf_paper5x10",
+  "rkf_mean": 0.3981,
+  "rkf_std": 0.0391,
+  "ci_lo": 0.3229,
+  "ci_hi": 0.5396,
+  "pooled_ci_lo": 0.2552,
+  "pooled_ci_hi": 0.4968,
+  "gss_mean": 0.7676,
+  "c_mean": 0.3173,
+  "paired_vs": "exp115",
+  "paired_delta": 0.0106,
+  "paired_wins": "7/10",
+  "sota": 0.84,
+  "sota_source": "sun_fu_2026",
+  "status": "ok",
+  "blocked_reason": "",
+  "note": "round 9 LOI p2 (provisional id r9_tabpfn_loi_p2); report vs exp115 on identical folds; A 0.768; C 0.317; gain concentrated in <= 5 papers, not established; Built with PriorLabs-TabPFN",
+  "rkf_mean_full": 0.39807553132381257,
+  "ci_lo_full": 0.3228897843331123,
+  "ci_hi_full": 0.5395781914234311,
+  "per_repeat_r2": [
+    0.450586224903025,
+    0.35365368988138157,
+    0.41522753443652116,
+    0.38199847965442857,
+    0.44855204347881017,
+    0.3808781288991978,
+    0.425568709855908,
+    0.42654829419633444,
+    0.3291762035763751,
+    0.36856600435614384
+  ],
+  "top_k_removal": {
+    "top5": [
+      [
+        "W006",
+        35.58150342224549
+      ],
+      [
+        "M032",
+        22.588552095014535
+      ],
+      [
+        "M083",
+        21.4462163541738
+      ],
+      [
+        "M034",
+        19.46962824497599
+      ],
+      [
+        "M081",
+        19.353467603674996
+      ]
+    ],
+    "top5_share_of_net": 1.617029564405723,
+    "drop_top1": {
+      "mean_gain": 0.005513195468558529,
+      "wins": 6
+    },
+    "drop_top3": {
+      "mean_gain": -0.0010249500237405674,
+      "wins": 6
+    },
+    "drop_top5": {
+      "mean_gain": -0.008035788991767778,
+      "wins": 3
+    },
+    "not_established": true
+  },
+  "wall_time_s": 3671.9,
+  "tabpfn_version": "9.1.0",
+  "torch_version": "2.8.0",
+  "sklearn_version": "1.7.1",
+  "checkpoint": "tabpfn-v2-regressor.ckpt",
+  "checkpoint_sha256": "2ab5a07d5c41dfe6db9aa7ae106fc6de898326c2765be66505a07e2868c10736",
+  "attribution": "Built with PriorLabs-TabPFN",
+  "n_estimators_": 8,
+  "devices_": [
+    "cpu"
+  ],
+  "use_autocast_": false,
+  "forced_inference_dtype_": null
+}

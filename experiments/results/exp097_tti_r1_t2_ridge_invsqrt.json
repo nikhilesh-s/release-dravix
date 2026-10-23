@@ -1,0 +1,31 @@
+{
+  "slug": "tti_r1_t2_ridge_invsqrt",
+  "target": "Time to Ignition (s)",
+  "round_config": "experiments/configs/tti_round1.json",
+  "dataset": "data/v2/cone_replicates_fsri.csv minus did_not_ignite/early_stop (681 rows / 76 materials), left joins as exp046",
+  "features": [
+    "q_kWm2",
+    "q_over_dT",
+    "log_L",
+    "log_rho",
+    "log_kpc"
+  ],
+  "model": "Ridge on",
+  "hyperparameters": "Ridge on TTI^-1/2 (q'', q''/dT, log L, log rho, log kpc), back-transform 1/max(z,0.02)^2; fixed a priori",
+  "code": "data/v2/train_tti_round1.py",
+  "n_rows": 681,
+  "n_groups": 76,
+  "protocol": "gkf_material5x10",
+  "rkf_mean": -38.1081,
+  "rkf_std": 5.0718,
+  "ci_lo": -85.4366,
+  "ci_hi": -25.1826,
+  "paired_vs": "exp046",
+  "paired_delta": -38.4215,
+  "paired_wins": "0/10",
+  "sota": 0.58,
+  "sota_source": "pomazi_2026",
+  "status": "ok",
+  "blocked_reason": "",
+  "note": "family-GKF -51.315; R2 at 25 kW/m2 -53.478, other fluxes -96.902; max OOF 2500s; TTI round 1 per tti_round1.json"
+}

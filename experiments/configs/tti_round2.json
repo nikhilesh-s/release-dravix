@@ -1,0 +1,28 @@
+{
+  "round": "tti_round2",
+  "target": "Time to ignition (s), FSRI cone_replicates_fsri.csv minus did_not_ignite and early_stop: 681 rows / 76 materials",
+  "declared": "by Opus 5.5 on Oct 5, see git commit time; before any run",
+  "authority": "Arnav, Oct 5 ('okay then do it??' to 'TTI round 2 with emissivity'). One round, 4 candidates.",
+  "banned_moves_checked": true,
+  "banned_moves_note": "Thermal-property join ban lifted for ONE source only: data/v2/emissivity_fsri.csv (FSRI integrating-sphere total emissivity, data_pass_oct4), joined on material name. No other thermal source.",
+  "incumbent": {"exp_id": "exp046", "config": "train_tti_v5_physics.py --onset-bc --replicate-table, C6 Poisson GLM on PHYS", "B_mean": 0.313, "B_ci": [0.071, 0.496]},
+  "step1": "reproduce exp046 (0.313 +-0.002, CI [0.071, 0.496] +-0.002) or stop BLOCKED",
+  "coverage": "383/681 rows, 42/76 materials have emissivity (128/223 rows at 25 kW/m2); missing -> NaN (GLM: median impute + missing indicator inside linear(); HGB: NaN-native)",
+  "physics_terms (fixed a priori)": {
+    "T_h": "cone heater as a blackbody source: T_h = (q''/sigma)^(1/4) (25 kW/m2 -> 818 K, 50 -> 973 K, 75 -> 1077 K)",
+    "eps_h": "total emissivity (= absorptance) of the material weighted at source temperature T_h, linear interpolation of emissivity_<T>K over 600-2000 K",
+    "eps_s": "emissivity_600K (surface re-radiation near ignition temperature)",
+    "log_eps_h": "log(eps_h)",
+    "q_cr_eps": "eps_s*sigma*(T_ig^4 - T0^4) + h*(T_ig - T0), T_ig = MCC onset as exp046, h = 10 W/m2K",
+    "log_q_excess_eps": "log(eps_h*q'' - q_cr_eps); NaN when <= 0 or any input missing"
+  },
+  "candidates": [
+    {"id": "e1", "desc": "Poisson GLM (exp046 pipeline, alpha 0.01) on PHYS + log_eps_h (log(eps*q'') = log eps + log q'', so the absorbed-flux model nests exp046)"},
+    {"id": "e2", "desc": "e1 + log_q_excess_eps (absorbed flux above the emissivity-corrected critical flux)"},
+    {"id": "e3", "desc": "HGB poisson loss (v5 HGB params) on v5 F3 + log_eps_h + log_q_excess_eps"},
+    {"id": "e4", "desc": "control: Poisson GLM on PHYS + has_emissivity indicator only (is any gain material-subset identity rather than physics?)"}
+  ],
+  "protocols": "as tti_round1: GroupKFold by material 5x10, pooled OOF, repeat-0 material-bootstrap CI; family-GKF; R2 at 25 kW/m2 vs other fluxes; plus R2 on the emissivity-covered rows",
+  "selection_rule": "highest GKF mean among e1-e3 (e4 is a control, never selected); replaces exp046 only if >= 8/10 paired repeats better AND ci_lo >= 0.071; then critic. If the selected candidate's gain is matched by e4, it is not adopted.",
+  "exit_triggers": "ci_lo > 0.58 -> EXIT (claim question; different population from Pomazi anyway)"
+}

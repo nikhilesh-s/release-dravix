@@ -1,0 +1,15 @@
+Training rows: 175 across 60 materials (cone x MCC inner join, no STA requirement)
+  seed=0: held-out R2=0.1491
+  seed=1: held-out R2=0.5967
+  seed=2: held-out R2=0.6495
+  seed=3: held-out R2=0.6352
+  seed=4: held-out R2=0.2548
+  seed=5: held-out R2=0.3181
+  seed=6: held-out R2=0.2039
+  seed=7: held-out R2=0.1135
+  seed=8: held-out R2=0.3687
+  seed=9: held-out R2=0.1710
+
+Held-out R2 across 10 material-grouped splits: mean=0.3460, std=0.1980, min=0.1135, max=0.6495
+SOTA (pomazi_2026, real held-out RFR): R2=0.30
+Delta (mean Dravix - SOTA): +0.0460

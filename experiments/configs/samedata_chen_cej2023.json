@@ -1,0 +1,56 @@
+{
+  "round": "samedata_chen_cej2023",
+  "shared": "experiments/configs/samedata_common.json (candidates c1-c3, protocol templates, selection/comparison rule, multiplicity, exit triggers)",
+  "status": "declared (approved 2026-10-08, owner-delegated; see amendments)",
+  "usable": "yes: same rows, exact published script and split, and a source-paper column for P2.",
+  "source": {
+    "paper": "Chen Z., ..., Yu Y., Liu L.X. Chem. Eng. J. 455 (2023) 140547, doi:10.1016/j.cej.2022.140547 (Nanjing Tech / Univ. of Surrey)",
+    "provenance": "data/sources/incoming/chen_cej2023/SOURCE.md"
+  },
+  "target": "LOI (%), epoxy + organic P-containing FRs (literature data, 'over 300 papers')",
+  "rows": {
+    "file": "data/sources/incoming/chen_cej2023/SI_mmc5_LOI_Database.csv",
+    "sha256": "ca0c5af1440010eeba15e63eee9f24b18bb1b21ff152f9c6d4c672c6e25868c1",
+    "n": 1053,
+    "exclusions": "none, as in the paper. The 7 exact duplicate rows stay (the paper kept them).",
+    "do_not_use": "GitHub LOI_Database.csv (284 descriptors; not the paper's input)."
+  },
+  "groups_for_P2": {
+    "file": "data/sources/incoming/chen_cej2023/SI_mmc4_FRStructure_LOI_DOI.xlsx",
+    "sha256": "3cbc1f40a4877422cc7d6d89bbf7809b471b9483a583ad763869c83227837c4b",
+    "rule (label-free)": "column DOI forward-filled in file order; row i of mmc4 belongs to row i of mmc5.",
+    "assert_before_any_fit": "mmc4 'LOI' and 'Addition amount (wt%)' equal mmc5 'LOI' and 'addition amount (wt%)' on all 1053 rows (checked 2026-10-07: true) and 254 distinct DOIs; otherwise BLOCKED.",
+    "n_groups": 254
+  },
+  "features": "all 306 columns of mmc5 except LOI (305 alvaDesc descriptors + 'addition amount (wt%)'), file order, float64. c1-c3 receive them raw; only r0 applies the paper's RFE + polynomial step inside each training part.",
+  "bar": {
+    "metric": "R2",
+    "value": 0.642,
+    "set": "single random hold-out test set, 263 rows (train 790)",
+    "quote_protocol": "\"First, the database was randomly divided into training set and test set according to the ratios of 75% and 25%.\"",
+    "quote_result": "\"The coefficient of determination (R2) scores for the training and test sets are 0.844 (790 data points) and 0.642 (263 data points), respectively.\"",
+    "where_read": "University of Surrey accepted manuscript (CC BY-NC-ND 4.0), Section 2.2 and the Fig. 3 text; 0.642 also in the abstract; SI Table S3 (GBR test 0.642; RandomForest 0.600) and Table S4 (polynomial degree 2: 0.642).",
+    "best_model": "GradientBoostingRegressor after StandardScaler, RFE (Ridge inner estimator, 100 features kept per SI Table S1) and degree-2 polynomial features; 13 regressors compared in SI Table S3.",
+    "exact_split_source": "publisher SI mmc6.zip main.py: train_test_split(X, y, random_state=1) with default test_size 0.25 -> 263 test rows, matching the paper.",
+    "verification": "fulltext (author manuscript) + publisher SI script; numbers and split agree.",
+    "not_a_bar": "5- and 10-fold CV test R2 0.574 / 0.575 (SI Table S2). The paper says only \"After 5 and 10 cross-validations by default\" and no CV code was released, so fold assignment and refitting of the selection step are unknown. Printed for context, never compared."
+  },
+  "r0 (reproduction control)": {
+    "definition": "fit on the training part only: StandardScaler() -> RFE(Ridge(alpha=1, random_state=1, max_iter=100000), n_features_to_select=100) -> PolynomialFeatures(degree=2) -> GradientBoostingRegressor(random_state=1) (all other arguments sklearn defaults: 100 trees, depth 3, lr 0.1).",
+    "source": "SI main.py (loops collapse to features=100, alpha=1, degree=2; the n_estimators/max_depth loop variables are not passed to the regressor)."
+  },
+  "reproduction_gate": "r0 on P1_pub must give test R2 in [0.637, 0.647] (authors used 2022-era scikit-learn; we run 1.7.1). Outside -> FLAG 'Chen protocol not reproduced': no P1 sentence for this dataset; P2 still runs and is reported.",
+  "protocols": {
+    "P1_pub": "train_test_split(X, y, random_state=1) (test_size default 0.25). r0 = gate; c1-c3 printed as information only.",
+    "P1": "train_test_split(X, y, test_size=0.25, random_state=s), s = 0..9 (no stratification, as theirs). Test R2 (primary), RMSE, MAE. Mean, SD, s=0 value for c1, c2, c3, r0.",
+    "P2": "common P2 with groups = forward-filled DOI (254 papers). r0 included."
+  },
+  "notes": [
+    "Random splits leak: 306 molecules over 1053 rows, so most test molecules also sit in training at other loadings. P1 is their protocol, kept on purpose; P2 removes paper-level leakage, not molecule-level leakage (9 descriptor vectors appear under more than one DOI).",
+    "The published single split is seed 1; P1 uses seeds 0..9 and therefore includes seed 1.",
+    "r0's polynomial step makes 5,151 features; expect r0 to dominate runtime (RFE: 206 Ridge refits per split)."
+  ],
+  "amendments": [
+    "Approved 2026-10-08 ~01:55 PDT by the orchestrator under the owner's delegation (Nikhilesh S, owner of nikhilesh-s/dravix-master: 'pull from the most reputable universities ... find the most reputable papers', 'it doesn't matter if the datasets are perfect comparisons', 'keep grinding'). Committed before any Dravix fit on these labels. Status set to declared. No other field changed. "
+  ]
+}

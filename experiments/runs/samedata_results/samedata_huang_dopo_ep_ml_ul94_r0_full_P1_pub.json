@@ -1,0 +1,45 @@
+{
+ "slug": "samedata_huang_dopo_ep_ml_ul94_r0_full_P1_pub",
+ "target": "UL-94 V-0 (binary)",
+ "round_config": "experiments/configs/samedata_huang_dopo_ep_ml_ul94.json",
+ "dataset": "Huang/Zheng/Shi DOPO-EP-ML (data/sources/incoming/huang_dopo_ep_ml/DOPO_EP_new.csv, 599 rows, 130 Reference groups), unpublished manuscript",
+ "features": "authors' UL94_V0 input: view morgan_r3, K=all, advanced descriptors, V7 on, no BDE, neat-EP masking; their in-fold front end with f_classif",
+ "code": "data/v2/train_samedata_dopo.py + data/v2/export_dopo_folds.py (step 0, authors' env)",
+ "n_rows": 599,
+ "n_groups": 130,
+ "sota": 0.817,
+ "sota_source": "Huang et al. DOPO-EP-ML Table 2 (Reference)",
+ "comparable_note": "comparability is a human decision; never set here",
+ "candidate": "r0_full",
+ "protocol": "P1_pub",
+ "model": "their evaluate_task_nested(split_strategy='reference', fixed, baseline_inclusive, no BDE, 5x5, random_state=42) in the authors' pinned env",
+ "hyperparameters": "fixed a priori (samedata_common.json); no tuning",
+ "metric": "macro-F1",
+ "status": "ok",
+ "blocked_reason": "",
+ "selected": false,
+ "per_fold": [
+  0.858108574187763,
+  0.8386934311820995,
+  0.8295427717006374,
+  0.7902680197762164,
+  0.7429833503227998
+ ],
+ "mean": 0.8119192294339033,
+ "sd": 0.045776175568010176,
+ "gate": [
+  0.807,
+  0.827
+ ],
+ "gate_passed": true,
+ "folds_equal_published": true,
+ "max_abs_pred_diff_vs_published": 1.0,
+ "selected_models": [
+  "ExtraTrees",
+  "ExtraTrees",
+  "ExtraTrees",
+  "ExtraTrees",
+  "ExtraTrees"
+ ],
+ "note": "UL94_V0 P1_pub r0_full; published folds, information only (never selected on)"
+}

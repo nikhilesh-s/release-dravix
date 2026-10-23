@@ -1,0 +1,73 @@
+{
+ "slug": "samedata_huang_dopo_ep_ml_c3_P1_pub",
+ "target": "LOI (%)",
+ "round_config": "experiments/configs/samedata_huang_dopo_ep_ml.json",
+ "dataset": "Huang/Zheng/Shi DOPO-EP-ML (data/sources/incoming/huang_dopo_ep_ml/DOPO_EP_new.csv, 599 rows, 130 Reference groups), unpublished manuscript",
+ "features": "authors' LOI input: view compact, K=260, basic descriptors, V7 on, no BDE, neat-EP masking; their in-fold front end (nonempty/median impute/dedup/variance 1e-8/SelectKBest f_regression k=260)",
+ "code": "data/v2/train_samedata_dopo.py + data/v2/export_dopo_folds.py (step 0, authors' env)",
+ "n_rows": 599,
+ "n_groups": 130,
+ "sota": 0.709,
+ "sota_source": "Huang et al. DOPO-EP-ML Table 2 (Reference)",
+ "comparable_note": "comparability is a human decision; never set here",
+ "candidate": "c3",
+ "protocol": "P1_pub",
+ "model": "(c1 + c2) / 2",
+ "hyperparameters": "fixed a priori (samedata_common.json); no tuning",
+ "metric": "R2",
+ "status": "ok",
+ "blocked_reason": "",
+ "selected": false,
+ "per_repeat": [
+  0.6929896353168743
+ ],
+ "mean": 0.6929896353168743,
+ "repeat0": 0.6929896353168743,
+ "secondary_per_repeat": {
+  "R2": [
+   0.6929896353168743
+  ],
+  "RMSE": [
+   2.6951682009642632
+  ],
+  "MAE": [
+   2.147245134255349
+  ],
+  "mod_R2": [
+   0.3728709863624422
+  ]
+ },
+ "per_fold": {
+  "R2": [
+   0.7041932287847663,
+   0.8462238157160743,
+   0.65997215993818,
+   0.6280672807129892,
+   0.6264916914323618
+  ],
+  "RMSE": [
+   2.5344512651170326,
+   1.988148559908022,
+   3.0149589091297013,
+   2.637424381683629,
+   3.3008578889829328
+  ],
+  "MAE": [
+   1.941207431346195,
+   1.653850027282435,
+   2.330594782962987,
+   2.151553917177989,
+   2.659019512507139
+  ],
+  "mod_R2": [
+   0.4051529230988524,
+   0.698853117204765,
+   0.39064193184953633,
+   -0.0034580766874141577,
+   0.3731650363464717
+  ]
+ },
+ "sd": 0.0912870156399192,
+ "attribution": "Built with PriorLabs-TabPFN",
+ "note": "LOI P1_pub c3; published folds, information only (never selected on); Built with PriorLabs-TabPFN"
+}

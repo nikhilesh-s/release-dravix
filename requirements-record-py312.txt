@@ -1,0 +1,11 @@
+# Pins that reproduce the numbers of record (Python 3.12). scikit-learn 1.7.1 matters:
+# other versions build different forests and folds from the same seeds.
+numpy==2.2.6
+pandas==2.3.3
+scipy==1.16.1
+scikit-learn==1.7.1
+joblib==1.5.2
+rdkit==2026.03.6
+matplotlib==3.10.6
+torch==2.8.0
+# optional, for the TabPFN runs only: tabpfn==9.1.0

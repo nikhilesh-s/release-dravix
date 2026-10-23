@@ -1,0 +1,164 @@
+data: 681 rows / 76 materials; flux counts {25.0: 223, 50.0: 221, 75.0: 217, 35.0: 16, 15.0: 3, 100.0: 1}; all spark-ignited
+masks: F25 223 rows / 69 materials; F50 221 rows / 72 materials; F75 217 rows / 72 materials; F50_75 438 rows / 72 materials; ALL 681 rows / 76 materials
+
+(1) STEP-1 REPRODUCTION, pooled seconds R2 (existing headline; context only, not a secondary metric) -- REPORT-ONLY, defined post hoc (experiments/configs/tti_secondary_metrics.json); never promotes; not comparable to the 0.58 bar
+model      rkf_mean     std              rep-0 CI                   record / anchor  ok   time
+exp046       0.3133  0.0373  [  0.0715,   0.4958]           0.3133 [0.0715, 0.4958]  OK       0s
+exp047       0.2613  0.0225  [  0.1300,   0.4409]           0.2613 [0.1300, 0.4410]  OK       9s
+b1           0.3265  0.0250  [  0.2068,   0.5350]           0.3265 [0.2068, 0.5350]  OK       8s
+b2           0.3316  0.0267  [  0.2163,   0.5348]           0.3316 [0.2163, 0.5348]  OK       8s
+et_alone     0.2550  0.0299  [  0.1580,   0.4632]                      anchor 0.255  OK       8s
+c5_ridge     0.2825  0.0241  [  0.1419,   0.5090]              no record, no anchor  -        0s
+t1           0.2979  0.0434  [  0.0467,   0.4938]           0.2979 [0.0467, 0.4938]  OK       0s
+t2         -38.1081  5.0718  [-85.4366, -25.1826]     -38.1081 [-85.4366, -25.1826]  OK       0s
+t3           0.2123  0.0390  [ -0.0036,   0.4418]          0.2123 [-0.0036, 0.4418]  OK       8s
+t4           0.2671  0.0355  [  0.1705,   0.4649]           0.2671 [0.1705, 0.4649]  OK       7s
+step 1: all records / anchors reproduced
+
+STEP-2 DEFINITION CHECK (lever-sweep values; tolerance 0.002 for 3-decimal values, equal after rounding for 2-decimal values) -- REPORT-ONLY, defined post hoc (experiments/configs/tti_secondary_metrics.json); never promotes; not comparable to the 0.58 bar
+  exp046.S25 mean                        expected    0.042  got   0.0418  OK
+  exp046.S50 mean                        expected    0.274  got   0.2741  OK
+  exp046.S75 mean                        expected    0.283  got   0.2831  OK
+  exp046.S50_75 mean                     expected    0.368  got   0.3684  OK
+  exp046.S50_75 rep0 CI lo               expected    -0.42  got  -0.4218  OK
+  exp046.S50_75 rep0 CI hi               expected     0.59  got   0.5943  OK
+  exp046.LOG_ALL mean                    expected    0.391  got   0.3906  OK
+  exp046.LOG_ALL rep0 CI lo              expected     0.09  got   0.0857  OK
+  exp046.LOG_ALL rep0 CI hi              expected     0.57  got   0.5657  OK
+  exp046.LOG25 mean                      expected    0.025  got   0.0247  OK
+  exp046.LOG50 mean                      expected    0.018  got   0.0184  OK
+  exp046.LOG75 mean                      expected   -0.006  got  -0.0063  OK
+  exp046.SPM25 mean                      expected     0.51  got   0.5098  OK
+  exp046.SPM25 rep0                      expected     0.50  got   0.4990  OK
+  exp046.SPM50 mean                      expected     0.50  got   0.4987  OK
+  exp046.SPM50 rep0                      expected     0.46  got   0.4610  OK
+  exp046.SPM75 mean                      expected     0.44  got   0.4425  OK
+  exp046.SPM75 rep0                      expected     0.40  got   0.3968  OK
+  exp046.SPR25 rep0                      expected     0.49  got   0.4935  OK
+  exp046.SPR50 rep0                      expected    0.435  got   0.4346  OK
+  exp046.SPR75 rep0                      expected     0.39  got   0.3870  OK
+  exp046.NOT25 rep0                      expected    0.798  got   0.7976  OK
+  exp046.NOT25 mean                      expected    0.768  got   0.7682  OK
+  exp046.NOT25 std                       expected    0.070  got   0.0695  OK
+  exp046.NOT25_NO15 mean                 expected    0.294  got   0.2938  OK
+  exp046.NOT25_NO15 std                  expected    0.205  got   0.2053  OK
+  b2.S50 mean                            expected    0.501  got   0.5012  OK
+  b2.S50 rep0 CI lo                      expected    0.115  got   0.1154  OK
+  b2.S50 rep0 CI hi                      expected    0.651  got   0.6507  OK
+  b2.S75 mean                            expected    0.550  got   0.5501  OK
+  b2.S50_75 mean                         expected    0.572  got   0.5716  OK
+  b2.S50_75 rep0 CI lo                   expected     0.30  got   0.2980  OK
+  b2.S50_75 rep0 CI hi                   expected     0.69  got   0.6902  OK
+  b2.LOG_ALL mean                        expected    0.567  got   0.5671  OK
+  b2.LOG_ALL rep0 CI lo                  expected     0.42  got   0.4203  OK
+  b2.LOG_ALL rep0 CI hi                  expected     0.68  got   0.6835  OK
+  b2.LOG25 mean                          expected    0.216  got   0.2158  OK
+  b2.SPR25 rep0                          expected     0.57  got   0.5745  OK
+  b2.SPR50 rep0                          expected     0.61  got   0.6106  OK
+  b2.SPR75 rep0                          expected     0.62  got   0.6157  OK
+  b2.S50 wins                            expected    10/10  got    10/10  OK
+  b2.S75 wins                            expected    10/10  got    10/10  OK
+  b2.S50_75 wins                         expected    10/10  got    10/10  OK
+  b2.LOG_ALL wins                        expected    10/10  got    10/10  OK
+  b2.LOG25 wins                          expected    10/10  got    10/10  OK
+  et_alone.LOG_ALL mean                  expected    0.633  got   0.6325  OK
+  et_alone.LOG25 mean                    expected    0.292  got   0.2918  OK
+  et_alone.S75 mean                      expected    0.613  got   0.6130  OK
+  et_alone.S50_75 mean                   expected    0.580  got   0.5800  OK
+  et_alone.LOG_ALL wins                  expected    10/10  got    10/10  OK
+  et_alone.LOG25 wins                    expected    10/10  got    10/10  OK
+  et_alone.S75 wins                      expected    10/10  got    10/10  OK
+  et_alone.S50_75 wins                   expected    10/10  got    10/10  OK
+  c5_ridge.S50 wins                      expected  8-10/10  got     9/10  OK
+  c5_ridge.S75 wins                      expected  8-10/10  got    10/10  OK
+  c5_ridge.S50_75 wins                   expected  8-10/10  got     9/10  OK
+  c5_ridge.LOG_ALL wins                  expected  8-10/10  got     8/10  OK
+  c5_ridge.LOG25 wins                    expected  8-10/10  got    10/10  OK
+  labels.masonite15_share_of_NOT25_SS    expected    0.745  got   0.7453  OK
+  labels.F25_share_of_all_SS             expected    0.852  got   0.8520  OK
+  ceiling.ALL in_sample                  expected    0.843  got   0.8427  OK
+  ceiling.ALL loro                       expected    0.690  got   0.6898  OK
+  ceiling.F25 in_sample                  expected    0.776  got   0.7760  OK
+  ceiling.F25 loro                       expected    0.558  got   0.5575  OK
+  ceiling.F50 loro                       expected    0.958  got   0.9578  OK
+  ceiling.F75 loro                       expected    0.955  got   0.9553  OK
+step 2: all 66 definition checks pass
+
+(2) SECONDS R2 WITHIN FLUX: 10-repeat mean +- std, repeat-0 material-bootstrap CI -- REPORT-ONLY, defined post hoc (experiments/configs/tti_secondary_metrics.json); never promotes; not comparable to the 0.58 bar
+model     |            S25               CI |            S50               CI |            S75               CI |         S50_75               CI
+exp046    | 0.042 +- 0.050  [-0.335, 0.289] | 0.274 +- 0.083  [-0.794, 0.551] | 0.283 +- 0.062  [-0.352, 0.504] | 0.368 +- 0.069  [-0.422, 0.594]
+exp047    | 0.006 +- 0.036  [-0.185, 0.230] | 0.086 +- 0.120  [-0.274, 0.326] | 0.160 +- 0.105  [-0.002, 0.494] | 0.213 +- 0.099   [0.000, 0.437]
+b1        | 0.069 +- 0.036  [-0.099, 0.337] | 0.497 +- 0.041   [0.067, 0.650] | 0.559 +- 0.023   [0.193, 0.682] | 0.569 +- 0.033   [0.257, 0.693]
+b2        | 0.076 +- 0.038  [-0.095, 0.333] | 0.501 +- 0.035   [0.115, 0.651] | 0.550 +- 0.020   [0.261, 0.670] | 0.572 +- 0.028   [0.298, 0.690]
+et_alone  | -0.009 +- 0.043  [-0.149, 0.266] | 0.501 +- 0.039   [0.283, 0.673] | 0.613 +- 0.018   [0.372, 0.723] | 0.580 +- 0.031   [0.434, 0.722]
+c5_ridge  | 0.008 +- 0.034  [-0.194, 0.323] | 0.391 +- 0.072  [-0.253, 0.606] | 0.449 +- 0.052  [-0.181, 0.648] | 0.477 +- 0.060  [-0.020, 0.652]
+t1        | 0.019 +- 0.060  [-0.373, 0.283] | 0.284 +- 0.075  [-0.766, 0.574] | 0.303 +- 0.045  [-0.310, 0.535] | 0.378 +- 0.061  [-0.392, 0.613]
+t2        | -44.745 +- 3.955 [-120.998, -28.277] | -276.105 +- 168.747 [-754.147, -5.551] | -322.980 +- 395.391 [-3672.283, 0.297] | -246.718 +- 148.398 [-1002.598, -4.051]
+t3        | -0.085 +- 0.056  [-0.460, 0.253] | 0.494 +- 0.031   [0.327, 0.717] | 0.550 +- 0.034   [0.247, 0.696] | 0.566 +- 0.026   [0.443, 0.745]
+t4        | 0.007 +- 0.047  [-0.144, 0.253] | 0.128 +- 0.089  [-0.071, 0.375] | 0.173 +- 0.069   [0.057, 0.446] | 0.246 +- 0.073   [0.153, 0.457]
+
+(3) LOG-SPACE R2 (natural log of seconds, predictions clipped at 1e-6 s): 10-repeat mean +- std; repeat-0 CI on LOG_ALL only -- REPORT-ONLY, defined post hoc (experiments/configs/tti_secondary_metrics.json); never promotes; not comparable to the 0.58 bar
+model     |        LOG_ALL               CI |          LOG25 |          LOG50 |          LOG75 | n_clipped
+exp046    | 0.391 +- 0.047   [0.086, 0.566] | 0.025 +- 0.068 | 0.018 +- 0.078 | -0.006 +- 0.086 | 0
+exp047    | 0.535 +- 0.034   [0.409, 0.641] | 0.211 +- 0.067 | 0.287 +- 0.064 | 0.281 +- 0.052 | 0
+b1        | 0.579 +- 0.029   [0.427, 0.688] | 0.256 +- 0.046 | 0.348 +- 0.048 | 0.370 +- 0.046 | 0
+b2        | 0.567 +- 0.028   [0.420, 0.684] | 0.216 +- 0.051 | 0.336 +- 0.046 | 0.375 +- 0.038 | 0
+et_alone  | 0.633 +- 0.023   [0.528, 0.752] | 0.292 +- 0.056 | 0.500 +- 0.032 | 0.472 +- 0.030 | 0
+c5_ridge  | 0.418 +- 0.285   [0.325, 0.663] | 0.251 +- 0.046 | 0.314 +- 0.066 | -0.520 +- 1.580 | 9
+t1        | 0.389 +- 0.047   [0.086, 0.564] | 0.015 +- 0.070 | 0.021 +- 0.077 | -0.006 +- 0.082 | 0
+t2        | -0.004 +- 0.120  [-0.543, 0.174] | -1.264 +- 0.174 | -0.169 +- 0.219 | -0.069 +- 0.198 | 0
+t3        | 0.629 +- 0.019   [0.502, 0.722] | 0.270 +- 0.054 | 0.498 +- 0.026 | 0.463 +- 0.024 | 0
+t4        | 0.530 +- 0.038   [0.374, 0.636] | 0.213 +- 0.071 | 0.277 +- 0.073 | 0.251 +- 0.059 | 0
+
+(4) SPEARMAN WITHIN FLUX: row-level (SPR) and material-median (SPM), 10-repeat mean +- std (repeat-0 in the JSON) -- REPORT-ONLY, defined post hoc (experiments/configs/tti_secondary_metrics.json); never promotes; not comparable to the 0.58 bar
+model     |          SPR25 |          SPR50 |          SPR75 |          SPM25 |          SPM50 |          SPM75
+exp046    | 0.504 +- 0.045 | 0.473 +- 0.044 | 0.432 +- 0.036 | 0.510 +- 0.048 | 0.499 +- 0.042 | 0.442 +- 0.035
+exp047    | 0.469 +- 0.029 | 0.565 +- 0.044 | 0.567 +- 0.034 | 0.509 +- 0.028 | 0.552 +- 0.044 | 0.572 +- 0.034
+b1        | 0.557 +- 0.027 | 0.627 +- 0.026 | 0.621 +- 0.023 | 0.570 +- 0.031 | 0.636 +- 0.026 | 0.633 +- 0.023
+b2        | 0.553 +- 0.030 | 0.633 +- 0.029 | 0.637 +- 0.020 | 0.567 +- 0.034 | 0.645 +- 0.027 | 0.651 +- 0.020
+et_alone  | 0.494 +- 0.034 | 0.700 +- 0.019 | 0.706 +- 0.017 | 0.504 +- 0.038 | 0.688 +- 0.021 | 0.715 +- 0.018
+c5_ridge  | 0.519 +- 0.023 | 0.588 +- 0.026 | 0.570 +- 0.025 | 0.524 +- 0.029 | 0.590 +- 0.025 | 0.581 +- 0.026
+t1        | 0.501 +- 0.042 | 0.478 +- 0.042 | 0.439 +- 0.036 | 0.507 +- 0.045 | 0.506 +- 0.041 | 0.448 +- 0.036
+t2        | 0.480 +- 0.029 | 0.564 +- 0.038 | 0.504 +- 0.038 | 0.485 +- 0.032 | 0.553 +- 0.034 | 0.508 +- 0.039
+t3        | 0.514 +- 0.032 | 0.712 +- 0.017 | 0.710 +- 0.017 | 0.527 +- 0.033 | 0.704 +- 0.015 | 0.723 +- 0.019
+t4        | 0.478 +- 0.031 | 0.562 +- 0.038 | 0.561 +- 0.035 | 0.521 +- 0.031 | 0.555 +- 0.041 | 0.568 +- 0.030
+
+(5) PAIRED REPEATS ABOVE exp046 (of 10; strict >; NaN never counts; descriptive, never a selection rule) -- REPORT-ONLY, defined post hoc (experiments/configs/tti_secondary_metrics.json); never promotes; not comparable to the 0.58 bar
+model     |     S25     S50     S75  S50_75 LOG_ALL   LOG25   LOG50   LOG75   SPR25   SPR50   SPR75   SPM25   SPM50   SPM75
+exp047    |       4       2       3       2      10       9      10      10       2       9      10       5       8      10
+b1        |       7      10      10      10      10      10      10      10       9      10      10       9      10      10
+b2        |       9      10      10      10      10      10      10      10       9      10      10       9      10      10
+et_alone  |       1      10      10      10      10      10      10      10       5      10      10       4      10      10
+c5_ridge  |       2       9      10       9       8      10      10       8       7      10      10       7      10      10
+t1        |       0       7       7       6       4       1       6       5       3       7       7       3       8       6
+t2        |       0       0       0       0       0       0       2       6       3      10      10       3       9      10
+t3        |       1      10      10      10      10      10      10      10       5      10      10       6      10      10
+t4        |       3       2       3       3      10       9      10      10       3      10      10       5       7      10
+
+(6) LEGACY RECONCILIATION -- legacy mask, NOT a secondary metric -- REPORT-ONLY, defined post hoc (experiments/configs/tti_secondary_metrics.json); never promotes; not comparable to the 0.58 bar
+    NOT25 = non-25 rows pooled (15/35/50/75/100 kW/m2), 458 rows; NOT25_NO15 = non-25 rows without the 15 kW/m2 rows (35/50/75/100), 455 rows, printed only to show what drove the old figure (not a proposal to drop rows)
+model     | NOT25 rep0 |  NOT25 mean+-std | NOT25_NO15 mean+-std
+exp046    |      0.798 |   0.768 +- 0.070 |       0.294 +- 0.205
+exp047    |      0.372 |   0.396 +- 0.131 |       0.204 +- 0.092
+b1        |      0.710 |   0.692 +- 0.032 |       0.535 +- 0.060
+b2        |      0.716 |   0.692 +- 0.034 |       0.548 +- 0.047
+et_alone  |      0.453 |   0.454 +- 0.011 |       0.562 +- 0.032
+c5_ridge  |      0.687 |   0.671 +- 0.045 |       0.387 +- 0.147
+t1        |      0.802 |   0.774 +- 0.068 |       0.308 +- 0.195
+t2        |    -96.902 | -96.186 +- 49.160 |  -315.942 +- 196.786
+t3        |      0.705 |   0.596 +- 0.115 |       0.572 +- 0.031
+t4        |      0.499 |   0.467 +- 0.099 |       0.197 +- 0.112
+  label check: 3 Masonite_Board rows at 15 kW/m2 hold 0.7453 of the NOT25 target SS (around the NOT25 mean; expected 0.745)
+  label check: F25 rows hold 0.8520 of the all-row target SS (expected 0.852)
+
+(7) REFERENCE CEILINGS (label-only, cell = material x flux x spark; context, not metrics) -- REPORT-ONLY, defined post hoc (experiments/configs/tti_secondary_metrics.json); never promotes; not comparable to the 0.58 bar
+  ALL: in-sample cell-mean R2 0.8427 (expected 0.843); LORO 0.6898 on 674 rows (expected 0.690)
+  F25: in-sample cell-mean R2 0.7760 (expected 0.776); LORO 0.5575 on 221 rows (expected 0.558)
+  F50: LORO 0.9578 on 219 rows (expected 0.958)
+  F75: LORO 0.9553 on 216 rows (expected 0.955)
+  The own-50/75 oracle is not recomputed (tti-3 range 0.29-0.49 at 25 kW/m2, 0.50-0.62 overall; prose only).
+
+NaN cells (listed for the critic): none
+n_clipped (repeat, row) pairs with OOF <= 1e-6 s: exp046 0, exp047 0, b1 0, b2 0, et_alone 0, c5_ridge 9, t1 0, t2 0, t3 0, t4 0
+
+wrote experiments/runs/tti_secondary_metrics.json; runtime 71s

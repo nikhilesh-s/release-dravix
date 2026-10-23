@@ -1,0 +1,25 @@
+{
+  "round": "phrr_round1",
+  "target": "Peak HRR (kW/m2), FSRI replicate-mean per material x flux",
+  "declared": "2026-10-01 22:20 PDT by Opus 5.5, before any run",
+  "plan_ref": "plans/FABLE_PLAN_2026-10-01.md §6 (pHRR loop); ONE round, then park",
+  "banned_moves_checked": true,
+  "incumbent": {
+    "exp_id": "exp043",
+    "config": "train_phrr_v3_robust.py --bc --replicate-target, A1 'V3 rf_phys_log': rf() on BASE + PHYS, log1p target",
+    "rkf_mean": 0.567, "ci": [0.283, 0.836], "rows": 191, "materials": 65
+  },
+  "data": "load(replicate_target=True) with EXTRAS bc, rows where has_mcc (191 / 65); must reproduce exp043 before candidates run",
+  "protocol": "eval_protocol: repeated GroupKFold 5x10 by material (pooled OOF), GSS x10, material-bootstrap CI on repeat 0 OOF (as implemented)",
+  "candidates": [
+    {"id": "c1", "desc": "exp043 features minus MCC extras (drop mcc_total_hr_kJg, mcc_t_peak_C, mcc_t_onset_C); rf(); log target"},
+    {"id": "c2", "desc": "hgb() (fixed settings in train_phrr_v3_robust.py) on exp043 features; log target"},
+    {"id": "c3", "desc": "equal-weight average of incumbent RF and c2 HGB predictions, per fold"},
+    {"id": "c4", "desc": "c2 with monotonic_cst +1 on heat_flux_kWm2 and mcc_peak_hrr_Wg, 0 elsewhere"},
+    {"id": "c5", "desc": "two-stage: in-fold imputation of MCC features (HGB per MCC feature from density, thickness, mass/area, category one-hot) for all usable materials (~76), then incumbent RF. Scored on all rows AND on the 191 incumbent rows; paired comparison uses the 191 rows only. Run last."}
+  ],
+  "selection_rule": "Highest repeated-GKF mean among c1-c4 (c5 on the 191 shared rows). Promote only if it beats exp043 in >= 8/10 paired repeats AND its CI lower bound >= exp043's 0.283. Otherwise exp043 stays.",
+  "supplementary_not_rules": ["CI pooled over all 10 repeats", "share of bootstrap resamples with R2 > 0.30", "leave-one-material-out influence table (diagnostic only)"],
+  "exit_triggers": "Any candidate with ci_lo > 0.30 -> EXIT condition 5 (claim ambiguity). Wording per H5: 'ahead of the published number, harder protocol, different population'.",
+  "after_round": "pHRR (FSRI) parked regardless of outcome."
+}

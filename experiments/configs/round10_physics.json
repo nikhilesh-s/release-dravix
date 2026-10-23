@@ -1,0 +1,107 @@
+{
+  "round": "round10_physics",
+  "kind": "Model round across pHRR, FIGRA, Char Residue and LOI: physics-anchored candidates (offsets / physics-mean GP / physics features / monotone constraints) taken from reports/overnight_2026-10-08/methods_menu.md, which was written blind to round 9, cr_round2 and tti_round3 scores.",
+  "status": "approved (owner-delegated, 2026-10-07 overnight; see amendments)",
+  "declared": "2026-10-07 ~23:20 PDT, committed before any round-10 score exists",
+  "authority": "Owner Nikhilesh S (nikhilesh-s/dravix-master) delegated round decisions to the orchestrator for the overnight session ('do a lot of different experimentations', 'keep grinding ... make sure that things are clean'). Round budgets in plan section 6 were spent; this is a new round granted under that delegation, one round, no re-runs.",
+  "banned_moves_checked": true,
+  "banned_moves_note": "experiments/banned_moves.md read 2026-10-07. No thermal-property join is added (k, rho*c joins stay banned; log_kpc is used only where the incumbent already uses it). No feature shrinks a material pool: every new feature is NaN-tolerant and computed from tables the incumbents already join (mcc_extras_fsri.csv, the STA residue columns). No material is excluded. Selection by repeated-GKF mean only, never by CI. CR target stays cone residue (STA residue is only a base/feature). FIGRA definition unchanged (pHRR / t_pHRR from test start). No 'beats SOTA' wording; comparable never set true.",
+  "prior_looks (disclosed)": [
+    "The orchestrator read experiments/runs/round9_phrr_gate_v2.json and round9_figra_gate_v2.json before writing this config: TabPFN p1 pHRR gain +0.080 (10/10, G2 fail), p2 +0.078 (10/10), FIGRA p1 -0.003, p2 +0.017, s1 +0.019; no adoption. Because of this, NO TabPFN or TabPFN-containing candidate is in this round (the menu's candidates were chosen blind to round 9; combining physics with TabPFN after seeing p1 would be a forking path).",
+    "No cr_round2, tti_round3 or round-9 CR/LOI score had been read when this config was written.",
+    "The methods researcher computed label-free feature ranges only (MCC peak min 3.5 W/g, T95-T5 min 47 K, total_hr_bc min -1.5 kJ/g)."
+  ],
+  "environment": "/Users/niks/dravix/.venv312/bin/python (Python 3.12.12, scikit-learn 1.7.1, numpy 2.2.6, scipy 1.16.1, pandas 2.3.3: the record-producing versions). OMP/n_jobs <= 4.",
+  "incumbents (step 1: each must be reproduced in the same run, else that target is BLOCKED)": {
+    "pHRR": "exp074 (data/v2/train_phrr_promote_c2.py, HGB on log1p, 10 features, 191 rows / 64 merged groups), 0.6113",
+    "FIGRA": "exp119 (data/v2/train_blend_round1.py --target FIGRA b1), 0.4975",
+    "Char Residue": "exp117 (data/v2/train_blend_round1.py --target CR b1), 0.6504",
+    "LOI": "exp115 (rescore_loi_snapshot.py --stage wave4_staging --stage wave5_staging --script train_loi_rescore_r8.py), 0.3875",
+    "rule if round 9 / cr_round2 adopts first": "If, before round 10 step 1 runs, the critic-approved outcome of round 9 or cr_round2 replaces one of these records, round 10 for that target is scored against the NEW record as incumbent (reproduced the same way), and the candidates below are unchanged. The round-10 worker must check numbers_of_record.json at start and state which incumbent it used."
+  },
+  "protocol": "Identical to each incumbent: same rows, same groups, same eval_protocol repeated GroupKFold 5x10 seeds, pooled OOF per repeat, material (group) bootstrap 95% CI with eval_protocol.bootstrap_ci. Paired comparison per repeat on identical folds.",
+  "candidates": {
+    "pHRR": [
+      {
+        "id": "r10_phrr_o1",
+        "role": "selectable",
+        "what": "HRC-proportional offset (Lyon & Janssens 2005, DOT/FAA/AR-05/14 Eq. 71: HRR = eta_c * f(q_net)). base b(x) = ln(mcc_peak_hrr_Wg) (at FSRI's fixed MCC heating rate the peak is proportional to eta_c). Fit exp074's hgb() unchanged (learning_rate 0.05, max_iter 200, max_leaf_nodes 15, min_samples_leaf 10, random_state 0) on r = ln(y) - b(x) with the same 10 features (the peak stays a feature). predict = exp(m(x) + b(x)). Coefficient fixed at 1, never varied. log_target handled in the wrapper (ln, not log1p). Rows with missing mcc_peak_hrr_Wg: none expected (all exp074 rows have MCC); assert it."
+      },
+      {
+        "id": "r10_phrr_g2",
+        "role": "selectable",
+        "what": "Average on the ln scale of exp074's prediction (ln of expm1 output, clipped at 1e-6) and g1, then exp. g1 = physics-mean GP: GaussianProcessRegressor on r = ln(y) - ln(mcc_peak_hrr_Wg), inputs = the 10 exp074 features through SimpleImputer(strategy='median', add_indicator=True, keep_empty_features=True) -> StandardScaler, kernel ConstantKernel(1.0) * RBF(length_scale=np.ones(d)) + WhiteKernel(1.0), normalize_y=True, n_restarts_optimizer=0, random_state=0; predict exp(b + mu_GP)."
+      },
+      {
+        "id": "r10_phrr_g1",
+        "role": "report-only (in the family for K, never selectable)",
+        "what": "the GP g1 alone, as defined in r10_phrr_g2"
+      },
+      {
+        "id": "r10_phrr_f1",
+        "role": "selectable",
+        "what": "exp074 recipe unchanged with two added features: mcc_t_end_C = per-material mean of mcc_extras_fsri.csv t_end_bc_C (T95%), and mcc_fgc_JgK = fire growth capacity (FAA DOT/FAA/TC-20/35 Eq. 9): T1 = mean t_onset_bc_C + 273.15, T2 = mean t_end_bc_C + 273.15, T0 = 298 K, Q = max(mean total_hr_bc_kJg, 0) * 1000 J/g, FGC = Q/(T2-T1) * (T2-T0)/(T1-T0); NaN if T2 missing or T2 <= T1. Self-test before labels: the report's PC/ABS example (Q = 29.3 kJ/g, T1 = 695 K, T2 = 837 K) must give 280 +- 2 J/g-K. Means are taken over the same rows/aggregation the incumbent uses for mcc_t_onset_C."
+      }
+    ],
+    "FIGRA": [
+      {
+        "id": "r10_figra_g1",
+        "role": "selectable",
+        "what": "the exp119 recipe (equal average of HGB log1p, ExtraTrees 500/min_samples_leaf 2, Ridge alpha 10 with impute+indicators+scaler; all exactly as train_blend_round1.py) on exp119's 9 features plus mcc_t_onset_C, mcc_t_end_C and mcc_fgc_JgK (definitions as r10_phrr_f1; if mcc_t_onset_C is already among the 9 features it is not duplicated). 12 features max."
+      }
+    ],
+    "Char Residue": [
+      {
+        "id": "r10_cr_g2",
+        "role": "selectable",
+        "what": "equal average of the three exp117 members (HGB, ET, Ridge, unchanged) and g1, i.e. 4 equal weights. g1 = physics-mean GP on r = y - base, base = row-wise nanmean(sta_res_3K, sta_res_10K, sta_res_30K) (the cr_round2 o1 base, coefficient 1); where all three are NaN, base = in-fold training median of y. GP inputs = exp117's 11 features via SimpleImputer(median, add_indicator=True, keep_empty_features=True) -> StandardScaler; kernel and settings as r10_phrr_g2; predict base + mu_GP. No clipping (exp117 precedent)."
+      },
+      {
+        "id": "r10_cr_g1",
+        "role": "report-only",
+        "what": "the GP g1 alone"
+      },
+      {
+        "id": "r10_cr_m1",
+        "role": "selectable",
+        "what": "exp117 blend with its HGB member replaced by the same HGB plus monotonic_cst = +1 on sta_res_3K, sta_res_10K, sta_res_30K and mcc_char_yield_pct, 0 elsewhere (sklearn 1.7.1 HGB accepts NaN with constraints). ET and Ridge members unchanged."
+      }
+    ],
+    "LOI": [
+      {
+        "id": "r10_loi_m1",
+        "role": "selectable",
+        "what": "Avg(RF_m, ET_m, Ridge) where Ridge is exp115's Ridge member unchanged and RF_m / ET_m = make_pipeline(SimpleImputer(strategy='median', add_indicator=True, keep_empty_features=True), <exp115's RF / ET with identical hyperparameters> + monotonic_cst c), c = +1 for total_fr_wtpct and el_P, 0 for every other column including indicator columns."
+      },
+      {
+        "id": "r10_loi_m0",
+        "role": "report-only",
+        "what": "m1 without monotonic_cst (separates imputation from constraint)"
+      },
+      {
+        "id": "r10_loi_s1",
+        "role": "selectable",
+        "what": "exp115 recipe with 8 extra columns from skrub.StringEncoder(n_components=8, random_state=0) (skrub 0.10.1 in .venv312) on the row's FR-name string (fr_names; NaN -> 'none'), fit inside each training fold only and applied to that fold's test rows. RF/ET/Ridge settings unchanged. If skrub.StringEncoder is unavailable in 0.10.1 or needs a download, s1 is BLOCKED (FLAG), never substituted."
+      }
+    ]
+  },
+  "adoption": "experiments/configs/adoption_gate_v2.json (D1 as amended: no human override; re-proposal bar) applied per target, family = every round-10 candidate of that target in the order listed (report-only members count in K, never selectable). Select the selectable candidate with the best repeated-GKF mean; then it must pass G1 (>= 8/10 paired wins), G2 (repeat-0 ci_lo >= incumbent's reproduced ci_lo) and G3 (studentised max-T paired group-bootstrap lower bound > 0, implemented by data/v2/adoption_gate.py). Adoption then still needs a fresh-context critic pass before numbers_of_record.json changes (orchestrator only).",
+  "reported_only (never select, adopt or demote)": [
+    "pHRR: category-GKF (whole families held out) for every candidate and the incumbent, as exp074 reports it",
+    "every target: gain without the top-5 materials/papers by gain contribution",
+    "LOI: protocol C (unseen FR class) as exp115 reports it",
+    "every candidate: seed-0 R2, MAE, RMSE"
+  ],
+  "outputs": "experiments/results/<id>.json (plan section 7 schema as round 9 uses), experiments/runs/round10_<target>_oof.npz and round10_<target>_gate_v2.json, experiments/runs/round10_physics.log; code in data/v2/train_round10_physics.py.",
+  "exit_triggers": [
+    "an incumbent fails to reproduce within 0.001: that target BLOCKED",
+    "GP fit raises or returns NaN on any fold: that candidate non-selectable (still in K), reported",
+    "a candidate's definition cannot be implemented literally: FLAG in experiments/runs/round10_flags.md, skip only that candidate"
+  ],
+  "expected (unscored priors from methods_menu.md)": "pHRR o1 -0.03..+0.04, g2 -0.05..+0.03, f1 -0.02..+0.02; FIGRA g1 -0.02..+0.04; CR g2 -0.03..+0.04, m1 -0.01..+0.02; LOI m1 -0.01..+0.02, s1 -0.02..+0.01. Most likely outcome: no adoption under gate v2 (64-67 groups give a large SE on the gain).",
+  "honesty_notes": [
+    "No fire-specific published evidence validates MCC/TGA-to-cone models under material-grouped hold-out; the physics relations are verified (FAA AR-05/14 Eq. 71; TC-20/35 Eq. 9) but their ML benefit is generic small-data evidence (Zhang & Ling 2018; Ramakrishnan 2015; Sarmiento 2026).",
+    "This is an extra round beyond the plan's budgets, run under owner delegation; the critic must weigh multiplicity across rounds 9 and 10 for pHRR (many prior looks)."
+  ],
+  "amendments": ["Timestamp note (2026-10-08, after critic experiments/critic/overnight_2026-10-08_critic.md): clock times written inside this session's amendments are approximate and several are later than the commit that contains them; git commit times govern. LOI family deviation (critic): round 9's LOI arm and round 10's LOI candidates overlapped in time, so under adoption_gate_v2 they form one family of 5, not two of 2 and 3. Joined, the best candidate's max-T lower bound is -0.0073; the decision (no adoption) is unchanged."]
+}

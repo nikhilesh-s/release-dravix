@@ -1,0 +1,16 @@
+litcone_gt_round1 (REAL) -- rows after merge/dedupe 4333, after form filter 3891, papers 705; snapshot cone_lit_benchmark_v1.csv sha256 87d5df3155f64a36
+matrix categories (>=3 papers): ['ABS', 'EP', 'EPDM', 'EVA', 'FPUF', 'HDPE', 'HIPS', 'LDPE', 'LLDPE', 'NR', 'PA6', 'PA66', 'PBT', 'PC', 'PET', 'PF', 'PLA', 'PMMA', 'PP', 'PS', 'PVC', 'RPUF', 'SBR', 'SR', 'TPU', 'UPR', 'VER', 'WPC', 'other:PA11', 'other:PBS', 'other:PVA', 'other:WPU', 'other:calcium alginate', 'other:wood (Scots pine)']; forms: ['bulk', 'fibre_composite', 'film', 'foam', 'other', 'wood_plastic']; features 69
+
+=== TTI: 2873 rows / 530 papers; competitor 0.95 (training-data fit, their rows not released)
+  primary         P1 [THEIR PROTOCOL: computed on training data; not held-out evidence] ensemble 0.553 in-sample 0.582 | P2 random 5x10 0.419 +- 0.011 CI [0.359, 0.519] | P3 paper-grouped 5x10 0.174 +- 0.013 CI [0.077, 0.326]  (651s)
+
+=== pHRR: 3439 rows / 633 papers; competitor 0.94 (training-data fit, their rows not released)
+  primary         P1 [THEIR PROTOCOL: computed on training data; not held-out evidence] ensemble 0.700 in-sample 0.713 | P2 random 5x10 0.610 +- 0.004 CI [0.577, 0.640] | P3 paper-grouped 5x10 0.364 +- 0.017 CI [0.270, 0.453]  (1182s)
+
+=== THR: 2893 rows / 553 papers; competitor 0.97 (training-data fit, their rows not released)
+  primary         P1 [THEIR PROTOCOL: computed on training data; not held-out evidence] ensemble 0.762 in-sample 0.777 | P2 random 5x10 0.671 +- 0.006 CI [0.642, 0.709] | P3 paper-grouped 5x10 0.327 +- 0.017 CI [0.163, 0.414]  (711s)
+
+=== avg_HRR: 658 rows / 112 papers; competitor 0.96 (training-data fit, their rows not released)
+  primary         P1 [THEIR PROTOCOL: computed on training data; not held-out evidence] ensemble 0.794 in-sample 0.809 | P2 random 5x10 0.649 +- 0.064 CI [0.608, 0.735] | P3 paper-grouped 5x10 -21.132 +- 61.920 CI [0.021, 0.389]  (455s)
+
+runtime 2999s; wrote ~/Dravix/dravix-master/experiments/runs/litcone_gt_round1.json

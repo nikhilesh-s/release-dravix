@@ -1,0 +1,121 @@
+{
+  "slug": "cr_r2_o2",
+  "target": "Char Residue (cone residue %, FSRI)",
+  "round_config": "experiments/configs/cr_round2.json",
+  "dataset": "char_residue_cone_fsri x STA/MCC/props (567 rows / 61 merged groups), exp117 rows, order and groups",
+  "features": [
+    "heat_flux_kWm2",
+    "density_kgm3",
+    "mcc_char_yield_pct",
+    "sta_res_3K",
+    "sta_res_10K",
+    "sta_res_30K",
+    "cat_interior_finish",
+    "cat_exterior_finish",
+    "cat_insulation",
+    "cat_roofing",
+    "cat_structural"
+  ],
+  "model": "Clip0_100(Offset(HGB exp081 params)) alone",
+  "hyperparameters": "offset base = row nanmean of sta_res_3K/10K/30K, coefficient 1; final clip [0, 100]; fixed a priori",
+  "code": "data/v2/train_cr_round2.py",
+  "n_rows": 567,
+  "n_groups": 61,
+  "protocol": "gkf_group5x10",
+  "rkf_mean": 0.6183,
+  "rkf_std": 0.0216,
+  "ci_lo": 0.338,
+  "ci_hi": 0.7893,
+  "paired_vs": "exp117",
+  "paired_delta": -0.0321,
+  "paired_wins": "1/10",
+  "sota": 0.82,
+  "sota_source": "pomazi_2026",
+  "status": "ok",
+  "blocked_reason": "",
+  "note": "REPORT-ONLY, never adopted; CR round 2 o2; paired vs exp117 on identical folds; category-GKF 0.492 (exp117 0.513); gain concentrated in <= 5 materials, not established",
+  "rkf_mean_full": 0.618292000657739,
+  "ci_lo_full": 0.33800678940458,
+  "ci_hi_full": 0.7893026978621868,
+  "per_repeat_r2": [
+    0.6195187288127753,
+    0.5997745894500346,
+    0.6447268890149076,
+    0.631665462013441,
+    0.5778018992382501,
+    0.6540794856267307,
+    0.606672859651064,
+    0.6253804103833092,
+    0.6001406415711479,
+    0.6231590408157304
+  ],
+  "top_k_removal": {
+    "top5": [
+      [
+        "Mineral_Wool_Insulation",
+        2745.733454832869
+      ],
+      [
+        "PVC",
+        2445.523616847386
+      ],
+      [
+        "Window_Screen",
+        1601.217854287892
+      ],
+      [
+        "Polyisocyanurate_Foam_Board",
+        1303.667516852861
+      ],
+      [
+        "Polyolefin_Carpet_Low_Pile",
+        852.5118084098015
+      ]
+    ],
+    "top5_share_of_net": -0.8546059430002291,
+    "drop_top1": {
+      "mean_gain": -0.04749298269578719,
+      "wins": 1
+    },
+    "drop_top3": {
+      "mean_gain": -0.06918935792262397,
+      "wins": 0
+    },
+    "drop_top5": {
+      "mean_gain": -0.08298085574414957,
+      "wins": 0
+    },
+    "not_established": true
+  },
+  "category_gkf_mean": 0.49207365637065853,
+  "mineral_wool": {
+    "o2": {
+      "mean_pred": 98.36279651573426,
+      "sse_share": 0.0009607213878935294
+    },
+    "o2_unclipped": {
+      "mean_pred": 106.66299979862846,
+      "sse_share": 0.013510229190093575
+    }
+  },
+  "wall_time_s": 27.8,
+  "clip_effect": {
+    "share_above_100": 0.014285714285714285,
+    "share_below_0": 0.0236331569664903,
+    "unclipped_rkf_mean": 0.6129315942123862
+  },
+  "gate_v2": {
+    "theta": -0.032111226555252434,
+    "wins": 1,
+    "ci_lo": 0.33800678940458,
+    "ci_hi": 0.7893026978621868,
+    "se": 0.029578210037457867,
+    "lb_maxT": -0.08860599594232824,
+    "lb_unadjusted": -0.06995756808914962,
+    "lb_raw_maxT": -0.09692459762418236,
+    "p_boot_gain_le_0": 0.9075,
+    "K": 5,
+    "q": 1.9100131250515424,
+    "selected": false
+  }
+}

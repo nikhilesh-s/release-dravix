@@ -1,0 +1,2352 @@
+component_name,role_seen,class,rule,n
+app,curing_agent;fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,189
+ddm,curing_agent,not_additive,role matrix/curing_agent,180
+pp,matrix,not_additive,role matrix/curing_agent,151
+pla,matrix,not_additive,role matrix/curing_agent,101
+stearic acid,curing_agent;matrix;other,not_additive,role matrix/curing_agent,76
+zno,curing_agent;filler;other;synergist,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,62
+pva,matrix;other,not_additive,role matrix/curing_agent,61
+dgeba,matrix,not_additive,role matrix/curing_agent,57
+cotton,matrix,not_additive,role matrix/curing_agent,57
+eva,matrix,not_additive,role matrix/curing_agent,52
+epoxy resin,matrix,not_additive,role matrix/curing_agent,50
+tpu,matrix,not_additive,role matrix/curing_agent,47
+dop,plasticizer,other,,46
+abs,matrix,not_additive,role matrix/curing_agent,46
+ammonium polyphosphate (app),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,44
+pa6 (basf b27e),matrix,not_additive,role matrix/curing_agent,44
+pa11,matrix,not_additive,role matrix/curing_agent,42
+ep,matrix,not_additive,role matrix/curing_agent,41
+tpu 9380a,matrix,not_additive,role matrix/curing_agent,41
+glass fibre,reinforcement,glass_fibre,glass fib|\bgf\b|glass fabric|e-glass|ba,40
+hdpe,matrix,not_additive,role matrix/curing_agent,39
+antioxidant 1010,other,other,,39
+expandable graphite,fr,EG,expand(able|ed) graphite|\beg\b,39
+expandable graphite ghl px 95 ht 270,fr,EG,expand(able|ed) graphite|\beg\b,39
+none,fr,not_additive,none,39
+pla 4032d,matrix,not_additive,role matrix/curing_agent,37
+pa6,matrix;other,not_additive,role matrix/curing_agent,33
+phenolic resin,matrix,not_additive,role matrix/curing_agent,32
+epdm,matrix,not_additive,role matrix/curing_agent,31
+sulfur,curing_agent,not_additive,role matrix/curing_agent,31
+pentaerythritol,fr;synergist,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,31
+ath,fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,31
+dopo,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,30
+expandable graphite (eg),fr,EG,expand(able|ed) graphite|\beg\b,30
+curing agent,curing_agent,not_additive,role matrix/curing_agent,28
+pp1,matrix,not_additive,role matrix/curing_agent,28
+per,fr;synergist,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,27
+tannic acid (ta),fr;other,other_FR,role fallback,26
+dds,curing_agent,not_additive,role matrix/curing_agent,26
+e-51 epoxy,matrix,not_additive,role matrix/curing_agent,26
+pvc insulation,matrix,not_additive,role matrix/curing_agent,25
+copper conductor (19 strands),other,other,,25
+recycled cotton fibres (en-tex),matrix,not_additive,role matrix/curing_agent,25
+"pvac dispersion (binder, 50% solids, as supplied)",other,other,,25
+corn starch (binder),other,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,25
+mh,fr;synergist,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,24
+nr,matrix,not_additive,role matrix/curing_agent,24
+tcpp,fr,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,24
+"oriented strand board (wood strands, melamine-formaldehyde + pmdi binder)",matrix,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,24
+flax,matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,24
+melamine,fr,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,23
+pa66,matrix,not_additive,role matrix/curing_agent,22
+ps,matrix,not_additive,role matrix/curing_agent,22
+dcp,curing_agent;other,not_additive,role matrix/curing_agent,22
+cross (silane/peroxide crosslinker),other,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,22
+wood flour,filler,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,21
+zinc borate,fr;synergist,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,21
+glycerol,other;plasticizer,other,,21
+cotton textile 115 g/m2,matrix;reinforcement,other_filler,role fallback,21
+dgeba epoxy,matrix,not_additive,role matrix/curing_agent,20
+naoh,fr;other;synergist,other_FR,role fallback,20
+pmdi,matrix,not_additive,role matrix/curing_agent,20
+waterborne polycarbonate ester pur topcoat,other,other,,20
+aromatic high-solid pur prepolymer intermediate coat (hs 1) + crosslinker 9.2 phr,matrix,not_additive,role matrix/curing_agent,20
+anionic aromatic polyether pur adhesive coat,other,other,,20
+carbon black n330,filler,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,19
+taic,curing_agent,not_additive,role matrix/curing_agent,19
+wood,filler;matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,19
+"pa66 (invista, compounding grade)",matrix,not_additive,role matrix/curing_agent,19
+pa6 (technyl c206),matrix,not_additive,role matrix/curing_agent,19
+cbs,curing_agent,not_additive,role matrix/curing_agent,18
+syn (nor116),synergist,other_FR,role fallback,18
+water (blowing agent),other,other,,18
+ammonium polyphosphate,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,18
+sulphur,curing_agent,not_additive,role matrix/curing_agent,18
+calcium stearate,other,other,,18
+pet,matrix,not_additive,role matrix/curing_agent,17
+sodium alginate (sa),matrix;synergist,other_FR,role fallback,17
+pa12 (pa2200),matrix,not_additive,role matrix/curing_agent,17
+e-51 (dgeba),matrix,not_additive,role matrix/curing_agent,17
+ammonium polyphosphate (exolit ap 422),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,17
+"pa6 (polyamide 2.7, domo)",matrix,not_additive,role matrix/curing_agent,17
+pvc,matrix,not_additive,role matrix/curing_agent,16
+e-44 epoxy,matrix,not_additive,role matrix/curing_agent,16
+chitosan,fr;synergist,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,16
+waterborne epoxy resin,matrix;other,not_additive,role matrix/curing_agent,16
+lldpe,matrix,not_additive,role matrix/curing_agent,16
+ipda,curing_agent,not_additive,role matrix/curing_agent,16
+scots pine sapwood (pinus sylvestris),matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,16
+"aluminium diethylphosphinate (depal, exolit op 1230)",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,16
+pbs,matrix,not_additive,role matrix/curing_agent,16
+epoxy (ep),matrix,not_additive,role matrix/curing_agent,16
+tpu (bayer 9380a),matrix,not_additive,role matrix/curing_agent,16
+rpet,matrix,not_additive,role matrix/curing_agent,15
+flexible pu foam,matrix,not_additive,role matrix/curing_agent,15
+accelerator,curing_agent;other,not_additive,role matrix/curing_agent,15
+bc phosphorus-containing composition (siloxane resin + ethylene-vinyl chloride copolymer),fr,Si,silic|siloxane|\bposs\b|silane|silica|si,15
+mater-bi ef05b thermoplastic starch/polyester blend,matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,15
+app + mgbo2(oh),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,15
+m-phenylenediamine,curing_agent,not_additive,role matrix/curing_agent,14
+tio2,filler;synergist,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,14
+magnesium hydroxide (mh),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,14
+irganox 1010,other,other,,14
+dibutyltin dilaurate,curing_agent,not_additive,role matrix/curing_agent,14
+"pp/epdm (pp t30s + epdm 2504n, ratio not printed)",matrix,not_additive,role matrix/curing_agent,14
+"ifr (app/dper/mel, ratio not printed)",fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,14
+silane coupling agent a172,other,Si,silic|siloxane|\bposs\b|silane|silica|si,14
+pe wax,other,other,,14
+sb2o3,fr;synergist,Sb2O3,sb2o3|antimony,13
+ground tire rubber (gtr),filler,other_filler,role fallback,13
+plywood,matrix;other,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,13
+expanded polystyrene beads,matrix,not_additive,role matrix/curing_agent,13
+phytic acid,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,13
+"sr firegreen 37 (bio-based epoxy, inherently fr-certified)",matrix,not_additive,role matrix/curing_agent,13
+sd 8202,curing_agent,not_additive,role matrix/curing_agent,13
+kraft lignin,fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,13
+melamine polyphosphate (mpp),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,13
+antioxidant 4020na,other,other,,13
+nano-silica,filler;synergist,Si,silic|siloxane|\bposs\b|silane|silica|si,13
+epidian 5 epoxy resin,matrix,not_additive,role matrix/curing_agent,13
+hardener z-1 (triethylenetetramine),curing_agent,not_additive,role matrix/curing_agent,13
+eva18,matrix,not_additive,role matrix/curing_agent,13
+pla 2003d,matrix,not_additive,role matrix/curing_agent,13
+accelerator m,curing_agent;other,not_additive,role matrix/curing_agent,12
+cotton fabric,matrix,not_additive,role matrix/curing_agent,12
+antioxidant 168,other,other,,12
+recycled hdpe,matrix,not_additive,role matrix/curing_agent,12
+pc,matrix,not_additive,role matrix/curing_agent,12
+trametes versicolor mycelium,matrix,not_additive,role matrix/curing_agent,12
+epoxy ipox mr-3012 + mh-3111 anhydride hardener (100:116),matrix,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,12
+pla ingeo 3d450,matrix,not_additive,role matrix/curing_agent,12
+abs 8391,matrix,not_additive,role matrix/curing_agent,12
+d.e.n. 431 epoxy novolac,matrix,not_additive,role matrix/curing_agent,12
+heloxy bd reactive diluent,other,other,,12
+ipda/d230 50:50,curing_agent,not_additive,role matrix/curing_agent,12
+ldpe,matrix,not_additive,role matrix/curing_agent,12
+pvc tl-1000,matrix,not_additive,role matrix/curing_agent,12
+nano-zno (20 nm),synergist,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,12
+up,matrix,not_additive,role matrix/curing_agent,11
+alpi (aluminum diethylphosphinate),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,11
+pmma,matrix,not_additive,role matrix/curing_agent,11
+pla (4032d),matrix,not_additive,role matrix/curing_agent,11
+epoxy resin e-51,matrix,not_additive,role matrix/curing_agent,11
+pa6 b27e,matrix,not_additive,role matrix/curing_agent,11
+flexible polyurethane foam,matrix,not_additive,role matrix/curing_agent,11
+irganox b215,other,other,,11
+kraft lignin (kl),fr;synergist,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,11
+zinc phosphinate (znp),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,11
+dgeba epoxy (araldite gy 250),matrix,not_additive,role matrix/curing_agent,11
+polyetheramine jeffamine d-230,curing_agent,not_additive,role matrix/curing_agent,11
+"flexible pur foam (polyol/mdi, oh:nco 2:1)",matrix,not_additive,role matrix/curing_agent,11
+pp (t30s),matrix,not_additive,role matrix/curing_agent,11
+pentaerythritol (per),fr;synergist,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,11
+pok m330,matrix,not_additive,role matrix/curing_agent,11
+paraffin (pcm),matrix;other,not_additive,role matrix/curing_agent,11
+organotin stabilizer,other,other,,11
+"lldpe (dow, mi 2.0)",matrix,not_additive,role matrix/curing_agent,11
+coc (apel apl6509t),matrix,not_additive,role matrix/curing_agent,11
+alpi (aluminium alkylphosphinate),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,10
+bisphenol a epoxy,matrix,not_additive,role matrix/curing_agent,10
+hips,matrix,not_additive,role matrix/curing_agent,10
+app (exolit ap422),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,10
+tannic acid,fr;synergist,other_FR,role fallback,10
+fr1 (p-based fr),fr,other_FR,role fallback,10
+rokopol f3000 polyol,matrix,not_additive,role matrix/curing_agent,10
+rokopol v700 polyol,matrix,not_additive,role matrix/curing_agent,10
+dbtd catalyst,other,other,,10
+dabco 33lv catalyst,other,other,,10
+kac catalyst,other,other,,10
+wheat bran,other,other,,10
+bamboo charcoal (bc),filler,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,10
+aluminum hypophosphite (ahp),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,10
+epoxy der 332/ipda,matrix,not_additive,role matrix/curing_agent,10
+flax fabric ud 360,reinforcement,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,10
+bovine crust leather (chrome-tanned),matrix,not_additive,role matrix/curing_agent,10
+expanded graphite,fr,EG,expand(able|ed) graphite|\beg\b,10
+epidian 624 bpa epoxy,matrix,not_additive,role matrix/curing_agent,10
+isophorone diamine,curing_agent,not_additive,role matrix/curing_agent,10
+epidian 652 epoxy resin,matrix,not_additive,role matrix/curing_agent,10
+isophoronediamine (ida),curing_agent,not_additive,role matrix/curing_agent,10
+elapol 8020,matrix,not_additive,role matrix/curing_agent,10
+pmdta,other,other,,10
+dabco k15,other,other,,10
+pc cat tka30,other,other,,10
+dabco tmr 7,other,other,,10
+spc (tegostab b 8465),other,other,,10
+solkane 365/227,other,other,,10
+dbtdl,other,other,,10
+aluminium diethyl phosphinate (exolit op 1230),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,10
+ethylene-norbornene copolymer,matrix,not_additive,role matrix/curing_agent,10
+"sorbitol polyglycidyl ether (spe, erysis ge-60)",matrix,not_additive,role matrix/curing_agent,10
+cycloaliphatic amine mh 3122,curing_agent,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,10
+carbon fibre weave [0]5,reinforcement,carbon_fibre,carbon fib|\bcf\b,10
+abs terluran gp22,matrix,not_additive,role matrix/curing_agent,10
+ath (al(oh)3),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,10
+araldite ly 1564sp epoxy + hardener xb3487 (100:34 by mass),matrix,not_additive,role matrix/curing_agent,10
+t300-3000 pan carbon fibre fabric,reinforcement,carbon_fibre,carbon fib|\bcf\b,10
+cobalt hydroxystannate cosn(oh)6 + chicken feather protein + mmt,fr,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,10
+hardener,curing_agent,not_additive,role matrix/curing_agent,9
+mape,compatibilizer,other,,9
+bc-m (p/n graft-modified bamboo charcoal),fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,9
+paraffin (no. 58 semi-refined),matrix,not_additive,role matrix/curing_agent,9
+mxene (ti3c2tx),nanofiller;synergist,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,9
+pp-g-mah,compatibilizer,other,,9
+bpo,curing_agent,not_additive,role matrix/curing_agent,9
+pla 3052d,matrix,not_additive,role matrix/curing_agent,9
+scots pine sapwood,matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,9
+piperazine pyrophosphate (papp),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,9
+pmma sheet,matrix,not_additive,role matrix/curing_agent,9
+pla ingeo 2003d,matrix,not_additive,role matrix/curing_agent,9
+mgal-ldh,fr;nanofiller,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,9
+melamine polyphosphate (melapur 200),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,9
+aluminum diethylphosphinate (exolit op1230),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,9
+ppo dc,matrix,not_additive,role matrix/curing_agent,9
+jeffamine edr-148,curing_agent,not_additive,role matrix/curing_agent,9
+thiourea catalyst,other,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,9
+melamine cyanurate,fr,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,9
+pla (luminy l130),matrix,not_additive,role matrix/curing_agent,9
+sodium montmorillonite (cloisite na+),filler;synergist,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,9
+ppg-2000 polyether polyol,matrix,not_additive,role matrix/curing_agent,9
+rt-305 polyether polyol,matrix,not_additive,role matrix/curing_agent,9
+papi,curing_agent,not_additive,role matrix/curing_agent,9
+sbr,matrix,not_additive,role matrix/curing_agent,9
+pp fibre,matrix,not_additive,role matrix/curing_agent,9
+ep (e44) + ddm,matrix,not_additive,role matrix/curing_agent,9
+"107 rubber (alpha,omega-dihydroxy-pdms)",matrix,not_additive,role matrix/curing_agent,9
+kh-550/kh-560 coupling agent (1:1),compatibilizer,Si,silic|siloxane|\bposs\b|silane|silica|si,9
+melamine phosphate (mp),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,9
+methyl triethoxysilane,curing_agent,Si,silic|siloxane|\bposs\b|silane|silica|si,9
+acid-functionalized mwcnt,nanofiller,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,9
+jute plain-weave fabric (114 g/m2),reinforcement,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,9
+mpp (melamine polyphosphate),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,8
+defoamer,other,other,,8
+eva18 (18 wt% va),matrix,not_additive,role matrix/curing_agent,8
+tdi,curing_agent,not_additive,role matrix/curing_agent,8
+dispersant d,other,other,,8
+alpi,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,8
+curing agent (unspecified),curing_agent,not_additive,role matrix/curing_agent,8
+abs (elix 128 ig),matrix,not_additive,role matrix/curing_agent,8
+upr,matrix,not_additive,role matrix/curing_agent,8
+didopo,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,8
+egt (enteromorpha/graphene/tannic acid),synergist,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,8
+k-sep (kh550-modified sepiolite),synergist,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,8
+carbon black,filler,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,8
+zno/stearic acid/dm/cz/sulfur,curing_agent,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,8
+fr2 (p-based fr),fr,other_FR,role fallback,8
+fr4 (p-based fr),fr,other_FR,role fallback,8
+ifr (mp:per 1:1),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,8
+app (exolit ap 422),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,8
+unidirectional carbon fibre fabric zoltek px35,reinforcement,carbon_fibre,carbon fib|\bcf\b,8
+ongronat 2100 pmdi,matrix,not_additive,role matrix/curing_agent,8
+polycat 218,other,other,,8
+tegostab b 8870,other,other,,8
+ortegol 500,other,other,,8
+tpu desmopan 9380a,matrix,not_additive,role matrix/curing_agent,8
+pine wood,matrix;other,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,8
+waterborne polyurethane (ppg-1000/ipdi/dmpa/bdo),matrix,not_additive,role matrix/curing_agent,8
+pvpa coating (uv-crosslinked vpa),fr,other_FR,role fallback,8
+hmp photoinitiator,other,other,,8
+app exolit ap 422,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,8
+alkaline lignin,fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,8
+"eva (dupont 265, 28% va)",matrix,not_additive,role matrix/curing_agent,8
+mc226 pe-g-ma,compatibilizer,other,,8
+mbdac,matrix,not_additive,role matrix/curing_agent,8
+app (addforce fr app 201),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,8
+"eg-based water-soluble flame retardant coating (porous particle, starch, water-based pvac binder, silane, thermosetting resin)",fr,EG,expand(able|ed) graphite|\beg\b,8
+per-sample amount not printed),,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,8
+"closed-cell pet foam (basf, 120 kg/m3)",matrix,not_additive,role matrix/curing_agent,8
+mwcnt,nanofiller,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,8
+app (exolit app 422),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,8
+mmt,filler;nanofiller;synergist,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,8
+mel,fr,other_FR,role fallback,8
+ep (e51),matrix,not_additive,role matrix/curing_agent,8
+p-ppd-ph,fr,other_FR,role fallback,8
+"pla (low viscosity, mfr 80 g/10 min)",matrix,not_additive,role matrix/curing_agent,8
+nano-sio2,nanofiller;synergist,Si,silic|siloxane|\bposs\b|silane|silica|si,8
+polyurethane foam,matrix,not_additive,role matrix/curing_agent,8
+nano-sio2 (nanopox f700),nanofiller,Si,silic|siloxane|\bposs\b|silane|silica|si,8
+ep (e-44),matrix,not_additive,role matrix/curing_agent,8
+veropal uv plus 100 epoxy component a (hydrogenated bisphenol a diglycidyl ether oligomer),matrix,not_additive,role matrix/curing_agent,8
+veropal component b (propoxylated trimethylolpropane-ammonia amine),curing_agent,not_additive,role matrix/curing_agent,8
+pa66 (lumid gp1000b(w)),matrix,not_additive,role matrix/curing_agent,8
+ammonium pentaborate octahydrate (apb),fr,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,8
+ad = dimethyl propane phosphonate (additive),,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,8
+"rm = diethyl (hydroxymethyl)phosphonate, re = diethyl bis-(2-hydroxyethyl)aminomethylphosphonate (reactive)",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,8
+aluminum diethylphosphinate (adp),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,7
+eva (6110mc),matrix,not_additive,role matrix/curing_agent,7
+mlldpe (3518cb),matrix,not_additive,role matrix/curing_agent,7
+poe (df810),matrix,not_additive,role matrix/curing_agent,7
+mah-g-pe,compatibilizer,other,,7
+polyethylene wax,other,other,,7
+silicone,other,Si,silic|siloxane|\bposs\b|silane|silica|si,7
+silane coupling agent s230,compatibilizer,Si,silic|siloxane|\bposs\b|silane|silica|si,7
+ommt,nanofiller;synergist,other_FR,role fallback,7
+base asphalt binder,matrix,not_additive,role matrix/curing_agent,7
+lldpe 7042,matrix,not_additive,role matrix/curing_agent,7
+urea,other;synergist,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,7
+pbt/pet/poe-g-gma/surlyn 8920 (40/60/20/0.3),matrix,not_additive,role matrix/curing_agent,7
+bisphenol-a pc,matrix,not_additive,role matrix/curing_agent,7
+ep (npel 128) + ddm (ep:ddm 4:1),matrix,not_additive,role matrix/curing_agent,7
+vinyl ester resin,matrix,not_additive,role matrix/curing_agent,7
+pa 6 (ultramid b27e),matrix,not_additive,role matrix/curing_agent,7
+halloysite nanotubes (hnts),fr;nanofiller,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,7
+eg,fr,EG,expand(able|ed) graphite|\beg\b,7
+pp (moplen hp-400n),matrix,not_additive,role matrix/curing_agent,7
+short flax fibre,reinforcement,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,7
+mapp (licocene 6452),compatibilizer,other,,7
+pn-dopo (dopo-based derivative),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,7
+tofa short-oil alkyd resin,matrix,not_additive,role matrix/curing_agent,7
+"brominated polystyrene (brps, fr803, 66 wt% br)",fr,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,7
+"poly(pentabromobenzyl acrylate) (brpbz, fr1025, 71 wt% br)",fr,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,7
+bleached desized cotton fabric (testfabrics 400),matrix,not_additive,role matrix/curing_agent,7
+initiator,curing_agent,not_additive,role matrix/curing_agent,7
+graphite ghl 3394,filler,other_filler,role fallback,7
+softwood fibers (gutex),matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,7
+acrodur ds 3558 binder,other,other,,7
+laponite/poly(ca-pdms-fu) benzoxazine nanocomposite coating (90:10 laponite:benzoxazine),fr,other_FR,role fallback,7
+app (phase ii),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,7
+tpc (tripotassium citrate),fr,other_FR,role fallback,7
+nr (rss1),matrix,not_additive,role matrix/curing_agent,7
+mbt,curing_agent,not_additive,role matrix/curing_agent,7
+"epoxy resin (ep, cured)",matrix,not_additive,role matrix/curing_agent,7
+ammonium alginate (aa),matrix,not_additive,role matrix/curing_agent,7
+ps (basf-ypc 158k),matrix,not_additive,role matrix/curing_agent,7
+si69 silane,compatibilizer,Si,silic|siloxane|\bposs\b|silane|silica|si,7
+continuous glass fibre,reinforcement,glass_fibre,glass fib|\bgf\b|glass fabric|e-glass|ba,7
+kraft cellulose sheet,matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,7
+dmpa,curing_agent;other,not_additive,role matrix/curing_agent,7
+dopo-modified novolac (struktol vp 3760),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,7
+dgeba (e-44),matrix,not_additive,role matrix/curing_agent,7
+polyamide resin 650,curing_agent,not_additive,role matrix/curing_agent,7
+pbt (tecodur pb70 nl),matrix,not_additive,role matrix/curing_agent,7
+aluminium hypophosphite (exolit op935),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,7
+pa6t (zytel htn53g50hslrhf),matrix,not_additive,role matrix/curing_agent,7
+hdpe (mfi 4 g/10 min),matrix,not_additive,role matrix/curing_agent,7
+pvc (sg-5),matrix,not_additive,role matrix/curing_agent,7
+organic tin,other,other,,7
+acr,other,other,,7
+paraffin wax,other,other,,7
+gms,other,other,,7
+pegdmae (pe-g-ma/amino alcohol compatibilizer),compatibilizer,other,,7
+"lldpe/eva blend (lldpe dfda7042 + eva 7240m, 15 wt% va)",matrix,not_additive,role matrix/curing_agent,7
+hips ph-88,matrix,not_additive,role matrix/curing_agent,7
+magnesium hydroxide (silane-modified),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,7
+recycled pe,matrix,not_additive,role matrix/curing_agent,7
+"rpuf (polyether polyol 100 g, papi 120 g, 33% teda soln 4.2 g + dbtdl 0.6 g, silicone stabilizer 6 g, phosphate (2,3-dichloropropyl) ester 17.5 g, hfc-365mfc 7 g (table 2",,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,7
+column alignment as printed)),matrix,not_additive,role matrix/curing_agent,7
+app/mel/lignosulfonate ifr,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,7
+none (control),fr,not_additive,none,7
+nickel phytate (pa-ni),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,7
+lst stabilizer,other,other,,6
+dlp stabilizer,other,other,,6
+zinc stearate,other,other,,6
+ommt (organo-modified montmorillonite),nanofiller,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,6
+mmt (untreated montmorillonite),nanofiller,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,6
+accelerator tt,curing_agent,not_additive,role matrix/curing_agent,6
+roflam f6 (organophosphorus),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,6
+roflam b7 (organophosphorus),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,6
+ifr (app:per 3:1),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,6
+pp profax 6331,matrix,not_additive,role matrix/curing_agent,6
+chlorinated paraffin,fr,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,6
+al(oh)3,fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,6
+epdm/pp (epdm:pp 40:60 in final product),matrix,not_additive,role matrix/curing_agent,6
+naphthenic oil,plasticizer,other,,6
+mostly volatilized),,other,,6
+calcium carbonate,filler,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,6
+peg,matrix,not_additive,role matrix/curing_agent,6
+sodium alginate,matrix;other,not_additive,role matrix/curing_agent,6
+pla (pla2003d),matrix,not_additive,role matrix/curing_agent,6
+sio2,nanofiller;synergist,Si,silic|siloxane|\bposs\b|silane|silica|si,6
+gnr (gma-grafted natural rubber),other,other,,6
+wood strands (osb),matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,6
+phenol formaldehyde resin,other,other,,6
+wax emulsion,other,other,,6
+epoxy resin npel128 + ddm curing agent,matrix,not_additive,role matrix/curing_agent,6
+softwood fibres (loose),matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,6
+activated carbon (ac),synergist,other_FR,role fallback,6
+nio,fr,other_FR,role fallback,6
+isocyanate mdi,matrix,not_additive,role matrix/curing_agent,6
+mapp,compatibilizer;fr,other_FR,role fallback,6
+natural rubber (nr),matrix,not_additive,role matrix/curing_agent,6
+eucommia ulmoides gum (eug),matrix,not_additive,role matrix/curing_agent,6
+ppap (piperazine pyrophosphate),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,6
+pp2,matrix,not_additive,role matrix/curing_agent,6
+vinyl-terminated pdms,matrix,not_additive,role matrix/curing_agent,6
+f36d expandable microsphere foaming agent,other,other,,6
+poly(methylhydrosiloxane),curing_agent,Si,silic|siloxane|\bposs\b|silane|silica|si,6
+platinum complex,curing_agent,not_additive,role matrix/curing_agent,6
+2-methyl-3-butyn-2-ol,other,other,,6
+mwcnt baytubes c150hp,nanofiller,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,6
+rdp resorcinol bis(diphenyl phosphate),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,6
+kraft paper,matrix,not_additive,role matrix/curing_agent,6
+irgafos 168,other,other,,6
+"magnesium hydroxide (ecopiren 3,5 c)",synergist,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,6
+"flexible open-cell pu foam (no fr, edx-confirmed)",matrix,not_additive,role matrix/curing_agent,6
+cpvc,matrix,not_additive,role matrix/curing_agent,6
+app (budit 3167),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,6
+rtm 6 epoxy,matrix,not_additive,role matrix/curing_agent,6
+carbon fibre fabric g0939 (8 plies),reinforcement,carbon_fibre,carbon fib|\bcf\b,6
+pom,matrix,not_additive,role matrix/curing_agent,6
+antioxidant,other,other,,6
+epoxy renlam ly 113 + ren hy 97-1 (100:30),matrix,not_additive,role matrix/curing_agent,6
+e-glass x-e fabric 444 g/m2,reinforcement,glass_fibre,glass fib|\bgf\b|glass fabric|e-glass|ba,6
+aramid twill fabric 300 g/m2,reinforcement,other_filler,role fallback,6
+carbon x-c fabric 406 g/m2,reinforcement,other_filler,role fallback,6
+basalt bas bi 450 fabric 464 g/m2,reinforcement,glass_fibre,glass fib|\bgf\b|glass fabric|e-glass|ba,6
+flax twill fabric 500 g/m2,reinforcement,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,6
+pdms,other,other,,6
+app exolit ap422,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,6
+cacl2/h3bo3 ion crosslinking bath,other,other,,6
+"zinc phosphinate (znp, op950)",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,6
+"lignosulphonate lignin (ll, domsjo)",synergist,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,6
+"aluminium phosphinate (alp, op1230)",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,6
+"kraft lignin (dl, upm)",synergist,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,6
+graphene nanoplatelet xgnp m25,nanofiller,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,6
+linen/cotton 55/45 fabric 360 g/m2,matrix,not_additive,role matrix/curing_agent,6
+acrylic fleece 65% + polyester/viscose 27/8% backing velour fabric 444 g/m2,matrix,not_additive,role matrix/curing_agent,6
+uhmw-sr (genioplast pellet s,,other,,6
+70% pdms + 30% fumed silica),other,Si,silic|siloxane|\bposs\b|silane|silica|si,6
+alpi (op1230),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,6
+aldpi (aluminum diethylphosphinate),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,6
+"ddm (4,4-diaminodiphenylmethane)",curing_agent,not_additive,role matrix/curing_agent,6
+pp (ethylene-propylene block copolymer),matrix,not_additive,role matrix/curing_agent,6
+jute,matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,6
+aramid-based fabric (exact composition unknown),matrix,not_additive,role matrix/curing_agent,6
+pfaa-dopo-b-pdeaema,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,6
+steel plate 100x100x1 mm,other,other,,6
+pom (dupont),matrix,not_additive,role matrix/curing_agent,6
+tgic,compatibilizer;synergist,other_FR,role fallback,6
+poplar plywood,matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,6
+decorative veneer,other,other,,6
+adhesive layer muf,other,other,,6
+ep + pda,matrix,not_additive,role matrix/curing_agent,6
+wood flour (wf),filler,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,6
+resorcinol bis(diphenyl phosphate) (rdp),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,6
+ldpe (pe-20020x)/eva (elvax 360) blend,matrix,not_additive,role matrix/curing_agent,6
+ratio ldpe:eva not printed),,other,,6
+"chopped basalt fibre (aptes silane-modified, 6 mm)",reinforcement,Si,silic|siloxane|\bposs\b|silane|silica|si,6
+tpu (65e85),matrix,not_additive,role matrix/curing_agent,6
+pp t30s,matrix,not_additive,role matrix/curing_agent,6
+expanded polystyrene (eps),matrix,not_additive,role matrix/curing_agent,6
+il169 (tributyl(ethyl)phosphonium diethyl-phosphate),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,6
+jeffamine d230,curing_agent,not_additive,role matrix/curing_agent,6
+ldpe pe-019,matrix,not_additive,role matrix/curing_agent,6
+eva escorene ul00226cc (26 wt% va),matrix,not_additive,role matrix/curing_agent,6
+ammonium polyphosphate app (exolit ap422),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,6
+epoxy (0164),matrix,not_additive,role matrix/curing_agent,6
+carbon fibre t700,reinforcement,carbon_fibre,carbon fib|\bcf\b,6
+glass fibre thin surface layer,reinforcement,glass_fibre,glass fib|\bgf\b|glass fabric|e-glass|ba,6
+pe-g-gma,compatibilizer,other,,6
+3-aminopropyl triethoxysilane (apts),compatibilizer,Si,silic|siloxane|\bposs\b|silane|silica|si,6
+cellulose raw paper (90 g/m2),matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,6
+silane si69,compatibilizer,Si,silic|siloxane|\bposs\b|silane|silica|si,6
+mg(oh)2,fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,6
+mg(oh)2 magnifin h10a,fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,6
+mh/ath (mg(oh)2/al(oh)3),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,6
+red phosphorus,fr;synergist,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,6
+tpu (desmopan 9380a),matrix,not_additive,role matrix/curing_agent,6
+microencapsulated red phosphorus,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,6
+gpe (pe-g-mah/mma/ba),compatibilizer,other,,6
+gpw (pe wax-g-mah/mma/ba),compatibilizer,other,,6
+hdpe-g-mah,compatibilizer,other,,6
+ep (dgeba) + polyamide 651 hardener,matrix,not_additive,role matrix/curing_agent,6
+k25 hollow glass microspheres (hgm),filler,other_filler,role fallback,6
+app + sepiolite,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,6
+app + lignin,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,6
+eg + apb,fr,EG,expand(able|ed) graphite|\beg\b,6
+app + nickel phytate (pani),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,6
+rabs,matrix,not_additive,role matrix/curing_agent,5
+talc,filler,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,5
+shell: hdpe,matrix,not_additive,role matrix/curing_agent,5
+core: pine wood flour,filler,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,5
+core: hdpe,matrix,not_additive,role matrix/curing_agent,5
+core: talc,filler,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,5
+core: lubricant (tpw 306),other,other,,5
+core: mape (pe-g-ma g2608),compatibilizer,other,,5
+per (pentaerythritol),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,5
+photovoltaic module (glass/eva/si cell/eva/back-sheet),matrix,not_additive,role matrix/curing_agent,5
+epoxy resin e-44,matrix,not_additive,role matrix/curing_agent,5
+cotton fabric (naoh-scoured),matrix,not_additive,role matrix/curing_agent,5
+pa66 fabric,matrix,not_additive,role matrix/curing_agent,5
+"p,n-doped cellulose fibrils (rice straw)",fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,5
+"egma (ethylene-acrylic ester-glycidyl methacrylate, reactive toughener)",other,other,,5
+cotton fabric (220 g/m2),matrix,not_additive,role matrix/curing_agent,5
+resveratrol (re),fr,other_FR,role fallback,5
+e-sbr (ker 1500),matrix,not_additive,role matrix/curing_agent,5
+tmq,other,other,,5
+eps beads,matrix,not_additive,role matrix/curing_agent,5
+tad (dopo-taic adduct),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,5
+triazine charring-foaming agent (cfa),fr,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,5
+lamellar cobalt potassium pyrophosphate (lcpp),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,5
+polyol pea,matrix,not_additive,role matrix/curing_agent,5
+allyl benzoxazine (boz),matrix,not_additive,role matrix/curing_agent,5
+ifr (app/per/mel 3:1:1),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,5
+polycarbosilane (pcs),synergist,Si,silic|siloxane|\bposs\b|silane|silica|si,5
+d230 (polyetheramine),curing_agent,not_additive,role matrix/curing_agent,5
+pe-g-mah,compatibilizer,other,,5
+lubricant,other,other,,5
+hemp shives,filler,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,5
+birch sawdust,filler,other_filler,role fallback,5
+flax/kenaf/pp fibre nonwoven hot-pressed composite (1:1:2 by mass),matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,5
+petmp thiol prepolymer,fr,other_FR,role fallback,5
+bapo photoinitiator,other,other,,5
+polyfr brominated polymeric fr,fr,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,5
+hydrotalcite (ht) heat stabilizer,other,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,5
+furfuryl alcohol (polymerized in situ),other,other,,5
+maleic anhydride,curing_agent,not_additive,role matrix/curing_agent,5
+odtms silane sol (sprayed),other,Si,silic|siloxane|\bposs\b|silane|silica|si,5
+"pa12 (pa2200) powder, laser sintered",matrix,not_additive,role matrix/curing_agent,5
+zinc borate (firebrake zb),fr,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,5
+mgalzn-ldh-pmoa,fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,5
+hacp,fr,other_FR,role fallback,5
+taeda pine wood,matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,5
+dicyandiamide,other;synergist,other_FR,role fallback,5
+pa6 (b27e),matrix,not_additive,role matrix/curing_agent,5
+glass fibre (cs7920),reinforcement,glass_fibre,glass fib|\bgf\b|glass fabric|e-glass|ba,5
+graphene nanoplatelets (gnp),nanofiller,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,5
+mxda (m-xylylenediamine),curing_agent,not_additive,role matrix/curing_agent,5
+choline chloride,matrix,not_additive,role matrix/curing_agent,5
+aa,matrix,not_additive,role matrix/curing_agent,5
+itaconic acid,matrix,not_additive,role matrix/curing_agent,5
+"4,4'-diaminodiphenylmethane (ddm)",curing_agent,not_additive,role matrix/curing_agent,5
+"pinewood scobs (ws, bulk density 83.0 kg/m3)",matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,5
+polydimethylsiloxane pdms (mw 4200),fr,Si,silic|siloxane|\bposs\b|silane|silica|si,5
+k-app (kh-550 modified app),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,5
+cooh-mwcnts,nanofiller,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,5
+cigs thin-film pv module (etfe/cigs cells/metal backboard/pet),matrix,not_additive,role matrix/curing_agent,5
+dcpcd (phosphoramide from diethylenetriamine + diphenyl phosphorochloridate),fr,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,5
+muf (melamine-modified urea-formaldehyde resin),matrix,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,5
+ppva (phosphorylated pva),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,5
+epoxy resin dgeba e-44,matrix,not_additive,role matrix/curing_agent,5
+dgeba e-44,matrix,not_additive,role matrix/curing_agent,5
+sorbitol polyglycidyl ether (erysis ge-60),matrix,not_additive,role matrix/curing_agent,5
+mh 3122 cycloaliphatic amine,curing_agent,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,5
+aln-550rfs,filler,other_filler,role fallback,5
+pla (natureworks 6202d),matrix,not_additive,role matrix/curing_agent,5
+"cotton fabric (iso 105-f, 110 g/m2)",matrix,not_additive,role matrix/curing_agent,5
+epidian 601 epoxy,matrix,not_additive,role matrix/curing_agent,5
+ida curing agent,curing_agent,not_additive,role matrix/curing_agent,5
+gnps + pss dispersant (10:1) surface coating,nanofiller,other_filler,role fallback,5
+unsaturated polyester (crystic 2-406pa),matrix,not_additive,role matrix/curing_agent,5
+melamine formaldehyde resin (sd-mf:deg 1:1),fr;matrix,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,5
+montmorillonite k10,filler;nanofiller;synergist,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,5
+"mwcnt-modified phenolic resin (novolac, cnsl-derived, 10% hexamine)",matrix,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,5
+pa6 (ube 1030b),matrix,not_additive,role matrix/curing_agent,5
+sorca (sorbitol:citric acid 1:3 molar),other,other,,5
+epoxy ep-44,matrix,not_additive,role matrix/curing_agent,5
+epoxy resin coating,matrix,not_additive,role matrix/curing_agent,5
+ethylenediamine (eda),curing_agent,not_additive,role matrix/curing_agent,5
+wood substrate,other,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,5
+keratin fibres (tannery waste),filler,other_filler,role fallback,5
+coconut fibres,filler,other_filler,role fallback,5
+montmorillonite clay (mmt),filler,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,5
+"asphalt binder (base, pen 65.8)",matrix,not_additive,role matrix/curing_agent,5
+nh4cl,curing_agent,not_additive,role matrix/curing_agent,5
+m-pda,curing_agent,not_additive,role matrix/curing_agent,5
+pc (makrolon 6485),matrix,not_additive,role matrix/curing_agent,5
+antioxidants,other,other,,5
+cfa (charring-foaming agent),fr,other_FR,role fallback,5
+muf resin,matrix,not_additive,role matrix/curing_agent,5
+china fir wood 100x100x20 mm,other,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,5
+ep (dgeba),matrix,not_additive,role matrix/curing_agent,5
+ece (epoxy chain extender),other,other,,5
+"4,4-diaminodiphenylsulfone (dds)",curing_agent,not_additive,role matrix/curing_agent,5
+water-based hydroxyl-modified acrylic resin,matrix,not_additive,role matrix/curing_agent,5
+titanium dioxide,filler,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,5
+thickener,other,other,,5
+deionized water,other,other,,5
+dper,fr,other_FR,role fallback,5
+glass bubbles (gb),filler,other_filler,role fallback,5
+water,other,other,,5
+bamboo fibre,reinforcement,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,5
+aluminum hypophosphite (ap),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,5
+hdpe (5000s),matrix,not_additive,role matrix/curing_agent,5
+wood fibre 60-80 mesh,filler,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,5
+melamine-formaldehyde resin (catalyzed),matrix,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,5
+"ofmsw (organic fraction of municipal solid waste, wet)",filler,other_filler,role fallback,5
+flexible pur foam (polyol:isocyanate 2:1 by weight),matrix,not_additive,role matrix/curing_agent,5
+sulfamic acid-intercalated mgal-ldh (sa-ldh),fr;synergist,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,5
+ifr (app/mel/per 5:3:2),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,5
+microencapsulated red phosphorus (exolit rp 6500),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,5
+hdpe (hpa 020hd5),matrix,not_additive,role matrix/curing_agent,5
+"eva (ka-40, 25% va)",matrix,not_additive,role matrix/curing_agent,5
+bisphenol a dicyanate (ce),matrix,not_additive,role matrix/curing_agent,5
+decabromodiphenyloxide dbdpo (fr1210),fr,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,5
+ramie fibre,reinforcement,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,5
+ppg-1000,matrix,not_additive,role matrix/curing_agent,5
+tdi 80/20,matrix,not_additive,role matrix/curing_agent,5
+ps (in situ polymerized),matrix,not_additive,role matrix/curing_agent,5
+evm levaprene 800 (80 wt% va),matrix,not_additive,role matrix/curing_agent,5
+nbr perbunan 2840,matrix,not_additive,role matrix/curing_agent,5
+zno/stearic acid/zinc stearate,other,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,5
+cao,other,other,,5
+eva (28 wt% va),matrix,not_additive,role matrix/curing_agent,5
+"hdpe (chi-mei, mw 135,700)",matrix,not_additive,role matrix/curing_agent,5
+go/mg-al ldh hybrid,fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,5
+roflam b7 (tert-butylphenyl phosphate),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,5
+roflam f5 (phenyl-isopropylphenyl phosphate),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,5
+ep (epoxy resin),matrix,not_additive,role matrix/curing_agent,5
+m-phenylenediamine (mpd),curing_agent,not_additive,role matrix/curing_agent,5
+tpu (9380a),matrix,not_additive,role matrix/curing_agent,5
+dm,other,other,,5
+tmtd,other,other,,5
+antioxidant a,other,other,,5
+dopo-kh560 modified expandable graphite (meg),fr,EG,expand(able|ed) graphite|\beg\b,5
+pbs (hydroxyl end-capped),matrix,not_additive,role matrix/curing_agent,5
+ifr,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,5
+mg/al/fe-co3 ldh,fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,5
+fumed sio2 (kh-550 modified),filler,Si,silic|siloxane|\bposs\b|silane|silica|si,5
+ethyl silicate,curing_agent,Si,silic|siloxane|\bposs\b|silane|silica|si,5
+carbon black (nanosized),nanofiller,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,5
+ath (nano),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,5
+rust (iron oxide powder),other,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,5
+eva (18% va),matrix,not_additive,role matrix/curing_agent,5
+"divinycell h60 4psc pvc closed-cell foam core (4 mm, 60 kg m-3)",other,other,,5
+plywood board 100x100x4 mm,other,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,5
+"mf resin (melamine formaldehyde 303-80, 58-62% in n-butanol)",matrix,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,5
+polyether polyol n210/mdi polyurethane,matrix,not_additive,role matrix/curing_agent,5
+diglyceride borate (reactive chain extender),fr,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,5
+kh-550 silane,compatibilizer,Si,silic|siloxane|\bposs\b|silane|silica|si,5
+unsaturated polyester resin,matrix,not_additive,role matrix/curing_agent,5
+e-glass fibre,reinforcement,glass_fibre,glass fib|\bgf\b|glass fabric|e-glass|ba,5
+waterborne acrylic resin (ba/mma/mah/2-eha/aa/hema),matrix,not_additive,role matrix/curing_agent,5
+poe-ma,compatibilizer,other,,5
+ifr (app/per = 3/1 by mass),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,5
+cured ep (e-44 / polyamide pa610 2:1 by mass),matrix,not_additive,role matrix/curing_agent,5
+aluminum diisobutylphosphinate (alpbu),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,5
+none (neat foam),fr,not_additive,none,5
+dmmp/eg (1:4 by weight),fr,EG,expand(able|ed) graphite|\beg\b,5
+triethyl phosphate (tep),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,5
+ahpp (hyper-branched aluminum phosphonate),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,4
+atpet,matrix,not_additive,role matrix/curing_agent,4
+gap (glycidyl azide polymer),curing_agent,not_additive,role matrix/curing_agent,4
+c2610 (organic cu(i) catalyst),other,other,,4
+shell: basalt fibre,reinforcement,glass_fibre,glass fib|\bgf\b|glass fabric|e-glass|ba,4
+enteromorpha (en),fr,other_FR,role fallback,4
+graphene (ge),synergist,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,4
+calcium alginate,matrix,not_additive,role matrix/curing_agent,4
+lignin (agave by-product),fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,4
+curing agent (unnamed),curing_agent,not_additive,role matrix/curing_agent,4
+antioxidant 1010/168 (2:1),other,other,,4
+dopo-cupc (dopo hyperbranched copper phthalocyanine),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,4
+clinoptilolite (natural zeolite),fr,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,4
+lignin,fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,4
+curing agent z1,curing_agent,not_additive,role matrix/curing_agent,4
+basalt woven fabric (10 layers),reinforcement,glass_fibre,glass fib|\bgf\b|glass fabric|e-glass|ba,4
+nanoclay nanomer i.44p (n1),nanofiller,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,4
+nanoclay nanomer i.31ps (n2),nanofiller,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,4
+nanoclay nanomer i.28e (n3),nanofiller,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,4
+polyethyleneimine (pei),fr,other_FR,role fallback,4
+ps (gpps-80),matrix,not_additive,role matrix/curing_agent,4
+m-xda,curing_agent,not_additive,role matrix/curing_agent,4
+bisphenol-a benzoxazine (pba),matrix,not_additive,role matrix/curing_agent,4
+pcs,fr,other_FR,role fallback,4
+rice husk powder,filler,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,4
+eva 260 (28 wt% va),matrix,not_additive,role matrix/curing_agent,4
+"mp/per (molar ratio 1.8, reactive-extruded masterbatch 70 wt% mp/per in pp)",fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,4
+pla (ingeo 4032d),matrix,not_additive,role matrix/curing_agent,4
+ifr (app/mel/per 3:1:1.5),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,4
+dispersant,other,other,,4
+waterborne epoxy hardener,curing_agent,not_additive,role matrix/curing_agent,4
+"wpu (ipdi/ppg2000/dmpa, tea-neutralized)",matrix,not_additive,role matrix/curing_agent,4
+bdo,other,other,,4
+dopo-dam (reactive p/n chain extender),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,4
+ahp (aluminum hypophosphite),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,4
+dgeba (epoxy value 0.51),matrix,not_additive,role matrix/curing_agent,4
+polyester polyol premix (izopianol 30/10/c),matrix,not_additive,role matrix/curing_agent,4
+pmdi (purocyn b),curing_agent,not_additive,role matrix/curing_agent,4
+tcpp (in polyol premix),fr,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,4
+"tris(2,4-di-tert-butylphenyl) phosphite",other,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,4
+hemp hurd biochar (hhb),filler,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,4
+padl (phytic acid/dl-arginine),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,4
+phytic acid solution,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,4
+sodium alginate (to ca alginate),fr,other_FR,role fallback,4
+h3bo3,curing_agent,not_additive,role matrix/curing_agent,4
+cacl2,curing_agent,not_additive,role matrix/curing_agent,4
+hnts,nanofiller,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,4
+precipitated silica,filler,Si,silic|siloxane|\bposs\b|silane|silica|si,4
+glass frit fr-2030,filler,other_filler,role fallback,4
+hfr binder (app:per:dbdpe:caco3 15:5:5:5),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,4
+gypsum,filler,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,4
+eva emulsion,other,other,,4
+eva (28% va),matrix,not_additive,role matrix/curing_agent,4
+magnesium hydroxide (mdh),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,4
+ethylenediamine-modified app (mapp),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,4
+dba-ph (nitrile/alkene cross-linkable fr),fr,other_FR,role fallback,4
+silicone rubber foam,matrix,Si,silic|siloxane|\bposs\b|silane|silica|si,4
+eba (substrate + film matrix),matrix,not_additive,role matrix/curing_agent,4
+avoph (nh4)2[vo(hpo4)]2(c2o4)·5h2o,fr,other_FR,role fallback,4
+pbt (basf b4500),matrix,not_additive,role matrix/curing_agent,4
+al2o3,synergist,other_FR,role fallback,4
+ps (158k),matrix,not_additive,role matrix/curing_agent,4
+k-carrageenan–iron complex (kc–fe),fr,other_FR,role fallback,4
+unsaturated polyester 196 (38 wt% styrene),matrix,not_additive,role matrix/curing_agent,4
+"biochar (landfill pine wood, 900 c)",filler,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,4
+dpb,fr,other_FR,role fallback,4
+sposs-boz (poss-benzoxazine hybrid),fr,Si,silic|siloxane|\bposs\b|silane|silica|si,4
+g-c3n4@fe3o4,synergist,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,4
+alpi aluminium diethylphosphinate (exolit op1230),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,4
+ifr (app:per:mel 3:1:1),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,4
+cg-570-modified sio2 nanoparticles,nanofiller,Si,silic|siloxane|\bposs\b|silane|silica|si,4
+ifr (app/theic 3:1),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,4
+mbc (phytic acid/urea-modified bamboo biochar),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,4
+hnts@a-171,fr,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,4
+pa610,matrix,not_additive,role matrix/curing_agent,4
+gtr (unmodified),filler,other_filler,role fallback,4
+p-si (dopo/tmvdcs adduct),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,4
+electrospun carbon nanofiber mat with 2% cnt (cnf(cnt)),reinforcement,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,4
+tpu wanhua wht-1570ic,matrix,not_additive,role matrix/curing_agent,4
+tac triallyl cyanurate,fr,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,4
+pm-2 2-hydroxyethyl methacrylate phosphate,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,4
+"bddp tetrabromobisphenol a bis(2,3-dibromopropyl) ether",fr,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,4
+guanyl-urea phosphate (gup),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,4
+triethanolamine,other,other,,4
+borax (bx),fr,other_FR,role fallback,4
+disodium octaborate tetrahydrate (dot),fr,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,4
+"tpu (69m92, 92 shore a)",matrix,not_additive,role matrix/curing_agent,4
+high-mw siloxane (silmaprocess aa1142a),synergist,Si,silic|siloxane|\bposs\b|silane|silica|si,4
+boehmite (tor brite),synergist,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,4
+zinc borate (zb 467),synergist,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,4
+uco_tea bio-polyol,matrix,not_additive,role matrix/curing_agent,4
+uco_deg bio-polyol,matrix,not_additive,role matrix/curing_agent,4
+pa56 fabric,matrix,not_additive,role matrix/curing_agent,4
+epdm 4640,matrix,not_additive,role matrix/curing_agent,4
+lyocell fabric,matrix,not_additive,role matrix/curing_agent,4
+red gum wood flour (eucalyptus camaldulensis),matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,4
+e44 bisphenol-a epoxy,matrix,not_additive,role matrix/curing_agent,4
+"dds (4,4'-diaminodiphenyl sulfone)",curing_agent,not_additive,role matrix/curing_agent,4
+peo,matrix,not_additive,role matrix/curing_agent,4
+pbat,matrix,not_additive,role matrix/curing_agent,4
+"dap@sio2 (silica-coated diammonium hydrogen phosphate, kh550-treated)",fr,Si,silic|siloxane|\bposs\b|silane|silica|si,4
+polyethylene oxide (peo),matrix,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,4
+"liquid glass (sodium silicate, 9.3% na2o, 28.0% sio2)",fr,Si,silic|siloxane|\bposs\b|silane|silica|si,4
+x-22-176dx y-type polydimethylsiloxane (mw 3600),fr,Si,silic|siloxane|\bposs\b|silane|silica|si,4
+boron phenolic resin fb88 (mw 600),fr,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,4
+alpi (exolit op 930),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,4
+pinus sylvestris wood,matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,4
+pedscd,fr,other_FR,role fallback,4
+uf resin coating,other,other,,4
+fr-pa66 fibre pulp,matrix;other,not_additive,role matrix/curing_agent,4
+ca-alginate fibre pulp,matrix,not_additive,role matrix/curing_agent,4
+"simp-cmss (silane melamine phosphate on carbon microspheres, simp:cms ~16:9)",fr,Si,silic|siloxane|\bposs\b|silane|silica|si,4
+fly ash superpozz untreated,synergist,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,4
+fly ash superpozz amino-silane aptes-treated,synergist,Si,silic|siloxane|\bposs\b|silane|silica|si,4
+fly ash superpozz glycidoxy-silane gptes-treated,synergist,Si,silic|siloxane|\bposs\b|silane|silica|si,4
+fly ash superpozz titanate kr-12-treated,synergist,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,4
+graphene nanoplatelets xgnp-c-500,nanofiller,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,4
+mwcnts,nanofiller,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,4
+basalt flakes (bfl),filler,glass_fibre,glass fib|\bgf\b|glass fabric|e-glass|ba,4
+chopped basalt fibers (bfs),reinforcement,glass_fibre,glass fib|\bgf\b|glass fabric|e-glass|ba,4
+pa11 (rilsan bmn o tld),matrix,not_additive,role matrix/curing_agent,4
+"short basalt fibres (6 mm, 13 um)",reinforcement,glass_fibre,glass fib|\bgf\b|glass fabric|e-glass|ba,4
+cmc/mtm (60/40 w/w) nacre-mimetic coating,fr,other_FR,role fallback,4
+lignosulfonate lignin (ll),fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,4
+acr-401,other,other,,4
+glycerol monostearate,other,other,,4
+organic tin stabilizer,other,other,,4
+paraffin,other,other,,4
+guanyl-urea phosphate/boric acid (gup/ba 7:3),fr,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,4
+cr (baypren 216),matrix,not_additive,role matrix/curing_agent,4
+br (synteca 44),matrix,not_additive,role matrix/curing_agent,4
+zn,curing_agent,not_additive,role matrix/curing_agent,4
+graphene,nanofiller,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,4
+melamine polyphosphate,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,4
+ema e24 (lotryl 24ma07t),other,other,,4
+ema e29 (lotryl 29ma03t),other,other,,4
+cyrtostachys renda fibre,reinforcement,other_filler,role fallback,4
+kenaf fibre,reinforcement,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,4
+rice husk biochar,filler,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,4
+polyether polyol (jmdyc-3000),matrix,not_additive,role matrix/curing_agent,4
+tin 2-ethylhexanoate (chain extender),other,other,,4
+a-33 catalyst,other,other,,4
+silicone oil l-580 surfactant,other,Si,silic|siloxane|\bposs\b|silane|silica|si,4
+distilled water (blowing agent),other,other,,4
+th-ifr (me·pa…per h-bonded complex),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,4
+"particleboard (wood chips, uf-bonded, 18 mm)",matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,4
+uf resin coating (65% solids),other,other,,4
+"vae emulsion (vinyl acetate-ethylene, 55% solids)",matrix,not_additive,role matrix/curing_agent,4
+tad (phosphaphenanthrene triazine compound),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,4
+zn-pdh (phosphazene-modified organozinc complex),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,4
+"px200 (tetrakis(2,6-dimethylphenyl)-m-phenylene bisphosphate)",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,4
+phosphinate (phos),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,4
+organic phosphorus compound (org. p),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,4
+oligomeric phosphate ester (pester),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,4
+unplasticized pvc s61 dry blend,matrix,not_additive,role matrix/curing_agent,4
+c60-pei-rgo hybrid,nanofiller,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,4
+"bisphenol-a benzoxazine (ba, cured to pba)",matrix,not_additive,role matrix/curing_agent,4
+spdscd,fr,other_FR,role fallback,4
+e-44 epoxy (dgeba),matrix,not_additive,role matrix/curing_agent,4
+vinyl phosphonic acid (radiation grafted),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,4
+polypropylene (locknit pp knit),matrix,not_additive,role matrix/curing_agent,4
+polypropylene (interlock pp knit),matrix,not_additive,role matrix/curing_agent,4
+polypropylene (double face pp knit),matrix,not_additive,role matrix/curing_agent,4
+polypropylene (interlock 2 yarns pp knit),matrix,not_additive,role matrix/curing_agent,4
+polypropylene (ottoman pp knit),matrix,not_additive,role matrix/curing_agent,4
+polypropylene (1 mm-thick pp sheet),matrix,not_additive,role matrix/curing_agent,4
+polypropylene (2 mm-thick pp sheet),matrix,not_additive,role matrix/curing_agent,4
+polypropylene (4 mm-thick pp sheet),matrix,not_additive,role matrix/curing_agent,4
+polypropylene (6 mm-thick pp sheet),matrix,not_additive,role matrix/curing_agent,4
+balsa wood,matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,4
+hpctp,fr;synergist,other_FR,role fallback,4
+pla nonwoven,matrix,not_additive,role matrix/curing_agent,4
+"aluminium diethylphosphinate (alpi, exolit op 1230)",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,4
+"melamine polyphosphate (mpp, mp200)",fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,4
+"eva (elvax 260, 28 wt% va)",matrix,not_additive,role matrix/curing_agent,4
+epoxy,matrix,not_additive,role matrix/curing_agent,4
+bamboo fibre mat,reinforcement,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,4
+kenaf fibre mat,reinforcement,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,4
+znmgal-co3-ldh,fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,4
+pa6 (ultramid b3s),matrix,not_additive,role matrix/curing_agent,4
+kh-560 modified fly ash (mfa),filler,Si,silic|siloxane|\bposs\b|silane|silica|si,4
+kh-560 modified coal gangue (mcg),filler,Si,silic|siloxane|\bposs\b|silane|silica|si,4
+dgeba epoxy (e-44),matrix,not_additive,role matrix/curing_agent,4
+triazine charring agent,fr,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,4
+pp (t03),matrix,not_additive,role matrix/curing_agent,4
+processing auxiliaries (compatibilizer + antioxidant),other,other,,4
+mdi,matrix,not_additive,role matrix/curing_agent,4
+"1,4-butanediol",curing_agent,not_additive,role matrix/curing_agent,4
+pbt (1100-211m),matrix,not_additive,role matrix/curing_agent,4
+muf resin (melamine/sodium lignosulfonate-modified uf),other,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,4
+boric-acid-treated poplar wood flour,filler,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,4
+mkf (alkali-treated kapok fibre),reinforcement,other_filler,role fallback,4
+mica,filler,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,4
+glass frit (fluxing agent),synergist,other_FR,role fallback,4
+p-kc (phosphated k-carrageenan),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,4
+eva (18.5 wt% va),matrix,not_additive,role matrix/curing_agent,4
+wpu (waterborne polyurethane),matrix,not_additive,role matrix/curing_agent,4
+wpu (waterborne polyurethane co-binder),other,other,,4
+fpuf,matrix,not_additive,role matrix/curing_agent,4
+eva 7470m,matrix,not_additive,role matrix/curing_agent,4
+hdpe-g-ma,matrix,not_additive,role matrix/curing_agent,4
+flexible pvc (plasticized),matrix,not_additive,role matrix/curing_agent,4
+hexaphenoxycyclotriphosphazene (hpcp),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,4
+poly(vinyl alcohol) (pva),matrix,not_additive,role matrix/curing_agent,4
+spms,fr,other_FR,role fallback,4
+pp (bx3900 / mf650x),matrix,not_additive,role matrix/curing_agent,4
+mapp (exxelor po 1020),compatibilizer,other,,4
+adr-5481 epoxy chain extender,other,other,,4
+uhmwpe,matrix,not_additive,role matrix/curing_agent,4
+curing agent t-31,curing_agent,not_additive,role matrix/curing_agent,4
+phenolic resin (pf),matrix,not_additive,role matrix/curing_agent,4
+styrene-vinyl tetrazole copolymer (stvtz),fr,other_FR,role fallback,4
+waterborne polyurethane (wpu,,other,,4
+ppg2000/ipdi/dmpa/bdo/tea),matrix,not_additive,role matrix/curing_agent,4
+bpo (dibenzoyl peroxide),curing_agent,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,4
+condensed tannin,matrix,not_additive,role matrix/curing_agent,4
+furfuryl alcohol,curing_agent,not_additive,role matrix/curing_agent,4
+diethyl ether (blowing agent),other,other,,4
+ptsa 65% aqueous (catalyst),other,other,,4
+melamine pyrophosphate (mpp),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,4
+oxidized corn pith fiber (occ),filler,other_filler,role fallback,4
+"4-(phenylethynyl) di(ethylene glycol) phthalate (pepe, reactive chain extender)",fr,other_FR,role fallback,4
+hdpe (marlex 9006),matrix,not_additive,role matrix/curing_agent,4
+polyacrylate emulsion (paa),matrix,not_additive,role matrix/curing_agent,4
+hfsnps (hydrophobic fumed silica),filler,Si,silic|siloxane|\bposs\b|silane|silica|si,4
+mpd (m-phenylenediamine),curing_agent,not_additive,role matrix/curing_agent,4
+chicken eggshell powder (ces),synergist,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,4
+wood flour (80 mesh),filler,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,4
+ma-g-pp,compatibilizer,other,,4
+melamine cyanurate (mca),fr,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,4
+epdm (nordel ip 4770),matrix,not_additive,role matrix/curing_agent,4
+kevlar fibre,reinforcement,other_filler,role fallback,4
+ma-g-epdm,compatibilizer,other,,4
+dicumyl peroxide/tac/antioxidant/stearic acid/zno,curing_agent,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,4
+"polyol (alpha-hydro-omega-hydroxypoly[oxy(methyl-1,2-ethanediyl)])",matrix,not_additive,role matrix/curing_agent,4
+diethylene glycol,other,other,,4
+mdi/polymeric mdi,curing_agent,not_additive,role matrix/curing_agent,4
+hcfc 141b,other,other,,4
+trade secret,other,other,,4
+delignified small-leaved basswood (tilia cordata) scaffold,reinforcement,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,4
+eva (va420),matrix,not_additive,role matrix/curing_agent,4
+pbs-g-ma,compatibilizer,other,,4
+"psf (phosphorus-containing schiff base, dopo/furfurylamine/salicylaldehyde)",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,4
+app + per (1:1 by mass),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,4
+fire-rated aluminium foil facing (both sides),other,other,,4
+text says 0.3 mm),,other,,4
+elium 188-o acrylic resin,matrix,not_additive,role matrix/curing_agent,4
+perkadox gb-50x initiator,curing_agent,not_additive,role matrix/curing_agent,4
+dgeba der332,matrix,not_additive,role matrix/curing_agent,4
+"anionic pa6 (in situ rtm from caprolactam, c1 activator/c20 initiator)",matrix,not_additive,role matrix/curing_agent,4
+s-glass plain-woven fabric (11 layers),reinforcement,other_filler,role fallback,4
+dgeba epoxy e51,matrix,not_additive,role matrix/curing_agent,4
+"4,4'-diaminodiphenyl sulfone dds",curing_agent,not_additive,role matrix/curing_agent,4
+carbon nanotubes cnt,nanofiller,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,4
+cerium hypophosphite (cehp),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,4
+pamad (reactive bio-based ifr chain extender),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,4
+mw-mh (mg(oh)2 micro-whiskers),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,4
+ind-mh (albemarle h-5 mg(oh)2),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,4
+mms (3a molecular sieve modified by [eooemim][pf6]),fr,other_FR,role fallback,4
+pbt b4500,matrix,not_additive,role matrix/curing_agent,4
+micro-sized mdh (mmdh),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,4
+ahp (aluminium hypophosphite),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,4
+mca (melamine cyanurate),fr,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,4
+bpf/aas reinforced resin,other,other,,4
+app-2 (si-modified app),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,4
+carboxyl-modified mwcnt,nanofiller,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,4
+sb-lh,fr,other_FR,role fallback,4
+pc (lexan-121),matrix,not_additive,role matrix/curing_agent,4
+"pp (mfr 100 g/10 min, incl. rp masterbatch pp carrier)",matrix,not_additive,role matrix/curing_agent,4
+"long glass fibre (17 um, silane-treated)",reinforcement,Si,silic|siloxane|\bposs\b|silane|silica|si,4
+red phosphorus (rp/pp 70/30 masterbatch),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,4
+expandable graphite 3772,fr,EG,expand(able|ed) graphite|\beg\b,4
+"eva (18 wt% va, sumitomo)",matrix,not_additive,role matrix/curing_agent,4
+ifr (app/ma/per 4:1:1),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,4
+ifr adk stab fp-2200 (piperazine pyrophosphate-based),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,4
+anti-drip agent sn80-sa7,other,other,,4
+asphalt sk70,matrix,not_additive,role matrix/curing_agent,4
+t31,curing_agent,not_additive,role matrix/curing_agent,4
+hollow glass beads,synergist,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,4
+graphite powder,synergist,other_FR,role fallback,4
+pbt 4500,matrix,not_additive,role matrix/curing_agent,4
+silane-coated short glass fibre,reinforcement,Si,silic|siloxane|\bposs\b|silane|silica|si,4
+nylon 6,matrix,not_additive,role matrix/curing_agent,4
+kenaf fiber,reinforcement,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,4
+pegma + pe-g-mah,compatibilizer,other,,4
+pepa (pentaerythritol phosphate),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,4
+nano mg(oh)2,fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,4
+"tio2 particles (200-400 nm, via masterbatch)",nanofiller,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,4
+"calcium alginate (from 50 ml 5 mass% sodium alginate, cacl2 cross-linked)",matrix,not_additive,role matrix/curing_agent,4
+sodium carboxymethyl cellulose,other,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,4
+mno2,other,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,4
+"aspen wood flour (sprayed with tpp, wf:tpp 100:5)",filler,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,4
+jute fibre,reinforcement,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,4
+ps (gpps 525),matrix,not_additive,role matrix/curing_agent,4
+hips-622,matrix,not_additive,role matrix/curing_agent,4
+"cpvc n-500 (shenzhen hong cheng, 63.85% cl)",matrix,not_additive,role matrix/curing_agent,4
+triazine,synergist,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,4
+silica-coated limestone (scl) microcapsules,filler,Si,silic|siloxane|\bposs\b|silane|silica|si,4
+epoxy e-51,matrix,not_additive,role matrix/curing_agent,4
+nanosized carbon black (17 nm),synergist,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,4
+abandoned 3a molecular sieve (ams) powder,fr,other_FR,role fallback,4
+app:eg 1:3 intumescent flame retardant,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,4
+adpo2 + sa,fr,other_FR,role fallback,4
+tcpp + dmmp + boron phosphate,fr,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,4
+reactive phosphorus-containing soybean oil polyol (soy-dgp),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,4
+app (ammonium polyphosphate),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,3
+bdd (dopo-based bis-phosphaphenanthrene amine),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+"sep (sepiolite nanoclay, pangel s9)",fr,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,3
+mdh (magnesium hydroxide),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,3
+shell: talc,filler,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,3
+"dds (4,4'-diaminodiphenylsulfone)",curing_agent,not_additive,role matrix/curing_agent,3
+co/p-c3n4 (cobalt/phosphorus co-doped g-c3n4),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+ep (e-51),matrix,not_additive,role matrix/curing_agent,3
+zif-67,nanofiller;synergist,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,3
+peal (recycled ldpe ~85 wt% + al flakes ~15 wt%),matrix,not_additive,role matrix/curing_agent,3
+magnesium hydroxide,fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,3
+pvc powder,filler,other_filler,role fallback,3
+pbf-a,matrix,not_additive,role matrix/curing_agent,3
+"wheat grain (soaked, sterilised)",matrix,not_additive,role matrix/curing_agent,3
+t. versicolor inoculum (mycelium on wheat grain),other,other,,3
+avd (dopo-vanillin-2-aminobenzothiazole),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+dehmp,fr,other_FR,role fallback,3
+phosphated cellulose (pcf),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+vi-pdms,matrix,not_additive,role matrix/curing_agent,3
+ho-pdms,matrix,not_additive,role matrix/curing_agent,3
+low-h pmhs,curing_agent,not_additive,role matrix/curing_agent,3
+high-h pmhs,curing_agent,not_additive,role matrix/curing_agent,3
+karstedt pt catalyst,other,other,,3
+v4 inhibitor,other,other,,3
+di water (blowing),other,other,,3
+"poplar veneer (3-ply, 1.5 mm plies)",matrix,not_additive,role matrix/curing_agent,3
+api adhesive (pva/eva emulsion + p-mdi),other,other,,3
+cfa (triazine char-forming agent),fr,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,3
+jute fabric,reinforcement,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,3
+elium acrylic (pmma),matrix,not_additive,role matrix/curing_agent,3
+ptfe,other,other,,3
+hp-mn (mn2+-doped piperazine-hedp phosphate char-forming agent),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+dopo-khcpa (p/n/si/b flame retardant),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+fba (4-formylphenylboronic acid),fr,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,3
+dpbsi (p/n/si vanillin-based),fr,other_FR,role fallback,3
+siahp (silane-modified ahp),fr,Si,silic|siloxane|\bposs\b|silane|silica|si,3
+dt (dopo-triallyl cyanurate adduct),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+humic acid (ha),fr,other_FR,role fallback,3
+bamboo scrimber,matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,3
+hpn (hydroxyethyl methacrylate phosphate ester),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+ba,matrix,not_additive,role matrix/curing_agent,3
+maa,matrix,not_additive,role matrix/curing_agent,3
+ep (dgeba-type epoxy),matrix,not_additive,role matrix/curing_agent,3
+dipentaerythritol (di-pe),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,3
+mfe-711 epoxy vinyl ester resin,matrix,not_additive,role matrix/curing_agent,3
+methyl ethyl ketone peroxide (lpt-in),curing_agent,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,3
+cobalt isooctanoate (p002),other,other,,3
+poe-g-mah,compatibilizer,other,,3
+dopo-t-sio2,fr,Si,silic|siloxane|\bposs\b|silane|silica|si,3
+epoxy resin (ep),matrix,not_additive,role matrix/curing_agent,3
+"microencapsulated sepiolite (msep, sio2-coated)",fr,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,3
+zinc borate (zb),synergist,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,3
+potassium trimethylsilylbenzenesulfonate (ktss),fr,other_FR,role fallback,3
+potassium benzenesulfonylbenzenesulfonate (kss),fr,other_FR,role fallback,3
+s-ldhs layered double hydroxide (small aspect ratio),nanofiller,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,3
+l-ldhs layered double hydroxide (large aspect ratio),nanofiller,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,3
+"phosphorus-containing polyester diol ppe (ddp-based, reactive fr)",matrix,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+chain extender eg,curing_agent,EG,expand(able|ed) graphite|\beg\b,3
+"aramid fabric (plain weave, 200 g/m2)",reinforcement,other_filler,role fallback,3
+bacm (p/n-grafted bamboo activated carbon),fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,3
+badps (reactive p/s monomer),fr,other_FR,role fallback,3
+"flax fabric (woven, 150 g/m2)",reinforcement,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,3
+habp-dopo (dopo-cyclotriphosphazene),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+zno-doped magnesium hydroxide (zo@mh),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,3
+graphene oxide (go),nanofiller;synergist,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,3
+pva (8 wt% aqueous solution),matrix,not_additive,role matrix/curing_agent,3
+alpha-zrp,fr;synergist,other_FR,role fallback,3
+itauba wood (mezilaurus itauba),matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,3
+naoh-treated hemp fibre,reinforcement,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,3
+lactic casein 720 (lac),fr,other_FR,role fallback,3
+ommt-1,nanofiller,other_filler,role fallback,3
+ommt-2,nanofiller,other_filler,role fallback,3
+bmi resin (bdm/dabpa/pes),matrix,not_additive,role matrix/curing_agent,3
+woven glass fibre (20 plies),reinforcement,glass_fibre,glass fib|\bgf\b|glass fabric|e-glass|ba,3
+corn starch,synergist,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,3
+deta,curing_agent,not_additive,role matrix/curing_agent,3
+waste paper fibres,filler,other_filler,role fallback,3
+birch sanding dust,filler,other_filler,role fallback,3
+app@cnf ball-milled hybrid (app:cnf 6:1 by mass),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,3
+triazine charring agent (cf),fr,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,3
+tep,fr,other_FR,role fallback,3
+"cmss (carbon microspheres, via tpu masterbatch)",synergist,other_FR,role fallback,3
+"cmss-fe (carbon microspheres with adsorbed fe3+, via tpu masterbatch)",synergist,other_FR,role fallback,3
+sbpdopo,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+70# matrix asphalt,matrix,not_additive,role matrix/curing_agent,3
+sbs,other,other,,3
+phosphonate-cardanol (po3cr),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+phosphate-cardanol (po4cr),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+aluminium tungstate (alw),synergist,other_FR,role fallback,3
+tin(ii) tungstate (snw),synergist,other_FR,role fallback,3
+zinc tungstate (znw),synergist,other_FR,role fallback,3
+"chinese fir sapwood (cunninghamia lanceolata), naoh-activated",matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,3
+ti-ifr (ti-app/boz/me 10:2:3),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,3
+caco3,other;synergist,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,3
+thpe-te epoxy,matrix,not_additive,role matrix/curing_agent,3
+pu (foamed),matrix,not_additive,role matrix/curing_agent,3
+kh550 silane,compatibilizer,Si,silic|siloxane|\bposs\b|silane|silica|si,3
+"arg-app (arginine surface-modified app, cation exchange)",fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,3
+mapp (app ion-exchanged with aep-asc piperazine sulfonate),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,3
+lhp (l-histidinium dihydrogen phosphate-phosphoric acid),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+"ane (adp-intercalated, nast-grafted expanded vermiculite)",synergist,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,3
+ni@sio2-pa (nickel phytate on aminated sio2),fr,Si,silic|siloxane|\bposs\b|silane|silica|si,3
+sls (sodium lignosulfonate),other,other,,3
+pa (phytic acid),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+basalt fibre fabric 600 g/m2,reinforcement,glass_fibre,glass fib|\bgf\b|glass fabric|e-glass|ba,3
+phosphorus fr (in fr-pa),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+ifr (app:per 4:1),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,3
+rdp,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+expandable graphite (firecarb teg 345),fr,EG,expand(able|ed) graphite|\beg\b,3
+aluminium diethylphosphinate,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+"kraft lignin (lk, carbon source)",synergist,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,3
+hpdal,fr,other_FR,role fallback,3
+mek peroxide (catalyst m),curing_agent,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,3
+e-glass woven fabric (8 plies),reinforcement,glass_fibre,glass fib|\bgf\b|glass fabric|e-glass|ba,3
+melamine formaldehyde resin,other,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,3
+poplar veneer,matrix,not_additive,role matrix/curing_agent,3
+phosphate/urea-grafted bamboo charcoal (bc-m),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+app:per:mel (5:2:3),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,3
+palygorskite:sepiolite (1:1),filler,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,3
+b4c,synergist,other_FR,role fallback,3
+mk silicone resin,other,Si,silic|siloxane|\bposs\b|silane|silica|si,3
+fumed silica,nanofiller,Si,silic|siloxane|\bposs\b|silane|silica|si,3
+pla 4043d,matrix,not_additive,role matrix/curing_agent,3
+carbon nanotubes,nanofiller,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,3
+"pvc (tmp-31, k=70)",matrix,not_additive,role matrix/curing_agent,3
+ba/zn stabilizer cz-707,other,other,,3
+4a molecular sieve,synergist,other_FR,role fallback,3
+f-zrp (poly(hccp-co-bpei)-functionalized alpha-zrp),fr,other_FR,role fallback,3
+ifr (app:mel:per 3:1:1),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,3
+"basalt fiber (kh-550 aminosilane-sized, ~1 mm avg length)",reinforcement,Si,silic|siloxane|\bposs\b|silane|silica|si,3
+eucalyptus wood scrimber core (15 wt% phenolic resin solution impregnated),matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,3
+three-ply cross-laminated veneer,matrix,not_additive,role matrix/curing_agent,3
+aluminum trihydroxide (ath),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,3
+residual hops after supercritical co2 extraction,filler,other_filler,role fallback,3
+d-fu (dopo-hq/furfurylamine phosphorus benzoxazine),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+spdp-ptms@ath (n-p-si grafted ath),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,3
+ground walnut shell,filler,other_filler,role fallback,3
+ground hazelnut shell,filler,other_filler,role fallback,3
+ground sunflower husk,filler,other_filler,role fallback,3
+mp/eg (1:2),fr,EG,expand(able|ed) graphite|\beg\b,3
+ash wood (fraxinus excelsior) torrefied 300 c 2 h n2,matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,3
+beech wood (fagus sylvatica) torrefied 300 c 2 h n2,matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,3
+oak wood (quercus petraea) torrefied 300 c 2 h n2,matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,3
+pine wood (pinus radiata) torrefied 300 c 2 h n2,matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,3
+spruce wood (picea abies) torrefied 300 c 2 h n2,matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,3
+"octakis[(3-glycidoxypropyl)dimethylsiloxy]octasilsesquioxane (8gs, p-free reactive poss)",nanofiller,Si,silic|siloxane|\bposs\b|silane|silica|si,3
+"4p4gs (poss with 4 glycidoxypropyl + 4 dopo-derived phosphate groups, reactive)",fr,Si,silic|siloxane|\bposs\b|silane|silica|si,3
+"8ps (poss with 8 dopo-derived phosphate groups, additive)",fr,Si,silic|siloxane|\bposs\b|silane|silica|si,3
+poplar sapwood (populus cathayana),matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,3
+fluorophlogopite mica,filler,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,3
+amorphous pla luminy lx930 (sheath),matrix,not_additive,role matrix/curing_agent,3
+crystalline pla luminy l130 (core),matrix,not_additive,role matrix/curing_agent,3
+polyester plasticizer (pes),plasticizer,other,,3
+p_200,matrix,not_additive,role matrix/curing_agent,3
+p_400,matrix,not_additive,role matrix/curing_agent,3
+p_600,matrix,not_additive,role matrix/curing_agent,3
+e44 epoxy,matrix,not_additive,role matrix/curing_agent,3
+m-phenylenediamine (m-pda),curing_agent,not_additive,role matrix/curing_agent,3
+pb4o3(so4) (tribasic lead sulfate),other,other,,3
+2pbo.pbhpo3.1/2h2o (dibasic lead phosphite),other,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+rgo-app,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,3
+siloxane masterbatch silmaprocess ap1142a,synergist,Si,silic|siloxane|\bposs\b|silane|silica|si,3
+zinc borate zb 467,synergist,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,3
+epdm nordel ip 4725p,matrix,not_additive,role matrix/curing_agent,3
+ath (martinal ol 107),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,3
+paraffinic oil,plasticizer,other,,3
+perkadox 14-40 mb,curing_agent,not_additive,role matrix/curing_agent,3
+tac,curing_agent,not_additive,role matrix/curing_agent,3
+pipc (diphenylimidazole spirocyclic pentaerythritol bisphosphonate),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,3
+cotton fabric (100 g/m2),matrix,not_additive,role matrix/curing_agent,3
+silane-coated ammonium polyphosphate (si-app),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,3
+sisal fibre (sf),reinforcement,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,3
+"ctapp (ta-modified cnt-wrapped app, app:cnt:ta 12:2:1)",fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,3
+pp (bx3920 + pp-mf650x),matrix,not_additive,role matrix/curing_agent,3
+mapp (orevac ca100),compatibilizer,other,,3
+ifr (app/per/mel),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,3
+s4sq-h (non-functionalized siloxane-silsesquioxane resin),fr,Si,silic|siloxane|\bposs\b|silane|silica|si,3
+s4sq-18 (n-octadecyl siloxane-silsesquioxane resin),fr,Si,silic|siloxane|\bposs\b|silane|silica|si,3
+phosphorus-containing polyol op (reactive),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+epoxy resin + hardener (3:1),matrix,not_additive,role matrix/curing_agent,3
+cotton fabric (200 g/m2),matrix,not_additive,role matrix/curing_agent,3
+brominated epoxy resin (beo),fr,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,3
+nano-sb2o3,synergist,Sb2O3,sb2o3|antimony,3
+atmp-protonated chitosan (atmp-cs),fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,3
+phytic acid-melamine polyelectrolyte (pm),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+mpda,curing_agent,not_additive,role matrix/curing_agent,3
+polystyrene (ps),matrix,not_additive,role matrix/curing_agent,3
+ddp (ddm-modified app),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,3
+ntpa (phosphoramide p-n fr),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+sulfur-based curatives,curing_agent,not_additive,role matrix/curing_agent,3
+cellulose,matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,3
+ppy-mapp,fr,other_FR,role fallback,3
+dcsa-cu,fr,other_FR,role fallback,3
+phosphorus-nitrogen flame retardant,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+clay,synergist,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,3
+uio66-nh2/halloysite nanotube hybrid (h-u),synergist,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,3
+polybenzoxazine aerogel (bisphenol a benzoxazine),matrix,not_additive,role matrix/curing_agent,3
+dopo-hq,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+wpu,matrix,not_additive,role matrix/curing_agent,3
+muf,matrix,not_additive,role matrix/curing_agent,3
+tween-80/modified silicone oil,other,Si,silic|siloxane|\bposs\b|silane|silica|si,3
+n-pentane,other,other,,3
+expanded vermiculite (300 mesh),synergist,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,3
+ifr (ifr-pp-1),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,3
+mphp,fr,other_FR,role fallback,3
+tio2/cnt (1:2),nanofiller,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,3
+rosin-based epoxy (agmp-3600),matrix,not_additive,role matrix/curing_agent,3
+t700 unidirectional carbon fibre,reinforcement,carbon_fibre,carbon fib|\bcf\b,3
+octadecylamine-modified zirconium phosphate (mzrp),synergist,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+hnts@nico-ldh,fr,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,3
+biep-eta,fr,other_FR,role fallback,3
+pbdoo (dopo-acetophenone bridged bis-dopo),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+pec (app/cnc/pei polyelectrolyte complex),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,3
+pla (ingeo 3052d),matrix,not_additive,role matrix/curing_agent,3
+"pa-tham (phytic acid-tham salt, coated on occ)",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+aluminium trihydrate (ath),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,3
+cellulose nanocrystals (cnc),fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,3
+"nano zinc oxide (zno, coated on cnc)",fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,3
+mno2@chs@sa@ni hybrid,fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,3
+pc/abs,matrix,not_additive,role matrix/curing_agent,3
+"fr69 (fr l069, halogenated)",fr,other_FR,role fallback,3
+"tpu (9380a, bayer)",matrix,not_additive,role matrix/curing_agent,3
+ti3c2tx-mpcsn nanohybrid (mpcsn/mxene 3/1),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,3
+"tepp (p-n oligomer, p(+iii))",fr,other_FR,role fallback,3
+"teopp (p-n oligomer, p(+v))",fr,other_FR,role fallback,3
+ma-g-eva,compatibilizer,other,,3
+bisphenol a dicyanate ce01,matrix,not_additive,role matrix/curing_agent,3
+aluminium diethylphosphinate (adp),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+molecular sieve 4a (ms4a),synergist,other_FR,role fallback,3
+rpuf,matrix,not_additive,role matrix/curing_agent,3
+silicone foam (sifs),matrix,Si,silic|siloxane|\bposs\b|silane|silica|si,3
+pb4o3(so4),other,other,,3
+2pbo.pbhpo3.1/2h2o,other,other,,3
+pvb,matrix,not_additive,role matrix/curing_agent,3
+hollow silica microsphere h-sio2,synergist,Si,silic|siloxane|\bposs\b|silane|silica|si,3
+aluminium hydroxide ath (martinal ol104),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,3
+magnesium hydroxide mdh (fr20),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,3
+polypropylene glycol polyol,matrix,not_additive,role matrix/curing_agent,3
+polymeric mdi,matrix,not_additive,role matrix/curing_agent,3
+dgeba epoxy e-44 + ddm,matrix,not_additive,role matrix/curing_agent,3
+hexaphenoxycyclotriphosphazene hpctp,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+"copper n,n'-piperazine (bismethylene phosphonate) cupb",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+abs (qimei),matrix,not_additive,role matrix/curing_agent,3
+pp/tpu 80/20 wt% blend,matrix,not_additive,role matrix/curing_agent,3
+mah-g-pp,compatibilizer,other,,3
+"evm (eva elastomer, 50 wt% va)",matrix,not_additive,role matrix/curing_agent,3
+mca,fr,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,3
+ep (dgeba e-51),matrix,not_additive,role matrix/curing_agent,3
+acid-modified mwcnt (m-cnt),nanofiller,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,3
+co3(hpo4)2(oh)2 nanosheets,synergist,other_FR,role fallback,3
+spherical cosn(oh)6 (t-chs),fr;synergist,other_FR,role fallback,3
+bmc,fr,other_FR,role fallback,3
+ti4000-bmc,fr,other_FR,role fallback,3
+mpp (melamine pyrophosphate),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,3
+cerium(iv) phosphate cep(iv),synergist,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+mg(oh)2 (stearate-treated),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,3
+dper (dipentaerythritol),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,3
+hgm@[eooemim][pf6],fr,other_FR,role fallback,3
+ps 158k,matrix,not_additive,role matrix/curing_agent,3
+tpu 4190,matrix,not_additive,role matrix/curing_agent,3
+rtv silicone rubber,matrix,Si,silic|siloxane|\bposs\b|silane|silica|si,3
+ni-coated mwcnt (apts-treated),nanofiller,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,3
+pp f401,matrix,not_additive,role matrix/curing_agent,3
+eva (14% va),matrix,not_additive,role matrix/curing_agent,3
+sodium percarbonate 2na2co3·3h2o2 (in situ caco3 precursor),filler,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,3
+nano-cuo,synergist,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,3
+rpuf (polyether polyol/mdi),matrix,not_additive,role matrix/curing_agent,3
+mceg (eg microencapsulated with melamine cyanurate),fr,EG,expand(able|ed) graphite|\beg\b,3
+pc ad-5503,matrix,not_additive,role matrix/curing_agent,3
+ifr (app/ma 5:1),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,3
+geg (ceppa-ipts grafted expandable graphite),fr,EG,expand(able|ed) graphite|\beg\b,3
+app@si-171 (vinyltrimethoxysilane-modified app),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,3
+isotactic pp,matrix,not_additive,role matrix/curing_agent,3
+ppms-grafted carbon black (ppms-cb),fr,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,3
+iron poly(acrylic acid-co-acrylamide) chelate (feaa),fr,other_FR,role fallback,3
+reactive p@n flame retardant tbpbp,fr,other_FR,role fallback,3
+15 wt% soybean oil-based polyol + 20 wt% app,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,3
+aluminium diethylphosphite + sodium alginate + expandable graphite,fr,EG,expand(able|ed) graphite|\beg\b,3
+pentaerythritol phosphate (pepa) + expandable graphite (pepa:eg 1:3),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,3
+polyacrylamide/m-mxene hydrogel coating,fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,3
+chitosan-coated phase-change microcapsule (cs/pcm),fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,3
+tpp/tep,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+ma-bppo (phosphorus additive) + tep,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+ea-bppo (phosphorus additive) + tep,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+none (neat),fr,not_additive,none,3
+steel slag/dimelamine pyrophosphate,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+expandable graphite eg1,fr,EG,expand(able|ed) graphite|\beg\b,3
+expandable graphite eg2,fr,EG,expand(able|ed) graphite|\beg\b,3
+expandable graphite eg3,fr,EG,expand(able|ed) graphite|\beg\b,3
+nickel phytate (pani) only,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,3
+hazelnut shell + hydrotalcite,fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,3
+pnc,fr,other_FR,role fallback,3
+iron tailing (its) filler,fr,other_FR,role fallback,3
+hcnf,matrix,not_additive,role matrix/curing_agent,2
+beta-cyclodextrin,fr,other_FR,role fallback,2
+hdi (hexamethylene diisocyanate crosslinker),curing_agent,not_additive,role matrix/curing_agent,2
+petat,fr,other_FR,role fallback,2
+red phosphorus (rp),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+na-mmt (sodium montmorillonite),filler,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,2
+g-c3n4,fr,other_FR,role fallback,2
+vp (bis(5-formyl-2-methoxyphenyl) phenylphosphonate),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+dmp (aryl phosphate),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+pi (polyimide charring agent),synergist,other_FR,role fallback,2
+dp (phosphamide derivative),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+exolit ap750 (intumescent app-based fr),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,2
+adp,fr,other_FR,role fallback,2
+yellow birch,matrix,not_additive,role matrix/curing_agent,2
+sodium phytate (spa),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+citric acid buffer,other,other,,2
+phytic acid (pa),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+sodium hypophosphite,other,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+aluminum dihydrogen phosphate (adp),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+phytic acid-triethylenetetramine (pa-teta),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+pvc resin,matrix,not_additive,role matrix/curing_agent,2
+flame retardant,fr,other_FR,role fallback,2
+plasticizer,plasticizer,other,,2
+stabilizer,other,other,,2
+also replaces caco3 filler in api adhesive,,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,2
+poplar wood,matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,2
+in situ caco3,filler,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,2
+pdtsp (phosphoramidate siloxane polymer),fr,Si,silic|siloxane|\bposs\b|silane|silica|si,2
+"maleic anhydride grafted pew1 (pewm1, pew-g-mah, grafting 3.6%)",compatibilizer,other,,2
+"maleic anhydride grafted pew2 (pewm2, pew-g-mah, grafting 3.6%)",compatibilizer,other,,2
+ahp,fr,other_FR,role fallback,2
+"caal-po4-ldhs (s120-6, 120 c/6 h)",fr,other_FR,role fallback,2
+pan fabric (an/vac 95/5),matrix,not_additive,role matrix/curing_agent,2
+gma (uv-grafted),other,other,,2
+fatp,fr,other_FR,role fallback,2
+ceo2,synergist,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,2
+dopo-poss,fr,Si,silic|siloxane|\bposs\b|silane|silica|si,2
+thermal-exfoliated hexagonal boron nitride (bno),nanofiller,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,2
+polyaniline-coated thermal-exfoliated h-bn (pani–bno),nanofiller,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,2
+caffeine,other,other,,2
+tannin,other,other,,2
+commercial osb panel (arbec forest products),matrix,not_additive,role matrix/curing_agent,2
+daso (dopo-aminophenyl silicone oil),fr,Si,silic|siloxane|\bposs\b|silane|silica|si,2
+eva (substrate + film matrix),matrix,not_additive,role matrix/curing_agent,2
+eba,matrix,not_additive,role matrix/curing_agent,2
+duomod dp5045 carboxylated nbr,other,other,,2
+nipol 1411 nbr (38 wt% an),other,other,,2
+zealloy 1422a nbr (33 wt% an),other,other,,2
+chain extender dydi,curing_agent,not_additive,role matrix/curing_agent,2
+coated mass not printed,,other,,2
+"ifr coating (per 100 ml water: eva emulsion 55 g, gypsum 9 g, eg 35 g, talc 1 g, app 15 g, per 5 g, caco3 5 g, mc 5 g)",fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,2
+ead,fr,other_FR,role fallback,2
+mmt (cloisite se3000),synergist,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,2
+ldh (sorbacid 944),synergist,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,2
+fa-bis-dopo,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+magnesium hydroxide (nano),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,2
+"divinylbenzene (dvb, crosslinker)",other,other,,2
+dgeba epoxy (epoxy equivalent 0.44),matrix,not_additive,role matrix/curing_agent,2
+dopo-vtes,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+teap (triethylamine phenylphosphonate),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+fr5 (p-based fr),fr,other_FR,role fallback,2
+fr3 (p-based fr),fr,other_FR,role fallback,2
+ad1 (unidentified additive),other,other,,2
+ad2 (unidentified additive),other,other,,2
+commercial type t flexible pu foam,matrix,not_additive,role matrix/curing_agent,2
+commercial type r (rebound) flexible pu foam,matrix,not_additive,role matrix/curing_agent,2
+gtr modified with 10 wt% app,filler,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,2
+gtr modified with 10 wt% mc,filler,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,2
+gtr modified with 10 wt% mpp,filler,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,2
+birch bark,other,other,,2
+steam-exploded miscanthus x giganteus particles,matrix,not_additive,role matrix/curing_agent,2
+olive pomace,filler,other_filler,role fallback,2
+phosphorus-grafted (phytic acid/urea) steam-exploded miscanthus x giganteus particles,matrix,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+phytic acid + urea grafting treatment,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+lmp grafted with diethyl (2-(triethoxysilyl)ethyl) phosphonate (lmp-sip),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+lnp grafted with diethyl (2-(triethoxysilyl)ethyl) phosphonate (lnp-sip),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+hpp (homopolymer pp),matrix,not_additive,role matrix/curing_agent,2
+rpp (random copolymer pp),matrix,not_additive,role matrix/curing_agent,2
+bpp (block copolymer pp),matrix,not_additive,role matrix/curing_agent,2
+expandable graphite (270 mesh),fr,EG,expand(able|ed) graphite|\beg\b,2
+dgeba (e-51),matrix,not_additive,role matrix/curing_agent,2
+dmpp,fr,other_FR,role fallback,2
+organic mmt,nanofiller,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,2
+alpi (exolit 1230),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+mpp (mp200),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,2
+ud carbon fabric gv 501 u tfx,reinforcement,other_filler,role fallback,2
+short flax fibres,matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,2
+adp (aluminium diethyl phosphinate),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+sep@alpo4 (aluminium phosphate-coated sepiolite),synergist,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,2
+ifr (app/per 3:1),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,2
+gnps,nanofiller,other_filler,role fallback,2
+flax fabric,matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,2
+zinc stannate (zns),synergist,other_FR,role fallback,2
+antimony trioxide (ato),synergist,Sb2O3,sb2o3|antimony,2
+chitosan (cs),fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,2
+lbl bilayers,other,other,,2
+"didopo (1,4-bis(diphenoxyphosphoryl)piperazine)",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+calcium stearate-modified calcium sulfate whisker from phosphogypsum (mcsw),synergist,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+tung oil (to),other,other,,2
+expandable graphite (eg es 350 f5),fr,EG,expand(able|ed) graphite|\beg\b,2
+ifr (app/boz/me 10:2:3),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,2
+hbdt,fr,other_FR,role fallback,2
+copper-boron preservative cbp (cu2+:borate 1:1),fr,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,2
+"x-1 intumescent coating (app 25 wt%, per 15 wt%, mel 10 wt%, muf resin 50 wt% of coating)",fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,2
+go,fr;nanofiller,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,2
+raw sodic montmorillonite ana,nanofiller,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,2
+acid-activated montmorillonite ah2 (h2so4 2 h),nanofiller,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,2
+acid-activated montmorillonite ah5 (h2so4 5 h),nanofiller,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,2
+na-mmt,nanofiller;synergist,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,2
+rgo,nanofiller;synergist,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,2
+lldpe-g-mah,compatibilizer,other,,2
+mbdac-dopo (p-grafted cyclic carbonate),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+mbdac-bppo (p-grafted cyclic carbonate),fr,other_FR,role fallback,2
+mbdac-dpp (p-grafted cyclic carbonate),fr,other_FR,role fallback,2
+mbdac-dep (p-grafted cyclic carbonate),fr,other_FR,role fallback,2
+melamine-coated app (budit 620),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,2
+aluminium hydroxide (apyral 120),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,2
+melamine (melafine),fr,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,2
+polyhydric alcohol (charmor pm40),synergist,other_FR,role fallback,2
+cresyl diphenyl phosphate (disflamoll dpk),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+pbs-g-gma,compatibilizer,other,,2
+water hyacinth fiber (carbon source),fr,other_FR,role fallback,2
+sodium silicate nonahydrate,fr,Si,silic|siloxane|\bposs\b|silane|silica|si,2
+fly ash,filler,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,2
+kraft lignin (upm biopiva 100),synergist,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,2
+ldpe/hdpe (7:3) surface film 0.2 mm,other,other,,2
+"whole power cable zr-pe (fr-pe/polyolefin sheath 5 mm, pvc insulation, cu conductor)",matrix,not_additive,role matrix/curing_agent,2
+otca@zno (triazine charring agent hybridised with zno),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,2
+ca(ch3coo)2 from eggshell (cycle i impregnation),fr,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,2
+nh4h2po4 ph 10.4-10.5 (cycle ii impregnation),fr,other_FR,role fallback,2
+in-situ carbonated hydroxyapatite,fr,other_FR,role fallback,2
+tpp,fr;synergist,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+pan (95 wt% an / 5 wt% vac),matrix,not_additive,role matrix/curing_agent,2
+tris(hydroxymethyl)aminomethane polyphosphate aptris (150 g/l bath),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+ammonium polyphosphate (app-ii),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,2
+aluminium hydroxide (ath),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,2
+glutaraldehyde (gta),curing_agent,not_additive,role matrix/curing_agent,2
+ellagic acid (ea),fr,other_FR,role fallback,2
+hexaphenoxycyclotriphosphazene (hpctp),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+co@cpa,fr,other_FR,role fallback,2
+odopb,fr,other_FR,role fallback,2
+mxd6,matrix,not_additive,role matrix/curing_agent,2
+etpmp (charring-foaming agent),fr,other_FR,role fallback,2
+xuan paper,matrix,not_additive,role matrix/curing_agent,2
+wood fibre,matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,2
+chitosan (glutaraldehyde-crosslinked),other,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,2
+chitin,fr,other_FR,role fallback,2
+sodium montmorillonite (mtm),nanofiller,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,2
+total app/mtm coating,other,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,2
+"pp (virgin, moplen hp500n)",matrix,not_additive,role matrix/curing_agent,2
+"pp (recycled, 8 extrusion cycles)",matrix,not_additive,role matrix/curing_agent,2
+dicumyl peroxide (dcp),other,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,2
+triallyl isocyanurate (taic),other,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,2
+s4sq-8 (n-octyl siloxane-silsesquioxane resin),fr,Si,silic|siloxane|\bposs\b|silane|silica|si,2
+woven cotton fabric (380 g/m2),matrix,not_additive,role matrix/curing_agent,2
+cellulose nanocrystals (cotton linter cnc),nanofiller,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,2
+"ba-ma (biphenyl-4,4'-diphosphonic acid-melamine nanosheets)",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+polyacrylonitrile fabric (95 wt% an/5 wt% vac),matrix,not_additive,role matrix/curing_agent,2
+cationic starch (cs),fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,2
+montmorillonite (mmt),nanofiller,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,2
+cp-6b,fr,other_FR,role fallback,2
+dopo@zif-67,fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,2
+cotton fabric (240 g/m2),matrix,not_additive,role matrix/curing_agent,2
+pa66 (zytel 101l),matrix,not_additive,role matrix/curing_agent,2
+base asphalt (shell pen 70),matrix,not_additive,role matrix/curing_agent,2
+aph (dopo/kh-550/naphthalene p-n-si fr),fr,Si,silic|siloxane|\bposs\b|silane|silica|si,2
+polyester (pet) fabric,matrix,not_additive,role matrix/curing_agent,2
+silicone oil,plasticizer,Si,silic|siloxane|\bposs\b|silane|silica|si,2
+s-mgal (stearate-modified ldh),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,2
+s-lamgal (stearate-modified ldh),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,2
+s-cemgal (stearate-modified ldh),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,2
+s-ndmgal (stearate-modified ldh),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,2
+phvposs (ladder phenyl/vinyl polysilsesquioxane),synergist,other_FR,role fallback,2
+black phosphorus nanosheets,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+h-bn nanosheets,fr,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,2
+potato starch,matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,2
+non-woven polypropylene fabric (basis weight 35 g/m2),matrix,not_additive,role matrix/curing_agent,2
+graphene nanoplates (ge),nanofiller,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,2
+"magnesium hydroxide (mh, 5-c)",fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,2
+cashmere fibre,matrix,not_additive,role matrix/curing_agent,2
+calcium alginate fibre (af),fr;matrix,other_FR,role fallback,2
+"amine-functionalized nanodiamond (nh2-nd, aptes)",nanofiller,other_filler,role fallback,2
+mehhpa,curing_agent,not_additive,role matrix/curing_agent,2
+kraft cellulose paper (200 g/m2),reinforcement,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,2
+12pva-10bgmf resin,matrix,not_additive,role matrix/curing_agent,2
+kraft cellulose paper,reinforcement,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,2
+banana peel powder (bpp),filler,other_filler,role fallback,2
+itap (dopo-itaconate polyester),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+"fr 3 (polymeric acrylate, phosphonate + dopo phosphinate)",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+"fr 4 (polymeric acrylate, phosphate + dopo phosphinate)",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+poly(vinylphosphonic acid) (pvpa),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+polyethylenepolyamine (pepa),fr,other_FR,role fallback,2
+psncfr,fr,other_FR,role fallback,2
+zinc alginate,matrix,not_additive,role matrix/curing_agent,2
+e20mi fr mat,fr,other_FR,role fallback,2
+ifr (papp:mpp 2:1),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,2
+methyltriethoxysilane (mtes),curing_agent,Si,silic|siloxane|\bposs\b|silane|silica|si,2
+ca2+ (cacl2),curing_agent,not_additive,role matrix/curing_agent,2
+gamma-aminopropyltriethoxysilane (apts),curing_agent,Si,silic|siloxane|\bposs\b|silane|silica|si,2
+dap (dihydroxy-containing ammonium phosphate),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+sodium alginate (ca2+ crosslinked aerogel),matrix,not_additive,role matrix/curing_agent,2
+dopo-diamine,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+mono-ammonium phosphate (pfr),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+calcium phosphinate (hpca),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+diphenyl cresyl phosphate (cdp),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+aluminium phosphinate (hpal),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+tris(chloropropyl) phosphate (tcpp),fr,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,2
+lignocellulose composite,matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,2
+polyethylenimine (pei),fr,other_FR,role fallback,2
+poly(acrylic acid),other,other,,2
+bapdp (bisphenol ap bis(diphenyl phosphate)),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+coating weight gain,other,other,,2
+pe-g-ma,compatibilizer,other,,2
+ppa (polyphosphate amide),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+ac-fe2o3 (activated carbon-supported fe2o3),synergist,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,2
+app (n>1000),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,2
+lppz (linear poly(bisphenoxyphosphazene) oligomer),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+ommt (dk2),nanofiller,other_filler,role fallback,2
+zinc borate (20 nm),synergist,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,2
+ifr (nh4h2po4/per/mel 3:1:1),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,2
+me-cta organoclay,nanofiller,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,2
+bdmp (dopo-bismaleimide adduct),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+cotton fabric (156.2 g/m2),matrix,not_additive,role matrix/curing_agent,2
+ifr (app:cfa 4:1),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,2
+capric acid pcm,other,other,,2
+extruded polystyrene (xps),matrix,not_additive,role matrix/curing_agent,2
+aluminum beta-(p-nitrobenzamide) ethyl methyl phosphinate alnp,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+antioxidant 1098,other,other,,2
+ethylenediamine,curing_agent,not_additive,role matrix/curing_agent,2
+ifr (anti-6),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,2
+room-temperature-vulcanised silicone rubber (rtv),matrix,Si,silic|siloxane|\bposs\b|silane|silica|si,2
+montmorillonite ana,filler;synergist,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,2
+montmorillonite ah2,filler;synergist,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,2
+montmorillonite ah5,filler;synergist,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,2
+montmorillonite ah20,filler;synergist,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,2
+kh570-treated nanosilica (20-30 nm),nanofiller,Si,silic|siloxane|\bposs\b|silane|silica|si,2
+aminopropyltriethoxysilane-modified mmt,nanofiller,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,2
+desized scoured bleached cotton fabric,matrix,not_additive,role matrix/curing_agent,2
+piperazine pyrophosphate (ppap),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,2
+epon 826,matrix,not_additive,role matrix/curing_agent,2
+pumapp (pu-microencapsulated app),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,2
+ppfbs (potassium perfluorobutanesulfonate),fr,other_FR,role fallback,2
+graphene oxide,nanofiller,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,2
+epoxy resin e51,matrix,not_additive,role matrix/curing_agent,2
+cyh-277,other,other,,2
+"pdepd (poly(4,4'-diaminodiphenyl ether phenyl dichlorophosphate))",fr,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,2
+pdepd/na-mmt nanocomposite (5na),fr,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,2
+[apmim]pf6,fr,other_FR,role fallback,2
+[glu]h2pw12o40,other,other,,2
+dwq-107 rtv silicone rubber,matrix,Si,silic|siloxane|\bposs\b|silane|silica|si,2
+ath (fatty-acid activated),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,2
+bleached plain-woven cotton fabric,matrix,not_additive,role matrix/curing_agent,2
+wood fiber (pine),filler,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,2
+"hgm (hollow glass microsphere, sodium borosilicate)",filler,Si,silic|siloxane|\bposs\b|silane|silica|si,2
+hgm@[eooemim][bf4] (kh550-silanized hgm loaded with ionic liquid),fr,Si,silic|siloxane|\bposs\b|silane|silica|si,2
+dbdpo (decabromodiphenyl oxide),fr,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,2
+app (surface layer),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,2
+expandable graphite e300 (surface layer),fr,EG,expand(able|ed) graphite|\beg\b,2
+bleached cotton fabric,matrix,not_additive,role matrix/curing_agent,2
+pomegranate rind extract (pre),fr,other_FR,role fallback,2
+tpee (h2040),matrix,not_additive,role matrix/curing_agent,2
+alpi (aluminum diethylphosphinate op935),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+tpe (basf h3048),matrix,not_additive,role matrix/curing_agent,2
+multilayer graphene,nanofiller,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,2
+app:triazine 4:1,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,2
+dmh polyphosphoramide,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+papp:mpp:per 58:37:5,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,2
+phytic acid sodium salt,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+oyster shell powder (>95% caco3),fr,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,2
+mof/mwcnts,fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,2
+tbpbp + mof/mwcnts,fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,2
+c-mof/mwcnts,fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,2
+tbpbp + c-mof/mwcnts,fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,2
+tcpp + dmmp,fr,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,2
+expandable graphite + app,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,2
+tcpp (in formulation),fr,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,2
+none (reference foam),fr,not_additive,none,2
+none (reference),fr,not_additive,none,2
+exolit op 935 + app,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,2
+exolit op 935 + eg 290,fr,EG,expand(able|ed) graphite|\beg\b,2
+mfapp + alkali lignin (a-lignin),fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,2
+chicken feather protein + mmt,fr,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,2
+ceppg/mp/eg,fr,EG,expand(able|ed) graphite|\beg\b,2
+ceppg/mpi/eg,fr,EG,expand(able|ed) graphite|\beg\b,2
+dopo-tung oil polyol (ptop),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+si-containing tung oil polyol (ptosi),fr,other_FR,role fallback,2
+eg + dmmp + functionalized go,fr,EG,expand(able|ed) graphite|\beg\b,2
+ath + bh + eg,fr,EG,expand(able|ed) graphite|\beg\b,2
+ao + bh + eg,fr,EG,expand(able|ed) graphite|\beg\b,2
+dimethyl propane phosphonate (dmpp),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+cyclic phosphonate addforce ct 901,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,2
+app + deep,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,2
+pfapp + lignin-poh,fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,2
+hcnf (industrial bamboo residue holocellulose nanofibrils),matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+"mtms (methyl trimethoxysilane, hydrophobic modifier)",other,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+cncsi-da (silicon-containing triazine oligomeric charring agent),fr,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+app@cncsi-da (app:cncsi-da 2:1),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+ppsq (poly(phenylsilsesquioxane)),fr,other_FR,role fallback,1
+ops (octaphenyl poss),fr,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+phvposs (phenyl/vinyl polysilsesquioxane),fr,other_FR,role fallback,1
+iron phosphomolybdate,synergist,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+cobalt phosphomolybdate,synergist,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+nickel phosphomolybdate,synergist,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+zinc phosphomolybdate,synergist,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+pine wood flour,filler,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+lubricant (tpw 306),other,other,,1
+mape (pe-g-ma g2608),compatibilizer,other,,1
+few-layer black phosphorus (bps),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+aramid pulp,reinforcement,other_filler,role fallback,1
+nano-cu2o (in situ),nanofiller,other_filler,role fallback,1
+vanillin,other,other,,1
+coal-ldh,nanofiller,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+coal-ldh@zif-67 hybrid,nanofiller,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+ce@app (cerium-hybridised app),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+ifr (app:cfa 83:17),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+"si-ifr (kh550-treated ifr, app:cfa 83:17)",fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+"ma-ifr (kh550 + sbs-g-mah coated ifr, app:cfa 83:17)",fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+ma/ifr (ifr physically mixed with sbs-g-mah),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+"bf-at (acetone-pretreated, kh550-modified short basalt fibre, 3 mm)",reinforcement,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+"pbf-a (bf-a benzoxazine, araldite mt 35700)",matrix,not_additive,role matrix/curing_agent,1
+"carbon fibre fabric (twill 2/2, 200 g/m2), 20 plies",reinforcement,carbon_fibre,carbon fib|\bcf\b,1
+"basalt fibre fabric (atlas, 350 g/m2), 15 plies",reinforcement,glass_fibre,glass fib|\bgf\b|glass fabric|e-glass|ba,1
+"glass fibre fabric (twill 2/2, 390 g/m2), 14 plies",reinforcement,glass_fibre,glass fib|\bgf\b|glass fabric|e-glass|ba,1
+wheat grain (as received),matrix,not_additive,role matrix/curing_agent,1
+annealed nano zinc stannate (znsno3),fr,other_FR,role fallback,1
+as-synthesized nano zinc stannate (znsn(oh)6),fr,other_FR,role fallback,1
+pa6 (basf b30s),matrix,not_additive,role matrix/curing_agent,1
+pabg (phytic acid-benzoguanamine salt),synergist,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+pabg@zn (phytic acid-benzoguanamine-zn complex),synergist,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+ath (d50 1.35 um),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+ath (d50 1.61 um),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+ath (d50 2.28 um),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+ath (d50 2.8 um),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+ath (d50 4.11 um),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+ath (d50 9.82 um),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+ath (d50 17.77 um),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+"flexible pu foam (rokopol f3000/v700, glycerol, specflex nf 434)",matrix,not_additive,role matrix/curing_agent,1
+kaolinite,filler,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,1
+kaolinite-urea intercalation complex (kuic),synergist,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,1
+sacoflam 47201 (liquid phosphorus fr),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+px200 (phosphorus fr),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+aflammit pco 900 (organic phosphonate),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+hfr 693 (phosphorus fr),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+yellow birch (betula alleghaniensis),matrix,not_additive,role matrix/curing_agent,1
+polydopamine-coated red phosphorus (rp@pda),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+polydopamine/melamine microencapsulated red phosphorus (rp@pda/ma),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+pap (phytic acid-pentaerythritol ester),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+papbtca (phytic acid-pentaerythritol-btca),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+rubber waste granules,matrix,not_additive,role matrix/curing_agent,1
+rubber waste biochar (pyrolysed 700 c),matrix,not_additive,role matrix/curing_agent,1
+olive pit granules,matrix,not_additive,role matrix/curing_agent,1
+olive pit biochar (pyrolysed 700 c),matrix,not_additive,role matrix/curing_agent,1
+wood chips,matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+wood chip biochar (pyrolysed 700 c),matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+reed pellets,matrix,not_additive,role matrix/curing_agent,1
+reed biochar (pyrolysed 700 c),matrix,not_additive,role matrix/curing_agent,1
+tflpm (thiol-functional methyl end-capped polysilsesquioxane),fr,other_FR,role fallback,1
+tflpp (thiol-functional phenyl end-capped polysilsesquioxane),fr,other_FR,role fallback,1
+diatoms,synergist,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,1
+chitosan/sodium alginate 10 bilayers,fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+chitosan/sodium alginate 10 bilayers + na2b4o7 50 g/l impregnation,fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+chitosan/sodium alginate 10 bilayers + nickel acetate 50 g/l impregnation,fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+chitosan/sodium alginate 10 bilayers + fecl3 50 g/l impregnation,fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+"short glass fibre (tsi-poss-modified, 0.1%)",reinforcement,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+"short glass fibre (tsi-poss-modified, 0.5%)",reinforcement,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+"short glass fibre (tsi-poss-modified, 1.0%)",reinforcement,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+"short glass fibre (tsi-poss-modified, 4.0%)",reinforcement,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+"short glass fibre (tsi-poss-modified, 10.0%)",reinforcement,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+"ppa-ath (ath ball-milled with phenylphosphinic acid, 10 g per 100 g ath)",fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+ppoa-ath (ath ball-milled with phenylphosphonic acid),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+zinc borate zn3b6o12.3.5h2o,fr,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,1
+"mp/per (molar ratio 1.8, compounded masterbatch 70 wt% mp/per in pp)",fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+coal-ldh (co3 intercalated),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+nial-ldh (co3 intercalated),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+ucpr-ldh (urea-pyrovatex cp resin intercalated mg/al-ldh),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+mcpr-ldh (melamine-pyrovatex cp resin intercalated mg/al-ldh),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+baaep,synergist,other_FR,role fallback,1
+organic phosphonate ester (exfire t),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+graphene nanoplatelets,nanofiller,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,1
+untreated cellulose fibre (rice straw),filler,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+hspctp (silicone-oil cyclotriphosphazene),fr,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+ldhs,fr,other_FR,role fallback,1
+pretreated (chlorinated) wool fabric,matrix,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,1
+pretreated wool fabric,matrix,not_additive,role matrix/curing_agent,1
+"pbtca (2-phosphonobutane-1,2,4-tricarboxylic acid)",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+poplar wood (naoh-pretreated),matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+serpentine ni3si2o5(oh)4 nanosheets,nanofiller,other_filler,role fallback,1
+serpentine@app (app self-assembled on silane-modified ni3si2o5(oh)4),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+eggshell bio-filler ces (calcite caco3),synergist,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,1
+conch shell bio-filler chs (aragonite+calcite caco3),synergist,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,1
+clamshell bio-filler cms (aragonite caco3),synergist,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,1
+"pew1 (polyethylene wax, mv 1700)",other,other,,1
+"pew2 (polyethylene wax, mv 4500)",other,other,,1
+pea protein/phytic acid lbl coating (3bl),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+pea protein/phytic acid lbl coating (6bl),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+pea protein/phytic acid lbl coating (9bl),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+pea protein/phytic acid lbl coating (12bl),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+fa-mgo (roasted fly-ash/mgo),fr,other_FR,role fallback,1
+fly-ash,filler,other_filler,role fallback,1
+ldh1 (fly-ash-derived mg-al-fe ldh),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+ldh2 (fly-ash-derived mg-al-fe ldh),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+ldh3 (fly-ash-derived mg-al-fe ldh),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+ldh4 (fly-ash-derived mg-al-fe ldh),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+ldh5 (fly-ash-derived mg-al-fe ldh),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+"des (aromatic schiff base diepoxide, chain extender)",synergist,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+zif-8,fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+zif-8@sio2 (core-shell),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+chlorobenzylisobutyl-poss (poss-ar-cl),nanofiller,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,1
+chloropropylisobutyl-poss (poss-pr-cl),nanofiller,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,1
+chlorobenzylethylisobutyl-poss (poss-ar-et-cl),nanofiller,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,1
+nanocarbon black (cb),synergist,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,1
+carbon nanotube (cn),synergist,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,1
+graphene (cg),synergist,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,1
+no3-ldh (unmodified mg/al ldh),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+pc-ldh (phosphocreatine-intercalated ldh),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+pc-dpa-ldh (phosphocreatine/dodecylphosphoric acid co-modified ldh),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+hydrazine hydrate (amination),other,other,,1
+phosphoric acid/urea (phosphorylation),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+halloysite,filler,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,1
+calcined kaolin,filler,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,1
+mica (phlogopite),filler,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,1
+wollastonite,filler,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,1
+tetrabutyl titanate (tbt),synergist,other_FR,role fallback,1
+uio-66,fr,other_FR,role fallback,1
+amorphous sio2,filler,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+sio2@uio-66 composite,fr,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+hb-dppa (reactive p-n co-curing agent),fr,other_FR,role fallback,1
+nh2-mil-101(al),fr,other_FR,role fallback,1
+il@nh2-mil-101(al) ([dpp-nc3bim][pmo] ionic liquid on mof),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+frsn (tetrakis(phenyl-4-sulfonamide)adamantane),fr,other_FR,role fallback,1
+regular polyester diol (rpe),matrix,not_additive,role matrix/curing_agent,1
+bleached kraft cellulose pulp sheet,matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+"phosphorylated cellulose (dap/urea grafted, pulp conc. 0.5 wt%)",matrix,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+"phosphorylated cellulose (dap/urea grafted, pulp conc. 1 wt%)",matrix,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+"phosphorylated cellulose (dap/urea grafted, pulp conc. 2.5 wt%)",matrix,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+"phosphorylated cellulose (dap/urea grafted, pulp conc. 5 wt%)",matrix,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+"phosphorylated cellulose (dap/urea grafted, pulp conc. 10 wt%)",matrix,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+zif-67 (co-mof),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+zif-67@mxene (ti3c2tx) hybrid,fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+kappaflam t4/729 (sulfur-based commercial fr),fr,other_FR,role fallback,1
+wheat starch phosphate carbamate (map/urea modified),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+wheat protein phosphate carbamate (map/urea modified),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+xylan phosphate carbamate (map/urea modified),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+tannin phosphate carbamate (map/urea modified),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+avph (nh4)vopo4·1.5h2o,fr,other_FR,role fallback,1
+vph vopo4·2h2o,fr,other_FR,role fallback,1
+dpp-a-cnt (chlorodiphenylphosphine-functionalized amino-mwcnt),nanofiller,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,1
+dpp(o)-a-cnt (diphenylphosphinic chloride-functionalized amino-mwcnt),nanofiller,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,1
+dpp(o3)-a-cnt (diphenyl phosphoryl chloride-functionalized amino-mwcnt),nanofiller,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,1
+chain extender to,curing_agent,not_additive,role matrix/curing_agent,1
+polyol so,matrix,not_additive,role matrix/curing_agent,1
+polyol ro,matrix,not_additive,role matrix/curing_agent,1
+dtab-modified ti3c2 mxene,nanofiller,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+otab-modified ti3c2 mxene,nanofiller,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+ddab-modified ti3c2 mxene,nanofiller,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+"ifr coating (per 100 ml water: eva emulsion 55 g, gypsum 9 g, eg 35 g, talc 1 g, app 15 g, per 7.5 g, caco3 7.5 g, mc 0 g)",fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+"ifr coating (per 100 ml water: eva emulsion 55 g, gypsum 9 g, eg 35 g, talc 1 g, app 15 g, per 0 g, caco3 7.5 g, mc 7.5 g)",fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+mdi binder coating,other,other,,1
+rice husk,filler,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+coffee husk,filler,other_filler,role fallback,1
+wool,filler,other_filler,role fallback,1
+cps (180) hydrothermal peanut-shell carbon,fr,other_FR,role fallback,1
+cps (700) peanut-shell carbon pyrolysed 700 c,fr,other_FR,role fallback,1
+cps/co cobalt-loaded peanut-shell carbon pyrolysed 700 c,fr,other_FR,role fallback,1
+pdtbp (triazine-bicyclic phosphate charring agent),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+kh-570 silane-modified zno-doped mh (kzo@mh),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+pps,matrix,not_additive,role matrix/curing_agent,1
+carbon fibre (ud tape),reinforcement,carbon_fibre,carbon fib|\bcf\b,1
+imogolite nanotubes (ints),synergist,other_FR,role fallback,1
+[bmim]pf6-functionalized ints (ints-pf6-ils),synergist,other_FR,role fallback,1
+mcm-41,synergist,other_FR,role fallback,1
+go-nh-mcm-41,synergist,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,1
+beta-cd/dbpda inclusion complex (ic),fr,other_FR,role fallback,1
+"mhx (commercial mg(oh)2, taixing)",fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+"mhy (commercial mg(oh)2, albemarle)",fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+mhz (hydrothermal hexagonal mg(oh)2),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+zr-pa (zirconium phytate hybrid),synergist,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+zr-atmp (zirconium aminotrimethylene phosphonate hybrid),synergist,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+palonot p2 (protic ionic liquid fr),fr,other_FR,role fallback,1
+palonot p4 (protic ionic liquid fr),fr,other_FR,role fallback,1
+pp (hp400n),matrix,not_additive,role matrix/curing_agent,1
+sodium casein 180 (sc),fr,other_FR,role fallback,1
+tris(1-chloro-2-propyl) phosphate (tcpp),fr,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,1
+ddp (copolymerized phosphaphenanthrene comonomer),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+pristine na+-mmt,nanofiller,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,1
+cnns (thermally etched g-c3n4 nanosheets),nanofiller,other_filler,role fallback,1
+oxidized exfoliated h-bn nanosheets (bnno),nanofiller,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,1
+bnno@co3o4 nanohybrid,fr,other_FR,role fallback,1
+bnno@co3o4@ppz nanohybrid,fr,other_FR,role fallback,1
+europium-tannic acid complex (eu@ta),synergist,other_FR,role fallback,1
+kraft lignin microparticles (lmp),fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+lignin nanoparticles (lnp),fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+lmp phosphorylated with diethyl chlorophosphate (lmp-dietp),fr,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,1
+lnp phosphorylated with diethyl chlorophosphate (lnp-dietp),fr,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,1
+ommt organo-montmorillonite,nanofiller,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,1
+graphite,filler,other_filler,role fallback,1
+cellulose nanofiber (cnf),nanofiller,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+tda (tgic-dopo-aptes p/n/si fr),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+"pei/stpp polyelectrolyte coating (5 wt% pei, 10 wt% stpp bath)",fr,other_FR,role fallback,1
+"pei/stpp/mel coating (5 wt% pei, 10 wt% stpp, 1 wt% mel baths)",fr,other_FR,role fallback,1
+"pei/stpp/mel coating (5 wt% pei, 10 wt% stpp, 4 wt% mel baths)",fr,other_FR,role fallback,1
+mgalzn-ldh-co3,fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+potato starch colloid (10 g starch in 100 cm3 water),fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+potato starch colloid (10 g starch in 100 cm3 of 1.7 wt% na2co3 solution),fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+potato starch colloid (10 g starch in 100 cm3 of 1.7 wt% k2co3 solution),fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+potato starch colloid (10 g starch in 100 cm3 of 1.7 wt% (nh4)2hpo4 solution),fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+"pnpg (neopentyl glycol/phosphoric acid/urea p-n fr), 120 g/l bath, ~60% wet pickup",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+bamboo powder (bp),filler,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+phenolic resin amine,matrix,not_additive,role matrix/curing_agent,1
+"sp10 (dmp/benzaldehyde/octadecylamine phosphite sspcm, intrinsic p-fr)",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+rtm6 monocomponent epoxy (hexcel),matrix,not_additive,role matrix/curing_agent,1
+tgmda/bde epoxy blend (75:25 wt%),matrix,not_additive,role matrix/curing_agent,1
+gposs (glycidyl poss),fr,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+mwcnt (nanocyl 3100),nanofiller,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,1
+basic magnesium carbonate 4mgco3·mg(oh)2·6h2o,fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+magnesium hydroxide mg(oh)2,fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+magnesium chloride hydrate mgcl2·6h2o,fr,other_FR,role fallback,1
+short flax fibres (p 0.07 wt%),matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+"polysurf hp (phosphonated methacrylate, pre-irradiation e-beam 50 kgy grafting)",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+"polysurf hp (phosphonated methacrylate, simultaneous e-beam 50 kgy grafting)",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+hnts (halloysite nanotubes),synergist,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,1
+po(oph)2-vsil (n-dimethylvinylsilyl-amidophosphorus diphenylester),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+"pooph-vsil2 (n,n'-bis(dimethylvinylsilyl)diamidophosphorus phenylester)",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+scp-vsil (salicylic-acid-based phosphasilazane),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+dopo-vsil (dopo-based phosphasilazane),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+spiro-vsil2 (spiro-phosphate bis-silazane),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+tecp (tri(epoxized-cardanyl)phosphate),matrix,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+teep (tri(epoxized-eugenyl)phosphate),matrix,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+deep (di(epoxized-eugenyl)phenylphosphate),matrix,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+deep-ph (di(epoxized-eugenyl)phenylphosphonate),matrix,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+bp-deta (black phosphorus functionalised with diethylenetriamine),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+bp-ppda (black phosphorus functionalised with p-phenylenediamine),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+bp-pid (black phosphorus functionalised with tetramethylpiperidine-type cyclamine),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+grafted p(mapc1) phosphonate,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+grafted p(m4) fluorinated,other,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,1
+carbon microspheres (cms),synergist,other_FR,role fallback,1
+carbon-zno microspheres (cznms): c,synergist,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+carbon-zno microspheres (cznms): zn,synergist,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+zno microspheres (znms),synergist,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+ti-caco3 (pn-201 modified),synergist,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,1
+hccp,fr,other_FR,role fallback,1
+go-hccp (hccp-grafted go),fr,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,1
+curing agent not specified for pure ep,curing_agent,not_additive,role matrix/curing_agent,1
+sca (si-containing amino curing agent),curing_agent,not_additive,role matrix/curing_agent,1
+stca (si/ti-containing amino curing agent),curing_agent,not_additive,role matrix/curing_agent,1
+"app (solid, added)",fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+app (20 wt% solution impregnated into wood flour),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+"zno microparticles (~10 um, physisorbed)",filler,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+"zno + zns microparticles (~10 um, sequential dip-coating)",filler,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+zno seed crystals,filler,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+zno short rods (5 h hydrothermal),filler,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+zno long rods (24 h hydrothermal),filler,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+zno/zns core/shell rods,filler,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+hcactp (hexacyclohexylamino-cyclotriphosphazene),curing_agent,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+dtcatp (diaminotetracyclohexylamino-cyclotriphosphazene),curing_agent,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+eda (ethylenediamine),curing_agent,not_additive,role matrix/curing_agent,1
+dpta (dipropylenetriamine),curing_agent,not_additive,role matrix/curing_agent,1
+ev,filler,other_filler,role fallback,1
+bda (boric acid/dtpmpa ammonium salt chelate),fr,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,1
+dicyandiamide phosphate,other,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+pasp,matrix,not_additive,role matrix/curing_agent,1
+phea,matrix,not_additive,role matrix/curing_agent,1
+pdhea,matrix,not_additive,role matrix/curing_agent,1
+mgo,synergist,other_FR,role fallback,1
+casio3,filler,other_filler,role fallback,1
+acrylonitrile comonomer,other,other,,1
+dopo–go,fr,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,1
+dopo–vtes–go,fr,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,1
+"dopo-mmt (melt-intercalated, dopo:mmt 2:1)",fr,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,1
+polar bear (bio-based recyclable epoxy),matrix,not_additive,role matrix/curing_agent,1
+r*lab02,curing_agent,not_additive,role matrix/curing_agent,1
+fr cros484 (app),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+"wood (natural, species not stated)",matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+"urea-formaldehyde resin coating (dop plasticizer, tannic acid curing agent)",other,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,1
+gz/pa/cu (guanazole-phytate-copper),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+gz/pa/mg,fr,other_FR,role fallback,1
+gz/pa/mn,fr,other_FR,role fallback,1
+gz/pa/ca,fr,other_FR,role fallback,1
+pla (natureworks),matrix,not_additive,role matrix/curing_agent,1
+pm (melamine/phytic acid 1:5),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+pmrg-3 (rgo/melamine/phytic acid 1:1:5 self-assembled),fr,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,1
+bleached eucalyptus pulp,matrix,not_additive,role matrix/curing_agent,1
+phosphorus fr (in fibre),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+kf commercial sulfur-based fr (proprietary),fr,other_FR,role fallback,1
+"phosphorylated wheat starch ws-k (kneader, map/urea) physical mixture",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+"phosphorylated wheat starch ws-k (kneader, map/urea) uncleaned",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+"phosphorylated wheat starch ws-k (kneader, map/urea) cleaned",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+"phosphorylated wheat starch ws-o (oven, map/urea) cleaned",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+"phosphorylated wheat starch ws-e (extruder, urea phosphate) uncleaned",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+water-based acrylic resin (synthomer),matrix,not_additive,role matrix/curing_agent,1
+app phase ii,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+mbdac (tetrafunctional cyclic carbonate),matrix,not_additive,role matrix/curing_agent,1
+aln-300sfs,filler,other_filler,role fallback,1
+bn-sw08,filler,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,1
+bn-nw04,filler,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,1
+extruded polystyrene,matrix,not_additive,role matrix/curing_agent,1
+boehmite (pural sb),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+depa-al (boehmite-diethyl phosphate hybrid),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+dehpa-al (boehmite-bis(2-ethylhexyl)phosphate hybrid),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+dppa-al (boehmite-diphenyl phosphate hybrid),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+gnps + dnms dispersant (10:1) surface coating,nanofiller,other_filler,role fallback,1
+gnps + triton x-100 dispersant (10:1) surface coating,nanofiller,other_filler,role fallback,1
+oddpo,fr,other_FR,role fallback,1
+salen s1,fr,other_FR,role fallback,1
+salen s1-cu complex,fr,other_FR,role fallback,1
+salen s1-ni complex,fr,other_FR,role fallback,1
+salen s1-zn complex,fr,other_FR,role fallback,1
+dihydroxysalen s2,fr,other_FR,role fallback,1
+dihydroxysalen s2-cu complex,fr,other_FR,role fallback,1
+dihydroxysalen s2-mn complex,fr,other_FR,role fallback,1
+dihydroxysalen s2-ni complex,fr,other_FR,role fallback,1
+dihydroxysalen s2-zn complex,fr,other_FR,role fallback,1
+moo3-hybridized magnesium hydroxide (mo@mh),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+"pepe-modified mo@mh (mo@mh-pepe, mo@mh:pepe 100:5)",fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+"waterborne acrylic coating (mp-0, no fr)",other,other,,1
+waterborne acrylic coating (mp-1),other,other,,1
+waterborne acrylic coating (mp-4),other,other,,1
+593 curing agent,curing_agent,not_additive,role matrix/curing_agent,1
+bge,other,other,,1
+14bdde,other,other,,1
+t403,curing_agent,not_additive,role matrix/curing_agent,1
+sillitin,filler,other_filler,role fallback,1
+chalcedonite,filler,other_filler,role fallback,1
+aerosil (fumed silica),filler,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+anaerobic digester sewage sludge,synergist,other_FR,role fallback,1
+mos2 nanosheets,fr,other_FR,role fallback,1
+mos2–dopo hybrid,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+mh@dopo@mf microcapsule,fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+map,fr,other_FR,role fallback,1
+dap,fr,other_FR,role fallback,1
+kh403 (3-glycidoxypropyltrimethoxysilane),compatibilizer,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+citric acid,other,other,,1
+"cotton fabric (plain weave, 112 g/m2)",matrix,not_additive,role matrix/curing_agent,1
+sulfonic groups (naio4 oxidation + nahso3 sulfonation),fr,other_FR,role fallback,1
+ba2+ (chelated from saturated bacl2),fr,other_FR,role fallback,1
+neat ldpe/hdpe (7:3) surface film 0.2 mm,other,other,,1
+al(oh)3 in surface film,fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+(nh4)2so4 core impregnation,fr,other_FR,role fallback,1
+ahm (atmp-hedp 2:1 + melamine salt)/mel/sa 3:1:1 in surface film,fr,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,1
+sodium silicate/sodium tetraborate core impregnation,fr,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,1
+carbon black (cb),filler,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,1
+cereal straw:carbon black hybrid (cs:cb 2:1),filler,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,1
+cereal straw:carbon black hybrid (cs:cb 5:1),filler,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,1
+miscanthus:carbon black hybrid (cm:cb 2:1),filler,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,1
+miscanthus:carbon black hybrid (cm:cb 5:1),filler,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,1
+beech wood:carbon black hybrid (cw:cb 2:1),filler,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,1
+beech wood:carbon black hybrid (cw:cb 5:1),filler,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,1
+"whole power cable yjv (xlpe sheath, pvc insulation, cu conductor)",matrix,not_additive,role matrix/curing_agent,1
+"whole power cable zr-yjv (fr-xlpe sheath, pvc insulation, cu conductor)",matrix,not_additive,role matrix/curing_agent,1
+"whole power cable zr-vv (fr-pvc sheath, pvc insulation, cu conductor)",matrix,not_additive,role matrix/curing_agent,1
+"whole power cable zr-pe (fr-pe/polyolefin sheath 3 mm, pvc insulation, cu conductor)",matrix,not_additive,role matrix/curing_agent,1
+pei-rgo,nanofiller,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,1
+fullerene c60,nanofiller,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,1
+ldh/boronate polymer physical blend (ldh:bp 26.3:73.7),nanofiller,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,1
+ldh@boronate polymer core-shell nanoparticles (ldh@bp),nanofiller,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,1
+hotca (hydrolysed triazine charring agent),fr,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,1
+nano-zno,synergist,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+melamine phytate (pm),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+fe-doped melamine phytate (fepm),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+zn-doped melamine phytate (znpm),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+zn/fe bimetallic-doped melamine phytate (bpm),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+rochelle salt (potassium sodium tartrate),fr,other_FR,role fallback,1
+borax (sodium borate),fr,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,1
+boric acid cross-linking (coagulation bath),fr,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,1
+phosphorylation h3po4/urea,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+calcium bis(dimethyl phosphate) cadmp,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+zinc bis(dimethyl phosphate) zndmp,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+aluminum tris(dimethyl phosphate) aldmp,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+ammonium polyphosphate app (150 g/l bath),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+"muf prepolymer (formaldehyde 37% 13.4 g, urea 7.9 g, melamine 0.90 g)",matrix,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,1
+nano-al2o3,nanofiller,other_filler,role fallback,1
+h3po4,curing_agent,not_additive,role matrix/curing_agent,1
+sdbs,other,other,,1
+recycled glass fines (~300 um),filler,other_filler,role fallback,1
+isocyanate/polyol polyurethane resin,matrix,not_additive,role matrix/curing_agent,1
+deionized water (control impregnation),other,other,,1
+fr loading 76.8 kg/m3,,other,,1
+phytic acid/silica nanosol hybrid (pa 70% aq + silica sol 30% sio2),fr,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+fr loading 181.4 kg/m3,,other,,1
+gallic acid (ga),fr,other_FR,role fallback,1
+borated gallic acid derivative (gad),fr,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,1
+borated ellagic acid derivative (ead),fr,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,1
+halloysite nanotube (hnt),nanofiller,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,1
+organically modified mmt (ommt,,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,1
+octadecylamine/aptes),nanofiller,other_filler,role fallback,1
+laser-induced graphene surface layer (~50-60 um),other,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,1
+pmma-microencapsulated hpctp p(2.75h) (2.75 g hpctp per 25 ml mma),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+tio2/po43- solid superacid,synergist,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+dt (dopo-triazine derivative),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+bruggolen p22,other,other,,1
+cuo,synergist,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+ammonium phytate,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+borated wood flour (5% boric acid solution treatment),filler,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,1
+"polycarbonate cap layers (0.5 mm each, top and bottom)",other,other,,1
+pdms (10:1 with curing agent),other,other,,1
+fdts-modified mg/al ldh,fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+organoclay cloisite 30b,nanofiller,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,1
+pei-coated c30b (1:1 pei:clay),nanofiller,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,1
+pi-coated c30b (1:1 pi:clay),nanofiller,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,1
+amino-silane modified sepiolite (osep),nanofiller,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,1
+amino-silane modified zhs/sepiolite hybrid (osepzhs),synergist,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,1
+2-(diphenylphosphino)benzoic acid (ppac),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+ppac-modified magnesium hydroxide (mh@ppac),fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+atpepdpa (phosphamide ammonium salt),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+pthf,matrix,not_additive,role matrix/curing_agent,1
+m-g50-c50 polyamidoamine copolymer (glycine/cystine 50/50),fr,other_FR,role fallback,1
+m-g/m-c polyamidoamine blend 50/50,fr,other_FR,role fallback,1
+tio2 nanotubes (tnts),nanofiller,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+co3o4-loaded tio2 nanotubes (co3o4-tnts),nanofiller,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+ctab-intercalated alpha-zirconium phosphate (ozrp),nanofiller,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+co3o4-tnts,nanofiller,other_filler,role fallback,1
+ozrp,nanofiller,other_filler,role fallback,1
+la-btc (la-mof),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+ce-btc (ce-mof),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+y-btc (y-mof),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+ionic-liquid functionalized imogolite nanotubes (ints-pf6-ils),synergist,other_FR,role fallback,1
+kh-550 silica sol,fr,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+phosphorus-containing polysulfone arpn2,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+phosphorus-containing polysulfone arpo2,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+phosphorus-containing polysulfone aropn2,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+phosphorus-containing polysulfone aropo2,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+"mh (from hydromagnesite, naoh 0 mol/l)",fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+"mh (from hydromagnesite, naoh 0.5 mol/l)",fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+"mh (from hydromagnesite, naoh 1.0 mol/l)",fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+"mh (from hydromagnesite, naoh 1.5 mol/l)",fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+"mh (from hydromagnesite, naoh 2.0 mol/l)",fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+pbf (pretreated basalt fibre),reinforcement,glass_fibre,glass fib|\bgf\b|glass fabric|e-glass|ba,1
+mbf (kh550-modified basalt fibre),reinforcement,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+ph-oda,synergist,other_FR,role fallback,1
+m-pcass (phosphonate polyamidoamine),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+dpp-pepa,fr,other_FR,role fallback,1
+"alpi (exolit op1230, aluminum diethylphosphinate)",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+alpo (aluminum methylmethoxyphosphonate),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+lig-p (pretreated lignin),fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+lig-m (pa-dopo grafted lignin),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+lig-f (pa-dopo + dopo grafted lignin),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+e-51 bisphenol a epoxy (component a),matrix,not_additive,role matrix/curing_agent,1
+modified aromatic amine curing agent (component b),curing_agent,not_additive,role matrix/curing_agent,1
+epoxy resin (e-51 component a : amine component b = 60:40),matrix,not_additive,role matrix/curing_agent,1
+"calcium alginate / nano-calcium borate composite (from sodium alginate + borax, cacl2 cross-linked)",fr,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,1
+cumaru tropical wood (untreated board),matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+garapa tropical wood (untreated board),matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+kempas tropical wood (untreated board),matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+merbau tropical wood (untreated board),matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+ipe tropical wood (untreated board),matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+dicumyl peroxide,curing_agent,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+ppso (oligo(phenylphosphonic dihydroxypropyl silicone oil)),fr,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+china fir (cunninghamia lanceolata) wood,matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+deep eutectic solvent urea:glycerol:sorbitol 2:1:1,plasticizer,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,1
+non-woven polypropylene fabric (basis weight 20 g/m2),matrix,not_additive,role matrix/curing_agent,1
+antimicrobial inner protective layer,other,other,,1
+non-woven polypropylene fabric,matrix,not_additive,role matrix/curing_agent,1
+phytic acid coating,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+laponite coating,filler,other_filler,role fallback,1
+phytic acid-fe2(so4)3 (pa-fe),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+laponite,filler,other_filler,role fallback,1
+total coating 41.9 wt% weight gain,other,other,,1
+potassium carbonate k2co3 (20% solution),fr,other_FR,role fallback,1
+potassium carbonate k2co3 (33.3% solution),fr,other_FR,role fallback,1
+potassium carbonate k2co3 (50% solution),fr,other_FR,role fallback,1
+bisguanidine phosphate (22.5% solution),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+monoammonium phosphate nh4h2po4 (35% solution),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+diammonium phosphate (nh4)2hpo4 (42.9% solution),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+pristine nanodiamond (nd),nanofiller,other_filler,role fallback,1
+zhs,fr,other_FR,role fallback,1
+zhs/go nanohybrid,fr,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,1
+dcsa-na,fr,other_FR,role fallback,1
+erl-4221 cycloaliphatic epoxy,matrix,not_additive,role matrix/curing_agent,1
+bcep (p-containing cycloaliphatic epoxide),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+mf resin,matrix,not_additive,role matrix/curing_agent,1
+"12pva-10bgmf resin (mf modified with pva 0.12 mol, bg 0.1 mol per 2 mol f)",matrix,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+aramid paper core (1 ply),reinforcement,other_filler,role fallback,1
+pp non-woven fabric core (1 ply),reinforcement,other_filler,role fallback,1
+silica-gel microencapsulated app (mcapp),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+azo chromophore dye (ac),other,other,,1
+al-mg hydroxycarbonate lh5 (mg/al 5/95),fr,other_FR,role fallback,1
+"lh5/ac hybrid pigment (azo dye on al-mg hydroxycarbonate, mg/al 5/95)",fr,other_FR,role fallback,1
+al-mg hydroxycarbonate lh20 (mg/al 20/80),fr,other_FR,role fallback,1
+"lh20/ac hybrid pigment (azo dye on al-mg hydroxycarbonate, mg/al 20/80)",fr,other_FR,role fallback,1
+al-mg hydroxycarbonate lh30 (mg/al 30/70),fr,other_FR,role fallback,1
+"lh30/ac hybrid pigment (azo dye on al-mg hydroxycarbonate, mg/al 30/70)",fr,other_FR,role fallback,1
+al-mg hydroxycarbonate lh70 (mg/al 70/30),fr,other_FR,role fallback,1
+"lh70/ac hybrid pigment (azo dye on al-mg hydroxycarbonate, mg/al 70/30)",fr,other_FR,role fallback,1
+"polybenzoxazine (bisphenol a benzoxazine, thermally cured solid slab)",matrix,not_additive,role matrix/curing_agent,1
+"polybenzoxazine aerogel (bisphenol a benzoxazine, hcl ring-opened sol-gel)",matrix,not_additive,role matrix/curing_agent,1
+aluminum 2-carboxyethylphenylhypophosphite (alcpa),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+g-c3n4/alcpa hybrid cnalcpa30 (g-c3n4:alcpa 30:100 by weight),fr,other_FR,role fallback,1
+nano-calcium borate,fr,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,1
+black phosphorene/graphene (bp/g),fr,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,1
+puf,matrix,not_additive,role matrix/curing_agent,1
+g-c3n4/pazn,fr,other_FR,role fallback,1
+tmapp,fr,other_FR,role fallback,1
+expanded vermiculite (100 mesh),synergist,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,1
+expanded vermiculite (1250 mesh),synergist,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,1
+nano-cu2o,fr,other_FR,role fallback,1
+nsapp-1,fr,other_FR,role fallback,1
+nsapp-2,fr,other_FR,role fallback,1
+nsapp-3,fr,other_FR,role fallback,1
+nsapp-4,fr,other_FR,role fallback,1
+eg@pda,fr,EG,expand(able|ed) graphite|\beg\b,1
+app-cu,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+app-cu@pda,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+attapulgite (atp),synergist,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,1
+zif-67@atp,synergist,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+layered ceo2 (l-ceo2),synergist,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+particulate ceo2 (p-ceo2),synergist,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+microcrystalline cellulose (cel),filler,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+"phosphorylated cellulose (cel-p, 4.15 wt% p)",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+app@pei (pei-encapsulated app),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+app@pei@ti3c2tx (app@pei:ti3c2tx 20:1),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+app@pei@ti3c2tx (app@pei:ti3c2tx 10:1),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+app@pei@ti3c2tx (app@pei:ti3c2tx 5:1),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+rice straw (100 mm sections),matrix,not_additive,role matrix/curing_agent,1
+wheat straw (100 mm sections),matrix,not_additive,role matrix/curing_agent,1
+corn straw (100 mm sections),matrix,not_additive,role matrix/curing_agent,1
+untreated lignin,other,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+lignin hydrothermally degraded in ethanol 200 °c 1 h,other,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+lignin hydrothermally degraded in ethanol 215 °c 4 h,other,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+psq (poly(amino-epoxy)silsesquioxane),fr,other_FR,role fallback,1
+p5psq (phosphate-grafted polysilsesquioxane),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+"cahpi5 (ahpi/g-c3n4 hybrid, g-c3n4:ahpi 5/95)",fr,other_FR,role fallback,1
+"cahpi10 (ahpi/g-c3n4 hybrid, g-c3n4:ahpi 10/90 implied by label",,other,,1
+~0.32 g g-c3n4 per batch),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+"cahpi20 (ahpi/g-c3n4 hybrid, g-c3n4:ahpi 20/80)",fr,other_FR,role fallback,1
+ahpi (aluminum hypophosphite),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+clig (silane-modified lignin),synergist,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+lignin (unmodified wheat straw alkali lignin),synergist,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+melamine-phytic acid (mel:pa 6:1 molar) supramolecular assembly,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+"pan fabric (95 wt% acrylonitrile/5 wt% vinyl acetate fibre, 150 g/m2)",matrix,not_additive,role matrix/curing_agent,1
+pan fabric (150 g/m2),matrix,not_additive,role matrix/curing_agent,1
+chitosan (grafted),fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+phosphorylation (phosphorous acid/urea),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+"dopo-diamine-initiated pla oligomer (dopo-pla, ~4 wt% p)",matrix,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+hdi,other,other,,1
+"cotton fabric (plain woven, 122 g/m2)",matrix,not_additive,role matrix/curing_agent,1
+cotton fabric (122 g/m2),matrix,not_additive,role matrix/curing_agent,1
+cpn-pdms,fr,other_FR,role fallback,1
+stearic acid-modified kaolin (sta-kl),fr,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,1
+halloysite nanotube clay (hnt),nanofiller,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,1
+"fire extinguishing solution (fes: nh4cl, carbamide, diammonium hydrogen phosphate, polyoxyethylene lauryl ether)",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+fire extinguishing solution (fes),fr,other_FR,role fallback,1
+mapp@als (aptms-modified app wrapped nano-alumina),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+"thiol-ene (3t trimethylolpropane tris(3-mercaptopropionate) + tae pentaerythritol allyl ether, equal amounts)",matrix,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+"thiol-ene (3t + tae, equal amounts)",matrix,not_additive,role matrix/curing_agent,1
+poly(aminopropyl/phenyl)silsesquioxane (pa),fr,other_FR,role fallback,1
+amino-functionalized polyphosphazene microspheres (hcnp),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+"tpu (mdi/ptmg/bdo, molar ratio mdi:ptmg:bdo:pepe 2:1:1:0)",matrix,not_additive,role matrix/curing_agent,1
+"tpu (mdi/ptmg/bdo, molar ratio mdi:ptmg:bdo:pepe 2:1:0.95:0.05)",matrix,not_additive,role matrix/curing_agent,1
+"tpu (mdi/ptmg/bdo, molar ratio mdi:ptmg:bdo:pepe 2:1:0.90:0.10)",matrix,not_additive,role matrix/curing_agent,1
+"tpu (mdi/ptmg/bdo, molar ratio mdi:ptmg:bdo:pepe 2:1:0.80:0.20)",matrix,not_additive,role matrix/curing_agent,1
+"tpu (mdi/ptmg/bdo, molar ratio mdi:ptmg:bdo:pepe 2:1:0.60:0.40)",matrix,not_additive,role matrix/curing_agent,1
+mno2 nanosheets (untreated),nanofiller,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+amwp (artificial marble waste powder),filler,other_filler,role fallback,1
+cnts/amwp (ca),filler,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,1
+cnts/ldhs/amwp (cla),filler,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,1
+claa (cnts/ldhs/adp/amwp),fr,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,1
+gypsum (calcium sulphate dihydrate) core,matrix,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,1
+overlay paper,other,other,,1
+portland cement,matrix,not_additive,role matrix/curing_agent,1
+white spruce wood particles,filler,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+steatite powder (sp),filler,other_filler,role fallback,1
+aptes,other,other,,1
+"tps-g (thermoplastic starch, glycerol/water)",fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+"tps-g-cpa (thermoplastic starch, glycerol/water/choline phytate)",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+arginine-phosphoric acid-urea fr,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+"co-mof (zif-67 type, co/2-methylimidazole)",fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+"zn-mof (zif-8 type, zn/2-methylimidazole)",fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+fe-mof (fe/terephthalic acid),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+ap/mca (mass ratio 5:1),fr,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,1
+pa6/ommt nanocomposite (5 phr ommt in pa6),synergist,other_FR,role fallback,1
+zeolite,synergist,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,1
+mil-125,synergist,other_FR,role fallback,1
+polyvinyl chloride board (pvc),matrix,not_additive,role matrix/curing_agent,1
+wood-plastic composite (wpc),matrix,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+extruded polystyrene insulation (xps),matrix,not_additive,role matrix/curing_agent,1
+expanded polystyrene insulation (eps),matrix,not_additive,role matrix/curing_agent,1
+mapp (app coated with phosphorus-containing silica gel),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+ti3c2tx mxene nanosheets,nanofiller,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+mpcsn (melamine-phytic acid-cu2+ supermolecular network),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+"abs (elix p2mc, neat)",matrix,not_additive,role matrix/curing_agent,1
+biomass-based fr,fr,other_FR,role fallback,1
+phosphomolybdic acid (pma),synergist,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+"1-butyl-2,3-dimethylimidazolium tetrafluoroborate (b4f)",synergist,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,1
+melamine (ma),fr,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,1
+melamine tungstate (ma)2wo4,fr,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,1
+melamine molybdate (ma)2moo4,fr,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,1
+melamine molybdate mamoo4,fr,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,1
+melamine molybdate (ma)2(moo4)3,fr,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,1
+bap (atmp-chelated boric acid/pentaerythritol/urea complex),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+nh4h2po4,synergist,other_FR,role fallback,1
+tad,fr,other_FR,role fallback,1
+tgd,fr,other_FR,role fallback,1
+wmtapp (wet ball-milled app modified with triazine silane coupling agent),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+wmapp (wet ball-milled app),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+wmaapp (wet ball-milled app modified with kh550),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+mg/zn/al-ldh,fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+vinyl-silane-modified sio2-microencapsulated mg/zn/al-ldh (modified mldhs),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+tio2/so42- solid superacid,synergist,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+bhappo (bis(3-hydroxyaminophenyl) phenyl phosphine oxide),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+bhappo,fr,other_FR,role fallback,1
+beta-feooh nanorods,nanofiller,other_filler,role fallback,1
+zeolite 4a,synergist,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,1
+om-so3k (potassium sulfonate functionalized organosilica microspheres),fr,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+"eg1 (expandable graphite, 45 um)",fr,EG,expand(able|ed) graphite|\beg\b,1
+"eg2 (expandable graphite, 150 um)",fr,EG,expand(able|ed) graphite|\beg\b,1
+polydopamine-modified multilayer graphene (mlg-pda),synergist,carbon_nano,graphene|\bgo\b|\brgo\b|carbon nanotube|,1
+diatomite (dm),synergist,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,1
+melamine (mel),fr,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,1
+"poe (dow 8150, polyethylene-octene elastomer)",matrix,not_additive,role matrix/curing_agent,1
+poe (dow 8150),matrix,not_additive,role matrix/curing_agent,1
+"mbpne (p/n/b mono-component ifr, ma:ba 95:5)",fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+alpi (exolit op1230),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+sio2 (kh570-modified nano silica),synergist,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+bdo (chain extender),other,other,,1
+lig-c (purified enzymatic hydrolysis lignin),filler,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+lig-f (dopo/piperazine-modified lignin fr),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+pp (braskem 448r),matrix,not_additive,role matrix/curing_agent,1
+mg-al-co3 ldh,fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+mg-al-h2po4 ldh (m-ldh),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+mdi/melamine polyurea co-microencapsulated app/ath 1/1 [m(a&a)],fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+mctpg (monochlorotriazine triethylphosphite guanidine) reactive finish,fr,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,1
+natural flake graphite (ng),filler,other_filler,role fallback,1
+"expandable graphite, ultrasound-irradiation route (ueg)",fr,EG,expand(able|ed) graphite|\beg\b,1
+"expandable graphite, hydrothermal route (heg)",fr,EG,expand(able|ed) graphite|\beg\b,1
+"expandable graphite, o3-hydrothermal route (o3-heg)",fr,EG,expand(able|ed) graphite|\beg\b,1
+polyamide resin pa-650,curing_agent,not_additive,role matrix/curing_agent,1
+app (form ii),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+cp+sb2o3,synergist,Sb2O3,sb2o3|antimony,1
+mg-al ldh (co3),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+boron phenolic resin (bpf),other,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,1
+la2o3,synergist,other_FR,role fallback,1
+pp compound,matrix,not_additive,role matrix/curing_agent,1
+poe,other,other,,1
+black masterbatch,other,other,,1
+"pp compound (12 wt% talc, 7 wt% poe, 5 wt% masterbatch)",matrix,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,1
+basalt fibre (0.5 mm x 12 um),reinforcement,glass_fibre,glass fib|\bgf\b|glass fabric|e-glass|ba,1
+o-mmt (otac-modified mmt),nanofiller,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,1
+"p-mmt (rdp-intercalated mmt, ~20 wt% rdp)",synergist,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,1
+ommt dk2 (organoclay),nanofiller,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,1
+expandable graphite eg1 (50 mesh),fr,EG,expand(able|ed) graphite|\beg\b,1
+expandable graphite eg2 (80 mesh),fr,EG,expand(able|ed) graphite|\beg\b,1
+vtms (vinyltrimethoxysilane),synergist,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+ptfms (potassium perfluoromethanesulfonate),fr,other_FR,role fallback,1
+"melamine formaldehyde resin (mf 303-80, 58-62% in n-butanol)",matrix,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,1
+"cyclic phosphate ester acid (pea, 60 mass% in ethanol)",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+plywood board,other,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+fly-ash hollow glass microspheres (hgm),filler,other_filler,role fallback,1
+hgm@[eooemim][pf6] (ionic-liquid-modified hgm),fr,other_FR,role fallback,1
+organoclay cloisite 20a,nanofiller,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,1
+organotin heat stabilizer,other,other,,1
+coupling agent nde-311,compatibilizer,other,,1
+aluminum diethyl phosphinate (alpi),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+ca(oh)2 (hydrated lime),filler,other_filler,role fallback,1
+caco3 (limestone),filler,mineral_filler,talc|calcium carbonate|caco3|mica|wollas,1
+red mud,filler,other_filler,role fallback,1
+[apmim]pf6 (1-aminoethyl-3-methylimidazolium hexafluorophosphate),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+[emim]pf6 (1-butyl-3-methylimidazolium hexafluorophosphate),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+[glu]h2pw12o40 (glutamic acid phosphotungstate),other,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+lanthanum hypophosphite (lhp),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+cerium hypophosphite (chp),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+"smfapp (app microencapsulated with starch-melamine-formaldehyde resin, 24.8% resin, 15 g starch prepolymer)",fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+"mcasp (monochlorotriazine aminopropyl silanol phosphate, reactive finish)",fr,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,1
+"trimer (tri(1-oxo-2,6,7-trioxa-1-phosphabicyclo[2.2.2]octane-methyl) phosphate)",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+hollow glass microspheres (hgm 5020),fr,other_FR,role fallback,1
+tio2-coated hollow glass microspheres (hgm@tio2),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+aspen wood flour,filler,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+"magnesium hydroxide (mdh, 1-3 um)",fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+"aluminium trihydrate (ath, 1-3 um)",fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+lahpp (lanthanum phenylphosphonate),synergist,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+hgm (hollow glass microspheres),filler,other_filler,role fallback,1
+hgm@amp (ammonium molybdophosphate-coated hollow glass microspheres),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+bleached cotton fabric (150 g m-2 as printed),matrix,not_additive,role matrix/curing_agent,1
+sodium tri-polyphosphate (stpp),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+total add-on 22%,,other,,1
+cfa (triazine-based charring-foaming agent),fr,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,1
+pea (cyclic phosphate ester),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+"zpea (pea esterified with zinc borate, pea:znb 99:1)",fr,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,1
+"zpea (pea esterified with zinc borate, pea:znb 97:3)",fr,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,1
+"zpea (pea esterified with zinc borate, pea:znb 95:5)",fr,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,1
+"zpea (pea esterified with zinc borate, pea:znb 93:7)",fr,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,1
+papp (piperazine pyrophosphate),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+mpp (melamine phosphate),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+tio2 (10-30 nm),synergist,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+araldite ly 1564sp/hardener xb3487 epoxy (100:34),matrix,not_additive,role matrix/curing_agent,1
+110c glass fibre woven fabric (0/90),reinforcement,glass_fibre,glass fib|\bgf\b|glass fabric|e-glass|ba,1
+"glass/epoxy laminate skins (araldite ly 1564sp/xb3487, 110c glass fabric)",matrix,glass_fibre,glass fib|\bgf\b|glass fabric|e-glass|ba,1
+divinycell h60 pvc closed-cell foam core 4 mm,other,other,,1
+vinyl poss,fr,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+poss-evim (vinyl poss-poly[evim]bf4 hybrid),fr,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+"poss-vipsp (vinyl poss-bronsted ionic liquid hybrid, h3po4 treated)",fr,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+kaolinite (kaol),synergist,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,1
+k-hapcp (hapcp-grafted exfoliated kaolinite),synergist,nanoclay,montmorillonite|\bmmt\b|\bomt\b|clay|hal,1
+chitosan stannate (sn-cs),fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+chitosan molybdate (mo-cs),fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+chitosan silicate (si-cs),fr,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+chitosan tungstate (w-cs),fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+[bmim]h2po2 (bmp),fr,other_FR,role fallback,1
+eg-bmp (eg:bmp 2:1),fr,EG,expand(able|ed) graphite|\beg\b,1
+uio66-nh2,fr,other_FR,role fallback,1
+w-uio66-nh2 (hollow),fr,other_FR,role fallback,1
+w-uio66-ppa (phenylphosphonic acid grafted hollow mof),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+isopropyl tris(dioctylphosphoryloxy) titanate,synergist,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+pentaerythritol phosphate melamine salt (ppms),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+none (neat alkali-lignin liquefied-product rpuf),fr,not_additive,none,1
+silica aerogel (sa) powder,fr,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+tbpbp + silica aerogel powder,fr,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+sodium alginate + expandable graphite,fr,EG,expand(able|ed) graphite|\beg\b,1
+adpo2,fr,other_FR,role fallback,1
+sa,fr,other_FR,role fallback,1
+adpo2 + sa + eg,fr,EG,expand(able|ed) graphite|\beg\b,1
+zeolitic imidazolate framework zif-7,fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+zeolitic imidazolate framework zif-8,fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+zeolitic imidazolate framework zif-11,fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+pentaerythritol phosphate (pepa),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+tbpbp (phosphate fr polyol additive),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+lignin-based polyol (30 php substituting polyether),fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+lignin polyol + flame retardant polyol,fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+lignin polyol + microencapsulated app,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+lignin polyol + frp + mapp,fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+frp + mapp + organically modified ldh (no lignin polyol),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+lignin polyol + frp + mapp + oldh,fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+uncoated,fr,other_FR,role fallback,1
+polyacrylamide/mxene hydrogel coating,fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+eg + app + graphene oxide,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+eg + app + ionic-liquid functionalized go (ilgo),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+mao-zn (zn mesoporous silicate from iron tailings),fr,Si,silic|siloxane|\bposs\b|silane|silica|si,1
+mao-zn + app,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+phosphate frs + ath + mwnt,fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+phosphate frs + app + mwnt,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+phosphate frs + zinc borate + mwnt,fr,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,1
+phosphate frs + ath + tio2,fr,metal_hydroxide,alumin(i)?um (tri)?hydroxide|\bath\b|mag,1
+phosphate frs + app + tio2,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+phosphate frs + zinc borate + tio2,fr,boron,bor(ate|on|ic)|\bzb\b|zinc borate|\bbn\b,1
+phosphate frs only,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+ea-bppo (phosphorus additive),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+tbua-bppo (phosphorus additive) + tep,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+dmi-bppo (phosphorus additive) + tep,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+dmi-dopo (phosphorus additive) + tep,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+hq-bppo (phosphorus additive) + tep,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+hq-dopo (phosphorus additive) + tep,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+melamine + expanded graphite eg 290,fr,EG,expand(able|ed) graphite|\beg\b,1
+melamine + roflam b7 + roflam plo,fr,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,1
+melamine + exolit op 935,fr,N_FR,melamine|cyanur|\bmca\b|\bmc\b|urea|guan,1
+melamine-formaldehyde resin coated app (mfapp),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+dmmp only,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+eg only,fr,EG,expand(able|ed) graphite|\beg\b,1
+app/mel/per ifr,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+app/mel/per/lignosulfonate ifr,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+tbpbp,fr,other_FR,role fallback,1
+ceppg,fr,other_FR,role fallback,1
+lignin-based polyol (lbp),fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+lbp + flame retardant polyol,fr,other_FR,role fallback,1
+lbp + microencapsulated app,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+lbp + frp + mapp,fr,other_FR,role fallback,1
+frp + mapp + oldh,fr,other_FR,role fallback,1
+lbp + frp + mapp + oldh,fr,other_FR,role fallback,1
+app + cobalt phytate (pa-co),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+eg + dmmp,fr,EG,expand(able|ed) graphite|\beg\b,1
+eg + dmmp + go,fr,EG,expand(able|ed) graphite|\beg\b,1
+bh + eg,fr,EG,expand(able|ed) graphite|\beg\b,1
+ao (aluminum oxide),fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+app/per/mc/eg/caco3 intumescent,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+ifr + ath 3 php,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+ifr + ath 5 php,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+microencapsulated eg + microencapsulated app,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+microencapsulated eg + mapp + organo-ldh,fr,EG,expand(able|ed) graphite|\beg\b,1
+none (castor oil derived polyol codeoa),fr,not_additive,none,1
+reactive phosphorus polyol cppa,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+cppa polyol + expandable graphite,fr,EG,expand(able|ed) graphite|\beg\b,1
+cppa polyol + eg + graphene oxide,fr,EG,expand(able|ed) graphite|\beg\b,1
+hazelnut shell filler,fr,other_FR,role fallback,1
+hydrotalcite filler,fr,metal_oxide_LDH,\bldh\b|layered double|hydrotalcite|\bmo,1
+expandable graphite + dmmp,fr,EG,expand(able|ed) graphite|\beg\b,1
+eg + dmmp + graphene oxide,fr,EG,expand(able|ed) graphite|\beg\b,1
+eg + app intumescent system (ifr),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+ifr + graphene oxide,fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+ifr + phytic acid-functionalized go (pa-go),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+pnc (cellulose phosphate-based p/n fr),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+tcpp + dmmp + zinc ferrite,fr,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,1
+tcpp + dmmp + copper ferrite,fr,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,1
+tcpp + dmmp + nickel ferrite,fr,halogen_FR,brom|chlor(?!ide)|decabrom|\bdbdpo\b|\bd,1
+modified iron tailings (mits),fr,other_FR,role fallback,1
+mits + expandable graphite (eg),fr,EG,expand(able|ed) graphite|\beg\b,1
+none (reference with ortegol-501),fr,not_additive,none,1
+diethyl ethylphosphonate (deep),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+potassium salt,fr,other_FR,role fallback,1
+potassium salt + dfd (reactive p diol),fr,other_FR,role fallback,1
+dfd (reactive p diol),fr,other_FR,role fallback,1
+microencapsulated app (pfapp),fr,APP_IFR,ammonium polyphosphate|\bapp\b|intumesce,1
+pfapp + phosphorus-functionalized lignin polyol (lignin-poh),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+triphenyl phosphate (tpp),fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+tpp + tep,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+"op560 (reactive phosphorus polyol, aliphatic)",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+"ea-bppo (nonreactive, aliphatic)",fr,other_FR,role fallback,1
+ea-bppo + tep,fr,other_FR,role fallback,1
+"bua-dopo (nonreactive, aliphatic)",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+bua-dopo + tep,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+dmi-bppo + tep,fr,other_FR,role fallback,1
+dmi-dopo + tep,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+pa-bppo (aromatic) + tep,fr,other_FR,role fallback,1
+"fu-bp (reactive, 1 oh) + tep",fr,other_FR,role fallback,1
+"fu-dopo (reactive, 1 oh) + tep",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+"ta-bppo (reactive, 2 oh)",fr,other_FR,role fallback,1
+"ta-dopo (reactive, 2 oh)",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+"fa-bppo (reactive, 1 oh)",fr,other_FR,role fallback,1
+"ba-bppo (reactive, 1 oh)",fr,other_FR,role fallback,1
+fa-bppo + tep,fr,other_FR,role fallback,1
+fa-bp + tep,fr,other_FR,role fallback,1
+ba-bppo + tep,fr,other_FR,role fallback,1
+"ba-dopo (reactive, 1 oh)",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+ba-dopo + tep,fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+"fu-bppo (reactive, 1 oh)",fr,other_FR,role fallback,1
+"fu-dopo (reactive, 1 oh)",fr,P_FR,phosph|dopo|phyt|\bbdp\b|\brdp\b|\btpp\b,1
+"ta-bp (reactive, 2 oh)",fr,other_FR,role fallback,1
+ta-bp + tep,fr,other_FR,role fallback,1
+op560 + tep,fr,other_FR,role fallback,1
+"oxypropylated lignin polyol 20/80, 100% of polyol",fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+"lignin polyol 30/70, 100% of polyol",fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+"lignin polyol 40/60, 100% of polyol",fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+"depolymerized lignin polyol ol 30/70-b, 100% of polyol",fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+"depolymerized lignin polyol ol 30/70-c, 100% of polyol",fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+"depolymerized lignin polyol obl 30/70-c, 100% of polyol",fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1
+commercial polyol (no lignin),fr,natural_fibre,wood|flax|kenaf|jute|hemp|ramie|bamboo|s,1

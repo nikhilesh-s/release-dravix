@@ -1,0 +1,9 @@
+# Dravix engine API (Render). Model pins match the repo requirements.txt so the committed
+# api/dravix_engine_compact.joblib unpickles (saved with scikit-learn 1.7.1).
+scikit-learn==1.7.1
+numpy==2.5.3
+pandas==3.0.6
+scipy==1.18.1
+joblib==1.6.0
+fastapi==0.159.1
+uvicorn==0.54.0

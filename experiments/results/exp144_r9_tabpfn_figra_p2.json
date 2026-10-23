@@ -1,0 +1,117 @@
+{
+  "slug": "r9_tabpfn_figra_p2",
+  "target": "Fire Growth Rate FIGRA (kW/m2/s)",
+  "round_config": "experiments/configs/round9_tabpfn_smearing.json",
+  "dataset": "figra_fsri replicate mean per material x flux, materials with MCC (197 rows / 67 materials); incumbent exp119 rows, order and groups",
+  "features": [
+    "heat_flux_kWm2",
+    "mcc_peak_hrr_Wg",
+    "mcc_char_yield_pct",
+    "density_kgm3",
+    "cone_thickness_mm",
+    "cone_mass_per_area_kgm2",
+    "mcc_hrc_JgK",
+    "mcc_total_hr_kJg",
+    "mcc_t_peak_C"
+  ],
+  "model": "Avg([exp119 model, TabPFN V2]) in the log1p wrapper, nested (HGB/ET/Ridge 1/6 each, TabPFN 1/2), then expm1",
+  "hyperparameters": "TabPFNRegressor.create_default_for_version(ModelVersion.V2, device='cpu', random_state=0); package defaults, tabpfn 9.1.0",
+  "code": "data/v2/train_round9_tabpfn.py",
+  "n_rows": 197,
+  "n_groups": 67,
+  "protocol": "gkf_group5x10",
+  "rkf_mean": 0.5148,
+  "rkf_std": 0.0448,
+  "ci_lo": 0.3186,
+  "ci_hi": 0.6835,
+  "pooled_ci_lo": 0.3661,
+  "pooled_ci_hi": 0.6753,
+  "paired_vs": "exp119",
+  "paired_delta": 0.0173,
+  "paired_wins": "9/10",
+  "sota": 0.9724,
+  "sota_source": "phan_morgan",
+  "status": "ok",
+  "blocked_reason": "",
+  "note": "round 9 FIGRA p2 (provisional id r9_tabpfn_figra_p2); report vs exp119 on identical folds; gain concentrated in <= 5 materials, not established; Built with PriorLabs-TabPFN",
+  "rkf_mean_full": 0.5148252439898656,
+  "ci_lo_full": 0.3186409268665544,
+  "ci_hi_full": 0.6835090449278847,
+  "per_repeat_r2": [
+    0.5089335572428736,
+    0.4741535265210878,
+    0.5384662834124411,
+    0.4507476197082042,
+    0.5964000931610463,
+    0.44834373533397465,
+    0.5594867930143621,
+    0.5085035842217072,
+    0.5357260029703649,
+    0.5274912443125944
+  ],
+  "top_k_removal": {
+    "top5": [
+      [
+        "Rubber_Band",
+        489.0800247111534
+      ],
+      [
+        "Overstuffed_Chair_Polyurethane_Foam",
+        278.86511703119845
+      ],
+      [
+        "Hemp_Sheet",
+        144.1764036082274
+      ],
+      [
+        "HDPE",
+        125.98529000487672
+      ],
+      [
+        "Cotton_Sheet",
+        97.21387696033541
+      ]
+    ],
+    "top5_share_of_net": 2.025394393755902,
+    "drop_top1": {
+      "mean_gain": 0.002324165054661631,
+      "wins": 4
+    },
+    "drop_top3": {
+      "mean_gain": -0.012854532620433212,
+      "wins": 3
+    },
+    "drop_top5": {
+      "mean_gain": -0.022150981605139175,
+      "wins": 2
+    },
+    "not_established": true
+  },
+  "wall_time_s": 221.2,
+  "tabpfn_version": "9.1.0",
+  "torch_version": "2.8.0",
+  "sklearn_version": "1.7.1",
+  "checkpoint": "tabpfn-v2-regressor.ckpt",
+  "checkpoint_sha256": "2ab5a07d5c41dfe6db9aa7ae106fc6de898326c2765be66505a07e2868c10736",
+  "attribution": "Built with PriorLabs-TabPFN",
+  "n_estimators_": 8,
+  "devices_": [
+    "cpu"
+  ],
+  "use_autocast_": false,
+  "forced_inference_dtype_": null,
+  "gate_v2": {
+    "theta": 0.017318274473418206,
+    "wins": 9,
+    "ci_lo": 0.3186409268665544,
+    "ci_hi": 0.6835090449278847,
+    "se": 0.020026993659866363,
+    "lb_maxT": -0.01779057561084572,
+    "lb_unadjusted": -0.01631027686291163,
+    "lb_raw_maxT": -0.0506376052308217,
+    "p_boot_gain_le_0": 0.1935,
+    "K": 3,
+    "q": 1.75307640680095,
+    "selected": false
+  }
+}

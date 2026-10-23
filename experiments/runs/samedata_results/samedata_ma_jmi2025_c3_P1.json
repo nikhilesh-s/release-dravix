@@ -1,0 +1,166 @@
+{
+ "slug": "samedata_ma_jmi2025_c3_P1",
+ "target": "LOI (%), polypropylene + halogen-free FR composites (iteration 1 of their active-learning loop)",
+ "round_config": "experiments/configs/samedata_ma_jmi2025.json",
+ "shared_config": "experiments/configs/samedata_common.json",
+ "dataset": "Ma W., ..., Song N., Ding P. J. Mater. Inform. 5 (2025), doi:10.20517/jmi.2025.09 (Shanghai University), CC BY 4.0; data/sources/incoming/ma_jmi2025/Data_LOI.xlsx (217 rows)",
+ "features": [
+  "PP",
+  "PAPP",
+  "TCA",
+  "ZHS",
+  "ZS",
+  "Mg(OH)2",
+  "DOPO",
+  "MPP",
+  "Pentaerythritol",
+  "APP",
+  "EBS",
+  "Anti-drip-agent",
+  "silane coupling agent",
+  "Al(OH)3",
+  "SiO2",
+  "ZnB",
+  "AHP",
+  "XiuCheng",
+  "wollastonite",
+  "imvite",
+  "XS-FR-8310",
+  "XS-HFFR-8332",
+  "ZBS-PV-OA",
+  "EPFR-1100NT",
+  "M-2200B",
+  "FP-250S",
+  "CFA",
+  "ammonium octamolybdate",
+  "antimony oxides",
+  "antioxidant"
+ ],
+ "model": "(c1 + c2) / 2, both fit on the same training rows",
+ "hyperparameters": "mean of c1 and c2 predictions",
+ "code": "data/v2/train_samedata.py",
+ "n_rows": 217,
+ "n_groups": null,
+ "protocol": "P1: train_test_split(X, y, test_size=0.2, random_state=s), s = 0..9, on the 217 rows; StandardScaler inside the training part for r0 (c1-c3 per common). Test R2 (primary), RMSE, MAE. Same splits on the 227-row sensitivity set use the same seeds.",
+ "sota": 0.919,
+ "sota_source": "Ma W., ..., Song N., Ding P. J. Mater. Inform. 5 (2025), doi:10.20517/jmi.2025.09 (Shanghai University), CC BY 4.0",
+ "status": "blocked",
+ "blocked_reason": "common.c2.on_error: TabPFN raised on this dataset (P1_all227: 227-row set, seeds [6, 7]: ArpackError: ARPACK error 3: No shifts could be applied during a cycle of the Implicitly restarted Arnoldi iteration. One possibility is to increase the size of NCV relative to NEV. ) -> c2 and c3 BLOCKED for the dataset, not retried. Metrics already computed elsewhere are kept for transparency and are not selectable.",
+ "external_check": true,
+ "not_a_dravix_target": "same-data comparison; never enters leaderboard.csv / numbers_of_record.json",
+ "r2_mean": 0.9551772887485317,
+ "r2_sd": 0.019095092540067932,
+ "r2_repeat0": 0.9624020427962632,
+ "rmse_mean": 1.6229609970448862,
+ "rmse_sd": 0.2873929337571394,
+ "mae_mean": 1.1382093053895281,
+ "mae_sd": 0.182384904549278,
+ "sd_ddof": 0,
+ "per_repeat": [
+  {
+   "seed": 0,
+   "n_train": 173,
+   "n_test": 44,
+   "r2": 0.9624020427962632,
+   "rmse": 1.624764230600799,
+   "mae": 1.139449714170022
+  },
+  {
+   "seed": 1,
+   "n_train": 173,
+   "n_test": 44,
+   "r2": 0.9261076832438631,
+   "rmse": 2.1107846089720526,
+   "mae": 1.4285795449786347
+  },
+  {
+   "seed": 2,
+   "n_train": 173,
+   "n_test": 44,
+   "r2": 0.929035330780267,
+   "rmse": 1.9658559859705946,
+   "mae": 1.4317938281984937
+  },
+  {
+   "seed": 3,
+   "n_train": 173,
+   "n_test": 44,
+   "r2": 0.9518721060466584,
+   "rmse": 1.6266544616592533,
+   "mae": 1.1304676934897977
+  },
+  {
+   "seed": 4,
+   "n_train": 173,
+   "n_test": 44,
+   "r2": 0.9757866669165794,
+   "rmse": 1.237663117291311,
+   "mae": 0.9693399060475439
+  },
+  {
+   "seed": 5,
+   "n_train": 173,
+   "n_test": 44,
+   "r2": 0.9611491065354875,
+   "rmse": 1.573538760828732,
+   "mae": 1.0990778686783336
+  },
+  {
+   "seed": 6,
+   "n_train": 173,
+   "n_test": 44,
+   "r2": 0.9734901982688638,
+   "rmse": 1.3239438831796273,
+   "mae": 1.008534400504294
+  },
+  {
+   "seed": 7,
+   "n_train": 173,
+   "n_test": 44,
+   "r2": 0.9723076886155202,
+   "rmse": 1.445743121352774,
+   "mae": 0.8580711702732888
+  },
+  {
+   "seed": 8,
+   "n_train": 173,
+   "n_test": 44,
+   "r2": 0.9711164845647394,
+   "rmse": 1.3473821841653284,
+   "mae": 1.0243768931506219
+  },
+  {
+   "seed": 9,
+   "n_train": 173,
+   "n_test": 44,
+   "r2": 0.9285055797170764,
+   "rmse": 1.9732796164283923,
+   "mae": 1.2924020344042537
+  }
+ ],
+ "paired_vs": "r0 (same splits)",
+ "paired_delta": 0.014478220808913533,
+ "paired_wins": "9/10",
+ "attribution": "Built with PriorLabs-TabPFN",
+ "tabpfn_version": "9.1.0",
+ "checkpoint": "tabpfn-v2-regressor.ckpt",
+ "checkpoint_sha256": "2ab5a07d5c41dfe6db9aa7ae106fc6de898326c2765be66505a07e2868c10736",
+ "tabpfn_fitted_attrs": {
+  "n_estimators_": 8,
+  "devices_": [
+   "cpu"
+  ],
+  "use_autocast_": false,
+  "forced_inference_dtype_": null
+ },
+ "tabpfn_warnings": [],
+ "sklearn_version": "1.7.1",
+ "numpy_version": "2.2.6",
+ "torch_version": "2.8.0",
+ "wall_time_s": 0.0,
+ "sensitivity_all227": {
+  "status": "blocked",
+  "reason": "BLOCKED with c2: 227-row set, seeds [6, 7]: ArpackError: ARPACK error 3: No shifts could be applied during a cycle of the Implicitly restarted Arnoldi iteration. One possibility is to increase the size of NCV relative to NEV. "
+ },
+ "note": "c3 P1: BLOCKED (common.c2.on_error); R2 mean 0.9552 sd 0.0191 rep0 0.9624; external same-data check vs 0.919 (samedata_ma_jmi2025); Built with PriorLabs-TabPFN"
+}

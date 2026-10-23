@@ -1,0 +1,18 @@
+{
+  "round": "pomazi_round1b",
+  "decision": "Arnav 2026-10-02: approve bug-fix round 1b (critic experiments/critic/pomazi_round1_critic.md)",
+  "declared": "by Opus 5.5, see git commit time; before any run",
+  "plan_ref": "plans/FABLE_PLAN_2026-10-01.md \u00a76 Pom\u00e1zi loop (protocol B = GroupKFold by resin system)",
+  "banned_moves_checked": true,
+  "changes_vs_round1": [
+    "formulation groups: connected components of rows whose 8 composition inputs differ by < 0.1 (max abs) \u2014 fixes the 6 split matrix/composite pairs",
+    "hemp rows (fibre_type == hemp) excluded, as tagged at extraction",
+    "PRIMARY protocol = plan's: hold out one resin system at a time (PER/T58, GER/T58, SPE/T58, GFTE/DETDA, other); pooled OOF R2; 95% CI by formulation bootstrap (2000, seed 0) of that OOF",
+    "SECONDARY = corrected formulation-grouped GKF 5x10: mean, repeat-0 CI AND pooled-over-10-repeats CI",
+    "protocol A (theirs, random 80/20 x 50) reported unchanged"
+  ],
+  "unchanged": "targets, bars, features (14 named inputs), 4 candidates and their settings (rf, gbr_theirs, hgb, ridge), data file",
+  "selection_rule": "per target, highest PRIMARY (resin-system) R2",
+  "exit_triggers": "primary ci_lo > bar, or secondary pooled ci_lo > bar, or A mean > bar -> EXIT 5 (report all; humans word it)",
+  "note": "This is a post-result re-run approved by a human; round 1 (exp060-063) stays on the leaderboard as is."
+}

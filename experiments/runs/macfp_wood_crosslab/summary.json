@@ -1,0 +1,525 @@
+{
+  "round": "macfp_wood_crosslab",
+  "config": "experiments/configs/macfp_wood_crosslab.json",
+  "script": "data/v2/validate_macfp_wood_crosslab.py",
+  "status": "ok",
+  "blocked": [],
+  "flags": [],
+  "targets_blocked": {},
+  "report_only": true,
+  "note": "External cross-lab check, MaCFP-4 pine (one material, 8 oxygen-consumption labs), report-only. No number of record changes; nothing is compared with a bar.",
+  "counts": {
+    "primary_80": 80,
+    "fsri_lab": 18,
+    "other_labs": 62,
+    "tti_25": 11,
+    "umet": 6,
+    "tti_86_secondary": 86,
+    "edinburgh": 12,
+    "cr_flameout": 53,
+    "cr_primary_50": 50,
+    "cr_minus_umet_uq_47": 47,
+    "end_of_test": 89
+  },
+  "step1": {
+    "exp074": {
+      "mean": 0.6113,
+      "ci_lo": 0.5155,
+      "ci_hi": 0.8376,
+      "record": [
+        0.6113,
+        0.5155,
+        0.8376
+      ],
+      "reproduced": true,
+      "n_rows": 191,
+      "n_groups": 64,
+      "joblib_refit_max_abs_diff_kWm2": 0.0
+    },
+    "exp046": {
+      "mean": 0.3133,
+      "ci_lo": 0.0715,
+      "ci_hi": 0.4958,
+      "record": [
+        0.3133,
+        0.0715,
+        0.4958
+      ],
+      "reproduced": true,
+      "n_rows": 681,
+      "n_groups": 76
+    },
+    "exp117": {
+      "mean": 0.6504,
+      "ci_lo": 0.4389,
+      "ci_hi": 0.7893,
+      "record": [
+        0.6504,
+        0.4389,
+        0.7893
+      ],
+      "reproduced": true,
+      "n_rows": 567,
+      "n_groups": 61
+    }
+  },
+  "ps_gate": {
+    "FZJ": {
+      "pass_": true,
+      "hrc_ratio": 1.05,
+      "h_c_ratio": 0.9857
+    },
+    "Lund": {
+      "pass_": true,
+      "hrc_ratio": 0.9464,
+      "h_c_ratio": 1.0534
+    },
+    "NIST": {
+      "pass_": true,
+      "hrc_ratio": 1.0332,
+      "h_c_ratio": 0.9969
+    },
+    "TUBS": {
+      "pass_": true,
+      "hrc_ratio": 0.9905,
+      "h_c_ratio": 1.0
+    },
+    "UDRI": {
+      "pass_": true,
+      "hrc_ratio": 1.0,
+      "h_c_ratio": 1.0016
+    }
+  },
+  "features_sha256": "8f2831f2a009eeb3466f43f00836910419dec66f264f6d8cbee7694117956b3e",
+  "material_level": {
+    "mcc_peak_hrr_Wg": 66.58,
+    "mcc_t_peak_C": 378.8,
+    "mcc_total_hr_kJg": 11.973,
+    "mcc_t_onset_C_mean": 243.95,
+    "mcc_t_onset_C_median": 243.95,
+    "mcc_char_yield_pct": 14.733167,
+    "log_kpc_S1": 10.950517,
+    "sta_res_3K": 15.900441,
+    "sta_res_10K": 19.104674,
+    "sta_res_30K": 21.893852,
+    "G2": {
+      "cone_thickness_mm": 25.6,
+      "density_kgm3": 378.68065818105504,
+      "cone_mass_per_area_kgm2": 10.0435
+    }
+  },
+  "stop_time": {
+    "Aalto": {
+      "n": 9,
+      "residue mean %": "21.9",
+      "residue min %": "16.2",
+      "residue max %": "28.4",
+      "duration mean s": "1534.4",
+      "duration min s": "1095.0",
+      "duration max s": "2160.0",
+      "stop rule (README)": "not stated for cone-in-air tests; t_flameout reported (from start of DAQ); 'Test duration' filled only for N2 gasification"
+    },
+    "BUWfd": {
+      "n": 5,
+      "residue mean %": "11.2",
+      "residue min %": "8.4",
+      "residue max %": "14.3",
+      "duration mean s": "2100.0",
+      "duration min s": "2100.0",
+      "duration max s": "2100.0",
+      "stop rule (README)": "README has no cone metadata"
+    },
+    "FPL": {
+      "n": 6,
+      "residue mean %": "15.3",
+      "residue min %": "9.1",
+      "residue max %": "20.2",
+      "duration mean s": "1676.0",
+      "duration min s": "1400.0",
+      "duration max s": "1825.0",
+      "stop rule (README)": "not stated (ASTM E1354-25); t_flameout reported; R2 DAQ lost at 1400 s, flameout recorded by hand"
+    },
+    "FSRI": {
+      "n": 18,
+      "residue mean %": "16.0",
+      "residue min %": "11.6",
+      "residue max %": "19.9",
+      "duration mean s": "1603.8",
+      "duration min s": "1010.0",
+      "duration max s": "2399.0",
+      "stop rule (README)": "not stated (ASTM E1354, general accordance); flameout by operator button"
+    },
+    "FZJ": {
+      "n": 20,
+      "residue mean %": "0.8",
+      "residue min %": "-0.3",
+      "residue max %": "7.2",
+      "duration mean s": "5021.9",
+      "duration min s": "3124.0",
+      "duration max s": "10770.0",
+      "stop rule (README)": "not stated (ISO 5660); no flameout column"
+    },
+    "IMT": {
+      "n": 12,
+      "residue mean %": "15.5",
+      "residue min %": "12.5",
+      "residue max %": "20.0",
+      "duration mean s": "1829.2",
+      "duration min s": "1215.0",
+      "duration max s": "2440.0",
+      "stop rule (README)": "not stated (ISO 5660); t_flameout reported"
+    },
+    "TUBS": {
+      "n": 3,
+      "residue mean %": "8.3",
+      "residue min %": "7.7",
+      "residue max %": "9.0",
+      "duration mean s": "2700.0",
+      "duration min s": "2700.0",
+      "duration max s": "2700.0",
+      "stop rule (README)": "not stated (ISO 5660); t_flameout '-'"
+    },
+    "UDRI": {
+      "n": 7,
+      "residue mean %": "16.2",
+      "residue min %": "11.6",
+      "residue max %": "19.4",
+      "duration mean s": "1763.0",
+      "duration min s": "1436.0",
+      "duration max s": "2359.0",
+      "stop rule (README)": "not stated (ASTM E1354-25); t_flameout reported"
+    },
+    "UMET": {
+      "n": 6,
+      "residue mean %": "9.1",
+      "residue min %": "3.4",
+      "residue max %": "14.2",
+      "duration mean s": "2069.2",
+      "duration min s": "1840.0",
+      "duration max s": "2347.0",
+      "stop rule (README)": "not stated (ISO 13927 mass-loss cone); t_flameout reported"
+    },
+    "UQ (flag: README mass fluctuations)": {
+      "n": 3,
+      "residue mean %": "44.4",
+      "residue min %": "36.7",
+      "residue max %": "50.2",
+      "duration mean s": "915.3",
+      "duration min s": "908.0",
+      "duration max s": "920.0",
+      "stop rule (README)": "not stated (ISO 5660); t_flameout reported; README: 60 kW/m2 mass readings fluctuated"
+    }
+  },
+  "results": {
+    "pHRR": {
+      "primary": {
+        "primary_80": {
+          "n": 80,
+          "r2": 0.2156,
+          "mae": 44.3,
+          "bias": 39.1,
+          "ci_lo": -1.8485,
+          "ci_hi": 0.6019,
+          "n_labs": 8
+        },
+        "FSRI-lab_18": {
+          "n": 18,
+          "r2": 0.6375,
+          "mae": 34.9,
+          "bias": 33.2
+        },
+        "other-labs_62": {
+          "n": 62,
+          "r2": 0.0496,
+          "mae": 47.1,
+          "bias": 40.8,
+          "ci_lo": -2.6566,
+          "ci_hi": 0.6209,
+          "n_labs": 7
+        }
+      },
+      "S1": {
+        "primary_80": {
+          "n": 80,
+          "r2": -1.0926,
+          "mae": 81.4,
+          "bias": 80.8,
+          "ci_lo": -5.5146,
+          "ci_hi": -0.3017,
+          "n_labs": 8
+        },
+        "FSRI-lab_18": {
+          "n": 18,
+          "r2": -0.4036,
+          "mae": 76.0,
+          "bias": 76.0
+        },
+        "other-labs_62": {
+          "n": 62,
+          "r2": -1.3767,
+          "mae": 83.0,
+          "bias": 82.2,
+          "ci_lo": -7.2403,
+          "ci_hi": -0.2262,
+          "n_labs": 7
+        }
+      },
+      "S2": {
+        "primary_80": {
+          "n": 80,
+          "r2": 0.3583,
+          "mae": 40.0,
+          "bias": 34.3,
+          "ci_lo": -1.1801,
+          "ci_hi": 0.6383,
+          "n_labs": 8
+        },
+        "FSRI-lab_18": {
+          "n": 18,
+          "r2": 0.6564,
+          "mae": 33.2,
+          "bias": 31.5
+        },
+        "other-labs_62": {
+          "n": 62,
+          "r2": 0.2396,
+          "mae": 42.0,
+          "bias": 35.1,
+          "ci_lo": -1.8002,
+          "ci_hi": 0.6595,
+          "n_labs": 7
+        }
+      }
+    },
+    "pHRR_umet": {
+      "primary": {
+        "n": 6,
+        "mae": 97.9,
+        "bias": 97.9
+      },
+      "S1": {
+        "n": 6,
+        "mae": 139.8,
+        "bias": 139.8
+      },
+      "S2": {
+        "n": 6,
+        "mae": 93.6,
+        "bias": 93.6
+      }
+    },
+    "pHRR_extras": {
+      "cell_mean_r2": 0.2753,
+      "n_cells": 23
+    },
+    "TTI": {
+      "primary": {
+        "primary_80": {
+          "n": 80,
+          "r2": 0.5242,
+          "mae": 15.1,
+          "bias": -0.9,
+          "ci_lo": -0.567,
+          "ci_hi": 0.7851,
+          "n_labs": 8,
+          "log_r2": 0.7283
+        },
+        "FSRI-lab_18": {
+          "n": 18,
+          "r2": 0.8513,
+          "mae": 9.8,
+          "bias": -2.5,
+          "log_r2": 0.8508
+        },
+        "other-labs_62": {
+          "n": 62,
+          "r2": 0.4644,
+          "mae": 16.7,
+          "bias": -0.4,
+          "ci_lo": -1.9213,
+          "ci_hi": 0.4972,
+          "n_labs": 7,
+          "log_r2": 0.6774
+        },
+        "tti_25": {
+          "n": 11,
+          "r2": -0.3593,
+          "mae": 52.5,
+          "bias": -43.7,
+          "log_r2": -0.3529
+        }
+      },
+      "S1": {
+        "primary_80": {
+          "n": 80,
+          "r2": 0.3704,
+          "mae": 26.4,
+          "bias": 18.2,
+          "ci_lo": -6.2744,
+          "ci_hi": 0.5957,
+          "n_labs": 8
+        },
+        "FSRI-lab_18": {
+          "n": 18,
+          "r2": 0.2948,
+          "mae": 22.4,
+          "bias": 20.4
+        },
+        "other-labs_62": {
+          "n": 62,
+          "r2": 0.378,
+          "mae": 27.6,
+          "bias": 17.6,
+          "ci_lo": -11.2461,
+          "ci_hi": 0.6096,
+          "n_labs": 7
+        },
+        "tti_25": {
+          "n": 11,
+          "r2": -0.0869,
+          "mae": 66.3,
+          "bias": 10.8
+        }
+      },
+      "S2": {
+        "primary_80": {
+          "n": 80,
+          "r2": 0.5478,
+          "mae": 14.6,
+          "bias": -1.1,
+          "ci_lo": -0.5064,
+          "ci_hi": 0.8014,
+          "n_labs": 8
+        },
+        "FSRI-lab_18": {
+          "n": 18,
+          "r2": 0.8562,
+          "mae": 10.4,
+          "bias": -2.2
+        },
+        "other-labs_62": {
+          "n": 62,
+          "r2": 0.4914,
+          "mae": 15.8,
+          "bias": -0.8,
+          "ci_lo": -1.766,
+          "ci_hi": 0.5273,
+          "n_labs": 7
+        },
+        "tti_25": {
+          "n": 11,
+          "r2": -0.2961,
+          "mae": 52.2,
+          "bias": -42.1
+        }
+      }
+    },
+    "TTI_umet": {
+      "primary": {
+        "n": 6,
+        "mae": 23.7,
+        "bias": 23.7
+      },
+      "S1": {
+        "n": 6,
+        "mae": 44.5,
+        "bias": 44.5
+      },
+      "S2": {
+        "n": 6,
+        "mae": 23.7,
+        "bias": 23.7
+      }
+    },
+    "TTI_86_secondary": {
+      "n": 86,
+      "r2": 0.5061,
+      "mae": 15.7
+    },
+    "TTI_edinburgh": {
+      "n": 12,
+      "r2": 0.9424,
+      "log_r2": 0.8988,
+      "mae": 7.3,
+      "bias": -7.0,
+      "per_flux": {
+        "25": {
+          "n": 6,
+          "mean_obs": 108.8,
+          "pred": 99.8,
+          "mae": 9.7,
+          "bias": -9.1
+        },
+        "65": {
+          "n": 6,
+          "mean_obs": 14.3,
+          "pred": 9.4,
+          "mae": 5.0,
+          "bias": -5.0
+        }
+      },
+      "context_fsri_black_pmma_25": {
+        "n": 6,
+        "mean_tti_s": 110.0,
+        "edinburgh_25_mean_s": 108.8
+      }
+    },
+    "TTI_extras": {
+      "cell_mean_r2": 0.6743,
+      "n_cells": 23
+    },
+    "CR": {
+      "primary": {
+        "50 (declared primary: cr_flameout minus UMET)": {
+          "n": 50,
+          "mae": 5.8,
+          "bias": 1.6
+        },
+        "53 (all)": {
+          "n": 53,
+          "mae": 6.1,
+          "bias": 2.1
+        },
+        "47 (minus UMET and UQ)": {
+          "n": 47,
+          "mae": 4.4,
+          "bias": 3.5
+        }
+      },
+      "S2": {
+        "50 (declared primary: cr_flameout minus UMET)": {
+          "n": 50,
+          "mae": 5.8,
+          "bias": 1.7
+        },
+        "53 (all)": {
+          "n": 53,
+          "mae": 6.0,
+          "bias": 2.2
+        },
+        "47 (minus UMET and UQ)": {
+          "n": 47,
+          "mae": 4.4,
+          "bias": 3.5
+        }
+      },
+      "S3": {
+        "50 (declared primary: cr_flameout minus UMET)": {
+          "n": 50,
+          "mae": 4.3,
+          "bias": -1.3
+        },
+        "53 (all)": {
+          "n": 53,
+          "mae": 4.4,
+          "bias": -0.9
+        },
+        "47 (minus UMET and UQ)": {
+          "n": 47,
+          "mae": 2.7,
+          "bias": 0.4
+        }
+      }
+    }
+  }
+}

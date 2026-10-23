@@ -1,0 +1,24 @@
+merged 652 rows / 109 papers from 13 parts
+benchmark of record (LOI present, not figure-read): 606 rows / 107 papers
+  loading parsed: 95%; element features complete: 80%; iso default used on 164 rows
+FR names without element entry (43): [('DOPO-HSBP', 10), ('PTOK (tung oil-based polyol modified by KH-602)', 6), ('SFP/LG (sunflower press cake vacuum-impregnated with liquid glass 1:1; LG Na2O 29%, SiO2 29%)', 6), ('MEG (DOPO/A-151 modified expandable graphite)', 6), ('ESBO-DYM (P/N soy polyol)', 6), ('polyetherol from melamine cyanurate + ethylene carbonate (MC/EC)', 5), ('PNC (aminophosphorylated cellulose)', 4), ('IFR blend APP/SEP/MEL (ammonium polyphosphate / sepiolite / melamine)', 4), ('POFPL (palm oil-based flame retardant polyol)', 4), ('LigW coated with liquid glass, LigW/LG 1/1', 4), ('LigW coated with liquid glass, LigW/LG 1/2', 4), ('FR-047 (organic phosphate mixture)', 4), ('P-polyol (transesterification of DEEP diethyl ethylphosphonate and THPO tris(hydroxymethyl)phosphine oxide)', 3), ('Cloisite 20A (organoclay)', 3), ('MMT-modified SO filler', 3), ('AM (aluminum phosphate micro-capsule)', 2), ('SiM (silica micro-capsule)', 2), ('SiE (SiO2 grafted with epoxidized monoglyceride of tung oil)', 2), ('aluminum phytate (PA-Al)', 2), ('iron phytate (PA-Fe)', 2), ('BEG (boron-coated expandable graphite, EG/PVA/boric acid)', 2), ('SO', 2), ('LS (lignosulfonate)', 1), ('PTOK (tung oil-based polyol modified by KH-602, 25 g)', 1), ('BSQPS (bentonite modified with butyltriphenylphosphonium chloride)', 1), ('HALM (halloysite modified with melamine-formaldehyde resin)', 1), ('OMMT/chitosan/paraffin phase change microcapsules (OMMT/CS/PCM)', 1), ('PA-GO (phytic acid-functionalized graphite oxide)', 1), ('CS/PCM (chitosan/gum acacia-shell paraffin phase-change microcapsule)', 1), ('fGO (functionalized GO; APTES + boric acid)', 1), ('TPP (triphenyl phosphate)', 1), ('EUMF-1 (ethylene glycol modified urea-melamine-formaldehyde resin)', 1), ('EUMF-2 (ethylene glycol modified urea-melamine-formaldehyde resin)', 1), ('EUMF-3 (ethylene glycol modified urea-melamine-formaldehyde resin)', 1), ('EUMF-4 (ethylene glycol modified urea-melamine-formaldehyde resin)', 1), ('TBPU (tetramethylene bis(orthophosphorylurea))', 1), ('TCEP (tris(2-chloroethyl) phosphate)', 1), ('salvia officinalis filler (SO)', 1), ('oligoetherol BHEU:BA:EC 1:2:12 (boron + 1,3-pyrimidine ring)', 1), ('oligoetherol BHEU:BA:EC 1:3:12 (boron + 1,3-pyrimidine ring)', 1)]
+stage ~/Dravix/dravix-master/data/v2/loi_rpuf_parts/wave4_staging: 4 row files, element additions True, structure additions True
+stage ~/Dravix/dravix-master/data/v2/loi_rpuf_parts/wave5_staging: 1 row files, element additions True, structure additions True
+stage chemfix_staging: 96 element entries placed first, 5 names unset
+stage chemfix_staging: structures replaced 29, appended 0
+stage chemfix_staging: 2 unit cells corrected
+stage ~/Dravix/dravix-master/data/v2/loi_rpuf_parts/chemfix_staging: 0 row files, element additions False, structure additions False
+stage unitfix_staging: 94 unit cells corrected
+stage ~/Dravix/dravix-master/data/v2/loi_rpuf_parts/unitfix_staging: 0 row files, element additions False, structure additions False
+snapshot (expanded): 606 benchmark rows / 107 papers
+expandable_graphite           103     0.00     0.00     0.00     0.00     0.00     0.00
+REPRO exp089: B 0.4257 CI [0.2984, 0.5327] (record B 0.3542, CI [0.1694, 0.4666]) in 22s
+REPRO exp092: B 0.4303 CI [0.3036, 0.5318] (record B 0.3738, CI [0.2007, 0.4700]) in 25s
+r8d     A 0.750  B 0.4253 +- 0.0307 CI [0.2607, 0.5503] pooled [0.290, 0.538]  C 0.295  (101s)
+r8d per-repeat B: 0.421150 0.371378 0.462597 0.492919 0.410583 0.418372 0.423333 0.423999 0.413725 0.415103
+s8      A 0.736  B 0.4339 +- 0.0325 CI [0.2876, 0.5540] pooled [0.298, 0.540]  C 0.219  (103s)
+s8 per-repeat B: 0.439160 0.358033 0.471980 0.479320 0.403139 0.427566 0.430325 0.444571 0.444227 0.440398
+Triggers: none
+wrote 2 result JSONs; runtime 254s
+copied 2 result JSONs; log experiments/runs/rescore_loi_train_loi_rescore_r8_snap606.log; runtime 272s
+EXIT 0

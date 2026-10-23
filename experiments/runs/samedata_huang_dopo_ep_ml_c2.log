@@ -1,0 +1,447 @@
+LOI c2: 111 fold fits; LOKY_MAX_CPU_COUNT=5 HF_HUB_OFFLINE=1
+  cached 0, to fit 111
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  1/111 P1_r0__f1  994s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  2/111 P1_r0__f3  1015s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  3/111 P1_r0__f2  1052s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  4/111 P1_r0__f4  1055s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  5/111 P1_r0__f0  1057s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  6/111 P1_r1__f0  2287s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  7/111 P1_r1__f1  2327s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  8/111 P1_r1__f4  2358s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  9/111 P1_r1__f3  2369s
+  10/111 P1_r1__f2  2371s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  11/111 P1_r2__f0  3432s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  12/111 P1_r2__f1  3459s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  13/111 P1_r2__f3  3503s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  14/111 P1_r2__f2  3507s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  15/111 P1_r2__f4  3515s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  16/111 P1_r3__f0  4669s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  17/111 P1_r3__f1  4725s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  18/111 P1_r3__f4  4788s
+  19/111 P1_r3__f3  4788s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  20/111 P1_r3__f2  4804s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  21/111 P1_r4__f0  5804s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  22/111 P1_r4__f1  5859s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  23/111 P1_r4__f2  5868s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  24/111 P1_r4__f3  5917s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  25/111 P1_r4__f4  5972s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  26/111 P1_r5__f0  6950s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  27/111 P1_r5__f1  7019s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  28/111 P1_r5__f2  7030s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  29/111 P1_r5__f3  7099s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  30/111 P1_r5__f4  7166s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  31/111 P1_r6__f0  8014s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  32/111 P1_r6__f1  8071s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  33/111 P1_r6__f2  8093s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  34/111 P1_r6__f3  8188s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  35/111 P1_r6__f4  8204s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  36/111 P1_r7__f0  9070s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  37/111 P1_r7__f1  9138s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  38/111 P1_r7__f2  9142s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  39/111 P1_r7__f3  9235s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  40/111 P1_r7__f4  9237s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  41/111 P1_r8__f0  10060s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  42/111 P1_r8__f1  10157s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  43/111 P1_r8__f2  10179s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  44/111 P1_r8__f4  10255s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  45/111 P1_r8__f3  10285s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  46/111 P1_r9__f0  11066s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  47/111 P1_r9__f1  11139s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  48/111 P1_r9__f2  11159s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  49/111 P1_r9__f3  11245s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  50/111 P1_r9__f4  11276s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  51/111 P1_pub__f0  12139s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  52/111 P1_pub__f1  12258s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  53/111 P1_pub__f2  12269s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  54/111 P1_pub__f3  12317s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  55/111 P1_pub__f4  12343s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  56/111 P1_mol_r0__f0  13263s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  57/111 P1_mol_r0__f1  13303s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  58/111 P1_mol_r0__f3  13345s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  59/111 P3__f0  13348s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  60/111 P1_mol_r0__f2  13351s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  61/111 P1_mol_r0__f4  14380s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  62/111 P1_mol_r1__f0  14419s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  63/111 P1_mol_r1__f3  14467s
+  64/111 P1_mol_r1__f2  14468s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  65/111 P1_mol_r1__f1  14471s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  66/111 P1_mol_r1__f4  15499s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  67/111 P1_mol_r2__f2  15539s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  68/111 P1_mol_r2__f0  15545s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  69/111 P1_mol_r2__f3  15574s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  70/111 P1_mol_r2__f1  15586s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  71/111 P1_mol_r2__f4  16797s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  72/111 P1_mol_r3__f0  16838s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  73/111 P1_mol_r3__f1  16847s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  74/111 P1_mol_r3__f3  16895s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  75/111 P1_mol_r3__f2  16914s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  76/111 P1_mol_r3__f4  18158s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  77/111 P1_mol_r4__f0  18184s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  78/111 P1_mol_r4__f1  18200s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  79/111 P1_mol_r4__f2  18246s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  80/111 P1_mol_r4__f3  18302s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  81/111 P1_mol_r5__f0  19474s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  82/111 P1_mol_r4__f4  19481s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  83/111 P1_mol_r5__f1  19534s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  84/111 P1_mol_r5__f2  19544s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  85/111 P1_mol_r5__f3  19622s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  86/111 P1_mol_r5__f4  20477s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  87/111 P1_mol_r6__f0  20480s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  88/111 P1_mol_r6__f1  20532s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  89/111 P1_mol_r6__f2  20537s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  90/111 P1_mol_r6__f3  20567s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  91/111 P1_mol_r7__f0  21199s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  92/111 P1_mol_r6__f4  21204s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  93/111 P1_mol_r7__f2  21263s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  94/111 P1_mol_r7__f1  21272s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  95/111 P1_mol_r7__f3  21311s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  96/111 P1_mol_r7__f4  21801s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  97/111 P1_mol_r8__f0  21803s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  98/111 P1_mol_r8__f2  21844s
+  99/111 P1_mol_r8__f1  21844s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  100/111 P1_mol_r8__f3  21890s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  101/111 P1_mol_r9__f0  22300s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  102/111 P1_mol_r8__f4  22307s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  103/111 P1_mol_r9__f1  22336s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  104/111 P1_mol_r9__f2  22350s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  105/111 P1_mol_r9__f3  22383s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  106/111 P1_mol_r9__f4  22826s
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+  107/111 P1_pub_mol__f0  22827s
+  108/111 P1_pub_mol__f1  22849s
+  109/111 P1_pub_mol__f2  22858s
+  110/111 P1_pub_mol__f3  22879s
+  111/111 P1_pub_mol__f4  23013s
+LOI c2 done in 383.6 min

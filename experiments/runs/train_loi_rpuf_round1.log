@@ -1,0 +1,34 @@
+benchmark: 333 rows / 56 papers; 27 features; dominant-class groups: {'none': np.int64(79), 'expandable_graphite': np.int64(73), 'P-N': np.int64(39), 'P-additive': np.int64(32), 'P-reactive': np.int64(28), 'bio-based': np.int64(26), 'intumescent(APP-based)': np.int64(23), 'other': np.int64(10), 'metal_oxide/salt': np.int64(8), 'silicon': np.int64(4), 'metal_hydroxide': np.int64(4), 'halogen': np.int64(4), 'N-additive': np.int64(3)}
+xgb: skipped: not installed
+  r1 done in 2s
+  rf done in 83s
+  hgb done in 403s
+
+=== Summary (333 rows / 56 papers) ===
+cand  A mean [p2.5, p97.5]         B mean ± std     B CI (paper bootstrap)   C mean  
+r1    0.384 [0.066, 0.593]        -5.237 ± 9.822   [-1.851, 0.069]          -3.360
+rf    0.630 [0.420, 0.798]        0.351 ± 0.059    [0.130, 0.520]           0.308
+hgb   0.597 [0.363, 0.790]        0.178 ± 0.113    [-0.062, 0.435]          0.166
+xgb   skipped: not installed
+
+Selected (highest protocol-B mean): rf
+Protocol B ci_lo > 0.84: False  (ci_lo=0.1296)
+Protocol A mean > 0.84 (any candidate): {'r1': False, 'rf': False, 'hgb': False}; selected: False
+Triggers: none
+
+=== Sensitivities (rf; report only) ===
+  incl_figure_rows: 361 rows / 58 papers | A 0.651 [0.508, 0.761] | B 0.311 ± 0.060 CI [-0.069, 0.457]
+  excl_neat_controls: 269 rows / 54 papers | A 0.577 [0.351, 0.735] | B 0.187 ± 0.078 CI [-0.103, 0.319]
+  sunfu_refs_only: too few (16 benchmark rows / 2 papers < 30 rows); not run
+
+=== Permutation importance, rf fit on all 333 rows (IN-SAMPLE diagnostic, n_repeats=10) ===
+  cls_expandable_graphite          0.7948 ± 0.0532
+  density_kgm3                     0.2004 ± 0.0181
+  total_fr_wtpct                   0.1733 ± 0.0156
+  cls_P-N                          0.1182 ± 0.0158
+  el_P                             0.0666 ± 0.0060
+  el_N                             0.0635 ± 0.0082
+  n_frs                            0.0177 ± 0.0029
+  cls_bio-based                    0.0149 ± 0.0014
+
+wrote experiments/results/loi_rpuf_r1_rf.json; runtime 585s

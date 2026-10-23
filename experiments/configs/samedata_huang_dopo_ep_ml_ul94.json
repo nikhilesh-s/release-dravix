@@ -1,0 +1,35 @@
+{
+  "round": "samedata_huang_dopo_ep_ml_ul94",
+  "shared": "experiments/configs/samedata_common.json (classification candidates c1u-c3u; c2u/c3u need the TabPFN classifier-weights approval)",
+  "status": "declared (approved 2026-10-08, owner-delegated; see amendments)",
+  "usable": "yes: clear metric (macro-F1) and protocol, published per-row folds, Reference column.",
+  "source": "as samedata_huang_dopo_ep_ml.json",
+  "target": "UL-94 V-0 (binary: UL94 == 'V-0' -> 1, else 0), 599 rows, 261 positives; baseline_inclusive rows as the authors",
+  "rows": "data/sources/incoming/huang_dopo_ep_ml/DOPO_EP_new.csv, all 599, no exclusions; groups = Reference (130).",
+  "features": "the authors' UL94_V0 input: view 'morgan_r3', K = 'all', descriptor_mode 'advanced', V7 on, no BDE; their fold-internal front end with f_classif; exported in step 0 exactly as for LOI. c1u-c3u replace only the model step.",
+  "bar": {
+    "metric": "macro-F1, mean of 5 per-outer-fold values (SD ddof=1)",
+    "value": 0.817,
+    "sd": 0.051,
+    "set": "Reference-grouped outer 5-fold CV (StratifiedGroupKFold, shuffle=True, random_state=42), nested inner selection, decision threshold estimated on outer-training data only, Platt calibration on outer-training data",
+    "quote_result": "results/09_MainTextTables/Table 2 row: \"UL-94,Macro-F1,0.779 ± 0.031,0.811 ± 0.052,0.817 ± 0.051,0.786 ± 0.023,+0.007,0.597\"",
+    "where_read": "repo @ e550e4a (Table 2, README, UL94_V0 reference nested_summary.json); recomputed 2026-10-07 from their UL94_V0_outer_predictions.csv: 0.8169 +- 0.0514.",
+    "best_model": "ExtraTrees in all 5 outer folds (reference grouping).",
+    "verification": "repo code + result tables, recomputed from per-row predictions; manuscript unpublished.",
+    "context_always_printed": "modified-only subset macro-F1 0.755 +- 0.067; molecule-grouped headline 0.779 +- 0.031 (Table 1; balanced accuracy 0.788, ROC-AUC 0.869)."
+  },
+  "r0": "their ExtraTrees classifier settings from common/scientific_evaluation.py _classification_model('ExtraTrees', 42) with their threshold rule fitted on the training part; r0_full = their evaluate_task_nested(..., 'UL94_V0', split_strategy='reference') on P1_pub only.",
+  "reproduction_gate": "r0_full on P1_pub: mean per-fold macro-F1 in [0.807, 0.827]; outside -> BLOCKED.",
+  "protocols": {
+    "P1_pub": "outer_fold by Record_ID from data/sources/incoming/huang_dopo_ep_ml/UL94_V0_outer_predictions_reference.csv (sha256 aa84d2e6...). Gate + r0; c1u-c3u information only.",
+    "P1": "StratifiedGroupKFold(n_splits=5, shuffle=True, random_state=r), r = 0..9, groups = Reference; mean of per-fold macro-F1 per repeat. c1u-c3u use argmax at 0.5 (no threshold tuning); r0 keeps its own threshold rule.",
+    "P2": "GroupKFold(n_splits=5, shuffle=True, random_state=r), r = 0..9 by Reference, pooled OOF macro-F1 per repeat; repeat-0 paper bootstrap CI of macro-F1 (2000 draws, seed 0)."
+  },
+  "notes": [
+    "Their tuned threshold is an advantage on F1 that c1u-c3u do not get; the gap is printed, not adjusted.",
+    "Dravix has no UL-94 record; this is a capability check, not a target round."
+  ],
+  "amendments": [
+    "Approved 2026-10-08 ~01:55 PDT by the orchestrator under the owner's delegation (Nikhilesh S, owner of nikhilesh-s/dravix-master: 'pull from the most reputable universities ... find the most reputable papers', 'it doesn't matter if the datasets are perfect comparisons', 'keep grinding'). Committed before any Dravix fit on these labels. Status set to declared. No other field changed. "
+  ]
+}

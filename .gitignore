@@ -1,0 +1,17 @@
+# External source repos cloned for data ingestion -- 1.8GB+, not ours to version.
+# Re-clone with the commands documented in reports/V2_DATA_ACQUISITION_LOG.md:
+#   git clone https://github.com/ulfsri/fsri_materials_database
+#   git clone https://github.com/MaCFP/matl-db
+data/v2/raw/
+
+__pycache__/
+*.pyc
+.DS_Store
+.ipynb_checkpoints/
+
+# Library PDFs pulled by hand (paywalled; never commit). Only extracted numbers with citations go in the repo.
+data/sources/pdfs/
+
+# Local Python environments
+.venv*/
+engine/dravix_engine.joblib

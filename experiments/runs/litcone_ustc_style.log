@@ -1,0 +1,12 @@
+EP pHRR rows 643, papers 126, FR groups 163
+  repeat 0: MAE 213.3  R2 0.447
+  repeat 1: MAE 226.8  R2 0.367
+  repeat 2: MAE 217.1  R2 0.412
+  repeat 3: MAE 232.8  R2 0.338
+  repeat 4: MAE 231.2  R2 0.350
+  repeat 5: MAE 213.3  R2 0.451
+  repeat 6: MAE 204.8  R2 0.495
+  repeat 7: MAE 223.0  R2 0.376
+  repeat 8: MAE 214.7  R2 0.415
+  repeat 9: MAE 203.2  R2 0.510
+RESULT USTC-style (EP, grouped by FR): MAE 218.0 +- 9.7 kW/m2, CI [167.0, 241.3]; R2 0.416; USTC 125.5 (unconfirmed)

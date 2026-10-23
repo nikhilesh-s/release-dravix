@@ -1,0 +1,5 @@
+amendment 12 -- given the paper's measured neat-epoxy pHRR
+HEADLINE primary v4C, B (EP + P-FRs, USTC-matched): n=262 papers=54 FR groups=46 | MAE 235.1 +- 19.0 CI [146.8, 324.4] | R2 0.378
+  gt_protocol_et v4C, B: n=262 papers=54 FR groups=46 | MAE 241.5 +- 20.7 CI [147.9, 359.7] | R2 0.354
+  primary v4C, A (all EP): n=643 papers=126 FR groups=163 | MAE 216.6 +- 12.8 CI [148.5, 261.6] | R2 0.399
+  gt_protocol_et v4C, A: n=643 papers=126 FR groups=163 | MAE 201.9 +- 6.0 CI [157.5, 242.3] | R2 0.497

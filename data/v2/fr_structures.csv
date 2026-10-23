@@ -1,0 +1,163 @@
+fr_name,query_used,cid,smiles,formula,status,reason
+A-lignin (refined alkali lignin),,,,,rejected,name: bio-material
+AAM-DOPO (DOPO propanamide),,,,,not_found,no PubChem match for: DOPO propanamide || AAM-DOPO || AAM-DOPO (DOPO propanamide)
+AD (dimethyl propane phosphonate),,,,,not_found,no PubChem match for: dimethyl propane phosphonate || AD || AD (dimethyl propane phosphonate)
+ADP (aluminum diethylphosphinate),aluminum diethylphosphinate,21863131,CCP(=O)(CC)[O-].CCP(=O)(CC)[O-].CCP(=O)(CC)[O-].[Al+3],C12H30AlO6P3,rejected,multi-component SMILES (salt/mixture)
+ADPO2 (aluminium diethylphosphite),,,,,not_found,no PubChem match for: aluminium diethylphosphite || ADPO2 || ADPO2 (aluminium diethylphosphite)
+AM (aluminum phosphate micro-capsule),,,,,rejected,name: encapsulated product
+AO (aluminum oxide),aluminum oxide,9989226,[O-2].[O-2].[O-2].[Al+3].[Al+3],Al2O3,rejected,multi-component SMILES (salt/mixture)
+APP,,,,,rejected,"name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)"
+APP (ammonium polyphosphate),,,,,rejected,"name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)"
+"APP (ammonium polyphosphate, phase II, DP>1000)",,,,,rejected,"name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)"
+"APP-1000 (ammonium polyphosphate, DP 1000)",,,,,rejected,"name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)"
+"APP-30 (ammonium polyphosphate, low polymerization degree)",,,,,rejected,"name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)"
+ATH (aluminum hydroxide),aluminum hydroxide,10176082,[OH-].[OH-].[OH-].[Al+3],AlH3O3,rejected,multi-component SMILES (salt/mixture)
+Antiblaze TCMP (chlorinated phosphate),,,,,not_found,no PubChem match for: chlorinated phosphate || Antiblaze TCMP || Antiblaze TCMP (chlorinated phosphate)
+Antiblaze TCMP (tris(2-chloro-1-methylethyl) phosphate),tris(2-chloro-1-methylethyl) phosphate,26176,CC(CCl)OP(=O)(OC(C)CCl)OC(C)CCl,C9H18Cl3O4P,accepted,single-component small molecule
+Antiblaze TMCP (TCPP),,,,,not_found,no PubChem match for: TCPP || Antiblaze TMCP || Antiblaze TMCP (TCPP)
+"BEG (boron-coated expandable graphite, EG/PVA/boric acid)",,,,,rejected,name: graphite/graphene/CNT/MOF
+BH ([bis(2-hydroxyethyl)amino]methyl-phosphonic acid dimethyl ester),BH,56951713,[Bh],Bh,rejected,"single-atom hit (element symbol, not a compound)"
+BHP (bis(3-(3-hydroxypropoxy)propyl) phenyl phosphate),,,,,not_found,no PubChem match for: bis(3-(3-hydroxypropoxy)propyl) phenyl phosphate || BHP || BHP (bis(3-(3-hydroxypropoxy)propyl) phenyl phosphate)
+BSQPS (bentonite modified with butyltriphenylphosphonium chloride),,,,,rejected,name: clay/mineral
+C-MOF/MWCNTs (carbonized MOF/MWCNTs),,,,,rejected,name: graphite/graphene/CNT/MOF
+CS/PCM (chitosan/gum acacia-shell paraffin phase-change microcapsule),,,,,rejected,name: bio-material
+Cellulose-modified polyol,,,,,rejected,"name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)"
+Cloisite 20A (organoclay),,,,,rejected,name: clay/mineral
+DEEP (diethyl ethylphosphonate),diethyl ethylphosphonate,6534,CCOP(=O)(CC)OCC,C6H15O3P,accepted,single-component small molecule
+DFD (DOPO-based reactive P diol),,,,,rejected,name: modified/based/grafted/coated product
+DMMP,DMMP,12958,COP(=O)(C)OC,C3H9O3P,accepted,single-component small molecule
+DMMP (dimethyl methylphosphonate),dimethyl methylphosphonate,12958,COP(=O)(C)OC,C3H9O3P,accepted,single-component small molecule
+DMPY (dimelamine pyrophosphate),dimelamine pyrophosphate,19354104,C1(=NC(=NC(=N1)N)N)N.C1(=NC(=NC(=N1)N)N)N.OP(=O)(O)OP(=O)(O)O,C6H16N12O7P2,rejected,multi-component SMILES (salt/mixture)
+"DOPO-HQ (10-(2,5-dihydroxyphenyl)-9,10-dihydro-9-oxa-10-phosphaphenanthrene-10-oxide)",,,,,not_found,"no PubChem match for: 10-(2,5-dihydroxyphenyl)-9,10-dihydro-9-oxa-10-phosphaphenanthrene-10-oxide || DOPO-HQ || DOPO-HQ (10-(2,5-dihydroxyphenyl)-9,10-dihydro-9-oxa-10-phosphaphenanthrene-10-oxide)"
+DOPO-HSBP,,,,,not_found,no PubChem match for: DOPO-HSBP
+DPTP (from KH-550 aminopropyltriethoxysilane + chlorodiphenylphosphine),,,,,not_found,no PubChem match for: from KH-550 aminopropyltriethoxysilane + chlorodiphenylphosphine || DPTP || DPTP (from KH-550 aminopropyltriethoxysilane + chlorodiphenylphosphine)
+DTE-DOPO (DOPO-ethyl-diaminotriazine),,,,,not_found,no PubChem match for: DOPO-ethyl-diaminotriazine || DTE-DOPO || DTE-DOPO (DOPO-ethyl-diaminotriazine)
+"EG (expandable graphene [sic], paper abbreviation)",,,,,rejected,name: graphite/graphene/CNT/MOF
+EG (expandable graphite EG096),,,,,rejected,name: graphite/graphene/CNT/MOF
+"EG (expandable graphite flakes, >300 um)",,,,,rejected,name: graphite/graphene/CNT/MOF
+EG (expandable graphite),,,,,rejected,name: graphite/graphene/CNT/MOF
+"EG (expandable graphite, ADT150)",,,,,rejected,name: graphite/graphene/CNT/MOF
+EG (expanded graphite),,,,,rejected,name: graphite/graphene/CNT/MOF
+EG 290 (expanded graphite),,,,,rejected,name: graphite/graphene/CNT/MOF
+"EG1 (GHL PX 95 N, 250 cm3/g, 300 um)",,,,,rejected,name: FR class expandable_graphite (graphite/clay/bio-material)
+"EG2 (GHL PX 98 HE, 350 cm3/g, 300 um)",,,,,rejected,name: FR class expandable_graphite (graphite/clay/bio-material)
+"EG3 (GHL PX 99 32 350, 350 cm3/g, 500 um)",,,,,rejected,name: FR class expandable_graphite (graphite/clay/bio-material)
+ESBO-DYM (P/N soy polyol),,,,,rejected,"name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)"
+ETA-DOPO (DOPO-aminoethoxy-DOPO),,,,,not_found,no PubChem match for: DOPO-aminoethoxy-DOPO || ETA-DOPO || ETA-DOPO (DOPO-aminoethoxy-DOPO)
+EUMF-1 (ethylene glycol modified urea-melamine-formaldehyde resin),,,,,rejected,name: resin/mixture
+EUMF-2 (ethylene glycol modified urea-melamine-formaldehyde resin),,,,,rejected,name: resin/mixture
+EUMF-3 (ethylene glycol modified urea-melamine-formaldehyde resin),,,,,rejected,name: resin/mixture
+EUMF-4 (ethylene glycol modified urea-melamine-formaldehyde resin),,,,,rejected,name: resin/mixture
+Exolit OP 1240 (aluminium diethylphosphinate),,,,,not_found,no PubChem match for: aluminium diethylphosphinate || Exolit OP 1240 || Exolit OP 1240 (aluminium diethylphosphinate)
+Exolit OP 935,,,,,not_found,no PubChem match for: Exolit OP 935
+FBC fluidized fly ash,,,,,not_found,no PubChem match for: FBC fluidized fly ash
+FR-047 (organic phosphate mixture),,,,,not_found,no PubChem match for: organic phosphate mixture || FR-047 || FR-047 (organic phosphate mixture)
+Fostetrol-1 (oxyethylated pentaerythritol tetraalkylphosphonate polyol),,,,,rejected,"name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)"
+GO (graphene oxide),,,,,rejected,name: graphite/graphene/CNT/MOF
+GO (graphite oxide),,,,,rejected,name: graphite/graphene/CNT/MOF
+"H3PO3 (phosphorous acid, esterified into polyol with DEG)",,,,,rejected,"name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)"
+HALM (halloysite modified with melamine-formaldehyde resin),,,,,rejected,name: clay/mineral
+Hazelnut shells (HS),,,,,rejected,name: bio-material
+Hydrotalcite (HT) Mg6Al2(CO3)(OH)16 4H2O,,,,,rejected,name: clay/mineral
+IFR blend APP/SEP/MEL (ammonium polyphosphate / sepiolite / melamine),,,,,rejected,"name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)"
+KB (boric acid),boric acid,7628,B(O)(O)O,BH3O3,accepted,single-component small molecule
+LGP (low melting point glass powder),,,,,rejected,name: mineral/silica/glass
+LS (lignosulfonate),,,,,rejected,name: bio-material
+"LigW coated with liquid glass, LigW/LG 1/1",,,,,rejected,name: mineral/silica/glass
+"LigW coated with liquid glass, LigW/LG 1/2",,,,,rejected,name: mineral/silica/glass
+Lignin waste (LigW),,,,,rejected,name: bio-material
+MAPP-1000 (APP-1000 surface-modified with PCOC),,,,,rejected,"name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)"
+"MAPP-30 (APP-30 surface-modified with PCOC, phosphorus-containing organosilicon compound)",,,,,rejected,"name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)"
+MAPP1 (APP modified with phenyl phosphate organosilicon PCOC1),,,,,rejected,"name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)"
+MAPP2 (APP modified with phenylphosphoryl organosilicon PCOC2),,,,,rejected,"name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)"
+MEG (DOPO/A-151 modified expandable graphite),,,,,rejected,name: graphite/graphene/CNT/MOF
+MEL (melamine),melamine,7955,C1(=NC(=NC(=N1)N)N)N,C3H6N6,accepted,single-component small molecule
+MFAPP (melamine-formaldehyde resin encapsulated APP),,,,,rejected,"name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)"
+MMT-modified SO filler,,,,,rejected,name: modified/based/grafted/coated product
+MOF/MWCNTs (Cu-doped ZIF-67 on MWCNTs),,,,,rejected,name: graphite/graphene/CNT/MOF
+MPP (melamine polyphosphate),,,,,rejected,"name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)"
+Melamine,Melamine,7955,C1(=NC(=NC(=N1)N)N)N,C3H6N6,accepted,single-component small molecule
+Mg(OH)2,Mg(OH)2,73981,[OH-].[OH-].[Mg+2],H2MgO2,rejected,multi-component SMILES (salt/mixture)
+MgBO2(OH) (magnesium borate hydroxide),,,,,not_found,no PubChem match for: OH) (magnesium borate hydroxide || MgBO2 || MgBO2(OH) (magnesium borate hydroxide)
+P-polyol (transesterification of DEEP diethyl ethylphosphonate and THPO tris(hydroxymethyl)phosphine oxide),,,,,rejected,"name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)"
+PA-GO (phytic acid-functionalized graphite oxide),,,,,rejected,name: graphite/graphene/CNT/MOF
+PER (pentaerythritol),pentaerythritol,8285,C(C(CO)(CO)CO)O,C5H12O4,accepted,single-component small molecule
+PLF140 (reactive diol oligomeric ethyl ethylene phosphate),,,,,not_found,no PubChem match for: reactive diol oligomeric ethyl ethylene phosphate || PLF140 || PLF140 (reactive diol oligomeric ethyl ethylene phosphate)
+PN-Br (spiro-type cyclic phosphazene derivative),,,,,not_found,no PubChem match for: spiro-type cyclic phosphazene derivative || PN-Br || PN-Br (spiro-type cyclic phosphazene derivative)
+PN-Cl (spiro-type cyclic phosphazene derivative),,,,,not_found,no PubChem match for: spiro-type cyclic phosphazene derivative || PN-Cl || PN-Cl (spiro-type cyclic phosphazene derivative)
+PN-H (spiro-type cyclic phosphazene derivative),,,,,not_found,no PubChem match for: spiro-type cyclic phosphazene derivative || PN-H || PN-H (spiro-type cyclic phosphazene derivative)
+PNC (aminophosphorylated cellulose),,,,,rejected,name: bio-material
+POFPL (palm oil-based flame retardant polyol),,,,,rejected,"name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)"
+PTOK (tung oil-based polyol modified by KH-602),,,,,rejected,"name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)"
+"PTOK (tung oil-based polyol modified by KH-602, 25 g)",,,,,rejected,"name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)"
+PTOP (DOPO-modified tung oil polyol),,,,,rejected,"name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)"
+PTOSi (DPSD-modified tung oil polyol),,,,,rejected,"name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)"
+RE (diethyl bis(2-hydroxyethyl)aminomethylphosphonate),diethyl bis(2-hydroxyethyl)aminomethylphosphonate,17722,CCOP(=O)(CN(CCO)CCO)OCC,C9H22NO5P,accepted,single-component small molecule
+RM (diethyl (hydroxymethyl)phosphonate),diethyl (hydroxymethyl)phosphonate,76513,CCOP(=O)(CO)OCC,C5H13O4P,accepted,single-component small molecule
+Roflam B7 (brominated phosphate ester),,,,,not_found,no PubChem match for: brominated phosphate ester || Roflam B7 || Roflam B7 (brominated phosphate ester)
+"Roflam F5 (phenol isopropylated phosphate, P 8.5 wt%)",,,,,not_found,"no PubChem match for: phenol isopropylated phosphate, P 8.5 wt% || Roflam F5 || Roflam F5 (phenol isopropylated phosphate, P 8.5 wt%)"
+Roflam PLO (phosphorus-based liquid additive),,,,,rejected,name: modified/based/grafted/coated product
+SA (sodium alginate),,,,,rejected,name: bio-material
+SA powder (silica aerogel powder),,,,,rejected,name: mineral/silica/glass
+SO,,,,,rejected,name: FR class bio-based (graphite/clay/bio-material)
+SS (steel slag),,,,,rejected,name: mineral/silica/glass
+SiE (SiO2 grafted with epoxidized monoglyceride of tung oil),,,,,rejected,name: mineral/silica/glass
+SiM (silica micro-capsule),,,,,rejected,name: mineral/silica/glass
+T-D (N-containing polyol),,,,,rejected,"name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)"
+"TBPBP (tetraethyl (1,5-bis(bis(2-hydroxypropyl)amino)pentane-1,5-diyl)bis(phosphonate))",,,,,not_found,"no PubChem match for: tetraethyl (1,5-bis(bis(2-hydroxypropyl)amino)pentane-1,5-diyl)bis(phosphonate) || TBPBP || TBPBP (tetraethyl (1,5-bis(bis(2-hydroxypropyl)amino)pentane-1,5-diyl)bis(phosphonate))"
+TBPU (tetramethylene bis(orthophosphorylurea)),,,,,not_found,no PubChem match for: tetramethylene bis(orthophosphorylurea) || TBPU || TBPU (tetramethylene bis(orthophosphorylurea))
+TCEP (tris(2-chloroethyl) phosphate),tris(2-chloroethyl) phosphate,8295,C(CCl)OP(=O)(OCCCl)OCCCl,C6H12Cl3O4P,accepted,single-component small molecule
+TCPP,,,,,not_found,no PubChem match for: TCPP
+TCPP (Roflam P),,,,,not_found,no PubChem match for: Roflam P || TCPP || TCPP (Roflam P)
+TCPP (tris(1-chloro-2-propyl) phosphate),tris(1-chloro-2-propyl) phosphate,26176,CC(CCl)OP(=O)(OC(C)CCl)OC(C)CCl,C9H18Cl3O4P,accepted,single-component small molecule
+TCPP (tris(2-chloropropyl) phosphate),tris(2-chloropropyl) phosphate,22522,CC(COP(=O)(OCC(C)Cl)OCC(C)Cl)Cl,C9H18Cl3O4P,accepted,single-component small molecule
+TEP (triethyl phosphate),triethyl phosphate,6535,CCOP(=O)(OCC)OCC,C6H15O4P,accepted,single-component small molecule
+"TEP (triethyl phosphate, Fyrol TEP)",TEP,6535,CCOP(=O)(OCC)OCC,C6H15O4P,accepted,single-component small molecule
+TPP (triphenyl phosphate),triphenyl phosphate,8289,C1=CC=C(C=C1)OP(=O)(OC2=CC=CC=C2)OC3=CC=CC=C3,C18H15O4P,accepted,single-component small molecule
+alkali-treated eucalyptus fibers,,,,,rejected,name: bio-material
+aluminium trihydroxide (ATH),ATH,445607,C(=C(\[C@H](C(=O)O)O)/C(=O)O)\C(=O)O,C6H6O7,rejected,hit formula lacks ['Al'] implied by the expansion text
+aluminum phytate (PA-Al),,,,,rejected,name: FR class bio-based (graphite/clay/bio-material)
+ammonium polyphosphate (Exolit AP422),,,,,rejected,"name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)"
+ammonium polyphosphate type II,,,,,rejected,"name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)"
+bleached curaua fibre,,,,,rejected,name: FR class bio-based (graphite/clay/bio-material)
+casein/apricot filler,,,,,rejected,name: filler/powder
+cocoa filler,,,,,rejected,name: filler/powder
+conventional (PCC) fly ash,,,,,not_found,no PubChem match for: conventional (PCC) fly ash
+diammonium phosphate (DAP),diammonium phosphate,24540,[NH4+].[NH4+].OP(=O)([O-])[O-],H9N2O4P,rejected,multi-component SMILES (salt/mixture)
+eFAPE-PA (phosphorylated canola oil polyol),,,,,rejected,"name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)"
+evening primrose oil cake,,,,,rejected,name: bio-material
+expandable graphite (E300),,,,,rejected,name: graphite/graphene/CNT/MOF
+expanded graphite EG 290,,,,,rejected,name: graphite/graphene/CNT/MOF
+fGO (functionalized GO; APTES + boric acid),,,,,rejected,name: graphite/graphene/CNT/MOF
+halloysite nanotube (HNT),,,,,rejected,name: clay/mineral
+hydrotalcite,,,,,rejected,name: clay/mineral
+instant coffee filler,,,,,rejected,name: filler/powder
+iron phytate (PA-Fe),,,,,rejected,name: FR class bio-based (graphite/clay/bio-material)
+lavender residue (non-functionalized),,,,,rejected,name: FR class bio-based (graphite/clay/bio-material)
+lavender residue functionalized with hydroxyapatite,,,,,not_found,no PubChem match for: lavender residue functionalized with hydroxyapatite
+lavender residue functionalized with kaolinite,,,,,rejected,name: FR class nanoclay (graphite/clay/bio-material)
+maleic anhydride-treated eucalyptus fibers,,,,,rejected,name: bio-material
+melamine,melamine,7955,C1(=NC(=NC(=N1)N)N)N,C3H6N6,accepted,single-component small molecule
+non-treated eucalyptus fibers (EF),,,,,rejected,name: bio-material
+"oligoetherol BHEU:BA:EC 1:2:12 (boron + 1,3-pyrimidine ring)",,,,,not_found,"no PubChem match for: boron + 1,3-pyrimidine ring || oligoetherol BHEU:BA:EC 1:2:12 || oligoetherol BHEU:BA:EC 1:2:12 (boron + 1,3-pyrimidine ring)"
+"oligoetherol BHEU:BA:EC 1:3:12 (boron + 1,3-pyrimidine ring)",,,,,not_found,"no PubChem match for: boron + 1,3-pyrimidine ring || oligoetherol BHEU:BA:EC 1:3:12 || oligoetherol BHEU:BA:EC 1:3:12 (boron + 1,3-pyrimidine ring)"
+"oligoetherol DOPDEDHB:EC 1:12 (boron + 1,3-pyrimidine ring)",,,,,not_found,"no PubChem match for: boron + 1,3-pyrimidine ring || oligoetherol DOPDEDHB:EC 1:12 || oligoetherol DOPDEDHB:EC 1:12 (boron + 1,3-pyrimidine ring)"
+"oligoetherol DOPDEDHB:EC 1:16 (boron + 1,3-pyrimidine ring)",,,,,not_found,"no PubChem match for: boron + 1,3-pyrimidine ring || oligoetherol DOPDEDHB:EC 1:16 || oligoetherol DOPDEDHB:EC 1:16 (boron + 1,3-pyrimidine ring)"
+perlite,,,,,rejected,name: clay/mineral
+potassium salt (potassium formate),potassium formate,2735122,C(=O)[O-].[K+],CHKO2,rejected,multi-component SMILES (salt/mixture)
+salvia officinalis filler (SO),,,,,rejected,name: filler/powder
+silane-treated eucalyptus fibers,,,,,rejected,name: bio-material
+silica aerogel (filler),,,,,rejected,name: mineral/silica/glass
+sugar beet pulp impregnated with APIB-POSS,,,,,rejected,name: mineral/silica/glass
+trisilanol phenyl POSS (SO1458),,,,,rejected,name: mineral/silica/glass
+vermiculite,,,,,rejected,name: clay/mineral
+vermiculite W (thermally treated),,,,,rejected,name: clay/mineral
+vermiculite WO (thermal + H2O2 treated),,,,,rejected,name: clay/mineral
+vermiculite functionalized with casein,,,,,rejected,name: clay/mineral
+vermiculite functionalized with chitosan,,,,,rejected,name: clay/mineral
+vermiculite functionalized with potato protein,,,,,rejected,name: clay/mineral
+walnut shells,,,,,rejected,name: bio-material
+walnut shells modified with halloysite,,,,,rejected,name: clay/mineral
+walnut shells modified with montmorillonite,,,,,rejected,name: clay/mineral
+walnut shells modified with perlite,,,,,rejected,name: clay/mineral
+"woody ash (WA) particles, biomass incineration waste",,,,,not_found,"no PubChem match for: woody ash (WA) particles, biomass incineration waste"

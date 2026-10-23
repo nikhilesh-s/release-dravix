@@ -1,0 +1,26 @@
+Rows: 166 across 18 materials (TTI x MCC x HFM inner join)
+base                     per-seed: [-0.063 -1.1    0.785  0.621  0.678  0.649 -0.085 -0.086  0.764 -1.134]
+                         mean=0.1029 std=0.6982 min=-1.1339 max=0.7854 delta vs SOTA 0.58: -0.4771
+base + thermal           per-seed: [-0.019 -0.831  0.774  0.523  0.811  0.421 -0.038 -0.065  0.825 -0.456]
+                         mean=0.1944 std=0.5400 min=-0.8314 max=0.8253 delta vs SOTA 0.58: -0.3856
+Paired gain from thermal features: mean=+0.0915, seeds improved=7/10
+
+base: 166 rows / 18 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.0937 std=0.7447 min=-1.6928 max=0.8059
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.0941 std=0.0172; material-bootstrap 95% CI [-0.065, 0.762]
+  vs SOTA 0.58: delta (GKF mean) -0.4859; CI excludes SOTA from above: False
+base + thermal: 166 rows / 18 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.1577 std=0.5884 min=-1.0374 max=0.7911
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.0558 std=0.0291; material-bootstrap 95% CI [-0.045, 0.811]
+  vs SOTA 0.58: delta (GKF mean) -0.5242; CI excludes SOTA from above: False
+
+Feature importances (full-data fit, interpretation only):
+  log_kpc_over_q2: 0.590
+  heat_flux_kWm2: 0.131
+  k_WmK: 0.087
+  specimen_mass_g: 0.075
+  rhoc_Jm3K: 0.048
+  mcc_peak_hrr_Wg: 0.047
+  mcc_char_yield_pct: 0.012
+  log_kpc: 0.011
+  spark_ignitor: 0.000

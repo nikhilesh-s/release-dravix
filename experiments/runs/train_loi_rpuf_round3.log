@@ -1,0 +1,43 @@
+fr_structures.csv: 117 distinct FR names -> accepted 16, rejected 81, not_found 20
+
+=== ACCEPTED structures (human audit list): fr_name | query | CID | formula | SMILES ===
+  DEEP (diethyl ethylphosphonate) | diethyl ethylphosphonate | 6534 | C6H15O3P | CCOP(=O)(CC)OCC
+  DMMP | DMMP | 12958 | C3H9O3P | COP(=O)(C)OC
+  DMMP (dimethyl methylphosphonate) | dimethyl methylphosphonate | 12958 | C3H9O3P | COP(=O)(C)OC
+  KB (boric acid) | boric acid | 7628 | BH3O3 | B(O)(O)O
+  MEL (melamine) | melamine | 7955 | C3H6N6 | C1(=NC(=NC(=N1)N)N)N
+  Melamine | Melamine | 7955 | C3H6N6 | C1(=NC(=NC(=N1)N)N)N
+  PER (pentaerythritol) | pentaerythritol | 8285 | C5H12O4 | C(C(CO)(CO)CO)O
+  RE (diethyl bis(2-hydroxyethyl)aminomethylphosphonate) | diethyl bis(2-hydroxyethyl)aminomethylphosphonate | 17722 | C9H22NO5P | CCOP(=O)(CN(CCO)CCO)OCC
+  RM (diethyl (hydroxymethyl)phosphonate) | diethyl (hydroxymethyl)phosphonate | 76513 | C5H13O4P | CCOP(=O)(CO)OCC
+  TCEP (tris(2-chloroethyl) phosphate) | tris(2-chloroethyl) phosphate | 8295 | C6H12Cl3O4P | C(CCl)OP(=O)(OCCCl)OCCCl
+  TCPP (tris(1-chloro-2-propyl) phosphate) | tris(1-chloro-2-propyl) phosphate | 26176 | C9H18Cl3O4P | CC(CCl)OP(=O)(OC(C)CCl)OC(C)CCl
+  TCPP (tris(2-chloropropyl) phosphate) | tris(2-chloropropyl) phosphate | 22522 | C9H18Cl3O4P | CC(COP(=O)(OCC(C)Cl)OCC(C)Cl)Cl
+  TEP (triethyl phosphate) | triethyl phosphate | 6535 | C6H15O4P | CCOP(=O)(OCC)OCC
+  TEP (triethyl phosphate, Fyrol TEP) | TEP | 6535 | C6H15O4P | CCOP(=O)(OCC)OCC
+  TPP (triphenyl phosphate) | triphenyl phosphate | 8289 | C18H15O4P | C1=CC=C(C=C1)OP(=O)(OC2=CC=CC=C2)OC3=CC=CC=C3
+  melamine | melamine | 7955 | C3H6N6 | C1(=NC(=NC(=N1)N)N)N
+
+sanity: table-only recompute == committed el_* columns on all 363 rows
+element-feature coverage (benchmark rows with all el_* non-NaN): before 236/333 -> after 237/333
+rows with >=1 resolved FR (struct features non-NaN): 33/333; mean resolved_fr_wt_share over rows with FRs and loading ok: 0.085
+benchmark: 333 rows / 56 papers; features: rf/c1 27, c2 34
+  rf done in 37s
+
+Reproduction of exp064: B 0.3512 CI [0.1296, 0.5196] A 0.6296 (exp064: B 0.3512, CI [0.1296, 0.5196], A 0.6296)
+Reproduction within 0.002: True
+  c1 done in 41s
+  c2 done in 39s
+
+=== Summary (333 rows / 56 papers) ===
+cand  A mean [p2.5, p97.5]     B mean ± std     B CI (paper bootstrap) C mean   wins/10  dB
+rf    0.630 [0.420, 0.798]    0.351 ± 0.059    [0.130, 0.520]         0.308    -       -
+c1    0.630 [0.420, 0.797]    0.352 ± 0.058    [0.127, 0.518]         0.311    6/10    +0.0011
+c2    0.632 [0.422, 0.802]    0.363 ± 0.058    [0.167, 0.517]         0.326    9/10    +0.0115
+
+Selected (highest protocol-B mean among c1,c2): c2 (B 0.3627)
+Rule: wins>=8/10: True (9/10); B ci_lo>=0.130: True (0.1667)
+Verdict: ADOPT c2 over exp064
+Triggers: none
+
+wrote 2 result JSONs; runtime 118s

@@ -1,0 +1,127 @@
+{
+  "slug": "r10_phrr_o1",
+  "target": "Peak HRR (kW/m2)",
+  "round_config": "experiments/configs/round10_physics.json",
+  "dataset": "FSRI pHRR replicate-mean, has_mcc (191 rows / 64 merged groups); incumbent exp074 rows, order and groups",
+  "features": [
+    "heat_flux_kWm2",
+    "mcc_peak_hrr_Wg",
+    "mcc_char_yield_pct",
+    "cone_mass_per_area_kgm2",
+    "cone_thickness_mm",
+    "density_kgm3",
+    "mcc_total_hr_kJg",
+    "mcc_t_peak_C",
+    "mcc_t_onset_C",
+    "log_kpc"
+  ],
+  "model": "HRC-proportional offset: exp074 HGB on r = ln(y) - ln(mcc_peak_hrr_Wg); predict exp(m + b); coefficient 1",
+  "hyperparameters": "hgb(): learning_rate=0.05, max_iter=200, max_leaf_nodes=15, min_samples_leaf=10, random_state=0; fixed by the config, nothing tuned",
+  "code": "data/v2/train_round10_physics.py",
+  "n_rows": 191,
+  "n_groups": 64,
+  "protocol": "gkf_group5x10",
+  "rkf_mean": 0.4445,
+  "rkf_std": 0.132,
+  "ci_lo": 0.1319,
+  "ci_hi": 0.816,
+  "pooled_ci_lo": 0.1372,
+  "pooled_ci_hi": 0.78,
+  "paired_vs": "exp074",
+  "paired_delta": -0.1668,
+  "paired_wins": "1/10",
+  "sota": 0.3,
+  "sota_source": "pomazi_2026",
+  "status": "ok",
+  "blocked_reason": "",
+  "note": "round 10 pHRR r10_phrr_o1 (selectable); vs exp074 on identical folds; category-GKF 0.499 (incumbent 0.392); gain not established without the top 5 groups",
+  "role": "selectable",
+  "rkf_mean_full": 0.44451982094008785,
+  "ci_lo_full": 0.13192303623205437,
+  "ci_hi_full": 0.815977526641357,
+  "per_repeat_r2": [
+    0.5870930684032003,
+    0.4929358470613304,
+    0.08488463623894194,
+    0.47409468224638474,
+    0.49384586126196806,
+    0.47921137715437045,
+    0.4245454744992325,
+    0.4772042152940389,
+    0.5530677703515117,
+    0.3783152768898993
+  ],
+  "seed0_r2": 0.5870930684032003,
+  "seed0_mae": 242.83559766022407,
+  "seed0_rmse": 404.251200395949,
+  "top_k_removal": {
+    "top5": [
+      [
+        "PETG",
+        2870641.64050162
+      ],
+      [
+        "House_Wrap",
+        1948965.1415692267
+      ],
+      [
+        "Nylon",
+        1537954.6326331017
+      ],
+      [
+        "FRP_Panel",
+        1145617.5018226588
+      ],
+      [
+        "PMMA",
+        989245.2223071821
+      ]
+    ],
+    "top5_share_of_net": -0.673645854288934,
+    "drop_top1": {
+      "mean_gain": -0.22502610590542593,
+      "wins": 0
+    },
+    "drop_top3": {
+      "mean_gain": -0.2863832549951383,
+      "wins": 0
+    },
+    "drop_top5": {
+      "mean_gain": -0.3292424209013444,
+      "wins": 0
+    },
+    "not_established": true
+  },
+  "gp_warnings": {},
+  "wall_time_s": 58.1,
+  "category_grouped_mean": 0.4994,
+  "category_grouped_std": 0.0961,
+  "category_grouped_ci_lo": 0.314,
+  "category_grouped_ci_hi": 0.621,
+  "category_grouped_per_repeat": [
+    0.4816425645044886,
+    0.7234429499347106,
+    0.39937899824512146,
+    0.4714417005250724,
+    0.5744196493137114,
+    0.3907559508638123,
+    0.5341934295250264,
+    0.39443702126119473,
+    0.5361030603271579,
+    0.4883353925215077
+  ],
+  "gate_v2": {
+    "theta": -0.166769337929763,
+    "wins": 1,
+    "ci_lo": 0.13192303623205437,
+    "ci_hi": 0.815977526641357,
+    "se": 0.17406486252988176,
+    "lb_maxT": -0.4681849616583077,
+    "lb_unadjusted": -0.40859977507291034,
+    "lb_raw_maxT": -0.43590686926293265,
+    "p_boot_gain_le_0": 0.8455,
+    "K": 4,
+    "q": 1.7316281950746986,
+    "selected": false
+  }
+}

@@ -1,0 +1,72 @@
+{
+ "slug": "samedata_huang_dopo_ep_ml_c1_P1_pub",
+ "target": "LOI (%)",
+ "round_config": "experiments/configs/samedata_huang_dopo_ep_ml.json",
+ "dataset": "Huang/Zheng/Shi DOPO-EP-ML (data/sources/incoming/huang_dopo_ep_ml/DOPO_EP_new.csv, 599 rows, 130 Reference groups), unpublished manuscript",
+ "features": "authors' LOI input: view compact, K=260, basic descriptors, V7 on, no BDE, neat-EP masking; their in-fold front end (nonempty/median impute/dedup/variance 1e-8/SelectKBest f_regression k=260)",
+ "code": "data/v2/train_samedata_dopo.py + data/v2/export_dopo_folds.py (step 0, authors' env)",
+ "n_rows": 599,
+ "n_groups": 130,
+ "sota": 0.709,
+ "sota_source": "Huang et al. DOPO-EP-ML Table 2 (Reference)",
+ "comparable_note": "comparability is a human decision; never set here",
+ "candidate": "c1",
+ "protocol": "P1_pub",
+ "model": "equal average of RF(500, leaf 2, rs 0), ET(500, leaf 2, rs 0), median-impute+indicator/StandardScaler/Ridge(10)",
+ "hyperparameters": "fixed a priori (samedata_common.json); no tuning",
+ "metric": "R2",
+ "status": "ok",
+ "blocked_reason": "",
+ "selected": false,
+ "per_repeat": [
+  0.681681369951301
+ ],
+ "mean": 0.681681369951301,
+ "repeat0": 0.681681369951301,
+ "secondary_per_repeat": {
+  "R2": [
+   0.681681369951301
+  ],
+  "RMSE": [
+   2.759943340393872
+  ],
+  "MAE": [
+   2.1775401883212058
+  ],
+  "mod_R2": [
+   0.3511849362110705
+  ]
+ },
+ "per_fold": {
+  "R2": [
+   0.680688573145283,
+   0.8074607744177947,
+   0.6280484503420334,
+   0.6492832924923708,
+   0.6429257593590227
+  ],
+  "RMSE": [
+   2.6332198440642953,
+   2.2246613163121736,
+   3.153314917761028,
+   2.561097143295706,
+   3.2274234805361557
+  ],
+  "MAE": [
+   2.0365306774953784,
+   1.809100823811537,
+   2.398822231314221,
+   2.030290420711891,
+   2.6129567882730016
+  ],
+  "mod_R2": [
+   0.3415878171467778,
+   0.6154425700393367,
+   0.33336438601203267,
+   0.06377591073430622,
+   0.40175399712289905
+  ]
+ },
+ "sd": 0.07288615622097447,
+ "note": "LOI P1_pub c1; published folds, information only (never selected on)"
+}

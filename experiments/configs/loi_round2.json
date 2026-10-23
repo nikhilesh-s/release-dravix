@@ -1,0 +1,34 @@
+{
+  "round": "loi_round2",
+  "target": "LOI (%) RPUF literature, same 333-row benchmark as round 1",
+  "declared": "by Opus 5.5, see git commit time; before any run",
+  "plan_ref": "plans/FABLE_PLAN_2026-10-01.md \u00a76 LOI loop round 2; budget 3",
+  "banned_moves_checked": true,
+  "incumbent": {
+    "exp": "loi round 1 rf (see experiments/results/*loi_rpuf_r1_rf.json)",
+    "B_mean": 0.351,
+    "B_ci": [
+      0.13,
+      0.52
+    ],
+    "A_mean": 0.63
+  },
+  "data_features_protocols": "identical to loi_round1 (same rows, same features, same A/B/C protocols and seeds)",
+  "candidates": [
+    {
+      "id": "c1",
+      "desc": "round-1 rf settings on transformed target y' = log(LOI - 15); predictions back-transformed (exp(.)+15); rows with LOI <= 15.5 kept (none expected)"
+    },
+    {
+      "id": "c2",
+      "desc": "HistGradientBoosting(learning_rate=0.05, max_iter=300, max_leaf_nodes=15, min_samples_leaf=5, random_state=0) with monotonic_cst +1 on el_P, el_N, total_fr_wtpct, cls_expandable_graphite, cls_intumescent(APP-based), cls_P-N; 0 elsewhere"
+    },
+    {
+      "id": "c3",
+      "desc": "equal-weight average of round-1 rf and c2 predictions, per fold"
+    }
+  ],
+  "selection_rule": "highest protocol-B mean; adopt over round-1 rf only if >= 8/10 paired B repeats better AND B ci_lo >= 0.130",
+  "exit_triggers": "B ci_lo > 0.84 or A mean > 0.84 -> EXIT 5 (not expected)",
+  "after_round": "if nothing is adopted, LOI round budget has 1 round left (round 3: RDKit descriptors only if time remains, plan \u00a76)"
+}

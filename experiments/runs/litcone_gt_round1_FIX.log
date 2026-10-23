@@ -1,0 +1,16 @@
+litcone_gt_round1 (REAL) -- rows after merge/dedupe 5015, after form filter 4529, papers 806; snapshot cone_lit_benchmark_v1.csv sha256 0b2af8e1817bdda1
+matrix categories (>=3 papers): ['ABS', 'EP', 'EPDM', 'EVA', 'FPUF', 'HDPE', 'HIPS', 'LDPE', 'LLDPE', 'NR', 'PA6', 'PA66', 'PBT', 'PC', 'PET', 'PF', 'PLA', 'PMMA', 'PP', 'PS', 'PVC', 'RPUF', 'SBR', 'SR', 'TPU', 'UPR', 'VER', 'WPC', 'other:CR/BR', 'other:LDPE/EVA', 'other:NBR', 'other:PA11', 'other:PBS', 'other:PVA', 'other:WPU', 'other:asphalt', 'other:calcium alginate']; forms: ['bulk', 'fibre_composite', 'film', 'foam', 'other', 'wood_plastic']; features 175
+
+=== TTI: 3368 rows / 598 papers; competitor 0.95 (training-data fit, their rows not released)
+  variant_C       P1 [THEIR PROTOCOL: computed on training data; not held-out evidence] ensemble 0.598 in-sample 0.629 | P2 random 5x10 0.452 +- 0.026 CI [0.397, 0.561] | P3 paper-grouped 5x10 -0.317 +- 0.323 CI [-2.560, 0.291]  (503s)
+
+=== pHRR: 4017 rows / 725 papers; competitor 0.94 (training-data fit, their rows not released)
+  variant_C       P1 [THEIR PROTOCOL: computed on training data; not held-out evidence] ensemble 0.730 in-sample 0.741 | P2 random 5x10 0.641 +- 0.013 CI [0.618, 0.680] | P3 paper-grouped 5x10 0.438 +- 0.027 CI [0.342, 0.537]  (599s)
+
+=== THR: 3355 rows / 619 papers; competitor 0.97 (training-data fit, their rows not released)
+  variant_C       P1 [THEIR PROTOCOL: computed on training data; not held-out evidence] ensemble 0.827 in-sample 0.837 | P2 random 5x10 0.749 +- 0.006 CI [0.722, 0.784] | P3 paper-grouped 5x10 0.533 +- 0.031 CI [0.386, 0.604]  (921s)
+
+=== avg_HRR: 759 rows / 130 papers; competitor 0.96 (training-data fit, their rows not released)
+  variant_C       P1 [THEIR PROTOCOL: computed on training data; not held-out evidence] ensemble 0.832 in-sample 0.852 | P2 random 5x10 0.685 +- 0.016 CI [0.643, 0.756] | P3 paper-grouped 5x10 0.389 +- 0.022 CI [0.273, 0.489]  (595s)
+
+runtime 2627s; wrote ~/Dravix/dravix-master/experiments/runs/litcone_gt_round1.json

@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --dravix-gradient-primary: linear-gradient(90deg, #784f74 0%, #e8967f 100%);
+  --dravix-gradient-accent: linear-gradient(135deg, #ffffff 0%, #f8f8f8 56%, #f0f0f0 100%);
+  --dravix-bg-app: #F8F8F8;
+  --dravix-bg-surface: #FFFFFF;
+  --dravix-bg-panel: #F5F5F5;
+  --dravix-bg-surface-warm: #F0F0F0;
+  --dravix-text: #762123;
+  --dravix-text-muted: rgba(118, 33, 35, 0.68);
+  --dravix-border: rgba(118, 33, 35, 0.1);
+  --dravix-accent-yellow: #E8967F;
+  --dravix-accent-coral: #E8967F;
+  --dravix-dark: #20181A;
+  --dravix-dark-secondary: #762123;
+  --dravix-ink: #762123;
+  --dravix-ink-soft: rgba(118, 33, 35, 0.68);
+  --dravix-panel: #F4F2F0;
+  --dravix-shadow-soft: 0 10px 40px rgba(118, 33, 35, 0.06);
+  --dravix-shadow-card: 0 6px 24px rgba(118, 33, 35, 0.05);
+  --dravix-font-sans: "Inter", "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+  --dravix-font-mono: "SFMono-Regular", "SF Mono", "Menlo", "Consolas", monospace;
+  font-family: var(--dravix-font-sans);
+  background: var(--dravix-bg-app);
+  color: var(--dravix-text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: var(--dravix-font-sans);
+  background:
+    radial-gradient(circle at top right, rgba(232, 150, 127, 0.15), transparent 22%),
+    radial-gradient(circle at left bottom, rgba(120, 79, 116, 0.09), transparent 20%),
+    #ffffff;
+  color: var(--dravix-text);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.dravix-shell {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(248, 248, 248, 0.94) 100%);
+  box-shadow: var(--dravix-shadow-soft);
+}
+
+.dravix-hero {
+  background:
+    radial-gradient(circle at 100% 0%, rgba(232, 150, 127, 0.17), transparent 24%),
+    radial-gradient(circle at 0% 100%, rgba(120, 79, 116, 0.12), transparent 20%),
+    linear-gradient(180deg, #ffffff 0%, #faf9f9 100%);
+}
+
+.dravix-card {
+  background: var(--dravix-bg-surface);
+  border: 1px solid var(--dravix-border);
+  box-shadow: var(--dravix-shadow-card);
+}
+
+.dravix-panel {
+  background: var(--dravix-bg-panel);
+  border: 1px solid var(--dravix-border);
+}
+
+.dravix-button-primary {
+  background: var(--dravix-gradient-primary);
+  color: white;
+}
+
+.dravix-mono {
+  font-family: var(--dravix-font-mono);
+}
+
+.dravix-sidebar-button {
+  border: 1px solid transparent;
+  color: var(--dravix-ink);
+}
+
+.dravix-sidebar-button[data-active="true"] {
+  background: white;
+  border-color: rgba(118, 33, 35, 0.08);
+  color: #e8967f;
+  box-shadow: 0 6px 18px rgba(118, 33, 35, 0.08);
+}
+
+.dravix-sidebar-button[data-active="false"]:hover {
+  background: rgba(255, 255, 255, 0.72);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  color: var(--dravix-ink);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(118, 33, 35, 0.42);
+}

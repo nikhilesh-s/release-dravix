@@ -1,0 +1,52 @@
+{
+ "round": "loi_snapshot_update5_wave14",
+ "kind": "Data-expansion re-score, not a modelling round. The LOI snapshot of record (exp163: 606 rows / 107 papers) plus wave 14: 215 hand-extracted rows from 31 additional open-literature papers read through the Las Positas College library. Same model as exp163 (round-8 average of RF, ExtraTrees, Ridge on the exp092 features) and the exp114 proxy-free sibling, unchanged.",
+ "status": "report-only for this session. Claude (Arnav's session) does not edit numbers_of_record.json; whether the expanded snapshot becomes the LOI record is the orchestrator's / owner's decision after a fresh critic.",
+ "declared": "2026-10-11 by Claude (Arnav's session), committed before any score on the expanded snapshot; git commit time governs. Row extraction used only the papers' own tables/text; no model output of any kind was seen before this declaration.",
+ "authority": "Arnav (2026-10-11): 'keep harvesting open access papers and once you have a lot you can start training'. Precedents: loi_snapshot_update2 (rows added), wave4/wave5 stages (rescore_loi_snapshot.py --stage). No owner (Nikhilesh S) decision on this wave yet.",
+ "banned_moves_checked": true,
+ "banned_moves_note": "No model, feature, hyperparameter, seed or fold-rule change. No row of the 606-row snapshot is added, removed or edited. No wave-14 row is dropped, re-weighted or edited after a score (all 215 rows enter, figure-read values were never extracted). One expanded snapshot scored once; not a selection among alternatives. FAA rows not mixed in.",
+ "data": {
+  "stage": "data/v2/loi_rpuf_parts/wave14_staging (rows_w14.csv, fr_element_table_additions.csv, log_w14.csv, README.md)",
+  "expected_counts": "builder reports 821 benchmark rows / 138 papers (606 + 215, 107 + 31) before scoring (checked with --build-only on 2026-10-11, no scoring)",
+  "source_papers": "31 papers listed in log_w14.csv (status extracted); 12 more examined and logged as not extracted (figure-only / flexible foam / no LOI / unreadable).",
+  "extraction": "single extractor (Claude), copied from tables or explicit text sentences, figure-read values never extracted; independent second-pass QA NOT done (second_pass_ok blank).",
+  "known_flags": [
+   "papers W9-011, W9-017, W9-025 share one group's baseline (PU 16.5 %, PU/APP-4 24.0 %); W9-001 and W9-029 share neat 18.8 % / APP30 23.3 %: rows are not independent of each other",
+   "semi-rigid foams W9-013 and W9-032 are population-borderline (as the N019 rule); kept in, disclosed",
+   "PIR foams W9-016 and W9-026: isocyanate amount unparsed, builder default 130 parts used for polyol-basis loadings (PIR indices 335/400 would need far more isocyanate): loading wt% overstated for those rows",
+   "loading basis unclear on W9-002 and W9-003 (taken as foam wt% as printed)",
+   "Lignin-POH (W9-002) matches the generic lignin entry (P not counted)",
+   "29 of 59 new FR names have no element-table entry (unknown composition) -> element features NaN on those rows; the builder reports element-feature completeness of 78 % on the expanded snapshot (the 606 snapshot value is in its own build log)",
+   "the loading of CPPA (W9-022) was changed from '92.5 wt% of B component' to '100 php' BEFORE any score, because the builder would read the former as a foam wt% (the polyol is the whole polyol component)"
+  ]
+ },
+ "procedure": [
+  "Step 1 (self-test): rescore_loi_snapshot.py with --stage wave4_staging --stage wave5_staging --stage chemfix_staging --stage unitfix_staging --script data/v2/train_loi_rescore_r8.py reproduces exp163 (B 0.4253 [0.2607, 0.5503]) and exp164 within 0.002, else BLOCKED and no expanded score is reported.",
+  "Step 2: ONE run of the same command plus --stage data/v2/loi_rpuf_parts/wave14_staging. The script's own outputs are the primary result: exp113-config B mean, paper-bootstrap 95% CI, pooled CI, protocol A and C, exp114 sibling.",
+  "Step 3 (report-only, from the saved OOF of step 2, no refit): R2 of the protocol-B OOF predictions restricted to the 606 original rows and, separately, to the 215 wave-14 rows (pooled per repeat, then averaged), plus the paper-bootstrap CI of each subset. A subset R2 is not the record statistic and is never quoted as one.",
+  "Step 4: label-free check that no wave-14 row exceeds 60 wt% total FR."
+ ],
+ "reporting_rules": [
+  "The expanded snapshot is a different benchmark population from exp163. Its B mean is NOT a like-for-like change in the record model; it is reported next to the exp163 number with that statement.",
+  "No 'improved', 'beats' or SOTA wording; comparable stays pending-human. The 0.84 bar is not compared on a different population.",
+  "If step 1 fails or any wave-14 row proves wrong on audit, the expanded result is withdrawn, not patched."
+ ],
+ "acceptance_rule": "None applied by this session. The orchestrator decides after a fresh-context critic whether the expanded snapshot replaces exp163 as the LOI population of record; this config only declares and reports.",
+ "environment": ".venv312 (sklearn 1.7.1, numpy 2.2.6, pandas 2.3.3), as the repo pins.",
+ "exit_triggers": "Self-test failure -> BLOCKED. B ci_lo > 0.84 or A mean > 0.84 -> FLAG (owner wording), not a win.",
+ "honesty_notes": [
+  "Any change in R2 comes from a larger and different set of papers; it is reported as a data effect, never a modelling gain.",
+  "Extraction errors are possible (single extractor, text-layer PDFs). The wave is therefore scored once and labelled unaudited until a second-pass QA is done."
+ ],
+ "amendment_1": "2026-10-11, after the step-2 score: the saved OOF (loi_rescore_r8_r8d_oof.npz) lived in the throwaway working copy and was deleted, so step 3 could not read it. The identical step-2 command was re-run once with --keep (log experiments/runs/loi_update5_step2b_keep.log). It reproduced B 0.4588 [0.3162, 0.5472], A 0.740, C 0.335 and all ten per-repeat B values exactly (same seeds), so it is the same score, not a second look. Step 3 and 4 were then computed from the kept OOF.",
+ "result_2026-10-11": {
+  "self_test_step1": "PASS: exp163 reproduced exactly, B 0.4253 [0.2607, 0.5503], A 0.750, C 0.295; exp164 sibling B 0.4339",
+  "expanded_821_rows_138_papers_exp113cfg": "B 0.4588 +- 0.0364, paper-bootstrap CI [0.3162, 0.5472], pooled CI [0.332, 0.560], A 0.740, C 0.335",
+  "expanded_exp114cfg_proxyfree": "B 0.4688 +- 0.0358, CI [0.3164, 0.5556], A 0.726, C 0.295",
+  "subsets_from_same_OOF (report-only, not record statistics)": "606 original rows: mean R2 0.4944 (sd 0.0358), CI(rep 0) [0.334, 0.573]; 215 wave-14 rows: 0.3330 (sd 0.0541), CI(rep 0) [-0.039, 0.626]",
+  "label_free_check": "max total FR on wave-14 rows 45.0 wt%, none above 60; loading parsed 100 %, element features complete on 73 % of wave-14 rows",
+  "triggers": "none (ci_lo 0.316 and A 0.740 are below the 0.84 bar)",
+  "caveats": "Different population from exp163, so 0.4588 vs 0.4253 is not a like-for-like model change. The old-only 0.4944 is NOT a paired comparison with 0.4253: fold assignments differ because the group set changed. A paired test (same folds over the 107 original papers, with and without wave 14 in training) was not pre-declared and has not been run. Single extractor, no independent QA of the 215 rows."
+ }
+}

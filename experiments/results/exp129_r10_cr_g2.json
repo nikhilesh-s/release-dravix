@@ -1,0 +1,114 @@
+{
+  "slug": "r10_cr_g2",
+  "target": "Char Residue (cone residue %, FSRI)",
+  "round_config": "experiments/configs/round10_physics.json",
+  "dataset": "char_residue_cone_fsri x STA/MCC/props (567 rows / 61 merged groups); incumbent exp117 rows, order and groups",
+  "features": [
+    "heat_flux_kWm2",
+    "density_kgm3",
+    "mcc_char_yield_pct",
+    "sta_res_3K",
+    "sta_res_10K",
+    "sta_res_30K",
+    "cat_interior_finish",
+    "cat_exterior_finish",
+    "cat_insulation",
+    "cat_roofing",
+    "cat_structural"
+  ],
+  "model": "equal average of exp117's HGB, ET, Ridge and g1 (4 x 1/4), no clipping",
+  "hyperparameters": "HGB(learning_rate=0.05, max_iter=300, max_leaf_nodes=15, min_samples_leaf=10, random_state=0), ExtraTrees(500, min_samples_leaf=2), Ridge(alpha=10) with impute+indicators+scaler (exp117), raw %; GaussianProcessRegressor(C(1.0)*RBF(ones(d))+WhiteKernel(1.0), normalize_y=True, n_restarts_optimizer=0, random_state=0) on r = y - nanmean(sta_res_3K, 10K, 30K) (all-NaN -> in-fold median y); inputs SimpleImputer(median, add_indicator, keep_empty) -> StandardScaler; d = imputer output width; no clipping; fixed by the config, nothing tuned",
+  "code": "data/v2/train_round10_physics.py",
+  "n_rows": 567,
+  "n_groups": 61,
+  "protocol": "gkf_group5x10",
+  "rkf_mean": 0.6458,
+  "rkf_std": 0.0192,
+  "ci_lo": 0.4097,
+  "ci_hi": 0.7913,
+  "pooled_ci_lo": 0.4384,
+  "pooled_ci_hi": 0.8074,
+  "paired_vs": "exp117",
+  "paired_delta": -0.0046,
+  "paired_wins": "3/10",
+  "sota": 0.82,
+  "sota_source": "pomazi_2026",
+  "status": "ok",
+  "blocked_reason": "",
+  "note": "round 10 Char Residue r10_cr_g2 (selectable); vs exp117 on identical folds; gain not established without the top 5 groups",
+  "role": "selectable",
+  "rkf_mean_full": 0.6458154988054033,
+  "ci_lo_full": 0.4096517284622719,
+  "ci_hi_full": 0.7913285810426283,
+  "per_repeat_r2": [
+    0.6413894753291397,
+    0.6715697847139364,
+    0.6705612657511397,
+    0.6505504336601938,
+    0.6531501056665654,
+    0.6411166114131763,
+    0.6419078314117217,
+    0.6521040686240676,
+    0.636272987891269,
+    0.5995324235928241
+  ],
+  "seed0_r2": 0.6413894753291397,
+  "seed0_mae": 8.868621919687703,
+  "seed0_rmse": 14.3610914863997,
+  "top_k_removal": {
+    "top5": [
+      [
+        "Mineral_Wool_Insulation",
+        1482.6822227170373
+      ],
+      [
+        "Vinyl_Siding",
+        868.4872395197924
+      ],
+      [
+        "FRP_Panel",
+        413.69966036951695
+      ],
+      [
+        "Composite_Deck_Board",
+        394.2498994542748
+      ],
+      [
+        "Nylon_Carpet_High_Pile",
+        316.83082032274007
+      ]
+    ],
+    "top5_share_of_net": -2.323490364607468,
+    "drop_top1": {
+      "mean_gain": -0.010703531844106506,
+      "wins": 0
+    },
+    "drop_top3": {
+      "mean_gain": -0.015854190429914018,
+      "wins": 0
+    },
+    "drop_top5": {
+      "mean_gain": -0.018600244487808802,
+      "wins": 0
+    },
+    "not_established": true
+  },
+  "gp_warnings": {
+    "ConvergenceWarning": 98
+  },
+  "wall_time_s": 230.8,
+  "gate_v2": {
+    "theta": -0.004587728407588143,
+    "wins": 3,
+    "ci_lo": 0.4096517284622719,
+    "ci_hi": 0.7913285810426283,
+    "se": 0.010545099683120838,
+    "lb_maxT": -0.02390436371969414,
+    "lb_unadjusted": -0.01989415455704209,
+    "lb_raw_maxT": -0.07600211669515573,
+    "p_boot_gain_le_0": 0.678,
+    "K": 3,
+    "q": 1.8318115420971732,
+    "selected": false
+  }
+}

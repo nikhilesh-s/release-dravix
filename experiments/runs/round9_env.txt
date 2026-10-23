@@ -1,0 +1,82 @@
+# round9_tabpfn_smearing step 0 -- written by data/v2/train_round9_tabpfn.py --target SETUP, 2026-10-07 22:25:18 PDT
+python 3.12.12 (~/dravix/.venv312/bin/python); config pin is 3.12.4 on Arnav's machine, this venv is the stand-in
+invocation: HF_HUB_OFFLINE=1 (offline; scoring runs use 1)
+TABPFN_MODEL_CACHE_DIR=~/Library/Caches/tabpfn
+TABPFN_EXCLUDE_DEVICES=cuda,mps
+HF_HUB_DISABLE_TELEMETRY=1
+HF_HUB_OFFLINE=1
+OMP_NUM_THREADS=1
+torch.get_num_threads()=1
+# freeze (~/.local/bin/uv pip freeze --python .venv312/bin/python), packages named in software_pins:
+cloudpickle==3.1.2
+einops==0.8.2
+filelock==3.18.0
+huggingface-hub==1.18.0
+joblib==1.5.2
+lightgbm==4.7.0
+matplotlib==3.10.6
+mlx==0.32.3
+mlx-metal==0.32.3
+narwhals==2.26.0
+numpy==2.2.6
+pandas==2.3.3
+pydantic==2.13.4
+pydantic-settings==2.14.1
+pydot==4.0.1
+pyparsing==3.2.4
+safetensors==0.7.0
+scikit-learn==1.7.1
+scipy==1.16.1
+skrub==0.10.1
+tabpfn==9.1.0
+torch==2.8.0
+tqdm==4.67.1
+typing-extensions==4.15.0
+# uv pip check: Using Python 3.12.12 environment at: .venv312 | Checked 66 packages in 1ms | All installed packages are compatible
+tabpfn.__version__=9.1.0
+checkpoint=~/Library/Caches/tabpfn/tabpfn-v2-regressor.ckpt size=44390977 sha256=2ab5a07d5c41dfe6db9aa7ae106fc6de898326c2765be66505a07e2868c10736 (expected 2ab5a07d5c41dfe6db9aa7ae106fc6de898326c2765be66505a07e2868c10736, 44390977); cache ckpt files=['tabpfn-v2-regressor.ckpt']
+S0.4 determinism: fresh process vs saved predictions (and twice in-process): bitwise equal True
+S0.5 fitted attributes: {"n_estimators_": 8, "devices_": ["cpu"], "use_autocast_": false, "forced_inference_dtype_": null}
+# ---- previous invocation ----
+# round9_tabpfn_smearing step 0 -- written by data/v2/train_round9_tabpfn.py --target SETUP, 2026-10-07 22:25:03 PDT
+python 3.12.12 (~/dravix/.venv312/bin/python); config pin is 3.12.4 on Arnav's machine, this venv is the stand-in
+invocation: HF_HUB_OFFLINE=0 (weight fetch)
+TABPFN_MODEL_CACHE_DIR=~/Library/Caches/tabpfn
+TABPFN_EXCLUDE_DEVICES=cuda,mps
+HF_HUB_DISABLE_TELEMETRY=1
+HF_HUB_OFFLINE=0
+OMP_NUM_THREADS=1
+torch.get_num_threads()=1
+# freeze (~/.local/bin/uv pip freeze --python .venv312/bin/python), packages named in software_pins:
+cloudpickle==3.1.2
+einops==0.8.2
+filelock==3.18.0
+huggingface-hub==1.18.0
+joblib==1.5.2
+lightgbm==4.7.0
+matplotlib==3.10.6
+mlx==0.32.3
+mlx-metal==0.32.3
+narwhals==2.26.0
+numpy==2.2.6
+pandas==2.3.3
+pydantic==2.13.4
+pydantic-settings==2.14.1
+pydot==4.0.1
+pyparsing==3.2.4
+safetensors==0.7.0
+scikit-learn==1.7.1
+scipy==1.16.1
+skrub==0.10.1
+tabpfn==9.1.0
+torch==2.8.0
+tqdm==4.67.1
+typing-extensions==4.15.0
+# uv pip check: Using Python 3.12.12 environment at: .venv312 | Checked 66 packages in 1ms | All installed packages are compatible
+tabpfn.__version__=9.1.0
+checkpoint=~/Library/Caches/tabpfn/tabpfn-v2-regressor.ckpt size=44390977 sha256=2ab5a07d5c41dfe6db9aa7ae106fc6de898326c2765be66505a07e2868c10736 (expected 2ab5a07d5c41dfe6db9aa7ae106fc6de898326c2765be66505a07e2868c10736, 44390977); cache ckpt files=['tabpfn-v2-regressor.ckpt']
+S0.4 determinism: in-process (fit+predict twice): bitwise equal True
+S0.5 fitted attributes: {"n_estimators_": 8, "devices_": ["cpu"], "use_autocast_": false, "forced_inference_dtype_": null}
+download log: tabpfn.model_loading INFO Downloading model to ~/Library/Caches/tabpfn/tabpfn-v2-regressor.ckpt.
+download log: tabpfn.model_loading INFO Attempting HuggingFace download: tabpfn-v2-regressor.ckpt
+download log: tabpfn.model_loading INFO Successfully downloaded to ~/Library/Caches/tabpfn/tabpfn-v2-regressor.ckpt

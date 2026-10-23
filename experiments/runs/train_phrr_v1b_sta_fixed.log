@@ -1,0 +1,26 @@
+Same rows for all three: 158 rows / 55 materials (exp001 had 158/55)
+
+exp002 features (no STA)
+  exp001 exact loop (rs=seed): mean R2=0.1250 std=0.3857 min=-0.6680 max=0.6502
+exp002 features (no STA): 158 rows / 55 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.1187 std=0.3893 min=-0.6757 max=0.6508
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.2089 std=0.1423; material-bootstrap 95% CI [-0.390, 0.577]
+  vs SOTA 0.3: delta (GKF mean) -0.0911; CI excludes SOTA from above: False
+
++ old committed STA 'char' (exp001 as run)
+  exp001 exact loop (rs=seed): mean R2=0.1705 std=0.3510 min=-0.4298 max=0.6787
++ old committed STA 'char' (exp001 as run): 158 rows / 55 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.1810 std=0.3615 min=-0.4430 max=0.7071
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.2126 std=0.1010; material-bootstrap 95% CI [-0.369, 0.432]
+  vs SOTA 0.3: delta (GKF mean) -0.0874; CI excludes SOTA from above: False
+
++ corrected STA residue
+  exp001 exact loop (rs=seed): mean R2=0.0870 std=0.3969 min=-0.5099 max=0.6500
++ corrected STA residue: 158 rows / 55 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.0926 std=0.3957 min=-0.4754 max=0.6866
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.2241 std=0.1271; material-bootstrap 95% CI [-0.114, 0.614]
+  vs SOTA 0.3: delta (GKF mean) -0.0759; CI excludes SOTA from above: False
+
+Paired same-rows same-folds deltas (repeated GroupKFold 5x10):
+  PAIRED corrected STA vs no STA: delta pooled-OOF R2 +0.0152 (improved in 6/10 repeats); material-bootstrap 95% CI of delta [-0.114, +0.206]
+  PAIRED corrected STA vs old STA: delta pooled-OOF R2 +0.0114 (improved in 5/10 repeats); material-bootstrap 95% CI of delta [-0.124, +0.146]

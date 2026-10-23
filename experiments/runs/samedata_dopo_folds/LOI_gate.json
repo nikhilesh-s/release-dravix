@@ -1,0 +1,29 @@
+{
+ "task": "LOI",
+ "metric": "outer_R2",
+ "per_fold": [
+  0.696995484316278,
+  0.7112163161574543,
+  0.6981267950549748,
+  0.6447659578438086,
+  0.7547860277245105
+ ],
+ "mean": 0.7011781162194053,
+ "sd": 0.03931828524050356,
+ "gate": [
+  0.699,
+  0.719
+ ],
+ "passed": true,
+ "folds_equal_published": false,
+ "max_abs_pred_diff_vs_published": 2.903410767499441,
+ "selected_models": [
+  "XGB",
+  "GBDT",
+  "ExtraTrees",
+  "XGB",
+  "XGB"
+ ],
+ "minutes": 3.27,
+ "modified_R2_mean": 0.3890074042827563
+}

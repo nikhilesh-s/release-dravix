@@ -1,0 +1,37 @@
+match,formula,M,P,N,Si,B,halogen,metal,source,note
+^(MF)?APP|ammonium polyphosph,NH4PO3,97.01,31.93,14.44,0,0,0,0,formula,APP repeat unit (NH4PO3)n; MFAPP coating ignored
+^MAPP,NH4PO3,97.01,31.93,14.44,0,0,0,0,formula,surface-modified APP; core APP
+^MPP|melamine polyphosph,C3H6N6HPO3,206.1,15.03,40.78,0,0,0,0,formula,melamine polyphosphate repeat unit
+^ADP|aluminum diethylphosphinate,AlC12H30P3O6,390.27,23.81,0,0,0,0,6.91,formula,Al(C4H10PO2)3
+^TEP|triethyl phosph,C6H15O4P,182.16,17.0,0,0,0,0,0,formula,(C2H5O)3PO
+^DEEP,C6H15O3P,166.16,18.64,0,0,0,0,0,formula,diethyl ethylphosphonate
+^TCPP,C9H18Cl3O4P,327.56,9.46,0,0,0,32.47,0,formula,tris(1-chloro-2-propyl) phosphate
+^MEL\b|^melamine$|^MEL \(,C3H6N6,126.12,0,66.63,0,0,0,0,formula,melamine
+^ATH|aluminum hydroxide,AlO3H3,78.0,0,0,0,0,0,34.59,formula,Al(OH)3
+^AO \(|aluminum oxide,Al2O3,101.96,0,0,0,0,0,52.93,formula,Al2O3
+^KB|boric acid,H3BO3,61.83,0,0,0,17.48,0,0,formula,H3BO3
+^MgBO2,MgBO3H,84.12,0,0,0,12.85,0,28.89,formula,MgBO2(OH)
+^PER|pentaerythritol,C5H12O4,136.15,0,0,0,0,0,0,formula,pentaerythritol (no FR element)
+potassium formate,CHO2K,84.11,0,0,0,0,0,46.48,formula,HCOOK
+^RM \(|diethyl \(hydroxymethyl\)phosphonate,C5H13O4P,168.13,18.42,0,0,0,0,0,formula,diethyl (hydroxymethyl)phosphonate
+^RE \(,C9H22NO5P,255.25,12.13,5.49,0,0,0,0,formula,diethyl bis(2-hydroxyethyl)aminomethylphosphonate
+^AD \(|dimethyl propane phosphonate,C5H13O3P,152.13,20.36,0,0,0,0,0,formula,dimethyl propylphosphonate
+^BH \(,C7H18NO5P,227.2,13.63,6.17,0,0,0,0,formula,dimethyl [bis(2-hydroxyethyl)amino]methylphosphonate
+^H3PO3,H3PO3,82.0,37.78,0,0,0,0,0,formula,phosphorous acid as charged (esterified)
+^EG|expandable graph|expanded graph,,,0,0,0,0,0,0,class,graphite: no P/N/Si/B/halogen/metal (intercalant S/N ignored)
+walnut|eucalyptus|lignin|^A-lignin,,,0,0,0,0,0,0,class,lignocellulosic filler: no FR element
+perlite|vermiculite,,,0,0,0,0,0,0,class,mineral (Si/Al silicate); Si/metal not counted as FR element -> 0 with flag mineral
+^DMMP,C3H9O3P,124.08,24.96,0,0,0,0,0,formula,dimethyl methylphosphonate
+^DOPO-HQ,C18H13O4P,324.27,9.55,0,0,0,0,0,formula,DOPO-hydroquinone
+^DMPY|dimelamine pyrophosph,C6H16N12O7P2,430.22,14.4,39.07,0,0,0,0,formula,(C3H6N6)2.H4P2O7
+Exolit OP 935,AlC12H30P3O6,390.27,23.81,0,0,0,0,6.91,formula,aluminium diethylphosphinate (Clariant OP 935)
+^TBPBP,C25H56N2O10P2,606.67,10.21,4.62,0,0,0,0,formula,"from IUPAC name: tetraethyl (1,5-bis(bis(2-hydroxypropyl)amino)pentane-1,5-diyl)bis(phosphonate)"
+^Hydrotalcite,Mg6Al2C1O23H24,603.97,0,0,0,0,0,33.08,formula,"Mg6Al2(CO3)(OH)16.4H2O; metal hydroxide-type FR, metal counted"
+silica aerogel|^SA powder,SiO2,60.08,0,0,46.74,0,0,0,formula,"silica (silicon-class FR), Si counted"
+Hazelnut shells,,,0,0,0,0,0,0,class,lignocellulosic filler: no FR element
+steel slag|^SS \(,,,0,0,0,0,0,0,class,"mineral slag: 0 with mineral flag (Si/metal of minerals not counted, as for perlite)"
+^LGP|glass powder,,,0,0,0,0,0,0,class,glass: 0 (as minerals)
+halloysite|^HNT,,,0,0,0,0,0,0,class,clay: 0 (nanoclay class carries it)
+Antiblaze TMCP|Antiblaze TCMP|\(TCPP\),C9H18Cl3O4P,327.56,9.46,0,0,0,32.47,0,formula,"Albemarle Antiblaze TMCP = TCPP (tris(1-chloro-2-propyl) phosphate); ""TCMP"" read as the same product (transposed letters, paper says chlorinated phosphate)"
+curau|coffee|cocoa|casein|apricot|primrose|oil cake,,,0,0,0,0,0,0,class,food/plant filler: no FR element
+woody ash|fly ash,,,0,0,0,0,0,0,class,"ash filler (mineral): 0, as for minerals"

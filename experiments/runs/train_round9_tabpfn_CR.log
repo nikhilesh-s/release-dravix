@@ -1,0 +1,1515 @@
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+CR: 567 rows / 61 groups / 11 features; log1p: False; incumbent exp117
+torch threads 1, OMP 1, LOKY_MAX_CPU_COUNT 1, HF_HUB_OFFLINE 1
+inc  GKF 0.6504 +- 0.0146 CI [0.4389, 0.7893] pooled [0.4459, 0.8055]  (39s)
+REPRO exp117 ok (record (0.6504, 0.4389, 0.7893))
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+p1   GKF 0.5502 +- 0.0337 CI [0.3560, 0.7228] pooled [0.3555, 0.7041]  d -0.1002 wins 0/10  (577s)
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: divide by zero encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: overflow encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/utils/extmath.py:203: RuntimeWarning: invalid value encountered in matmul
+  ret = a @ b
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: divide by zero encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: overflow encountered in matmul
+  return X @ coef_ + self.intercept_
+~/dravix/.venv312/lib/python3.12/site-packages/sklearn/linear_model/_base.py:280: RuntimeWarning: invalid value encountered in matmul
+  return X @ coef_ + self.intercept_
+p2   GKF 0.6293 +- 0.0188 CI [0.4404, 0.7720] pooled [0.4370, 0.7705]  d -0.0211 wins 1/10  (691s)
+~/dravix/.venv312/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+TabPFN fitted attributes: {'n_estimators_': 8, 'devices_': ['cpu'], 'use_autocast_': False, 'forced_inference_dtype_': None}
+Triggers: none
+wrote experiments/results/r9_tabpfn_cr_p1.json  top-k: {"drop_top1": {"mean_gain": -0.11435880776130274, "wins": 0}, "drop_top3": {"mean_gain": -0.1481688566737002, "wins": 0}, "drop_top5": {"mean_gain": -0.17822672707561407, "wins": 0}}
+wrote experiments/results/r9_tabpfn_cr_p2.json  top-k: {"drop_top1": {"mean_gain": -0.027968696602897292, "wins": 0}, "drop_top3": {"mean_gain": -0.0426420928241686, "wins": 0}, "drop_top5": {"mean_gain": -0.0572097952506702, "wins": 0}}
+wrote experiments/runs/round9_cr_b2_oof.npz (B2 CR members; the CR gate runs once over [o1, o2, n1, p1, p2])
+runtime 1307s

@@ -1,0 +1,271 @@
+{
+  "config": "experiments/configs/conformal_intervals.json",
+  "target": "LOI",
+  "exp_id": "exp115",
+  "n_rows": 606,
+  "n_groups": 107,
+  "group_definition": "paper (ref_id; 107 groups), as exp115; snapshot 3 (606 rows) built by rescore_loi_snapshot.py with wave4 + wave5 staging",
+  "score_scale": "s = y (raw units); back-transform identity",
+  "display_clip": [
+    0.0,
+    100.0
+  ],
+  "alpha": 0.1,
+  "nominal": 0.9,
+  "strata": "one stratum (no heat flux)",
+  "strata_counts": {
+    "0": {
+      "rows": 606,
+      "groups": 107
+    }
+  },
+  "step1": {
+    "exp_id": "exp115",
+    "mean": 0.387493882555289,
+    "std": 0.03842258355751214,
+    "ci_lo": 0.31238092837325837,
+    "ci_hi": 0.5288811418557986,
+    "ref": [
+      0.3875,
+      0.3124,
+      0.5289
+    ],
+    "ok": true,
+    "per_repeat": [
+      0.4410349588510023,
+      0.33601192308841277,
+      0.4169592772291728,
+      0.3858768224225768,
+      0.42913802837935655,
+      0.3750482364844522,
+      0.3986575059427778,
+      0.40688697219601533,
+      0.31131337319951946,
+      0.37401172775960345
+    ]
+  },
+  "status": "ok",
+  "variants": {
+    "P": {
+      "description": "primary (deployed): group-weighted CV+, Mondrian by flux anchor (FSRI) or one stratum (LOI)",
+      "coverage_scale": "score",
+      "overall": {
+        "group_all": {
+          "mean": 0.8214953271028037,
+          "min": 0.794392523364486,
+          "max": 0.8504672897196262,
+          "ci": [
+            0.7532710280373831,
+            0.8822663551401868
+          ],
+          "note": "expected to fall below 0.90: the interval is per-row, not simultaneous, and groups have more than one row in this cell; no reading-rule label"
+        },
+        "group_mean": {
+          "mean": 0.9218449899010647,
+          "min": 0.9086508507069254,
+          "max": 0.9345857724829688,
+          "ci": [
+            0.8793029783300812,
+            0.9574929149121905
+          ],
+          "reading": "consistent with nominal"
+        },
+        "row": {
+          "mean": 0.9336633663366335,
+          "min": 0.9075907590759076,
+          "max": 0.9504950495049505,
+          "ci": [
+            0.9024489987453446,
+            0.9610744940972707
+          ]
+        },
+        "score_width_mean": {
+          "mean": 10.14503145006843,
+          "min": 9.713428793553563,
+          "max": 10.504642254718416
+        },
+        "score_width_median": {
+          "mean": 10.021514282682368,
+          "min": 9.575585915019813,
+          "max": 10.59674725468784
+        },
+        "raw_width_mean": {
+          "mean": 10.144602146602393,
+          "min": 9.713428793553563,
+          "max": 10.504642254718416
+        },
+        "raw_width_median": {
+          "mean": 10.021514282682368,
+          "min": 9.575585915019813,
+          "max": 10.59674725468784
+        },
+        "ratio_median": null,
+        "n_unbounded": {
+          "total_over_repeats": 0,
+          "per_repeat_max": 0
+        },
+        "n_empty": {
+          "total_over_repeats": 0,
+          "per_repeat_max": 0
+        },
+        "n_bounded": {
+          "total_over_repeats": 6060,
+          "per_repeat_max": 606
+        },
+        "n_rows": 606,
+        "n_groups": 107,
+        "binomial_sd": 0.02900209467136991
+      }
+    },
+    "V2": {
+      "description": "report-only: P with all w_i = 1 (row-exchangeable textbook CV+)",
+      "coverage_scale": "score",
+      "overall": {
+        "group_all": {
+          "mean": 0.7785046728971963,
+          "min": 0.7383177570093458,
+          "max": 0.8130841121495327,
+          "ci": [
+            0.706518691588785,
+            0.8467289719626168
+          ],
+          "note": "expected to fall below 0.90: the interval is per-row, not simultaneous, and groups have more than one row in this cell; no reading-rule label"
+        },
+        "group_mean": {
+          "mean": 0.9010449317038102,
+          "min": 0.8877184964568143,
+          "max": 0.9179187634795111,
+          "ci": [
+            0.8551693754065248,
+            0.9397557854917667
+          ],
+          "reading": "consistent with nominal"
+        },
+        "row": {
+          "mean": 0.912046204620462,
+          "min": 0.8795379537953796,
+          "max": 0.9306930693069307,
+          "ci": [
+            0.8749980407523511,
+            0.943701187918615
+          ]
+        },
+        "score_width_mean": {
+          "mean": 9.099440131948342,
+          "min": 8.578472195145139,
+          "max": 9.402500928704589
+        },
+        "score_width_median": {
+          "mean": 8.980486176913292,
+          "min": 8.579952926436626,
+          "max": 9.291188856938447
+        },
+        "raw_width_mean": {
+          "mean": 9.098961695107334,
+          "min": 8.578472195145139,
+          "max": 9.402500928704589
+        },
+        "raw_width_median": {
+          "mean": 8.980486176913292,
+          "min": 8.579952926436626,
+          "max": 9.291188856938447
+        },
+        "ratio_median": null,
+        "n_unbounded": {
+          "total_over_repeats": 0,
+          "per_repeat_max": 0
+        },
+        "n_empty": {
+          "total_over_repeats": 0,
+          "per_repeat_max": 0
+        },
+        "n_bounded": {
+          "total_over_repeats": 6060,
+          "per_repeat_max": 606
+        },
+        "n_rows": 606,
+        "n_groups": 107,
+        "binomial_sd": 0.02900209467136991
+      }
+    },
+    "CQR": {
+      "description": "report-only: CQR with HGB quantile 0.05 / 0.95 models on the score scale, group-weighted, Mondrian",
+      "coverage_scale": "score",
+      "overall": {
+        "group_all": {
+          "mean": 0.8345794392523365,
+          "min": 0.794392523364486,
+          "max": 0.8598130841121495,
+          "ci": [
+            0.7682242990654204,
+            0.8943925233644858
+          ],
+          "note": "expected to fall below 0.90: the interval is per-row, not simultaneous, and groups have more than one row in this cell; no reading-rule label"
+        },
+        "group_mean": {
+          "mean": 0.9222503223671449,
+          "min": 0.9110609017151073,
+          "max": 0.9294871794871795,
+          "ci": [
+            0.8783305054888,
+            0.9580435209909509
+          ],
+          "reading": "consistent with nominal"
+        },
+        "row": {
+          "mean": 0.943069306930693,
+          "min": 0.9306930693069307,
+          "max": 0.9504950495049505,
+          "ci": [
+            0.9123230123059173,
+            0.9677529090302579
+          ]
+        },
+        "score_width_mean": {
+          "mean": 9.797305117142615,
+          "min": 9.350651936404928,
+          "max": 10.068512857292337
+        },
+        "score_width_median": {
+          "mean": 9.3967056296845,
+          "min": 8.715506799860114,
+          "max": 9.845053967624947
+        },
+        "raw_width_mean": {
+          "mean": 9.797305117142615,
+          "min": 9.350651936404928,
+          "max": 10.068512857292337
+        },
+        "raw_width_median": {
+          "mean": 9.3967056296845,
+          "min": 8.715506799860114,
+          "max": 9.845053967624947
+        },
+        "ratio_median": null,
+        "n_unbounded": {
+          "total_over_repeats": 0,
+          "per_repeat_max": 0
+        },
+        "n_empty": {
+          "total_over_repeats": 0,
+          "per_repeat_max": 0
+        },
+        "n_bounded": {
+          "total_over_repeats": 6060,
+          "per_repeat_max": 606
+        },
+        "n_rows": 606,
+        "n_groups": 107,
+        "binomial_sd": 0.02900209467136991
+      }
+    }
+  },
+  "nested_asserts": "passed",
+  "runtime_s": 516.6,
+  "versions": {
+    "python": "3.12.4",
+    "sklearn": "1.7.1",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3"
+  }
+}

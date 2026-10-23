@@ -1,0 +1,546 @@
+A2 MaCFP-4 Wood + Edinburgh PMMA cross-lab check; config experiments/configs/macfp_wood_crosslab.json
+python 3.12.4; OMP_NUM_THREADS=1; PYTHONDONTWRITEBYTECODE=1
+sklearn 1.7.1, numpy 2.2.6, pandas 2.3.3, scipy 1.16.1
+environment matches the config: True
+config last committed: dd9c9c62dae1fde1ca737915e096659b6efb20c1 2026-10-06 14:52:15 -0700
+
+========== STEP 0: pin check, file and README-row counts, MCC self-test ==========
+pin HEAD 0e4ad8bf6ddb7c52eea4022aade810672adabfd0; tree clean: True
+cone files per lab: {'Aalto': 9, 'BUWfd': 5, 'FPL': 6, 'FSRI': 18, 'FZJ': 22, 'IMT': 12, 'TUBS': 3, 'UDRI': 7, 'UMET': 6, 'UQ': 3}
+UCantabria: excluded everywhere (README-only rows, no CSV); BUWfd_Wood_Cone_50kW_hor_R1 excluded (non-physical mass; MaCFP's script excludes it)
+README rows matched: 86 cone tests, each to exactly one README row; mass headers used: ['Initial Mass (g)', 'Initial Sample Mass (g)', 'Initial mass (g)', 'Initial sample mass (g)', 'Mass (g)', 'initial sample mass (g)']; t_ign headers used: ['Time to Ignition (s)', 'Time to ignition (s)', 't\\_ign (s)', 't_ign (s)']
+Edinburgh PMMA README rows: 12 (25 kW/m2: 6, 65 kW/m2: 6)
+measured median sampling interval per lab: {'Aalto': [5.0], 'BUWfd': [1.0], 'FPL': [1.0], 'FSRI': [1.0], 'FZJ': [1.0], 'IMT': [5.0], 'TUBS': [1.0], 'UDRI': [1.0], 'UMET': [1.0], 'UQ': [1.0]}; mismatches with declared: 0
+primary_80: 80; by lab {'Aalto': 9, 'FPL': 6, 'FSRI': 18, 'FZJ': 22, 'IMT': 12, 'TUBS': 3, 'UDRI': 7, 'UQ': 3}; by flux {25: 11, 30: 15, 45: 3, 50: 16, 60: 19, 75: 16}; by orientation {'parallel': 34, 'unknown': 25, 'perpendicular': 21}
+split: FSRI-lab 18 vs other labs 62 (7 labs)
+tti_25: 11 {'FSRI': 6, 'IMT': 5}; umet_stratum: 6; tti_86_secondary: 86; edinburgh_pmma: 12
+cr_flameout: 53 {'Aalto': 5, 'FPL': 5, 'FSRI': 18, 'IMT': 12, 'UDRI': 7, 'UMET': 3, 'UQ': 3}
+end_of_test: 89 {'Aalto': 9, 'BUWfd': 5, 'FPL': 6, 'FSRI': 18, 'FZJ': 20, 'IMT': 12, 'TUBS': 3, 'UDRI': 7, 'UMET': 6, 'UQ': 3}
+count rule: all row-set counts match the config
+MCC self-test on Pine_Siding_30K_min_210608_R1 (computed, stored): {'peak_hrr_Wg': (76.378, 76.378), 't_peak_C': (376.3, 376.3), 'total_hr_bc_kJg': (np.float64(12.776), 12.776), 't_onset_bc_C': (231.6, 231.6)}
+MCC self-test: reproduced at stored rounding
+
+========== STEP 1: reproduce exp074, exp046, exp117 on FSRI ==========
+exp074: 191 rows / 64 groups; GKF 5x10 0.6113 CI [0.5155, 0.8376] (record 0.6113 [0.5155, 0.8376]) -> REPRODUCED (12s)
+exp046: 681 rows / 76 groups; GKF 5x10 0.3133 CI [0.0715, 0.4958] (record 0.3133 [0.0715, 0.4958]) -> REPRODUCED (2s)
+exp117: 567 rows / 61 groups; GKF 5x10 0.6504 CI [0.4389, 0.7893] (record 0.6504 [0.4389, 0.7893]) -> REPRODUCED (82s)
+exp074 refit vs saved phrr_hgb_v4.joblib on the 191 FSRI rows: max |diff| 0 kW/m2 (limit 1e-6)
+exp046 fitted on all 681 rows; imputer medians {'log_q': np.float64(10.8198), 'log_dT': np.float64(5.4031), 'log_kpc': np.float64(10.8265), 'log_L': np.float64(-4.7825), 'log_rho': np.float64(6.3204)}; indicator features ['log_dT', 'log_kpc', 'log_L', 'log_rho']
+exp117 fitted on all 567 rows (Avg of HGB, ExtraTrees, Ridge; predictions not clipped)
+
+========== STEP 2: PS check and gate (label-free) ==========
+per run: lab | file | beta (src) | peak W/g | HRC J/gK | h_c (bc) kJ/g | rows
+  FZJ   Wood/Calibration_Data/FZJ/FZJ_PS_MCC-raw_N2_60K_R1.csv       1.000 (file name)   1156.4   1156.4   38.44 978
+  FZJ   Wood/Calibration_Data/FZJ/FZJ_PS_MCC-raw_N2_60K_R2.csv       1.000 (file name)   1078.0   1078.0   40.16 977
+  FZJ   Wood/Calibration_Data/FZJ/FZJ_PS_MCC-raw_N2_60K_R3.csv       1.000 (file name)   1203.6   1203.6   40.10 978
+  FZJ   Wood/Calibration_Data/FZJ/FZJ_PS_MCC-raw_N2_60K_R4.csv       1.000 (file name)   1209.0   1209.0   38.76 977
+  FZJ   Wood/Calibration_Data/FZJ/FZJ_PS_MCC-raw_N2_60K_R5.csv       1.000 (file name)   1154.6   1154.6   40.20 977
+  FZJ   Wood/Calibration_Data/FZJ/FZJ_PS_MCC-raw_N2_60K_R6.csv       1.000 (file name)   1195.2   1195.2   39.90 978
+  Lund  Wood/Calibration_Data/Lund/Lund_PS_MCC-raw_N2_60K_R1.csv     1.000 (file name)   1059.8   1059.8   42.75 1377
+  NIST  Wood/Calibration_Data/NIST/NIST_Polystyrene_MCC_N2_60K_R1.txt 1.000 (header)   1156.9   1156.9   40.45 1378
+  TUBS  Wood/Calibration_Data/TUBS/TUBS_PS_MCC-raw_N2_30K_R1.csv     0.500 (file name)    554.5   1109.1   40.58 1703
+  UDRI  Wood/Calibration_Data/UDRI/UDRI_PS_MCC_N2_60K_R1.csv         1.000 (file name)   1100.7   1100.7   40.65 1337
+  UDRI  Wood/Calibration_Data/UDRI/UDRI_PS_MCC_N2_60K_R2.csv         1.000 (file name)   1119.8   1119.8   40.60 1299
+  UDRI  Wood/Calibration_Data/UDRI/UDRI_PS_MCC_N2_60K_R3.csv         1.000 (file name)   1166.1   1166.1   40.82 1299
+reference (median of 5 lab medians): HRC 1119.8 J/gK, h_c 40.58 kJ/g
+  FZJ   n=6 HRC 1175.8 (1.050) h_c 40.00 (0.986) -> PASS
+  Lund  n=1 HRC 1059.8 (0.946) h_c 42.75 (1.053) -> PASS
+  NIST  n=1 HRC 1156.9 (1.033) h_c 40.45 (0.997) -> PASS
+  TUBS  n=1 HRC 1109.1 (0.990) h_c 40.58 (1.000) -> PASS
+  UDRI  n=3 HRC 1119.8 (1.000) h_c 40.65 (1.002) -> PASS
+context only (never part of the gate): TUBS self-report 1099 J/gK, 38.8 kJ/g (long-run 1108 +- 15 J/gK, 38.7 +- 0.2 kJ/g, 30 K/min); UDRI self-report 1099-1166 W/g, 41.2-41.8 kJ/g (60 K/min)
+no PS-derived factor is applied to any input
+
+========== STEP 3: derive and freeze inputs (no label read yet) ==========
+label-free report: 88 Wood MCC files (never inputs except FZJ raw 30K R1-R2 and TUBS 30K R1-R3)
+ lab                                file      kind atmosphere  rate_K_min           purpose  peak_Wg  hrc_JgK  t_peak_C  total_hr_bc_kJg  t_onset_bc_C  rows
+ FZJ      FZJ_Wood_MCC-raw_N2_30K_R1.csv       raw         N2          30  main measurement   73.614   147.23     379.8           11.889         249.4  2127
+ FZJ      FZJ_Wood_MCC-raw_N2_30K_R2.csv       raw         N2          30  main measurement   70.936   141.87     377.8           12.057         238.5  2127
+ FZJ      FZJ_Wood_MCC-raw_N2_45K_R1.csv       raw         N2          45  main measurement  112.197   149.60     387.3           12.334         257.1  1426
+ FZJ      FZJ_Wood_MCC-raw_N2_45K_R2.csv       raw         N2          45  main measurement  112.385   149.85     385.2           12.205         266.7  1426
+ FZJ      FZJ_Wood_MCC-raw_N2_60K_R1.csv       raw         N2          60 mass down-scaling  138.720   138.72     395.3            6.675         341.9  1077
+ FZJ     FZJ_Wood_MCC-raw_N2_60K_R10.csv       raw         N2          60  main measurement  141.811   141.81     392.9           12.393         261.4  1177
+ FZJ      FZJ_Wood_MCC-raw_N2_60K_R2.csv       raw         N2          60 mass down-scaling  164.370   164.37     396.4           13.807         304.4  1052
+ FZJ      FZJ_Wood_MCC-raw_N2_60K_R3.csv       raw         N2          60 mass down-scaling  153.200   153.20     393.3           10.363         317.8  1077
+ FZJ      FZJ_Wood_MCC-raw_N2_60K_R4.csv       raw         N2          60 mass down-scaling  153.761   153.76     397.4            9.651         327.9  1078
+ FZJ      FZJ_Wood_MCC-raw_N2_60K_R5.csv       raw         N2          60 mass down-scaling  156.890   156.89     393.3           12.508         304.3  1078
+ FZJ      FZJ_Wood_MCC-raw_N2_60K_R6.csv       raw         N2          60 mass down-scaling  143.556   143.56     392.1           12.559         255.5  1277
+ FZJ      FZJ_Wood_MCC-raw_N2_60K_R7.csv       raw         N2          60 mass down-scaling  142.911   142.91     389.4           12.695         260.3  1277
+ FZJ      FZJ_Wood_MCC-raw_N2_60K_R8.csv       raw         N2          60  main measurement  146.945   146.94     391.6           12.400         261.0  1277
+ FZJ      FZJ_Wood_MCC-raw_N2_60K_R9.csv       raw         N2          60  main measurement  143.809   143.81     392.4           12.477         267.2  1277
+ FZJ          FZJ_Wood_MCC_N2_30K_R1.csv processed         N2          30  main measurement   74.890   149.78     379.8           12.010         246.3  1055
+ FZJ          FZJ_Wood_MCC_N2_30K_R2.csv processed         N2          30  main measurement   71.970   143.94     378.1           12.215         233.1  1054
+ FZJ          FZJ_Wood_MCC_N2_45K_R1.csv processed         N2          45  main measurement  113.160   150.88     387.3           12.514         251.8  1055
+ FZJ          FZJ_Wood_MCC_N2_45K_R2.csv processed         N2          45  main measurement  113.140   150.85     385.2           12.409         260.7  1056
+ FZJ          FZJ_Wood_MCC_N2_60K_R1.csv processed         N2          60 mass down-scaling  144.870   144.87     395.4            7.426         333.9  1058
+ FZJ         FZJ_Wood_MCC_N2_60K_R10.csv processed         N2          60  main measurement  141.290   141.29     392.8           12.678         252.8  1158
+ FZJ          FZJ_Wood_MCC_N2_60K_R2.csv processed         N2          60 mass down-scaling  155.770   155.77     396.8           14.293         292.8  1031
+ FZJ          FZJ_Wood_MCC_N2_60K_R3.csv processed         N2          60 mass down-scaling  154.870   154.87     393.4           10.698         312.4  1058
+ FZJ          FZJ_Wood_MCC_N2_60K_R4.csv processed         N2          60 mass down-scaling  155.830   155.83     397.5           10.675         312.0  1058
+ FZJ          FZJ_Wood_MCC_N2_60K_R5.csv processed         N2          60 mass down-scaling  154.020   154.02     393.3           12.828         296.8  1058
+ FZJ          FZJ_Wood_MCC_N2_60K_R6.csv processed         N2          60 mass down-scaling  143.500   143.50     391.8           12.777         249.3  1258
+ FZJ          FZJ_Wood_MCC_N2_60K_R7.csv processed         N2          60 mass down-scaling  142.700   142.70     389.6           13.039         249.1  1258
+ FZJ          FZJ_Wood_MCC_N2_60K_R8.csv processed         N2          60  main measurement  146.820   146.82     391.8           12.705         252.8  1258
+ FZJ          FZJ_Wood_MCC_N2_60K_R9.csv processed         N2          60  main measurement  142.990   142.99     392.4           12.834         257.9  1258
+ IMT      IMT_Wood_MCC-raw_N2_60K_R1.csv       raw         N2          60                    129.151   129.15     382.6           15.044         193.4  1376
+ IMT      IMT_Wood_MCC-raw_N2_60K_R2.csv       raw         N2          60                    126.593   126.59     389.4           15.538         184.1  1383
+ IMT          IMT_Wood_MCC_N2_60K_R1.csv processed         N2          60                    121.939   121.94     382.6           13.204         224.9  1216
+ IMT          IMT_Wood_MCC_N2_60K_R2.csv processed         N2          60                    114.266   114.27     389.4           12.814         227.1  1173
+ IMT       IMT_Wood_MCC_O2-10_60K_R1.csv processed      O2-10          60                    139.350   139.35     353.0           17.131         242.3  1141
+ IMT       IMT_Wood_MCC_O2-10_60K_R2.csv processed      O2-10          60                    139.910   139.91     354.1           18.982         222.3  1205
+ IMT       IMT_Wood_MCC_O2-20_60K_R1.csv processed      O2-20          60                    168.684   168.68     349.2           19.246         227.1  1150
+ IMT       IMT_Wood_MCC_O2-20_60K_R2.csv processed      O2-20          60                    236.938   236.94     467.0           20.107         237.7  1171
+ IMT        IMT_Wood_MCC_O2-2_60K_R1.csv processed       O2-2          60                    127.028   127.03     369.8           20.128         221.2  1213
+ IMT        IMT_Wood_MCC_O2-2_60K_R2.csv processed       O2-2          60                    139.305   139.31     365.0           22.873         219.1  1219
+ IMT        IMT_Wood_MCC_O2-5_60K_R1.csv processed       O2-5          60                    128.382   128.38     364.3           19.112         218.0  1250
+ IMT        IMT_Wood_MCC_O2-5_60K_R2.csv processed       O2-5          60                    136.077   136.08     359.5           18.646         244.7  1148
+Lund Lund_Wood-char_MCC_O2-20_60K_R1.csv processed      O2-20          60                    385.468   385.47     371.4           33.222         295.9   720
+Lund Lund_Wood-char_MCC_O2-20_60K_R2.csv processed      O2-20          60                    476.671   476.67     399.4           36.376         336.4   885
+Lund Lund_Wood-char_MCC_O2-20_60K_R3.csv processed      O2-20          60                    368.552   368.55     396.4           36.242         331.9   856
+Lund     Lund_Wood_MCC-raw_N2_60K_R1.csv       raw         N2          60                    137.005   137.00     375.2           12.118         265.8   994
+Lund     Lund_Wood_MCC-raw_N2_60K_R2.csv       raw         N2          60                    139.457   139.46     373.2           12.540         257.0  1197
+Lund     Lund_Wood_MCC-raw_N2_60K_R3.csv       raw         N2          60                    137.619   137.62     374.3           12.462         263.6  1176
+Lund         Lund_Wood_MCC_N2_60K_R1.csv processed         N2          60                    133.051   133.05     375.4           11.990         265.9   764
+Lund         Lund_Wood_MCC_N2_60K_R2.csv processed         N2          60                    137.392   137.39     372.9           12.220         260.9   940
+Lund         Lund_Wood_MCC_N2_60K_R3.csv processed         N2          60                    136.072   136.07     374.4           12.382         262.9  1022
+Lund      Lund_Wood_MCC_O2-20_60K_R1.csv processed      O2-20          60                    286.785   286.79     330.4           18.798         265.9   696
+Lund      Lund_Wood_MCC_O2-20_60K_R2.csv processed      O2-20          60                    289.576   289.58     331.4           19.025         263.9   756
+Lund      Lund_Wood_MCC_O2-20_60K_R3.csv processed      O2-20          60                    287.527   287.53     330.9           19.211         263.4   759
+NIST NIST_Wood-char_MCC_O2-20_60K_R1.csv processed      O2-20          60                    428.882   428.88     397.9           34.938         359.4  1612
+NIST NIST_Wood-char_MCC_O2-20_60K_R2.csv processed      O2-20          60                    469.571   469.57     393.4           34.052         367.4   997
+NIST NIST_Wood-char_MCC_O2-20_60K_R3.csv processed      O2-20          60                    402.554   402.55     406.4           34.140         368.9  1020
+NIST     NIST_Wood_MCC-raw_N2_60K_R1.csv       raw         N2          60                    142.008   142.01     395.4           13.361         259.6  1978
+NIST    NIST_Wood_MCC-raw_N2_60K_R10.csv       raw         N2          60                    147.849   147.85     394.2           12.260         271.9  1278
+NIST    NIST_Wood_MCC-raw_N2_60K_R11.csv       raw         N2          60                    148.457   148.46     393.5           12.296         272.1  1279
+NIST    NIST_Wood_MCC-raw_N2_60K_R12.csv       raw         N2          60                    150.835   150.84     394.2           12.339         273.8  1279
+NIST     NIST_Wood_MCC-raw_N2_60K_R2.csv       raw         N2          60                    143.826   143.83     395.8           12.247         270.0  1279
+NIST     NIST_Wood_MCC-raw_N2_60K_R3.csv       raw         N2          60                    140.747   140.75     394.6           12.350         266.3  1278
+NIST     NIST_Wood_MCC-raw_N2_60K_R4.csv       raw         N2          60                    144.401   144.40     395.8           12.217         271.0  1278
+NIST     NIST_Wood_MCC-raw_N2_60K_R5.csv       raw         N2          60                    141.291   141.29     394.4           12.367         265.1  1278
+NIST     NIST_Wood_MCC-raw_N2_60K_R6.csv       raw         N2          60                    140.646   140.65     394.4           12.068         266.0  1279
+NIST     NIST_Wood_MCC-raw_N2_60K_R7.csv       raw         N2          60                    139.151   139.15     394.4           12.091         265.0  1278
+NIST     NIST_Wood_MCC-raw_N2_60K_R8.csv       raw         N2          60                    139.677   139.68     394.1           12.096         265.2  1277
+NIST     NIST_Wood_MCC-raw_N2_60K_R9.csv       raw         N2          60                    141.767   141.77     395.2           12.221         269.4  1278
+NIST         NIST_Wood_MCC_N2_60K_R1.csv processed         N2          60                    139.682   139.68     395.4           12.213         258.9  1674
+NIST        NIST_Wood_MCC_N2_60K_R10.csv processed         N2          60                    148.043   148.04     394.4           12.744         246.4  1090
+NIST        NIST_Wood_MCC_N2_60K_R11.csv processed         N2          60                    145.419   145.42     393.9           12.507         251.4  1089
+NIST        NIST_Wood_MCC_N2_60K_R12.csv processed         N2          60                    148.278   148.28     394.4           12.716         250.4  1087
+NIST         NIST_Wood_MCC_N2_60K_R2.csv processed         N2          60                    139.900   139.90     395.4           11.938         263.4  1053
+NIST         NIST_Wood_MCC_N2_60K_R3.csv processed         N2          60                    137.952   137.95     394.9           11.919         261.4  1056
+NIST         NIST_Wood_MCC_N2_60K_R4.csv processed         N2          60                    141.317   141.32     395.9           11.946         263.4  1054
+NIST         NIST_Wood_MCC_N2_60K_R5.csv processed         N2          60                    137.916   137.92     394.4           11.928         260.9  1055
+NIST         NIST_Wood_MCC_N2_60K_R6.csv processed         N2          60                    137.619   137.62     394.4           11.811         258.9  1055
+NIST         NIST_Wood_MCC_N2_60K_R7.csv processed         N2          60                    135.364   135.36     394.4           11.464         263.9  1057
+NIST         NIST_Wood_MCC_N2_60K_R8.csv processed         N2          60                    136.175   136.18     394.4           11.550         263.4  1057
+NIST         NIST_Wood_MCC_N2_60K_R9.csv processed         N2          60                    138.991   138.99     395.4           12.096         260.9  1053
+NIST      NIST_Wood_MCC_O2-20_60K_R1.csv processed      O2-20          60                    206.423   206.42     356.4           18.028         269.9  1294
+NIST      NIST_Wood_MCC_O2-20_60K_R2.csv processed      O2-20          60                    205.508   205.51     355.4           18.349         267.9  1282
+NIST      NIST_Wood_MCC_O2-20_60K_R3.csv processed      O2-20          60                    207.994   207.99     354.9           18.048         268.9  1288
+TUBS         TUBS_Wood_MCC_N2_30K_R1.csv processed         N2          30                     59.520   119.04     379.4            7.635         279.4   797
+TUBS         TUBS_Wood_MCC_N2_30K_R2.csv processed         N2          30                     62.920   125.84     377.9           10.850         266.4   799
+TUBS         TUBS_Wood_MCC_N2_30K_R3.csv processed         N2          30                     65.910   131.82     376.9           10.301         274.4   797
+UDRI         UDRI_Wood_MCC_N2_60K_R1.csv processed         N2          60                    125.410   125.41     394.4           11.263         244.4  1148
+UDRI         UDRI_Wood_MCC_N2_60K_R2.csv processed         N2          60                    126.230   126.23     394.9           11.205         243.9  1184
+UDRI         UDRI_Wood_MCC_N2_60K_R3.csv processed         N2          60                    128.310   128.31     395.4           11.101         244.9  1170
+FZJ raw 30K inputs: [{'file': 'Wood/Calibration_Data/FZJ/FZJ_Wood_MCC-raw_N2_30K_R1.csv', 'peak_hrr_Wg': 73.614, 't_peak_C': 379.8, 'total_hr_bc_kJg': np.float64(11.889), 't_onset_bc_C': 249.4}, {'file': 'Wood/Calibration_Data/FZJ/FZJ_Wood_MCC-raw_N2_30K_R2.csv', 'peak_hrr_Wg': 70.936, 't_peak_C': 377.8, 'total_hr_bc_kJg': np.float64(12.057), 't_onset_bc_C': 238.5}]
+TUBS 30K inputs (peak only): [('Wood/Calibration_Data/TUBS/TUBS_Wood_MCC_N2_30K_R1.csv', 59.52), ('Wood/Calibration_Data/TUBS/TUBS_Wood_MCC_N2_30K_R2.csv', 62.92), ('Wood/Calibration_Data/TUBS/TUBS_Wood_MCC_N2_30K_R3.csv', 65.91)]
+FZJ processed 30K (report only, never inputs): [{'file': 'Wood/Calibration_Data/FZJ/FZJ_Wood_MCC_N2_30K_R1.csv', 'peak_hrr_Wg': 74.89, 't_peak_C': 379.8, 'total_hr_bc_kJg': np.float64(12.01), 't_onset_bc_C': 246.3}, {'file': 'Wood/Calibration_Data/FZJ/FZJ_Wood_MCC_N2_30K_R2.csv', 'peak_hrr_Wg': 71.97, 't_peak_C': 378.1, 'total_hr_bc_kJg': np.float64(12.215), 't_onset_bc_C': 233.1}]
+FZJ README MCC char yield: R1 16.00%, R2 13.47%
+TPS: mean k 0.14175 W/mK, mean rho*c 0.4020 MJ/m3K -> log_kpc_S1 10.9505
+  STA FSRI_Wood_STA_N2_3K_R1.csv: unit Mass (mg), final T 1070.5 K, residue 15.900% (at first T >= 1023.15 K: 16.151%)
+  STA FSRI_Wood_STA_N2_10K_R1.csv: unit Mass (mg), final T 1069.0 K, residue 19.193% (at first T >= 1023.15 K: 19.453%)
+  STA FSRI_Wood_STA_N2_10K_R2.csv: unit Mass (mg), final T 1069.5 K, residue 19.001% (at first T >= 1023.15 K: 19.199%)
+  STA FSRI_Wood_STA_N2_10K_R3.csv: unit Mass (mg), final T 1070.0 K, residue 19.119% (at first T >= 1023.15 K: 19.364%)
+  STA FSRI_Wood_STA_N2_30K_R1.csv: unit Mass (mg), final T 1063.5 K, residue 22.839% (at first T >= 1023.15 K: 23.096%)
+  STA FSRI_Wood_STA_N2_30K_R2.csv: unit Mass (mg), final T 1063.0 K, residue 21.836% (at first T >= 1023.15 K: 22.076%)
+  STA FSRI_Wood_STA_N2_30K_R3.csv: unit Mass (mg), final T 1064.5 K, residue 21.006% (at first T >= 1023.15 K: 21.256%)
+STA residues (inputs): {'sta_res_3K': 15.900440705128206, 'sta_res_10K': 19.104674445231353, 'sta_res_30K': 21.893851615607787}; at 750 C (label-free report only): {'sta_res_3K_at_750C': 16.150841346153847, 'sta_res_10K_at_750C': 19.338798308563554, 'sta_res_30K_at_750C': 22.142676241471396}
+G2 (medians over primary_80): {'cone_thickness_mm': 25.6, 'density_kgm3': 378.68065818105504, 'cone_mass_per_area_kgm2': 10.0435}
+  gate mcc_peak_hrr_Wg                                66.580 in [40, 120]: ok
+  gate mcc_total_hr_kJg                               11.973 in [8, 16]: ok
+  gate mcc_t_onset_C (mean)                          243.950 in [200, 400]: ok
+  gate mcc_t_onset_C (median)                        243.950 in [200, 400]: ok
+  gate mcc_t_peak_C                                  378.800 in [330, 420]: ok
+  gate mcc_char_yield_pct                             14.733 in [5, 30]: ok
+  gate sta_res_3K                                     15.900 in [5, 40]: ok
+  gate sta_res_10K                                    19.105 in [5, 40]: ok
+  gate sta_res_30K                                    21.894 in [5, 40]: ok
+  gate per-test density_kgm3 min (n=86)              314.431 in [250, 600]: ok
+  gate per-test density_kgm3 max (n=86)              495.137 in [250, 600]: ok
+  gate per-test cone_thickness_mm min (n=86)          25.000 in [20, 30]: ok
+  gate per-test cone_thickness_mm max (n=86)          26.500 in [20, 30]: ok
+  gate per-test cone_mass_per_area_kgm2 min (n=86)      8.270 in [6, 16]: ok
+  gate per-test cone_mass_per_area_kgm2 max (n=86)     13.552 in [6, 16]: ok
+Edinburgh inputs: FSRI Black_PMMA log_dT 5.2786, log_kpc 12.3803, log_rho 7.0741; log_L = log(0.006); log_q = log(1e3 * flux)
+FROZEN features.json (98 input rows) sha256 8f2831f2a009eeb3466f43f00836910419dec66f264f6d8cbee7694117956b3e  [no label column read yet]
+
+label-free feature table (MaCFP pine vs FSRI training rows of Pine_Siding and Wood_Stud):
+                     feature      MaCFP pine Pine_Siding Wood_Stud
+             mcc_peak_hrr_Wg          66.580      78.093    73.979
+          mcc_char_yield_pct          14.733      10.450    12.887
+            mcc_total_hr_kJg          11.973      12.758    11.219
+                mcc_t_peak_C         378.800     376.533   370.667
+               mcc_t_onset_C         243.950     239.833   261.367
+                     log_kpc NaN (S1 10.951)      10.483    10.510
+           cone_thickness_mm          25.600      18.020    38.060
+                density_kgm3         378.681     310.000   355.000
+     cone_mass_per_area_kgm2          10.043       6.771    17.507
+             log_dT (exp046)           5.411       5.355     5.513
+              log_L (exp046)          -3.665      -4.016    -3.269
+            log_rho (exp046)           5.937       5.737     5.872
+         sta_res_3K (exp117)          15.900      17.607    13.815
+        sta_res_10K (exp117)          19.105      20.500    18.147
+        sta_res_30K (exp117)          21.894      20.445    17.646
+     cat_structural (exp117)           1.000       1.000     1.000
+cat_exterior_finish (exp117)           1.000       1.000     1.000
+cat_interior_finish (exp117)           0.000       0.000     1.000
+
+========== STEP 4: predict all variants ==========
+                   count    mean     min     max
+pred_phrr_primary   86.0  267.07  192.99  366.32
+pred_tti_primary    86.0   33.27    6.09  100.93
+pred_phrr_S1        86.0  308.78  238.91  411.74
+pred_tti_S1         86.0   52.46    9.61  159.13
+pred_phrr_S2        86.0  262.30  193.40  352.32
+pred_tti_S2         86.0   33.06    6.32   96.06
+pred_cr_primary     86.0   20.44   15.77   26.80
+pred_cr_S2          86.0   20.63   16.56   26.74
+pred_cr_S3          86.0   17.54   14.40   21.53
+Edinburgh TTI predictions: {25: 99.77, 65: 9.35}
+predictions written to tests.csv (labels blank) sha256 e8c2c82f595512a0b0af5305f2f4a41bcc23e645e77a7b3266125dd9f0fd22ba
+
+========== STEP 5: labels, metrics, tables ==========
+tests.csv written with labels: 103 rows, sha256 54014425771e729351664715ab96c51ca725b3ec1e99ffcc759927537c9e9d14
+
+stop-time table (end-of-test residue, all cone files with a finite-mass record):
+                                lab  n residue mean % residue min % residue max % duration mean s duration min s duration max s                                                                                                         stop rule (README)
+                              Aalto  9           21.9          16.2          28.4          1534.4         1095.0         2160.0 not stated for cone-in-air tests; t_flameout reported (from start of DAQ); 'Test duration' filled only for N2 gasification
+                              BUWfd  5           11.2           8.4          14.3          2100.0         2100.0         2100.0                                                                                                README has no cone metadata
+                                FPL  6           15.3           9.1          20.2          1676.0         1400.0         1825.0                          not stated (ASTM E1354-25); t_flameout reported; R2 DAQ lost at 1400 s, flameout recorded by hand
+                               FSRI 18           16.0          11.6          19.9          1603.8         1010.0         2399.0                                                   not stated (ASTM E1354, general accordance); flameout by operator button
+                                FZJ 20            0.8          -0.3           7.2          5021.9         3124.0        10770.0                                                                                  not stated (ISO 5660); no flameout column
+                                IMT 12           15.5          12.5          20.0          1829.2         1215.0         2440.0                                                                                 not stated (ISO 5660); t_flameout reported
+                               TUBS  3            8.3           7.7           9.0          2700.0         2700.0         2700.0                                                                                      not stated (ISO 5660); t_flameout '-'
+                               UDRI  7           16.2          11.6          19.4          1763.0         1436.0         2359.0                                                                            not stated (ASTM E1354-25); t_flameout reported
+                               UMET  6            9.1           3.4          14.2          2069.2         1840.0         2347.0                                                                 not stated (ISO 13927 mass-loss cone); t_flameout reported
+UQ (flag: README mass fluctuations)  3           44.4          36.7          50.2           915.3          908.0          920.0                                      not stated (ISO 5660); t_flameout reported; README: 60 kW/m2 mass readings fluctuated
+FSRI DB material (training data, no model)  n end_of_test_time_s range residue_pct range
+                               Pine_Siding  9           684.8 - 1521.2       12.8 - 65.8
+                                 Wood_Stud  9          1917.0 - 3384.0       16.3 - 50.6
+
+HEADLINE (report-only; external cross-lab check, MaCFP-4 pine, one material):
+{
+ "pHRR": {
+  "primary": {
+   "primary_80": {
+    "n": 80,
+    "r2": 0.2156,
+    "mae": 44.3,
+    "bias": 39.1,
+    "ci_lo": -1.8485,
+    "ci_hi": 0.6019,
+    "n_labs": 8
+   },
+   "FSRI-lab_18": {
+    "n": 18,
+    "r2": 0.6375,
+    "mae": 34.9,
+    "bias": 33.2
+   },
+   "other-labs_62": {
+    "n": 62,
+    "r2": 0.0496,
+    "mae": 47.1,
+    "bias": 40.8,
+    "ci_lo": -2.6566,
+    "ci_hi": 0.6209,
+    "n_labs": 7
+   }
+  },
+  "S1": {
+   "primary_80": {
+    "n": 80,
+    "r2": -1.0926,
+    "mae": 81.4,
+    "bias": 80.8,
+    "ci_lo": -5.5146,
+    "ci_hi": -0.3017,
+    "n_labs": 8
+   },
+   "FSRI-lab_18": {
+    "n": 18,
+    "r2": -0.4036,
+    "mae": 76.0,
+    "bias": 76.0
+   },
+   "other-labs_62": {
+    "n": 62,
+    "r2": -1.3767,
+    "mae": 83.0,
+    "bias": 82.2,
+    "ci_lo": -7.2403,
+    "ci_hi": -0.2262,
+    "n_labs": 7
+   }
+  },
+  "S2": {
+   "primary_80": {
+    "n": 80,
+    "r2": 0.3583,
+    "mae": 40.0,
+    "bias": 34.3,
+    "ci_lo": -1.1801,
+    "ci_hi": 0.6383,
+    "n_labs": 8
+   },
+   "FSRI-lab_18": {
+    "n": 18,
+    "r2": 0.6564,
+    "mae": 33.2,
+    "bias": 31.5
+   },
+   "other-labs_62": {
+    "n": 62,
+    "r2": 0.2396,
+    "mae": 42.0,
+    "bias": 35.1,
+    "ci_lo": -1.8002,
+    "ci_hi": 0.6595,
+    "n_labs": 7
+   }
+  }
+ },
+ "pHRR_umet": {
+  "primary": {
+   "n": 6,
+   "mae": 97.9,
+   "bias": 97.9
+  },
+  "S1": {
+   "n": 6,
+   "mae": 139.8,
+   "bias": 139.8
+  },
+  "S2": {
+   "n": 6,
+   "mae": 93.6,
+   "bias": 93.6
+  }
+ },
+ "pHRR_extras": {
+  "cell_mean_r2": 0.2753,
+  "n_cells": 23
+ },
+ "TTI": {
+  "primary": {
+   "primary_80": {
+    "n": 80,
+    "r2": 0.5242,
+    "mae": 15.1,
+    "bias": -0.9,
+    "ci_lo": -0.567,
+    "ci_hi": 0.7851,
+    "n_labs": 8,
+    "log_r2": 0.7283
+   },
+   "FSRI-lab_18": {
+    "n": 18,
+    "r2": 0.8513,
+    "mae": 9.8,
+    "bias": -2.5,
+    "log_r2": 0.8508
+   },
+   "other-labs_62": {
+    "n": 62,
+    "r2": 0.4644,
+    "mae": 16.7,
+    "bias": -0.4,
+    "ci_lo": -1.9213,
+    "ci_hi": 0.4972,
+    "n_labs": 7,
+    "log_r2": 0.6774
+   },
+   "tti_25": {
+    "n": 11,
+    "r2": -0.3593,
+    "mae": 52.5,
+    "bias": -43.7,
+    "log_r2": -0.3529
+   }
+  },
+  "S1": {
+   "primary_80": {
+    "n": 80,
+    "r2": 0.3704,
+    "mae": 26.4,
+    "bias": 18.2,
+    "ci_lo": -6.2744,
+    "ci_hi": 0.5957,
+    "n_labs": 8
+   },
+   "FSRI-lab_18": {
+    "n": 18,
+    "r2": 0.2948,
+    "mae": 22.4,
+    "bias": 20.4
+   },
+   "other-labs_62": {
+    "n": 62,
+    "r2": 0.378,
+    "mae": 27.6,
+    "bias": 17.6,
+    "ci_lo": -11.2461,
+    "ci_hi": 0.6096,
+    "n_labs": 7
+   },
+   "tti_25": {
+    "n": 11,
+    "r2": -0.0869,
+    "mae": 66.3,
+    "bias": 10.8
+   }
+  },
+  "S2": {
+   "primary_80": {
+    "n": 80,
+    "r2": 0.5478,
+    "mae": 14.6,
+    "bias": -1.1,
+    "ci_lo": -0.5064,
+    "ci_hi": 0.8014,
+    "n_labs": 8
+   },
+   "FSRI-lab_18": {
+    "n": 18,
+    "r2": 0.8562,
+    "mae": 10.4,
+    "bias": -2.2
+   },
+   "other-labs_62": {
+    "n": 62,
+    "r2": 0.4914,
+    "mae": 15.8,
+    "bias": -0.8,
+    "ci_lo": -1.766,
+    "ci_hi": 0.5273,
+    "n_labs": 7
+   },
+   "tti_25": {
+    "n": 11,
+    "r2": -0.2961,
+    "mae": 52.2,
+    "bias": -42.1
+   }
+  }
+ },
+ "TTI_umet": {
+  "primary": {
+   "n": 6,
+   "mae": 23.7,
+   "bias": 23.7
+  },
+  "S1": {
+   "n": 6,
+   "mae": 44.5,
+   "bias": 44.5
+  },
+  "S2": {
+   "n": 6,
+   "mae": 23.7,
+   "bias": 23.7
+  }
+ },
+ "TTI_86_secondary": {
+  "n": 86,
+  "r2": 0.5061,
+  "mae": 15.7
+ },
+ "TTI_edinburgh": {
+  "n": 12,
+  "r2": 0.9424,
+  "log_r2": 0.8988,
+  "mae": 7.3,
+  "bias": -7.0,
+  "per_flux": {
+   "25": {
+    "n": 6,
+    "mean_obs": 108.8,
+    "pred": 99.8,
+    "mae": 9.7,
+    "bias": -9.1
+   },
+   "65": {
+    "n": 6,
+    "mean_obs": 14.3,
+    "pred": 9.4,
+    "mae": 5.0,
+    "bias": -5.0
+   }
+  },
+  "context_fsri_black_pmma_25": {
+   "n": 6,
+   "mean_tti_s": 110.0,
+   "edinburgh_25_mean_s": 108.8
+  }
+ },
+ "TTI_extras": {
+  "cell_mean_r2": 0.6743,
+  "n_cells": 23
+ },
+ "CR": {
+  "primary": {
+   "50 (declared primary: cr_flameout minus UMET)": {
+    "n": 50,
+    "mae": 5.8,
+    "bias": 1.6
+   },
+   "53 (all)": {
+    "n": 53,
+    "mae": 6.1,
+    "bias": 2.1
+   },
+   "47 (minus UMET and UQ)": {
+    "n": 47,
+    "mae": 4.4,
+    "bias": 3.5
+   }
+  },
+  "S2": {
+   "50 (declared primary: cr_flameout minus UMET)": {
+    "n": 50,
+    "mae": 5.8,
+    "bias": 1.7
+   },
+   "53 (all)": {
+    "n": 53,
+    "mae": 6.0,
+    "bias": 2.2
+   },
+   "47 (minus UMET and UQ)": {
+    "n": 47,
+    "mae": 4.4,
+    "bias": 3.5
+   }
+  },
+  "S3": {
+   "50 (declared primary: cr_flameout minus UMET)": {
+    "n": 50,
+    "mae": 4.3,
+    "bias": -1.3
+   },
+   "53 (all)": {
+    "n": 53,
+    "mae": 4.4,
+    "bias": -0.9
+   },
+   "47 (minus UMET and UQ)": {
+    "n": 47,
+    "mae": 2.7,
+    "bias": 0.4
+   }
+  }
+ }
+}
+report written: reports/macfp_wood_crosslab.md
+
+status: ok; runtime 114s

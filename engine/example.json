@@ -1,0 +1,4 @@
+[{"matrix_canonical": "PP", "material_form": "bulk", "components": "PP|matrix|80 wt%; APP|FR|20 wt%",
+  "heat_flux_kWm2": 50, "thickness_mm": 3, "fr_total_wtpct": 20},
+ {"matrix_canonical": "PP", "material_form": "bulk", "components": "PP|matrix|100 wt%",
+  "heat_flux_kWm2": 50, "thickness_mm": 3, "fr_total_wtpct": 0, "is_control": 1}]

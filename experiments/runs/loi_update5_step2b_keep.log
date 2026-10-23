@@ -1,0 +1,25 @@
+merged 867 rows / 140 papers from 14 parts
+benchmark of record (LOI present, not figure-read): 821 rows / 138 papers
+  loading parsed: 96%; element features complete: 78%; iso default used on 219 rows
+FR names without element entry (59): [('DOPO-HSBP', 10), ('PTOK (tung oil-based polyol modified by KH-602)', 6), ('SFP/LG (sunflower press cake vacuum-impregnated with liquid glass 1:1; LG Na2O 29%, SiO2 29%)', 6), ('FRP (commercial flame-retardant polyol; composition not stated)', 6), ('OLDH (organically modified layered double hydroxide)', 6), ('MEG (DOPO/A-151 modified expandable graphite)', 6), ('ESBO-DYM (P/N soy polyol)', 6), ('BHAPPO (bis(3-hydroxyaminophenyl)phenyl phosphine oxide)', 5), ('ITS (iron tailings silicate)', 5), ('PANi (nickel phytate)', 5), ('PA-Ni (nickel phytate)', 5), ('polyetherol from melamine cyanurate + ethylene carbonate (MC/EC)', 5), ('PNC (aminophosphorylated cellulose)', 4), ('IFR blend APP/SEP/MEL (ammonium polyphosphate / sepiolite / melamine)', 4), ('MB3F3 (melamine-based polyol, phosphonate+alkynyl)', 4), ('MIFR (melamine-urea-formaldehyde amino resin + starch phosphate, intumescent)', 4), ('MITS (modified iron tailings)', 4), ('ONC (organically modified nanoclay)', 4), ('CME (CMA melamine phosphinate salt + MAPP + EG intumescent system)', 4), ('POFPL (palm oil-based flame retardant polyol)', 4), ('LigW coated with liquid glass, LigW/LG 1/1', 4), ('LigW coated with liquid glass, LigW/LG 1/2', 4), ('FR-047 (organic phosphate mixture)', 4), ('P-polyol (transesterification of DEEP diethyl ethylphosphonate and THPO tris(hydroxymethyl)phosphine oxide)', 3), ('Cloisite 20A (organoclay)', 3), ('CPPA (castor-oil polyol functionalized with polyphosphoric acid; reactive)', 3), ('MMT-modified SO filler', 3), ('AM (aluminum phosphate micro-capsule)', 2), ('SiM (silica micro-capsule)', 2), ('SiE (SiO2 grafted with epoxidized monoglyceride of tung oil)', 2), ('HMMM-PG (melamine-based polyol; reactive, N-rich, no P)', 2), ('aluminum phytate (PA-Al)', 2), ('iron phytate (PA-Fe)', 2), ('BEG (boron-coated expandable graphite, EG/PVA/boric acid)', 2), ('SO', 2), ('LS (lignosulfonate)', 1), ('PTOK (tung oil-based polyol modified by KH-602, 25 g)', 1), ('BSQPS (bentonite modified with butyltriphenylphosphonium chloride)', 1), ('HALM (halloysite modified with melamine-formaldehyde resin)', 1), ('OMMT/chitosan/paraffin phase change microcapsules (OMMT/CS/PCM)', 1)]
+stage ~/Dravix/dravix-master/data/v2/loi_rpuf_parts/wave4_staging: 4 row files, element additions True, structure additions True
+stage ~/Dravix/dravix-master/data/v2/loi_rpuf_parts/wave5_staging: 1 row files, element additions True, structure additions True
+stage chemfix_staging: 96 element entries placed first, 5 names unset
+stage chemfix_staging: structures replaced 29, appended 0
+stage chemfix_staging: 2 unit cells corrected
+stage ~/Dravix/dravix-master/data/v2/loi_rpuf_parts/chemfix_staging: 0 row files, element additions False, structure additions False
+stage unitfix_staging: 94 unit cells corrected
+stage ~/Dravix/dravix-master/data/v2/loi_rpuf_parts/unitfix_staging: 0 row files, element additions False, structure additions False
+stage ~/Dravix/dravix-master/data/v2/loi_rpuf_parts/wave14_staging: 1 row files, element additions True, structure additions False
+snapshot (expanded): 821 benchmark rows / 138 papers
+expandable_graphite           150     0.00     0.00     0.00     0.00     0.00     0.00
+REPRO exp089: B 0.4710 CI [0.3272, 0.5574] (record B 0.3542, CI [0.1694, 0.4666]) in 35s
+REPRO exp092: B 0.4681 CI [0.3432, 0.5531] (record B 0.3738, CI [0.2007, 0.4700]) in 43s
+r8d     A 0.740  B 0.4588 +- 0.0364 CI [0.3162, 0.5472] pooled [0.332, 0.560]  C 0.335  (160s)
+r8d per-repeat B: 0.440001 0.435221 0.501780 0.510068 0.431051 0.509462 0.445318 0.471681 0.395072 0.448810
+s8      A 0.726  B 0.4688 +- 0.0358 CI [0.3164, 0.5556] pooled [0.331, 0.574]  C 0.295  (162s)
+s8 per-repeat B: 0.449705 0.431953 0.510094 0.514463 0.467065 0.510513 0.449685 0.479646 0.397860 0.476835
+Triggers: none
+wrote 2 result JSONs; runtime 405s
+copied 2 result JSONs; log experiments/runs/rescore_loi_train_loi_rescore_r8_snap821.log; runtime 411s
+scratch copy kept at /var/folders/tz/2brktg4s4t1fgx2vn1xvn84w0000gn/T/dravix_rescore_expanded_5m4zs5pi

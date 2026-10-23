@@ -1,0 +1,253 @@
+sanity: table-only recompute == committed el_* columns on all 652 rows
+element-feature coverage (benchmark rows with all el_* non-NaN): before 484/460 -> after 486/460
+rows with >=1 resolved FR (struct features non-NaN): 157/460; mean resolved_fr_wt_share over rows with FRs and loading ok: 0.265
+
+F7 class-prior table (median element mass fraction %, over 646 resolved FR mentions; no LOI used):
+class                           n        P        N       Si        B  halogen    metal
+N-additive                     15     0.00    66.63     0.00     0.00     0.00     0.00
+P-N                            96    14.71    14.44     0.00     0.00     0.00     0.00
+P-additive                    145     9.55     0.00     0.00     0.00     0.00     0.00
+P-reactive                     32    10.90     0.00     0.00     0.00     0.00     0.00
+bio-based                      67     0.00     0.00     0.00     0.00     0.00     0.00
+boron                          15     0.00     0.00     0.00    12.85     0.00    15.56
+carbon_nano(graphene/CNT)       2     0.00     0.00     0.00     0.00     0.00     0.00
+expandable_graphite           103     0.00     0.00     0.00     0.00     0.00     0.00
+halogen                        20     0.00     0.00     0.00     0.00    19.41     0.00
+intumescent(APP-based)         50    31.93    14.44     0.00     0.00     0.00     0.00
+metal_hydroxide                17     0.00     0.00     0.00     0.00     0.00    34.59
+metal_oxide/salt               30     0.00     0.00     0.00     0.00     0.00    32.99
+nanoclay                       10     0.00     0.00     0.00     0.00     0.00     0.00
+other                          39     0.00     0.00     0.00     0.00     0.00     0.00
+silicon                         5     0.00     0.00    21.11     0.00     0.00     0.00
+GLOBAL (fallback)             646     1.97     0.00     0.00     0.00     0.00     0.00
+REPRO exp089: B 0.4257 CI [0.2984, 0.5327] (record B 0.3542, CI [0.1694, 0.4666]) in 22s
+BLOCKED: exp089 not reproduced within 0.002 (expected on an expanded snapshot; reported, not stopped).
+Reproduction within 0.002: True
+
+=== AUDIT: polyol_type, every unique polyol string (n = rows in benchmark 460 / all rows) ===
+          2/2   polyether           -> polyether           | PPG4110 100 g
+CHANGED   1/1   polyether           -> unknown             | PPG4110 40 g + PTOP 60 g  [chosen comp: PTOP 60 g]
+CHANGED   1/1   polyether           -> unknown             | PPG4110 20 g + PTOP 80 g  [chosen comp: PTOP 80 g]
+CHANGED   1/1   polyether           -> unknown             | PPG4110 40 g + PTOSi 60 g  [chosen comp: PTOSi 60 g]
+CHANGED   1/1   polyether           -> unknown             | PPG4110 20 g + PTOSi 80 g  [chosen comp: PTOSi 80 g]
+         10/10  unknown             -> unknown             | Smooth-On FOAM-IT! 5 B-side (polyol blend)
+          7/7   unknown             -> unknown             | Polyol A : Polyol B 60:40 wt% premix (identities not in available text)
+          4/6   bio_based           -> bio_based           | soybean oil polyol (OH 450 +/-30) 15 wt% + polyether polyol 330N  [chosen comp: soybean oil polyol (OH 450 +/-30) 15 wt%]
+         17/17  polyether           -> polyether           | LY-4110 polyether polyol 100 g
+          1/1   unknown             -> unknown             | HPC/glycidol/ethylene carbonate polyol with H3PO3-DEG phosphite ester
+          1/1   unknown             -> unknown             | HPC/glycidol/ethylene glycol/ethylene carbonate polyol
+          1/1   unknown             -> unknown             | HPC/glycidol/triethylene glycol/ethylene carbonate polyol
+          4/4   polyether           -> polyether           | polyether polyol 4110A (OH 450)
+          5/5   unknown             -> unknown             | MCOP 80 g + PEG-200 20 g  [chosen comp: MCOP 80 g]
+          3/3   unknown             -> unknown             | MCOP 35 g + PEG-200 20 g + TBPBP 45 g  [chosen comp: TBPBP 45 g]
+          2/2   unknown             -> unknown             | DEG (diethylene glycol) 40 g
+          5/5   unknown             -> unknown             | Polyol 4500 series (OH ca. 400-455 mg KOH/g)
+          1/1   polyether           -> polyether           | polyether polyol 4110 10 g + P-polyol 0 g  [chosen comp: polyether polyol 4110 10 g]
+          1/1   polyether           -> polyether           | polyether polyol 4110 8 g + P-polyol 2 g  [chosen comp: polyether polyol 4110 8 g]
+          1/1   polyether           -> polyether           | polyether polyol 4110 6 g + P-polyol 4 g  [chosen comp: polyether polyol 4110 6 g]
+CHANGED   1/1   polyether           -> unknown             | polyether polyol 4110 4 g + P-polyol 6 g  [chosen comp: P-polyol 6 g]
+         10/10  polyether           -> polyether           | polyether polyol 100 g
+          1/7   polyether           -> polyether           | PPG4110 75 g + PTOK 25 g  [chosen comp: PPG4110 75 g]
+          5/5   polyester_aromatic  -> polyester_aromatic  | STEPANPOL PS-2352 aromatic polyester polyol (OH 240) 100 parts
+          5/5   polyether           -> polyether           | HF-4110H 70 + HF-4110 30 phr (polyether, OH 430)  [chosen comp: HF-4110H 70]
+         10/10  polyester_aromatic  -> polyester_aromatic  | polyester polyols Isoexter 4530 + 4537 and polyether Isoter 842G (2:2:1)  [chosen comp: polyester polyols Isoexter 4530]
+          5/5   polyether           -> polyether           | Rokopol G441 (Mn ~440) + ethylene glycol chain extender  [chosen comp: Rokopol G441 (Mn ~440)]
+         25/25  polyether           -> polyether           | PET-4110 polyether polyol
+          9/9   unknown             -> unknown             | polypropylene glycol (MCNS), contains n-pentane
+          5/5   polyether           -> polyether           | HF-4110 30 + HF-4110H 70 (polyether polyols)  [chosen comp: HF-4110H 70 (polyether polyols)]
+          1/1   polyether           -> polyether           | polyether polyol R4110
+CHANGED   1/1   unknown             -> polyether           | oligoetherol mixture 50% H2SiO3:GL:WE=1:4:3 + 50% Mel:WP=1:20 (100 g)  [chosen comp: oligoetherol mixture 50% H2SiO3:GL:WE=1:4:3]
+          1/1   polyether           -> polyether           | Rokopol RF551 66.80 g (1.0 R)
+          1/1   bio_based           -> bio_based           | Rokopol RF551 26.72 g (0.4 R) + PG3 white mustard oil/2,2-mercaptodiethanol bio-polyol 45.20 g (0.6 R)  [chosen comp: PG3 white mustard oil/2,2-mercaptodiethanol bio-polyol 45.20]
+         18/18  polyether           -> polyether           | polyether component 100 g (Rokopol T 45 + Rokopol RF 35 40 + Rokopol G 100 15 pbw)
+          8/8   bio_based           -> bio_based           | liquefied bamboo biopolyol 100
+          1/1   polyester_aromatic  -> polyester_aromatic  | aromatic polyester polyol P-1 (50 wt% rPET; terephthalic/orthophthalic units) 100 g
+          1/1   polyester_aromatic  -> polyester_aromatic  | aromatic polyester polyol P-2 (40 wt% rPET; terephthalic/orthophthalic units) 100 g
+          1/1   polyester_aromatic  -> polyester_aromatic  | aromatic polyester polyol P-3 (30 wt% rPET; terephthalic/orthophthalic units) 100 g
+          1/1   polyester_aromatic  -> polyester_aromatic  | aromatic polyester polyol P-4 (20 wt% rPET; terephthalic/orthophthalic units) 100 g
+          1/1   polyester_aromatic  -> polyester_aromatic  | aromatic polyester polyol P-5 (10 wt% rPET; terephthalic/orthophthalic units) 100 g
+CHANGED   1/1   polyester_aromatic  -> unknown             | aromatic polyester polyol P-6 (0 wt% rPET; terephthalic/orthophthalic units) 100 g
+          1/1   unknown             -> unknown             | polyol (unspecified) 100 wt% PU (polyol/isocyanate 100 g/134 g)
+          1/1   unknown             -> unknown             | polyol (unspecified) 90 wt% PU (polyol/isocyanate 100 g/134 g)
+          1/1   unknown             -> unknown             | polyol (unspecified) 89 wt% PU (polyol/isocyanate 100 g/134 g)
+          1/1   unknown             -> unknown             | polyol (unspecified) 87 wt% PU (polyol/isocyanate 100 g/134 g)
+          1/1   unknown             -> unknown             | polyol (unspecified) 85 wt% PU (polyol/isocyanate 100 g/134 g)
+CHANGED   2/2   unknown             -> polyether           | liquefied pine wood polyol (PEG-600/glycol, 170 C) 20 g
+          1/1   polyether           -> polyether           | Rokopol RF 551 100 g
+          4/4   polyether           -> polyether           | Rokopol RF 551 90 g
+          4/4   polyether           -> polyether           | Rokopol RF 551 80 g
+          4/4   polyether           -> polyether           | Rokopol RF 551 70 g
+          3/3   polyether           -> polyether           | Rokopol RF 551 60 g
+          3/3   bio_based           -> bio_based           | hydroxylated castor polyol (OHV 310 mg KOH/g) 10 g
+CHANGED   4/4   unknown             -> polyether           | liquefied apricot stone shell polyol (PEG-400/glycerin liquefaction)
+          1/1   unknown             -> unknown             | synthetic (petroleum) polyol foam, not specified
+CHANGED   3/3   unknown             -> polyether           | oligoetherol from MPP + alkylene carbonates (mMPP:EC = 1:22) 100  [chosen comp: oligoetherol from MPP]
+CHANGED   3/3   unknown             -> polyether           | oligoetherol from MPP + alkylene carbonates (mMPP:EC:PC = 1:10:6) 100  [chosen comp: oligoetherol from MPP]
+CHANGED   1/1   polyether           -> unknown             | D-24 63.4 + Rokopol TD-34 42.3  [chosen comp: D-24 63.4]
+CHANGED   1/1   polyether           -> unknown             | D-24 59.8 + Rokopol TD-34 39.2  [chosen comp: D-24 59.8]
+CHANGED   1/1   polyether           -> unknown             | D-24 57.9 + Rokopol TD-34 38.6  [chosen comp: D-24 57.9]
+CHANGED   1/1   polyether           -> unknown             | D-24 55.9 + Rokopol TD-34 37.3  [chosen comp: D-24 55.9]
+CHANGED   1/1   polyether           -> unknown             | D-24 59.6 + Rokopol TD-34 39.7  [chosen comp: D-24 59.6]
+CHANGED   1/1   polyether           -> unknown             | D-24 57.6 + Rokopol TD-34 38.4  [chosen comp: D-24 57.6]
+CHANGED   1/1   polyether           -> unknown             | D-24 55.4 + Rokopol TD-34 36.9  [chosen comp: D-24 55.4]
+CHANGED   1/1   polyether           -> unknown             | D-24 48.3 + Rokopol TD-34 32  [chosen comp: D-24 48.3]
+CHANGED   1/1   polyether           -> unknown             | D-24 36.6 + Rokopol TD-34 24.4  [chosen comp: D-24 36.6]
+CHANGED   1/1   polyether           -> unknown             | D-24 24.8 + Rokopol TD-34 16.5  [chosen comp: D-24 24.8]
+CHANGED   6/6   bio_based           -> unknown             | rapeseed oil bio-polyol (RP, 70 wt% of polyol) + Lupranol 3422  [chosen comp: Lupranol 3422]
+          8/8   unknown             -> unknown             | B3 commercial two-component system, polyol component (Pluskim; FR-free)
+         13/13  polyester_aromatic  -> polyester_aromatic  | Stepanpol PS-2352 100
+          1/1   polyether           -> polyether           | Rokopol RF-55 1 R (55.65 g)
+          1/1   polyether           -> polyether           | Rokopol RF-55 0.9 R (50.98 g) + boron polyol 0.1 R (6.26 g)  [chosen comp: Rokopol RF-55 0.9 R (50.98 g)]
+CHANGED   1/1   polyether           -> unknown             | Rokopol RF-55 0.5 R (9.40 g) + boron polyol 0.5 R (31.31 g)  [chosen comp: boron polyol 0.5 R (31.31 g)]
+         14/14  bio_based           -> bio_based           | BioPolyol RD (rapeseed, OHv 350) 60 + PETOL 400-4G (sucrose, OHv 421) 40 (parts by weight)  [chosen comp: BioPolyol RD (rapeseed, OHv 350) 60]
+          6/6   polyether           -> polyether           | Rokopol RF-551 (sorbitol polyether, LOH 420) 66.8 g
+          4/4   polyether           -> polyether           | Polyether polyol 1012a
+         14/14  polyether           -> polyether           | Rokopol RF-551 (polyether polyol) 100 g
+          2/2   polyether           -> polyether           | Polyether polyol R4110
+          6/6   polyester_aromatic  -> polyester_aromatic  | Stapanpol PS-2352 (polyester polyol) 100 wt.%
+          1/1   polyether           -> polyether           | Rokopol RF551 1.0 Eq (66.79 g)
+CHANGED   6/6   bio_based           -> polyether           | MCOP (modified castor oil polyol) + PEG-200 (20 g)  [chosen comp: PEG-200 (20 g)]
+         12/12  polyether           -> polyether           | Polyether polyol (OH 54.5-58.5 mg/g) 20 ml
+          4/4   polyether           -> polyether           | Polyether polyol Cst-1076-B (includes blowing agent, surfactant) 50 g
+          2/2   unknown             -> unknown             | Oligodiol DZS (glycolyzed waste PET with diethylene glycol/ZnSO4) 66.0 g
+          7/7   polyether           -> polyether           | Polyether polyol 4110 (OH 430 mg KOH/g) 100 php
+          2/2   polyether           -> polyether           | Sucrose polyether NJ-8250 200 g + water-blown polyether XYF30 150 g (in 522.5 g white material)  [chosen comp: Sucrose polyether NJ-8250 200 g]
+CHANGED   2/6   polyester_aromatic  -> polyether           | Polyol-1 heteroaromatic (isocyanurate-based) polyether polyol 60 pbw (assumed matrix of DMMP series)
+          3/3   polyester_aromatic  -> polyester_aromatic  | Polyol blend 100 (phthalic anhydride polyester OH 330; pentaerythritol polyether OH 400; sucrose+glycerine pol
+          8/8   polyester_aromatic  -> polyester_aromatic  | Isoexter 4530 + Isoexter 4537 (polyesters) + Isoter 842G (polyether), weight ratio 2:2:1  [chosen comp: Isoexter 4537 (polyesters)]
+          4/4   polyester_aromatic  -> polyester_aromatic  | Stepanol PS-3152 (polyester polyol, OH value 315 mg/g)
+          6/6   polyester_aromatic  -> polyester_aromatic  | Stepanpol PS-2352
+          4/5   unknown             -> unknown             | commercial component A (polyol + catalysts, surfactants, foaming agent; Shandong Jiuyun)
+          5/6   polyether           -> polyether           | Petrochemical polyether polyol 635 (OH value 490 +/- 15 mgKOH/g)
+         12/12  bio_based           -> bio_based           | HSBP (soy oil-based polyol from epoxidized soybean oil + water, OH number 420 mg KOH/g)
+          4/4   polyester_aromatic  -> polyester_aromatic  | STEPANPOL PS-2352
+          6/9   polyether           -> polyether           | Polyether polyol 4110
+          8/8   polyether           -> polyether           | 450L (DSU-450L polyether polyol, OH value 450 +/- 10 mg KOH/g)
+          5/5   polyether           -> polyether           | LY-4110 (polyether polyol) + LCN-403 (as listed) + EUMF as polyol-substitute  [chosen comp: LY-4110 (polyether polyol)]
+          5/5   bio_based           -> bio_based           | GCO (glycerolysis palm oil) / POFPL blend
+         12/12  polyether           -> polyether           | LY-4110 (OH number 430 mg KOH/g)
+         13/13  polyether           -> polyether           | RB2005-101 (polyether polyol mixture)
+CHANGED   0/9   bio_based           -> polyether           | Rokopol RF-551 (petrochemical, OH 420 mgKOH/g) + bio-polyol 1.6Hex (rapeseed oil, OH 217 mgKOH/g)  [chosen comp: Rokopol RF-551 (petrochemical, OH 420 mgKOH/g)]
+          7/7   polyether           -> polyether           | HK-4110 polyether polyol 100 g
+CHANGED   4/4   polyether           -> unknown             | EMF 100 phr + LY-4110 20 phr + LCN-403 30 phr  [chosen comp: EMF 100 phr]
+          0/4   bio_based           -> bio_based           | palm kernel oil polyol (Maskimiol PK317) 50 g
+          5/5   polyether           -> polyether           | LY-4110 polyether polyol 100 phr
+          1/1   bio_based           -> bio_based           | 3GP (canola-oil polyol) 100 parts
+          1/1   unknown             -> unknown             | eFAPE-PA 50 + 3GP 50 parts  [chosen comp: eFAPE-PA 50]
+          1/1   unknown             -> unknown             | eFAPE-PA 100 parts
+CHANGED   1/1   unknown             -> polyether           | Laprol-503 + Laprol-805 oxypropylated polyols + Lapromol-294/dimethylethanolamine catalyst  [chosen comp: Laprol-503]
+          5/5   polyester_aromatic  -> polyester_aromatic  | KPX glycerin-based polyester polyol (f=3, Mn 400) 100 g
+CHANGED   2/2   unknown             -> polyether           | RF-551 100 g
+         11/11  polyether           -> polyether           | Voranol 345-375 OH 50 g + Voranol 400-425 OH 50 g (RH360/RN411)  [chosen comp: Voranol 345-375 OH 50 g]
+CHANGED   2/2   unknown             -> polyether           | PTMEG (OH 440 mgKOH/g, f=3.0) 100 pph
+          1/1   unknown             -> unknown             | SA1_TOFA 67.0 + SA1_ETOFA 33.0  [chosen comp: SA1_TOFA 67.0]
+          1/1   unknown             -> unknown             | SA2_TOFA 67.0 + SA2_ETOFA 33.0  [chosen comp: SA2_TOFA 67.0]
+          1/1   unknown             -> unknown             | SA3_TOFA 67.0 + SA3_ETOFA 33.0  [chosen comp: SA3_TOFA 67.0]
+CHANGED   1/1   unknown             -> polyether           | oligoetherol from 6-aminouracil:ethylene carbonate:propylene oxide 1:5:3, 100 g
+CHANGED   1/1   bio_based           -> polyether           | biopolyol (liquefied pine sawdust, PEG/glycerol) 100 pbw
+          2/2   bio_based           -> bio_based           | biopolyol 100 pbw
+          1/1   unknown             -> unknown             | industrial polyol Poliuretan Spray S-303HF
+          1/1   polyether           -> polyether           | polyether PETOL PZ 400-4G / ESBO-DYM wt% = 70.0 / 0.0  [chosen comp: polyether PETOL PZ 400-4G]
+          1/1   polyether           -> polyether           | polyether PETOL PZ 400-4G / ESBO-DYM wt% = 66.5 / 3.5  [chosen comp: polyether PETOL PZ 400-4G]
+          1/1   polyether           -> polyether           | polyether PETOL PZ 400-4G / ESBO-DYM wt% = 59.5 / 10.5  [chosen comp: polyether PETOL PZ 400-4G]
+          1/1   polyether           -> polyether           | polyether PETOL PZ 400-4G / ESBO-DYM wt% = 52.5 / 17.5  [chosen comp: polyether PETOL PZ 400-4G]
+          1/1   polyether           -> polyether           | polyether PETOL PZ 400-4G / ESBO-DYM wt% = 35.0 / 35.0  [chosen comp: polyether PETOL PZ 400-4G]
+CHANGED   1/1   polyether           -> unknown             | polyether PETOL PZ 400-4G / ESBO-DYM wt% = 15.5 / 52.5  [chosen comp: ESBO-DYM]
+CHANGED   1/1   polyether           -> unknown             | polyether PETOL PZ 400-4G / ESBO-DYM wt% = 0.0 / 70.0  [chosen comp: ESBO-DYM]
+          5/5   unknown             -> unknown             | EKOPRODUR PM4032 system (PCC Group) component A
+          5/5   polyether           -> polyether           | Rokopol RF-551 100 g
+         14/14  polyether           -> polyether           | Rokopol RF-551 66.80 g
+         16/16  polyester_aromatic  -> polyester_aromatic  | Stepanpol PS2352 100
+          3/4   bio_based           -> bio_based           | BioPolyol RD 60 + Petol PZ 400-4G 40 pbw  [chosen comp: BioPolyol RD 60]
+CHANGED   3/5   unknown             -> polyether           | Voracor CR 765 (OH 360)
+CHANGED   0/6   unknown             -> polyether           | oligoetherol from 6-aminouracil/ethylene carbonate/propylene oxide (1:5:3)
+          3/3   polyether           -> polyether           | LY-4110 (35% of mix)
+         13/13  bio_based           -> bio_based           | BioPolyol RD (rapeseed, OH 350) + PETOL 400-4G (sucrose, OH 421)  [chosen comp: BioPolyol RD (rapeseed, OH 350)]
+CHANGED   1/1   unknown             -> polyether           | oligoetherol BHEU:BA:EC 1:2:12 (boron/uracil-based, 100 g)
+CHANGED   1/1   unknown             -> polyether           | oligoetherol BHEU:BA:EC 1:3:12 (boron/uracil-based, 100 g)
+CHANGED   1/1   unknown             -> polyether           | oligoetherol DOPDEDHB:EC 1:12 (boron/uracil-based, 100 g)
+CHANGED   1/1   unknown             -> polyether           | oligoetherol DOPDEDHB:EC 1:16 (boron/uracil-based, 100 g)
+          1/1   polyether           -> polyether           | Rokopol RF-551 100.00 g
+CHANGED   1/1   polyether           -> other_polyester     | Rokopol RF-551 50.00 g + PLA0.4DEG eco-polyol 80.41 g (0.5 Eq each)  [chosen comp: PLA0.4DEG eco-polyol 80.41 g (0.5 Eq each)]
+CHANGED   1/1   polyether           -> other_polyester     | Rokopol RF-551 50.00 g + PLA0.3DEG eco-polyol 100.24 g (0.5 Eq each)  [chosen comp: PLA0.3DEG eco-polyol 100.24 g (0.5 Eq each)]
+CHANGED   1/1   polyether           -> other_polyester     | Rokopol RF-551 33.39 g + PLA0.4DEG 53.60 g (0.5 Eq each)  [chosen comp: PLA0.4DEG 53.60 g (0.5 Eq each)]
+CHANGED   1/1   polyether           -> other_polyester     | Rokopol RF-551 33.39 g + PLA0.3DEG 66.83 g (0.5 Eq each)  [chosen comp: PLA0.3DEG 66.83 g (0.5 Eq each)]
+          1/1   unknown             -> unknown             | MSA-based polyol (metasilicic acid) 100 g
+          1/1   unknown             -> unknown             | MSA-based polyol 50 g + PLA-based polyol 50 g  [chosen comp: MSA-based polyol 50 g]
+          1/1   polyether           -> polyether           | Rokopol RF-551 66.80 g + PLA-polyol 0.00 g  [chosen comp: Rokopol RF-551 66.80 g]
+          1/1   polyether           -> polyether           | Rokopol RF-551 60.12 g + PLA-polyol 8.60 g  [chosen comp: Rokopol RF-551 60.12 g]
+          1/1   polyether           -> polyether           | Rokopol RF-551 53.44 g + PLA-polyol 17.21 g  [chosen comp: Rokopol RF-551 53.44 g]
+          1/1   polyether           -> polyether           | Rokopol RF-551 46.76 g + PLA-polyol 25.81 g  [chosen comp: Rokopol RF-551 46.76 g]
+          1/1   polyether           -> polyether           | Rokopol RF-551 40.08 g + PLA-polyol 34.42 g  [chosen comp: Rokopol RF-551 40.08 g]
+CHANGED   1/1   polyether           -> other_polyester     | Rokopol RF-551 33.4 g + PLA-polyol 43.02 g  [chosen comp: PLA-polyol 43.02 g]
+          4/4   polyether           -> polyether           | polyether polyol (OH 20 mg KOH/g, Mw 6000)
+CHANGED   1/1   bio_based           -> polyether           | Rokopol RF-551 66.8 g + evening primrose biopolyol (EPB) 0 g  [chosen comp: Rokopol RF-551 66.8 g]
+CHANGED   1/1   bio_based           -> polyether           | Rokopol RF-551 60.12 g + evening primrose biopolyol (EPB) 15.38 g  [chosen comp: Rokopol RF-551 60.12 g]
+CHANGED   1/1   bio_based           -> polyether           | Rokopol RF-551 53.44 g + evening primrose biopolyol (EPB) 30.76 g  [chosen comp: Rokopol RF-551 53.44 g]
+CHANGED   1/1   bio_based           -> polyether           | Rokopol RF-551 46.76 g + evening primrose biopolyol (EPB) 46.14 g  [chosen comp: Rokopol RF-551 46.76 g]
+          1/1   bio_based           -> bio_based           | Rokopol RF-551 40.08 g + evening primrose biopolyol (EPB) 61.52 g  [chosen comp: evening primrose biopolyol (EPB) 61.52 g]
+          4/4   unknown             -> unknown             | oligo-ester-ether-diol from PET glycolysis (r-PUF) / commercial polyol (c-PUF)
+          2/2   polyether           -> polyether           | Rokopol RF-551 1.0 Eq (66.80 g)
+CHANGED   2/2   bio_based           -> polyether           | Rokopol RF-551 0.6 Eq (40.08 g) + mustard-oil bio-polyol PG1 0.4 Eq (38.37 g)  [chosen comp: Rokopol RF-551 0.6 Eq (40.08 g)]
+          4/4   polyester_aromatic  -> polyester_aromatic  | Stepanpol PS-2352 100 pbw
+          7/7   polyether           -> polyether           | polyether polyol 4110 (OH 430+/-30) 10 g + glycerol + triethanolamine  [chosen comp: polyether polyol 4110 (OH 430+/-30) 10 g]
+          1/6   polyether           -> polyether           | polyether polyol 54.39 g
+          1/1   polyether           -> polyether           | MC/EC polyetherol / Rokopol D2002 = 80/20 wt parts
+          0/1   polyether           -> polyether           | MC/EC polyetherol / Rokopol G500 = 50/50 wt parts
+          0/1   polyether           -> polyether           | MC/EC polyetherol / Rokopol G500 = 80/20 wt parts
+          1/1   polyester_aromatic  -> polyester_aromatic  | MC/EC polyetherol / Polyester 350 = 50/50 wt parts
+          1/1   polyester_aromatic  -> polyester_aromatic  | MC/EC polyetherol / Polyester 350 = 80/20 wt parts
+          1/1   polyether           -> polyether           | Rokopol RF-55 (sorbitol polyether, LOH 495) 1.0 chemical equivalent
+          1/1   polyether           -> polyether           | Rokopol RF-55 (sorbitol polyether, LOH 495) 0.9 chemical equivalent
+          1/1   polyether           -> polyether           | Rokopol RF-55 (sorbitol polyether, LOH 495) 0.8 chemical equivalent
+          1/1   polyether           -> polyether           | Rokopol RF-55 (sorbitol polyether, LOH 495) 0.7 chemical equivalent
+          1/1   polyether           -> polyether           | Rokopol RF-55 (sorbitol polyether, LOH 495) 0.6 chemical equivalent
+
+unique polyol strings: 177; changed strings: 50; changed benchmark rows: 75/460
+polyol_type counts, benchmark 460 rows (round 4 -> fixed):
+  polyether             319 ->  333
+  polyester_aromatic     94 ->   91
+  bio_based              86 ->   67
+  other_polyester         0 ->    5
+  unknown               107 ->  110
+
+=== AUDIT: iso_index_num (rows where round-4 and fixed differ) ===
+    7 rows  '70 (R 3.7:1, PU/PIR)': 0.700 -> 3.700
+  changed rows (all/benchmark): 7/7
+
+=== AUDIT: is_PIR (rows where round-4 and fixed differ) ===
+  0 -> 1: 7 rows; strings: ['Rokopol RF-551 66.80 g / iso=70 (R 3.7:1, PU/PIR)']
+  1 -> 0: 6 rows; strings: ['Polyol-1 heteroaromatic (isocyanurate-based) polyether polyol 60 pbw ( / iso=']
+  is_PIR=1 count, benchmark rows: 58 -> 63; changed rows (all/benchmark): 13/9
+iso_index_num non-null benchmark: 203 -> 203
+
+loi_standard one-hot counts (benchmark): std_ASTM_D2863=184, std_GB_T_2406=60, std_ISO_4589=121, std_other_unknown=241
+features: exp089 45, c1 46, c2 51
+
+REPRO exp092: B 0.4303 CI [0.3036, 0.5318] (record B 0.3738, CI [0.2007, 0.4700]) in 25s
+BLOCKED: exp092 not reproduced within 0.002 (expected on an expanded snapshot; reported, not stopped).
+Reproduction within 0.002: True
+
+=== AUDIT (round 6): polyol strings whose label changes F6_fixed -> F6_v6 (benchmark rows / all rows) ===
+    5/5   unknown             -> bio_based           | MCOP 80 g + PEG-200 20 g  [chosen: MCOP 80 g]
+    9/9   unknown             -> polyether           | polypropylene glycol (MCNS), contains n-pentane  [chosen: polypropylene glycol (MCNS), contains n-pentane]
+    6/6   polyether           -> bio_based           | MCOP (modified castor oil polyol) + PEG-200 (20 g)  [chosen: MCOP (modified castor oil polyol)]
+    2/2   unknown             -> polyester_aromatic  | Oligodiol DZS (glycolyzed waste PET with diethylene glycol/ZnSO4) 66.0 g  [chosen: Oligodiol DZS (glycolyzed waste PET with diethylen]
+    1/1   polyether           -> bio_based           | biopolyol (liquefied pine sawdust, PEG/glycerol) 100 pbw  [chosen: biopolyol (liquefied pine sawdust, PEG/glycerol) 1]
+    1/1   unknown             -> bio_based           | polyether PETOL PZ 400-4G / ESBO-DYM wt% = 15.5 / 52.5  [chosen: ESBO-DYM]
+    1/1   unknown             -> bio_based           | polyether PETOL PZ 400-4G / ESBO-DYM wt% = 0.0 / 70.0  [chosen: ESBO-DYM]
+    4/4   unknown             -> polyester_aromatic  | oligo-ester-ether-diol from PET glycolysis (r-PUF) / commercial polyol (c-PUF)  [chosen: oligo-ester-ether-diol from PET glycolysis (r-PUF)]
+changed benchmark rows: 29/460
+  polyether             333 ->  335
+  polyester_aromatic     91 ->   97
+  bio_based              67 ->   81
+  other_polyester         5 ->    5
+  unknown               110 ->   88
+5-level standard counts (benchmark): std5_ASTM_D2863=184, std5_GB_T_2406=60, std5_ISO_4589=107, std5_ISO_4589_3=14, std5_other_unknown=241
+features: exp092 51, c3 47, c4 47, c5 52
+r8d     A 0.750  B 0.4253 +- 0.0307 CI [0.2607, 0.5503] pooled [0.290, 0.538]  C 0.295  (101s)
+r8d per-repeat B: 0.421150 0.371378 0.462597 0.492919 0.410583 0.418372 0.423333 0.423999 0.413725 0.415103
+s8      A 0.736  B 0.4339 +- 0.0325 CI [0.2876, 0.5540] pooled [0.298, 0.540]  C 0.219  (103s)
+s8 per-repeat B: 0.439160 0.358033 0.471980 0.479320 0.403139 0.427566 0.430325 0.444571 0.444227 0.440398
+Triggers: none
+wrote 2 result JSONs; runtime 254s

@@ -1,0 +1,12 @@
+rows 681 / materials 76; log_q_excess coverage 592 rows / 65 materials; rows with q'' <= q_cr: 0
+exp046  GKF 0.3133 +- 0.0373 CI [0.071, 0.496]  family-GKF 0.356  R2@25 0.059 other 0.798  max OOF 399s  (3s)
+REPRO exp046 ok
+t1      GKF 0.2979 +- 0.0434 CI [0.047, 0.494]  family-GKF 0.252  R2@25 0.045 other 0.802  max OOF 398s  (3s)
+t2      GKF -38.1081 +- 5.0718 CI [-85.437, -25.183]  family-GKF -51.315  R2@25 -53.478 other -96.902  max OOF 2500s  (3s)
+t3      GKF 0.2123 +- 0.0390 CI [-0.004, 0.442]  family-GKF 0.226  R2@25 -0.058 other 0.705  max OOF 534s  (120s)
+t4      GKF 0.2671 +- 0.0355 CI [0.171, 0.465]  family-GKF 0.306  R2@25 0.054 other 0.499  max OOF 410s  (122s)
+
+SELECTION (highest GKF mean): t1 0.2979; paired wins 0/10 (need >= 8), ci_lo 0.0467 (need >= 0.071) -> NOT adopted; exp046 stays the record; FLAG TTI parked
+Triggers: none
+
+wrote 4 result JSONs; runtime 252s

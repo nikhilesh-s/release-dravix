@@ -1,0 +1,36 @@
+{
+  "round": "data_pass_oct4",
+  "declared": "by Opus 5.5 before any new row is collected; see git commit time",
+  "authorized_by": "Arnav, Oct 4: 'for now get more data and ill get the library pdfs'",
+  "what": "Data collection only. No new modelling round, no feature choice, no record change in this pass.",
+  "sources": {
+    "loi_wave4_oa": {
+      "discovery": "OpenAlex works search (no email/mailto sent), open-access only, rigid polyurethane/polyisocyanurate foam + flame retardant + limiting oxygen index; dedupe by DOI against sunfu_corpus_manifest.csv and loi_wave3_manifest.csv -> data/sources/loi_wave4_manifest.csv (ref_id W###)",
+      "access": "OA full text only (publisher OA PDF/HTML, PMC, repository). No paywall bypass, no captcha solving, at most two access attempts per paper.",
+      "extraction": "identical schema and rules as data/v2/loi_rpuf_parts/README.md -> rows_w9.. / log_w9..; figure-read rows flagged and excluded from the benchmark",
+      "QA": "blind re-extraction of >= 20% of new papers by a different worker; > 5% true disagreement on a paper -> redo that paper",
+      "snapshot_rule": "same as experiments/configs/loi_snapshot_update.json: the expanded snapshot becomes the LOI benchmark regardless of R2 direction; the exp092 config (and the exp093 proxy-free config) are re-scored unchanged; no model or feature choice may depend on new rows. Re-score runs once, after Arnav's library-PDF wave lands or when Arnav says to re-score without it, followed by a critic before numbers_of_record changes."
+    },
+    "fsri_emissivity": {
+      "what": "Total emissivity/absorptance per FSRI material from the integrating-sphere FTIR spectra already in data/v2/raw/fsri_materials_database (commit a432697), computed exactly as FSRI's 02_Scripts/plot_IS_emissivity_data_html.py (Planck-weighted, light-trap corrected, transmission subtracted where measured) at source temperatures 600-2000 K -> data/v2/emissivity_fsri.csv",
+      "use": "Data only. Thermal-property joins stay banned (experiments/banned_moves.md); any TTI use needs a new pre-declared round."
+    },
+    "nist_fcd": {
+      "what": "Survey of the NIST Fire Calorimetry Database (doi 10.18434/mds2-2314) for bench-scale cone calorimeter tests (TTI, pHRR, THR per material and heat flux): bulk access, license, size, overlap with FSRI. Download to data/v2/raw/ (gitignored) only if a documented bulk/download route exists; no scraping that the site's terms forbid.",
+      "use": "Data only; different population from FSRI. Any modelling use needs a new pre-declared round."
+    }
+  },
+  "never": [
+    "send any email",
+    "send Arnav's email address to any API",
+    "commit data/sources/pdfs/",
+    "bypass a paywall"
+  ],
+  "amendments": [
+    {
+      "date": "2026-10-05",
+      "authority": "Arnav /loop: 'do whatever u can ... make dravix better'",
+      "loi_wave5_oa": "Same rules as loi_wave4_oa (OA only, <= 2 access attempts, no paywall/captcha bypass, same schema, >= 20% blind QA, staged in data/v2/loi_rpuf_parts/wave5_staging/, rows_w13+). Discovery only via routes not used in wave 4: (1) OpenAlex searches in Chinese, Polish, Turkish, Russian, Korean, Japanese, Portuguese/Spanish keywords; (2) Crossref query (no email); (3) Semantic Scholar graph API search (no key, no email). Dedupe against sunfu_corpus_manifest, loi_wave3_manifest and loi_wave4_manifest (all 109, including the 72 blocked: those are never re-attempted, banned-moves 'third workaround'). Manifest data/sources/loi_wave5_manifest.csv (ref_id V###). Same inclusion rules R1-R9 (loi_snapshot_update2). Scored only as a new snapshot under the same snapshot rule."
+    }
+  ]
+}

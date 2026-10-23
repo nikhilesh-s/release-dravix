@@ -1,0 +1,33 @@
+{
+  "slug": "tti_r2_e2_glm_eps_qexcess",
+  "target": "Time to Ignition (s)",
+  "round_config": "experiments/configs/tti_round2.json",
+  "dataset": "data/v2/cone_replicates_fsri.csv minus did_not_ignite/early_stop (681 rows / 76 materials), left joins as exp046 + data/v2/emissivity_fsri.csv (383 rows / 42 materials covered)",
+  "features": [
+    "log_q",
+    "log_dT",
+    "log_kpc",
+    "log_L",
+    "log_rho",
+    "log_eps_h",
+    "log_q_excess_eps"
+  ],
+  "model": "Poisson GLM",
+  "hyperparameters": "Poisson GLM on PHYS + log eps_h + log(eps_h q'' - q_cr(eps_s)); fixed a priori",
+  "code": "data/v2/train_tti_round2.py",
+  "n_rows": 681,
+  "n_groups": 76,
+  "protocol": "gkf_material5x10",
+  "rkf_mean": 0.2711,
+  "rkf_std": 0.0461,
+  "ci_lo": 0.0709,
+  "ci_hi": 0.4915,
+  "paired_vs": "exp046",
+  "paired_delta": -0.0422,
+  "paired_wins": "0/10",
+  "sota": 0.58,
+  "sota_source": "pomazi_2026",
+  "status": "ok",
+  "blocked_reason": "",
+  "note": "family-GKF 0.299; R2 at 25 kW/m2 0.053, other fluxes 0.819; emissivity-covered rows 0.558 (at 25: 0.343); max OOF 412s; TTI round 2 per tti_round2.json"
+}

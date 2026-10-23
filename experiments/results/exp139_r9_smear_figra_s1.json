@@ -1,0 +1,164 @@
+{
+  "slug": "r9_smear_figra_s1",
+  "target": "Fire Growth Rate FIGRA (kW/m2/s)",
+  "round_config": "experiments/configs/round9_tabpfn_smearing.json",
+  "dataset": "figra_fsri replicate mean per material x flux, materials with MCC (197 rows / 67 materials); incumbent exp119 rows, order and groups",
+  "features": [
+    "heat_flux_kWm2",
+    "mcc_peak_hrr_Wg",
+    "mcc_char_yield_pct",
+    "density_kgm3",
+    "cone_thickness_mm",
+    "cone_mass_per_area_kgm2",
+    "mcc_hrc_JgK",
+    "mcc_total_hr_kJg",
+    "mcc_t_peak_C"
+  ],
+  "model": "exp119 model unchanged with in-fold Duan smearing",
+  "hyperparameters": "Duan smearing factor from inner GroupKFold(5, shuffle, random_state=0) OOF log residuals; no free parameter",
+  "code": "data/v2/train_round9_tabpfn.py",
+  "n_rows": 197,
+  "n_groups": 67,
+  "protocol": "gkf_group5x10",
+  "rkf_mean": 0.5166,
+  "rkf_std": 0.0422,
+  "ci_lo": 0.3326,
+  "ci_hi": 0.6935,
+  "pooled_ci_lo": 0.3143,
+  "pooled_ci_hi": 0.6869,
+  "paired_vs": "exp119",
+  "paired_delta": 0.0191,
+  "paired_wins": "8/10",
+  "sota": 0.9724,
+  "sota_source": "phan_morgan",
+  "status": "ok",
+  "blocked_reason": "",
+  "note": "round 9 FIGRA s1 (provisional id r9_smear_figra_s1); report vs exp119 on identical folds; gain concentrated in <= 5 materials, not established; gate v2 selected (K=3, q=1.753, LB=-0.0569): G1 True, G2 False, G3 False",
+  "rkf_mean_full": 0.5165729498847419,
+  "ci_lo_full": 0.3325692701481307,
+  "ci_hi_full": 0.6934529047282445,
+  "per_repeat_r2": [
+    0.5500703457388141,
+    0.46048371759225326,
+    0.5539629513737194,
+    0.4755305918700077,
+    0.5534006833240391,
+    0.45622992495471315,
+    0.5636651158113002,
+    0.47167785665150264,
+    0.5333206178871112,
+    0.5473876936439583
+  ],
+  "top_k_removal": {
+    "top5": [
+      [
+        "Rebond_Foam_Carpet_Pad",
+        681.6086490542241
+      ],
+      [
+        "Roof_Felt",
+        457.22242500647303
+      ],
+      [
+        "EPS_Foam_Board",
+        353.12095646178335
+      ],
+      [
+        "Overstuffed_Chair_Polyurethane_Foam",
+        284.179686043583
+      ],
+      [
+        "Hemp_Sheet",
+        271.2308881492445
+      ]
+    ],
+    "top5_share_of_net": 3.3176554878277225,
+    "drop_top1": {
+      "mean_gain": -0.002290867653102735,
+      "wins": 4
+    },
+    "drop_top3": {
+      "mean_gain": -0.03976407137848507,
+      "wins": 0
+    },
+    "drop_top5": {
+      "mean_gain": -0.07777214534094885,
+      "wins": 0
+    },
+    "not_established": true
+  },
+  "wall_time_s": 190.5,
+  "smearing_factors": {
+    "n": 50,
+    "mean": 1.187956917357261,
+    "min": 1.1039583378139406,
+    "max": 1.2914310831818654,
+    "share_below_1": 0.0,
+    "factors": [
+      1.2829349808601769,
+      1.1616427140623304,
+      1.1120521431073243,
+      1.1363907717862862,
+      1.2644170330636013,
+      1.2914310831818654,
+      1.1975394481758581,
+      1.1959168750235334,
+      1.1919057616624917,
+      1.1463226186794,
+      1.1625701683062828,
+      1.1777193809502815,
+      1.1528034394572293,
+      1.2019944915108578,
+      1.2264730968355027,
+      1.2730327372797183,
+      1.184523658034034,
+      1.1223049677992218,
+      1.1335511664868507,
+      1.1478980540637225,
+      1.205728452295384,
+      1.178312758138792,
+      1.2007391733352937,
+      1.2315217936875265,
+      1.217529347587715,
+      1.2154653037320182,
+      1.1039583378139406,
+      1.198671031190904,
+      1.1541438789930263,
+      1.1402960945791643,
+      1.190537579150826,
+      1.1726484074615886,
+      1.2380988703231384,
+      1.1980258352118642,
+      1.1713666250924395,
+      1.2395045539692804,
+      1.159758709110404,
+      1.1641070085520209,
+      1.1728946387515873,
+      1.205195876778849,
+      1.1354907033660921,
+      1.1778632284139017,
+      1.2672332119206562,
+      1.2130511088026494,
+      1.1516876302895014,
+      1.1572290565255898,
+      1.1992783122245323,
+      1.1944252043039398,
+      1.1755544256380428,
+      1.2041041202958234
+    ]
+  },
+  "gate_v2": {
+    "theta": 0.0190659803682945,
+    "wins": 8,
+    "ci_lo": 0.3325692701481307,
+    "ci_hi": 0.6934529047282445,
+    "se": 0.043348004849297635,
+    "lb_maxT": -0.05692638421490234,
+    "lb_unadjusted": -0.032343490906027735,
+    "lb_raw_maxT": -0.0488898993359454,
+    "p_boot_gain_le_0": 0.3245,
+    "K": 3,
+    "q": 1.75307640680095,
+    "selected": true
+  }
+}

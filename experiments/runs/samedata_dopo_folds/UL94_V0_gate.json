@@ -1,0 +1,29 @@
+{
+ "task": "UL94_V0",
+ "metric": "outer_Macro_F1",
+ "per_fold": [
+  0.858108574187763,
+  0.8386934311820995,
+  0.8295427717006374,
+  0.7902680197762164,
+  0.7429833503227998
+ ],
+ "mean": 0.8119192294339033,
+ "sd": 0.045776175568010176,
+ "gate": [
+  0.807,
+  0.827
+ ],
+ "passed": true,
+ "folds_equal_published": true,
+ "max_abs_pred_diff_vs_published": 1.0,
+ "selected_models": [
+  "ExtraTrees",
+  "ExtraTrees",
+  "ExtraTrees",
+  "ExtraTrees",
+  "ExtraTrees"
+ ],
+ "minutes": 1.27,
+ "modified_Macro_F1_mean": 0.7495542263497084
+}

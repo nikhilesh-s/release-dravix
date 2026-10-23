@@ -1,0 +1,17 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+post-install checks OK (versions, uv pip check, tabpfn.__version__ 9.1.0)
+  download log: tabpfn.model_loading INFO Downloading model to ~/Library/Caches/tabpfn/tabpfn-v2-regressor.ckpt.
+  download log: tabpfn.model_loading INFO Attempting HuggingFace download: tabpfn-v2-regressor.ckpt
+  download log: tabpfn.model_loading INFO Successfully downloaded to ~/Library/Caches/tabpfn/tabpfn-v2-regressor.ckpt
+checkpoint ~/Library/Caches/tabpfn/tabpfn-v2-regressor.ckpt size 44390977 sha256 2ab5a07d5c41dfe6db9aa7ae106fc6de898326c2765be66505a07e2868c10736; ckpt files in cache: ['tabpfn-v2-regressor.ckpt']
+S0.3 weight check OK
+S0.4 determinism, in-process (fit+predict twice): bitwise equal = True
+S0.5 fitted attributes: {'n_estimators_': 8, 'devices_': ['cpu'], 'use_autocast_': False, 'forced_inference_dtype_': None} (expected 8, cpu, False, None)
+wrote experiments/runs/round9_env.txt
+=== second invocation (fresh-process check) ===
+post-install checks OK (versions, uv pip check, tabpfn.__version__ 9.1.0)
+checkpoint ~/Library/Caches/tabpfn/tabpfn-v2-regressor.ckpt size 44390977 sha256 2ab5a07d5c41dfe6db9aa7ae106fc6de898326c2765be66505a07e2868c10736; ckpt files in cache: ['tabpfn-v2-regressor.ckpt']
+S0.3 weight check OK
+S0.4 determinism, fresh process vs saved predictions (and twice in-process): bitwise equal = True
+S0.5 fitted attributes: {'n_estimators_': 8, 'devices_': ['cpu'], 'use_autocast_': False, 'forced_inference_dtype_': None} (expected 8, cpu, False, None)
+wrote experiments/runs/round9_env.txt

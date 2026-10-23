@@ -1,0 +1,18 @@
+{
+  "round": "loi_round8",
+  "declared": "by Opus 5.5 on Oct 5, see git commit time; before any run",
+  "authority": "Arnav, Oct 5: '/loop 2h do whatever u can ... make dravix better! make it at least close to sota' after I listed 'LOI round 8 (new model round, needs a pre-declared plan)' as an option. One extra round, 4 candidates.",
+  "snapshot": "snapshot 2 (571 rows / 102 papers) built by data/v2/rescore_loi_snapshot.py --stage data/v2/loi_rpuf_parts/wave4_staging --script data/v2/train_loi_round8.py",
+  "incumbent": {"exp_id": "exp108", "config": "exp092 config (round-5 c2 features, RF n_estimators 500, min_samples_leaf 2)", "B_mean": 0.3775, "B_ci": [0.2887, 0.5114]},
+  "step1": "the script is train_loi_round6.py verbatim up to its fit section (exp089/exp092 checks are reports on snapshot 2); the exp092-config B per repeat on snapshot 2 must equal exp108 (0.3775 +-0.002, CI [0.2887, 0.5114] +-0.002) or stop BLOCKED",
+  "features": "all candidates use exactly the exp092 (round-5 c2) feature matrix; no new features",
+  "candidates": [
+    {"id": "r8a", "desc": "ExtraTreesRegressor(n_estimators=500, min_samples_leaf=2, random_state=0), NaN-native"},
+    {"id": "r8b", "desc": "Ridge(alpha=10) after median impute + missing indicators + StandardScaler (additive/linear: LOI as a sum of element/class loading effects)"},
+    {"id": "r8c", "desc": "equal average of the exp092 RF and r8b"},
+    {"id": "r8d", "desc": "equal average of the exp092 RF, r8a and r8b"}
+  ],
+  "protocols": "B GroupKFold by paper 5x10 (primary), repeat-0 paper-bootstrap CI + pooled CI; A random 80/20 x50; C GroupKFold by dominant FR class",
+  "selection_rule": "highest B mean; replaces exp108 only if >= 8/10 paired repeats better AND B ci_lo >= 0.2887; then critic. Otherwise exp108 stays.",
+  "exit_triggers": "B ci_lo > 0.84 or A mean > 0.84 -> EXIT 5"
+}

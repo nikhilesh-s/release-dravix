@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dravix Engine</title>
+<style>body{font:16px -apple-system,system-ui,sans-serif;max-width:640px;margin:40px auto;padding:0 16px;color:#1d1d1f;background:#fff}
+input,select,textarea{width:100%;padding:10px;margin:4px 0 12px;border:1px solid #d2d2d7;border-radius:10px;font:inherit;box-sizing:border-box}
+button{background:#0071e3;color:#fff;border:0;border-radius:980px;padding:12px 24px;font:inherit;cursor:pointer}
+.r{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:24px}.r div{background:#f5f5f7;border-radius:14px;padding:14px;text-align:center}
+.r b{display:block;font-size:22px}small{color:#6e6e73}</style></head><body>
+<h1>Dravix Engine</h1><p><small>Predicts cone-calorimeter TTI, pHRR, THR and average HRR from a formulation.</small></p>
+<label>Matrix</label><input id="m" value="PP">
+<label>Form</label><select id="f"><option>bulk</option><option>foam</option><option>fibre_composite</option><option>film</option><option>wood_plastic</option></select>
+<label>Components (name|role|amount; …)</label><textarea id="c" rows="3">PP|matrix|80 wt%; APP|FR|20 wt%</textarea>
+<label>Heat flux (kW/m²)</label><input id="q" type="number" value="50">
+<label>Thickness (mm)</label><input id="t" type="number" value="3">
+<button onclick="go()">Predict</button><div class="r" id="out"></div>
+<p><small>Held-out accuracy is lower than the training fit: see engine/README.md.</small></p>
+<script>async function go(){const c=document.getElementById('c').value;
+const fr=[...c.matchAll(/\|(?:FR|synergist)\|\s*([\d.]+)/gi)].reduce((a,x)=>a+ +x[1],0);
+const r=await fetch('/predict',{method:'POST',body:JSON.stringify({matrix_canonical:m.value,material_form:f.value,components:c,heat_flux_kWm2:+q.value,thickness_mm:+t.value,fr_total_wtpct:fr})});
+const d=await r.json();if(d.error){out.textContent=d.error;return}const u={TTI:'s',pHRR:'kW/m²',THR:'MJ/m²',avg_HRR:'kW/m²'};
+out.innerHTML=Object.entries(d[0]).map(([k,v])=>`<div><small>${k}</small><b>${v}</b><small>${u[k]}</small></div>`).join('')}</script></body></html>

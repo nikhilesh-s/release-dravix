@@ -1,0 +1,28 @@
+{
+ "round": "loi_snapshot_update6_paired",
+ "kind": "Paired data-effect test, not a modelling round. Question: does adding the 215 wave-14 rows to TRAINING change out-of-fold R2 on the ORIGINAL 606 rows / 107 papers, with identical folds, features and model?",
+ "status": "report-only; no number of record is changed by this session.",
+ "declared": "2026-10-11 by Claude (Arnav's session), committed before the paired script was ever run. Follows loi_snapshot_update5_wave14 (caveat: old-only 0.4944 was not a paired comparison). Arnav asked for it ('run the paired test first').",
+ "script": "data/v2/train_loi_paired_r8.py (round-8 script prefix verbatim; new tail only), run via data/v2/rescore_loi_snapshot.py with the same four stages + wave14_staging as update5 step 2",
+ "design": [
+  "Same expanded snapshot and feature matrices as update5 (exp113 config c2; exp114 proxy-free sibling c3), same Avg(RF, ExtraTrees, Ridge) model, unchanged.",
+  "Folds: GroupKFold(5, shuffle, random_state=repeat 0..9) over the 606 original rows grouped by paper, i.e. the exp163 fold structure. Wave-14 rows are never in a test fold.",
+  "Arm 0: train on original training-fold rows only. Arm 1: the same rows plus all 215 wave-14 rows. Both predict the same original test rows.",
+  "Statistic: pooled OOF R2 over the 606 rows per repeat for each arm; delta = arm1 - arm0 per repeat; mean delta; wins out of 10; paper-bootstrap (2000, seed 0) 95% CI of the repeat-mean delta, resampling the 107 original papers.",
+  "Features are built on the expanded snapshot (class/dummy columns can include categories only present in wave 14), so arm 0 need not equal 0.4253; it is reported, not gated."
+ ],
+ "reporting_rules": [
+  "One run, all rows, no filtering of wave-14 rows, no seed/fold/model change after seeing numbers.",
+  "The delta is a DATA effect on original-paper test rows. It is not a modelling gain and not a record. No 'beats' wording; comparable stays pending-human.",
+  "A positive delta means wave-14 rows help predict original papers; a delta CI that includes 0 means no detectable effect. Either is reported as it is."
+ ],
+ "acceptance_rule": "None. Report-only.",
+ "environment": ".venv312 (sklearn 1.7.1, numpy 2.2.6, pandas 2.3.3).",
+ "banned_moves_checked": true,
+ "run_note": "First launch was killed when the session ended before any output; the identical declared command was re-run once (no result had been seen). Log experiments/runs/rescore_loi_train_loi_paired_r8_snap821.log; JSON experiments/results/loi_paired_wave14.json.",
+ "result_2026-10-11": {
+  "exp113_config_c2": "arm0 (606-only training) B 0.4307; arm1 (+215 wave-14 rows in training) B 0.4936; delta +0.0629 (sd 0.022), wins 10/10, paper-bootstrap CI of delta [+0.0178, +0.1128]",
+  "exp114_proxyfree_c3": "arm0 0.4391; arm1 0.5006; delta +0.0615 (sd 0.027), wins 10/10, CI [+0.0153, +0.1116]",
+  "reading": "On identical original-paper test folds, adding the wave-14 rows to training raises pooled OOF R2 by about 0.06 in every one of 10 repeats; the CI excludes 0. This is a data effect measured on the 606 original rows, not a modelling gain and not a record. Arm 0 (0.4307) differs from exp163 (0.4253) because features were built on the expanded snapshot. Caveats unchanged: single extractor, no independent QA of the 215 rows; wave-14 papers share some groups' baselines (known_flags)."
+ }
+}

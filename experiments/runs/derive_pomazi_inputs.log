@@ -1,0 +1,9 @@
+FR pure-component vectors (C H O N P ali cyc aro):
+  APP: [-8.2000e-01  4.0700e+00  5.0430e+01  1.4400e+01  3.1930e+01  1.0028e+02
+ -2.7000e-01 -2.0000e-02]
+  RDP: [6.272e+01 4.190e+00 2.230e+01 2.000e-02 1.078e+01 3.321e+01 4.000e-02
+ 6.676e+01]
+Leave-system-out validation on 21 tabulated rows: max abs error per input {'C_pct': np.float64(0.02), 'H_pct': np.float64(0.01), 'O_pct': np.float64(0.01), 'N_pct': np.float64(0.01), 'P_pct': np.float64(0.0), 'aliphatic_pct': np.float64(0.02), 'cycloaliphatic_pct': np.float64(0.01), 'aromatic_pct': np.float64(0.02)}; overall mean 0.004
+Hardener mass share from N balance: {'GER/T58': np.float64(0.286), 'GFTE/DETDA': np.float64(0.219), 'PER/T58': np.float64(0.286), 'SPE/T58': np.float64(0.25)}
+Derived inputs for 42 rows. Usable (inputs + all four outputs, not dup): 63 ({'composite': 36, 'matrix': 27}; heat flux {50.0: 40, 25.0: 23})
+Not usable for lack of inputs: 67 (outside the four core systems or loading not in P%)

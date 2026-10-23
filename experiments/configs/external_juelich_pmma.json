@@ -1,0 +1,62 @@
+{
+ "round": "external_juelich_pmma",
+ "status": "declared (unscored); binds from its git commit time, which must precede the first run",
+ "tier": "Report-only external held-out check. No training, tuning, selection or adoption on any Juelich row. No number of record can change. Never pooled with FSRI, MaCFP, exp054 or any other external set.",
+ "declared": "2026-10-10 by Claude (Arnav's session) before any HRR value of the 24 files was read. Only file names, column headers and line counts were looked at (24 files; 12 Black, 12 Transparent; 25/35/50/75 kW/m2 x R1-R3).",
+ "what": "Score the deployed pHRR record model models/v2/phrr_hgb_v4.joblib (exp074 recipe, 191-row FSRI fit, 10 features) on the peak HRR of 24 independent cone tests of 6 mm black and transparent PMMA from Forschungszentrum Juelich (Zenodo 10.5281/zenodo.6301397, CC BY 4.0; De Lannoye, Belt, Reinecke, Markert, Arnold; ASTM STP1642 2023).",
+ "source": {
+  "files": "data/sources/incoming/juelich_pmma_cone/{Black,Transparent}.zip (sha256 recorded in that folder's SOURCE.md; verified equal on 2026-10-10)",
+  "label": "pHRR = max of the 'HRR (kW/m2)' column over the whole file, raw, unsmoothed, per test (same convention as FSRI 'Peak HRRPUA', exp054 and ASTM E1354). Time zero = shutter open. A 5-sample centred rolling-mean maximum is reported as a sensitivity column only, never as the label.",
+  "thickness": "6 mm for every test, from the public ASTM abstract (store.astm.org/stp164220210105.html: 'all tests were autoignition experiments and 6-mm-thick PMMA plates were used'). Not in the data files.",
+  "not_in_the_files": "density, mass, MCC/TGA, ignition time. None is read from, or derived from, the Juelich files."
+ },
+ "model_inputs": {
+  "loader": "data/v2/train_phrr_v3_robust.py: set EXTRAS to the baseline-corrected columns (total_hr_bc_kJg, t_onset_bc_C) exactly as its --bc flag does, then load(replicate_target=True). Take the first row of each matching material (all ten inputs other than heat_flux_kWm2 are material-level). Keep rows where has_mcc is true, as the record does. Check that this leaves 191 rows / 65 materials (the loader itself returns 221 rows before the filter; verified by row count only on 2026-10-10, before any label was read) and that the record model's .features equal PHYS+BASE order.",
+  "rule": "Material-level inputs are FSRI measurements of the same material class, taken from the same tables the record was trained on. No input is tuned, imputed from a guess, or read from a Juelich label.",
+  "black_tests": "FSRI Black_PMMA row of the record's feature frame: mcc_peak_hrr_Wg, mcc_char_yield_pct, mcc_total_hr_kJg, mcc_t_peak_C, mcc_t_onset_C (baseline-corrected columns, as in the record), log_kpc, density_kgm3.",
+  "transparent_tests": "FSRI PMMA (clear cast) row, same columns. Black_PMMA is NOT used for the transparent tests.",
+  "variant_A_primary": "geometry override: cone_thickness_mm = 6.0; cone_mass_per_area_kgm2 = 6.0e-3 x density_kgm3 of the matching FSRI material; heat_flux_kWm2 = the test's nominal flux.",
+  "variant_B_sensitivity": "no override: FSRI's own cone_thickness_mm and cone_mass_per_area_kgm2 for the matching FSRI material.",
+  "stop_if": "either matching FSRI material is missing any of the 10 inputs other than log_kpc of FSRI PMMA (see amendment_2): no fallback to the other material, no imputation; write a blocker and stop."
+ },
+ "procedure": [
+  "0. Executor refuses to run unless this file is committed (git log -1 -- path non-empty and working copy == HEAD). Verify both zip sha256 against SOURCE.md and that there are 24 files.",
+  "1. Load the model and FSRI inputs; print the exact input vectors per (color, flux) before any label is read.",
+  "2. Predict all 24 tests, both variants. Write predictions.",
+  "3. Only now read the labels (max HRR per file). Compute metrics. Write outputs."
+ ],
+ "metrics": {
+  "primary": "Pooled R2 over all 24 tests, variant A. Also MAE (kW/m2) and MAE as a percentage of the mean label.",
+  "secondary": "R2 and MAE per color; per-flux mean predicted vs mean observed; the signed bias (mean pred minus mean obs) per color and per flux; variant B for all of the above; sensitivity label (rolling-mean max) for the primary only.",
+  "no_ci_claim": "n = 24 tests in 8 (color, flux) cells with 3 replicates each; R2 pooled over replicates is dominated by the 8 cells. A material-bootstrap CI is not defined (two materials). Report the replicate spread instead: per-cell min, mean, max of the observed pHRR."
+ },
+ "known_limits": [
+  "Overlap with training: FSRI Black_PMMA and PMMA are in the 191-row training set. This is a new laboratory, new specimens and a new instrument for a material the model has seen, NOT an unseen material. Same standing as exp054.",
+  "All tests are auto-ignition (no pilot); FSRI tests are piloted. Not corrected.",
+  "Only two materials; per-material R2 is not defined."
+ ],
+ "never": [
+  "refit, tune, select or adopt any model using a Juelich row or label",
+  "pool with any other external set or with FSRI",
+  "write 'beats SOTA', set comparable true, or compare to any bar; no number of record is touched",
+  "drop or re-weight any of the 24 tests after seeing a label"
+ ],
+ "exit_triggers": [
+  "a Juelich-derived R2 above 0.30 is NOT an exit trigger here (report-only, different protocol); but any contradiction with a number of record or a missing input is: write a blocker and stop"
+ ],
+ "outputs": {
+  "dir": "experiments/runs/external_juelich_pmma/",
+  "files": [
+   "inputs.json",
+   "predictions.csv",
+   "tests.csv",
+   "summary.json"
+  ],
+  "report": "reports/external_juelich_pmma.md",
+  "log": "experiments/runs/external_juelich_pmma.log"
+ },
+ "amendment_1": "2026-10-10, before any Juelich label was read: the first executor run stopped at the row-count gate because the config said the loader returns 191 rows; it returns 221 and the record uses the 191 with has_mcc true. Wording corrected above. No other change.",
+ "after": "A fresh-context critic pass before any number is quoted outside the run log.",
+ "amendment_2": "2026-10-10, before any Juelich label was read: the second executor run stopped at the stop_if gate because FSRI PMMA (clear cast, used for the transparent tests) has log_kpc missing (no heat-flow-meter data for that material). Declared choice: log_kpc is passed as NaN for the transparent tests, exactly as the record's HistGradientBoosting model sees it for every FSRI training material without HFM data (native missing-value handling). It is NOT filled from Black_PMMA, from any other material, or by imputation. Black tests are unchanged (FSRI Black_PMMA has log_kpc 12.38). The report must say the transparent predictions carry this missing input. The other nine inputs for FSRI PMMA must be present or the run stops.",
+ "amendment_3_post_hoc": "2026-10-10, AFTER the labels were read (so it is post-hoc and label-informed; the as-published result stays the declared primary and is reported unchanged). The column 'HRR (kW/m2)' has maxima of 6-16, which cannot be kW/m2 for PMMA (MaCFP PMMA peaks in this repo: 379-757 at 25, 965-1237 at 50 kW/m2). The Zenodo description says HRR per unit area was computed with a surface area of 0.0088 m2, so the column behaves like total HRR in kW. Post-hoc variant U: label = column maximum / 0.0088, the documented area only, no fitted factor. Check that does not use any Dravix output: Juelich/0.0088 at 25 and 50 kW/m2 is 1.18x and 1.22x the MaCFP-lab medians (Juelich 25 kW/m2 range 696-756 sits inside MaCFP's 379-757). Variant U is exploratory: it was proposed after seeing that the predictions and the rescaled labels are of similar size, so it must not be read as a confirmatory test. Needs the dataset authors (De Lannoye / Arnold) to confirm the units; that email is a human action. No number of record is affected."
+}

@@ -1,0 +1,91 @@
+{
+  "round": "litcone_gt_round1",
+  "status": "declared (unscored); commit before any model is fit on the literature cone set",
+  "declared": "2026-10-17, orchestrator, before any extraction batch finished and before any label statistic was looked at",
+  "authority": "Arnav 2026-10-16/17: 'devise a plan ... pass Georgia Tech's R2 in 24 hours ... go get data'. Framing (three protocols, honest labels) proposed in chat; comparability stays a human call.",
+  "what": "First scoring of a Tran et al. 2025-style literature cone-calorimeter set (matrix + fillers + FRs + flux + thickness -> TTI, pHRR, THR, average HRR) under three protocols, one of which reproduces the competitor's own (training-data) evaluation.",
+  "competitor": {
+    "paper_id": "tran_matmerize_2025",
+    "citation": "Tran H., Kim C., Gurnani R., Hvidsten O., DeSimpliciis J., Ramprasad R., Gadelrab K., Tuffile C., Molinari N., Kitchaev D., Kornbluth M. Polymer composites informatics for flammability, thermal, mechanical and electrical property predictions. Polym. Chem. 16:3459-3467 (2025), doi:10.1039/D4PY01417K; arXiv:2412.08407",
+    "affiliation": "Matmerize Inc. (Atlanta; Ramprasad, Georgia Tech spin-out) and Robert Bosch LLC. Called 'Georgia Tech' by the user.",
+    "reported_R2": {
+      "TTI": 0.95,
+      "pHRR": 0.94,
+      "avg_HRR": 0.96,
+      "THR": 0.97
+    },
+    "reported_rows": {
+      "TTI": 527,
+      "pHRR": 576,
+      "avg_HRR": 100,
+      "THR": 316
+    },
+    "their_protocol": "GPR and DL (MLP) coupled with k-fold cross-validation (k not stated), DL = ensemble of the k fold models; physics-informed multi-task model for flame properties. Table 3 flame metrics are 'computed on the training data'; no unseen-data validation for any flame property (NA). Features: matrix category, glass/carbon fibre, glass bead and mineral fractions, density, impact modifier, conditioning, FR identity and composition, heat flux, thickness.",
+    "comparable": "pending-human (never set true by an agent)"
+  },
+  "data": {
+    "population": "rows of data/v2/cone_lit_parts after merge + dedupe (OA wave oa_staging/rows_oa_*.csv verified, plus the 2026-10-11 LPC set rows_c*.csv after removing the 34 duplicate-file rows), material_form in {bulk, foam, fibre_composite, wood_plastic, film, other}; textile and coated_substrate rows excluded from the headline (reported as a sensitivity with them included). Rows with extraction == figure never enter.",
+    "conditional_sources": "Nikhilesh's UMD frozen reference set v1.0 enters ONLY if its owner's written permission is recorded in the repo before the scoring run; otherwise excluded. The decision is recorded in the run log either way.",
+    "dedupe": "same doi + same formulation_label + same heat flux + same thickness -> keep one (prefer the OA verified row). Same paper under two ids (e.g. a duplicate PDF) -> one group.",
+    "targets": {
+      "TTI": "tti_s (s)",
+      "pHRR": "phrr_kWm2",
+      "THR": "thr_MJm2",
+      "avg_HRR": "avg_hrr_kWm2"
+    },
+    "per_target_rows": "a row enters a target's set iff that target is non-blank and > 0, heat_flux_kWm2 is non-blank. Missing thickness/density -> NaN (imputed in-fold).",
+    "groups": "paper (doi, else pmcid/pdf_stem)",
+    "never": [
+      "no FSRI rows pooled into this set (FSRI stays its own population)",
+      "no row excluded after seeing its residual or influence",
+      "no figure-read values"
+    ]
+  },
+  "features": {
+    "base_F": "matrix_canonical one-hot (categories with < 3 papers -> 'other'); material_form one-hot; heat_flux_kWm2; thickness_mm; log(thickness); density_kgm3; area_cm2; fr_total_wtpct; filler_total_wtpct; is_control; per-class additive wt% from components via the class map (see below): P-based FR, N-based FR, APP/intumescent, halogenated FR, Sb2O3, metal hydroxide (ATH/MDH), expandable graphite, nanoclay, silica/Si-based, boron/zinc borate, carbon nano (CNT/graphene), metal oxide/LDH, glass fibre, carbon fibre, natural fibre/wood flour, mineral filler, other additive; n_components",
+    "class_map": "data/v2/cone_lit_parts/component_class_map.csv, built from component NAMES only (no target values visible to the builder), committed before scoring",
+    "control_C (variant only)": "for each row, the same paper's is_control row value of the SAME target at the same heat flux (and thickness if several), log-transformed; NaN if the paper has no control at that flux. The control row itself is scored like any other row. Ratio-style use is left to the model."
+  },
+  "models": {
+    "primary (headline)": "Dravix blend: equal average of HistGradientBoostingRegressor(max_iter=300, learning_rate=0.05, max_leaf_nodes=15, min_samples_leaf=5, random_state=0), ExtraTreesRegressor(n_estimators=500, min_samples_leaf=2, random_state=0, n_jobs=-1) and make_pipeline(SimpleImputer(median, add_indicator=True, keep_empty_features=True), StandardScaler(), Ridge(alpha=10.0)); trees get median-imputed + indicator inputs via the same imputer; fit on log1p(target), predictions expm1. Same recipe as exp113/exp117/exp119.",
+    "gt_replica_gpr (report-only)": "make_pipeline(SimpleImputer(median, add_indicator), StandardScaler(), GaussianProcessRegressor(ConstantKernel*RBF(length_scale per feature, ARD) + WhiteKernel, normalize_y=True, n_restarts_optimizer=2, random_state=0)) on log1p(target)",
+    "gt_replica_mlp (report-only)": "make_pipeline(SimpleImputer(median, add_indicator), StandardScaler(), MLPRegressor(hidden_layer_sizes=(128, 64), alpha=1e-3, early_stopping=True, max_iter=2000, random_state=s)) averaged over s = 0..4, on log1p(target)",
+    "variant_C (report-only)": "primary recipe on base_F + control_C",
+    "selection": "none. Every model is reported; only the primary is quoted as the headline. No model, feature, row or hyperparameter is changed after a score is seen (a change needs a new config)."
+  },
+  "protocols": {
+    "P1_their_protocol": "Replicates the competitor's Table 3 evaluation: 5-fold KFold(shuffle, random_state=0) ensemble of the 5 fold models; predict EVERY row with the ensemble mean (each row is training data for 4 of the 5 models) and report R2 on those predictions; also plain in-sample (fit on all rows, predict all rows). Label on every print: 'THEIR PROTOCOL: computed on training data; not held-out evidence'.",
+    "P2_random_cv": "RepeatedKFold(5 splits, 10 repeats, random_state=r) at row level; pooled out-of-fold R2 per repeat, mean +- std; repeat-0 row bootstrap 95% CI (2000 draws, seed 0). Rows from one paper can sit on both sides (the common literature practice).",
+    "P3_paper_grouped": "eval_protocol.repeated_group_kfold with groups = paper (GroupKFold 5, shuffle, r = 0..9); pooled OOF R2 mean +- std; repeat-0 paper-bootstrap 95% CI via eval_protocol.bootstrap_ci. This is the Dravix-style headline.",
+    "metrics": "R2 in raw units (s, kW/m2, MJ/m2) as the competitor reports; also R2 on log scale and MAE, report-only."
+  },
+  "reporting_rules": [
+    "Every number carries its protocol label. P1 numbers are never described as held-out, generalisation or 'beating' anything.",
+    "Never write 'beats SOTA'; comparable stays pending-human. Allowed wording when a P1 value exceeds theirs: 'matches/exceeds the published value under the published (training-data) protocol'.",
+    "P2 and P3 are compared to the competitor's numbers only with the explicit note that the competitor published no held-out flame number.",
+    "Nothing here changes a Dravix number of record (those are FSRI / RPUF-LOI populations)."
+  ],
+  "outputs": {
+    "script": "data/v2/train_litcone_gt_round1.py",
+    "log": "experiments/runs/litcone_gt_round1.log",
+    "json": "experiments/runs/litcone_gt_round1.json (not experiments/results/; report-only round, not a leaderboard experiment until the orchestrator decides)",
+    "data_snapshot": "data/v2/cone_lit_benchmark_v1.csv (the exact rows scored) + its sha256 in the log"
+  },
+  "critic": "fresh-context critic writes experiments/critic/litcone_gt_round1_critic.md before any number is quoted outside the log: config adherence, leakage (imputer/scaler/class map inside folds; groups), dedupe, a random sample of 40 rows re-checked against source texts, wording.",
+  "exit_triggers": "none from scores. A failed data assert or a leakage finding by the critic stops quoting until fixed under an amendment.",
+  "amendments": [
+    "2026-10-17 (before any real score; only a random-target smoke test has run): population also includes the LPC-library extractions (lib_staging/rows_lib_*.csv from EBSCO HTML full text, lib_staging/rows_libpdf_*.csv from EBSCO PDFs parsed in-browser, lpc2_staging/rows_lpc2_*.csv from the 12 never-extracted local LPC PDFs and 4 LOI-wave papers' skipped cone tables), each extracted and verified with the same protocol; dedupe priority oa > library > Oct-11 LPC set. Component class map: name regexes first, then role fallback (unmatched FR/synergist -> other_FR, unmatched filler/reinforcement -> other_filler; matrix/curing agents/'none' -> not_additive, never counted). GPR runtime ~20 s per fit, so it may run as a separate process; nothing else changes.",
+    "2026-10-17 amendment 2 (before any real score): paper-level dedupe -- when one DOI was extracted from more than one source/file (e.g. an OA copy and an LPC PDF of the same paper), keep only the rows of the highest-priority source (oa > library > Oct-11 LPC set) and its first file; row-level dedupe (doi + formulation + flux + thickness) then applies as declared.",
+    "2026-10-17 amendment 3: Arnav asked for an interim look before extraction finished. One run, primary model only, on the rows staged at that moment (partly unverified). Logged as INTERIM; the final run on the full verified set is the round result. Nothing in the config changes because of it.",
+    "2026-10-17 amendment 4 (after the interim look; declared before running it): v2 = (a) wt% features for the 100 most-used additive names (normalised, ranked by number of papers; names only), (b) predictions clipped to the training-fold target range (fixes the avg-HRR blow-up). Run: primary and variant_C (paper's own control value) with --v2. Both are post-interim changes and are labelled as such; the full verified-data run uses whichever was declared here, with no further choice.",
+    "2026-10-17 amendment 5 (declared before running): (a) bug fix -- P3 now uses the same clipped fit_pred as P1/P2 (GroupKFold 5, shuffle, r=0..9, by paper; identical splits to eval_protocol); (b) v3 = v2 + ignition-physics terms log(q), log(thickness/q), 1/q^2. Run variant_C (and primary for reference) with --v3.",
+    "2026-10-17 amendment 6: 20% seeded paper sample verified (167/835 papers, 1,000 rows, 8,457 fields; 19 wrong = 0.22%, fixed; 1 row removed). FINAL run = --v3, models primary + variant_C, on all staged rows; this is the round result. No further changes.",
+    "2026-10-17 amendment 7 (after critic found a self-leak): variant_C control feature is blank on is_control rows (they are predicted from composition only). Rerun variant_C only, --v3, same data snapshot. Label: 'given the paper's measured neat-polymer result'. The leaky FINAL variant_C numbers are withdrawn.",
+    "2026-10-17 amendment 8 (Arnav: goal is the competitor's own protocol): ONE declared model 'gt_protocol_et' = ExtraTrees(500, min_samples_leaf=1) on v3 features + leak-fixed control feature, log1p target, clipped. Reported on P1 (their training-data protocol, labelled exactly so) AND P2/P3 alongside. No other model is tried for P1; no selection.",
+    "2026-10-18 amendment 9 (Arnav: get the competitor protocol ahead): ONE declared model 'gt_protocol_et2' = gt_protocol_et + (a) rows with identical inputs averaged into one (as datasheet-style data effectively is), (b) a paper-identity code as an input (the competitor's data carries grade identity). Reported on P1 (their training-data protocol, labelled so) with P2/P3 alongside; P3 with a paper code is not meaningful and is labelled as such. No other variant is tried.",
+    "2026-10-18 amendment 10 (Arnav: run the USTC-style test; declared before running): population = EP (epoxy) rows of cone_lit_benchmark_v1.csv with pHRR > 0. Groups = flame-retardant identity: the normalised name of the first FR/synergist component (controls/no-FR rows form one group 'none'). Model = primary blend, v3 features, clipped; no control feature, no paper code. Protocol = GroupKFold 5 by FR group, shuffled, 10 repeats; metric = pooled OOF MAE (kW/m2) mean +- std and R2, plus repeat-0 group-bootstrap 95% CI of MAE. Compared to Li et al. 2025 (USTC) pHRR MAE 125.5, which is itself UNCONFIRMED (paywalled; secondhand) and on organophosphorus-FR epoxy only. Reported whatever the result; no variants tried.",
+    "2026-10-20 amendment 11 (owner task: get pHRR MAE below USTC; declared before any annotation or fit): (a) FR chemistry annotation: every distinct normalised FR/synergist NAME (no target values visible) is annotated by agents with element mass fractions (P, N, Si, B, S, halogen, metal), FR class, reactive-vs-additive, molecule SMILES when a defined small molecule; file data/v2/cone_lit_parts/fr_chemistry.csv, committed before scoring. (b) Features v4 = v3 + formulation element loadings (sum over FRs of loading_wt% x element fraction, e.g. P_wtpct, N_wtpct) + class loadings + RDKit descriptors of the main FR when SMILES exists (MW, aromatic rings, P-O/P=O counts). (c) Scored on the amendment-10 USTC-style protocol (EP, GroupKFold by FR identity, 5x10, MAE) and ALSO on the USTC-matched population: EP rows whose FR contains phosphorus (organophosphorus scope as in Li et al. 2025), plus their controls. Models: primary blend with v4; also gt_protocol_et with v4. Both reported; the headline is whichever is pre-named here: primary blend v4 on the P-FR epoxy population. No other variant is tried; reported whatever the result. USTC 125.5 remains unconfirmed.",
+    "2026-10-20 amendment 12 (declared after amendment-11 result, before running): add the leak-fixed control feature (same paper's neat-polymer pHRR at same flux, log; blank on control rows) to v4 = 'v4C'. Same two populations and USTC-style protocol as amendment 11. Models: primary v4C (headline, population B) and gt_protocol_et v4C. Label every number 'given the paper's measured neat-epoxy pHRR'; USTC's inputs did not include this, so the comparison is footnoted, never called like-for-like. No other variant.",
+    "2026-10-20 amendment 13 (declared after amendment-12 diagnosis, before running): 'ratio model' -- for non-control EP rows whose paper has a neat control at the same flux, target = log(pHRR / control pHRR); model = primary blend on v4 features (no control feature); prediction = control x exp(pred), clipped to training range. Same USTC-style protocol (GroupKFold by FR identity, 5x10, MAE in kW/m2) on population A' (all EP rows with a control) and B' (P-FR subset with a control). Baselines reported alongside: control x training-fold median ratio. Label: 'given the paper's measured neat-epoxy pHRR'. Footnoted vs USTC (different inputs and data spread); never called like-for-like. No other variant."
+  ]
+}

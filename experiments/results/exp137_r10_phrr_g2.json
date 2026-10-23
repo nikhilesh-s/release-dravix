@@ -1,0 +1,129 @@
+{
+  "slug": "r10_phrr_g2",
+  "target": "Peak HRR (kW/m2)",
+  "round_config": "experiments/configs/round10_physics.json",
+  "dataset": "FSRI pHRR replicate-mean, has_mcc (191 rows / 64 merged groups); incumbent exp074 rows, order and groups",
+  "features": [
+    "heat_flux_kWm2",
+    "mcc_peak_hrr_Wg",
+    "mcc_char_yield_pct",
+    "cone_mass_per_area_kgm2",
+    "cone_thickness_mm",
+    "density_kgm3",
+    "mcc_total_hr_kJg",
+    "mcc_t_peak_C",
+    "mcc_t_onset_C",
+    "log_kpc"
+  ],
+  "model": "mean on ln scale of exp074 (ln of clip(expm1, 1e-6)) and g1 (b + mu_GP), then exp",
+  "hyperparameters": "hgb(): learning_rate=0.05, max_iter=200, max_leaf_nodes=15, min_samples_leaf=10, random_state=0; GaussianProcessRegressor(C(1.0)*RBF(ones(d))+WhiteKernel(1.0), normalize_y=True, n_restarts_optimizer=0, random_state=0) on r = ln(y) - ln(mcc_peak_hrr_Wg); inputs SimpleImputer(median, add_indicator, keep_empty) -> StandardScaler; d = imputer output width; fixed by the config, nothing tuned",
+  "code": "data/v2/train_round10_physics.py",
+  "n_rows": 191,
+  "n_groups": 64,
+  "protocol": "gkf_group5x10",
+  "rkf_mean": 0.4733,
+  "rkf_std": 0.1228,
+  "ci_lo": 0.0837,
+  "ci_hi": 0.7569,
+  "pooled_ci_lo": 0.3078,
+  "pooled_ci_hi": 0.7931,
+  "paired_vs": "exp074",
+  "paired_delta": -0.138,
+  "paired_wins": "1/10",
+  "sota": 0.3,
+  "sota_source": "pomazi_2026",
+  "status": "ok",
+  "blocked_reason": "",
+  "note": "round 10 pHRR r10_phrr_g2 (selectable); vs exp074 on identical folds; category-GKF 0.242 (incumbent 0.392); gain not established without the top 5 groups",
+  "role": "selectable",
+  "rkf_mean_full": 0.4732827880929641,
+  "ci_lo_full": 0.08370743429113356,
+  "ci_hi_full": 0.7568977314382203,
+  "per_repeat_r2": [
+    0.46045457913712284,
+    0.6063122235442029,
+    0.3827935403943652,
+    0.20532467887427897,
+    0.43001826549028643,
+    0.5052694868083651,
+    0.6216622560438249,
+    0.5429203263125368,
+    0.3824528956301567,
+    0.595619628694501
+  ],
+  "seed0_r2": 0.46045457913712284,
+  "seed0_mae": 246.41602159782272,
+  "seed0_rmse": 462.1034776637194,
+  "top_k_removal": {
+    "top5": [
+      [
+        "PMMA",
+        1105042.0972551259
+      ],
+      [
+        "Nylon",
+        421165.042898281
+      ],
+      [
+        "FRP_Panel",
+        377007.9394501742
+      ],
+      [
+        "Overstuffed_Chair_Polyurethane_Foam",
+        300156.0645687201
+      ],
+      [
+        "LDPE",
+        166030.16683976824
+      ]
+    ],
+    "top5_share_of_net": -0.22712014626535995,
+    "drop_top1": {
+      "mean_gain": -0.15608549977597624,
+      "wins": 0
+    },
+    "drop_top3": {
+      "mean_gain": -0.17191945427506333,
+      "wins": 0
+    },
+    "drop_top5": {
+      "mean_gain": -0.21267308093507964,
+      "wins": 0
+    },
+    "not_established": true
+  },
+  "gp_warnings": {
+    "ConvergenceWarning": 133
+  },
+  "wall_time_s": 114.4,
+  "category_grouped_mean": 0.2423,
+  "category_grouped_std": 0.1339,
+  "category_grouped_ci_lo": -0.5168,
+  "category_grouped_ci_hi": 0.4432,
+  "category_grouped_per_repeat": [
+    0.051673921570388415,
+    0.5724353575568644,
+    0.21953918007975004,
+    0.22164759444124071,
+    0.2973646184924934,
+    0.22913591374945508,
+    0.14079553929279853,
+    0.3077662724785476,
+    0.12063813391680611,
+    0.2619727013069729
+  ],
+  "gate_v2": {
+    "theta": -0.13800637077688677,
+    "wins": 1,
+    "ci_lo": 0.08370743429113356,
+    "ci_hi": 0.7568977314382203,
+    "se": 0.063000213409563,
+    "lb_maxT": -0.24709931661260914,
+    "lb_unadjusted": -0.22899297707602956,
+    "lb_raw_maxT": -0.4071439021100564,
+    "p_boot_gain_le_0": 0.9955,
+    "K": 4,
+    "q": 1.7316281950746986,
+    "selected": false
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "slug": "r9_tabpfn_cr_p1",
+  "target": "Char Residue (cone residue %, FSRI)",
+  "round_config": "experiments/configs/round9_tabpfn_smearing.json",
+  "dataset": "char_residue_cone_fsri x STA/MCC/props (567 rows / 61 merged groups); incumbent exp117 rows, order and groups",
+  "features": [
+    "heat_flux_kWm2",
+    "density_kgm3",
+    "mcc_char_yield_pct",
+    "sta_res_3K",
+    "sta_res_10K",
+    "sta_res_30K",
+    "cat_interior_finish",
+    "cat_exterior_finish",
+    "cat_insulation",
+    "cat_roofing",
+    "cat_structural"
+  ],
+  "model": "TabPFN V2 alone on the 11 exp117 features, raw %, no clipping",
+  "hyperparameters": "TabPFNRegressor.create_default_for_version(ModelVersion.V2, device='cpu', random_state=0); package defaults, tabpfn 9.1.0",
+  "code": "data/v2/train_round9_tabpfn.py",
+  "n_rows": 567,
+  "n_groups": 61,
+  "protocol": "gkf_group5x10",
+  "rkf_mean": 0.5502,
+  "rkf_std": 0.0337,
+  "ci_lo": 0.356,
+  "ci_hi": 0.7228,
+  "pooled_ci_lo": 0.3555,
+  "pooled_ci_hi": 0.7041,
+  "paired_vs": "exp117",
+  "paired_delta": -0.1002,
+  "paired_wins": "0/10",
+  "sota": 0.82,
+  "sota_source": "pomazi_2026",
+  "status": "ok",
+  "blocked_reason": "",
+  "note": "round 9 CR p1 (provisional id r9_tabpfn_cr_p1); report vs exp117 on identical folds; gain concentrated in <= 5 materials, not established; Built with PriorLabs-TabPFN",
+  "rkf_mean_full": 0.5502498119681405,
+  "ci_lo_full": 0.3559711788587653,
+  "ci_hi_full": 0.7228289222732678,
+  "per_repeat_r2": [
+    0.5922157285423121,
+    0.5697178333898822,
+    0.5748071371909073,
+    0.5351632110821285,
+    0.5553869974133678,
+    0.5420758931138687,
+    0.5097298011129363,
+    0.5334327786069544,
+    0.6011607646743633,
+    0.48880797455468483
+  ],
+  "top_k_removal": {
+    "top5": [
+      [
+        "House_Wrap",
+        4002.9621530968802
+      ],
+      [
+        "PC",
+        3339.7049697869165
+      ],
+      [
+        "Feather_Pillow_Feathers",
+        3086.5832400318036
+      ],
+      [
+        "PVC",
+        2269.1800081452166
+      ],
+      [
+        "Window_Screen",
+        1299.2232080274516
+      ]
+    ],
+    "top5_share_of_net": -0.4286023544995256,
+    "drop_top1": {
+      "mean_gain": -0.11435880776130274,
+      "wins": 0
+    },
+    "drop_top3": {
+      "mean_gain": -0.1481688566737002,
+      "wins": 0
+    },
+    "drop_top5": {
+      "mean_gain": -0.17822672707561407,
+      "wins": 0
+    },
+    "not_established": true
+  },
+  "wall_time_s": 577.2,
+  "tabpfn_version": "9.1.0",
+  "torch_version": "2.8.0",
+  "sklearn_version": "1.7.1",
+  "checkpoint": "tabpfn-v2-regressor.ckpt",
+  "checkpoint_sha256": "2ab5a07d5c41dfe6db9aa7ae106fc6de898326c2765be66505a07e2868c10736",
+  "attribution": "Built with PriorLabs-TabPFN",
+  "n_estimators_": 8,
+  "devices_": [
+    "cpu"
+  ],
+  "use_autocast_": false,
+  "forced_inference_dtype_": null,
+  "gate_v2": {
+    "theta": -0.10015341524485095,
+    "wins": 0,
+    "ci_lo": 0.3559711788587653,
+    "ci_hi": 0.7228289222732678,
+    "se": 0.04575869313736113,
+    "lb_maxT": -0.18755311972241667,
+    "lb_unadjusted": -0.16420803574085424,
+    "lb_raw_maxT": -0.16496678631378087,
+    "p_boot_gain_le_0": 0.9965,
+    "K": 5,
+    "q": 1.9100131250515424,
+    "selected": false
+  }
+}

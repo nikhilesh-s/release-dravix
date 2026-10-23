@@ -1,0 +1,15 @@
+Training rows: 158 across 55 materials (inner join of phrr x mcc x sta -- every row has real values for all 4 features)
+  seed=0: test_materials=14, held-out R2=0.4287
+  seed=1: test_materials=14, held-out R2=0.0306
+  seed=2: test_materials=14, held-out R2=0.6787
+  seed=3: test_materials=14, held-out R2=0.5295
+  seed=4: test_materials=14, held-out R2=-0.2665
+  seed=5: test_materials=14, held-out R2=0.3847
+  seed=6: test_materials=14, held-out R2=-0.0099
+  seed=7: test_materials=14, held-out R2=0.4333
+  seed=8: test_materials=14, held-out R2=-0.0743
+  seed=9: test_materials=14, held-out R2=-0.4298
+
+Held-out R2 across 10 material-grouped splits: mean=0.1705, std=0.3510, min=-0.4298, max=0.6787
+SOTA (Pomazi et al. 2026, real held-out, RFR): R2=0.30
+Delta (mean Dravix - SOTA): -0.1295

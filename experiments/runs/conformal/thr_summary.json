@@ -1,0 +1,1292 @@
+{
+  "config": "experiments/configs/conformal_intervals.json",
+  "target": "THR",
+  "exp_id": "exp045",
+  "n_rows": 191,
+  "n_groups": 65,
+  "group_definition": "material (unmerged; 65 groups), as exp045",
+  "score_scale": "s = y (raw units); back-transform identity",
+  "display_clip": [
+    0.0,
+    "inf"
+  ],
+  "alpha": 0.1,
+  "nominal": 0.9,
+  "strata": "nearest of 25/50/75 kW/m2, ties low",
+  "strata_counts": {
+    "25": {
+      "rows": 66,
+      "groups": 63
+    },
+    "50": {
+      "rows": 62,
+      "groups": 62
+    },
+    "75": {
+      "rows": 63,
+      "groups": 62
+    },
+    "raw_flux": {
+      "15": {
+        "rows": 1,
+        "groups": 1
+      },
+      "25": {
+        "rows": 60,
+        "groups": 60
+      },
+      "35": {
+        "rows": 5,
+        "groups": 5
+      },
+      "50": {
+        "rows": 62,
+        "groups": 62
+      },
+      "75": {
+        "rows": 62,
+        "groups": 62
+      },
+      "100": {
+        "rows": 1,
+        "groups": 1
+      }
+    }
+  },
+  "step1": {
+    "exp_id": "exp045",
+    "mean": 0.9529647700513657,
+    "std": 0.002389170353716189,
+    "ci_lo": 0.9178344827857245,
+    "ci_hi": 0.9753168579125397,
+    "ref": [
+      0.953,
+      0.918,
+      0.975
+    ],
+    "ok": true,
+    "per_repeat": [
+      0.9535459318546358,
+      0.9544955755786895,
+      0.9542980079518337,
+      0.9541104659465467,
+      0.9547044263083995,
+      0.954710344480636,
+      0.9493400599925225,
+      0.9483868617037795,
+      0.9506686817116281,
+      0.9553873449849855
+    ]
+  },
+  "status": "ok",
+  "variants": {
+    "P": {
+      "description": "primary (deployed): group-weighted CV+, Mondrian by flux anchor (FSRI) or one stratum (LOI)",
+      "coverage_scale": "score",
+      "overall": {
+        "group_all": {
+          "mean": 0.8476923076923077,
+          "min": 0.8153846153846154,
+          "max": 0.8769230769230769,
+          "ci": [
+            0.7630384615384614,
+            0.9199999999999999
+          ],
+          "note": "expected to fall below 0.90: the interval is per-row, not simultaneous, and groups have more than one row in this cell; no reading-rule label"
+        },
+        "group_mean": {
+          "mean": 0.9102564102564104,
+          "min": 0.8974358974358974,
+          "max": 0.9282051282051282,
+          "ci": [
+            0.8523076923076923,
+            0.9589743589743589
+          ],
+          "reading": "consistent with nominal"
+        },
+        "row": {
+          "mean": 0.9094240837696335,
+          "min": 0.8952879581151832,
+          "max": 0.9267015706806283,
+          "ci": [
+            0.848988835725678,
+            0.959563132193931
+          ]
+        },
+        "score_width_mean": {
+          "mean": 56.72767860504359,
+          "min": 55.63530386451771,
+          "max": 58.58414232483774
+        },
+        "score_width_median": {
+          "mean": 55.02895453495496,
+          "min": 53.67308642343495,
+          "max": 56.49414794649769
+        },
+        "raw_width_mean": {
+          "mean": 50.192069413636865,
+          "min": 49.49083022175876,
+          "max": 51.582596954816395
+        },
+        "raw_width_median": {
+          "mean": 51.4552630879431,
+          "min": 50.3740521646948,
+          "max": 54.20383323391421
+        },
+        "ratio_median": null,
+        "n_unbounded": {
+          "total_over_repeats": 0,
+          "per_repeat_max": 0
+        },
+        "n_empty": {
+          "total_over_repeats": 0,
+          "per_repeat_max": 0
+        },
+        "n_bounded": {
+          "total_over_repeats": 1910,
+          "per_repeat_max": 191
+        },
+        "n_rows": 191,
+        "n_groups": 65,
+        "binomial_sd": 0.03721042037676254
+      },
+      "by_stratum": {
+        "25": {
+          "group_all": {
+            "mean": 0.9095238095238095,
+            "min": 0.8888888888888888,
+            "max": 0.9206349206349206,
+            "ci": [
+              0.8380952380952381,
+              0.9635317460317459
+            ],
+            "note": "expected to fall below 0.90: the interval is per-row, not simultaneous, and groups have more than one row in this cell; no reading-rule label"
+          },
+          "group_mean": {
+            "mean": 0.9095238095238095,
+            "min": 0.8888888888888888,
+            "max": 0.9206349206349206,
+            "ci": [
+              0.8380952380952381,
+              0.9635317460317459
+            ],
+            "reading": "consistent with nominal"
+          },
+          "row": {
+            "mean": 0.9136363636363637,
+            "min": 0.8939393939393939,
+            "max": 0.9242424242424242,
+            "ci": [
+              0.8449197324414717,
+              0.9661769884009942
+            ]
+          },
+          "score_width_mean": {
+            "mean": 55.98717546988394,
+            "min": 53.85720590153984,
+            "max": 59.028496311334614
+          },
+          "score_width_median": {
+            "mean": 54.502302784239774,
+            "min": 52.066181136372045,
+            "max": 57.22479613898949
+          },
+          "raw_width_mean": {
+            "mean": 49.68870332497828,
+            "min": 48.000803882097095,
+            "max": 51.870099289889936
+          },
+          "raw_width_median": {
+            "mean": 51.57171742131034,
+            "min": 48.41103492466779,
+            "max": 53.81509747417357
+          },
+          "ratio_median": null,
+          "n_unbounded": {
+            "total_over_repeats": 0,
+            "per_repeat_max": 0
+          },
+          "n_empty": {
+            "total_over_repeats": 0,
+            "per_repeat_max": 0
+          },
+          "n_bounded": {
+            "total_over_repeats": 660,
+            "per_repeat_max": 66
+          },
+          "n_rows": 66,
+          "n_groups": 63,
+          "binomial_sd": 0.03779644730092273
+        },
+        "50": {
+          "group_all": {
+            "mean": 0.9096774193548386,
+            "min": 0.8870967741935484,
+            "max": 0.9354838709677419,
+            "ci": [
+              0.8418951612903226,
+              0.9661290322580645
+            ],
+            "note": "every group has one row in this cell, so group_all equals group_mean"
+          },
+          "group_mean": {
+            "mean": 0.9096774193548386,
+            "min": 0.8870967741935484,
+            "max": 0.9354838709677419,
+            "ci": [
+              0.8418951612903226,
+              0.9661290322580645
+            ],
+            "reading": "consistent with nominal"
+          },
+          "row": {
+            "mean": 0.9096774193548386,
+            "min": 0.8870967741935484,
+            "max": 0.9354838709677419,
+            "ci": [
+              0.8418951612903226,
+              0.9661290322580645
+            ]
+          },
+          "score_width_mean": {
+            "mean": 53.31404113190523,
+            "min": 51.75015241510304,
+            "max": 55.81755339510751
+          },
+          "score_width_median": {
+            "mean": 52.700743827193904,
+            "min": 50.66185269828526,
+            "max": 55.519855750496305
+          },
+          "raw_width_mean": {
+            "mean": 47.44650906918463,
+            "min": 46.29889766730546,
+            "max": 49.41957370495306
+          },
+          "raw_width_median": {
+            "mean": 50.243095424569404,
+            "min": 48.86410456605601,
+            "max": 52.32091255714882
+          },
+          "ratio_median": null,
+          "n_unbounded": {
+            "total_over_repeats": 0,
+            "per_repeat_max": 0
+          },
+          "n_empty": {
+            "total_over_repeats": 0,
+            "per_repeat_max": 0
+          },
+          "n_bounded": {
+            "total_over_repeats": 620,
+            "per_repeat_max": 62
+          },
+          "n_rows": 62,
+          "n_groups": 62,
+          "binomial_sd": 0.03810003810005715
+        },
+        "75": {
+          "group_all": {
+            "mean": 0.903225806451613,
+            "min": 0.8870967741935484,
+            "max": 0.9354838709677419,
+            "ci": [
+              0.832258064516129,
+              0.964516129032258
+            ],
+            "note": "expected to fall below 0.90: the interval is per-row, not simultaneous, and groups have more than one row in this cell; no reading-rule label"
+          },
+          "group_mean": {
+            "mean": 0.903225806451613,
+            "min": 0.8870967741935484,
+            "max": 0.9354838709677419,
+            "ci": [
+              0.832258064516129,
+              0.964516129032258
+            ],
+            "reading": "consistent with nominal"
+          },
+          "row": {
+            "mean": 0.9047619047619048,
+            "min": 0.8888888888888888,
+            "max": 0.9365079365079365,
+            "ci": [
+              0.8338709677419355,
+              0.9650930059523808
+            ]
+          },
+          "score_width_mean": {
+            "mean": 60.86289654560098,
+            "min": 58.45545567565957,
+            "max": 62.51526037984564
+          },
+          "score_width_median": {
+            "mean": 59.24552864841174,
+            "min": 56.720802702862926,
+            "max": 67.29909030062515
+          },
+          "raw_width_mean": {
+            "mean": 53.421385337565525,
+            "min": 51.65419937103944,
+            "max": 54.74978835090668
+          },
+          "raw_width_median": {
+            "mean": 55.08939478855309,
+            "min": 53.57641517745277,
+            "max": 57.33948844004482
+          },
+          "ratio_median": null,
+          "n_unbounded": {
+            "total_over_repeats": 0,
+            "per_repeat_max": 0
+          },
+          "n_empty": {
+            "total_over_repeats": 0,
+            "per_repeat_max": 0
+          },
+          "n_bounded": {
+            "total_over_repeats": 630,
+            "per_repeat_max": 63
+          },
+          "n_rows": 63,
+          "n_groups": 62,
+          "binomial_sd": 0.03810003810005715
+        }
+      },
+      "by_raw_flux": {
+        "15": {
+          "n": 1,
+          "row_coverage": 1.0
+        },
+        "25": {
+          "n": 60,
+          "row_coverage": 0.905
+        },
+        "35": {
+          "n": 5,
+          "row_coverage": 1.0
+        },
+        "50": {
+          "n": 62,
+          "row_coverage": 0.9096774193548387
+        },
+        "75": {
+          "n": 62,
+          "row_coverage": 0.9032258064516129
+        },
+        "100": {
+          "n": 1,
+          "row_coverage": 1.0
+        }
+      }
+    },
+    "V1": {
+      "description": "report-only: P with one stratum (no Mondrian)",
+      "coverage_scale": "score",
+      "overall": {
+        "group_all": {
+          "mean": 0.8753846153846154,
+          "min": 0.8461538461538461,
+          "max": 0.8923076923076924,
+          "ci": [
+            0.7969230769230768,
+            0.943076923076923
+          ],
+          "note": "expected to fall below 0.90: the interval is per-row, not simultaneous, and groups have more than one row in this cell; no reading-rule label"
+        },
+        "group_mean": {
+          "mean": 0.9215384615384616,
+          "min": 0.9,
+          "max": 0.9333333333333333,
+          "ci": [
+            0.8625512820512821,
+            0.9697435897435898
+          ],
+          "reading": "consistent with nominal"
+        },
+        "row": {
+          "mean": 0.9204188481675392,
+          "min": 0.900523560209424,
+          "max": 0.9319371727748691,
+          "ci": [
+            0.8620284974093264,
+            0.9696346914336638
+          ]
+        },
+        "score_width_mean": {
+          "mean": 57.99653069888624,
+          "min": 56.57769015771042,
+          "max": 60.05735354616596
+        },
+        "score_width_median": {
+          "mean": 57.42740358859646,
+          "min": 54.12168263975789,
+          "max": 59.8769230387277
+        },
+        "raw_width_mean": {
+          "mean": 51.288043421158854,
+          "min": 49.99436221712127,
+          "max": 52.97557259789853
+        },
+        "raw_width_median": {
+          "mean": 53.54843826180403,
+          "min": 50.921121833711624,
+          "max": 55.68987692049285
+        },
+        "ratio_median": null,
+        "n_unbounded": {
+          "total_over_repeats": 0,
+          "per_repeat_max": 0
+        },
+        "n_empty": {
+          "total_over_repeats": 0,
+          "per_repeat_max": 0
+        },
+        "n_bounded": {
+          "total_over_repeats": 1910,
+          "per_repeat_max": 191
+        },
+        "n_rows": 191,
+        "n_groups": 65,
+        "binomial_sd": 0.03721042037676254
+      },
+      "by_stratum": {
+        "25": {
+          "group_all": {
+            "mean": 0.9238095238095239,
+            "min": 0.9047619047619048,
+            "max": 0.9365079365079365,
+            "ci": [
+              0.8571428571428571,
+              0.9777777777777776
+            ],
+            "note": "expected to fall below 0.90: the interval is per-row, not simultaneous, and groups have more than one row in this cell; no reading-rule label"
+          },
+          "group_mean": {
+            "mean": 0.9238095238095239,
+            "min": 0.9047619047619048,
+            "max": 0.9365079365079365,
+            "ci": [
+              0.8571428571428571,
+              0.9777777777777776
+            ],
+            "reading": "consistent with nominal"
+          },
+          "row": {
+            "mean": 0.9272727272727274,
+            "min": 0.9090909090909091,
+            "max": 0.9393939393939394,
+            "ci": [
+              0.8625,
+              0.9784615384615384
+            ]
+          },
+          "score_width_mean": {
+            "mean": 57.98010937552128,
+            "min": 56.484251367536686,
+            "max": 59.999245777981564
+          },
+          "score_width_median": {
+            "mean": 57.065815625425294,
+            "min": 54.12168263975789,
+            "max": 59.87692303872771
+          },
+          "raw_width_mean": {
+            "mean": 51.31630742287963,
+            "min": 49.97066411287823,
+            "max": 52.926685943983486
+          },
+          "raw_width_median": {
+            "mean": 53.49234385373834,
+            "min": 50.767075458934826,
+            "max": 55.450875353158466
+          },
+          "ratio_median": null,
+          "n_unbounded": {
+            "total_over_repeats": 0,
+            "per_repeat_max": 0
+          },
+          "n_empty": {
+            "total_over_repeats": 0,
+            "per_repeat_max": 0
+          },
+          "n_bounded": {
+            "total_over_repeats": 660,
+            "per_repeat_max": 66
+          },
+          "n_rows": 66,
+          "n_groups": 63,
+          "binomial_sd": 0.03779644730092273
+        },
+        "50": {
+          "group_all": {
+            "mean": 0.9274193548387097,
+            "min": 0.8870967741935484,
+            "max": 0.9516129032258065,
+            "ci": [
+              0.8629032258064516,
+              0.9774596774193546
+            ],
+            "note": "every group has one row in this cell, so group_all equals group_mean"
+          },
+          "group_mean": {
+            "mean": 0.9274193548387097,
+            "min": 0.8870967741935484,
+            "max": 0.9516129032258065,
+            "ci": [
+              0.8629032258064516,
+              0.9774596774193546
+            ],
+            "reading": "consistent with nominal"
+          },
+          "row": {
+            "mean": 0.9274193548387097,
+            "min": 0.8870967741935484,
+            "max": 0.9516129032258065,
+            "ci": [
+              0.8629032258064516,
+              0.9774596774193546
+            ]
+          },
+          "score_width_mean": {
+            "mean": 57.997325331685126,
+            "min": 56.65573120629185,
+            "max": 60.100889529560995
+          },
+          "score_width_median": {
+            "mean": 57.518396592195856,
+            "min": 54.02958570131403,
+            "max": 59.876923038727696
+          },
+          "raw_width_mean": {
+            "mean": 51.18100022303984,
+            "min": 49.950652587387204,
+            "max": 52.93064333904251
+          },
+          "raw_width_median": {
+            "mean": 53.467952485871066,
+            "min": 51.170717053848456,
+            "max": 55.68987692049285
+          },
+          "ratio_median": null,
+          "n_unbounded": {
+            "total_over_repeats": 0,
+            "per_repeat_max": 0
+          },
+          "n_empty": {
+            "total_over_repeats": 0,
+            "per_repeat_max": 0
+          },
+          "n_bounded": {
+            "total_over_repeats": 620,
+            "per_repeat_max": 62
+          },
+          "n_rows": 62,
+          "n_groups": 62,
+          "binomial_sd": 0.03810003810005715
+        },
+        "75": {
+          "group_all": {
+            "mean": 0.9048387096774192,
+            "min": 0.8870967741935484,
+            "max": 0.9193548387096774,
+            "ci": [
+              0.832258064516129,
+              0.9661290322580645
+            ],
+            "note": "expected to fall below 0.90: the interval is per-row, not simultaneous, and groups have more than one row in this cell; no reading-rule label"
+          },
+          "group_mean": {
+            "mean": 0.9048387096774192,
+            "min": 0.8870967741935484,
+            "max": 0.9193548387096774,
+            "ci": [
+              0.832258064516129,
+              0.9661290322580645
+            ],
+            "reading": "consistent with nominal"
+          },
+          "row": {
+            "mean": 0.9063492063492063,
+            "min": 0.8888888888888888,
+            "max": 0.9206349206349206,
+            "ci": [
+              0.8338709677419355,
+              0.9661666666666666
+            ]
+          },
+          "score_width_mean": {
+            "mean": 58.012951970450615,
+            "min": 56.59877611230436,
+            "max": 60.07538341489102
+          },
+          "score_width_median": {
+            "mean": 57.42760639104846,
+            "min": 54.02958570131403,
+            "max": 59.8769230387277
+          },
+          "raw_width_mean": {
+            "mean": 51.3637776143304,
+            "min": 50.06220462860623,
+            "max": 53.071003283731315
+          },
+          "raw_width_median": {
+            "mean": 53.683306585735195,
+            "min": 51.8251873774131,
+            "max": 55.68987692049285
+          },
+          "ratio_median": null,
+          "n_unbounded": {
+            "total_over_repeats": 0,
+            "per_repeat_max": 0
+          },
+          "n_empty": {
+            "total_over_repeats": 0,
+            "per_repeat_max": 0
+          },
+          "n_bounded": {
+            "total_over_repeats": 630,
+            "per_repeat_max": 63
+          },
+          "n_rows": 63,
+          "n_groups": 62,
+          "binomial_sd": 0.03810003810005715
+        }
+      },
+      "by_raw_flux": {
+        "15": {
+          "n": 1,
+          "row_coverage": 1.0
+        },
+        "25": {
+          "n": 60,
+          "row_coverage": 0.92
+        },
+        "35": {
+          "n": 5,
+          "row_coverage": 1.0
+        },
+        "50": {
+          "n": 62,
+          "row_coverage": 0.9274193548387096
+        },
+        "75": {
+          "n": 62,
+          "row_coverage": 0.9048387096774193
+        },
+        "100": {
+          "n": 1,
+          "row_coverage": 1.0
+        }
+      }
+    },
+    "V2": {
+      "description": "report-only: P with all w_i = 1 (row-exchangeable textbook CV+)",
+      "coverage_scale": "score",
+      "overall": {
+        "group_all": {
+          "mean": 0.8476923076923077,
+          "min": 0.8153846153846154,
+          "max": 0.8769230769230769,
+          "ci": [
+            0.7630384615384614,
+            0.9199999999999999
+          ],
+          "note": "expected to fall below 0.90: the interval is per-row, not simultaneous, and groups have more than one row in this cell; no reading-rule label"
+        },
+        "group_mean": {
+          "mean": 0.9102564102564104,
+          "min": 0.8974358974358974,
+          "max": 0.9282051282051282,
+          "ci": [
+            0.8523076923076923,
+            0.9589743589743589
+          ],
+          "reading": "consistent with nominal"
+        },
+        "row": {
+          "mean": 0.9094240837696335,
+          "min": 0.8952879581151832,
+          "max": 0.9267015706806283,
+          "ci": [
+            0.848988835725678,
+            0.959563132193931
+          ]
+        },
+        "score_width_mean": {
+          "mean": 56.72767860504359,
+          "min": 55.63530386451771,
+          "max": 58.58414232483774
+        },
+        "score_width_median": {
+          "mean": 55.02895453495496,
+          "min": 53.67308642343495,
+          "max": 56.49414794649769
+        },
+        "raw_width_mean": {
+          "mean": 50.192069413636865,
+          "min": 49.49083022175876,
+          "max": 51.582596954816395
+        },
+        "raw_width_median": {
+          "mean": 51.4552630879431,
+          "min": 50.3740521646948,
+          "max": 54.20383323391421
+        },
+        "ratio_median": null,
+        "n_unbounded": {
+          "total_over_repeats": 0,
+          "per_repeat_max": 0
+        },
+        "n_empty": {
+          "total_over_repeats": 0,
+          "per_repeat_max": 0
+        },
+        "n_bounded": {
+          "total_over_repeats": 1910,
+          "per_repeat_max": 191
+        },
+        "n_rows": 191,
+        "n_groups": 65,
+        "binomial_sd": 0.03721042037676254
+      },
+      "by_stratum": {
+        "25": {
+          "group_all": {
+            "mean": 0.9095238095238095,
+            "min": 0.8888888888888888,
+            "max": 0.9206349206349206,
+            "ci": [
+              0.8380952380952381,
+              0.9635317460317459
+            ],
+            "note": "expected to fall below 0.90: the interval is per-row, not simultaneous, and groups have more than one row in this cell; no reading-rule label"
+          },
+          "group_mean": {
+            "mean": 0.9095238095238095,
+            "min": 0.8888888888888888,
+            "max": 0.9206349206349206,
+            "ci": [
+              0.8380952380952381,
+              0.9635317460317459
+            ],
+            "reading": "consistent with nominal"
+          },
+          "row": {
+            "mean": 0.9136363636363637,
+            "min": 0.8939393939393939,
+            "max": 0.9242424242424242,
+            "ci": [
+              0.8449197324414717,
+              0.9661769884009942
+            ]
+          },
+          "score_width_mean": {
+            "mean": 55.98717546988394,
+            "min": 53.85720590153984,
+            "max": 59.028496311334614
+          },
+          "score_width_median": {
+            "mean": 54.502302784239774,
+            "min": 52.066181136372045,
+            "max": 57.22479613898949
+          },
+          "raw_width_mean": {
+            "mean": 49.68870332497828,
+            "min": 48.000803882097095,
+            "max": 51.870099289889936
+          },
+          "raw_width_median": {
+            "mean": 51.57171742131034,
+            "min": 48.41103492466779,
+            "max": 53.81509747417357
+          },
+          "ratio_median": null,
+          "n_unbounded": {
+            "total_over_repeats": 0,
+            "per_repeat_max": 0
+          },
+          "n_empty": {
+            "total_over_repeats": 0,
+            "per_repeat_max": 0
+          },
+          "n_bounded": {
+            "total_over_repeats": 660,
+            "per_repeat_max": 66
+          },
+          "n_rows": 66,
+          "n_groups": 63,
+          "binomial_sd": 0.03779644730092273
+        },
+        "50": {
+          "group_all": {
+            "mean": 0.9096774193548386,
+            "min": 0.8870967741935484,
+            "max": 0.9354838709677419,
+            "ci": [
+              0.8418951612903226,
+              0.9661290322580645
+            ],
+            "note": "every group has one row in this cell, so group_all equals group_mean"
+          },
+          "group_mean": {
+            "mean": 0.9096774193548386,
+            "min": 0.8870967741935484,
+            "max": 0.9354838709677419,
+            "ci": [
+              0.8418951612903226,
+              0.9661290322580645
+            ],
+            "reading": "consistent with nominal"
+          },
+          "row": {
+            "mean": 0.9096774193548386,
+            "min": 0.8870967741935484,
+            "max": 0.9354838709677419,
+            "ci": [
+              0.8418951612903226,
+              0.9661290322580645
+            ]
+          },
+          "score_width_mean": {
+            "mean": 53.31404113190523,
+            "min": 51.75015241510304,
+            "max": 55.81755339510751
+          },
+          "score_width_median": {
+            "mean": 52.700743827193904,
+            "min": 50.66185269828526,
+            "max": 55.519855750496305
+          },
+          "raw_width_mean": {
+            "mean": 47.44650906918463,
+            "min": 46.29889766730546,
+            "max": 49.41957370495306
+          },
+          "raw_width_median": {
+            "mean": 50.243095424569404,
+            "min": 48.86410456605601,
+            "max": 52.32091255714882
+          },
+          "ratio_median": null,
+          "n_unbounded": {
+            "total_over_repeats": 0,
+            "per_repeat_max": 0
+          },
+          "n_empty": {
+            "total_over_repeats": 0,
+            "per_repeat_max": 0
+          },
+          "n_bounded": {
+            "total_over_repeats": 620,
+            "per_repeat_max": 62
+          },
+          "n_rows": 62,
+          "n_groups": 62,
+          "binomial_sd": 0.03810003810005715
+        },
+        "75": {
+          "group_all": {
+            "mean": 0.903225806451613,
+            "min": 0.8870967741935484,
+            "max": 0.9354838709677419,
+            "ci": [
+              0.832258064516129,
+              0.964516129032258
+            ],
+            "note": "expected to fall below 0.90: the interval is per-row, not simultaneous, and groups have more than one row in this cell; no reading-rule label"
+          },
+          "group_mean": {
+            "mean": 0.903225806451613,
+            "min": 0.8870967741935484,
+            "max": 0.9354838709677419,
+            "ci": [
+              0.832258064516129,
+              0.964516129032258
+            ],
+            "reading": "consistent with nominal"
+          },
+          "row": {
+            "mean": 0.9047619047619048,
+            "min": 0.8888888888888888,
+            "max": 0.9365079365079365,
+            "ci": [
+              0.8338709677419355,
+              0.9650930059523808
+            ]
+          },
+          "score_width_mean": {
+            "mean": 60.86289654560098,
+            "min": 58.45545567565957,
+            "max": 62.51526037984564
+          },
+          "score_width_median": {
+            "mean": 59.24552864841174,
+            "min": 56.720802702862926,
+            "max": 67.29909030062515
+          },
+          "raw_width_mean": {
+            "mean": 53.421385337565525,
+            "min": 51.65419937103944,
+            "max": 54.74978835090668
+          },
+          "raw_width_median": {
+            "mean": 55.08939478855309,
+            "min": 53.57641517745277,
+            "max": 57.33948844004482
+          },
+          "ratio_median": null,
+          "n_unbounded": {
+            "total_over_repeats": 0,
+            "per_repeat_max": 0
+          },
+          "n_empty": {
+            "total_over_repeats": 0,
+            "per_repeat_max": 0
+          },
+          "n_bounded": {
+            "total_over_repeats": 630,
+            "per_repeat_max": 63
+          },
+          "n_rows": 63,
+          "n_groups": 62,
+          "binomial_sd": 0.03810003810005715
+        }
+      },
+      "by_raw_flux": {
+        "15": {
+          "n": 1,
+          "row_coverage": 1.0
+        },
+        "25": {
+          "n": 60,
+          "row_coverage": 0.905
+        },
+        "35": {
+          "n": 5,
+          "row_coverage": 1.0
+        },
+        "50": {
+          "n": 62,
+          "row_coverage": 0.9096774193548387
+        },
+        "75": {
+          "n": 62,
+          "row_coverage": 0.9032258064516129
+        },
+        "100": {
+          "n": 1,
+          "row_coverage": 1.0
+        }
+      }
+    },
+    "CQR": {
+      "description": "report-only: CQR with HGB quantile 0.05 / 0.95 models on the score scale, group-weighted, Mondrian",
+      "coverage_scale": "score",
+      "overall": {
+        "group_all": {
+          "mean": 0.8953846153846154,
+          "min": 0.8769230769230769,
+          "max": 0.9384615384615385,
+          "ci": [
+            0.8353846153846154,
+            0.9492307692307692
+          ],
+          "note": "expected to fall below 0.90: the interval is per-row, not simultaneous, and groups have more than one row in this cell; no reading-rule label"
+        },
+        "group_mean": {
+          "mean": 0.9433333333333334,
+          "min": 0.9333333333333335,
+          "max": 0.9615384615384616,
+          "ci": [
+            0.9007692307692308,
+            0.9758974358974358
+          ],
+          "reading": "conservative"
+        },
+        "row": {
+          "mean": 0.943979057591623,
+          "min": 0.9319371727748691,
+          "max": 0.9633507853403142,
+          "ci": [
+            0.9005154639175257,
+            0.9760416666666666
+          ]
+        },
+        "score_width_mean": {
+          "mean": 79.6346870083465,
+          "min": 75.25011836657967,
+          "max": 85.26083302101631
+        },
+        "score_width_median": {
+          "mean": 63.32487041768947,
+          "min": 56.24927722551278,
+          "max": 65.9739600840393
+        },
+        "raw_width_mean": {
+          "mean": 76.83152157838315,
+          "min": 71.88504190540722,
+          "max": 82.08061663850468
+        },
+        "raw_width_median": {
+          "mean": 61.77864599642201,
+          "min": 56.24927722551278,
+          "max": 65.73937182675411
+        },
+        "ratio_median": null,
+        "n_unbounded": {
+          "total_over_repeats": 0,
+          "per_repeat_max": 0
+        },
+        "n_empty": {
+          "total_over_repeats": 0,
+          "per_repeat_max": 0
+        },
+        "n_bounded": {
+          "total_over_repeats": 1910,
+          "per_repeat_max": 191
+        },
+        "n_rows": 191,
+        "n_groups": 65,
+        "binomial_sd": 0.03721042037676254
+      },
+      "by_stratum": {
+        "25": {
+          "group_all": {
+            "mean": 0.9396825396825397,
+            "min": 0.9047619047619048,
+            "max": 0.9682539682539683,
+            "ci": [
+              0.8841269841269842,
+              0.9825396825396825
+            ],
+            "note": "expected to fall below 0.90: the interval is per-row, not simultaneous, and groups have more than one row in this cell; no reading-rule label"
+          },
+          "group_mean": {
+            "mean": 0.9396825396825397,
+            "min": 0.9047619047619048,
+            "max": 0.9682539682539683,
+            "ci": [
+              0.8841269841269842,
+              0.9825396825396825
+            ],
+            "reading": "consistent with nominal"
+          },
+          "row": {
+            "mean": 0.9424242424242424,
+            "min": 0.9090909090909091,
+            "max": 0.9696969696969697,
+            "ci": [
+              0.8876875,
+              0.9830769230769231
+            ]
+          },
+          "score_width_mean": {
+            "mean": 77.88888771987666,
+            "min": 70.0389306984565,
+            "max": 83.0355722651027
+          },
+          "score_width_median": {
+            "mean": 61.57904136264401,
+            "min": 53.33966067794621,
+            "max": 67.49460373894277
+          },
+          "raw_width_mean": {
+            "mean": 75.32396465665391,
+            "min": 68.06749702792548,
+            "max": 80.06979632009111
+          },
+          "raw_width_median": {
+            "mean": 59.50750283425744,
+            "min": 53.33966067794621,
+            "max": 63.12817796552297
+          },
+          "ratio_median": null,
+          "n_unbounded": {
+            "total_over_repeats": 0,
+            "per_repeat_max": 0
+          },
+          "n_empty": {
+            "total_over_repeats": 0,
+            "per_repeat_max": 0
+          },
+          "n_bounded": {
+            "total_over_repeats": 660,
+            "per_repeat_max": 66
+          },
+          "n_rows": 66,
+          "n_groups": 63,
+          "binomial_sd": 0.03779644730092273
+        },
+        "50": {
+          "group_all": {
+            "mean": 0.9419354838709676,
+            "min": 0.9193548387096774,
+            "max": 0.967741935483871,
+            "ci": [
+              0.8903225806451613,
+              0.982258064516129
+            ],
+            "note": "every group has one row in this cell, so group_all equals group_mean"
+          },
+          "group_mean": {
+            "mean": 0.9419354838709676,
+            "min": 0.9193548387096774,
+            "max": 0.967741935483871,
+            "ci": [
+              0.8903225806451613,
+              0.982258064516129
+            ],
+            "reading": "consistent with nominal"
+          },
+          "row": {
+            "mean": 0.9419354838709676,
+            "min": 0.9193548387096774,
+            "max": 0.967741935483871,
+            "ci": [
+              0.8903225806451613,
+              0.982258064516129
+            ]
+          },
+          "score_width_mean": {
+            "mean": 80.75813783714584,
+            "min": 75.57015560583419,
+            "max": 86.39255710326474
+          },
+          "score_width_median": {
+            "mean": 62.655987190774894,
+            "min": 56.24927722551278,
+            "max": 68.35322941787697
+          },
+          "raw_width_mean": {
+            "mean": 77.76897520501493,
+            "min": 72.15878485880097,
+            "max": 83.10690773700735
+          },
+          "raw_width_median": {
+            "mean": 62.09583701414233,
+            "min": 56.24927722551278,
+            "max": 68.35322941787697
+          },
+          "ratio_median": null,
+          "n_unbounded": {
+            "total_over_repeats": 0,
+            "per_repeat_max": 0
+          },
+          "n_empty": {
+            "total_over_repeats": 0,
+            "per_repeat_max": 0
+          },
+          "n_bounded": {
+            "total_over_repeats": 620,
+            "per_repeat_max": 62
+          },
+          "n_rows": 62,
+          "n_groups": 62,
+          "binomial_sd": 0.03810003810005715
+        },
+        "75": {
+          "group_all": {
+            "mean": 0.9467741935483872,
+            "min": 0.9193548387096774,
+            "max": 0.967741935483871,
+            "ci": [
+              0.8951612903225806,
+              0.9870967741935485
+            ],
+            "note": "expected to fall below 0.90: the interval is per-row, not simultaneous, and groups have more than one row in this cell; no reading-rule label"
+          },
+          "group_mean": {
+            "mean": 0.9467741935483872,
+            "min": 0.9193548387096774,
+            "max": 0.967741935483871,
+            "ci": [
+              0.8951612903225806,
+              0.9870967741935485
+            ],
+            "reading": "consistent with nominal"
+          },
+          "row": {
+            "mean": 0.9476190476190476,
+            "min": 0.9206349206349206,
+            "max": 0.9682539682539683,
+            "ci": [
+              0.896873759920635,
+              0.9873065476190477
+            ]
+          },
+          "score_width_mean": {
+            "mean": 80.35800132030604,
+            "min": 76.68906132310514,
+            "max": 86.47829836690356
+          },
+          "score_width_median": {
+            "mean": 64.53998350365154,
+            "min": 58.31460212892854,
+            "max": 70.75905424212985
+          },
+          "raw_width_mean": {
+            "mean": 77.48829351462054,
+            "min": 74.58928142208867,
+            "max": 83.17718954180833
+          },
+          "raw_width_median": {
+            "mean": 63.15353432829843,
+            "min": 58.31460212892854,
+            "max": 70.60653944859828
+          },
+          "ratio_median": null,
+          "n_unbounded": {
+            "total_over_repeats": 0,
+            "per_repeat_max": 0
+          },
+          "n_empty": {
+            "total_over_repeats": 0,
+            "per_repeat_max": 0
+          },
+          "n_bounded": {
+            "total_over_repeats": 630,
+            "per_repeat_max": 63
+          },
+          "n_rows": 63,
+          "n_groups": 62,
+          "binomial_sd": 0.03810003810005715
+        }
+      },
+      "by_raw_flux": {
+        "15": {
+          "n": 1,
+          "row_coverage": 1.0
+        },
+        "25": {
+          "n": 60,
+          "row_coverage": 0.9366666666666666
+        },
+        "35": {
+          "n": 5,
+          "row_coverage": 1.0
+        },
+        "50": {
+          "n": 62,
+          "row_coverage": 0.9419354838709677
+        },
+        "75": {
+          "n": 62,
+          "row_coverage": 0.9467741935483871
+        },
+        "100": {
+          "n": 1,
+          "row_coverage": 1.0
+        }
+      }
+    }
+  },
+  "nested_asserts": "passed",
+  "runtime_s": 116.1,
+  "versions": {
+    "python": "3.12.4",
+    "sklearn": "1.7.1",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3"
+  }
+}

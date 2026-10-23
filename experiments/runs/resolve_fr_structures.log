@@ -1,0 +1,196 @@
+  [rejected ] 'ADP (aluminum diethylphosphinate)' <- 'aluminum diethylphosphinate' CID 21863131 C12H30AlO6P3
+  [rejected ] 'AO (aluminum oxide)' <- 'aluminum oxide' CID 9989226 Al2O3
+  [rejected ] 'ATH (aluminum hydroxide)' <- 'aluminum hydroxide' CID 10176082 AlH3O3
+  [accepted ] 'Antiblaze TCMP (tris(2-chloro-1-methylethyl) phosphate)' <- 'tris(2-chloro-1-methylethyl) phosphate' CID 26176 C9H18Cl3O4P
+  [rejected ] 'BH ([bis(2-hydroxyethyl)amino]methyl-phosphonic acid dimethyl ester)' <- 'BH' CID 56951713 Bh
+  [accepted ] 'DEEP (diethyl ethylphosphonate)' <- 'diethyl ethylphosphonate' CID 6534 C6H15O3P
+  [accepted ] 'DMMP' <- 'DMMP' CID 12958 C3H9O3P
+  [accepted ] 'DMMP (dimethyl methylphosphonate)' <- 'dimethyl methylphosphonate' CID 12958 C3H9O3P
+  [rejected ] 'DMPY (dimelamine pyrophosphate)' <- 'dimelamine pyrophosphate' CID 19354104 C6H16N12O7P2
+  [accepted ] 'KB (boric acid)' <- 'boric acid' CID 7628 BH3O3
+  [accepted ] 'MEL (melamine)' <- 'melamine' CID 7955 C3H6N6
+  [accepted ] 'Melamine' <- 'Melamine' CID 7955 C3H6N6
+  [rejected ] 'Mg(OH)2' <- 'Mg(OH)2' CID 73981 H2MgO2
+  [accepted ] 'PER (pentaerythritol)' <- 'pentaerythritol' CID 8285 C5H12O4
+  [accepted ] 'RE (diethyl bis(2-hydroxyethyl)aminomethylphosphonate)' <- 'diethyl bis(2-hydroxyethyl)aminomethylphosphonate' CID 17722 C9H22NO5P
+  [accepted ] 'RM (diethyl (hydroxymethyl)phosphonate)' <- 'diethyl (hydroxymethyl)phosphonate' CID 76513 C5H13O4P
+  [accepted ] 'TCEP (tris(2-chloroethyl) phosphate)' <- 'tris(2-chloroethyl) phosphate' CID 8295 C6H12Cl3O4P
+  [accepted ] 'TCPP (tris(1-chloro-2-propyl) phosphate)' <- 'tris(1-chloro-2-propyl) phosphate' CID 26176 C9H18Cl3O4P
+  [accepted ] 'TCPP (tris(2-chloropropyl) phosphate)' <- 'tris(2-chloropropyl) phosphate' CID 22522 C9H18Cl3O4P
+  [accepted ] 'TEP (triethyl phosphate)' <- 'triethyl phosphate' CID 6535 C6H15O4P
+  [accepted ] 'TEP (triethyl phosphate, Fyrol TEP)' <- 'TEP' CID 6535 C6H15O4P
+  [accepted ] 'TPP (triphenyl phosphate)' <- 'triphenyl phosphate' CID 8289 C18H15O4P
+  [rejected ] 'aluminium trihydroxide (ATH)' <- 'ATH' CID 445607 C6H6O7
+  [rejected ] 'diammonium phosphate (DAP)' <- 'diammonium phosphate' CID 24540 H9N2O4P
+  [accepted ] 'melamine' <- 'melamine' CID 7955 C3H6N6
+  [rejected ] 'potassium salt (potassium formate)' <- 'potassium formate' CID 2735122 CHKO2
+
+162 distinct FR names: rejected 112, not_found 33, accepted 17
+
+=== ACCEPTED (audit list): fr_name | query | CID | formula | SMILES ===
+Antiblaze TCMP (tris(2-chloro-1-methylethyl) phosphate) | tris(2-chloro-1-methylethyl) phosphate | 26176 | C9H18Cl3O4P | CC(CCl)OP(=O)(OC(C)CCl)OC(C)CCl
+DEEP (diethyl ethylphosphonate) | diethyl ethylphosphonate | 6534 | C6H15O3P | CCOP(=O)(CC)OCC
+DMMP | DMMP | 12958 | C3H9O3P | COP(=O)(C)OC
+DMMP (dimethyl methylphosphonate) | dimethyl methylphosphonate | 12958 | C3H9O3P | COP(=O)(C)OC
+KB (boric acid) | boric acid | 7628 | BH3O3 | B(O)(O)O
+MEL (melamine) | melamine | 7955 | C3H6N6 | C1(=NC(=NC(=N1)N)N)N
+Melamine | Melamine | 7955 | C3H6N6 | C1(=NC(=NC(=N1)N)N)N
+PER (pentaerythritol) | pentaerythritol | 8285 | C5H12O4 | C(C(CO)(CO)CO)O
+RE (diethyl bis(2-hydroxyethyl)aminomethylphosphonate) | diethyl bis(2-hydroxyethyl)aminomethylphosphonate | 17722 | C9H22NO5P | CCOP(=O)(CN(CCO)CCO)OCC
+RM (diethyl (hydroxymethyl)phosphonate) | diethyl (hydroxymethyl)phosphonate | 76513 | C5H13O4P | CCOP(=O)(CO)OCC
+TCEP (tris(2-chloroethyl) phosphate) | tris(2-chloroethyl) phosphate | 8295 | C6H12Cl3O4P | C(CCl)OP(=O)(OCCCl)OCCCl
+TCPP (tris(1-chloro-2-propyl) phosphate) | tris(1-chloro-2-propyl) phosphate | 26176 | C9H18Cl3O4P | CC(CCl)OP(=O)(OC(C)CCl)OC(C)CCl
+TCPP (tris(2-chloropropyl) phosphate) | tris(2-chloropropyl) phosphate | 22522 | C9H18Cl3O4P | CC(COP(=O)(OCC(C)Cl)OCC(C)Cl)Cl
+TEP (triethyl phosphate) | triethyl phosphate | 6535 | C6H15O4P | CCOP(=O)(OCC)OCC
+TEP (triethyl phosphate, Fyrol TEP) | TEP | 6535 | C6H15O4P | CCOP(=O)(OCC)OCC
+TPP (triphenyl phosphate) | triphenyl phosphate | 8289 | C18H15O4P | C1=CC=C(C=C1)OP(=O)(OC2=CC=CC=C2)OC3=CC=CC=C3
+melamine | melamine | 7955 | C3H6N6 | C1(=NC(=NC(=N1)N)N)N
+
+=== REJECTED ===
+A-lignin (refined alkali lignin) | name: bio-material
+ADP (aluminum diethylphosphinate) | multi-component SMILES (salt/mixture) | CID 21863131 C12H30AlO6P3
+AM (aluminum phosphate micro-capsule) | name: encapsulated product
+AO (aluminum oxide) | multi-component SMILES (salt/mixture) | CID 9989226 Al2O3
+APP | name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)
+APP (ammonium polyphosphate) | name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)
+APP (ammonium polyphosphate, phase II, DP>1000) | name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)
+APP-1000 (ammonium polyphosphate, DP 1000) | name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)
+APP-30 (ammonium polyphosphate, low polymerization degree) | name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)
+ATH (aluminum hydroxide) | multi-component SMILES (salt/mixture) | CID 10176082 AlH3O3
+BEG (boron-coated expandable graphite, EG/PVA/boric acid) | name: graphite/graphene/CNT/MOF
+BH ([bis(2-hydroxyethyl)amino]methyl-phosphonic acid dimethyl ester) | single-atom hit (element symbol, not a compound) | CID 56951713 Bh
+BSQPS (bentonite modified with butyltriphenylphosphonium chloride) | name: clay/mineral
+C-MOF/MWCNTs (carbonized MOF/MWCNTs) | name: graphite/graphene/CNT/MOF
+CS/PCM (chitosan/gum acacia-shell paraffin phase-change microcapsule) | name: bio-material
+Cellulose-modified polyol | name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)
+Cloisite 20A (organoclay) | name: clay/mineral
+DFD (DOPO-based reactive P diol) | name: modified/based/grafted/coated product
+DMPY (dimelamine pyrophosphate) | multi-component SMILES (salt/mixture) | CID 19354104 C6H16N12O7P2
+EG (expandable graphene [sic], paper abbreviation) | name: graphite/graphene/CNT/MOF
+EG (expandable graphite EG096) | name: graphite/graphene/CNT/MOF
+EG (expandable graphite flakes, >300 um) | name: graphite/graphene/CNT/MOF
+EG (expandable graphite) | name: graphite/graphene/CNT/MOF
+EG (expandable graphite, ADT150) | name: graphite/graphene/CNT/MOF
+EG (expanded graphite) | name: graphite/graphene/CNT/MOF
+EG 290 (expanded graphite) | name: graphite/graphene/CNT/MOF
+EG1 (GHL PX 95 N, 250 cm3/g, 300 um) | name: FR class expandable_graphite (graphite/clay/bio-material)
+EG2 (GHL PX 98 HE, 350 cm3/g, 300 um) | name: FR class expandable_graphite (graphite/clay/bio-material)
+EG3 (GHL PX 99 32 350, 350 cm3/g, 500 um) | name: FR class expandable_graphite (graphite/clay/bio-material)
+ESBO-DYM (P/N soy polyol) | name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)
+EUMF-1 (ethylene glycol modified urea-melamine-formaldehyde resin) | name: resin/mixture
+EUMF-2 (ethylene glycol modified urea-melamine-formaldehyde resin) | name: resin/mixture
+EUMF-3 (ethylene glycol modified urea-melamine-formaldehyde resin) | name: resin/mixture
+EUMF-4 (ethylene glycol modified urea-melamine-formaldehyde resin) | name: resin/mixture
+Fostetrol-1 (oxyethylated pentaerythritol tetraalkylphosphonate polyol) | name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)
+GO (graphene oxide) | name: graphite/graphene/CNT/MOF
+GO (graphite oxide) | name: graphite/graphene/CNT/MOF
+H3PO3 (phosphorous acid, esterified into polyol with DEG) | name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)
+HALM (halloysite modified with melamine-formaldehyde resin) | name: clay/mineral
+Hazelnut shells (HS) | name: bio-material
+Hydrotalcite (HT) Mg6Al2(CO3)(OH)16 4H2O | name: clay/mineral
+IFR blend APP/SEP/MEL (ammonium polyphosphate / sepiolite / melamine) | name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)
+LGP (low melting point glass powder) | name: mineral/silica/glass
+LS (lignosulfonate) | name: bio-material
+LigW coated with liquid glass, LigW/LG 1/1 | name: mineral/silica/glass
+LigW coated with liquid glass, LigW/LG 1/2 | name: mineral/silica/glass
+Lignin waste (LigW) | name: bio-material
+MAPP-1000 (APP-1000 surface-modified with PCOC) | name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)
+MAPP-30 (APP-30 surface-modified with PCOC, phosphorus-containing organosilicon compound) | name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)
+MAPP1 (APP modified with phenyl phosphate organosilicon PCOC1) | name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)
+MAPP2 (APP modified with phenylphosphoryl organosilicon PCOC2) | name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)
+MEG (DOPO/A-151 modified expandable graphite) | name: graphite/graphene/CNT/MOF
+MFAPP (melamine-formaldehyde resin encapsulated APP) | name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)
+MMT-modified SO filler | name: modified/based/grafted/coated product
+MOF/MWCNTs (Cu-doped ZIF-67 on MWCNTs) | name: graphite/graphene/CNT/MOF
+MPP (melamine polyphosphate) | name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)
+Mg(OH)2 | multi-component SMILES (salt/mixture) | CID 73981 H2MgO2
+P-polyol (transesterification of DEEP diethyl ethylphosphonate and THPO tris(hydroxymethyl)phosphine oxide) | name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)
+PA-GO (phytic acid-functionalized graphite oxide) | name: graphite/graphene/CNT/MOF
+PNC (aminophosphorylated cellulose) | name: bio-material
+POFPL (palm oil-based flame retardant polyol) | name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)
+PTOK (tung oil-based polyol modified by KH-602) | name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)
+PTOK (tung oil-based polyol modified by KH-602, 25 g) | name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)
+PTOP (DOPO-modified tung oil polyol) | name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)
+PTOSi (DPSD-modified tung oil polyol) | name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)
+Roflam PLO (phosphorus-based liquid additive) | name: modified/based/grafted/coated product
+SA (sodium alginate) | name: bio-material
+SA powder (silica aerogel powder) | name: mineral/silica/glass
+SO | name: FR class bio-based (graphite/clay/bio-material)
+SS (steel slag) | name: mineral/silica/glass
+SiE (SiO2 grafted with epoxidized monoglyceride of tung oil) | name: mineral/silica/glass
+SiM (silica micro-capsule) | name: mineral/silica/glass
+T-D (N-containing polyol) | name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)
+alkali-treated eucalyptus fibers | name: bio-material
+aluminium trihydroxide (ATH) | hit formula lacks ['Al'] implied by the expansion text | CID 445607 C6H6O7
+aluminum phytate (PA-Al) | name: FR class bio-based (graphite/clay/bio-material)
+ammonium polyphosphate (Exolit AP422) | name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)
+ammonium polyphosphate type II | name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)
+bleached curaua fibre | name: FR class bio-based (graphite/clay/bio-material)
+casein/apricot filler | name: filler/powder
+cocoa filler | name: filler/powder
+diammonium phosphate (DAP) | multi-component SMILES (salt/mixture) | CID 24540 H9N2O4P
+eFAPE-PA (phosphorylated canola oil polyol) | name: polymer / polyol / polyphosphate (APP, MPP repeat units already in element table)
+evening primrose oil cake | name: bio-material
+expandable graphite (E300) | name: graphite/graphene/CNT/MOF
+expanded graphite EG 290 | name: graphite/graphene/CNT/MOF
+fGO (functionalized GO; APTES + boric acid) | name: graphite/graphene/CNT/MOF
+halloysite nanotube (HNT) | name: clay/mineral
+hydrotalcite | name: clay/mineral
+instant coffee filler | name: filler/powder
+iron phytate (PA-Fe) | name: FR class bio-based (graphite/clay/bio-material)
+lavender residue (non-functionalized) | name: FR class bio-based (graphite/clay/bio-material)
+lavender residue functionalized with kaolinite | name: FR class nanoclay (graphite/clay/bio-material)
+maleic anhydride-treated eucalyptus fibers | name: bio-material
+non-treated eucalyptus fibers (EF) | name: bio-material
+perlite | name: clay/mineral
+potassium salt (potassium formate) | multi-component SMILES (salt/mixture) | CID 2735122 CHKO2
+salvia officinalis filler (SO) | name: filler/powder
+silane-treated eucalyptus fibers | name: bio-material
+silica aerogel (filler) | name: mineral/silica/glass
+sugar beet pulp impregnated with APIB-POSS | name: mineral/silica/glass
+trisilanol phenyl POSS (SO1458) | name: mineral/silica/glass
+vermiculite | name: clay/mineral
+vermiculite W (thermally treated) | name: clay/mineral
+vermiculite WO (thermal + H2O2 treated) | name: clay/mineral
+vermiculite functionalized with casein | name: clay/mineral
+vermiculite functionalized with chitosan | name: clay/mineral
+vermiculite functionalized with potato protein | name: clay/mineral
+walnut shells | name: bio-material
+walnut shells modified with halloysite | name: clay/mineral
+walnut shells modified with montmorillonite | name: clay/mineral
+walnut shells modified with perlite | name: clay/mineral
+
+=== NOT FOUND ===
+AAM-DOPO (DOPO propanamide)
+AD (dimethyl propane phosphonate)
+ADPO2 (aluminium diethylphosphite)
+Antiblaze TCMP (chlorinated phosphate)
+Antiblaze TMCP (TCPP)
+BHP (bis(3-(3-hydroxypropoxy)propyl) phenyl phosphate)
+DOPO-HQ (10-(2,5-dihydroxyphenyl)-9,10-dihydro-9-oxa-10-phosphaphenanthrene-10-oxide)
+DOPO-HSBP
+DPTP (from KH-550 aminopropyltriethoxysilane + chlorodiphenylphosphine)
+DTE-DOPO (DOPO-ethyl-diaminotriazine)
+ETA-DOPO (DOPO-aminoethoxy-DOPO)
+Exolit OP 1240 (aluminium diethylphosphinate)
+Exolit OP 935
+FBC fluidized fly ash
+FR-047 (organic phosphate mixture)
+MgBO2(OH) (magnesium borate hydroxide)
+PLF140 (reactive diol oligomeric ethyl ethylene phosphate)
+PN-Br (spiro-type cyclic phosphazene derivative)
+PN-Cl (spiro-type cyclic phosphazene derivative)
+PN-H (spiro-type cyclic phosphazene derivative)
+Roflam B7 (brominated phosphate ester)
+Roflam F5 (phenol isopropylated phosphate, P 8.5 wt%)
+TBPBP (tetraethyl (1,5-bis(bis(2-hydroxypropyl)amino)pentane-1,5-diyl)bis(phosphonate))
+TBPU (tetramethylene bis(orthophosphorylurea))
+TCPP
+TCPP (Roflam P)
+conventional (PCC) fly ash
+lavender residue functionalized with hydroxyapatite
+oligoetherol BHEU:BA:EC 1:2:12 (boron + 1,3-pyrimidine ring)
+oligoetherol BHEU:BA:EC 1:3:12 (boron + 1,3-pyrimidine ring)
+oligoetherol DOPDEDHB:EC 1:12 (boron + 1,3-pyrimidine ring)
+oligoetherol DOPDEDHB:EC 1:16 (boron + 1,3-pyrimidine ring)
+woody ash (WA) particles, biomass incineration waste

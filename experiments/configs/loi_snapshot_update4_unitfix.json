@@ -1,0 +1,24 @@
+{
+  "round": "loi_snapshot_update4_unitfix",
+  "kind": "Data-correction re-score, not a modelling round. Same 606 rows / 107 papers (snapshot 3 with the chemfix tables, i.e. the exp159 data), same exp159 model and exp160 proxy-free model, unchanged. Only flame-retardant loading-basis (unit) cells change, per a label-blind audit of the source papers (reports/overnight_2026-10-08/loi_unit_audit.md; proposals data/v2/loi_rpuf_parts/unitfix_staging/unit_corrections_proposed.csv).",
+  "status": "approved (owner-delegated, 2026-10-08 overnight)",
+  "declared": "committed before any score on the unit-corrected data; git commit time governs",
+  "authority": "Owner Nikhilesh S delegated round decisions for the overnight session ('keep grinding ... make sure that things are clean'). Precedents: loi_snapshot_update2 (Arnav, Oct 5) and loi_snapshot_update3_chemfix: data corrections are re-scored with the model unchanged and the corrected snapshot becomes the record whichever way the number moves, after a fresh critic.",
+  "banned_moves_checked": true,
+  "banned_moves_note": "No row added or removed; LOI labels, papers and GroupKFold folds unchanged; no model/feature/hyperparameter/seed change; no FAA rows mixed in. One corrected table set, scored once; not a selection among alternatives.",
+  "prior_looks (disclosed)": "The audit was label-blind by design, but the auditor reports that a few LOI values passed its filters while reading raw row cells, notes and three results passages (loi_unit_audit.md section 6). No model output was seen. The orchestrator has seen no score on the unit-corrected data.",
+  "acceptance_rule (fixed now, label-free)": "From unit_corrections_proposed.csv accept every cell with confidence = high; accept confidence = medium cells only for papers in which no medium-confidence loading-value cell is proposed (this excludes N022 and M064 entirely, whose fix would change loading values without an existing unit string that fits); reject confidence = low (N061). Result: data/v2/loi_rpuf_parts/unitfix_staging/unit_corrections.csv, 94 cells on 65 rows in 13 papers (M032, M063, M044, M042, N052, M045, M055, V001, N051, M110, N053, M072, M080).",
+  "procedure": [
+    "Step 1 (self-test): rescore_loi_snapshot.py with --stage wave4_staging --stage wave5_staging --stage chemfix_staging (no unitfix stage) reproduces exp159 B 0.4123 [0.3389, 0.5481] and exp160 0.4060 within 0.002; else BLOCKED.",
+    "Step 2: ONE re-score of the exp113 config (exp159 model) and the exp114 config (exp160 model) with --stage wave4_staging --stage wave5_staging --stage chemfix_staging --stage unitfix_staging (unit corrections applied by the existing correct_units() step after chemfix; each old_value asserted).",
+    "Report: B mean, paper-bootstrap 95% CI, pooled CI, protocol A, protocol C, paired per-repeat difference vs exp159 (report-only), and a label-free check that no row exceeds 60 wt% total FR."
+  ],
+  "rule_in_one_line": "After a fresh critic, the unit-corrected exp113-config result becomes the LOI number of record whichever way it moves (exp114-config result: proxy-free supplementary).",
+  "environment": "/Users/niks/dravix/.venv312/bin/python (record pins).",
+  "exit_triggers": "B ci_lo > 0.84 or A mean > 0.84 -> FLAG (owner wording). Self-test failure -> BLOCKED.",
+  "honesty_notes": [
+    "A data correction; any R2 change is reported as such, never as a model gain.",
+    "Root causes are in build_loi_rpuf.basis()/iso_parts() and are not changed here; V004, W005, N077, M092 (basis not stated) and N022, M064, N061 stay as they are."
+  ],
+  "amendments": []
+}

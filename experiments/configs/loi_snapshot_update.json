@@ -1,0 +1,14 @@
+{
+  "round": "loi_snapshot_update",
+  "declared": "by Opus 5.5, see git commit time; before any wave-3 row is extracted or scored",
+  "what": "Not a new modelling round (LOI budget used). Re-score the exact number-of-record config (exp085 = round-3 c2: RF + round-1 features + PubChem/RDKit FR-structure features) and exp064's config on the expanded benchmark (w1-w8, plan \u00a75: LOI extraction may continue to Oct 2 18:00).",
+  "data_prep": [
+    "build_loi_rpuf.py over rows_w1..w8 (same rules; figure rows excluded from the benchmark)",
+    "element table: orchestrator adds entries only for new FRs with an unambiguous formula (same standard as before)",
+    "FR structures: resolve_fr_structures.py on new names with the same acceptance rules; accepted list audited by the orchestrator"
+  ],
+  "protocol": "identical to loi_round1 B (GroupKFold by paper 5x10, paper-bootstrap CI on repeat 0) plus pooled CI; A and C reported",
+  "decision_rule": "The expanded snapshot becomes the LOI benchmark of record regardless of whether R2 goes up or down (more papers = more credible benchmark). numbers_of_record LOI is updated to the exp085 config on the new snapshot. No model or feature choice may depend on the new rows.",
+  "QA": "blind re-extraction of >= 20% of new rows (by paper) by a different worker; > 5% true disagreement on a paper -> redo that paper",
+  "exit_triggers": "B ci_lo > 0.84 or A mean > 0.84 -> EXIT 5"
+}

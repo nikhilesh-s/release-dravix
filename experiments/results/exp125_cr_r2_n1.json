@@ -1,0 +1,118 @@
+{
+  "slug": "cr_r2_n1",
+  "target": "Char Residue (cone residue %, FSRI)",
+  "round_config": "experiments/configs/cr_round2.json",
+  "dataset": "char_residue_cone_fsri x STA/MCC/props (567 rows / 61 merged groups), exp117 rows, order and groups; training adds the 136 extra spark rows (17 materials), never scored",
+  "features": [
+    "heat_flux_kWm2",
+    "density_kgm3",
+    "mcc_char_yield_pct",
+    "sta_res_3K",
+    "sta_res_10K",
+    "sta_res_30K",
+    "cat_interior_finish",
+    "cat_exterior_finish",
+    "cat_insulation",
+    "cat_roofing",
+    "cat_structural"
+  ],
+  "model": "exp117 recipe verbatim trained per fold on the 567-row training part plus the 136 extra spark rows; scored on the 567 rows",
+  "hyperparameters": "exp117 members unchanged (HGB exp081 params, ET 500/leaf 2 NaN-native, Ridge median impute + indicators); chair assembly group-linked to its 3 layers; fixed a priori",
+  "code": "data/v2/train_cr_round2.py",
+  "n_rows": 567,
+  "n_groups": 61,
+  "protocol": "gkf_group5x10",
+  "rkf_mean": 0.6515,
+  "rkf_std": 0.0114,
+  "ci_lo": 0.4257,
+  "ci_hi": 0.7904,
+  "paired_vs": "exp117",
+  "paired_delta": 0.0011,
+  "paired_wins": "5/10",
+  "sota": 0.82,
+  "sota_source": "pomazi_2026",
+  "status": "ok",
+  "blocked_reason": "",
+  "note": "CR round 2 n1; paired vs exp117 on identical folds; category-GKF 0.499 (exp117 0.513); gain concentrated in <= 5 materials, not established",
+  "rkf_mean_full": 0.6515277930652291,
+  "ci_lo_full": 0.42569210546012093,
+  "ci_hi_full": 0.7904229788655827,
+  "per_repeat_r2": [
+    0.646481341295261,
+    0.6656554249309614,
+    0.6630581791492647,
+    0.647691012515744,
+    0.6387488100680554,
+    0.6685458830930814,
+    0.644765187297051,
+    0.6595863183010341,
+    0.6481733598381362,
+    0.6325724141637019
+  ],
+  "top_k_removal": {
+    "top5": [
+      [
+        "Mineral_Wool_Insulation",
+        2559.200774360983
+      ],
+      [
+        "Window_Screen",
+        1925.217252422581
+      ],
+      [
+        "Feather_Pillow_Feathers",
+        778.4588658146586
+      ],
+      [
+        "Rubber_Foam_Pipe_Insulation",
+        742.3083704592709
+      ],
+      [
+        "Latex_Pillow_Foam",
+        374.2060555968166
+      ]
+    ],
+    "top5_share_of_net": 17.396401637892094,
+    "drop_top1": {
+      "mean_gain": -0.007878448120144755,
+      "wins": 3
+    },
+    "drop_top3": {
+      "mean_gain": -0.01984990712085257,
+      "wins": 1
+    },
+    "drop_top5": {
+      "mean_gain": -0.024832091069668782,
+      "wins": 1
+    },
+    "not_established": true
+  },
+  "category_gkf_mean": 0.4987169355081392,
+  "mineral_wool": {
+    "n1": {
+      "mean_pred": 93.27224105996358,
+      "sse_share": 0.0026938923697529937
+    }
+  },
+  "wall_time_s": 48.2,
+  "train_rows": 703,
+  "extra_rows": 136,
+  "n1_link_count": {
+    "primary": 24,
+    "category": 20
+  },
+  "gate_v2": {
+    "theta": 0.0011245658522376135,
+    "wins": 5,
+    "ci_lo": 0.42569210546012093,
+    "ci_hi": 0.7904229788655827,
+    "se": 0.01649467323834223,
+    "lb_maxT": -0.03038047652643247,
+    "lb_unadjusted": -0.02529025223218669,
+    "lb_raw_maxT": -0.06368880521669232,
+    "p_boot_gain_le_0": 0.4645,
+    "K": 5,
+    "q": 1.9100131250515424,
+    "selected": false
+  }
+}

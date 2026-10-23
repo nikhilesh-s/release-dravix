@@ -1,0 +1,46 @@
+{
+  "round": "loi_round1",
+  "target": "LOI (%) of flame-retarded rigid PU foams, independently compiled from the literature (reconstruction of the Sun/Fu 2026 population, not their 435 rows)",
+  "declared": "2026-10-01 21:56 PDT by Opus 5.5, before any model is fit on these rows",
+  "plan_ref": "plans/FABLE_PLAN_2026-10-01.md §3 B1, §6 (LOI loop); round budget 3",
+  "banned_moves_checked": true,
+  "dataset": "data/v2/loi_rpuf_literature.csv built by data/v2/build_loi_rpuf.py from rows_w1..w5 (QA: 1 true error in 52 rows, no corrections needed for rows with LOI). Benchmark of record EXCLUDES extraction == figure rows and rows with blank loi_pct: 333 rows / 56 papers. Neat-foam controls kept. Amended before any fit (was w1..w3).",
+  "features": {
+    "F1_loading": "total_fr_wtpct and per-class wt% of foam (cls_*), converted by build_loi_rpuf.py (polyol-basis loadings use the paper's isocyanate parts, else 130 parts, flagged)",
+    "F2_class": "covered by cls_* columns (wt% of foam per FR class)",
+    "F3_elements": "el_P, el_N, el_Si, el_B, el_halogen, el_metal (wt% of foam); NaN where any FR lacks an element-table entry (29%)",
+    "F4_density": "density_kgm3 (NaN allowed)",
+    "F5_cofactors": "n_frs, has_EG, has_APP, reactive"
+  },
+  "protocols": {
+    "A": "random 80/20 split repeated 50 times (theirs) — R2 mean and 2.5/97.5 percentiles",
+    "B": "GroupKFold by source paper, 5 folds x 10 repeats, pooled OOF; source-paper bootstrap 95% CI (PRIMARY for any claim)",
+    "C": "GroupKFold by dominant FR class, pooled OOF"
+  },
+  "candidates": [
+    {
+      "id": "r1",
+      "desc": "Ridge (standardized, alpha=1.0) on F1+F2+F3(NaN->0 with missing indicators)+F4(median-imputed in-fold)"
+    },
+    {
+      "id": "rf",
+      "desc": "RandomForest n_estimators=500, min_samples_leaf=2, random_state=0, NaN-native"
+    },
+    {
+      "id": "xgb",
+      "desc": "XGBoost if installed else skip: n_estimators=400, max_depth=4, learning_rate=0.05, subsample=0.8, colsample_bytree=0.8, random_state=0"
+    },
+    {
+      "id": "hgb",
+      "desc": "HistGradientBoosting learning_rate=0.05, max_iter=300, max_leaf_nodes=15, min_samples_leaf=5, random_state=0"
+    }
+  ],
+  "selection_rule": "Highest protocol-B mean. Protocol A is reported for comparison with Sun/Fu's 0.84 only; it can never be the basis of a claim because random splits leak formulations of the same paper across folds.",
+  "sensitivity_reported_not_selected": [
+    "with figure rows included",
+    "excluding neat-foam controls",
+    "Sun/Fu-reference-list papers only (likely too few)"
+  ],
+  "exit_triggers": "Protocol-B ci_lo > 0.84 -> EXIT condition 5. Protocol-A mean > 0.84 is reported with the population/reconstruction caveat and also raised as EXIT 5 (claim ambiguity) because it is the number people will compare.",
+  "claim_wording": "'independently compiled N rows from M papers of the same population (flame-retarded RPUF formulations from the literature)'"
+}

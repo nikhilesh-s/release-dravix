@@ -1,0 +1,106 @@
+Using baseline-corrected MCC extras (total_hr_bc_kJg, t_onset_bc_C)
+Data version: mcc_hrr.csv after the 2026-09-29 MCC ingest fix
+Same-rows set (pHRR x MCC inner join, as promoted): 196 rows / 67 materials
+No-join set (every pHRR row): 220 rows / 76 materials
+PHYS coverage on the same-rows set (non-NaN rows / materials): {'cone_mass_per_area_kgm2': (196, 67), 'cone_thickness_mm': (172, 58), 'density_kgm3': (166, 58), 'mcc_total_hr_kJg': (196, 67), 'mcc_t_peak_C': (196, 67), 'mcc_t_onset_C': (196, 67), 'log_kpc': (64, 22)}
+Category groups (first-listed FSRI category), materials per group: {'general polymer': 14, 'engineered wood': 13, 'uncategorized': 9, 'interior finish': 8, 'sleeping product': 6, 'exterior finish': 5, 'insulation': 5, 'cellulosic materials': 2, 'roofing': 2, 'structural': 2, 'upholstered furniture': 1}
+
+17/200 seeds score R2 < -0.5; materials most often in those test sets: {'House_Wrap': 14, 'Polyester_Bed_Skirt': 10, 'Hemp_Sheet': 9}
+
+exp006 config, NOT its rows: seed 42 R2=-0.2367. Over GroupShuffleSplit seeds 0-199 (same model): mean=0.1801 median=0.3094 std=0.4599 min=-1.8909 max=0.7517
+  seed 42 is at the 12th percentile; 52% of seeds beat 0.30; 5th-95th pct [-0.811, 0.668]
+
+=== Pre-declared variants, same 196 rows, same splits ===
+V0 rf_base: 196 rows / 67 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=-0.0412 std=0.3894 min=-0.8478 max=0.4346
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.2869 std=0.0639; material-bootstrap 95% CI [-0.289, 0.521]
+  vs SOTA 0.3: delta (GKF mean) -0.0131; CI excludes SOTA from above: False
+  CATEGORY-grouped GroupKFold 5x10 (11 categories): mean R2=0.0994 std=0.1437; material-bootstrap CI [-0.587, 0.359], category-bootstrap CI [-2.928, 0.285]
+V1 rf_base_log: 196 rows / 67 materials, features=['heat_flux_kWm2', 'mcc_peak_hrr_Wg', 'mcc_char_yield_pct'], log_target=True
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=-0.0623 std=0.2918 min=-0.5064 max=0.3861
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.1535 std=0.0788; material-bootstrap 95% CI [-0.371, 0.382]
+  vs SOTA 0.3: delta (GKF mean) -0.1465; CI excludes SOTA from above: False
+  CATEGORY-grouped GroupKFold 5x10 (11 categories): mean R2=-0.0474 std=0.1675; material-bootstrap CI [-0.674, 0.292], category-bootstrap CI [-2.778, 0.209]
+V2 rf_phys: 196 rows / 67 materials, features=['heat_flux_kWm2', 'mcc_peak_hrr_Wg', 'mcc_char_yield_pct', 'cone_mass_per_area_kgm2', 'cone_thickness_mm', 'density_kgm3', 'mcc_total_hr_kJg', 'mcc_t_peak_C', 'mcc_t_onset_C', 'log_kpc'], log_target=False
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.0512 std=0.5825 min=-1.0009 max=0.7569
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.4374 std=0.0647; material-bootstrap 95% CI [-0.043, 0.770]
+  vs SOTA 0.3: delta (GKF mean) +0.1374; CI excludes SOTA from above: False
+  CATEGORY-grouped GroupKFold 5x10 (11 categories): mean R2=0.1772 std=0.1123; material-bootstrap CI [-0.577, 0.410], category-bootstrap CI [-2.384, 0.297]
+V3 rf_phys_log: 196 rows / 67 materials, features=['heat_flux_kWm2', 'mcc_peak_hrr_Wg', 'mcc_char_yield_pct', 'cone_mass_per_area_kgm2', 'cone_thickness_mm', 'density_kgm3', 'mcc_total_hr_kJg', 'mcc_t_peak_C', 'mcc_t_onset_C', 'log_kpc'], log_target=True
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.2573 std=0.2995 min=-0.4649 max=0.6837
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.4616 std=0.0782; material-bootstrap 95% CI [0.140, 0.771]
+  vs SOTA 0.3: delta (GKF mean) +0.1616; CI excludes SOTA from above: False
+  CATEGORY-grouped GroupKFold 5x10 (11 categories): mean R2=0.3186 std=0.0821; material-bootstrap CI [-0.276, 0.511], category-bootstrap CI [-1.658, 0.470]
+V4 hgb_phys: 196 rows / 67 materials, features=['heat_flux_kWm2', 'mcc_peak_hrr_Wg', 'mcc_char_yield_pct', 'cone_mass_per_area_kgm2', 'cone_thickness_mm', 'density_kgm3', 'mcc_total_hr_kJg', 'mcc_t_peak_C', 'mcc_t_onset_C', 'log_kpc'], log_target=False
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.1549 std=0.4715 min=-0.6426 max=0.7260
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.4951 std=0.0783; material-bootstrap 95% CI [-0.002, 0.788]
+  vs SOTA 0.3: delta (GKF mean) +0.1951; CI excludes SOTA from above: False
+  CATEGORY-grouped GroupKFold 5x10 (11 categories): mean R2=0.2439 std=0.1073; material-bootstrap CI [-0.526, 0.453], category-bootstrap CI [-2.392, 0.347]
+
+=== Paired vs V0 (same rows, same splits; delta CI = material bootstrap of the repeat-mean gain) ===
+  V1 rf_base_log   material-grouped delta -0.1333 (improved 0/10, CI [-0.247, +0.022]); category-grouped delta -0.1469 (improved 0/10)
+  V2 rf_phys       material-grouped delta +0.1505 (improved 10/10, CI [-0.071, +0.336]); category-grouped delta +0.0778 (improved 9/10)
+  V3 rf_phys_log   material-grouped delta +0.1748 (improved 9/10, CI [+0.019, +0.387]); category-grouped delta +0.2192 (improved 10/10)
+  V4 hgb_phys      material-grouped delta +0.2082 (improved 10/10, CI [+0.033, +0.358]); category-grouped delta +0.1445 (improved 10/10)
+
+=== Pre-declared secondary (mcc_fix.md): V3 minus MCC extras, same 196 rows, same splits ===
+V3b phys_noextras: 196 rows / 67 materials, features=['heat_flux_kWm2', 'mcc_peak_hrr_Wg', 'mcc_char_yield_pct', 'cone_mass_per_area_kgm2', 'cone_thickness_mm', 'density_kgm3', 'log_kpc'], log_target=True
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.3730 std=0.2045 min=0.0739 max=0.6835
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.5890 std=0.0436; material-bootstrap 95% CI [0.133, 0.798]
+  vs SOTA 0.3: delta (GKF mean) +0.2890; CI excludes SOTA from above: False
+  CATEGORY-grouped GroupKFold 5x10 (11 categories): mean R2=0.4118 std=0.0924; material-bootstrap CI [0.075, 0.560], category-bootstrap CI [-0.847, 0.536]
+  vs V3 rf_phys_log   material-grouped delta +0.1274 (improved 10/10, CI [-0.055, +0.287]); category-grouped delta +0.0931 (improved 9/10)
+  vs V0 rf_base       material-grouped delta +0.3021 (improved 10/10, CI [+0.089, +0.562]); category-grouped delta +0.3123 (improved 10/10)
+  Rule (prefer over V3 only if better in >= 8/10 paired repeats AND gain CI excludes 0): not met
+
+=== V5: HGB, NaN-native, no inner join ===
+V5 hgb_phys_nojoin: 220 rows / 76 materials, features=['heat_flux_kWm2', 'mcc_peak_hrr_Wg', 'mcc_char_yield_pct', 'cone_mass_per_area_kgm2', 'cone_thickness_mm', 'density_kgm3', 'mcc_total_hr_kJg', 'mcc_t_peak_C', 'mcc_t_onset_C', 'log_kpc'], log_target=False
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.1909 std=0.4892 min=-0.7862 max=0.6606
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.5342 std=0.0448; material-bootstrap 95% CI [0.180, 0.779]
+  vs SOTA 0.3: delta (GKF mean) +0.2342; CI excludes SOTA from above: False
+  CATEGORY-grouped GroupKFold 5x10 (11 categories): mean R2=0.2237 std=0.0902; material-bootstrap CI [-0.536, 0.441], category-bootstrap CI [-2.373, 0.332]
+
+V5 vs V0 on one shared 76-material partition (GroupKFold 5x10):
+  scored on the 196 MCC rows / 67 materials: V0 rf_base=0.3425 (std 0.0796), V5 hgb_phys_nojoin=0.5469 (std 0.0486); paired delta +0.2044, improved 10/10, delta CI [+0.037, +0.365]
+  V5 on all 220 rows / 76 materials: 0.5342 (std 0.0448); no-MCC rows only (24 rows / 9 materials): -0.6927
+
+=== Summary (same 196 rows; winner = highest material-grouped GKF mean among V0-V4) ===
+variant           GKF mean     std            95% CI  GSS mean  cat mean            cat CI
+V0 rf_base          0.2869  0.0639 [-0.289,  0.521]   -0.0412    0.0994 [-0.587,  0.359]
+V1 rf_base_log      0.1535  0.0788 [-0.371,  0.382]   -0.0623   -0.0474 [-0.674,  0.292]
+V2 rf_phys          0.4374  0.0647 [-0.043,  0.770]    0.0512    0.1772 [-0.577,  0.410]
+V3 rf_phys_log      0.4616  0.0782 [ 0.140,  0.771]    0.2573    0.3186 [-0.276,  0.511]
+V4 hgb_phys         0.4951  0.0783 [-0.002,  0.788]    0.1549    0.2439 [-0.526,  0.453]
+V3b phys_noextras    0.5890  0.0436 [ 0.133,  0.798]    0.3730    0.4118 [ 0.075,  0.560]  (secondary, not a rule candidate)
+V5 hgb_phys_nojoin    0.5342  0.0448 [ 0.180,  0.779]    0.1909    0.2237 [-0.536,  0.441]  (220 rows / 76 materials, not a candidate)
+Winner by rule: V4 hgb_phys. Promotion bar (>=8/10 paired repeats AND delta CI excludes 0): PASSES
+
+=== Where the error is (repeat-mean OOF, material-grouped) ===
+  V0 rf_base: largest shares of pooled OOF squared error; R2 without the top 3 = 0.5022
+                         share_pct  true_max  pred_max  thickness_mm  mass_per_area
+material                                                                           
+House_Wrap                    19.8      56.5    2380.4           0.1            0.1
+HDPE                          14.2    2842.2     995.3           3.0            3.1
+PETG                          12.0    2401.8     802.0           2.6            3.5
+PE_Foam_Pipe_Insulation        9.2     847.0    2146.6          10.9            0.5
+PP                             8.1    2857.2    1474.0           3.0            2.9
+  V4 hgb_phys: largest shares of pooled OOF squared error; R2 without the top 3 = 0.7261
+                                 share_pct  true_max  pred_max  thickness_mm  mass_per_area
+material                                                                                   
+House_Wrap                            27.5      56.5    2301.0           0.1            0.1
+PETG                                  17.1    2401.8     803.5           2.6            3.5
+PE_Foam_Pipe_Insulation                6.8     847.0    1707.3          10.9            0.5
+High_Temperature_SCBA_Facepiece        5.9     380.5    1092.7           NaN            4.2
+HDPE                                   5.4    2842.2    1845.5           3.0            3.1
+
+=== Post-hoc diagnostics for V4 hgb_phys (explain the gain; NOT selection candidates) ===
+  minus geometry (mass/area, thickness, density)   GKF mean 0.2247 (paired vs winner -0.2704, worse in 10/10)
+  minus MCC extras (total HR, T_peak, T_onset)     GKF mean 0.5729 (paired vs winner +0.0778, worse in 0/10)
+  minus thermal inertia (log_kpc)                  GKF mean 0.4951 (paired vs winner +0.0000, worse in 5/10)
+
+=== Cross-lab: MaCFP PMMA, 67 tests / 10 labs (refit on all 196 rows) ===
+  V0 rf_base (FSRI PMMA features): cross-lab R2=0.2193, MAE=247.6 kW/m2; per heat flux 25: pred 759 vs true mean 609 (R2 -2.43), 50: pred 1219 vs true mean 1081 (R2 -1.95), 65: pred 1665 vs true mean 1283 (R2 -1.97)
+  V0 rf_base (FSRI Black_PMMA features): cross-lab R2=0.5452, MAE=181.8 kW/m2; per heat flux 25: pred 758 vs true mean 609 (R2 -2.38), 50: pred 1105 vs true mean 1081 (R2 -0.06), 65: pred 1485 vs true mean 1283 (R2 -0.55)
+  V4 hgb_phys (FSRI PMMA features): cross-lab R2=0.1740, MAE=242.5 kW/m2; per heat flux 25: pred 722 vs true mean 609 (R2 -1.36), 50: pred 1170 vs true mean 1081 (R2 -0.81), 65: pred 1703 vs true mean 1283 (R2 -2.38)
+  V4 hgb_phys (FSRI Black_PMMA features): cross-lab R2=0.4941, MAE=185.8 kW/m2; per heat flux 25: pred 724 vs true mean 609 (R2 -1.42), 50: pred 1129 vs true mean 1081 (R2 -0.24), 65: pred 1545 vs true mean 1283 (R2 -0.92)
+  V4 hgb_phys (FSRI Black_PMMA + MaCFP geometry features): cross-lab R2=0.5285, MAE=177.3 kW/m2; per heat flux 25: pred 720 vs true mean 609 (R2 -1.33), 50: pred 1114 vs true mean 1081 (R2 -0.12), 65: pred 1524 vs true mean 1283 (R2 -0.78)

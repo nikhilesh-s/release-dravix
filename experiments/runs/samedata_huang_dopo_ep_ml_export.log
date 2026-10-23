@@ -1,0 +1,27 @@
+[INFO] File loaded with encoding: utf-8
+LOI P1_pub: 5 folds, 8s
+LOI P1_r0: 5 folds, 17s
+LOI P1_r1: 5 folds, 25s
+LOI P1_r2: 5 folds, 33s
+LOI P1_r3: 5 folds, 41s
+LOI P1_r4: 5 folds, 49s
+LOI P1_r5: 5 folds, 57s
+LOI P1_r6: 5 folds, 65s
+LOI P1_r7: 5 folds, 74s
+LOI P1_r8: 5 folds, 82s
+LOI P1_r9: 5 folds, 90s
+LOI P1_pub_mol: 5 folds, 99s
+LOI P1_mol_r0: 5 folds, 106s
+LOI P1_mol_r1: 5 folds, 116s
+LOI P1_mol_r2: 5 folds, 125s
+LOI P1_mol_r3: 5 folds, 134s
+LOI P1_mol_r4: 5 folds, 144s
+LOI P1_mol_r5: 5 folds, 153s
+LOI P1_mol_r6: 5 folds, 163s
+LOI P1_mol_r7: 5 folds, 172s
+LOI P1_mol_r8: 5 folds, 181s
+LOI P1_mol_r9: 5 folds, 191s
+[DATA] using audited prepared external CSV: ~/dravix/data/v2/raw/dopo_ep_ml_code/data/external_validation/External_Validation_V4_ready.csv rows=26
+[INFO] File loaded with encoding: utf-8
+P3: external source prepared_csv External_Validation_V4_ready.csv, rows 26, eligible n = 20
+~/dravix/.venv_dopo/bin/python -I -u  export LOI  249.11s user 4.92s system 69% cpu 6:04.29 total

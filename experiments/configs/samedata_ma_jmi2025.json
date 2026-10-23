@@ -1,0 +1,50 @@
+{
+  "round": "samedata_ma_jmi2025",
+  "shared": "experiments/configs/samedata_common.json",
+  "status": "declared (approved 2026-10-08, owner-delegated; see amendments)",
+  "usable": "yes for P1 (same rows, published rule for exclusions, published model). No P2: single-lab data, no source column. Their exact split cannot be reproduced (see bar.exact_split).",
+  "source": {
+    "paper": "Ma W., ..., Song N., Ding P. J. Mater. Inform. 5 (2025), doi:10.20517/jmi.2025.09 (Shanghai University), CC BY 4.0",
+    "provenance": "data/sources/incoming/ma_jmi2025/SOURCE.md"
+  },
+  "target": "LOI (%), polypropylene + halogen-free FR composites (iteration 1 of their active-learning loop)",
+  "rows": {
+    "file": "data/sources/incoming/ma_jmi2025/Data_LOI.xlsx",
+    "sha256": "af8b53207a34314f97fbc23befa07c27bfc38de111c8bba4d00cf05e276e93a6",
+    "n_raw": 227,
+    "exclusions (theirs, label-free)": "their 2-of-3 outlier vote on standardised features only (IsolationForest(contamination=0.05, random_state=8585), OneClassSVM(nu=0.05, kernel='rbf', gamma='scale'), LocalOutlierFactor(n_neighbors=2, contamination=0.05)); fitted on all 227 rows' features, LOI never read. Fixed list computed 2026-10-07 with sklearn 1.7.1: No = [3, 18, 27, 32, 33, 34, 40, 42, 46, 54].",
+    "assert_before_any_fit": "re-running the rule gives exactly that list and 217 rows; otherwise BLOCKED.",
+    "n": 217,
+    "sensitivity": "P1 is also run on all 227 rows (no exclusion) and reported next to it, never selected on and never the claim (pre-split outlier removal flatters test R2; lit_loi.md methods table)."
+  },
+  "features": "the 30 mass-fraction columns of Data_LOI.xlsx (all columns except 'No' and 'LOI'), file order.",
+  "bar": {
+    "metric": "R2",
+    "value": 0.919,
+    "set": "test set of one random 4:1 split, iteration 1, Ridge(alpha=0.1)",
+    "quote_protocol": "\"After outlier deletion, the preprocessed data were randomly split as training set and test set according to the ratio 4:1.\"",
+    "quote_result": "\"when alpha was set to 0.1, the model shows outstanding robustness (R2 of 0.945 for LOOCV) and commendable generalization ability (R2 of 0.919 for the test set).\"",
+    "where_read": "full text, OA HTML https://www.oaepublish.com/articles/jmi.2025.09 (Methods 'Data collection and preprocessing', 'Model establishment and selection'; Results 'Interpretable Ridge models construction').",
+    "best_model": "Ridge(alpha=0.1) after StandardScaler, chosen for interpretability over SVR/XGBoost/GBR/RF; LOOCV R2 on the training set: SVR 0.907, XGBoost 0.942, GBR 0.958, RF 0.956, Ridge 0.944 (0.945 after tuning).",
+    "exact_split": "not reproducible. Code '2.Algorithm comparison.py' draws seed = np.random.randint(2000, 3000); the comment records '#RGRandomseed 2323' for Ridge, and the split uses the authors' own package (fml.sampling.random_split(percent=0.2)), which was not released. So no P1_pub.",
+    "verification": "fulltext + repo code",
+    "not_a_bar": [
+      "LOOCV-on-train R2 0.945: printed for context (P1 also reports LOOCV R2 on each training part for r0 only).",
+      "Mean of 100 random 4:1 splits (Fig. 2C): the value appears only in a figure, not read; the text says it 'closely resemble[s]' the single-split result.",
+      "Iteration-2 test R2 0.939: the iteration-2 training data are not released."
+    ]
+  },
+  "r0 (reproduction control)": "StandardScaler() fit on the training part -> Ridge(alpha=0.1) (code '3.Model optimization.py' and '7. Model stability validation.py').",
+  "reproduction_gate": "no exact split exists, so the gate is r0's P1 mean in [0.889, 0.949] (bar +- 0.03, from their statement that the 100-split mean closely resembles 0.919). Outside -> FLAG 'Ma protocol not reproduced', no P1 sentence.",
+  "protocols": {
+    "P1": "train_test_split(X, y, test_size=0.2, random_state=s), s = 0..9, on the 217 rows; StandardScaler inside the training part for r0 (c1-c3 per common). Test R2 (primary), RMSE, MAE. Same splits on the 227-row sensitivity set use the same seeds.",
+    "P2": "not possible: no source-paper column (data from the group's own earlier work plus new experiments)."
+  },
+  "notes": [
+    "Single matrix (PP), 30 composition features, 217 rows: a linear model is near-optimal here; expect c1-c3 to be close to r0 and all near 0.9. This dataset tests Dravix on narrow, single-lab data, not under its harder protocol.",
+    "c2 (TabPFN v2) is well inside its limits here (173 training rows, 30 features)."
+  ],
+  "amendments": [
+    "Approved 2026-10-08 ~01:55 PDT by the orchestrator under the owner's delegation (Nikhilesh S, owner of nikhilesh-s/dravix-master: 'pull from the most reputable universities ... find the most reputable papers', 'it doesn't matter if the datasets are perfect comparisons', 'keep grinding'). Committed before any Dravix fit on these labels. Status set to declared. No other field changed. "
+  ]
+}

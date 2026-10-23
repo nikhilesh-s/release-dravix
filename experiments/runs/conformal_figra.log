@@ -1,0 +1,40 @@
+FIGRA (exp119): 197 rows / 67 groups; groups = material (67 groups), as exp119; score: s = log1p(y); s_hat = model output (fitted on log1p(y)); back-transform expm1; display clip (0.0, inf)
+  stratum 25: 66 rows / 63 groups
+  stratum 50: 64 rows / 64 groups
+  stratum 75: 67 rows / 64 groups
+    raw flux  15: 1 rows / 1 groups
+    raw flux  25: 60 rows / 60 groups
+    raw flux  35: 5 rows / 5 groups
+    raw flux  50: 64 rows / 64 groups
+    raw flux  75: 64 rows / 64 groups
+    raw flux 100: 3 rows / 3 groups
+STEP 1 exp119: GKF 0.4975 +- 0.0324 CI [0.3464, 0.6475] (record 0.4975 [0.3464, 0.6475]); within 0.002: True  (19s)
+Nested GroupKFold 5x10 (outer r, inner r), variants ['P', 'V1', 'V2', 'CQR']
+  nested repeat 0: 23s
+  nested repeat 1: 19s
+  nested repeat 2: 17s
+  nested repeat 3: 18s
+  nested repeat 4: 17s
+  nested repeat 5: 17s
+  nested repeat 6: 17s
+  nested repeat 7: 30s
+  nested repeat 8: 26s
+  nested repeat 9: 25s
+nested-disjointness asserts passed; every row got exactly one interval per repeat
+  P    overall: group_all 0.834  group_mean 0.913 [0.864, 0.957] (consistent with nominal)  row 0.923  median raw width 24.08 kW/m2/s  unbounded 0  empty 0
+       stratum  25: group_all 0.922  group_mean 0.922 [0.871, 0.967] (consistent with nominal)  row 0.926  median raw width 8.845  (rows 66, groups 63, unbounded 0)
+       stratum  50: group_all 0.919  group_mean 0.919 [0.852, 0.975] (consistent with nominal)  row 0.919  median raw width 25.67  (rows 64, groups 64, unbounded 0)
+       stratum  75: group_all 0.922  group_mean 0.934 [0.876, 0.978] (consistent with nominal)  row 0.925  median raw width 47.42  (rows 67, groups 64, unbounded 0)
+  V1   overall: group_all 0.852  group_mean 0.920 [0.874, 0.962] (consistent with nominal)  row 0.928  median raw width 23.77 kW/m2/s  unbounded 0  empty 0
+       stratum  25: group_all 0.952  group_mean 0.952 [0.919, 0.981] (conservative)  row 0.955  median raw width 10.23  (rows 66, groups 63, unbounded 0)
+       stratum  50: group_all 0.908  group_mean 0.908 [0.839, 0.964] (consistent with nominal)  row 0.908  median raw width 24.77  (rows 64, groups 64, unbounded 0)
+       stratum  75: group_all 0.919  group_mean 0.930 [0.872, 0.975] (consistent with nominal)  row 0.922  median raw width 47.31  (rows 67, groups 64, unbounded 0)
+  V2   overall: group_all 0.836  group_mean 0.913 [0.864, 0.957] (consistent with nominal)  row 0.924  median raw width 24.14 kW/m2/s  unbounded 0  empty 0
+       stratum  25: group_all 0.922  group_mean 0.922 [0.871, 0.967] (consistent with nominal)  row 0.926  median raw width 8.845  (rows 66, groups 63, unbounded 0)
+       stratum  50: group_all 0.919  group_mean 0.919 [0.852, 0.975] (consistent with nominal)  row 0.919  median raw width 25.67  (rows 64, groups 64, unbounded 0)
+       stratum  75: group_all 0.923  group_mean 0.935 [0.877, 0.980] (consistent with nominal)  row 0.927  median raw width 48.6  (rows 67, groups 64, unbounded 0)
+  CQR  overall: group_all 0.819  group_mean 0.910 [0.859, 0.955] (consistent with nominal)  row 0.919  median raw width 28.49 kW/m2/s  unbounded 0  empty 0
+       stratum  25: group_all 0.933  group_mean 0.936 [0.883, 0.977] (consistent with nominal)  row 0.936  median raw width 12.96  (rows 66, groups 63, unbounded 0)
+       stratum  50: group_all 0.917  group_mean 0.917 [0.853, 0.969] (consistent with nominal)  row 0.917  median raw width 27.69  (rows 64, groups 64, unbounded 0)
+       stratum  75: group_all 0.900  group_mean 0.913 [0.849, 0.964] (consistent with nominal)  row 0.904  median raw width 47.21  (rows 67, groups 64, unbounded 0)
+wrote ~/Dravix/dravix-v2/experiments/runs/conformal/figra_summary.json and figra_rows.csv; runtime 233s

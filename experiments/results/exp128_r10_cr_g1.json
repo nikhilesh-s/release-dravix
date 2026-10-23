@@ -1,0 +1,114 @@
+{
+  "slug": "r10_cr_g1",
+  "target": "Char Residue (cone residue %, FSRI)",
+  "round_config": "experiments/configs/round10_physics.json",
+  "dataset": "char_residue_cone_fsri x STA/MCC/props (567 rows / 61 merged groups); incumbent exp117 rows, order and groups",
+  "features": [
+    "heat_flux_kWm2",
+    "density_kgm3",
+    "mcc_char_yield_pct",
+    "sta_res_3K",
+    "sta_res_10K",
+    "sta_res_30K",
+    "cat_interior_finish",
+    "cat_exterior_finish",
+    "cat_insulation",
+    "cat_roofing",
+    "cat_structural"
+  ],
+  "model": "physics-mean GP alone: base + mu_GP",
+  "hyperparameters": "GaussianProcessRegressor(C(1.0)*RBF(ones(d))+WhiteKernel(1.0), normalize_y=True, n_restarts_optimizer=0, random_state=0) on r = y - nanmean(sta_res_3K, 10K, 30K) (all-NaN -> in-fold median y); inputs SimpleImputer(median, add_indicator, keep_empty) -> StandardScaler; d = imputer output width; no clipping; fixed by the config, nothing tuned",
+  "code": "data/v2/train_round10_physics.py",
+  "n_rows": 567,
+  "n_groups": 61,
+  "protocol": "gkf_group5x10",
+  "rkf_mean": 0.5214,
+  "rkf_std": 0.0606,
+  "ci_lo": 0.0629,
+  "ci_hi": 0.7136,
+  "pooled_ci_lo": 0.3058,
+  "pooled_ci_hi": 0.7549,
+  "paired_vs": "exp117",
+  "paired_delta": -0.129,
+  "paired_wins": "0/10",
+  "sota": 0.82,
+  "sota_source": "pomazi_2026",
+  "status": "ok",
+  "blocked_reason": "",
+  "note": "round 10 Char Residue r10_cr_g1 (report-only (in K, never selectable)); vs exp117 on identical folds; gain not established without the top 5 groups",
+  "role": "report-only (in K, never selectable)",
+  "rkf_mean_full": 0.5213787859562882,
+  "ci_lo_full": 0.06293370817220295,
+  "ci_hi_full": 0.71357977770923,
+  "per_repeat_r2": [
+    0.47829667134169984,
+    0.5748054728872332,
+    0.560804990745455,
+    0.5603383427942423,
+    0.5538930058918454,
+    0.5495165866390297,
+    0.5484912032673673,
+    0.5010003447171301,
+    0.5261696847016419,
+    0.36047155657723595
+  ],
+  "seed0_r2": 0.47829667134169984,
+  "seed0_mae": 10.685690197426283,
+  "seed0_rmse": 17.321589296708957,
+  "top_k_removal": {
+    "top5": [
+      [
+        "Mineral_Wool_Insulation",
+        2691.8530364737326
+      ],
+      [
+        "Vinyl_Siding",
+        922.1992345616304
+      ],
+      [
+        "Feather_Pillow_Feathers",
+        885.2075021004085
+      ],
+      [
+        "Eucalyptus_Flooring",
+        822.1952841687807
+      ],
+      [
+        "Basswood_Panel",
+        667.8513198759714
+      ]
+    ],
+    "top5_share_of_net": -0.14235398110425862,
+    "drop_top1": {
+      "mean_gain": -0.1608580510590084,
+      "wins": 0
+    },
+    "drop_top3": {
+      "mean_gain": -0.1749287355070639,
+      "wins": 0
+    },
+    "drop_top5": {
+      "mean_gain": -0.1812135423959019,
+      "wins": 0
+    },
+    "not_established": true
+  },
+  "gp_warnings": {
+    "ConvergenceWarning": 98
+  },
+  "wall_time_s": 174.1,
+  "gate_v2": {
+    "theta": -0.12902444125670343,
+    "wins": 0,
+    "ci_lo": 0.06293370817220295,
+    "ci_hi": 0.71357977770923,
+    "se": 0.05799239921904296,
+    "lb_maxT": -0.2352555875000534,
+    "lb_unadjusted": -0.200438829544271,
+    "lb_raw_maxT": -0.200438829544271,
+    "p_boot_gain_le_0": 1.0,
+    "K": 3,
+    "q": 1.8318115420971732,
+    "selected": false
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "slug": "r10_phrr_g1",
+  "target": "Peak HRR (kW/m2)",
+  "round_config": "experiments/configs/round10_physics.json",
+  "dataset": "FSRI pHRR replicate-mean, has_mcc (191 rows / 64 merged groups); incumbent exp074 rows, order and groups",
+  "features": [
+    "heat_flux_kWm2",
+    "mcc_peak_hrr_Wg",
+    "mcc_char_yield_pct",
+    "cone_mass_per_area_kgm2",
+    "cone_thickness_mm",
+    "density_kgm3",
+    "mcc_total_hr_kJg",
+    "mcc_t_peak_C",
+    "mcc_t_onset_C",
+    "log_kpc"
+  ],
+  "model": "physics-mean GP alone: exp(ln(peak) + mu_GP)",
+  "hyperparameters": "GaussianProcessRegressor(C(1.0)*RBF(ones(d))+WhiteKernel(1.0), normalize_y=True, n_restarts_optimizer=0, random_state=0) on r = ln(y) - ln(mcc_peak_hrr_Wg); inputs SimpleImputer(median, add_indicator, keep_empty) -> StandardScaler; d = imputer output width; fixed by the config, nothing tuned",
+  "code": "data/v2/train_round10_physics.py",
+  "n_rows": 191,
+  "n_groups": 64,
+  "protocol": "gkf_group5x10",
+  "rkf_mean": 0.0566,
+  "rkf_std": 0.2292,
+  "ci_lo": -1.0971,
+  "ci_hi": 0.4378,
+  "pooled_ci_lo": -0.1029,
+  "pooled_ci_hi": 0.7212,
+  "paired_vs": "exp074",
+  "paired_delta": -0.5547,
+  "paired_wins": "0/10",
+  "sota": 0.3,
+  "sota_source": "pomazi_2026",
+  "status": "ok",
+  "blocked_reason": "",
+  "note": "round 10 pHRR r10_phrr_g1 (report-only (in K, never selectable)); vs exp074 on identical folds; category-GKF -0.196 (incumbent 0.392); gain not established without the top 5 groups",
+  "role": "report-only (in K, never selectable)",
+  "rkf_mean_full": 0.0565996394706592,
+  "ci_lo_full": -1.0970807758461083,
+  "ci_hi_full": 0.43777490821968157,
+  "per_repeat_r2": [
+    -0.11443526974670104,
+    0.2198014170588639,
+    0.055698301255733274,
+    -0.16255144133571786,
+    -0.07426659496918808,
+    0.16353898937975087,
+    0.43016817477068936,
+    0.08004498453714481,
+    -0.3639504654985355,
+    0.33194829925455227
+  ],
+  "seed0_r2": -0.11443526974670104,
+  "seed0_mae": 385.9749378905733,
+  "seed0_rmse": 664.1293224566076,
+  "top_k_removal": {
+    "top5": [
+      [
+        "FRP_Panel",
+        366070.6134698817
+      ],
+      [
+        "Overstuffed_Chair_Polyurethane_Foam",
+        330383.9782709707
+      ],
+      [
+        "Polyester_Bed_Skirt",
+        159425.6613386703
+      ],
+      [
+        "Vinyl_Tile",
+        74288.70343392713
+      ],
+      [
+        "Polyester_Microfiber_Sheet",
+        8088.885350935554
+      ]
+    ],
+    "top5_share_of_net": -0.022376307041583873,
+    "drop_top1": {
+      "mean_gain": -0.5617066903196304,
+      "wins": 0
+    },
+    "drop_top3": {
+      "mean_gain": -0.573691986235432,
+      "wins": 0
+    },
+    "drop_top5": {
+      "mean_gain": -0.5817343638689974,
+      "wins": 0
+    },
+    "not_established": true
+  },
+  "gp_warnings": {
+    "ConvergenceWarning": 133
+  },
+  "wall_time_s": 61.8,
+  "category_grouped_mean": -0.1957,
+  "category_grouped_std": 0.1142,
+  "category_grouped_ci_lo": -1.142,
+  "category_grouped_ci_hi": 0.2521,
+  "category_grouped_per_repeat": [
+    -0.2544081353282015,
+    -0.16214920026757484,
+    -0.09193111630062756,
+    -0.10616540865853441,
+    -0.3900952827141333,
+    0.0015628039478366995,
+    -0.16669789823226577,
+    -0.17303128108153065,
+    -0.2613989527773124,
+    -0.3526178301832703
+  ],
+  "gate_v2": {
+    "theta": -0.5546895193991916,
+    "wins": 0,
+    "ci_lo": -1.0970807758461083,
+    "ci_hi": 0.43777490821968157,
+    "se": 0.20712107987529793,
+    "lb_maxT": -0.9133462211055763,
+    "lb_unadjusted": -0.7857133015820306,
+    "lb_raw_maxT": -0.8238270507323613,
+    "p_boot_gain_le_0": 1.0,
+    "K": 4,
+    "q": 1.7316281950746986,
+    "selected": false
+  }
+}

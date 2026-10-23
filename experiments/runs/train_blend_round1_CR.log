@@ -1,0 +1,11 @@
+CR: 567 rows / 61 groups; log1p wrapper on whole model: False
+exp  GKF 0.5491 +- 0.0378 CI [0.3423, 0.6929]  (45s)
+REPRO exp081 ok
+b1   GKF 0.6504 +- 0.0146 CI [0.4389, 0.7893]  (166s)
+b2   GKF 0.6067 +- 0.0253 CI [0.4029, 0.7493]  (143s)
+  b1 vs exp081: dGKF +0.1013, wins 10/10
+  b2 vs exp081: dGKF +0.0576, wins 10/10
+SELECTION CR: b1 0.6504; wins 10/10 (need >= 8), ci_lo 0.4389 (need >= 0.342) -> ADOPT over exp081 pending critic
+Triggers: none
+wrote 2 result JSONs; runtime 355s
+exit 0

@@ -1,0 +1,37 @@
+{
+  "round": "loi_round5",
+  "target": "LOI (%), RPUF literature benchmark of record: 460 rows / 83 papers",
+  "declared": "by Opus 5.5, see git commit time; before any run",
+  "authority": "blockers/resolved/DECISION-20261003-1431-loi-freeze-lifted.md (second of 2 human-approved extra rounds)",
+  "origin": "experiments/critic/loi_round4_critic.md \u00a74 listed systematic polyol-typing errors and said fixing them must be a separate pre-declared round. The fix rules below follow that list; nothing else is changed.",
+  "banned_moves_checked": true,
+  "incumbent": {
+    "exp_id": "exp089",
+    "config": "train_loi_round4.py c2 (F6+F7+F8)",
+    "B_mean": 0.3542,
+    "B_ci": [
+      0.1694,
+      0.4664
+    ]
+  },
+  "F6_fixed": {
+    "polyol_type": "Assign by the polyol component with the LARGEST stated mass/parts in the row's polyol text; components with 0 g/0 parts ignored; if no amounts, the first-listed component. Per component: polyester_aromatic if /polyester|Stepanpol|PS-?2352|Isoexter|glycoly[sz]ed PET|PET oligo|terephthal/; polyether if /polyether|Rokopol|RF-?551|Voranol|Voracor|LY-?4110|PET-?4110|PTMEG|PPG|PEG|Laprol|oxypropyl|oligoetherol|4110/ (checked BEFORE the bio rule); bio_based if /soy|rapeseed|castor|tung|palm|lignin|canola|bio|HSBP|vegetable/ ; PLA-based -> other_polyester (new level); else unknown. 'heteroaromatic' / 'isocyanurate-based polyether' -> polyether (not aromatic).",
+    "iso_index_num": "if the text contains a ratio 'R a:b' or 'a:1', use that ratio; else as round 4",
+    "is_PIR": "iso_index_num >= 1.8 OR /PIR|polyisocyanurate/ in polyol/isocyanate/notes, but NOT triggered by 'isocyanurate-based polyether polyol'"
+  },
+  "candidates": [
+    {
+      "id": "c1",
+      "desc": "round-4 c2 with F6 replaced by F6_fixed (F7, F8 unchanged)"
+    },
+    {
+      "id": "c2",
+      "desc": "c1 + loi_standard one-hot {ASTM D2863, GB/T 2406, ISO 4589, other/unknown} by regex on loi_standard + log(density_kgm3)"
+    }
+  ],
+  "audit": "print the polyol_type assignment for all unique polyol strings (round-4 label vs fixed label) to the log before any model is fit",
+  "protocols": "identical to the record (B GroupKFold by paper 5x10, repeat-0 paper-bootstrap CI + pooled CI; A random 80/20 x50; C by dominant FR class)",
+  "selection_rule": "highest B mean; adopt over exp089 only if >= 8/10 paired B repeats better AND B ci_lo >= 0.169; then critic",
+  "exit_triggers": "B ci_lo > 0.84 or A mean > 0.84 -> EXIT 5",
+  "after": "LOI extra-round budget exhausted; no further LOI rounds before the lock"
+}

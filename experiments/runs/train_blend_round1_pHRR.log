@@ -1,0 +1,11 @@
+pHRR: 191 rows / 64 groups; log1p wrapper on whole model: True
+exp  GKF 0.6113 +- 0.0893 CI [0.5155, 0.8376]  category-GKF 0.392  (37s)
+REPRO exp074 ok
+b1   GKF 0.5163 +- 0.1040 CI [0.3659, 0.8234]  category-GKF 0.212  (228s)
+b2   GKF 0.5604 +- 0.1121 CI [0.4102, 0.8461]  category-GKF 0.278  (163s)
+  b1 vs exp074: dGKF -0.0950, wins 2/10
+  b2 vs exp074: dGKF -0.0509, wins 2/10
+SELECTION pHRR: b2 0.5604; wins 2/10 (need >= 8), ci_lo 0.4102 (need >= 0.516) -> NOT adopted; exp074 stays
+Triggers: ['b1', 'b2']
+wrote 2 result JSONs; runtime 429s
+exit 0

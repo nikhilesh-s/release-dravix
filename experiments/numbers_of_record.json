@@ -1,0 +1,129 @@
+{
+  "_readme": "Numbers of record per target. Only the Opus orchestrator edits this file, and only after the critic pass. comparable is true | false | 'pending-human'; the script never infers it. The win-status column in reports/daily_scoreboard.xlsx is computed: BEATS (comparable) only if comparable == true AND ci_lo > bar. Values are the leaderboard.csv figures (R2, repeated GroupKFold 5x10 pooled OOF mean unless noted); CIs are material-bootstrap 95% CIs quoted in the CSV notes.",
+  "_seeded": "2026-10-01 by infra worker from experiments/leaderboard.csv",
+  "targets": {
+    "pHRR": {
+      "exp_id": "exp158",
+      "metric": "R2 rgkf5x10",
+      "value": 0.6328,
+      "ci_lo": 0.4902,
+      "ci_hi": 0.8674,
+      "bar": 0.3,
+      "bar_source": "pomazi_2026",
+      "comparable": "pending-human",
+      "status": "AHEAD, CI CLEAR, DIFFERENT POPULATION",
+      "note": "Snapshot rule (fsri_composite_snapshot.json, D5, owner-delegated 2026-10-07): the exp074 recipe unchanged (HGB, log1p, 10 features) re-scored on the broader FSRI population: 205 rows / 70 materials / 66 groups = exp074's 191 rows + 14 rows for 5 composite products mapped to the unweighted mean of their layers' MCC/STA features, chair assembly merged with its 3 layers in one CV group. Critic experiments/critic/fsri_composite_snapshot_critic.md SOUND WITH CAVEATS: +0.018 of the +0.022 rise is fold reshuffling from the chair merge alone (merge-only 0.6296); secondary protocols fell (GroupShuffleSplit 0.494 -> 0.310; category-held-out 0.392 -> 0.341 [-0.307, 0.493]); the repeat-0 CI floor is fold-sensitive (0.124 in the merge-only run). Different population from the old record; still 'ahead of the BME published number (0.30), harder protocol, different population', not ahead with whole families held out. Deployed artifact models/v2/phrr_hgb_v4.joblib is still the 191-row fit. Round 9 TabPFN (+0.08 mean, 10/10) and round 10 physics candidates were not adopted under gate v2; their gains vanish without the top-5 materials. Previous: exp074 0.6113 [0.5155, 0.8376] on 191 rows / 64 groups."
+    },
+    "TTI": {
+      "exp_id": "exp154",
+      "metric": "R2 rgkf5x10",
+      "value": 0.3179,
+      "ci_lo": 0.0917,
+      "ci_hi": 0.5067,
+      "bar": 0.58,
+      "bar_source": "pomazi_2026",
+      "comparable": "pending-human",
+      "status": "PARKED, SHORT OF SOTA",
+      "note": "Re-baselined 2026-10-08 under tti_round3 D4b (S675 canonical): the exp046 pipeline (physics Poisson GLM, unchanged) re-scored on 675 rows / 76 materials, i.e. without the 6 replicates whose FSRI operator comment says the recorded TTI is invalid or was shortened. Critic experiments/critic/overnight_2026-10-08_critic.md SOUND WITH CAVEATS. Caveats: a data change, not a model gain (+0.0046); the rule was written with those 6 rows' values known and is one-sided (7 late-recorded rows stay in); D4 (un-park, S675) was decided by the orchestrator under the owner's delegation, not by Arnav. TTI round 3 (AFT, censored rows, theory offset, TabPFN arm; K=7) adopted nothing under gate v2; TTI parked again. Previous: exp046 0.3133 [0.0715, 0.4958] on 681 rows. Weak at every flux: pooled 50+75 R2 0.368, within-flux log R2 ~0; 25 kW/m2 replicate ceiling (LORO) 0.558. New TTI runs use the 675 rows or say '681 rows'."
+    },
+    "THR": {
+      "exp_id": "exp045",
+      "metric": "R2 rgkf5x10",
+      "value": 0.953,
+      "ci_lo": 0.918,
+      "ci_hi": 0.975,
+      "bar": 0.67,
+      "bar_source": "pomazi_2026",
+      "comparable": false,
+      "status": "ABOVE BAR, NOT LIKE-FOR-LIKE",
+      "note": "Inputs (fuel load, measured heat of combustion) nearly define THR; not a SOTA claim. CI from the exp045 CSV test_metric_name text."
+    },
+    "Char Residue": {
+      "exp_id": "exp157",
+      "metric": "R2 rgkf5x10 (cone residue)",
+      "value": 0.7091,
+      "ci_lo": 0.5499,
+      "ci_hi": 0.8294,
+      "bar": 0.82,
+      "bar_source": "pomazi_2026",
+      "comparable": "pending-human",
+      "status": "SHORT OF SOTA",
+      "note": "Snapshot rule (fsri_composite_snapshot.json, D5, owner-delegated 2026-10-07): the exp117 recipe unchanged (equal average of HGB, ExtraTrees, Ridge; 11 features) re-scored on 603 rows / 66 materials / 62 groups (exp117's 567 + 36 composite-product rows; composites get the unweighted mean of their layers' MCC/STA features; chair assembly + layers one group). Critic experiments/critic/fsri_composite_snapshot_critic.md SOUND WITH CAVEATS: the rise is a population change, not a model gain - the two gypsum boards (92-95% residue) raise total variance by 27%; new rows are predicted worse per row (MSE 303 vs 193); with old-row error held at the merge-only level R2 would be 0.697. Short of the BME 0.82 bar (ci_lo 0.550; the upper bound 0.829 now exceeds 0.82). CR round 2 + round-9 TabPFN (K=5) and round 10 adopted nothing under gate v2. Previous: exp117 0.6504 [0.4389, 0.7893] on 567 rows / 61 groups."
+    },
+    "LOI": {
+      "exp_id": "exp163",
+      "metric": "R2 GroupKFold by source paper 5x10 (RPUF literature reconstruction, snapshot 3: 606 rows / 107 papers, chemistry tables and loading units corrected 2026-10-08)",
+      "value": 0.4253,
+      "ci_lo": 0.2607,
+      "ci_hi": 0.5503,
+      "bar": 0.84,
+      "bar_source": "sun_fu_2026_rpuf",
+      "comparable": "pending-human",
+      "status": "BEHIND",
+      "note": "Data corrections, model unchanged (round-8 average of RF, ExtraTrees, Ridge on the exp092 features). Two steps on 2026-10-08, each pre-declared, scored once and critic-checked: (1) loi_snapshot_update3_chemfix -> exp159 0.4123 [0.3389, 0.5481] (FR element/structure tables; M123 unit bug fix; critic loi_chemfix_critic.md); (2) loi_snapshot_update4_unitfix -> exp163: 94 loading-basis cells on 65 rows / 13 papers corrected from a label-blind audit of the source papers' formulation tables (loi_unit_audit.md). Critic experiments/critic/loi_unitfix_critic.md SOUND WITH CAVEATS: 93 real corrections + 1 parser-gap fix (M080); a data correction, not a model gain; paired vs exp159 +0.013 (7/10), almost all from one repeat (+0.004 without it); the paper-bootstrap CI lower bound fell 0.339 -> 0.261 (pooled-repeat CI lower bound rose 0.275 -> 0.290: [0.290, 0.538]); drop any claim built on 0.339. One row still exceeds 60 wt% total FR (N022-7, 70.0, excluded from the fix by the acceptance rule); 48 of the corrected rows use the default isocyanate amount; M063/M055 understate loading at high replacement. Protocol A (random split) 0.750 (bar 0.84, Sun & Fu single split); protocol C (unseen FR class) 0.295 (exp159 0.082, exp115 0.248). Previous records: exp159 0.4123, exp115 0.3875 [0.3124, 0.5289].",
+      "proxy_free": {
+        "exp_id": "exp164",
+        "value": 0.4339,
+        "ci_lo": 0.2876,
+        "ci_hi": 0.554,
+        "range_note": "snapshot 3: exp116 (blend, proxy-free) 0.386, C 0.171; snapshot 2: exp114 0.415 (C 0.050); RF c3 config exp109 0.371 (snapshot 2).",
+        "note": "Supplementary: the record model without the loi_standard lab-proxy one-hot, same chemfix + unitfix data corrections (exp164); protocol C 0.219. Previous: exp160 0.4060, exp116 0.3864. Not the number of record."
+      },
+      "delta_from_control": {
+        "exp_id": "exp100",
+        "value": 0.376,
+        "ci_lo": 0.1022,
+        "ci_hi": 0.5382,
+        "note": "Supplementary, different task (round 7, pre-declared; critic experiments/critic/loi_round7_critic.md SOUND WITH CAVEATS). LOI predicted given the paper's own neat-foam control LOI, on 313 non-control rows / 63 papers. Same rows without control info: 0.296 [0.054, 0.475]; d1 wins 10/10 paired repeats (+0.08 R2), CIs overlap. Delta R2 0.40. Caveat: N016 control is a commercial system that likely contains FR. Never compared to Sun & Fu 0.84. Measured on snapshot 1 (460 rows); not re-scored on snapshot 2."
+      }
+    },
+    "FIGRA": {
+      "exp_id": "exp119",
+      "metric": "R2 rgkf5x10",
+      "value": 0.4975,
+      "ci_lo": 0.3464,
+      "ci_hi": 0.6475,
+      "bar": 0.9724,
+      "bar_source": "phan_morgan_2025",
+      "comparable": false,
+      "status": "BASELINE, NOT COMPARABLE",
+      "note": "Promoted 2026-10-06 by the pre-declared rule after critic (experiments/critic/blend_round1_critic.md, SOUND WITH CAVEATS). Blend round 1 b1: average of the exp073 HGB (log1p), ExtraTrees and Ridge on exp073's features; 10/10, +0.041. Caveat: the gain is small and NOT established -- the top 5 materials give 116% of it (without them -0.007, 3/10), P(gain <= 0) = 0.11 unadjusted, multiplicity-adjusted lower bound -0.09. b2 (HGB+ET) is equivalent (0.497478 vs 0.497507). Previous: exp073 0.4563 [0.245, 0.639]. Not comparable to Phan & Morgan 0.9724 (different population)."
+    }
+  },
+  "pomazi_recon": {
+    "_decision": "Arnav 2026-10-02: reconstruction does NOT count as the competitor's population until Toldy's real data arrives. Status wording: 'AHEAD ON RECONSTRUCTION, NOT ESTABLISHED'. Not a SOTA win.",
+    "_data": "data/v2/pomazi_recon_inputs.csv (round 1b: hemp excluded, tolerance formulation groups); 72 rows pHRR, 60 others",
+    "pHRR": {
+      "exp_id": "exp076",
+      "primary_resin_system_holdout": "0.448 [0.136, 0.578]",
+      "formulation_grouped_pooled_ci": "[0.382, 0.734]",
+      "their_protocol_A": 0.604,
+      "bar": 0.3,
+      "status": "AHEAD ON RECONSTRUCTION, NOT ESTABLISHED"
+    },
+    "TTI": {
+      "exp_id": "exp079",
+      "primary_resin_system_holdout": "0.336 [-0.041, 0.690]",
+      "formulation_grouped_pooled_ci": "[0.491, 0.793]",
+      "their_protocol_A": 0.615,
+      "bar": 0.58,
+      "status": "AHEAD UNDER THEIR PROTOCOL ONLY, ON RECONSTRUCTION"
+    },
+    "THR": {
+      "exp_id": "exp078",
+      "primary_resin_system_holdout": "0.679 [0.486, 0.792]",
+      "formulation_grouped_pooled_ci": "[0.753, 0.914]",
+      "their_protocol_A": 0.828,
+      "bar": 0.67,
+      "status": "AHEAD ON RECONSTRUCTION, NOT ESTABLISHED (helped by fibre/heat-flux split)"
+    },
+    "Char Residue": {
+      "exp_id": "exp077",
+      "primary_resin_system_holdout": "0.695 [0.559, 0.812]",
+      "formulation_grouped_pooled_ci": "[0.712, 0.902]",
+      "their_protocol_A": 0.807,
+      "bar": 0.82,
+      "status": "BEHIND"
+    }
+  }
+}

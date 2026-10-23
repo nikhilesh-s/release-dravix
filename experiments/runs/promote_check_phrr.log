@@ -1,0 +1,5 @@
+Locked held-out set (seed=42): 41 rows, 15 materials, never used to pick features/hyperparameters
+Held-out R2: 0.5744
+SOTA (pomazi_2026, real held-out RFR): R2=0.30
+Delta: +0.2744
+Result: BEATS SOTA -- promote

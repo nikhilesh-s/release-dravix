@@ -1,0 +1,27 @@
+{
+  "round": "loi_round6",
+  "target": "LOI (%), RPUF literature benchmark of record: 460 rows / 83 papers",
+  "declared": "by Opus 5.5, see git commit time; before any run",
+  "authority": "plans/V3_PLAN_2026-10-04.md (Arnav approved Oct 4: V3 one day, LOI rounds 6+7, TTI round 1)",
+  "origin": "experiments/critic/loi_round5_critic.md: (a) ~2/3 of exp092's gain is the loi_standard one-hot, a lab/region proxy; (b) remaining polyol-typing errors listed; (c) PN-EN ISO 4589-3 (elevated-temperature method, 14 rows) binned with ISO 4589.",
+  "banned_moves_checked": true,
+  "incumbent": {"exp_id": "exp092", "config": "train_loi_round5.py c2", "B_mean": 0.3738, "B_ci": [0.2007, 0.4700]},
+  "step1": "reproduce exp092 (B mean 0.3738, rep-0 CI [0.2007, 0.4700], tolerance 0.002) or stop BLOCKED",
+  "F6_v6 (on top of F6_fixed, applied in this order)": {
+    "R1": "polyester_aromatic regex also matches /PET glycolysis|glycoly[sz]ed (waste )?PET/",
+    "R2": "polyether regex also matches /polypropylene glycol|polyethylene glycol/",
+    "R3": "a component matching /bio-?polyol|castor oil polyol|MCOP|ESBO|epoxidi[sz]ed soy/ is bio_based, checked BEFORE the polyester/polyether rules",
+    "R4": "if exactly one component has a stated amount and it is not the first-listed component, use the first-listed component (base polyol; e.g. 'MCOP (...) + PEG-200 (20 g)')"
+  },
+  "candidates": [
+    {"id": "c3", "desc": "exp092 (c2) minus the 4 std_* one-hots = round-5 c1 + log(density). Proxy-free."},
+    {"id": "c4", "desc": "c3 with F6_fixed replaced by F6_v6. Proxy-free."},
+    {"id": "c5", "desc": "c4 + loi_standard one-hot with PN-EN ISO 4589-3 as its own level (5 levels; 4589-3 matched before ISO 4589)"}
+  ],
+  "audit": "print every polyol string whose label changes F6_fixed -> F6_v6, with row counts, before any model is fit",
+  "protocols": "identical to the record (B GroupKFold by paper 5x10, repeat-0 paper-bootstrap CI + pooled CI; A random 80/20 x50; C by dominant FR class); RF 500 trees, min_samples_leaf 2, random_state 0",
+  "selection_rule": "highest B mean among c3-c5; it replaces exp092 only if >= 8/10 paired B repeats better than exp092 AND B ci_lo >= 0.2007; then critic",
+  "proxy_free_report": "whichever of c3/c4 has the higher B mean is reported as numbers_of_record loi.proxy_free (supplementary, regardless of direction), after the critic",
+  "exit_triggers": "B ci_lo > 0.84 or A mean > 0.84 -> EXIT",
+  "after": "round 7 (delta-from-control, supplementary) only after the round-6 critic and before G2 19:00"
+}

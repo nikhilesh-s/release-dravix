@@ -1,0 +1,20 @@
+{
+  "round": "loi_round7",
+  "target": "LOI (%) given the paper's own neat-foam control LOI (supplementary task; NOT the Sun & Fu task, never compared to 0.84, never a number of record)",
+  "declared": "by Opus 5.5, see git commit time; before any run",
+  "authority": "plans/V3_PLAN_2026-10-04.md round 7 (Arnav approved Oct 4)",
+  "banned_moves_checked": true,
+  "rows": "benchmark 460 rows; papers with >= 1 control row (total_fr_wtpct == 0): 67 papers; scored rows = the 313 non-control rows of those papers",
+  "control_LOI": "per row: mean LOI of control rows in the same paper with the identical polyol string; if none, mean of all control rows in the paper",
+  "target_transform": "delta = LOI - control_LOI; prediction LOI_hat = control_LOI + delta_hat",
+  "features": "round-6 c3 (proxy-free exp092 minus std_*), computed exactly as train_loi_round6.py",
+  "candidates": [
+    {"id": "d0", "desc": "baseline: LOI_hat = control_LOI (delta 0), no fitting"},
+    {"id": "d1", "desc": "RF (exp092 params) on c3 features -> delta"},
+    {"id": "d2", "desc": "d1 + control_LOI as a feature"},
+    {"id": "ref", "desc": "reference: c3 RF predicting absolute LOI, trained/scored on the same 313 rows and splits (no control info)"}
+  ],
+  "protocols": "B: GroupKFold by paper 5x10 on the 313 rows (training folds contain only training papers' rows), repeat-0 paper-bootstrap CI; metrics: R2 of absolute LOI and R2 of delta",
+  "report": "best of d1/d2 by B mean (absolute-LOI R2) goes to numbers_of_record loi.delta_from_control as supplementary after a critic, with d0 and ref beside it",
+  "exit_triggers": "none apply (not a competitor task); any absolute R2 CI lo > 0.84 is still reported to Arnav before any wording"
+}

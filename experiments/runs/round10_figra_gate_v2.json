@@ -1,0 +1,39 @@
+{
+  "K": 1,
+  "q": 1.5523163552725456,
+  "q_raw": 0.014152783656282544,
+  "best": "r10_figra_g1",
+  "G1": false,
+  "G2": true,
+  "G3": false,
+  "adopt_if_critic_passes": false,
+  "ci_inc": [
+    0.3463717183379393,
+    0.6475304232733776
+  ],
+  "n_rows": 197,
+  "n_groups": 67,
+  "n_boot": 2000,
+  "seed": 0,
+  "per_candidate": {
+    "r10_figra_g1": {
+      "theta": 0.0021690404015508925,
+      "wins": 7,
+      "ci_lo": 0.35234770886080446,
+      "ci_hi": 0.6535148377047587,
+      "se": 0.009117203209392,
+      "lb_maxT": -0.011983743254731652,
+      "lb_unadjusted": -0.01198374325473165,
+      "lb_raw_maxT": -0.011983743254731652,
+      "p_boot_gain_le_0": 0.391
+    }
+  },
+  "gate_config": "experiments/configs/adoption_gate_v2.json",
+  "order": [
+    "r10_figra_g1"
+  ],
+  "selectable": [
+    "r10_figra_g1"
+  ],
+  "npz": "experiments/runs/round10_figra_oof.npz"
+}

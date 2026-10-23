@@ -1,0 +1,72 @@
+{
+ "slug": "samedata_huang_dopo_ep_ml_ul94_c1u_P1_pub",
+ "target": "UL-94 V-0 (binary)",
+ "round_config": "experiments/configs/samedata_huang_dopo_ep_ml_ul94.json",
+ "dataset": "Huang/Zheng/Shi DOPO-EP-ML (data/sources/incoming/huang_dopo_ep_ml/DOPO_EP_new.csv, 599 rows, 130 Reference groups), unpublished manuscript",
+ "features": "authors' UL94_V0 input: view morgan_r3, K=all, advanced descriptors, V7 on, no BDE, neat-EP masking; their in-fold front end with f_classif",
+ "code": "data/v2/train_samedata_dopo.py + data/v2/export_dopo_folds.py (step 0, authors' env)",
+ "n_rows": 599,
+ "n_groups": 130,
+ "sota": 0.817,
+ "sota_source": "Huang et al. DOPO-EP-ML Table 2 (Reference)",
+ "comparable_note": "comparability is a human decision; never set here",
+ "candidate": "c1u",
+ "protocol": "P1_pub",
+ "model": "mean predict_proba of RFC(500, leaf 2, rs 0), ETC(500, leaf 2, rs 0), impute/scale/LogisticRegression(C=0.1); argmax",
+ "hyperparameters": "fixed a priori (samedata_common.json); no tuning",
+ "metric": "macro-F1",
+ "status": "ok",
+ "blocked_reason": "",
+ "selected": false,
+ "per_repeat": [
+  0.7901923082679863
+ ],
+ "mean": 0.7901923082679863,
+ "repeat0": 0.7901923082679863,
+ "secondary_per_repeat": {
+  "macro_F1": [
+   0.7901923082679863
+  ],
+  "accuracy": [
+   0.7947356186347883
+  ],
+  "weighted_F1": [
+   0.7948563971404802
+  ],
+  "mod_macro_F1": [
+   0.7325563277856523
+  ]
+ },
+ "per_fold": {
+  "macro_F1": [
+   0.8385647075345832,
+   0.7790898617511521,
+   0.7980676328502415,
+   0.8124547905569803,
+   0.7227845486469737
+  ],
+  "accuracy": [
+   0.8429752066115702,
+   0.7796610169491526,
+   0.8070175438596491,
+   0.8145161290322581,
+   0.7295081967213115
+  ],
+  "weighted_F1": [
+   0.8423136317500223,
+   0.7792802468171524,
+   0.8062717179421984,
+   0.8137233065417666,
+   0.732693082651261
+  ],
+  "mod_macro_F1": [
+   0.8015449896638016,
+   0.7033730158730158,
+   0.7498708010335917,
+   0.7578421795289265,
+   0.6501506528289254
+  ]
+ },
+ "sd": 0.043487349429271065,
+ "note": "UL94_V0 P1_pub c1u; published folds, information only (never selected on)"
+}

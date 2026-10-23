@@ -1,0 +1,13 @@
+rows 681 / materials 76; emissivity rows 383 / materials 42; log_q_excess_eps rows 374; T_h at 25/50/75 kW/m2: 815 K, 969 K, 1072 K
+exp046  GKF 0.3133 +- 0.0373 CI [0.071, 0.496]  family-GKF 0.356  R2@25 0.059 other 0.798  eps-rows 0.535 (@25 0.313)  max OOF 399s  (1s)
+REPRO exp046 ok
+e1      GKF 0.2833 +- 0.0475 CI [0.087, 0.493]  family-GKF 0.300  R2@25 0.065 other 0.801  eps-rows 0.552 (@25 0.339)  max OOF 394s  (1s)
+e2      GKF 0.2711 +- 0.0461 CI [0.071, 0.492]  family-GKF 0.299  R2@25 0.053 other 0.819  eps-rows 0.558 (@25 0.343)  max OOF 412s  (1s)
+e3      GKF 0.1571 +- 0.0723 CI [-0.105, 0.351]  family-GKF 0.222  R2@25 -0.158 other 0.321  eps-rows 0.385 (@25 0.201)  max OOF 736s  (25s)
+e4      GKF 0.2871 +- 0.0361 CI [0.053, 0.487]  family-GKF 0.338  R2@25 0.045 other 0.798  eps-rows 0.543 (@25 0.326)  max OOF 403s  (1s)
+
+control e4 (has_emissivity only): dGKF -0.0262 vs e1 dGKF -0.0301 -> gain matched by the identity control
+SELECTION (highest GKF mean of e1-e3): e1 0.2833; paired wins 1/10 (need >= 8), ci_lo 0.0872 (need >= 0.071) -> NOT adopted; exp046 stays the record
+Triggers: none
+
+wrote 4 result JSONs; runtime 28s

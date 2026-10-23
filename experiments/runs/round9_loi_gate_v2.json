@@ -1,0 +1,52 @@
+{
+  "K": 2,
+  "q": 1.7764525939786697,
+  "q_raw": 0.04237392646940038,
+  "best": "p2",
+  "G1": false,
+  "G2": true,
+  "G3": false,
+  "adopt_if_critic_passes": false,
+  "ci_inc": [
+    0.3123809283732589,
+    0.5288811418557986
+  ],
+  "n_rows": 606,
+  "n_groups": 107,
+  "n_boot": 2000,
+  "seed": 0,
+  "per_candidate": {
+    "p1": {
+      "theta": -0.024214975062823475,
+      "wins": 2,
+      "ci_lo": 0.28038236904357,
+      "ci_hi": 0.5274698145718268,
+      "se": 0.025594992600898203,
+      "lb_maxT": -0.06968326606155395,
+      "lb_unadjusted": -0.06658890153222385,
+      "lb_raw_maxT": -0.06658890153222385,
+      "p_boot_gain_le_0": 0.84
+    },
+    "p2": {
+      "theta": 0.010581648768523477,
+      "wins": 7,
+      "ci_lo": 0.3228897843331123,
+      "ci_hi": 0.5395781914234311,
+      "se": 0.012886672499078227,
+      "lb_maxT": -0.012310914020217625,
+      "lb_unadjusted": -0.011574685294583234,
+      "lb_raw_maxT": -0.031792277700876906,
+      "p_boot_gain_le_0": 0.203
+    }
+  },
+  "gate_config": "experiments/configs/adoption_gate_v2.json",
+  "order": [
+    "p1",
+    "p2"
+  ],
+  "selectable": [
+    "p1",
+    "p2"
+  ],
+  "npz": "experiments/runs/round9_loi_oof.npz"
+}

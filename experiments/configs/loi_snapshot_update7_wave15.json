@@ -1,0 +1,42 @@
+{
+ "round": "loi_snapshot_update7_wave15",
+ "kind": "Data-expansion re-score plus paired data-effect test, not a modelling round. Snapshot = exp163 (606 rows / 107 papers) + wave 14 (215 rows / 31 papers) + wave 15 (47 rows / 7 papers, hand-extracted from Las Positas College library full texts). Models unchanged: round-8 average of RF+ExtraTrees+Ridge on the exp092 features (exp113 config) and the exp114 proxy-free sibling.",
+ "status": "report-only for this session; no number of record is edited by this session.",
+ "declared": "2026-10-11 by Claude (Arnav's session), committed before any score on the 868-row snapshot. Arnav: 'yes extract them and score ... train the model and create a new scoreboard entry'. Row extraction used only papers' own tables/text; no model output was seen before this declaration.",
+ "data": {
+  "stage": "data/v2/loi_rpuf_parts/wave15_staging (rows_w15.csv, fr_element_table_additions.csv, log_w15.csv, README.md)",
+  "expected_counts": "builder --build-only (2026-10-11, no scoring): 868 benchmark rows / 145 papers (= 821 + 47, 138 + 7)",
+  "known_flags": [
+   "single extractor, no independent QA",
+   "W15-001: three text values, formulation in SI; W15-006: Chinese-language paper, three text values, DOI unverified",
+   "W15-003: TDCP 31 % and MP 33 % LOI at 20 wt% printed as is",
+   "MEL-PA and MAO-Zn compositions unknown -> NaN element features",
+   "4 papers examined and skipped (polyimide foam, non-foam boron PU, coating-only, no LOI)"
+  ]
+ },
+ "procedure": [
+  "Step 1: rescore_loi_snapshot.py with stages wave4, wave5, chemfix, unitfix, wave14, wave15 and --script data/v2/train_loi_rescore_r8.py --keep: one run. Primary result: exp113-config B mean, paper-bootstrap CI, pooled CI, protocol A and C, exp114 sibling.",
+  "Step 2: same stages with --script data/v2/train_loi_paired_r8_w15.py (identical to the update6 paired design: folds over the 606 original rows only; arm 0 trains on original rows; arm 1 adds ALL wave-14 and wave-15 rows to training; pooled OOF R2 on the 606 original rows per repeat; paper-bootstrap CI of the paired delta).",
+  "Step 3 (report-only, from the kept OOF of step 1): R2 of the protocol-B OOF on the 47 wave-15 rows alone, and on the 606 original / 215 wave-14 subsets, with paper-bootstrap CIs. Subset R2 is never quoted as a record statistic.",
+  "Step 4: label-free check that no wave-15 row exceeds 60 wt% total FR."
+ ],
+ "reporting_rules": [
+  "Different population from exp163: its B mean is not a like-for-like change of the record model; reported next to the exp163 number with that statement.",
+  "No 'improved', 'beats' or SOTA wording; comparable stays pending-human; the 0.84 bar is not compared on a different population.",
+  "If any wave-15 row proves wrong on audit, the expanded result is withdrawn, not patched."
+ ],
+ "banned_moves_checked": true,
+ "banned_moves_note": "No model, feature, hyperparameter, seed or fold-rule change. No row of the 821-row snapshot is added, removed or edited. All 47 wave-15 rows enter; none dropped after a score. One expanded snapshot scored once.",
+ "acceptance_rule": "None applied by this session; the orchestrator/owner decides after a fresh-context critic whether the expanded snapshot becomes the LOI population of record.",
+ "scoreboard": "After scoring, results are ingested with scripts/update_trackers.py (single writer) and a Daily Scoreboard entry is frozen with `entry --note`; the number of record is not changed, so the entry shows the record plus a report-only note.",
+ "environment": ".venv312 (sklearn 1.7.1, numpy 2.2.6, pandas 2.3.3).",
+ "result_2026-10-11": {
+  "expanded_868_rows_145_papers_exp113cfg": "B 0.4454 +- 0.0297, paper-bootstrap CI [0.3003, 0.5450], pooled CI [0.319, 0.543], A 0.723, C 0.342 (821-row snapshot of update5: B 0.4588 [0.3162, 0.5472]; exp163 record 0.4253 [0.2607, 0.5503])",
+  "expanded_exp114cfg_proxyfree": "B 0.4480 +- 0.0345, CI [0.2870, 0.5460], A 0.710, C 0.293",
+  "paired_test (design above; arm 1 adds all 262 wave-14+15 rows)": "exp113 config: arm0 0.4304 -> arm1 0.4954, delta +0.0650 (sd 0.032), wins 10/10, paper-bootstrap CI of delta [+0.0154, +0.1171]; proxy-free: 0.4392 -> 0.5095, delta +0.0703, wins 10/10, CI [+0.0154, +0.1263]. Update6 (wave 14 only, 215 rows) had given +0.0629; adding the 47 wave-15 rows changed the paired delta by about +0.002 (not distinguishable).",
+  "subsets_from_same_OOF (report-only)": "606 original rows 0.4959 CI [0.393, 0.594]; 215 wave-14 rows 0.3338 CI [-0.083, 0.618]; 47 wave-15 rows 0.2385 CI [-0.448, 0.726] (7 papers: not interpretable); per-paper MAE on wave-15 papers 0.6 to 3.7 LOI points",
+  "label_free_check": "max total FR on wave-15 rows 50.0 wt% (none above 60)",
+  "triggers": "none",
+  "caveats": "The population changed again, so 0.4454 is not a like-for-like change versus 0.4588 or 0.4253. The unpaired B mean fell by 0.013 when 47 low-information rows (text-only values, several without formulation details) were added to the evaluation set, while the paired training-effect test shows no change; the new rows are scored as test rows with 7 papers only. Single extractor, no independent QA, no number of record changed."
+ }
+}

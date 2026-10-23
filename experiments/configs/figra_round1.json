@@ -1,0 +1,26 @@
+{
+  "round": "figra_round1",
+  "target": "FIGRA = pHRR / t_pHRR from test start (097ef71 definition), FSRI replicate mean per material x flux",
+  "declared": "by Opus 5.5, see git commit time; before any run",
+  "plan_ref": "plans/FABLE_PLAN_2026-10-01.md \u00a73 B4, \u00a76 (FIGRA loop); round budget 1",
+  "banned_moves_checked": true,
+  "incumbent": {
+    "exp_id": "exp012",
+    "config": "data/v2/train_figra_v1.py HGB direct model (see leaderboard exp012)",
+    "rkf_mean": 0.503,
+    "ci": [
+      0.324,
+      0.663
+    ]
+  },
+  "data": "exactly exp012's rows (must reproduce first, else status blocked)",
+  "candidates": [
+    {
+      "id": "c1",
+      "desc": "two-stage: same model class and features as exp012, one model on log pHRR, one on log t_pHRR, prediction = exp(pred log pHRR) / exp(pred log t_pHRR); both fit in-fold on the same splits"
+    }
+  ],
+  "selection_rule": "c1 replaces exp012 only if >= 8/10 paired wins AND ci_lo >= 0.324",
+  "table": "same-polymer table vs Phan/Morgan Table 2 at 50 kW/m2 using values already in reports/sprint_0929/figra.md: polymer, their measured FIGRA, FSRI measured FIGRA (50 kW/m2), Dravix out-of-fold prediction (repeat 0, incumbent or winner). Write reports/figra_same_polymer_table.md. No claim against 0.9724.",
+  "banned": "max HRR(t)/t definition; any claim against 0.9724"
+}

@@ -1,0 +1,26 @@
+Config: experiments/configs/fsri_composite_snapshot.json (status: approved (D5, both targets, 2026-10-07, owner-delegated; see amendments)); target pHRR
+python 3.12.12 (~/dravix/.venv312/bin/python); scikit-learn 1.7.1, numpy 2.2.6, pandas 2.3.3, scipy 1.16.1; FSRI clone a432697; OMP_NUM_THREADS=1 LOKY_MAX_CPU_COUNT=4
+layer map == composites.layers (5 products, 12 layers); wrote data/v2/fsri_composite_layers.csv
+model: HistGradientBoostingRegressor(learning_rate=0.05, max_iter=200,
+                              max_leaf_nodes=15, min_samples_leaf=10,
+                              random_state=0)
+S0 exp074 on its own data (191 rows / 64 groups): 0.6113 +/- 0.0893 [0.5155, 0.8376]  (record 0.6113 [0.5155, 0.8376]; 23s)
+REPRO exp074 ok
+self-test pHRR OK: 205 rows / 70 materials / 66 groups; new rows at 56..152 (14); NaN counts {'cone_thickness_mm': 21, 'density_kgm3': 24, 'log_kpc': 135}; mapped values within 1e-4; 11 categories; S1 groups 62
+S1 merge-only (old rows, C1 groups: 191 rows / 62 groups; report-only): 0.6296 +/- 0.0836 [0.1244, 0.8230] (22s)
+S2 snapshot (205 rows / 70 materials / 66 groups): 0.6328 +/- 0.1131 [0.4902, 0.8674] (30s)
+  per-repeat R2: [0.72, 0.3601, 0.641, 0.6315, 0.681, 0.4831, 0.7363, 0.6977, 0.6954, 0.6817]
+  pooled-repeat CI [0.5003, 0.8460]; GroupShuffleSplit x10 mean 0.3104; category-GKF (11 categories) 0.3414 +/- 0.1108 CI [-0.3074, 0.4925] (24s)
+decomposition (not paired; folds differ): S0 0.6113 [0.5155, 0.8376] | S1 0.6296 [0.1244, 0.8230] | S2 0.6328 [0.4902, 0.8674]; S2 old rows R2 0.6218 (191), new rows R2 0.7813 (14), new rows' SSE share 0.0086
+  Gypsum_Wallboard                           n= 2 mean y   178.03  mean OOF   279.34  MAE   101.31  SSE share 0.0009
+  Lightweight_Gypsum_Wallboard               n= 3 mean y   172.15  mean OOF   208.16  MAE    43.11  SSE share 0.0003
+  Plastic_Laminate_Countertop                n= 3 mean y   168.76  mean OOF   277.43  MAE   108.67  SSE share 0.0014
+  Fiberglass_Insulation_R30_Paper_Faced      n= 3 mean y   152.28  mean OOF   200.24  MAE    55.97  SSE share 0.0005
+  Overstuffed_Chair_Assembly                 n= 3 mean y   749.65  mean OOF   667.69  MAE   191.06  SSE share 0.0054
+  Overstuffed_Chair_Polyurethane_Foam        n= 3 mean y   908.81  mean OOF   647.27  MAE   333.94  SSE share 0.0172
+  Overstuffed_Chair_Polyester_Batting        n= 3 mean y   418.23  mean OOF   597.40  MAE   190.06  SSE share 0.0064
+  Overstuffed_Chair_Polyester_Fabric         n= 3 mean y   184.62  mean OOF   248.60  MAE    83.75  SSE share 0.0016
+  truncation note: 25 of 42 composite replicates behind the new rows carry truncated_test: {'Fiberglass_Insulation_R30_Paper_Faced': 9, 'Gypsum_Wallboard': 6, 'Lightweight_Gypsum_Wallboard': 9, 'Overstuffed_Chair_Assembly': 1, 'Plastic_Laminate_Countertop': 0}
+wrote experiments/results/fsri_composite_snapshot_phrr.json, runs/fsri_composite_snapshot_phrr_diag.json, _oof.npz
+exit trigger: S2 ci_lo <= 0.30 -> EXIT with blocker not fired
+runtime 109s

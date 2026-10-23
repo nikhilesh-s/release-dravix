@@ -1,0 +1,21 @@
+FSRI's own PMMA MCC features used for all rows: mcc_peak_hrr_Wg=165.67, mcc_char_yield_pct=0.72
+
+Overall cross-lab R2 (67 tests, 10 institutions, model never trained on any of them): 0.1986
+Mean abs error: 258.0 kW/m2 (mean true pHRR: 937.1 kW/m2, 27.5% of mean)
+
+Per heat-flux breakdown:
+  25.0 kW/m2 (n=32): true mean=609.2, pred=781.5 (single value, features constant per material), R2=-3.2096
+  50.0 kW/m2 (n=8): true mean=1080.7, pred=1231.7 (single value, features constant per material), R2=-2.3180
+  65.0 kW/m2 (n=27): true mean=1283.2, pred=1662.1 (single value, features constant per material), R2=-1.9327
+
+Per institution:
+  Aalto (n=3): true mean=1379.0 kW/m2, pred=1662.1 kW/m2, mean abs err=283.1
+  DBI_Lund (n=12): true mean=1009.0 kW/m2, pred=781.5 kW/m2, mean abs err=106.1
+  Edinburgh (n=12): true mean=841.1 kW/m2, pred=781.5 kW/m2, mean abs err=380.8
+  GIDAZE+ (n=4): true mean=885.5 kW/m2, pred=781.5 kW/m2, mean abs err=336.3
+  LCPP (n=8): true mean=907.9 kW/m2, pred=781.5 kW/m2, mean abs err=354.3
+  NIST (n=3): true mean=719.3 kW/m2, pred=781.5 kW/m2, mean abs err=62.3
+  TIFP (n=6): true mean=956.0 kW/m2, pred=781.5 kW/m2, mean abs err=265.9
+  UDRI (n=7): true mean=1117.0 kW/m2, pred=781.5 kW/m2, mean abs err=167.8
+  ULSTER (n=8): true mean=871.6 kW/m2, pred=781.5 kW/m2, mean abs err=191.3
+  UQ (n=4): true mean=739.3 kW/m2, pred=781.5 kW/m2, mean abs err=482.6

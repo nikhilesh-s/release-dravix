@@ -1,0 +1,32 @@
+{
+  "round": "loi_snapshot_update2",
+  "declared": "by Opus 5.5 on Oct 5, before any wave-4 row is scored; see git commit time. Extends data_pass_oct4.json (snapshot_rule).",
+  "authorized_by": "Arnav, Oct 5: 'yep do that' (lock inclusion rules, prep element/structure data, build the re-score tool without scoring)",
+  "what": "Not a modelling round. Re-score the exp092 config (round-5 c2) and the exp093 config (round-6 c3, proxy-free) unchanged on the expanded LOI snapshot (current 460 rows + QA'd wave 4 + later the library-PDF wave). The expanded snapshot becomes the LOI benchmark of record regardless of direction; critic before numbers_of_record changes.",
+  "inclusion_rules (decided before any score; apply to wave 4 and all later waves)": {
+    "R1_population": "flame-retarded or neat RIGID PU / PIR foams (closed-cell, rigid or 'rigid or semi-rigid' as stated) with measured LOI",
+    "R2_open_cell_spray": "open-cell / semi-rigid spray foams are excluded at build via EXCLUDE_REFS (N019 precedent) -> W032 excluded",
+    "R3_NIPU": "non-isocyanate PU foams are not RPUF -> logged not_rpuf, 0 rows (N035 precedent) -> W029 stays out",
+    "R4_neat_only_papers": "papers whose foams carry no FR (only polyol/filler variation) are kept: neat rows are part of the population, as the per-paper controls already are (W003, W004, W010 kept)",
+    "R5_rigidity_unstated": "kept if the foam is pMDI-based and intended for insulation/structural use and the paper does not call it flexible (W011, W036 kept)",
+    "R6_figure_rows": "extraction=figure rows never enter the benchmark (unchanged)",
+    "R7_censored_LOI": "values printed as '<x' or '>x' are left blank, so the row is out (unchanged)",
+    "R8_standard_as_printed": "loi_standard copied as printed even when it is not an LOI method (W005 GB 8624, W017 ASTM D1692); the std_* features treat unknown strings as in round 5 (no new rule)",
+    "R9_duplicate_controls": "a control foam shared by several tables of one paper is one row (W015 precedent)"
+  },
+  "data_prep": {
+    "element_table": "append data/v2/loi_rpuf_parts/wave4_staging/fr_element_table_additions.csv (14 formula entries + 2 class entries, unambiguous formulas only). Side effect, accepted and reported: 2 existing benchmark rows (N069-2, N069-4, DAP) gain element features.",
+    "fr_structures": "committed data/v2/fr_structures.csv kept verbatim for every existing name (PubChem re-queries are flaky: 6 old names returned not_found on a re-run); only names absent from it are appended, from wave4_staging/fr_structures_additions.csv (resolved with resolve_fr_structures.py's own rules, two passes)",
+    "exclusions": "EXCLUDE_REFS += W032 (R2)"
+  },
+  "procedure": "data/v2/rescore_loi_snapshot.py: builds the snapshot in a throwaway copy, runs train_loi_round6.py there with only the 460/83 row-count asserts generalised and the exp089/exp092 reproduction stops turned into reports. Self-test (no staged data) must reproduce exp092 B 0.3738 [0.2007, 0.4700] and exp093 B 0.3594 within 0.002 before the expanded run is trusted.",
+  "when": "only after the library-PDF wave is QA'd, or when Arnav says 're-score LOI now'",
+  "exit_triggers": "B ci_lo > 0.84 or A mean > 0.84 -> EXIT 5",
+  "amendments": [
+    "Oct 5, after the first re-score: Arnav said 'okay then do it??' in reply to 'say re-score LOI now' (Oct 5) -> the 'when' condition was met by his word.",
+    "Oct 5, after critic (experiments/critic/loi_snapshot_update2_critic.md): BUG FIX, not a choice: ^kaolin and ^flax fib class entries had blank element fractions instead of 0 (every other class filler entry uses 0), which made all el_* NaN on 9 wave-4 rows. Fixed to 0 and re-scored once; the first run (exp102/exp103) is superseded.",
+    "Disclosed side effect (critic): F7 class-prior medians are computed over all rows, so 47 old rows / 16 papers change imputed element features (not only N069 DAP); effect on score ~0.001. Accepted as part of the snapshot rule (data prep runs over all rows), not reverted.",
+    "Oct 5 (loop, Arnav: 'keep working on making dravix better'): snapshot 3 = snapshot 2 + QA'd wave 5 (data/v2/loi_rpuf_parts/wave5_staging, 35 rows / 5 papers, qa5 0 errors). Same snapshot rule: it becomes the benchmark of record regardless of direction. The record config is now exp113 (round-8 r8d blend), so snapshot 3 re-scores the exp113 config and the exp114 proxy-free config unchanged (data/v2/train_loi_rescore_r8.py, round-6 prefix + r8d/s8), then critic before numbers_of_record changes. Wave-5 inclusion: V006 not_rpuf (TDI flexible-type recipe, R1/R5); V005's collective '25' LOI kept as printed (text).",
+    "Oct 5 (late), after critic experiments/critic/loi_snapshot3_critic.md (SOUND WITH CAVEATS): BUG FIX, not a choice, declared before the re-score: build_loi_rpuf.basis() sent every unit containing 'of polyol' to the php basis. Fixed in the snapshot pipeline (rescore_loi_snapshot.py patch_build, all rows of snapshot 2+): units matching 'polyol + iso' -> foam basis (wt% of polyol+isocyanate, 17 rows: N029, N049, V005); units containing 'equivalent' -> unparsed loading (R equivalent ratios, 3 rows: W014, V003), as 'chemical equivalent' already was. Snapshot-1 artifacts (loi_rpuf_literature.csv, rounds 5-7, exp092/exp100) keep the old normaliser as history. Snapshot 3 is re-scored once with the fix; that number becomes the record. Go: Arnav's /loop 'keep working on making dravix better' (no explicit 're-score' word for snapshot 3; recorded as such)."
+  ]
+}

@@ -1,0 +1,6 @@
+A3 target: 221 material x flux pairs / 76 materials; core rows (m''_flux and MCC h_c): 191 / 65; core pairs with a truncated_test replicate kept: 43; replicates per core pair {1: 7, 3: 159, 4: 20, 5: 2, 6: 3}
+A3 V1 [phys_MJm2 = m''_flux * h_c_bc], replicate-mean thr_MJm2: 191 rows / 65 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.9490 std=0.0143 min=0.9212 max=0.9647
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.9530 std=0.0024; material-bootstrap 95% CI [0.918, 0.975]
+  vs SOTA 0.67: delta (GKF mean) +0.2830; CI excludes SOTA from above: True
+A3 headline: 0.9530 [0.918, 0.975] on 191 rows / 65 materials (exp040: 0.9531 [0.918, 0.975] on 190 / 65)

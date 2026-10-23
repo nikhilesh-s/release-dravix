@@ -1,0 +1,24 @@
+Config: experiments/configs/phrr_round1_promote.json
+load(replicate_target=True), has_mcc: 191 rows / 65 materials; merged groups: 64; PlasticC rows aliased to HIPS for grouping: 3
+features: ['heat_flux_kWm2', 'mcc_peak_hrr_Wg', 'mcc_char_yield_pct', 'cone_mass_per_area_kgm2', 'cone_thickness_mm', 'density_kgm3', 'mcc_total_hr_kJg', 'mcc_t_peak_C', 'mcc_t_onset_C', 'log_kpc']
+EXTRAS: {'hr': 'total_hr_bc_kJg', 'onset': 't_onset_bc_C'}
+
+=== Sanity: unmerged c2 (round 1) rkf_mean 0.6610 (declared 0.661) ===
+
+=== Merged-group scoring (eval_protocol seeds, groups = material with PlasticC -> HIPS) ===
+inc_merged   rkf 0.5460 +/- 0.0840  rep0 CI [0.322, 0.830]  pooled(mean-OOF) R2 0.5815 CI [0.197, 0.810]  gss 0.3392  category-GKF 0.3151 +/- 0.1170 CI [-0.405, 0.471]  n=191/64 groups, 11 categories
+c2_merged    rkf 0.6113 +/- 0.0893  rep0 CI [0.516, 0.838]  pooled(mean-OOF) R2 0.6758 CI [0.435, 0.822]  gss 0.4938  category-GKF 0.3917 +/- 0.0872 CI [-0.149, 0.529]  n=191/64 groups, 11 categories
+
+paired c2_merged vs inc_merged (same merged splits): wins 8/10, mean delta +0.0653
+  inc per-repeat R2: [0.606, 0.596, 0.476, 0.409, 0.43, 0.498, 0.671, 0.639, 0.57, 0.565]
+  c2  per-repeat R2: [0.723, 0.742, 0.493, 0.46, 0.582, 0.545, 0.609, 0.612, 0.688, 0.659]
+critic expected: c2 0.611 [0.516, 0.838]; exp043 0.546 [0.322, 0.830]
+measured:        c2 0.611 [0.516, 0.838]; exp043 0.546 [0.322, 0.830]
+c2_merged CI lower bound 0.516 > SOTA 0.3: True; category-grouped 0.392 (CI [-0.149, 0.529]) vs SOTA 0.3
+
+Saved models/v2/phrr_hgb_v4.joblib (keys ['features', 'model', 'sota_reference', 'target', 'trained_on', 'validation']); in-sample R2 0.9831 (sanity only)
+predict on 3 rows (kW/m2): [963.0, 1553.5, 2185.3] actual: [945.8, 1545.4, 2275.8]
+wrote experiments/results/phrr_promote_inc_merged.json
+wrote experiments/results/phrr_promote_c2_merged.json
+
+runtime 26s

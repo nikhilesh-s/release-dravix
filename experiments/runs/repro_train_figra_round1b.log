@@ -1,0 +1,14 @@
+FIGRA round1 rows: 197 / 67 materials
+exp012 reproduction (A, F2, HGB, log1p): 197 rows / 67 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.3964 std=0.1375 min=0.1588 max=0.5819
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.4563 std=0.0267; material-bootstrap 95% CI [0.245, 0.639]
+  vs SOTA 0.9724: delta (GKF mean) -0.5161; CI excludes SOTA from above: False
+reproduction check: mean 0.4563 (want 0.4563), CI [0.2454, 0.6393] (want [0.245, 0.639]) -> OK
+
+c1 two-stage: rkf mean=-2.7899 std=1.8169 CI [-16.615, 0.536] GSS mean=-2.6888
+per-repeat exp012: [0.467, 0.442, 0.478, 0.447, 0.475, 0.397, 0.491, 0.437, 0.446, 0.484]
+per-repeat c1:     [-4.229, -4.382, -0.632, -0.555, -5.418, -4.793, -2.342, -0.121, -2.211, -3.216]
+paired wins vs exp012: 0/10; delta -3.2462; ci_lo -16.615 vs 0.245
+RULE (>=8/10 wins AND ci_lo >= baseline ci_lo): c1 NOT adopted, re-baseline stays
+
+wrote reports/figra_same_polymer_table.md (16 pairings, model=FIGRA re-baseline (exp012 config, HGB direct, log1p))

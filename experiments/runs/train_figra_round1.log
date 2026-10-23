@@ -1,0 +1,9 @@
+FIGRA round1 rows: 197 / 67 materials
+exp012 reproduction (A, F2, HGB, log1p): 197 rows / 67 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.3964 std=0.1375 min=0.1588 max=0.5819
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.4563 std=0.0267; material-bootstrap 95% CI [0.245, 0.639]
+  vs SOTA 0.9724: delta (GKF mean) -0.5161; CI excludes SOTA from above: False
+reproduction check: mean 0.4563 (want 0.503), CI [0.2454, 0.6393] (want [0.324, 0.663]) -> FAIL
+BLOCKED: exp012 did not reproduce: rkf 0.4563, CI [0.2454, 0.6393]
+
+NOTE (post-run diagnostic, outside repo, not rule-eligible): with data files from 21be49f, exp012 reproduces (0.5034, CI [0.3235, 0.6634]); c1 on those rows: rkf -1.995, 0/10 wins.

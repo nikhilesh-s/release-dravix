@@ -1,0 +1,71 @@
+# Diagnostic only (post-score, no result changed): protocol C for the r8d blend, 10 repeats, per member; build trees from rescore_loi_snapshot.py --build-only --keep (before = wave4+wave5, after = +chemfix). Output lines filtered to the summary (verbatim).
+== before
+C blend mean 0.248; rf 0.250, et 0.322, ridge -0.976
+dom group sizes: {'none': 155, 'P-additive': 80, 'expandable_graphite': 75, 'P-N': 61, 'bio-based': 57, 'intumescent(APP-based)': 44, 'P-reactive': 38, 'other': 21, 'silicon': 19, 'halogen': 16, 'metal_oxide/salt': 10, 'nanoclay': 9, 'N-additive': 9, 'metal_hydroxide': 8, 'boron': 4}
+worst rows (row_id, dom, mean |blend err|, mean |ridge err|):
+  W006-1     nanoclay                        14.08    20.60
+  W005-3     intumescent(APP-based)          11.11    23.02
+  M083-2     expandable_graphite             11.42     7.60
+== after
+C blend mean -1.254; rf 0.270, et 0.360, ridge -15.262
+dom group sizes: {'none': 144, 'P-additive': 82, 'expandable_graphite': 75, 'P-N': 67, 'bio-based': 57, 'intumescent(APP-based)': 44, 'P-reactive': 41, 'other': 21, 'silicon': 19, 'halogen': 16, 'metal_oxide/salt': 10, 'nanoclay': 9, 'N-additive': 9, 'metal_hydroxide': 8, 'boron': 4}
+worst rows (row_id, dom, mean |blend err|, mean |ridge err|):
+  M123-2     P-additive                      68.90   213.80
+  M123-1     P-additive                      60.59   189.51
+  W005-3     intumescent(APP-based)          21.64    48.52
+  W006-1     nanoclay                        17.55    30.50
+== label-free: M123-1/-2 Roflam F5, unit 'g (1.5 wt% P in foam)', loading 56.1 / 62.5 -> total_fr_wtpct 660.0 / 735.29, el_P 56.1 / 62.5 (before: NaN)
+# ---- script
+"""Diagnostic only (post-score): protocol C (GroupKFold by dominant FR class) for the r8d blend, all 10 repeats,
+per held-out class and per blend member. Runs train_loi_rescore_r8.py up to ROUND 8 in a kept build tree, with the
+exp089/exp092 repro fits stubbed out (they do not feed DATA)."""
+import sys
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+
+w = Path(sys.argv[1])
+src = (w / "data/v2/train_loi_rescore_r8.py").read_text()
+src = src[:src.index("# ==== ROUND 8")]
+for a, b in (("assert bm.sum() == 460 and df[bm].ref_id.nunique() == 83, (bm.sum(), df[bm].ref_id.nunique())", "pass"),
+             ("assert len(y) == 460 and len(np.unique(g)) == 83", "pass"),
+             ("B89, oof89 = ep.repeated_group_kfold(rf(), X89, y, g)", "B89, oof89 = np.zeros(10), np.zeros((10, len(y)))"),
+             ("B92, oof92 = ep.repeated_group_kfold(rf(), DATA[\"c2\"][0], y, g)", "B92, oof92 = np.zeros(10), np.zeros((10, len(y)))")):
+    assert src.count(a) == 1, a
+    src = src.replace(a, b)
+src = src.replace('not reproduced within 0.002; stopping.")\n    sys.exit(2)', 'stubbed")')
+g = {"__file__": str(w / "data/v2/train_loi_rescore_r8.py"), "__name__": "diag"}
+exec(compile(src, "prefix", "exec"), g)
+X, y, dom = g["DATA"]["c2"][0], g["y"], g["dom"]
+rid = g["df"][g["bm"]].row_id.to_numpy()
+from sklearn.ensemble import ExtraTreesRegressor, RandomForestRegressor
+from sklearn.impute import SimpleImputer
+from sklearn.linear_model import Ridge
+from sklearn.metrics import r2_score
+from sklearn.model_selection import GroupKFold
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import StandardScaler
+
+mk = {"rf": lambda: RandomForestRegressor(n_estimators=500, min_samples_leaf=2, random_state=0, n_jobs=-1),
+      "et": lambda: ExtraTreesRegressor(n_estimators=500, min_samples_leaf=2, random_state=0, n_jobs=-1),
+      "ridge": lambda: make_pipeline(SimpleImputer(strategy="median", add_indicator=True, keep_empty_features=True),
+                                     StandardScaler(), Ridge(alpha=10.0))}
+oof = {k: np.empty((10, len(y))) for k in mk}
+for r in range(10):
+    for tr, te in GroupKFold(n_splits=5, shuffle=True, random_state=r).split(X, y, dom):
+        for k, f in mk.items():
+            oof[k][r, te] = f().fit(X[tr], y[tr]).predict(X[te])
+blend = (oof["rf"] + oof["et"] + oof["ridge"]) / 3
+print(f"C blend mean {np.mean([r2_score(y, p) for p in blend]):.3f}; " +
+      ", ".join(f"{k} {np.mean([r2_score(y, p) for p in oof[k]]):.3f}" for k in mk))
+print("dom group sizes:", pd.Series(dom).value_counts().to_dict())
+err = (blend - y) ** 2
+t = pd.DataFrame(dict(dom=dom, se_blend=err.mean(0), se_ridge=((oof["ridge"] - y) ** 2).mean(0)))
+print("share of blend SSE by held-out class:")
+print((t.groupby("dom").se_blend.sum() / t.se_blend.sum()).sort_values(ascending=False).round(3).head(6).to_string())
+i = np.argsort(-err.mean(0))[:8]
+print("worst rows (row_id, dom, mean |blend err|, mean |ridge err|):")
+for j in i:
+    print(f"  {rid[j]:10s} {dom[j]:28s} {np.abs(blend[:, j] - y[j]).mean():8.2f} {np.abs(oof['ridge'][:, j] - y[j]).mean():8.2f}")
+pd.DataFrame(dict(row_id=rid, dom=dom)).to_csv(sys.argv[2], index=False)

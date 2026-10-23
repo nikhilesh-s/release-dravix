@@ -1,0 +1,17 @@
+{
+ "slug": "samedata_huang_dopo_ep_ml_ul94_c2u_P1_pub",
+ "target": "UL-94 V-0 (binary)",
+ "round_config": "experiments/configs/samedata_huang_dopo_ep_ml_ul94.json",
+ "dataset": "Huang/Zheng/Shi DOPO-EP-ML (data/sources/incoming/huang_dopo_ep_ml/DOPO_EP_new.csv, 599 rows, 130 Reference groups), unpublished manuscript",
+ "features": "authors' UL94_V0 input: view morgan_r3, K=all, advanced descriptors, V7 on, no BDE, neat-EP masking; their in-fold front end with f_classif",
+ "code": "data/v2/train_samedata_dopo.py + data/v2/export_dopo_folds.py (step 0, authors' env)",
+ "n_rows": 599,
+ "n_groups": 130,
+ "sota": 0.817,
+ "sota_source": "Huang et al. DOPO-EP-ML Table 2 (Reference)",
+ "comparable_note": "comparability is a human decision; never set here",
+ "candidate": "c2u",
+ "protocol": "P1_pub",
+ "status": "blocked",
+ "blocked_reason": "{\n \"P1_r0__f0\": \"TabPFNValidationError: Number of features `667` reaching the model is greater than the maximum number of features `500` officially supported by the TabPFN model. Set `ignore_pretraining_limits=True` to override this error!\"\n}"
+}

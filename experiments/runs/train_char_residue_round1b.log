@@ -1,0 +1,48 @@
+rows 567 / materials 62
+STA atmospheres present: ['N2'] -> no air runs; using category flags
+CR re-baseline (exp033 config, current data): rkf 0.4825 (std 0.0371) CI [0.234, 0.713] GSS 0.3914
+REPRODUCTION OK
+flag prevalence (materials): {'cat_interior_finish': 14, 'cat_exterior_finish': 8, 'cat_insulation': 7, 'cat_roofing': 1, 'cat_structural': 2}
+best of c1/c2 by GKF mean: c2
+
+=== Summary (repeated GroupKFold 5x10, identical splits; groups = material) ===
+id    rkf_mean  rkf_std   ci_lo   ci_hi     gss   wins   d_mean
+exp033   0.4825   0.0371   0.234   0.713  0.3914      -        -
+c1      0.5302   0.0393   0.274   0.717  0.4231   9/10  +0.0477
+c2      0.5502   0.0415   0.330   0.706  0.4268  10/10  +0.0676
+c3      0.4748   0.0499   0.263   0.655  0.3544   5/10  -0.0077
+
+SELECTED (highest rkf mean): c2; wins 10/10 (need >=8), ci_lo 0.330 (need >= baseline ci_lo 0.234) -> PROMOTE
+
+Per-category error (CR re-baseline; repeat-0 OOF; category = first listed; not a selection input)
+category                     n_mat  mean|err|  sq-err share
+general polymer                 13       8.92         0.269
+insulation                       6      19.07         0.217
+exterior finish                  5      14.81         0.145
+unknown                          6      10.89         0.118
+interior finish                  7      10.88         0.097
+engineered wood                 13       6.00         0.061
+sleeping product                 6       7.86         0.041
+structural                       2       6.32         0.022
+cellulosic materials             2      12.40         0.019
+upholstered furniture            1      12.51         0.007
+roofing                          1       3.37         0.002
+
+Per-category error (selected c2; repeat-0 OOF; category = first listed; not a selection input)
+category                     n_mat  mean|err|  sq-err share
+general polymer                 13       8.13         0.248
+exterior finish                  5      18.34         0.186
+insulation                       6      14.95         0.141
+unknown                          6      11.59         0.139
+interior finish                  7      11.43         0.095
+engineered wood                 13       7.25         0.089
+sleeping product                 6       9.35         0.058
+structural                       2       9.07         0.022
+cellulosic materials             2      10.34         0.010
+upholstered furniture            1      12.70         0.008
+roofing                          1       3.31         0.003
+
+Top 3 by error share, exp033: [('general polymer', np.float64(0.269)), ('insulation', np.float64(0.217)), ('exterior finish', np.float64(0.145))]
+Top 3 by error share, c2: [('general polymer', np.float64(0.248)), ('exterior finish', np.float64(0.186)), ('insulation', np.float64(0.141))]
+
+result JSONs written to ~/Dravix/dravix-v2/experiments/results

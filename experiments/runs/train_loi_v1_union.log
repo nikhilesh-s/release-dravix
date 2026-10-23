@@ -1,0 +1,52 @@
+exact-name collisions between reports: 0
+union: 38 polymers (32 AR-05/14 + 6 AR-01/53)
+
+=== AR-05/14 only, config A (reproduces train_loi_v1): 32 polymers, 17 families, LOI 15-95, sd 19.07 ===
+  reference LOI=125/eta_c^0.25 (in-sample for its authors): R2=0.518 MAE=8.11
+  [A] polymer-grouped: 32 rows / 32 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.4878 std=0.1349 min=0.2339 max=0.7458
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.5039 std=0.0654; material-bootstrap 95% CI [0.047, 0.637]
+  vs SOTA 0.84: delta (GKF mean) -0.3361; CI excludes SOTA from above: False
+  [A] family-grouped : 32 rows / 17 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.2235 std=0.7292 min=-1.8885 max=0.7988
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.4525 std=0.0365; material-bootstrap 95% CI [0.064, 0.758]
+  vs SOTA 0.84: delta (GKF mean) -0.3875; CI excludes SOTA from above: False
+
+  SUMMARY (AR-05/14 only, config A (reproduces train_loi_v1))
+config  n  gss_mean  gkf_mean           ci  loo_r2  loo_mae  loo_rmse  fam_gkf  lofo_r2  lofo_mae
+     A 32     0.488     0.504 [0.05, 0.64]   0.509    8.067    13.362    0.452    0.449     8.244
+
+=== union AR-05/14 + AR-01/53, config A: 38 polymers, 17 families, LOI 15-95, sd 17.87 ===
+  reference LOI=125/eta_c^0.25 (in-sample for its authors): R2=0.534 MAE=7.16
+  [A] polymer-grouped: 38 rows / 38 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.4123 std=0.5193 min=-1.1095 max=0.8436
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.5092 std=0.0382; material-bootstrap 95% CI [0.186, 0.657]
+  vs SOTA 0.84: delta (GKF mean) -0.3308; CI excludes SOTA from above: False
+  [A] family-grouped : 38 rows / 17 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.2431 std=0.7057 min=-1.7956 max=0.8305
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.4771 std=0.0321; material-bootstrap 95% CI [0.123, 0.760]
+  vs SOTA 0.84: delta (GKF mean) -0.3629; CI excludes SOTA from above: False
+
+  SUMMARY (union AR-05/14 + AR-01/53, config A)
+config  n  gss_mean  gkf_mean           ci  loo_r2  loo_mae  loo_rmse  fam_gkf  lofo_r2  lofo_mae
+     A 38     0.412     0.509 [0.19, 0.66]   0.529    7.063    12.258    0.477    0.475     7.201
+
+  union leave-one-out predictions for the AR-01/53 rows:
+     polymer  LOI  eta_c  LOO_pred
+DGEBA-EMI-24 19.5  833.0      19.4
+DGEBC-EMI-24 27.5  487.0      23.5
+  DGEBA-TETA 21.5  655.0      21.2
+   DGEBA-MDA 27.5  641.0      21.1
+   DGEBA-BPA 21.0  858.0      19.1
+   DGEBC-BPC 35.5  153.0      35.8
+
+  EXTERNAL: config A fit on 32 AR-05/14 rows -> 6 AR-01/53 rows
+     polymer  LOI  pred_A  formula
+DGEBA-EMI-24 19.5    18.8     23.3
+DGEBC-EMI-24 27.5    23.0     26.6
+  DGEBA-TETA 21.5    20.6     24.7
+   DGEBA-MDA 27.5    20.8     24.8
+   DGEBA-BPA 21.0    18.6     23.1
+   DGEBC-BPC 35.5    35.5     35.5
+  config A: R2 0.598  MAE 2.54  RMSE 3.47  (n=6, LOI sd 5.48)
+  formula 125/eta_c^0.25: R2 0.796  MAE 2.11  RMSE 2.47  (n=6, LOI sd 5.48)

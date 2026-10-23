@@ -1,0 +1,36 @@
+[INFO] File loaded with encoding: utf-8
+[SAVE] model=/private/tmp/claude-502/-Users-niks-Library-Application-Support-Claude-Nebula-scratch-workspaces-ca6b06e6-bffc-4cd0-a4b3-e25495b34af1-b80a362d-c429-45b3-ad2e-76e7f795b49a-scratch-2026-10-08-271631/a39767ff-af18-441e-b6db-7b73869d960e/scratchpad/r0full_LOI/LOI/reference/formulation/without_BDE/LOI_outer_fold_1_model.joblib
+[SAVE] model=/private/tmp/claude-502/-Users-niks-Library-Application-Support-Claude-Nebula-scratch-workspaces-ca6b06e6-bffc-4cd0-a4b3-e25495b34af1-b80a362d-c429-45b3-ad2e-76e7f795b49a-scratch-2026-10-08-271631/a39767ff-af18-441e-b6db-7b73869d960e/scratchpad/r0full_LOI/LOI/reference/formulation/without_BDE/LOI_outer_fold_2_model.joblib
+[SAVE] model=/private/tmp/claude-502/-Users-niks-Library-Application-Support-Claude-Nebula-scratch-workspaces-ca6b06e6-bffc-4cd0-a4b3-e25495b34af1-b80a362d-c429-45b3-ad2e-76e7f795b49a-scratch-2026-10-08-271631/a39767ff-af18-441e-b6db-7b73869d960e/scratchpad/r0full_LOI/LOI/reference/formulation/without_BDE/LOI_outer_fold_3_model.joblib
+[SAVE] model=/private/tmp/claude-502/-Users-niks-Library-Application-Support-Claude-Nebula-scratch-workspaces-ca6b06e6-bffc-4cd0-a4b3-e25495b34af1-b80a362d-c429-45b3-ad2e-76e7f795b49a-scratch-2026-10-08-271631/a39767ff-af18-441e-b6db-7b73869d960e/scratchpad/r0full_LOI/LOI/reference/formulation/without_BDE/LOI_outer_fold_4_model.joblib
+[SAVE] model=/private/tmp/claude-502/-Users-niks-Library-Application-Support-Claude-Nebula-scratch-workspaces-ca6b06e6-bffc-4cd0-a4b3-e25495b34af1-b80a362d-c429-45b3-ad2e-76e7f795b49a-scratch-2026-10-08-271631/a39767ff-af18-441e-b6db-7b73869d960e/scratchpad/r0full_LOI/LOI/reference/formulation/without_BDE/LOI_outer_fold_5_model.joblib
+{
+ "task": "LOI",
+ "metric": "outer_R2",
+ "per_fold": [
+  0.696995484316278,
+  0.7112163161574543,
+  0.6981267950549748,
+  0.6447659578438086,
+  0.7547860277245105
+ ],
+ "mean": 0.7011781162194053,
+ "sd": 0.03931828524050356,
+ "gate": [
+  0.699,
+  0.719
+ ],
+ "passed": true,
+ "folds_equal_published": false,
+ "max_abs_pred_diff_vs_published": 2.903410767499441,
+ "selected_models": [
+  "XGB",
+  "GBDT",
+  "ExtraTrees",
+  "XGB",
+  "XGB"
+ ],
+ "minutes": 3.27,
+ "modified_R2_mean": 0.3890074042827563
+}
+~/dravix/.venv_dopo/bin/python -I  gate LOI $S/r0full_LOI  219.96s user 1.45s system 99% cpu 3:42.87 total

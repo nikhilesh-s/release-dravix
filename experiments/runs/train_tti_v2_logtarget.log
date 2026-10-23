@@ -1,0 +1,15 @@
+Training rows: 546 across 61 materials (TTI x MCC inner join)
+  seed=0: n_test=144, held-out R2 (seconds)=0.2530
+  seed=1: n_test=156, held-out R2 (seconds)=-0.2917
+  seed=2: n_test=145, held-out R2 (seconds)=0.1721
+  seed=3: n_test=150, held-out R2 (seconds)=0.2072
+  seed=4: n_test=124, held-out R2 (seconds)=0.2218
+  seed=5: n_test=151, held-out R2 (seconds)=0.0522
+  seed=6: n_test=159, held-out R2 (seconds)=-0.4393
+  seed=7: n_test=131, held-out R2 (seconds)=0.1550
+  seed=8: n_test=145, held-out R2 (seconds)=0.3023
+  seed=9: n_test=133, held-out R2 (seconds)=0.3965
+
+Held-out R2 (seconds scale) across 10 material-grouped splits: mean=0.1029, std=0.2517, min=-0.4393, max=0.3965
+SOTA (pomazi_2026, real held-out ANN): R2=0.58
+Delta (mean Dravix - SOTA): -0.4771

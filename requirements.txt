@@ -1,0 +1,11 @@
+# Dravix V2 runtime, the packages data/v2/*.py import.
+# scikit-learn is pinned to 1.7.1 so models/v2/phrr_rf_v1.joblib unpickles cleanly (it was saved with 1.7.1).
+# The other pins are the exact versions the 2026-09-29 repro audit used (Python 3.13.13), and they
+# reproduced leaderboard exp001-exp008 to 4 decimal places.
+scikit-learn==1.7.1
+numpy==2.5.3
+pandas==3.0.6
+scipy==1.18.1
+joblib==1.6.0
+rdkit==2026.03.6  # LOI round 3 FR structure features (data/v2/train_loi_rpuf_round3.py)
+matplotlib==3.10.6  # reports/figures/v2_final (data/v2/make_figures.py)

@@ -1,0 +1,659 @@
+[audit] 220/220 rows recomputed from raw HRRPUA files; max |recomputed - thr_fsri.csv| = 0.005 MJ/m2
+[audit] PMMA @50: 89.94 MJ/m2 (csv 89.94), curve ends 122.5s after ignition at 146 kW/m2 (13% of peak)
+[audit] mean-of-replicate THR vs THR of mean curve: median rel diff -0.004, |rel| > 5% on 27 rows
+[audit] curve end - longest replicate's (END OF TEST TIME - TTI): median -2.75s, |diff| > 5s on 98 rows
+[audit] mean curve ends above 10% of its peak on 135 rows / 59 materials; any single replicate does on 158 rows
+[audit] THR < 2 MJ/m2 (essentially no flaming heat): 20 rows
+[scan] 732 replicate scans -> 220/220 THR rows; mean-of-replicate THR from raw O2 data vs thr_fsri.csv: median rel diff -0.0008, |rel| > 5% on 51 rows
+[scan] heat in the 60 s after END OF TEST TIME: median 1.66 / p90 3.26 / max 10.41 MJ/m2; > 10% of the row's THR on 49 rows (of which THR < 20 MJ/m2: 41)
+[scan] per-replicate (untruncated) THR minus thr_fsri.csv: median -0.00, p10 -2.87, p90 +2.58 MJ/m2; higher by >5% AND >2 MJ/m2 on 13 rows, lower by >5% AND >2 MJ/m2 on 17 rows
+[scan]   rows whose averaged curve ends >5 s before the longest replicate: 98; there median +0.31, max +59.74 MJ/m2. Scan replicate count != HRRPUA file's on 3 rows
+[scan]   largest differences (averaged curve cut at the shortest replicate -> too low; running on with only
+         the surviving replicates in its 'Mean' -> too high):
+                   material  heat_flux_kWm2  total_heat_release_MJm2  thr_scan  curve_end_s  scalar_end_after_ign_min  scalar_end_after_ign_max  n_replicates  n_scan_reps    diff
+      Engineered_Wood_Table            25.0                   295.50    101.43      4154.50                    642.00                   4154.50             5            5 -194.07
+        Eucalyptus_Flooring            75.0                   308.11    218.36      6539.00                   1193.00                   6539.00             3            3  -89.75
+Plastic_Laminate_Countertop            25.0                   226.11    155.50      5740.75                   2963.50                   5740.75             3            3  -70.61
+                      Nylon            25.0                   155.12    123.62       822.50                    294.50                    822.50             3            3  -31.50
+          Latex_Pillow_Foam            25.0                    93.39     73.48       231.00                    137.00                    231.00             4            4  -19.91
+                   Homasote            25.0                    67.01     51.41       893.25                    169.00                    893.25             4            4  -15.60
+                        OSB            25.0                   114.28    124.75       936.50                    936.50                   1190.75             3            3   10.47
+             Masonite_Board            50.0                    35.46     49.02        95.75                     95.75                    233.25             6            6   13.56
+                  Wood_Stud            75.0                   199.77    214.99      1909.75                   1909.75                   2294.50             3            3   15.22
+                   Wool_Rug            25.0                    15.24     31.67       465.75                    465.75                   1287.75             4            4   16.43
+                       HDPE            50.0                   114.26    151.71       112.50                    112.50                    215.00             4            4   37.45
+              EPDM_Membrane            25.0                   130.29    169.63       443.00                    443.00                   1121.75             5            5   39.34
+                       HDPE            25.0                   104.41    145.81       179.50                    133.50                    353.50             6            6   41.40
+                  Wood_Stud            25.0                   116.91    176.65      1928.50                   1928.50                   3271.50             3            3   59.74
+replicates stopped early by the operator (POST TEST CMT): {'Face_Shield': [50.0, 75.0, 100.0], 'High_Temperature_SCBA_Facepiece': [50.0, 75.0, 100.0], 'Vinyl_Tile': [25.0, 50.0, 75.0]}
+
+[as-declared] rows: all 220 / 76 materials; core (m''_flux and MCC h_c) 175 / 60
+
+V0 zero-parameter THR = m''_flux * h_c (chi=1): 175 rows / 60 materials, R2 = 0.6300
+   observed chi = THR / (m'' h_c): median 0.822, IQR [0.710, 0.978], min 0.001, max 1.378
+   flux    25: n= 53  R2=0.5782  median chi=0.777
+   flux    35: n=  5  R2=0.3857  median chi=0.726
+   flux    50: n= 57  R2=0.7056  median chi=0.836
+   flux    75: n= 57  R2=0.7199  median chi=0.878
+   flux   100: n=  3  R2=-35.3774  median chi=0.028
+   rows with chi > 1.1 (more heat than complete combustion allows) or chi < 0.1:
+                       material  heat_flux_kWm2  total_heat_release_MJm2  integrated_to_time_s  mpa_flux_kgm2  hc_kJg  ehc_MJkg   chi
+                    Face_Shield            50.0                     0.21                 28.75          5.666  26.085     0.037 0.001
+                    Face_Shield            75.0                     0.60                 13.00          5.726  26.085     0.105 0.004
+High_Temperature_SCBA_Facepiece            50.0                     1.83                 19.50          4.139  30.337     0.442 0.015
+High_Temperature_SCBA_Facepiece            75.0                     2.34                 20.50          4.521  30.337     0.518 0.017
+                    Face_Shield           100.0                     3.65                 45.50          5.522  26.085     0.661 0.025
+High_Temperature_SCBA_Facepiece           100.0                     3.58                 17.25          4.182  30.337     0.856 0.028
+                            PVC            25.0                     2.91                 39.00          4.610  13.263     0.631 0.048
+        Feather_Pillow_Feathers            75.0                     0.86                 17.25          0.538  20.060     1.599 0.080
+                     House_Wrap            50.0                     0.35                 14.25          0.079  49.868     4.420 0.089
+                           LDPE            50.0                   145.92                140.50          3.010  43.666    48.478 1.110
+                           PMMA            25.0                   104.08                188.75          3.350  27.975    31.069 1.111
+                           PETG            25.0                    79.11                142.75          3.460  20.108    22.864 1.137
+                           LDPE            25.0                   149.42                240.75          3.000  43.666    49.807 1.141
+                           PETG            50.0                    79.76                 92.50          3.450  20.108    23.119 1.150
+                          Nylon            50.0                   129.56                192.75          3.640  30.932    35.593 1.151
+                           PETG            75.0                    80.46                 81.00          3.440  20.108    23.390 1.163
+            Polyester_Bed_Skirt            75.0                    10.86                130.00          0.514  18.008    21.146 1.174
+                       Wool_Rug            50.0                    50.07                419.25          3.759  11.335    13.320 1.175
+                             PP            50.0                   141.54                127.00          2.860  41.986    49.490 1.179
+    Polyisocyanurate_Foam_Board            50.0                    15.81                343.50          0.709  18.744    22.315 1.190
+                             PP            75.0                   144.20                103.50          2.880  41.986    50.069 1.193
+                             PP            25.0                   143.80                201.25          2.860  41.986    50.280 1.198
+     Polyester_Microfiber_Sheet            75.0                    10.27                103.50          0.477  17.898    21.530 1.203
+                          Nylon            25.0                   155.12                822.50          3.640  30.932    42.615 1.378
+   sensitivity, material-level m'' (material_props median): R2 = 0.6456
+   truncated=False: n=71, median chi=0.857, R2=0.7426
+   truncated=True: n=104, median chi=0.801, R2=0.5478
+
+== material-grouped, core rows ==
+core V1 [phys_MJm2]: 175 rows / 60 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.7058 std=0.2424 min=0.0280 max=0.8822
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.7867 std=0.0127; material-bootstrap 95% CI [0.548, 0.883]
+  vs SOTA 0.67: delta (GKF mean) +0.1167; CI excludes SOTA from above: False
+core V1f [phys_MJm2, phys_x_flux]: 175 rows / 60 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.6908 std=0.2631 min=-0.0522 max=0.8707
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.7750 std=0.0164; material-bootstrap 95% CI [0.496, 0.877]
+  vs SOTA 0.67: delta (GKF mean) +0.1050; CI excludes SOTA from above: False
+core V2r [heat_flux_kWm2, mpa_flux_kgm2, hc_kJg, mcc_char_yield_pct, hrc_JgK, density_kgm3, cone_thickness_mm, phys_MJm2]: 175 rows / 60 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.7319 std=0.2500 min=0.0035 max=0.8895
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.7950 std=0.0531; material-bootstrap 95% CI [0.511, 0.880]
+  vs SOTA 0.67: delta (GKF mean) +0.1250; CI excludes SOTA from above: False
+core V2h [heat_flux_kWm2, mpa_flux_kgm2, hc_kJg, mcc_char_yield_pct, hrc_JgK, density_kgm3, cone_thickness_mm, phys_MJm2]: 175 rows / 60 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.6989 std=0.2163 min=0.0754 max=0.8685
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.7705 std=0.0669; material-bootstrap 95% CI [0.469, 0.807]
+  vs SOTA 0.67: delta (GKF mean) +0.1005; CI excludes SOTA from above: False
+core B_r [heat_flux_kWm2, mcc_peak_hrr_Wg, mcc_char_yield_pct]: 175 rows / 60 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=-0.6379 std=0.9158 min=-2.6234 max=0.1438
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=-0.4291 std=0.1700; material-bootstrap 95% CI [-2.034, -0.187]
+  vs SOTA 0.67: delta (GKF mean) -1.0991; CI excludes SOTA from above: False
+core B_h [heat_flux_kWm2, mcc_peak_hrr_Wg, mcc_char_yield_pct]: 175 rows / 60 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=-0.6345 std=0.7242 min=-2.5840 max=-0.0371
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=-0.4649 std=0.1515; material-bootstrap 95% CI [-1.209, -0.084]
+  vs SOTA 0.67: delta (GKF mean) -1.1349; CI excludes SOTA from above: False
+
+== material-grouped, wide rows (all THR rows, NaN features allowed) ==
+wide V2h [heat_flux_kWm2, mpa_flux_kgm2, hc_kJg, mcc_char_yield_pct, hrc_JgK, density_kgm3, cone_thickness_mm, phys_MJm2]: 220 rows / 76 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.6091 std=0.1919 min=0.2613 max=0.8586
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.7041 std=0.0472; material-bootstrap 95% CI [0.683, 0.868]
+  vs SOTA 0.67: delta (GKF mean) +0.0341; CI excludes SOTA from above: True
+wide B_h [heat_flux_kWm2, mcc_peak_hrr_Wg, mcc_char_yield_pct]: 220 rows / 76 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=-0.5835 std=0.7499 min=-2.7514 max=0.0033
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=-0.2464 std=0.0661; material-bootstrap 95% CI [-0.785, -0.066]
+  vs SOTA 0.67: delta (GKF mean) -0.9164; CI excludes SOTA from above: False
+
+== family-grouped (first category; 11 families), core rows ==
+family V1 [phys_MJm2]: 175 rows / 11 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.6230 std=0.3495 min=-0.2242 max=0.9162
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.7488 std=0.0038; material-bootstrap 95% CI [0.395, 0.934]
+  vs SOTA 0.67: delta (GKF mean) +0.0788; CI excludes SOTA from above: False
+family V2h [heat_flux_kWm2, mpa_flux_kgm2, hc_kJg, mcc_char_yield_pct, hrc_JgK, density_kgm3, cone_thickness_mm, phys_MJm2]: 175 rows / 11 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.6087 std=0.2553 min=0.0182 max=0.8568
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.7256 std=0.0344; material-bootstrap 95% CI [0.516, 0.944]
+  vs SOTA 0.67: delta (GKF mean) +0.0556; CI excludes SOTA from above: False
+family B_h [heat_flux_kWm2, mcc_peak_hrr_Wg, mcc_char_yield_pct]: 175 rows / 11 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=-2.9251 std=4.5440 min=-16.0966 max=0.0263
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=-0.7669 std=0.2349; material-bootstrap 95% CI [-2.559, -0.491]
+  vs SOTA 0.67: delta (GKF mean) -1.4369; CI excludes SOTA from above: False
+
+== stratified R2 of the pooled OOF predictions (repeat 0), core rows, material-grouped ==
+   V1 heat_flux_kWm2=25.0: n=53 rows / 53 mats, THR std 61.8 MJ/m2, R2=0.793
+   V1 heat_flux_kWm2=35.0: n=5 rows / 5 mats, THR std 23.3 MJ/m2, R2=0.976
+   V1 heat_flux_kWm2=50.0: n=57 rows / 57 mats, THR std 65.8 MJ/m2, R2=0.799
+   V1 heat_flux_kWm2=75.0: n=57 rows / 57 mats, THR std 66.2 MJ/m2, R2=0.794
+   V1 family=engineered wood: n=23 rows / 9 mats, THR std 53.4 MJ/m2, R2=0.865
+   V1 family=exterior finish: n=11 rows / 4 mats, THR std 43.5 MJ/m2, R2=0.992
+   V1 family=general polymer: n=41 rows / 14 mats, THR std 70.3 MJ/m2, R2=0.712
+   V1 family=insulation: n=15 rows / 5 mats, THR std 7.3 MJ/m2, R2=0.659
+   V1 family=interior finish: n=24 rows / 8 mats, THR std 44.5 MJ/m2, R2=0.768
+   V1 family=sleeping product: n=18 rows / 6 mats, THR std 14.7 MJ/m2, R2=0.700
+   V1 family=unknown: n=27 rows / 8 mats, THR std 35.9 MJ/m2, R2=-1.228
+   V2h heat_flux_kWm2=25.0: n=53 rows / 53 mats, THR std 61.8 MJ/m2, R2=0.700
+   V2h heat_flux_kWm2=35.0: n=5 rows / 5 mats, THR std 23.3 MJ/m2, R2=0.867
+   V2h heat_flux_kWm2=50.0: n=57 rows / 57 mats, THR std 65.8 MJ/m2, R2=0.620
+   V2h heat_flux_kWm2=75.0: n=57 rows / 57 mats, THR std 66.2 MJ/m2, R2=0.664
+   V2h family=engineered wood: n=23 rows / 9 mats, THR std 53.4 MJ/m2, R2=0.722
+   V2h family=exterior finish: n=11 rows / 4 mats, THR std 43.5 MJ/m2, R2=0.526
+   V2h family=general polymer: n=41 rows / 14 mats, THR std 70.3 MJ/m2, R2=0.364
+   V2h family=insulation: n=15 rows / 5 mats, THR std 7.3 MJ/m2, R2=-14.450
+   V2h family=interior finish: n=24 rows / 8 mats, THR std 44.5 MJ/m2, R2=0.895
+   V2h family=sleeping product: n=18 rows / 6 mats, THR std 14.7 MJ/m2, R2=0.736
+   V2h family=unknown: n=27 rows / 8 mats, THR std 35.9 MJ/m2, R2=-1.034
+
+   non-truncated core rows only (diagnostic, not a headline):
+core-nontrunc V1 [phys_MJm2]: 71 rows / 35 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.7632 std=0.2445 min=0.0683 max=0.9223
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.7924 std=0.0222; material-bootstrap 95% CI [0.403, 0.919]
+  vs SOTA 0.67: delta (GKF mean) +0.1224; CI excludes SOTA from above: False
+core-nontrunc V2h [heat_flux_kWm2, mpa_flux_kgm2, hc_kJg, mcc_char_yield_pct, hrc_JgK, density_kgm3, cone_thickness_mm, phys_MJm2]: 71 rows / 35 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.3236 std=0.5207 min=-0.8071 max=0.9206
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.4836 std=0.0768; material-bootstrap 95% CI [-0.468, 0.641]
+  vs SOTA 0.67: delta (GKF mean) -0.1864; CI excludes SOTA from above: False
+
+[as-declared] best GKF mean on core rows: V2r 0.7950
+
+
+######## CLEAN: drop 6 rows whose every replicate was stopped early (test notes, not residuals) ########
+
+[clean] rows: all 214 / 74 materials; core (m''_flux and MCC h_c) 169 / 58
+
+V0 zero-parameter THR = m''_flux * h_c (chi=1): 169 rows / 58 materials, R2 = 0.7800
+   observed chi = THR / (m'' h_c): median 0.828, IQR [0.728, 0.986], min 0.048, max 1.378
+   flux    25: n= 53  R2=0.5782  median chi=0.777
+   flux    35: n=  5  R2=0.3857  median chi=0.726
+   flux    50: n= 55  R2=0.8508  median chi=0.838
+   flux    75: n= 55  R2=0.8772  median chi=0.896
+   flux   100: n=  1  R2=nan  median chi=0.742
+   rows with chi > 1.1 (more heat than complete combustion allows) or chi < 0.1:
+                   material  heat_flux_kWm2  total_heat_release_MJm2  integrated_to_time_s  mpa_flux_kgm2  hc_kJg  ehc_MJkg   chi
+                        PVC            25.0                     2.91                 39.00          4.610  13.263     0.631 0.048
+    Feather_Pillow_Feathers            75.0                     0.86                 17.25          0.538  20.060     1.599 0.080
+                 House_Wrap            50.0                     0.35                 14.25          0.079  49.868     4.420 0.089
+                       LDPE            50.0                   145.92                140.50          3.010  43.666    48.478 1.110
+                       PMMA            25.0                   104.08                188.75          3.350  27.975    31.069 1.111
+                       PETG            25.0                    79.11                142.75          3.460  20.108    22.864 1.137
+                       LDPE            25.0                   149.42                240.75          3.000  43.666    49.807 1.141
+                       PETG            50.0                    79.76                 92.50          3.450  20.108    23.119 1.150
+                      Nylon            50.0                   129.56                192.75          3.640  30.932    35.593 1.151
+                       PETG            75.0                    80.46                 81.00          3.440  20.108    23.390 1.163
+        Polyester_Bed_Skirt            75.0                    10.86                130.00          0.514  18.008    21.146 1.174
+                   Wool_Rug            50.0                    50.07                419.25          3.759  11.335    13.320 1.175
+                         PP            50.0                   141.54                127.00          2.860  41.986    49.490 1.179
+Polyisocyanurate_Foam_Board            50.0                    15.81                343.50          0.709  18.744    22.315 1.190
+                         PP            75.0                   144.20                103.50          2.880  41.986    50.069 1.193
+                         PP            25.0                   143.80                201.25          2.860  41.986    50.280 1.198
+ Polyester_Microfiber_Sheet            75.0                    10.27                103.50          0.477  17.898    21.530 1.203
+                      Nylon            25.0                   155.12                822.50          3.640  30.932    42.615 1.378
+   sensitivity, material-level m'' (material_props median): R2 = 0.7937
+   truncated=False: n=69, median chi=0.862, R2=0.8776
+   truncated=True: n=100, median chi=0.811, R2=0.7077
+
+== material-grouped, core rows ==
+core V1 [phys_MJm2]: 169 rows / 58 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.8649 std=0.0454 min=0.7734 max=0.9277
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.8812 std=0.0067; material-bootstrap 95% CI [0.799, 0.915]
+  vs SOTA 0.67: delta (GKF mean) +0.2112; CI excludes SOTA from above: True
+core V1f [phys_MJm2, phys_x_flux]: 169 rows / 58 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.8726 std=0.0426 min=0.7891 max=0.9324
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.8855 std=0.0070; material-bootstrap 95% CI [0.806, 0.917]
+  vs SOTA 0.67: delta (GKF mean) +0.2155; CI excludes SOTA from above: True
+core V2r [heat_flux_kWm2, mpa_flux_kgm2, hc_kJg, mcc_char_yield_pct, hrc_JgK, density_kgm3, cone_thickness_mm, phys_MJm2]: 169 rows / 58 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.8466 std=0.0792 min=0.7184 max=0.9463
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.8309 std=0.0170; material-bootstrap 95% CI [0.692, 0.907]
+  vs SOTA 0.67: delta (GKF mean) +0.1609; CI excludes SOTA from above: True
+core V2h [heat_flux_kWm2, mpa_flux_kgm2, hc_kJg, mcc_char_yield_pct, hrc_JgK, density_kgm3, cone_thickness_mm, phys_MJm2]: 169 rows / 58 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.8280 std=0.0555 min=0.7414 max=0.8938
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.8390 std=0.0177; material-bootstrap 95% CI [0.695, 0.900]
+  vs SOTA 0.67: delta (GKF mean) +0.1690; CI excludes SOTA from above: True
+core B_r [heat_flux_kWm2, mcc_peak_hrr_Wg, mcc_char_yield_pct]: 169 rows / 58 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=-0.8542 std=0.6712 min=-2.6605 max=-0.0533
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=-0.3326 std=0.1229; material-bootstrap 95% CI [-0.761, -0.058]
+  vs SOTA 0.67: delta (GKF mean) -1.0026; CI excludes SOTA from above: False
+core B_h [heat_flux_kWm2, mcc_peak_hrr_Wg, mcc_char_yield_pct]: 169 rows / 58 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=-0.8249 std=0.7239 min=-2.4697 max=-0.0557
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=-0.4314 std=0.1577; material-bootstrap 95% CI [-1.145, 0.004]
+  vs SOTA 0.67: delta (GKF mean) -1.1014; CI excludes SOTA from above: False
+
+== material-grouped, wide rows (all THR rows, NaN features allowed) ==
+wide V2h [heat_flux_kWm2, mpa_flux_kgm2, hc_kJg, mcc_char_yield_pct, hrc_JgK, density_kgm3, cone_thickness_mm, phys_MJm2]: 214 rows / 74 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.6423 std=0.1696 min=0.2991 max=0.8066
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.7200 std=0.0432; material-bootstrap 95% CI [0.599, 0.867]
+  vs SOTA 0.67: delta (GKF mean) +0.0500; CI excludes SOTA from above: False
+wide B_h [heat_flux_kWm2, mcc_peak_hrr_Wg, mcc_char_yield_pct]: 214 rows / 74 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=-0.4511 std=0.3992 min=-1.3346 max=-0.0119
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=-0.2924 std=0.1628; material-bootstrap 95% CI [-0.380, 0.130]
+  vs SOTA 0.67: delta (GKF mean) -0.9624; CI excludes SOTA from above: False
+
+== family-grouped (first category; 11 families), core rows ==
+family V1 [phys_MJm2]: 169 rows / 11 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.8535 std=0.0742 min=0.7326 max=0.9613
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.8674 std=0.0055; material-bootstrap 95% CI [0.828, 0.942]
+  vs SOTA 0.67: delta (GKF mean) +0.1974; CI excludes SOTA from above: True
+family V2h [heat_flux_kWm2, mpa_flux_kgm2, hc_kJg, mcc_char_yield_pct, hrc_JgK, density_kgm3, cone_thickness_mm, phys_MJm2]: 169 rows / 11 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.8365 std=0.1081 min=0.6046 max=0.9584
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.8226 std=0.0299; material-bootstrap 95% CI [0.762, 0.944]
+  vs SOTA 0.67: delta (GKF mean) +0.1526; CI excludes SOTA from above: True
+family B_h [heat_flux_kWm2, mcc_peak_hrr_Wg, mcc_char_yield_pct]: 169 rows / 11 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=-2.5444 std=3.9078 min=-13.9035 max=0.2304
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=-0.6733 std=0.2759; material-bootstrap 95% CI [-2.321, -0.390]
+  vs SOTA 0.67: delta (GKF mean) -1.3433; CI excludes SOTA from above: False
+
+== stratified R2 of the pooled OOF predictions (repeat 0), core rows, material-grouped ==
+   V1 heat_flux_kWm2=25.0: n=53 rows / 53 mats, THR std 61.8 MJ/m2, R2=0.753
+   V1 heat_flux_kWm2=35.0: n=5 rows / 5 mats, THR std 23.3 MJ/m2, R2=0.879
+   V1 heat_flux_kWm2=50.0: n=55 rows / 55 mats, THR std 65.9 MJ/m2, R2=0.913
+   V1 heat_flux_kWm2=75.0: n=55 rows / 55 mats, THR std 66.2 MJ/m2, R2=0.921
+   V1 family=engineered wood: n=23 rows / 9 mats, THR std 53.4 MJ/m2, R2=0.812
+   V1 family=exterior finish: n=11 rows / 4 mats, THR std 43.5 MJ/m2, R2=0.982
+   V1 family=general polymer: n=41 rows / 14 mats, THR std 70.3 MJ/m2, R2=0.786
+   V1 family=insulation: n=15 rows / 5 mats, THR std 7.3 MJ/m2, R2=0.696
+   V1 family=interior finish: n=24 rows / 8 mats, THR std 44.5 MJ/m2, R2=0.690
+   V1 family=sleeping product: n=18 rows / 6 mats, THR std 14.7 MJ/m2, R2=0.730
+   V1 family=unknown: n=21 rows / 6 mats, THR std 35.4 MJ/m2, R2=0.944
+   V2h heat_flux_kWm2=25.0: n=53 rows / 53 mats, THR std 61.8 MJ/m2, R2=0.665
+   V2h heat_flux_kWm2=35.0: n=5 rows / 5 mats, THR std 23.3 MJ/m2, R2=-0.370
+   V2h heat_flux_kWm2=50.0: n=55 rows / 55 mats, THR std 65.9 MJ/m2, R2=0.825
+   V2h heat_flux_kWm2=75.0: n=55 rows / 55 mats, THR std 66.2 MJ/m2, R2=0.865
+   V2h family=engineered wood: n=23 rows / 9 mats, THR std 53.4 MJ/m2, R2=0.494
+   V2h family=exterior finish: n=11 rows / 4 mats, THR std 43.5 MJ/m2, R2=0.888
+   V2h family=general polymer: n=41 rows / 14 mats, THR std 70.3 MJ/m2, R2=0.564
+   V2h family=insulation: n=15 rows / 5 mats, THR std 7.3 MJ/m2, R2=-1.832
+   V2h family=interior finish: n=24 rows / 8 mats, THR std 44.5 MJ/m2, R2=0.839
+   V2h family=sleeping product: n=18 rows / 6 mats, THR std 14.7 MJ/m2, R2=0.863
+   V2h family=unknown: n=21 rows / 6 mats, THR std 35.4 MJ/m2, R2=0.934
+
+   non-truncated core rows only (diagnostic, not a headline):
+core-nontrunc V1 [phys_MJm2]: 69 rows / 34 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.8993 std=0.0606 min=0.7588 max=0.9698
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.9077 std=0.0092; material-bootstrap 95% CI [0.811, 0.969]
+  vs SOTA 0.67: delta (GKF mean) +0.2377; CI excludes SOTA from above: True
+core-nontrunc V2h [heat_flux_kWm2, mpa_flux_kgm2, hc_kJg, mcc_char_yield_pct, hrc_JgK, density_kgm3, cone_thickness_mm, phys_MJm2]: 69 rows / 34 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.6395 std=0.1111 min=0.3922 max=0.7904
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.7346 std=0.0338; material-bootstrap 95% CI [0.656, 0.894]
+  vs SOTA 0.67: delta (GKF mean) +0.0646; CI excludes SOTA from above: False
+
+[clean] best GKF mean on core rows: V1f 0.8855
+
+
+######## UNTRUNCATED TARGET (per-replicate raw-scan THR), clean rows ########
+
+[clean, untruncated target] rows: all 214 / 74 materials; core (m''_flux and MCC h_c) 169 / 58
+
+V0 zero-parameter THR = m''_flux * h_c (chi=1): 169 rows / 58 materials, R2 = 0.8232
+   observed chi = THR / (m'' h_c): median 0.823, IQR [0.730, 0.987], min 0.004, max 1.227
+   flux    25: n= 53  R2=0.7247  median chi=0.782
+   flux    35: n=  5  R2=0.5060  median chi=0.701
+   flux    50: n= 55  R2=0.8513  median chi=0.851
+   flux    75: n= 55  R2=0.8828  median chi=0.886
+   flux   100: n=  1  R2=nan  median chi=0.742
+   rows with chi > 1.1 (more heat than complete combustion allows) or chi < 0.1:
+                   material  heat_flux_kWm2  total_heat_release_MJm2  integrated_to_time_s  mpa_flux_kgm2  hc_kJg  ehc_MJkg   chi
+                 House_Wrap            50.0                    0.014                 14.25          0.079  49.868     0.180 0.004
+                        PVC            25.0                    3.048                 39.00          4.610  13.263     0.661 0.050
+    Feather_Pillow_Feathers            25.0                    1.036                 35.50          0.538  20.060     1.926 0.096
+                       LDPE            50.0                  144.611                140.50          3.010  43.666    48.044 1.100
+                       LDPE            25.0                  145.183                240.75          3.000  43.666    48.394 1.108
+                       PMMA            25.0                  104.125                188.75          3.350  27.975    31.082 1.111
+                      Nylon            75.0                  125.276                127.25          3.640  30.932    34.416 1.113
+                       PETG            25.0                   78.417                142.75          3.460  20.108    22.664 1.127
+Polyisocyanurate_Foam_Board            50.0                   14.970                343.50          0.709  18.744    21.130 1.127
+                       PMMA            75.0                  105.182                 90.00          3.310  27.975    31.777 1.136
+                   Wool_Rug            50.0                   48.851                419.25          3.759  11.335    12.996 1.147
+                      Nylon            50.0                  129.480                192.75          3.640  30.932    35.571 1.150
+                       PETG            50.0                   79.880                 92.50          3.450  20.108    23.154 1.151
+                       PETG            75.0                   80.151                 81.00          3.440  20.108    23.300 1.159
+                         PP            50.0                  140.527                127.00          2.860  41.986    49.135 1.170
+                         PP            75.0                  143.890                103.50          2.880  41.986    49.962 1.190
+                         PP            25.0                  143.104                201.25          2.860  41.986    50.036 1.192
+        Polyester_Bed_Skirt            75.0                   11.229                130.00          0.514  18.008    21.865 1.214
+ Polyester_Microfiber_Sheet            75.0                   10.477                103.50          0.477  17.898    21.964 1.227
+   sensitivity, material-level m'' (material_props median): R2 = 0.8343
+   truncated=False: n=69, median chi=0.859, R2=0.8786
+   truncated=True: n=100, median chi=0.810, R2=0.7852
+
+== material-grouped, core rows ==
+core V1 [phys_MJm2]: 169 rows / 58 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.8790 std=0.0672 min=0.7372 max=0.9478
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.9071 std=0.0060; material-bootstrap 95% CI [0.835, 0.937]
+  vs SOTA 0.67: delta (GKF mean) +0.2371; CI excludes SOTA from above: True
+core V1f [phys_MJm2, phys_x_flux]: 169 rows / 58 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.8831 std=0.0651 min=0.7471 max=0.9541
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.9093 std=0.0063; material-bootstrap 95% CI [0.840, 0.937]
+  vs SOTA 0.67: delta (GKF mean) +0.2393; CI excludes SOTA from above: True
+core V2r [heat_flux_kWm2, mpa_flux_kgm2, hc_kJg, mcc_char_yield_pct, hrc_JgK, density_kgm3, cone_thickness_mm, phys_MJm2]: 169 rows / 58 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.8387 std=0.0577 min=0.7526 max=0.9258
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.8420 std=0.0151; material-bootstrap 95% CI [0.735, 0.919]
+  vs SOTA 0.67: delta (GKF mean) +0.1720; CI excludes SOTA from above: True
+core V2h [heat_flux_kWm2, mpa_flux_kgm2, hc_kJg, mcc_char_yield_pct, hrc_JgK, density_kgm3, cone_thickness_mm, phys_MJm2]: 169 rows / 58 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.8446 std=0.0489 min=0.7504 max=0.9049
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.8557 std=0.0136; material-bootstrap 95% CI [0.730, 0.922]
+  vs SOTA 0.67: delta (GKF mean) +0.1857; CI excludes SOTA from above: True
+core B_r [heat_flux_kWm2, mcc_peak_hrr_Wg, mcc_char_yield_pct]: 169 rows / 58 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=-0.8587 std=0.6928 min=-2.6236 max=0.0052
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=-0.3543 std=0.1123; material-bootstrap 95% CI [-0.753, -0.065]
+  vs SOTA 0.67: delta (GKF mean) -1.0243; CI excludes SOTA from above: False
+core B_h [heat_flux_kWm2, mcc_peak_hrr_Wg, mcc_char_yield_pct]: 169 rows / 58 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=-0.8738 std=0.7844 min=-2.5189 max=-0.0385
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=-0.4327 std=0.1559; material-bootstrap 95% CI [-1.196, -0.036]
+  vs SOTA 0.67: delta (GKF mean) -1.1027; CI excludes SOTA from above: False
+
+== material-grouped, wide rows (all THR rows, NaN features allowed) ==
+wide V2h [heat_flux_kWm2, mpa_flux_kgm2, hc_kJg, mcc_char_yield_pct, hrc_JgK, density_kgm3, cone_thickness_mm, phys_MJm2]: 214 rows / 74 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.6825 std=0.0710 min=0.5370 max=0.8017
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.7131 std=0.0441; material-bootstrap 95% CI [0.666, 0.843]
+  vs SOTA 0.67: delta (GKF mean) +0.0431; CI excludes SOTA from above: False
+wide B_h [heat_flux_kWm2, mcc_peak_hrr_Wg, mcc_char_yield_pct]: 214 rows / 74 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=-0.4221 std=0.3336 min=-1.0600 max=-0.0456
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=-0.3209 std=0.1599; material-bootstrap 95% CI [-0.377, 0.134]
+  vs SOTA 0.67: delta (GKF mean) -0.9909; CI excludes SOTA from above: False
+
+== family-grouped (first category; 11 families), core rows ==
+family V1 [phys_MJm2]: 169 rows / 11 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.8961 std=0.0548 min=0.8389 max=0.9824
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.8915 std=0.0023; material-bootstrap 95% CI [0.837, 0.978]
+  vs SOTA 0.67: delta (GKF mean) +0.2215; CI excludes SOTA from above: True
+family V2h [heat_flux_kWm2, mpa_flux_kgm2, hc_kJg, mcc_char_yield_pct, hrc_JgK, density_kgm3, cone_thickness_mm, phys_MJm2]: 169 rows / 11 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.8508 std=0.1114 min=0.6324 max=0.9569
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.8353 std=0.0242; material-bootstrap 95% CI [0.778, 0.919]
+  vs SOTA 0.67: delta (GKF mean) +0.1653; CI excludes SOTA from above: True
+family B_h [heat_flux_kWm2, mcc_peak_hrr_Wg, mcc_char_yield_pct]: 169 rows / 11 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=-2.4839 std=3.7554 min=-13.3211 max=0.2341
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=-0.6739 std=0.2848; material-bootstrap 95% CI [-2.410, -0.396]
+  vs SOTA 0.67: delta (GKF mean) -1.3439; CI excludes SOTA from above: False
+
+== stratified R2 of the pooled OOF predictions (repeat 0), core rows, material-grouped ==
+   V1 heat_flux_kWm2=25.0: n=53 rows / 53 mats, THR std 64.1 MJ/m2, R2=0.849
+   V1 heat_flux_kWm2=35.0: n=5 rows / 5 mats, THR std 24.3 MJ/m2, R2=0.900
+   V1 heat_flux_kWm2=50.0: n=55 rows / 55 mats, THR std 66.2 MJ/m2, R2=0.911
+   V1 heat_flux_kWm2=75.0: n=55 rows / 55 mats, THR std 66.4 MJ/m2, R2=0.931
+   V1 family=engineered wood: n=23 rows / 9 mats, THR std 53.0 MJ/m2, R2=0.842
+   V1 family=exterior finish: n=11 rows / 4 mats, THR std 43.9 MJ/m2, R2=0.980
+   V1 family=general polymer: n=41 rows / 14 mats, THR std 69.8 MJ/m2, R2=0.808
+   V1 family=insulation: n=15 rows / 5 mats, THR std 8.0 MJ/m2, R2=0.646
+   V1 family=interior finish: n=24 rows / 8 mats, THR std 44.2 MJ/m2, R2=0.645
+   V1 family=sleeping product: n=18 rows / 6 mats, THR std 15.2 MJ/m2, R2=0.873
+   V1 family=unknown: n=21 rows / 6 mats, THR std 34.7 MJ/m2, R2=0.971
+   V2h heat_flux_kWm2=25.0: n=53 rows / 53 mats, THR std 64.1 MJ/m2, R2=0.768
+   V2h heat_flux_kWm2=35.0: n=5 rows / 5 mats, THR std 24.3 MJ/m2, R2=-0.016
+   V2h heat_flux_kWm2=50.0: n=55 rows / 55 mats, THR std 66.2 MJ/m2, R2=0.833
+   V2h heat_flux_kWm2=75.0: n=55 rows / 55 mats, THR std 66.4 MJ/m2, R2=0.866
+   V2h family=engineered wood: n=23 rows / 9 mats, THR std 53.0 MJ/m2, R2=0.557
+   V2h family=exterior finish: n=11 rows / 4 mats, THR std 43.9 MJ/m2, R2=0.855
+   V2h family=general polymer: n=41 rows / 14 mats, THR std 69.8 MJ/m2, R2=0.610
+   V2h family=insulation: n=15 rows / 5 mats, THR std 8.0 MJ/m2, R2=-1.116
+   V2h family=interior finish: n=24 rows / 8 mats, THR std 44.2 MJ/m2, R2=0.845
+   V2h family=sleeping product: n=18 rows / 6 mats, THR std 15.2 MJ/m2, R2=0.867
+   V2h family=unknown: n=21 rows / 6 mats, THR std 34.7 MJ/m2, R2=0.949
+
+   non-truncated core rows only (diagnostic, not a headline):
+core-nontrunc V1 [phys_MJm2]: 69 rows / 34 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.9061 std=0.0506 min=0.7902 max=0.9664
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.9198 std=0.0090; material-bootstrap 95% CI [0.839, 0.971]
+  vs SOTA 0.67: delta (GKF mean) +0.2498; CI excludes SOTA from above: True
+core-nontrunc V2h [heat_flux_kWm2, mpa_flux_kgm2, hc_kJg, mcc_char_yield_pct, hrc_JgK, density_kgm3, cone_thickness_mm, phys_MJm2]: 69 rows / 34 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.6577 std=0.1081 min=0.4343 max=0.7936
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.7294 std=0.0381; material-bootstrap 95% CI [0.629, 0.902]
+  vs SOTA 0.67: delta (GKF mean) +0.0594; CI excludes SOTA from above: False
+
+[clean, untruncated target] best GKF mean on core rows: V1f 0.9093
+
+
+######## BASELINE-CORRECTED MCC h_c (total_hr_bc_kJg), clean rows, untruncated target ########
+
+[clean, untruncated, h_c corrected] rows: all 214 / 74 materials; core (m''_flux and MCC h_c) 169 / 58
+
+V0 zero-parameter THR = m''_flux * h_c (chi=1): 169 rows / 58 materials, R2 = 0.9504
+   observed chi = THR / (m'' h_c): median 1.036, IQR [0.892, 1.184], min 0.004, max 1.748
+   flux    25: n= 53  R2=0.9313  median chi=0.939
+   flux    35: n=  5  R2=0.9948  median chi=0.941
+   flux    50: n= 55  R2=0.9565  median chi=1.095
+   flux    75: n= 55  R2=0.9593  median chi=1.090
+   flux   100: n=  1  R2=nan  median chi=0.927
+   rows with chi > 1.1 (more heat than complete combustion allows) or chi < 0.1:
+                           material  heat_flux_kWm2  total_heat_release_MJm2  integrated_to_time_s  mpa_flux_kgm2  hc_kJg  ehc_MJkg   chi
+                         House_Wrap            50.0                    0.014                 14.25          0.079  42.482     0.180 0.004
+                                PVC            25.0                    3.048                 39.00          4.610  12.175     0.661 0.054
+                     Basswood_Panel            50.0                  108.318                615.25          8.012  12.155    13.519 1.112
+Overstuffed_Chair_Polyurethane_Foam            25.0                   23.343                 83.50          0.780  26.839    29.927 1.115
+             Memory_Foam_Carpet_Pad            50.0                   47.948                106.00          1.666  25.699    28.781 1.120
+                          Roof_Felt            50.0                   17.835                 94.25          0.779  20.416    22.883 1.121
+                               PMMA            50.0                   90.383                122.50          3.330  24.170    27.142 1.123
+                           Homasote            75.0                   64.978                544.25          5.948   9.713    10.924 1.125
+         Polyester_Microfiber_Sheet            50.0                    8.839                100.25          0.475  16.531    18.608 1.126
+                               HDPE            25.0                  145.808                179.50          3.190  40.597    45.708 1.126
+             Memory_Foam_Carpet_Pad            75.0                   47.180                 51.50          1.629  25.699    28.963 1.127
+                         Cotton_Raw            75.0                    7.777                112.00          0.647  10.664    12.021 1.127
+                               LDPE            75.0                  137.939                 92.50          3.000  40.446    45.980 1.137
+                              Nylon            25.0                  123.616                822.50          3.640  29.829    33.960 1.138
+                         Black_PMMA            75.0                  295.683                269.50         10.259  25.156    28.822 1.146
+                               HDPE            75.0                  145.006                101.00          3.100  40.597    46.776 1.152
+                              Nylon            75.0                  125.276                127.25          3.640  29.829    34.416 1.154
+                           FDNY_LDF            50.0                   39.667                376.75          2.695  12.740    14.719 1.155
+                         Black_PMMA            25.0                  298.376                594.75         10.191  25.156    29.278 1.164
+                         Black_PMMA            50.0                  301.002                362.00         10.275  25.156    29.296 1.165
+             Nylon_Carpet_High_Pile            75.0                   59.741                183.25          2.610  19.423    22.889 1.178
+                          FRP_Panel            25.0                   41.325                103.50          3.259  10.741    12.680 1.181
+                           Homasote            50.0                   68.401                848.25          5.950   9.713    11.496 1.184
+                               HDPE            50.0                  151.715                112.50          3.149  40.597    48.186 1.187
+                               LDPE            50.0                  144.611                140.50          3.010  40.446    48.044 1.188
+                              Nylon            50.0                  129.480                192.75          3.640  29.829    35.571 1.192
+                           Wool_Rug            75.0                   47.306                298.75          3.805  10.417    12.433 1.193
+                         Hemp_Sheet            25.0                    2.823                 26.00          0.199  11.879    14.179 1.194
+                               LDPE            25.0                  145.183                240.75          3.000  40.446    48.394 1.197
+                          FRP_Panel            75.0                   42.751                 65.25          3.261  10.741    13.110 1.220
+                                 PP            50.0                  140.527                127.00          2.860  40.226    49.135 1.221
+          Engineered_Wood_Furniture            75.0                  150.725                946.25         11.212  10.900    13.443 1.233
+             Nylon_Carpet_High_Pile            50.0                   61.924                200.00          2.585  19.423    23.955 1.233
+                                 PP            75.0                  143.890                103.50          2.880  40.226    49.962 1.242
+                                 PP            25.0                  143.104                201.25          2.860  40.226    50.036 1.244
+                         Hemp_Sheet            50.0                    2.947                 18.25          0.199  11.879    14.802 1.246
+                           Wool_Rug            50.0                   48.851                419.25          3.759  10.417    12.996 1.248
+                    Asphalt_Shingle            25.0                   22.182                308.00          3.632   4.883     6.107 1.251
+                         Luan_Panel            75.0                   26.255                161.00          1.862  11.156    14.101 1.264
+                         Hemp_Sheet            75.0                    2.939                 15.75          0.196  11.879    15.015 1.264
+        Polyisocyanurate_Foam_Board            75.0                   13.557                134.00          0.730  14.676    18.559 1.265
+                            Rug_Pad            75.0                   11.856                129.00          0.722  12.919    16.421 1.271
+          Engineered_Wood_Furniture            50.0                  155.391               1198.50         11.203  10.900    13.870 1.273
+                            Rug_Pad            50.0                   11.774                187.50          0.716  12.919    16.445 1.273
+                    Asphalt_Shingle            50.0                   22.770                 59.50          3.661   4.883     6.220 1.274
+                          Roof_Felt            75.0                   20.968                118.75          0.805  20.416    26.034 1.275
+                          FRP_Panel            50.0                   45.830                 96.00          3.341  10.741    13.719 1.277
+                               PMMA            25.0                  104.125                188.75          3.350  24.170    31.082 1.286
+             Rebond_Foam_Carpet_Pad            25.0                   24.250                 74.00          0.774  24.305    31.331 1.289
+                               PMMA            75.0                  105.182                 90.00          3.310  24.170    31.777 1.315
+                Polyester_Bed_Skirt            75.0                   11.229                130.00          0.514  16.531    21.865 1.323
+         Polyester_Microfiber_Sheet            75.0                   10.477                103.50          0.477  16.531    21.964 1.329
+                         Vinyl_Tile            75.0                   21.629                214.50          5.692   2.839     3.800 1.338
+                         Cotton_Rug            75.0                   28.771                185.50          1.596  13.414    18.025 1.344
+             Rebond_Foam_Carpet_Pad            50.0                   25.272                 68.50          0.772  24.305    32.735 1.347
+                    Asphalt_Shingle            75.0                   23.935                 51.75          3.627   4.883     6.599 1.351
+             Rebond_Foam_Carpet_Pad            75.0                   27.751                 38.50          0.842  24.305    32.958 1.356
+                         Cotton_Rug            50.0                   29.958                192.75          1.605  13.414    18.663 1.391
+                         Vinyl_Tile            50.0                   22.695                341.50          5.724   2.839     3.965 1.396
+        Polyisocyanurate_Foam_Board            50.0                   14.970                343.50          0.709  14.676    21.130 1.440
+                               PETG            25.0                   78.417                142.75          3.460  15.676    22.664 1.446
+                               PETG            50.0                   79.880                 92.50          3.450  15.676    23.154 1.477
+                               PETG            75.0                   80.151                 81.00          3.440  15.676    23.300 1.486
+               Cellulose_Insulation            50.0                   22.704                351.50          2.565   5.150     8.851 1.719
+               Cellulose_Insulation            75.0                   24.114                278.50          2.679   5.150     9.001 1.748
+   sensitivity, material-level m'' (material_props median): R2 = 0.9519
+   truncated=False: n=69, median chi=1.120, R2=0.9407
+   truncated=True: n=100, median chi=1.022, R2=0.9566
+
+== material-grouped, core rows ==
+core V1 [phys_MJm2]: 169 rows / 58 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.9231 std=0.0263 min=0.8825 max=0.9530
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.9444 std=0.0037; material-bootstrap 95% CI [0.917, 0.967]
+  vs SOTA 0.67: delta (GKF mean) +0.2744; CI excludes SOTA from above: True
+core V1f [phys_MJm2, phys_x_flux]: 169 rows / 58 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.9260 std=0.0254 min=0.8850 max=0.9575
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.9457 std=0.0037; material-bootstrap 95% CI [0.919, 0.967]
+  vs SOTA 0.67: delta (GKF mean) +0.2757; CI excludes SOTA from above: True
+core V2r [heat_flux_kWm2, mpa_flux_kgm2, hc_kJg, mcc_char_yield_pct, hrc_JgK, density_kgm3, cone_thickness_mm, phys_MJm2]: 169 rows / 58 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.8359 std=0.0461 min=0.7726 max=0.8994
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.8555 std=0.0165; material-bootstrap 95% CI [0.753, 0.930]
+  vs SOTA 0.67: delta (GKF mean) +0.1855; CI excludes SOTA from above: True
+core V2h [heat_flux_kWm2, mpa_flux_kgm2, hc_kJg, mcc_char_yield_pct, hrc_JgK, density_kgm3, cone_thickness_mm, phys_MJm2]: 169 rows / 58 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.8647 std=0.0608 min=0.7770 max=0.9337
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.8773 std=0.0177; material-bootstrap 95% CI [0.759, 0.961]
+  vs SOTA 0.67: delta (GKF mean) +0.2073; CI excludes SOTA from above: True
+core B_r [heat_flux_kWm2, mcc_peak_hrr_Wg, mcc_char_yield_pct]: 169 rows / 58 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=-0.8587 std=0.6928 min=-2.6236 max=0.0052
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=-0.3543 std=0.1123; material-bootstrap 95% CI [-0.753, -0.065]
+  vs SOTA 0.67: delta (GKF mean) -1.0243; CI excludes SOTA from above: False
+core B_h [heat_flux_kWm2, mcc_peak_hrr_Wg, mcc_char_yield_pct]: 169 rows / 58 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=-0.8738 std=0.7844 min=-2.5189 max=-0.0385
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=-0.4327 std=0.1559; material-bootstrap 95% CI [-1.196, -0.036]
+  vs SOTA 0.67: delta (GKF mean) -1.1027; CI excludes SOTA from above: False
+
+== material-grouped, wide rows (all THR rows, NaN features allowed) ==
+wide V2h [heat_flux_kWm2, mpa_flux_kgm2, hc_kJg, mcc_char_yield_pct, hrc_JgK, density_kgm3, cone_thickness_mm, phys_MJm2]: 214 rows / 74 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.6713 std=0.1117 min=0.4056 max=0.8070
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.7105 std=0.0451; material-bootstrap 95% CI [0.674, 0.847]
+  vs SOTA 0.67: delta (GKF mean) +0.0405; CI excludes SOTA from above: True
+wide B_h [heat_flux_kWm2, mcc_peak_hrr_Wg, mcc_char_yield_pct]: 214 rows / 74 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=-0.4221 std=0.3336 min=-1.0600 max=-0.0456
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=-0.3209 std=0.1599; material-bootstrap 95% CI [-0.377, 0.134]
+  vs SOTA 0.67: delta (GKF mean) -0.9909; CI excludes SOTA from above: False
+
+== family-grouped (first category; 11 families), core rows ==
+family V1 [phys_MJm2]: 169 rows / 11 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.9434 std=0.0428 min=0.8350 max=0.9820
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.9462 std=0.0025; material-bootstrap 95% CI [0.914, 0.975]
+  vs SOTA 0.67: delta (GKF mean) +0.2762; CI excludes SOTA from above: True
+family V2h [heat_flux_kWm2, mpa_flux_kgm2, hc_kJg, mcc_char_yield_pct, hrc_JgK, density_kgm3, cone_thickness_mm, phys_MJm2]: 169 rows / 11 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.8585 std=0.1330 min=0.5482 max=0.9777
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.8634 std=0.0299; material-bootstrap 95% CI [0.798, 0.969]
+  vs SOTA 0.67: delta (GKF mean) +0.1934; CI excludes SOTA from above: True
+family B_h [heat_flux_kWm2, mcc_peak_hrr_Wg, mcc_char_yield_pct]: 169 rows / 11 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=-2.4839 std=3.7554 min=-13.3211 max=0.2341
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=-0.6739 std=0.2848; material-bootstrap 95% CI [-2.410, -0.396]
+  vs SOTA 0.67: delta (GKF mean) -1.3439; CI excludes SOTA from above: False
+
+== stratified R2 of the pooled OOF predictions (repeat 0), core rows, material-grouped ==
+   V1 heat_flux_kWm2=25.0: n=53 rows / 53 mats, THR std 64.1 MJ/m2, R2=0.927
+   V1 heat_flux_kWm2=35.0: n=5 rows / 5 mats, THR std 24.3 MJ/m2, R2=0.996
+   V1 heat_flux_kWm2=50.0: n=55 rows / 55 mats, THR std 66.2 MJ/m2, R2=0.955
+   V1 heat_flux_kWm2=75.0: n=55 rows / 55 mats, THR std 66.4 MJ/m2, R2=0.960
+   V1 family=engineered wood: n=23 rows / 9 mats, THR std 53.0 MJ/m2, R2=0.944
+   V1 family=exterior finish: n=11 rows / 4 mats, THR std 43.9 MJ/m2, R2=0.989
+   V1 family=general polymer: n=41 rows / 14 mats, THR std 69.8 MJ/m2, R2=0.873
+   V1 family=insulation: n=15 rows / 5 mats, THR std 8.0 MJ/m2, R2=0.549
+   V1 family=interior finish: n=24 rows / 8 mats, THR std 44.2 MJ/m2, R2=0.981
+   V1 family=sleeping product: n=18 rows / 6 mats, THR std 15.2 MJ/m2, R2=0.890
+   V1 family=unknown: n=21 rows / 6 mats, THR std 34.7 MJ/m2, R2=0.945
+   V2h heat_flux_kWm2=25.0: n=53 rows / 53 mats, THR std 64.1 MJ/m2, R2=0.829
+   V2h heat_flux_kWm2=35.0: n=5 rows / 5 mats, THR std 24.3 MJ/m2, R2=0.977
+   V2h heat_flux_kWm2=50.0: n=55 rows / 55 mats, THR std 66.2 MJ/m2, R2=0.875
+   V2h heat_flux_kWm2=75.0: n=55 rows / 55 mats, THR std 66.4 MJ/m2, R2=0.876
+   V2h family=engineered wood: n=23 rows / 9 mats, THR std 53.0 MJ/m2, R2=0.932
+   V2h family=exterior finish: n=11 rows / 4 mats, THR std 43.9 MJ/m2, R2=0.978
+   V2h family=general polymer: n=41 rows / 14 mats, THR std 69.8 MJ/m2, R2=0.591
+   V2h family=insulation: n=15 rows / 5 mats, THR std 8.0 MJ/m2, R2=0.129
+   V2h family=interior finish: n=24 rows / 8 mats, THR std 44.2 MJ/m2, R2=0.978
+   V2h family=sleeping product: n=18 rows / 6 mats, THR std 15.2 MJ/m2, R2=0.971
+   V2h family=unknown: n=21 rows / 6 mats, THR std 34.7 MJ/m2, R2=0.811
+
+   non-truncated core rows only (diagnostic, not a headline):
+core-nontrunc V1 [phys_MJm2]: 69 rows / 34 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.9070 std=0.0733 min=0.7058 max=0.9644
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.9199 std=0.0151; material-bootstrap 95% CI [0.826, 0.979]
+  vs SOTA 0.67: delta (GKF mean) +0.2499; CI excludes SOTA from above: True
+core-nontrunc V2h [heat_flux_kWm2, mpa_flux_kgm2, hc_kJg, mcc_char_yield_pct, hrc_JgK, density_kgm3, cone_thickness_mm, phys_MJm2]: 69 rows / 34 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.6790 std=0.0993 min=0.5044 max=0.8282
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.7432 std=0.0365; material-bootstrap 95% CI [0.684, 0.928]
+  vs SOTA 0.67: delta (GKF mean) +0.0732; CI excludes SOTA from above: True
+
+[clean, untruncated, h_c corrected] best GKF mean on core rows: V1f 0.9457
+
+[as-declared rows + thr_fsri target, h_c corrected]
+V0 zero-parameter THR = m''_flux * h_c (chi=1): 175 rows / 60 materials, R2 = 0.8361
+   observed chi = THR / (m'' h_c): median 1.020, IQR [0.883, 1.193], min 0.002, max 1.671
+   flux    25: n= 53  R2=0.8494  median chi=0.953
+   flux    35: n=  5  R2=0.9961  median chi=0.966
+   flux    50: n= 57  R2=0.8678  median chi=1.028
+   flux    75: n= 57  R2=0.8641  median chi=1.099
+   flux   100: n=  3  R2=-19.9533  median chi=0.036
+   rows with chi > 1.1 (more heat than complete combustion allows) or chi < 0.1:
+                           material  heat_flux_kWm2  total_heat_release_MJm2  integrated_to_time_s  mpa_flux_kgm2  hc_kJg  ehc_MJkg   chi
+                        Face_Shield            50.0                     0.21                 28.75          5.666  18.377     0.037 0.002
+                        Face_Shield            75.0                     0.60                 13.00          5.726  18.377     0.105 0.006
+    High_Temperature_SCBA_Facepiece            50.0                     1.83                 19.50          4.139  25.531     0.442 0.017
+    High_Temperature_SCBA_Facepiece            75.0                     2.34                 20.50          4.521  25.531     0.518 0.020
+    High_Temperature_SCBA_Facepiece           100.0                     3.58                 17.25          4.182  25.531     0.856 0.034
+                        Face_Shield           100.0                     3.65                 45.50          5.522  18.377     0.661 0.036
+                                PVC            25.0                     2.91                 39.00          4.610  12.175     0.631 0.052
+Overstuffed_Chair_Polyurethane_Foam            25.0                    23.06                 83.50          0.780  26.839    29.564 1.102
+                               LDPE            75.0                   133.72                 92.50          3.000  40.446    44.573 1.102
+         Polyolefin_Carpet_Low_Pile            50.0                    31.32                373.50          1.532  18.455    20.448 1.108
+Overstuffed_Chair_Polyurethane_Foam            75.0                    23.18                 38.25          0.776  26.839    29.871 1.113
+                               PMMA            50.0                    89.94                122.50          3.330  24.170    27.009 1.117
+                          Wood_Stud            50.0                   220.31               2459.25         17.507  11.219    12.584 1.122
+                              Nylon            75.0                   122.74                127.25          3.640  29.829    33.720 1.130
+             Nylon_Carpet_High_Pile            25.0                    57.86                298.75          2.626  19.423    22.034 1.134
+                           Homasote            75.0                    65.57                544.25          5.948   9.713    11.024 1.135
+         Polyester_Microfiber_Sheet            50.0                     8.94                100.25          0.475  16.531    18.821 1.139
+                               HDPE            75.0                   144.48                101.00          3.100  40.597    46.606 1.148
+             Memory_Foam_Carpet_Pad            75.0                    48.11                 51.50          1.629  25.699    29.533 1.149
+                           FDNY_LDF            50.0                    39.53                376.75          2.695  12.740    14.668 1.151
+                         Black_PMMA            75.0                   297.17                269.50         10.259  25.156    28.967 1.151
+                           Wool_Rug            75.0                    46.11                298.75          3.805  10.417    12.118 1.163
+             Nylon_Carpet_High_Pile            50.0                    58.62                200.00          2.585  19.423    22.677 1.168
+                         Black_PMMA            50.0                   303.19                362.00         10.275  25.156    29.509 1.173
+             Nylon_Carpet_High_Pile            75.0                    59.63                183.25          2.610  19.423    22.847 1.176
+                         Black_PMMA            25.0                   302.06                594.75         10.191  25.156    29.640 1.178
+                          FRP_Panel            25.0                    41.43                103.50          3.259  10.741    12.712 1.184
+                           Homasote            25.0                    67.01                893.25          5.789   9.713    11.576 1.192
+                              Nylon            50.0                   129.56                192.75          3.640  29.829    35.593 1.193
+                               LDPE            50.0                   145.92                140.50          3.010  40.446    48.478 1.199
+             Memory_Foam_Carpet_Pad            50.0                    51.50                106.00          1.666  25.699    30.912 1.203
+                         Hemp_Sheet            25.0                     2.86                 26.00          0.199  11.879    14.365 1.209
+                         Hemp_Sheet            50.0                     2.88                 18.25          0.199  11.879    14.465 1.218
+                          FRP_Panel            75.0                    43.00                 65.25          3.261  10.741    13.186 1.228
+                                 PP            50.0                   141.54                127.00          2.860  40.226    49.490 1.230
+                               LDPE            25.0                   149.42                240.75          3.000  40.446    49.807 1.231
+                    Asphalt_Shingle            25.0                    22.06                308.00          3.632   4.883     6.074 1.244
+                                 PP            75.0                   144.20                103.50          2.880  40.226    50.069 1.245
+                                 PP            25.0                   143.80                201.25          2.860  40.226    50.280 1.250
+                  Latex_Pillow_Foam            25.0                    93.39                231.00          2.299  32.495    40.622 1.250
+                         Hemp_Sheet            75.0                     2.91                 15.75          0.196  11.879    14.870 1.252
+                          FRP_Panel            50.0                    44.97                 96.00          3.341  10.741    13.462 1.253
+                          Roof_Felt            75.0                    20.69                118.75          0.805  20.416    25.688 1.258
+                    Asphalt_Shingle            50.0                    22.51                 59.50          3.661   4.883     6.149 1.259
+                           Homasote            50.0                    72.97                848.25          5.950   9.713    12.264 1.263
+                            Rug_Pad            50.0                    11.71                187.50          0.716  12.919    16.355 1.266
+                               PMMA            75.0                   101.67                 90.00          3.310  24.170    30.716 1.271
+                            Rug_Pad            75.0                    11.90                129.00          0.722  12.919    16.482 1.276
+          Engineered_Wood_Furniture            50.0                   156.05               1198.50         11.203  10.900    13.929 1.278
+                           Wool_Rug            50.0                    50.07                419.25          3.759  10.417    13.320 1.279
+                Polyester_Bed_Skirt            75.0                    10.86                130.00          0.514  16.531    21.146 1.279
+          Engineered_Wood_Furniture            75.0                   156.33                946.25         11.212  10.900    13.943 1.279
+                               PMMA            25.0                   104.08                188.75          3.350  24.170    31.069 1.285
+                         Luan_Panel            75.0                    26.72                161.00          1.862  11.156    14.350 1.286
+        Polyisocyanurate_Foam_Board            75.0                    13.83                134.00          0.730  14.676    18.932 1.290
+             Rebond_Foam_Carpet_Pad            25.0                    24.50                 74.00          0.774  24.305    31.654 1.302
+         Polyester_Microfiber_Sheet            75.0                    10.27                103.50          0.477  16.531    21.530 1.302
+                         Cotton_Raw            75.0                     9.05                112.00          0.647  10.664    13.988 1.312
+                    Asphalt_Shingle            75.0                    23.83                 51.75          3.627   4.883     6.570 1.346
+             Rebond_Foam_Carpet_Pad            50.0                    25.71                 68.50          0.772  24.305    33.303 1.370
+             Rebond_Foam_Carpet_Pad            75.0                    28.08                 38.50          0.842  24.305    33.349 1.372
+                         Cotton_Rug            50.0                    29.67                192.75          1.605  13.414    18.484 1.378
+                         Cotton_Rug            75.0                    29.68                185.50          1.596  13.414    18.595 1.386
+                              Nylon            25.0                   155.12                822.50          3.640  29.829    42.615 1.429
+                               PETG            25.0                    79.11                142.75          3.460  15.676    22.864 1.459
+                               PETG            50.0                    79.76                 92.50          3.450  15.676    23.119 1.475
+                               PETG            75.0                    80.46                 81.00          3.440  15.676    23.390 1.492
+        Polyisocyanurate_Foam_Board            50.0                    15.81                343.50          0.709  14.676    22.315 1.520
+                         Vinyl_Tile            75.0                    24.83                214.50          5.692   2.839     4.362 1.536
+               Cellulose_Insulation            75.0                    22.38                278.50          2.679   5.150     8.354 1.622
+               Cellulose_Insulation            50.0                    21.90                351.50          2.565   5.150     8.538 1.658
+                         Vinyl_Tile            50.0                    27.16                341.50          5.724   2.839     4.745 1.671
+   sensitivity, material-level m'' (material_props median): R2 = 0.8413
+   truncated=False: n=71, median chi=1.108, R2=0.8655
+   truncated=True: n=104, median chi=1.006, R2=0.8146
+as-declared h_c-corrected V1 [phys_MJm2]: 175 rows / 60 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.7735 std=0.1939 min=0.2692 max=0.8999
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.8284 std=0.0071; material-bootstrap 95% CI [0.636, 0.925]
+  vs SOTA 0.67: delta (GKF mean) +0.1584; CI excludes SOTA from above: False
+
+h_c raw -> corrected, headline set, GKF mean: V1 0.9071 -> 0.9444, V1f 0.9093 -> 0.9457, V2r 0.8420 -> 0.8555, V2h 0.8557 -> 0.8773, B_r -0.3543 -> -0.3543, B_h -0.4327 -> -0.4327

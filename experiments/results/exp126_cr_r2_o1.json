@@ -1,0 +1,121 @@
+{
+  "slug": "cr_r2_o1",
+  "target": "Char Residue (cone residue %, FSRI)",
+  "round_config": "experiments/configs/cr_round2.json",
+  "dataset": "char_residue_cone_fsri x STA/MCC/props (567 rows / 61 merged groups), exp117 rows, order and groups",
+  "features": [
+    "heat_flux_kWm2",
+    "density_kgm3",
+    "mcc_char_yield_pct",
+    "sta_res_3K",
+    "sta_res_10K",
+    "sta_res_30K",
+    "cat_interior_finish",
+    "cat_exterior_finish",
+    "cat_insulation",
+    "cat_roofing",
+    "cat_structural"
+  ],
+  "model": "Clip0_100(Avg([Offset(HGB exp081 params), Offset(ExtraTrees 500/leaf 2), Ridge pipeline]))",
+  "hyperparameters": "offset base = row nanmean of sta_res_3K/10K/30K, coefficient 1, HGB and ET only; Ridge unchanged on raw y; final clip [0, 100]; fixed a priori",
+  "code": "data/v2/train_cr_round2.py",
+  "n_rows": 567,
+  "n_groups": 61,
+  "protocol": "gkf_group5x10",
+  "rkf_mean": 0.6661,
+  "rkf_std": 0.0146,
+  "ci_lo": 0.4349,
+  "ci_hi": 0.818,
+  "paired_vs": "exp117",
+  "paired_delta": 0.0156,
+  "paired_wins": "7/10",
+  "sota": 0.82,
+  "sota_source": "pomazi_2026",
+  "status": "ok",
+  "blocked_reason": "",
+  "note": "CR round 2 o1; paired vs exp117 on identical folds; category-GKF 0.463 (exp117 0.513); gain concentrated in <= 5 materials, not established; gate v2 selected (K=5, q=1.910, LB=-0.0098): G1 False, G2 False, G3 False",
+  "rkf_mean_full": 0.6660514018562909,
+  "ci_lo_full": 0.43487558256154013,
+  "ci_hi_full": 0.8179959754249945,
+  "per_repeat_r2": [
+    0.6694307719741941,
+    0.6666627385277306,
+    0.6810672648052232,
+    0.6717407773746791,
+    0.6475074870376196,
+    0.6878740789717943,
+    0.6692223660621817,
+    0.6743422289463645,
+    0.6365706880941933,
+    0.6560956167689291
+  ],
+  "top_k_removal": {
+    "top5": [
+      [
+        "Mineral_Wool_Insulation",
+        2786.3380058671287
+      ],
+      [
+        "PVC",
+        1358.5567513542687
+      ],
+      [
+        "Window_Screen",
+        1122.45809693012
+      ],
+      [
+        "Feather_Pillow_Feathers",
+        881.0454738873559
+      ],
+      [
+        "Rubber_Foam_Pipe_Insulation",
+        792.766358015224
+      ]
+    ],
+    "top5_share_of_net": 1.3602969954631383,
+    "drop_top1": {
+      "mean_gain": 0.00832349461573465,
+      "wins": 7
+    },
+    "drop_top3": {
+      "mean_gain": -0.0006599671490064907,
+      "wins": 4
+    },
+    "drop_top5": {
+      "mean_gain": -0.007810710182132063,
+      "wins": 3
+    },
+    "not_established": true
+  },
+  "category_gkf_mean": 0.4634323967705984,
+  "mineral_wool": {
+    "o1": {
+      "mean_pred": 99.503834996959,
+      "sse_share": 0.0007252458808311941
+    },
+    "o1_unclipped": {
+      "mean_pred": 106.94920815448883,
+      "sse_share": 0.01230204014324146
+    }
+  },
+  "wall_time_s": 89.6,
+  "clip_effect": {
+    "share_above_100": 0.01216931216931217,
+    "share_below_0": 0.04056437389770723,
+    "unclipped_rkf_mean": 0.6619514839213123
+  },
+  "gate_v2": {
+    "theta": 0.01564817464329945,
+    "wins": 7,
+    "ci_lo": 0.43487558256154013,
+    "ci_hi": 0.8179959754249945,
+    "se": 0.013334830064494546,
+    "lb_maxT": -0.00982152580021704,
+    "lb_unadjusted": -0.004185756721076926,
+    "lb_raw_maxT": -0.04916519642563048,
+    "p_boot_gain_le_0": 0.134,
+    "K": 5,
+    "q": 1.9100131250515424,
+    "selected": true
+  }
+}

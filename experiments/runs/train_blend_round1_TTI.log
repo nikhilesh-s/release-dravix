@@ -1,0 +1,11 @@
+TTI: 681 rows / 76 groups; log1p wrapper on whole model: False
+exp  GKF 0.3133 +- 0.0373 CI [0.0715, 0.4958]  family-GKF 0.356  R2@25 0.059  (9s)
+REPRO exp046 ok
+b1   GKF 0.3265 +- 0.0250 CI [0.2068, 0.5350]  family-GKF 0.374  R2@25 0.120  (198s)
+b2   GKF 0.3316 +- 0.0267 CI [0.2163, 0.5348]  family-GKF 0.397  R2@25 0.132  (154s)
+  b1 vs exp046: dGKF +0.0132, wins 7/10
+  b2 vs exp046: dGKF +0.0183, wins 7/10
+SELECTION TTI: b2 0.3316; wins 7/10 (need >= 8), ci_lo 0.2163 (need >= 0.071) -> NOT adopted; exp046 stays
+Triggers: none
+wrote 2 result JSONs; runtime 362s
+exit 0

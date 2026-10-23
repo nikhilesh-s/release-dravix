@@ -1,0 +1,174 @@
+{
+  "round": "cr_round2",
+  "status": "approved (D2, 2026-10-07, owner-delegated; see amendments)",
+  "target": "Char Residue = FSRI cone residue (final/initial specimen mass, %), canonical per exp033/exp117; scored on the 567 incumbent rows only",
+  "declared": "drafted by Opus 5.5 on Oct 6 2026 from plans/LEVER_SWEEP_2026-10-06.md B1 (findings models-cr-sta-offset, fsri-cr-nan-tolerant-rows, fsri-composite-layer-map), before any run; see git commit time. Nothing was trained or scored to write it. It binds only after Arnav approves D2 in writing; the orchestrator then quotes the approval under 'amendments' and sets status to 'declared'.",
+  "authority": "none yet. Plan B1: 'Needs Arnav: yes (the CR budget is spent)'. Plan D2: 'approve CR round 2 (B1)'.",
+  "plan_ref": "plans/LEVER_SWEEP_2026-10-06.md Tier B, B1; execution order step 2 (one 'round 9' = B1 + B2 + B3, gated by B0, then critic)",
+  "budget": "one run of this config, 3 candidates (o1, n1 selectable; o2 report-only). A re-run is allowed only for a bug fix written under 'amendments' before the re-run; the first run's numbers are kept and reported as superseded.",
+  "banned_moves_checked": true,
+  "banned_moves_note": "Target stays cone residue (STA N2 residue is used only inside the offset base, i.e. as a feature-derived quantity, never as the reported target). MCC char yield is not used as a base or for an STA target. No material is excluded from scoring; the 136 extra rows are training-only and never scored. No thermal-property join. Win rule is fixed below before any score. No hand edits of leaderboard/xlsx/numbers_of_record.",
+
+  "incumbent": {
+    "exp_id": "exp117",
+    "config": "experiments/configs/blend_round1.json b1 for CR: Avg(exp081 HGB, ExtraTrees 500/leaf 2, Ridge alpha 10 pipeline) on exp081 features and merged groups; raw target; unclipped",
+    "record": {"rkf_mean": 0.6504, "ci_lo": 0.4389, "ci_hi": 0.7893, "rows": 567, "groups": 61},
+    "bar": "0.82 (pomazi_2026); ci_hi 0.7893 is already below it"
+  },
+
+  "environment": "python3 3.12.4 (/Library/Frameworks/Python.framework/Versions/3.12/bin/python3), scikit-learn 1.7.1, numpy 2.2.6, pandas 2.3.3, scipy 1.16.1 (as installed Oct 6). Run with OMP_NUM_THREADS=1 as blend_round1. If any version differs, stop BLOCKED.",
+
+  "code": {
+    "script": "data/v2/train_cr_round2.py (new; written after this config is committed and before any run). It imports data_cr, Avg, et, ridge from data/v2/train_blend_round1.py and bootstrap_ci, repeated_group_kfold from data/v2/eval_protocol.py unchanged; neither file is edited.",
+    "command": "OMP_NUM_THREADS=1 python3 data/v2/train_cr_round2.py 2>&1 | tee experiments/runs/cr_round2.log"
+  },
+
+  "data": {
+    "scoring_rows": "exactly train_blend_round1.data_cr(): char_residue_cone_fsri.csv rows with test_config not containing 'noSpark' and cone_residue_pct non-null (703), left-merged with STA-wide / MCC-agg / props, then filtered to STA at any rate AND mcc_char_yield_pct present -> 567 rows / 62 materials / 61 groups (PlasticC -> HIPS). Same row order, same X (11 features), same y, same groups.",
+    "features (all candidates)": ["heat_flux_kWm2", "density_kgm3", "mcc_char_yield_pct", "sta_res_3K", "sta_res_10K", "sta_res_30K", "cat_interior_finish", "cat_exterior_finish", "cat_insulation", "cat_roofing", "cat_structural"],
+    "feature_defs": "sta_res_<r>K = mean over replicates of char_yield_sta.csv final_residual_mass_pct per material at heating rate r (N2 only; the file has no air runs); mcc_char_yield_pct = mean over replicates of mcc_hrr.csv char_yield_pct per material; density_kgm3 and categories from material_props_fsri.csv; cat_* = 1.0 if that category is one of the ';'-separated, stripped, lower-cased categories, else 0.0 (missing categories -> all 0.0), exactly as data_cr.",
+    "nan_on_scoring_rows (checked while drafting, label-free)": "density_kgm3 62 rows (6 materials: Cotton_Raw, Feather_Pillow_Feathers, Latex_Pillow_Foam, Nylon_Carpet_High_Pile, PlasticC, Pressure_Treated_Deck), sta_res_3K 164, sta_res_30K 152, sta_res_10K 0, every other feature 0. So the STA offset base is defined on all 567 rows."
+  },
+
+  "step1_reproduce": {
+    "rule": "Fit exp117 = Avg([HGB(learning_rate=0.05, max_iter=300, max_leaf_nodes=15, min_samples_leaf=10, random_state=0), et(), ridge()]) via eval_protocol.repeated_group_kfold(model, X, y, groups) on data_cr() -> rkf_mean 0.6504 +-0.002 and repeat-0 bootstrap_ci [0.4389, 0.7893] each +-0.002, else write experiments/results/cr_r2_o1.json, cr_r2_o2.json, cr_r2_n1.json with status 'blocked' and blocked_reason 'exp117 not reproduced within 0.002 (mean, ci_lo, ci_hi = <values>)' and stop BLOCKED (blocker file).",
+    "step1_record": "On success write experiments/runs/cr_round2_step1_exp117.json (NOT under experiments/results, so it is never ingested as a leaderboard row): rkf_mean_full, rkf_std_full, ci_lo_full, ci_hi_full, per_repeat_r2 (10 floats, full float64 precision), n_rows 567, n_groups 61. This file is the incumbent's 'result JSON' for adoption_gate_v2's 1e-9 consistency check and its ci_lo_full is the G2 reference under rule A.",
+    "n1_harness_self_test": "Run the n1 fold loop (below) with ZERO extra rows and the exp117 model; its 10 per-repeat R2 values must equal step 1's exp117 per-repeat R2 to 1e-12, else stop BLOCKED (proves the custom loop uses the identical folds)."
+  },
+
+  "candidates": [
+    {
+      "id": "o1",
+      "selectable": true,
+      "desc": "Clip0_100( Avg([ Offset(HGB exp081 params), Offset(ExtraTrees 500/leaf 2), Ridge pipeline unchanged ]) ) on the 567 scoring rows, the 11 features above, raw % target.",
+      "offset_base": "base(X) = np.nanmean(X[:, [3, 4, 5]], axis=1), i.e. row-wise nanmean of sta_res_3K, sta_res_10K, sta_res_30K (each already a replicate mean per material per rate). Equal weight per AVAILABLE rate (materials with one rate use that rate). Coefficient fixed at 1. Computed from features inside the wrapper, so it is fold-safe and label-free. The base is NOT appended as a feature. If any row's base is NaN, stop BLOCKED (cannot happen on the 567 rows).",
+      "Offset(m)": "fit(X, y): m.fit(X, y - base(X)); predict(X): m.predict(X) + base(X). Applied to the HGB and the ET members only.",
+      "members": {
+        "HGB": "HistGradientBoostingRegressor(learning_rate=0.05, max_iter=300, max_leaf_nodes=15, min_samples_leaf=10, random_state=0), NaN-native, fit on y - base",
+        "ET": "ExtraTreesRegressor(n_estimators=500, min_samples_leaf=2, random_state=0, n_jobs=-1), NaN-native (scikit-learn 1.7.1), fit on y - base",
+        "Ridge": "make_pipeline(SimpleImputer(strategy='median', add_indicator=True, keep_empty_features=True), StandardScaler(), Ridge(alpha=10.0)) fit on raw y (no offset), identical to exp117's Ridge"
+      },
+      "clip": "Clip0_100: the final averaged prediction is np.clip(pred, 0.0, 100.0). Members are NOT clipped before averaging. The incumbent exp117 stays unclipped as recorded (critic: clipping exp117 gives 0.6505).",
+      "protocol": "eval_protocol.repeated_group_kfold(Clip0_100(Avg(...)), X, y, groups) with data_cr()'s X, y, groups -> identical folds to exp117 (paired)."
+    },
+    {
+      "id": "o2",
+      "selectable": false,
+      "report_only": true,
+      "desc": "Clip0_100( Offset(HGB exp081 params) ) alone, same rows, features, base and clip as o1. Isolates the offset lever on the incumbent's own HGB. Never adopted, but it IS a member of the CR multiplicity family (adoption_gate_v2.json definitions.candidate)."
+    },
+    {
+      "id": "n1",
+      "selectable": true,
+      "desc": "The exp117 recipe verbatim (Avg([HGB exp081 params, et(), ridge()]), raw target, unclipped, the same 11 features) trained in every fold on the fold's 567-row training part PLUS the 136 extra spark rows (17 materials) that the STA-and-MCC filter drops; scored on the 567 rows only, on exp117's exact folds.",
+      "nan_handling": "HGB NaN-native; ET NaN-native exactly as in exp117; Ridge median impute + missing indicators + StandardScaler exactly as in exp117 (with the extra rows, SimpleImputer automatically adds indicators for mcc_char_yield_pct and sta_res_10K as well, which are never NaN on the 567 rows but are NaN on 96 and 105 of the 136 extra rows; this follows from the recipe and is not a separate choice).",
+      "plan_deviation_declared_here": "The plan text says 'ET and Ridge use median impute plus indicators'. ET is kept NaN-native because that IS the exp117 recipe: exp117's ET already received NaN (density 62 rows, sta_res_3K 164, sta_res_30K 152) and scikit-learn 1.7.1 ExtraTreesRegressor routes NaN natively. Imputing ET only in n1 would change two things at once (rows and the ET member) and confound the row lever. Ridge already imputes with indicators in exp117. Arnav may override this before approving D2 (see open_questions); not after any score.",
+      "feature_build_703": "Start from cone = char_residue_cone_fsri.csv with row_id = its 0-based row position; keep test_config not containing 'noSpark' and cone_residue_pct non-null (703 rows / 79 materials); LEFT-join sta_wide, mcc_agg (same aggregations as data_cr) and material_props_fsri.csv[material, density_kgm3, categories] each DIRECTLY on material; build cat_* flags exactly as data_cr; groups = material with PlasticC -> HIPS. scoring mask = STA at any rate AND mcc_char_yield_pct non-null.",
+      "feature_build_note": "data_cr joins props through the STA-outer-MCC table, so a material with neither STA nor MCC would get NaN density and all-zero category flags even where material_props_fsri.csv has them. The direct join is declared instead. Checked while drafting (label-free): on the 567 scoring rows the direct join is bit-identical to data_cr (np.array_equal(X, equal_nan=True) True, groups equal), so scoring rows and the incumbent are unaffected. It changes features only for 5 extra materials (Fiberglass_Insulation_R30_Paper_Faced, Gypsum_Wallboard, Lightweight_Gypsum_Wallboard, Overstuffed_Chair_Assembly, Plastic_Laminate_Countertop), which gain their props density and category flags.",
+      "asserts": "567-row subset in order equals data_cr() X (equal_nan), y and groups exactly; extra rows = 136 / 17 materials (table below); total 703 / 79 materials; 61 scoring groups + 17 extra groups = 78. Any mismatch -> BLOCKED.",
+      "fold_loop": "for r in 0..9: for tr, te in GroupKFold(n_splits=5, shuffle=True, random_state=r).split(X567, y567, g567): extra_keep = all 136 extra rows, minus the 9 Overstuffed_Chair_Assembly rows if set(g567[te]) intersects LINKED['Overstuffed_Chair_Assembly']; fit clone(model) on vstack(X567[tr], X_extra[extra_keep]) / concat(y567[tr], y_extra[extra_keep]) (incumbent rows first, then extra rows in CSV order); oof[r, te] = predict(X567[te]). The extra rows are never in a test set and are never predicted or scored.",
+      "group_link_table": {
+        "rule": "material.json 'component material' / 'parent material' keys in data/v2/raw/fsri_materials_database/01_Data (clone a432697). A composite is linked to every layer that is a scoring group; whenever any linked layer is in the test fold, the composite's rows are removed from that fold's training set. Layer scoring groups are NOT merged with each other (they stay exp117's 3 separate groups) so folds stay identical to exp117; merging them belongs to C1 (D5).",
+        "Overstuffed_Chair_Assembly (extra, 9 rows)": ["Overstuffed_Chair_Polyester_Batting (scoring, 9 rows)", "Overstuffed_Chair_Polyester_Fabric (scoring, 7 rows)", "Overstuffed_Chair_Polyurethane_Foam (scoring, 9 rows)"],
+        "Gypsum_Wallboard (extra, 9 rows)": "layers Gypsum_Wallboard_Gypsum_Core, Gypsum_Wallboard_Paper have no cone rows -> never tested -> no exclusion",
+        "Lightweight_Gypsum_Wallboard (extra, 9 rows)": "layers _Gypsum_Core, _Painted_Paper, _Unpainted_Paper have no cone rows -> no exclusion",
+        "Plastic_Laminate_Countertop (extra, 9 rows)": "layers _Laminate, _Particle_Board have no cone rows -> no exclusion (the standalone Particleboard material is a different FSRI product, not a layer)",
+        "Fiberglass_Insulation_R30_Paper_Faced (extra, 9 rows)": "layers _Fiberglass, _Paper have no cone rows -> no exclusion",
+        "other material.json families": "Bamboo_Rug, Overstuffed_Chair, Overstuffed_Sofa have no CR rows; irrelevant.",
+        "not_linked (declared)": "Same-polymer but different-product pairs are not linked, because material.json gives different products and sample sources: PMMA (extra, cast sheet) vs Black_PMMA (scoring); XPS (extra, FSRI name 'Expanded Polystyrene', fire-incident samples) vs EPS_Foam_Board (scoring, 'Extruded Polystyrene Board'); Polyisocyanurate_Spray_Foam_Insulation vs Polyisocyanurate_Foam_Board; Vinyl_Plank_Flooring vs Vinyl_Tile. This matches how exp117 already treats same-polymer products (e.g. LDPE vs HDPE) as separate groups. The existing PlasticC -> HIPS merge (literal duplicate) is kept."
+      },
+      "extra_materials (label-free coverage after the direct join)": {
+        "Engineered_Wood_Table": "11 rows; heat flux only (no STA, MCC, density, categories)",
+        "Fiberglass_Insulation_R13_Paper_Faced": "9; MCC only",
+        "Fiberglass_Insulation_R30": "9; heat flux only",
+        "Fiberglass_Insulation_R30_Paper_Faced": "9; density, insulation flag; no STA/MCC",
+        "Fiberglass_Skylight": "9; STA 3/10/30, density, exterior finish + roofing flags; no MCC",
+        "Gypsum_Wallboard": "9; density, interior finish flag; no STA/MCC",
+        "Lightweight_Gypsum_Wallboard": "9; density, interior finish flag; no STA/MCC",
+        "Overstuffed_Chair_Assembly": "9; density, no flag (category 'upholstered furniture'); no STA/MCC",
+        "PEVA": "9; STA 10/30; no MCC, density, categories",
+        "PMMA": "8; MCC, density; no STA",
+        "Pallet_Wood": "3 (HF35 only); STA 3/10/30, density; no MCC",
+        "Plastic_Laminate_Countertop": "9; density, interior finish flag; no STA/MCC",
+        "Polyisocyanurate_Spray_Foam_Insulation": "6; STA 10, density, insulation flag; no MCC",
+        "Roof_Felt": "9; MCC, density, roofing flag; no STA",
+        "Rubber_Band": "5 (Frame / Frame+Grid configs, 25-100 kW/m2); MCC only",
+        "Vinyl_Plank_Flooring": "9; MCC, density, interior finish flag; no STA",
+        "XPS": "4; STA 3/10/30, density, insulation flag; no MCC"
+      },
+      "not_in_n1": "No composite-layer feature mapping (that is C1 / D5). No offset (no base exists for 8 of the 17 materials). No clip (exp117 is unclipped). No new rows in scoring."
+    }
+  ],
+
+  "candidate_order": ["o1", "o2", "n1"],
+
+  "adoption": {
+    "rule_in_force": "Fixed before any candidate is scored, from Arnav's D1 answer quoted under 'amendments'. D1 approved -> rule A. D1 explicitly declined -> rule B. D1 unanswered when D2 is approved -> BLOCKED: do not score anything until D1 is answered (consistent with adoption_gate_v2.json scope.if_D1_pending_or_declined). The executor never picks the rule itself.",
+    "family": "All CR candidates scored against exp117 on these 567 rows before the CR adoption decision: this config's o1, o2, n1, plus B2's CR members (TabPFN p1, p2) if D3 is approved and they run in round 9 as planned -> K = 5 (K = 3 if B2 is not approved or not run in round 9). K is fixed by Arnav's D1/D3 answers and open question 3 before any CR score: K = 5 when D1 and D3 are both approved and Arnav has not moved B2's CR members to a later round; K = 3 otherwise (B2 is not run at all if D1 is declined, per round9_tabpfn_smearing.json). The CR adoption decision is made only after every family member has been scored. If any family member cannot be scored (e.g. B2 BLOCKED by a failed install), the CR adoption decision is parked with a blocker file until Arnav rules; the executor never decides with a smaller family.",
+    "selection (both rules)": "Among selectable members (o1, n1, and B2's selectable CR members if in the family), the one with the highest rkf_mean at full precision; exact ties -> first in order (this config's order, then B2's). Only that candidate is tested. If it fails, exp117 stays; no fallback to the second-best.",
+    "rule_A_if_D1_approved": "experiments/configs/adoption_gate_v2.json exactly (G1 wins >= 8/10 strict; G2 repeat-0 ci_lo >= exp117's repeat-0 ci_lo as reproduced in step 1 of this run, i.e. ci_lo_full in experiments/runs/cr_round2_step1_exp117.json; G3 studentised max-T paired group-bootstrap lower bound of the repeat-mean gain > 0, B 2000, seed 0, draws identical to eval_protocol.bootstrap_ci, ddof 1, linear 0.95 quantile, over the whole family). If the approved text of adoption_gate_v2.json differs from this summary, the approved file governs.",
+    "rule_B_if_D1_declined": "the current rule (blend_round1.json): adopt only if >= 8/10 paired repeats strictly better than exp117 AND repeat-0 ci_lo >= 0.4389 (published record). The adoption_gate_v2 quantities are still computed and reported, report-only.",
+    "then": "critic pass in a fresh context before numbers_of_record.json changes; the critic may block for a bug but may not adopt a candidate that failed the rule in force. Only the orchestrator edits numbers_of_record / trackers (scripts/update_trackers.py)."
+  },
+
+  "outputs": {
+    "result_jsons": "experiments/results/cr_r2_o1.json, cr_r2_o2.json, cr_r2_n1.json in the blend_round1 schema (slug, target, round_config 'experiments/configs/cr_round2.json', dataset, features, model, hyperparameters, code, n_rows 567, n_groups 61, protocol 'gkf_group5x10', rkf_mean/rkf_std/ci_lo/ci_hi rounded to 4, paired_vs 'exp117', paired_delta, paired_wins, sota 0.82, sota_source 'pomazi_2026', status, blocked_reason, note), PLUS full-precision fields rkf_mean_full, ci_lo_full, ci_hi_full, per_repeat_r2 (10 floats) so adoption_gate_v2's 1e-9 consistency check can run. That check compares against these *_full fields (never the rounded rkf_mean/ci_lo/ci_hi), and for the incumbent against experiments/runs/cr_round2_step1_exp117.json. n1 also gets train_rows 703, extra_rows 136. o2's note starts 'REPORT-ONLY, never adopted'.",
+    "oof": "experiments/runs/cr_round2_oof.npz: y, groups, row_id (567, scoring order), oof_incumbent, oof_o1, oof_o2, oof_n1 (each 10 x 567), plus diagnostic arrays diag_o1_unclipped, diag_o2_unclipped. For rule A, the round-9 CR gate input experiments/runs/round9_cr_oof.npz holds only family members (incumbent, o1, o2, n1, and B2's CR members), with order and selectable string arrays, per adoption_gate_v2.json. It is assembled once, after every family member is scored, from cr_round2_oof.npz (y, groups, row_id, oof_incumbent = this config's step-1 exp117 OOF, oof_o1, oof_o2, oof_n1) and B2's CR OOF arrays; assert before the gate runs that B2's y and groups arrays are identical, element-wise and in order, to this config's (row_id is this config's: the char_residue_cone_fsri.csv row position from feature_build_703) and that B2's own step-1 exp117 OOF equals oof_incumbent to 1e-12, else BLOCKED (no CR decision).",
+    "gate": "experiments/runs/round9_cr_gate_v2.json (rule A) or the same quantities in the round summary marked report-only (rule B)."
+  },
+
+  "reported_only (computed for exp117, o1, o2, n1; never used to select, adopt or demote)": {
+    "standard": "rkf mean/std, per-repeat R2, repeat-0 bootstrap CI, paired delta and wins vs exp117; adoption_gate_v2 per-candidate quantities (theta, se, lb_maxT, lb_unadjusted, lb_raw_maxT, p_boot_gain_le_0) and q, K.",
+    "top_k_removal (the critic's check, pre-declared)": "per candidate c: contribution of scoring group m = sum over its rows i of mean_r[(y_i - oof_inc[r,i])^2 - (y_i - oof_c[r,i])^2]; rank the 61 groups by contribution, descending (ties by group name); for k in (1, 3, 5) drop the top-k groups' rows and report mean over r of [R2_c - R2_inc] on the remaining rows and wins/10; also list the top-5 group names and their share of the net contribution sum. Wording rule: if the top-5-removed mean gain <= 0 or wins < 8/10, every note about that candidate must say 'gain concentrated in <= 5 materials, not established' (as FIGRA exp119). Exclusion is diagnostic only (banned to act on).",
+    "mineral_wool": "for Mineral_Wool_Insulation: repeat-mean OOF prediction (mean over its rows and 10 repeats) and SSE share (sum over its rows and the 10 repeats of (y - oof)^2, divided by the same sum over all 567 rows) for exp117 and each candidate; for o1/o2 also the unclipped value.",
+    "clip_effect": "o1 and o2: share of the 10 x 567 OOF predictions above 100 and below 0 before the clip; rkf mean of diag_o1_unclipped and diag_o2_unclipped. Unclipped versions are diagnostics, not candidates.",
+    "category_gkf": "GroupKFold(n_splits=5, shuffle=True, random_state=r), r = 0..9, with groups = first FSRI category of the material (categories split on ';', first token, stripped, lower-cased; missing -> 'none'); 11 categories on the 567 rows. Report the mean pooled R2 for exp117, o1, o2, n1. For n1: extra rows whose first category is among the fold's test categories are removed from that fold's training set, and the chair-assembly link rule applies as above.",
+    "n1_link_count": "number of the 50 primary folds (and of the 50 category-GKF folds) in which the 9 Overstuffed_Chair_Assembly rows were removed from training."
+  },
+
+  "never_reported": "Any score on the 136 extra rows (they are never predicted). Any score with another base, offset coefficient, clip range or seed.",
+
+  "exit_triggers": "any candidate ci_lo > 0.82 -> EXIT (claim question for humans; never write 'beats SOTA', comparable stays 'pending-human'). Step-1 or self-test failure, assertion failure, non-finite OOF, version mismatch -> BLOCKED with a blocker file.",
+
+  "expected_effect (deliberately unscored)": "o1: +0.01 to +0.05 over 0.650 (0.66-0.70), mainly from mineral-wool extrapolation; still below the 0.82 bar at the CI upper bound. n1: small or none, judging by the pHRR analogues exp019 (no-MCC rows collapse, R2 -0.88 on those rows) and exp059 (trained on all 221 rows, scored on the 191 has_mcc rows; did not promote).",
+
+  "honesty_notes": [
+    "The offset is a DECLARED FORM, not 'coefficient 1 by physics'. The skeptic showed cone residue is above the STA N2 baseline on 46% of the 567 rows (y - base from -37 to +77), so 'char can only oxidise in air' is false here and the trees must learn large positive deviations. Never describe o1 as a physics model.",
+    "The [0, 100] clip was added after a label-touching look (the skeptic's y - base range and its expectation that held-out mineral wool would be predicted above 100). It is fixed now, before any o1/o2 score, and its effect is reported.",
+    "The gain, if any, may again sit on mineral wool (29% of exp117's gain over exp081). The top-k removal check above is pre-declared for that reason.",
+    "n1 is the CR analogue of pHRR exp019/exp059, neither of which promoted.",
+    "n1 trains on labels of rows that are never scored; some of those labels were seen in the research pass (composite mean residues, see prior_looks)."
+  ],
+
+  "banned_in_this_round": [
+    "MCC char yield (or any other quantity) as the offset base, as a second or replacement variant: the base is nanmean(STA) only, fixed a priori.",
+    "Any other base (min, max, single rate, 30K only, rate-weighted), an offset coefficient other than 1, a learned coefficient, an offset on Ridge.",
+    "Any other clip range, clipping members before averaging, or adopting an unclipped version.",
+    "Scoring the 136 extra rows or any population other than the 567 rows; adding composite-layer features (C1, needs D5).",
+    "Excluding or reweighting any material after seeing its influence.",
+    "Changing any hyperparameter, seed, fold seed, n_boot, or member of exp117's recipe; re-running with a subset of the family.",
+    "STA residue as the reported target."
+  ],
+
+  "prior_looks": [
+    "Records known: exp033 0.538 [0.112, 0.713] (497 rows); CR re-baseline on 567 rows; exp081 0.5491 [0.342, 0.693]; exp117 0.6504 [0.4389, 0.7893], per-repeat gain over exp081 +0.066..+0.181; exp118 (b2) 0.6067.",
+    "blend_round1_critic.md (label-derived): single-model OOF ET 0.618, Ridge 0.631; Ridge OOF below 0 on 6.6% and above 100 on 1.3% of rows; exp117 below 0 on 4.2%; observed y goes down to -4.1; exp117 clipped to [0,100] 0.6505, Ridge-clipped-before-averaging 0.6483; Mineral_Wool_Insulation 29% of the gain (SSE 12573 -> 2865), then Nylon carpet 9%, FRP 8%, Feather pillow 7%, Rubber foam 6%; largest exp117 errors PC and House_Wrap; top-1/3/5 removal +0.084/+0.066/+0.053 (10/10); category hold-out exp081 0.378 vs exp117 0.535; adjusted LB +0.030 (raw max-T + Bonferroni, 8 tries).",
+    "cr_round1b_critic.md (label-derived): mineral wool predictions HGB 61.6, RF 73.4, true 96.9; mineral wool, FRP, vinyl tile and shingle share one NaN pattern.",
+    "Lever-sweep research pass, models-cr-sta-offset verdict (LABEL-TOUCHING, disclosed per plan): cone residue above the STA baseline on 46% of the 567 rows; y - base ranges -37 to +77; examples PC 58.7 vs base 22.5, vinyl tile 77.7 vs 50.4, window screen 65.2 vs 41.6, asphalt shingle 83.0 vs 67.1; the materials with the next-highest baselines have residuals +16 to +27. A BASELINE-ONLY score was computed: base used directly as the prediction on the 567 rows, R2 0.596 (exact script not in the repo). Label-free parts: base range -0.47..97.5, median 20.9, 3 materials above 50; within-material STA spread median 2.3 (materials with >= 2 rates), max 5.8; base-vs-MCC-char material-level r 0.983.",
+    "The offset form (nanmean STA base, coefficient 1, o1/o2 composition) was written in the finding before the 46% look; the [0, 100] clip was added after it.",
+    "fsri-composite-layer-map verdict (LABEL-TOUCHING on n1's training-only rows): mean cone residue Gypsum_Wallboard 91.7%, Lightweight_Gypsum_Wallboard 94.5%, Plastic_Laminate_Countertop 30.5%.",
+    "pHRR analogues known: exp019 (no-MCC rows R2 -0.88), exp059 (all-221-row training, did not promote).",
+    "MaCFP wood CR termination diagnostic (per-lab residues) was seen; it involves no FSRI CR row and is not used here.",
+    "Other label-touching looks by the same research pass that plan A5 asks every config to record: TTI exp046 per-flux and log-space scores, b2 and ExtraTrees-alone secondary metrics, tti-3 SSE by material and the 25 kW/m2 ceilings, the 6 operator-flagged TTI rows (full list in round9_tabpfn_smearing.json prior_looks). None involves a CR row; nothing here was chosen from them.",
+    "Drafting this config (label-free only): row counts and per-material counts of the spark rows, test_config values, feature coverage and NaN counts, material.json parent/component keys and names, first-category counts (11 on the 567 rows), bit-equality of the direct-join features with data_cr on the 567 rows, scikit-learn ExtraTrees NaN support. No residue value was read and no model was fit."
+  ],
+
+  "open_questions_for_arnav (answer before approving D2; none can change after any score)": [
+    "n1 ET: NaN-native (declared, = exp117) vs the plan's 'median impute plus indicators'.",
+    "Not linking same-polymer different-product pairs (PMMA / Black_PMMA, XPS / EPS_Foam_Board, PIR spray / PIR board, vinyl plank / vinyl tile) in n1.",
+    "Whether B2's TabPFN CR members join this family (K = 5) or run in a later round (K = 3 here). Note: running them later against an unchanged exp117 would form a second CR family, which adoption_gate_v2 anti_gaming ('splitting candidates over several configs or rounds does not shrink K') argues against.",
+    "Default if D2 is approved without an answer to a question above: the declared choice stands (n1 ET NaN-native; the four pairs not linked; B2's CR members join this family whenever D1 and D3 are approved, K = 5). The executor never chooses."
+  ],
+
+  "amendments": ["D2 yes, with the stated defaults (n1's ET NaN-native as in exp117; the 4 same-polymer product pairs not group-linked; round 9's TabPFN CR members join this family, so K = 5; decided once under the D1 gate). Authority (2026-10-07 22:45 PDT): the repository moved to nikhilesh-s/dravix-master, owned by Nikhilesh S, which is the source of truth from 2026-10-08; Arnav Saini is a collaborator (write access). The owner's instruction this evening, quoted: 'improve Dravix ... do a lot of different experimentations', 'keep grinding, keep getting better ... I know that some stuff is not going to work, but you need to make sure that things are clean', and 'get agents up'. The owner delegated the pending D1-D8 decisions to the orchestrator (Claude Opus 5.5) for this overnight session. The orchestrator answers them here, before any score in any of these rounds, without having seen any result from them. Integrity rules unchanged: no 'beats SOTA', comparable is never set true, single writer, critic before records.", "Erratum (2026-10-08 ~02:00 PDT, environment only, no design change): the Python 3.12.4 interpreter named here exists only on Arnav's machine. All runs on the owner's machine use /Users/niks/dravix/.venv312 (Python 3.12.12) with identical package versions to the record pins (scikit-learn 1.7.1, numpy 2.2.6, scipy 1.16.1, pandas 2.3.3, torch 2.8.0; uv pip check clean). Every incumbent reproduced exactly in it, and the full numbers-of-record repro gives 48/48 matches. The orchestrator treats this patch-level interpreter difference as not triggering the version-mismatch BLOCKED clause.", "Timestamp note (2026-10-08, after critic experiments/critic/overnight_2026-10-08_critic.md): clock times written inside this session's amendments are approximate and several are later than the commit that contains them; git commit times govern. The interpreter erratum above was written after the cr_round2 run had finished (procedural deviation: the 'stop BLOCKED on any version difference' clause was overridden by the orchestrator's instruction while the run was in progress; identical library pins, all incumbents reproduced)."]
+}

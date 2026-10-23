@@ -1,0 +1,63 @@
+{
+  "kind": "shared block for every experiments/configs/samedata_*.json (same-data, same-protocol comparisons on published open datasets)",
+  "status": "declared (approved 2026-10-08, owner-delegated; see amendments)",
+  "declared": "drafted by Opus 5.5 (Claude) on 2026-10-07 (PDT) as a benchmark-preparation worker, before any fit on these datasets. Becomes binding only when the owner approves, the orchestrator commits it, and status is set to 'declared'.",
+  "authority": "none yet. Brief (Oct 7): 'You PREPARE; you do NOT train or score any model on these labels (that would break pre-registration).' Running needs a human go + committed configs (banned: running a round without a committed config).",
+  "banned_moves_checked": true,
+  "banned_moves_note": [
+    "Selection is by mean across repeats, never by CI, never by a single seed or split. The single published split (P1_pub) is reported, never selected on, never the claim.",
+    "No 'beats SOTA' anywhere; 'comparable' is a human decision; numbers_of_record.json, leaderboard.csv and the xlsx files are not touched by these rounds (external checks, not Dravix targets).",
+    "Row exclusions are fixed now, by label-free rules only. No row, paper or molecule is dropped after any result is seen.",
+    "No mixing: these rows never enter the RPUF LOI benchmark and Dravix rows never enter these datasets.",
+    "No new features: c1-c3 get exactly the published input matrix of each paper (before the paper's own supervised selection unless the config says otherwise).",
+    "Third-party data stay in data/sources/incoming/<name>/ (git-ignored apart from SOURCE.md). Workers write experiments/results/samedata_*.json and experiments/runs/samedata_* only."
+  ],
+  "software": {
+    "interpreter": "/Users/niks/dravix/.venv312/bin/python (scikit-learn 1.7.1, numpy 2.2.6, pandas 2.3.3, torch 2.8.0, tabpfn 9.1.0, as installed 2026-10-07). Record pip freeze for these to experiments/runs/samedata_env.txt before the first fit.",
+    "per-dataset extra environments": "only where a dataset config says so (huang_dopo_ep_ml needs the authors' pinned env for feature construction and r0); installing anything needs owner approval."
+  },
+  "candidates_regression (fixed a priori; identical for every dataset)": {
+    "c1": {
+      "name": "Dravix LOI recipe (r8d / exp113 model)",
+      "definition": "equal average of the three predictions: RandomForestRegressor(n_estimators=500, min_samples_leaf=2, random_state=0, n_jobs=-1); ExtraTreesRegressor(n_estimators=500, min_samples_leaf=2, random_state=0, n_jobs=-1); make_pipeline(SimpleImputer(strategy='median', add_indicator=True, keep_empty_features=True), StandardScaler(), Ridge(alpha=10.0))",
+      "copied_from": "data/v2/train_loi_rescore_r8.py: rf() line 191, et() line 630, ridge() lines 634-635, class Avg lines 617-627 (np.mean of member predictions). Note: min_samples_leaf is 2 for both forests (the brief's '1?' is not the record setting).",
+      "input": "the dataset's published feature matrix as float64 in file column order; NaN left as NaN (RF/ET are NaN-native in sklearn 1.7.1; Ridge member imputes). No scaling for the forests, no feature selection, no target transform."
+    },
+    "c2": {
+      "name": "TabPFN v2 regressor",
+      "definition": "tabpfn.TabPFNRegressor.create_default_for_version(tabpfn.constants.ModelVersion.V2, device='cpu', random_state=0); nothing else passed; predict(X) default output (mean).",
+      "weights_env_licence": "exactly as experiments/configs/round9_tabpfn_smearing.json block 'tabpfn_model': V2 regressor checkpoint sha256 2ab5a07d5c41dfe6db9aa7ae106fc6de898326c2765be66505a07e2868c10736 (44,390,977 bytes), HF_HUB_OFFLINE=1, TABPFN_EXCLUDE_DEVICES=cuda,mps, OMP_NUM_THREADS=1, torch.set_num_threads(1). Every result note carries 'Built with PriorLabs-TabPFN'.",
+      "input": "same matrix as c1, NaN left as NaN, no imputer/scaler.",
+      "on_error": "any TabPFN exception (incl. the 500-feature or pretraining limits) -> c2 and c3 BLOCKED for that dataset; never retry with ignore_pretraining_limits, another device, precision or version."
+    },
+    "c3": {
+      "name": "c1 + c2 blend",
+      "definition": "(c1 prediction + c2 prediction) / 2, both fit on the same training rows."
+    }
+  },
+  "candidates_classification (UL-94 configs only; analogues, Dravix has no UL-94 record recipe)": {
+    "c1u": "equal average of predict_proba of RandomForestClassifier(n_estimators=500, min_samples_leaf=2, random_state=0, n_jobs=-1), ExtraTreesClassifier(n_estimators=500, min_samples_leaf=2, random_state=0, n_jobs=-1), make_pipeline(SimpleImputer(strategy='median', add_indicator=True, keep_empty_features=True), StandardScaler(), LogisticRegression(C=0.1, max_iter=5000)); predicted class = argmax of the averaged probabilities (no threshold tuning). C=0.1 = 1/alpha for the Ridge(alpha=10) member, an L2 analogue, not the identical penalty scale.",
+    "c2u": "tabpfn.TabPFNClassifier.create_default_for_version(ModelVersion.V2, device='cpu', random_state=0); argmax of predict_proba. NEEDS SEPARATE OWNER APPROVAL: round 9 (D3) approved only the V2 regressor checkpoint; the V2 classifier checkpoint, its sha256 and licence must be pinned in an amendment first. Without that, c2u and c3u are not run and the family is {c1u}.",
+    "c3u": "average of c1u and c2u probabilities; argmax."
+  },
+  "protocol_templates": {
+    "P1_pub": "the paper's own single split / folds, reproduced exactly where the config says it can be. Used for the r0 reproduction gate. c1-c3 values on it are printed as information only.",
+    "P1": "the paper's split rule (ratio, stratification or grouping, metric, metric aggregation) unchanged, but 10 repeats with random_state = 0..9 instead of their one seed. Per candidate report: mean and SD over the 10 repeats, and the repeat-0 value. Same 10 splits for every candidate and for r0 (paired).",
+    "P2": "Dravix protocol, only where a source-paper column exists: data/v2/eval_protocol.repeated_group_kfold(model, X, y, groups) = GroupKFold(n_splits=5, shuffle=True, random_state=r), r = 0..9, pooled out-of-fold R2 per repeat; repeat-0 paper-bootstrap 95% CI from eval_protocol.bootstrap_ci(y, oof[0], groups) (2000 draws, seed 0). r0 is run under P2 as well.",
+    "metrics": "regression: R2 (primary), RMSE, MAE on the held-out rows; classification: the paper's primary metric plus accuracy, macro-F1 and weighted-F1."
+  },
+  "selection_and_comparison_rule": {
+    "selection": "Within each protocol separately, c* = the candidate among c1, c2, c3 (or c1u-c3u) with the highest mean over the 10 repeats (full float precision; exact ties -> listed first). Never by CI, never by repeat 0, never by P1_pub. All three candidates and r0 are always reported.",
+    "allowed_sentence_P1": "'On <authors>' data and their protocol (10 random splits instead of their one), Dravix's <c*> reaches mean <metric> X (repeat 0: x0) vs their published Y (their single split); their own model re-run on the same 10 splits gives R0.' Only for c*, only with X, x0, Y and R0 all printed.",
+    "allowed_sentence_P2": "'Under Dravix's paper-grouped 5x10 protocol on the same rows: <c*> X2 [ci_lo, ci_hi], their model re-run R2_0.' Never phrased as a win over Y (Y was measured under a different protocol).",
+    "paired_context": "always print the number of the 10 paired repeats in which c* beats r0 (same splits).",
+    "never": "'beats SOTA', 'state of the art', 'outperforms <paper>'. The owner decides any further wording. A dataset whose r0 reproduction gate fails gets no same-protocol sentence at all."
+  },
+  "multiplicity_note": "Picking the best of 3 candidates by mean inflates the selected mean (winner's curse); with 10 repeats and similar candidates the bias is of the order of the between-candidate spread, so all three are printed next to c*. Across datasets there are up to 5 datasets x 2 protocols (+ UL-94): every drafted dataset is reported in one table whichever way it goes, and none is dropped after results. The published Y is itself one split (often a chosen seed), so X is also compared with R0 (their model, our splits). No p-values, no significance language.",
+  "exit_triggers": "any c* P1 mean above the published bar, or any P2 ci_lo above it -> FLAG to the owner (blockers/BLOCKER-<ts>-samedata-<name>.md, written by the orchestrator) for wording; nothing is published or added to numbers_of_record.json by a worker.",
+  "outputs": "experiments/results/samedata_<dataset>_<candidate>_<protocol>.json (plan-section-7 schema fields where they apply; per-repeat metrics included) and experiments/runs/samedata_<dataset>_splits.json (the exact row indices of every split, written before any fit).",
+  "amendments": [
+    "Approved 2026-10-08 ~01:55 PDT by the orchestrator under the owner's delegation (Nikhilesh S, owner of nikhilesh-s/dravix-master: 'pull from the most reputable universities ... find the most reputable papers', 'it doesn't matter if the datasets are perfect comparisons', 'keep grinding'). Committed before any Dravix fit on these labels. Status set to declared. No other field changed. Approvals: (1) huang_dopo_ep_ml step-0: a separate venv with the authors' pins (scikit-learn 1.6.1, rdkit 2024.3.6, numpy 2.0.1, pandas 2.3.3, scipy 1.13.1, xgboost 3.2.0, lightgbm 4.6.0) is approved, used only for their feature export and r0/r0_full. (2) c2u/c3u: the TabPFN V2 classifier checkpoint is approved, fetched only by tabpfn 9.1.0's own downloader via create_default_for_version(ModelVersion.V2) from Hugging Face Prior-Labs/TabPFN-v2-clf; its sha256 and byte size are recorded to experiments/runs/samedata_env.txt at first download and bind every later run; licence as the V2 regressor (Prior Labs License, attribution 'Built with PriorLabs-TabPFN'). If the download is gated, c2u/c3u are not run and the family is {c1u}.",
+    "Output location (2026-10-08 morning, orchestrator): same-data result JSONs were moved from experiments/results/ to experiments/runs/samedata_results/ because scripts/update_trackers.py ingest would otherwise append them to leaderboard.csv, which this config forbids. Contents unchanged. Ma: the worker applied c2.on_error to the whole dataset (c2/c3 blocked; c* = c1); the orchestrator keeps that conservative reading."
+  ]
+}

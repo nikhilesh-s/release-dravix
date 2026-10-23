@@ -1,0 +1,113 @@
+{
+  "slug": "r10_figra_g1",
+  "target": "Fire Growth Rate FIGRA (kW/m2/s)",
+  "round_config": "experiments/configs/round10_physics.json",
+  "dataset": "figra_fsri replicate mean per material x flux, materials with MCC (197 rows / 67 materials); incumbent exp119 rows, order and groups",
+  "features": [
+    "heat_flux_kWm2",
+    "mcc_peak_hrr_Wg",
+    "mcc_char_yield_pct",
+    "density_kgm3",
+    "cone_thickness_mm",
+    "cone_mass_per_area_kgm2",
+    "mcc_hrc_JgK",
+    "mcc_total_hr_kJg",
+    "mcc_t_peak_C",
+    "mcc_t_onset_C",
+    "mcc_t_end_C",
+    "mcc_fgc_JgK"
+  ],
+  "model": "exp119 recipe on exp119's 9 features + mcc_t_onset_C (mean t_onset_bc_C), mcc_t_end_C, mcc_fgc_JgK",
+  "hyperparameters": "HGB(max_iter=300, learning_rate=0.05, max_leaf_nodes=15, min_samples_leaf=5, random_state=0), ExtraTrees(500, min_samples_leaf=2), Ridge(alpha=10) with impute+indicators+scaler; equal average in the log1p wrapper (exp119); fixed by the config, nothing tuned",
+  "code": "data/v2/train_round10_physics.py",
+  "n_rows": 197,
+  "n_groups": 67,
+  "protocol": "gkf_group5x10",
+  "rkf_mean": 0.4997,
+  "rkf_std": 0.0384,
+  "ci_lo": 0.3523,
+  "ci_hi": 0.6535,
+  "pooled_ci_lo": 0.3645,
+  "pooled_ci_hi": 0.6469,
+  "paired_vs": "exp119",
+  "paired_delta": 0.0022,
+  "paired_wins": "7/10",
+  "sota": 0.9724,
+  "sota_source": "phan_morgan",
+  "status": "ok",
+  "blocked_reason": "",
+  "note": "round 10 FIGRA r10_figra_g1 (selectable); vs exp119 on identical folds; gain not established without the top 5 groups; gate v2 selected (K=1, q=1.552, LB=-0.0120): G1 False, G2 True, G3 False",
+  "role": "selectable",
+  "rkf_mean_full": 0.4996760099179983,
+  "ci_lo_full": 0.35234770886080446,
+  "ci_hi_full": 0.6535148377047587,
+  "per_repeat_r2": [
+    0.5141439300376618,
+    0.47770522979186014,
+    0.5260427622952434,
+    0.45969176539949475,
+    0.546122227716065,
+    0.4260437640828243,
+    0.5557643988705889,
+    0.47501699371446593,
+    0.4966019119318348,
+    0.5196271153399441
+  ],
+  "seed0_r2": 0.5141439300376618,
+  "seed0_mae": 5.352481028193796,
+  "seed0_rmse": 8.934553894569381,
+  "top_k_removal": {
+    "top5": [
+      [
+        "Rebond_Foam_Carpet_Pad",
+        170.28600528875984
+      ],
+      [
+        "Rubber_Band",
+        115.37005812992393
+      ],
+      [
+        "Overstuffed_Chair_Polyurethane_Foam",
+        74.10372314618871
+      ],
+      [
+        "Cellulose_Insulation",
+        54.50447409794839
+      ],
+      [
+        "House_Wrap",
+        53.390891412979734
+      ]
+    ],
+    "top5_share_of_net": 6.661219468951478,
+    "drop_top1": {
+      "mean_gain": -0.0035547319485314645,
+      "wins": 4
+    },
+    "drop_top3": {
+      "mean_gain": -0.01175145938354899,
+      "wins": 1
+    },
+    "drop_top5": {
+      "mean_gain": -0.016299961925777318,
+      "wins": 0
+    },
+    "not_established": true
+  },
+  "gp_warnings": {},
+  "wall_time_s": 54.0,
+  "gate_v2": {
+    "theta": 0.0021690404015508925,
+    "wins": 7,
+    "ci_lo": 0.35234770886080446,
+    "ci_hi": 0.6535148377047587,
+    "se": 0.009117203209392,
+    "lb_maxT": -0.011983743254731652,
+    "lb_unadjusted": -0.01198374325473165,
+    "lb_raw_maxT": -0.011983743254731652,
+    "p_boot_gain_le_0": 0.391,
+    "K": 1,
+    "q": 1.5523163552725456,
+    "selected": true
+  }
+}

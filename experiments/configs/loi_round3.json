@@ -1,0 +1,30 @@
+{
+  "round": "loi_round3",
+  "target": "LOI (%) RPUF literature, same 333-row benchmark",
+  "declared": "by Opus 5.5, see git commit time; before any run",
+  "plan_ref": "plans/FABLE_PLAN_2026-10-01.md \u00a76 LOI round 3 (RDKit descriptors for FRs whose structures resolve by name); last round of budget 3",
+  "banned_moves_checked": true,
+  "incumbent": {
+    "exp_id": "exp064",
+    "B_mean": 0.351,
+    "B_ci": [
+      0.13,
+      0.52
+    ]
+  },
+  "structure_resolution": "For each distinct FR name in loi_rpuf_literature.csv: try the abbreviation's expansion in parentheses, then the full name, against PubChem PUG REST (name -> CID -> IsomericSMILES + MolecularFormula). Accept only single-component small molecules (no polymers, minerals, graphite, mixtures, bio-materials, 'modified' products). Store data/v2/fr_structures.csv (name, query, cid, smiles, formula, status). A human-readable list of accepted matches goes in the log. No guessing structures by hand.",
+  "candidates": [
+    {
+      "id": "c1",
+      "desc": "round-1 rf, round-1 features, but el_* recomputed with element fractions from PubChem formulas for FRs missing from fr_element_table.csv (coverage gain only; existing table entries unchanged)"
+    },
+    {
+      "id": "c2",
+      "desc": "c1 + 6 FR-structure features, wt%-weighted mean over the row's resolved FRs (NaN if none resolved): aromatic-atom fraction, Fsp3, P=O count per 1000 Da, P-N bond count per 1000 Da, MolLogP, TPSA per 1000 Da; plus resolved_fr_wt_share"
+    }
+  ],
+  "selection_rule": "highest protocol-B mean; adopt over exp064 only if >= 8/10 paired B repeats better AND B ci_lo >= 0.130",
+  "protocols": "identical to loi_round1 (A, B, C; same seeds; paper-bootstrap CI)",
+  "exit_triggers": "B ci_lo > 0.84 or A mean > 0.84 -> EXIT 5",
+  "after_round": "LOI round budget exhausted; park"
+}

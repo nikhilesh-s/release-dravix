@@ -1,0 +1,21 @@
+{
+  "round": "blend_round1",
+  "declared": "by Opus 5.5 on Oct 6, see git commit time; before any run",
+  "authority": "Arnav, Oct 6: 'keep trying to make dravix better w/o the new pdfs'",
+  "rationale": "The only lever that moved a record on Oct 5 was model averaging (LOI round 8: RF+ET+Ridge, +0.048, 9/10, critic SOUND WITH CAVEATS). This round tests the same recipe, fixed a priori, once on each other comparable target. No new features, no tuning, two candidates per target.",
+  "targets": {
+    "pHRR": {"incumbent": "exp074 0.6113 [0.516, 0.838]", "data": "train_phrr_promote_c2.py: T.load(replicate_target=True), has_mcc, 191 rows, groups = material with PlasticC->HIPS (64), features T.BASE+T.PHYS", "incumbent_model": "T.hgb(), log1p target", "extra_report": "category-GKF"},
+    "Char Residue": {"incumbent": "exp081 0.5491 [0.342, 0.693]", "data": "train_char_residue_round1b.py --merge-groups data prep verbatim (567 rows, BASE + 5 category flags)", "incumbent_model": "its HGB (lr 0.05, 300 iter, 15 leaves, min_samples_leaf 10), raw target"},
+    "FIGRA": {"incumbent": "exp073 0.4563 [0.245, 0.639]", "data": "train_figra_round1b.py data prep verbatim (197 rows / 67 materials, F2)", "incumbent_model": "its HGB (300 iter, lr 0.05, 15 leaves, min_samples_leaf 5), log1p target"},
+    "TTI": {"incumbent": "exp046 0.3133 [0.071, 0.496]", "data": "train_tti_v5_physics --onset-bc --replicate-table (681 rows / 76 materials), PHYS", "incumbent_model": "v5.linear(PoissonRegressor(alpha 0.01)), raw target", "extra_report": "family-GKF, R2 at 25 kW/m2"}
+  },
+  "candidates (per target, on the incumbent's features)": {
+    "b1": "equal average of incumbent model, ExtraTreesRegressor(n_estimators=500, min_samples_leaf=2, random_state=0) and Ridge(alpha=10) after median impute + missing indicators + StandardScaler",
+    "b2": "equal average of incumbent model and the same ExtraTrees"
+  },
+  "target_scale": "members are averaged on the incumbent's scale: pHRR and FIGRA inside the log1p wrapper (as the incumbent), Char Residue raw; TTI: GLM raw, ET and Ridge each wrapped in log1p TransformedTargetRegressor, average on the raw scale",
+  "step1": "each incumbent must reproduce its record (mean and CI within 0.002) or that target is BLOCKED",
+  "protocol": "repeated GroupKFold 5x10 with the incumbent's groups, repeat-0 group bootstrap CI (eval_protocol)",
+  "selection_rule": "per target: best of b1/b2 by mean; replaces the incumbent only if >= 8/10 paired repeats better AND ci_lo >= incumbent ci_lo; then critic. Otherwise the incumbent stays.",
+  "exit_triggers": "any ci_lo above its bar -> EXIT (pHRR already ahead on a different population: a higher pHRR stays 'different population')"
+}

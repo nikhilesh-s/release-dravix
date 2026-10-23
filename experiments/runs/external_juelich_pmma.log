@@ -1,0 +1,40 @@
+config experiments/configs/external_juelich_pmma.json committed at 2dbc7c1
+sha256 verified for both zips; 24 files
+Black       -> FSRI Black_PMMA: mcc_peak_hrr_Wg=203.9, mcc_char_yield_pct=0.1533, cone_mass_per_area_kgm2=10.24, cone_thickness_mm=8.375, density_kgm3=1181, mcc_total_hr_kJg=25.16, mcc_t_peak_C=364.5, mcc_t_onset_C=215.2, log_kpc=12.38
+Transparent -> FSRI PMMA: mcc_peak_hrr_Wg=165.7, mcc_char_yield_pct=0.72, cone_mass_per_area_kgm2=3.33, cone_thickness_mm=2.785, density_kgm3=1180, mcc_total_hr_kJg=24.17, mcc_t_peak_C=381, mcc_t_onset_C=206.3, log_kpc=nan
+predictions written; reading labels now
+
+=== results (report-only; no win language, no bar) ===
+variant A all         n=24 R2=-117676.901 MAE=1062 kW/m2 (10703.8% of mean) bias=+1062  mean obs 10 / pred 1072
+variant A Black       n=12 R2=-153939.641 MAE=1144 kW/m2 (11810.7% of mean) bias=+1144  mean obs 10 / pred 1154
+variant A Transparent n=12 R2=-90349.556 MAE=981 kW/m2 (9648.9% of mean) bias=+981  mean obs 10 / pred 991
+variant B all         n=24 R2=-145306.537 MAE=1185 kW/m2 (11944.4% of mean) bias=+1185  mean obs 10 / pred 1195
+variant B Black       n=12 R2=-154425.549 MAE=1151 kW/m2 (11880.1% of mean) bias=+1151  mean obs 10 / pred 1160
+variant B Transparent n=12 R2=-139574.503 MAE=1220 kW/m2 (12005.8% of mean) bias=+1220  mean obs 10 / pred 1230
+variant A, smoothed-label sensitivity: R2=-127985.485 MAE=1063
+
+per (color, flux) cell: observed min/mean/max vs predicted A / B
+      color  flux  obs_min  obs_mean  obs_max  pred_A  pred_B
+      Black    25      6.0       6.0      7.0   730.0   776.0
+      Black    35      7.0       7.0      8.0  1102.0  1097.0
+      Black    50     11.0      11.0     11.0  1203.0  1198.0
+      Black    75     14.0      14.0     14.0  1580.0  1571.0
+Transparent    25      6.0       6.0      7.0   599.0   788.0
+Transparent    35      7.0       8.0      8.0   930.0  1121.0
+Transparent    50     11.0      11.0     12.0  1015.0  1232.0
+Transparent    75     15.0      15.0     16.0  1419.0  1781.0
+
+=== POST-HOC variant U (label / 0.0088 m2; exploratory, label-informed, NOT confirmatory) ===
+variant A all         n=24 R2=0.760 MAE=138 kW/m2 (12.2% of mean) bias=-56  mean obs 1128 / pred 1072
+variant A Black       n=12 R2=0.852 MAE=88 kW/m2 (8.0% of mean) bias=+53  mean obs 1101 / pred 1154
+variant A Transparent n=12 R2=0.684 MAE=187 kW/m2 (16.2% of mean) bias=-164  mean obs 1155 / pred 991
+variant B all         n=24 R2=0.868 MAE=100 bias=+68
+      color  flux  obsU_min  obsU_mean  obsU_max  pred_A  pred_B
+      Black    25     696.0      717.0     756.0   730.0   776.0
+      Black    35     818.0      850.0     871.0  1102.0  1097.0
+      Black    50    1201.0     1253.0    1287.0  1203.0  1198.0
+      Black    75    1554.0     1583.0    1605.0  1580.0  1571.0
+Transparent    25     696.0      729.0     756.0   599.0   788.0
+Transparent    35     847.0      885.0     915.0   930.0  1121.0
+Transparent    50    1224.0     1285.0    1336.0  1015.0  1232.0
+Transparent    75    1657.0     1721.0    1768.0  1419.0  1781.0

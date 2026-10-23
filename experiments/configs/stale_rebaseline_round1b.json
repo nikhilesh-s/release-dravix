@@ -1,0 +1,20 @@
+{
+  "round": "stale_rebaseline_and_cr_figra_round1b",
+  "decision": "Arnav 2026-10-02: option A \u2014 re-baseline CR and FIGRA on current (post-f063d48) data",
+  "declared": "by Opus 5.5, see git commit time; before any run",
+  "rebaseline": [
+    {
+      "target": "Char Residue (cone)",
+      "config": "exp033's exact config (train_char_residue_v2.py cone benchmark) on current data",
+      "expected": "0.4825 [0.234, 0.713], 567 rows / 62 materials"
+    },
+    {
+      "target": "FIGRA",
+      "config": "exp012's exact config (train_figra_v1.py) on current data",
+      "expected": "0.4563 [0.245, 0.639], 197 rows / 67 materials"
+    }
+  ],
+  "cr_round1b": "experiments/configs/cr_round1.json candidates c1-c3 unchanged (c1 uses the category flag: no STA air data exists), incumbent = the CR re-baseline; promote only if >= 8/10 paired wins AND ci_lo >= the re-baseline's ci_lo; ci_lo > 0.82 -> EXIT 5",
+  "figra": "experiments/configs/figra_round1.json c1 (two-stage) vs the FIGRA re-baseline, same rule (ci_lo >= re-baseline's); then the same-polymer table from the selected model",
+  "banned_moves_checked": true
+}

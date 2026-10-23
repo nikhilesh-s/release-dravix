@@ -1,0 +1,182 @@
+{
+  "config": "experiments/configs/fsri_composite_snapshot.json",
+  "environment": {
+    "python": "3.12.12",
+    "executable": "~/dravix/.venv312/bin/python",
+    "clone": "a432697e4b7d40f642b5cc8f384506439ebb32df",
+    "scikit-learn": "1.7.1",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scipy": "1.16.1",
+    "OMP_NUM_THREADS": "1",
+    "LOKY_MAX_CPU_COUNT": "1"
+  },
+  "precondition": "round 9, cr_round2 and round 10 pHRR/CR closed with no adoption; numbers_of_record still exp074 / exp117 (checked by the script)",
+  "S0": {
+    "rkf_mean": 0.6112891588698508,
+    "ci_lo": 0.5155008220158991,
+    "ci_hi": 0.837642834653652,
+    "n_rows": 191,
+    "n_groups": 64,
+    "per_repeat_r2": [
+      0.7226585909533443,
+      0.741850624481924,
+      0.49279396840668843,
+      0.46033837689429913,
+      0.581727914570296,
+      0.5449949930673511,
+      0.6090653018199561,
+      0.611852365369544,
+      0.6882425223433271,
+      0.6593669307917782
+    ],
+    "reproduced": true,
+    "record": [
+      0.6113,
+      0.5155,
+      0.8376
+    ]
+  },
+  "S1": {
+    "rkf_mean": 0.6295788585674464,
+    "ci_lo": 0.1244344430510333,
+    "ci_hi": 0.8229542864288583,
+    "n_rows": 191,
+    "n_groups": 62,
+    "rkf_std": 0.08364861485937221,
+    "per_repeat_r2": [
+      0.568003381128136,
+      0.7415304448420454,
+      0.5949179092241008,
+      0.5260456570022105,
+      0.7218957780191786,
+      0.5489872277620296,
+      0.686476455253316,
+      0.5121106410774496,
+      0.7108280381245151,
+      0.684993053241483
+    ]
+  },
+  "reported_only": {
+    "pooled_ci": [
+      0.5003227548175255,
+      0.845969302924499
+    ],
+    "gss_mean": 0.31039319779863844,
+    "category_gkf": {
+      "mean": 0.34140888474161374,
+      "std": 0.11082506510054002,
+      "ci_lo": -0.30735071671484876,
+      "ci_hi": 0.49250870550543896,
+      "n_categories": 11,
+      "per_repeat_r2": [
+        0.14082729038008157,
+        0.606205951262931,
+        0.26789544651301467,
+        0.3158620507880171,
+        0.37259272197847215,
+        0.3790714138775685,
+        0.31053357051021746,
+        0.3832805100127846,
+        0.3065648769305084,
+        0.3312550151625415
+      ]
+    },
+    "decomposition": {
+      "label": "not paired; folds differ",
+      "S0": {
+        "rkf_mean": 0.6112891588698508,
+        "ci_lo": 0.5155008220158991,
+        "ci_hi": 0.837642834653652,
+        "n_rows": 191,
+        "n_groups": 64
+      },
+      "S1": {
+        "rkf_mean": 0.6295788585674464,
+        "ci_lo": 0.1244344430510333,
+        "ci_hi": 0.8229542864288583,
+        "n_rows": 191,
+        "n_groups": 62
+      },
+      "S2": {
+        "rkf_mean": 0.6327724266371936,
+        "ci_lo": 0.49015601139380105,
+        "ci_hi": 0.8674152205471122,
+        "n_rows": 205,
+        "n_groups": 66
+      },
+      "S2_old_rows_r2": 0.6218189580450108,
+      "S2_new_rows_r2": 0.7812728067116861,
+      "S2_new_rows_sse_share": 0.008626960571176373
+    },
+    "per_composite_table": {
+      "Gypsum_Wallboard": {
+        "n": 2,
+        "mean_y": 178.03166666666667,
+        "mean_oof": 279.341275141326,
+        "mae": 101.30960847465927,
+        "sse_share": 0.0008967228704443827
+      },
+      "Lightweight_Gypsum_Wallboard": {
+        "n": 3,
+        "mean_y": 172.14555555555555,
+        "mean_oof": 208.16350526117364,
+        "mae": 43.10784147746305,
+        "sse_share": 0.00032989646827836133
+      },
+      "Plastic_Laminate_Countertop": {
+        "n": 3,
+        "mean_y": 168.76222222222222,
+        "mean_oof": 277.43031650361246,
+        "mae": 108.66809428139027,
+        "sse_share": 0.0014185187955514733
+      },
+      "Fiberglass_Insulation_R30_Paper_Faced": {
+        "n": 3,
+        "mean_y": 152.28333333333333,
+        "mean_oof": 200.24396256153295,
+        "mae": 55.97289977782142,
+        "sse_share": 0.0005491297644998374
+      },
+      "Overstuffed_Chair_Assembly": {
+        "n": 3,
+        "mean_y": 749.6533333333333,
+        "mean_oof": 667.6931564572712,
+        "mae": 191.05646524736724,
+        "sse_share": 0.005432692672402319
+      },
+      "Overstuffed_Chair_Polyurethane_Foam": {
+        "n": 3,
+        "mean_y": 908.8144444444443,
+        "mean_oof": 647.272265676054,
+        "mae": 333.9401288353849,
+        "sse_share": 0.01724433956525079
+      },
+      "Overstuffed_Chair_Polyester_Batting": {
+        "n": 3,
+        "mean_y": 418.23,
+        "mean_oof": 597.3972560891273,
+        "mae": 190.06288647409076,
+        "sse_share": 0.006438416813984046
+      },
+      "Overstuffed_Chair_Polyester_Fabric": {
+        "n": 3,
+        "mean_y": 184.61777777777777,
+        "mean_oof": 248.5993531655768,
+        "mae": 83.75296562277836,
+        "sse_share": 0.001551255835793875
+      }
+    },
+    "pHRR_truncation_note": {
+      "n_replicates": 42,
+      "n_truncated": 25,
+      "by_product": {
+        "Fiberglass_Insulation_R30_Paper_Faced": 9,
+        "Gypsum_Wallboard": 6,
+        "Lightweight_Gypsum_Wallboard": 9,
+        "Overstuffed_Chair_Assembly": 1,
+        "Plastic_Laminate_Countertop": 0
+      }
+    }
+  }
+}

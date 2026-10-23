@@ -1,0 +1,59 @@
+# DRAFT. Placeholders are commented out so the file validates; fill them before release.
+# Author order is fixed: Suravarjjala, Gupta, Saini. No emails, no affiliations (see release/README.md).
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below, and cite the benchmark dataset record for the data."
+type: software
+title: "Dravix: formulation-to-cone-calorimeter property models and benchmark code"
+version: "2.0.0"
+# date-released: "YYYY-MM-DD"            # fill on publication day
+# doi: "10.5281/zenodo.NNNNNNN"          # reserved software version DOI
+license: "Apache-2.0"                    # PENDING attorney review and consent of all three inventors
+# repository-code: "https://github.com/nikhilesh-s/REPO-NAME"   # after the public repo exists
+authors:
+  - family-names: "Suravarjjala"
+    given-names: "Nikhilesh"
+    # orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"   # only if he has one (age 16+ rule)
+  - family-names: "Gupta"
+    given-names: "Jaanya"
+    # orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"
+  - family-names: "Saini"
+    given-names: "Arnav"
+    # orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"
+keywords:
+  - flame retardancy
+  - cone calorimeter
+  - heat release rate
+  - time to ignition
+  - polymer composites
+  - machine learning
+  - materials informatics
+  - benchmark
+abstract: >-
+  Code for the Dravix engine, which maps a polymer formulation (base polymer, additives with role
+  and amount, heat flux, specimen thickness) to cone-calorimeter time to ignition, peak heat
+  release rate, total heat released and average heat release rate. It also contains the scripts,
+  pre-declared experiment configs, independent critic reviews and run logs for a literature
+  cone-calorimeter benchmark (repeated random and paper-grouped 5-fold cross-validation). See
+  BENCHMARK.md for the protocol and for which numbers are held-out evidence. Developed with
+  substantial help from AI coding agents (Anthropic Claude); the authors are responsible for the
+  content. A screening aid, not for fire-safety certification.
+references:
+  - type: data
+    title: "Dravix cone-calorimeter literature benchmark"
+    version: "v1"
+    authors:
+      - family-names: "Suravarjjala"
+        given-names: "Nikhilesh"
+      - family-names: "Gupta"
+        given-names: "Jaanya"
+      - family-names: "Saini"
+        given-names: "Arnav"
+    # doi: "10.5281/zenodo.NNNNNNN"          # reserved benchmark version DOI
+  - type: article
+    title: "Polymer composites informatics for flammability, thermal, mechanical and electrical property predictions"
+    doi: "10.1039/D4PY01417K"
+    journal: "Polymer Chemistry"
+    year: 2025
+    authors:
+      - family-names: "Tran"
+        given-names: "H."

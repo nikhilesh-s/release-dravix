@@ -1,0 +1,23 @@
+Training rows: 504 across 55 materials (TTI x MCC x STA-onset inner join)
+  seed=0: n_test=129, held-out R2 (seconds)=0.0323
+  seed=1: n_test=136, held-out R2 (seconds)=0.0974
+  seed=2: n_test=124, held-out R2 (seconds)=0.2595
+  seed=3: n_test=128, held-out R2 (seconds)=0.2083
+  seed=4: n_test=110, held-out R2 (seconds)=0.3322
+  seed=5: n_test=136, held-out R2 (seconds)=0.2280
+  seed=6: n_test=128, held-out R2 (seconds)=0.3280
+  seed=7: n_test=133, held-out R2 (seconds)=0.0941
+  seed=8: n_test=134, held-out R2 (seconds)=-0.0421
+  seed=9: n_test=122, held-out R2 (seconds)=0.1351
+
+Held-out R2 (seconds) across 10 splits: mean=0.1673, std=0.1184, min=-0.0421, max=0.3322
+SOTA (pomazi_2026, real held-out ANN): R2=0.58
+Delta (mean Dravix - SOTA): -0.4127
+
+Feature importances (full-data fit, for interpretation only):
+  specimen_mass_g: 0.331
+  heat_flux_kWm2: 0.263
+  mcc_peak_hrr_Wg: 0.167
+  mcc_char_yield_pct: 0.150
+  onset_temp_C: 0.090
+  spark_ignitor: 0.000

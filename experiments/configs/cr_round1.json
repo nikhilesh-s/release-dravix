@@ -1,0 +1,37 @@
+{
+  "round": "cr_round1",
+  "target": "Char Residue = cone residue (final/initial specimen mass, %), FSRI; canonical per plan \u00a73 B3",
+  "declared": "by Opus 5.5, see git commit time; before any run",
+  "plan_ref": "plans/FABLE_PLAN_2026-10-01.md \u00a73 B3, \u00a76 (CR loop); round budget 2",
+  "banned_moves_checked": true,
+  "incumbent": {
+    "exp_id": "exp033",
+    "config": "data/v2/train_char_residue_v2.py cone benchmark: RF(n_estimators=300, max_depth=6, min_samples_leaf=2) on heat_flux_kWm2, density_kgm3, mcc_char_yield_pct, sta_res_3K, sta_res_10K, sta_res_30K",
+    "rkf_mean": 0.538,
+    "ci": [
+      0.112,
+      0.713
+    ],
+    "rows": 497,
+    "materials": 55
+  },
+  "data": "exactly exp033's rows (must reproduce 0.538 [0.112, 0.713] first, else status blocked)",
+  "candidates": [
+    {
+      "id": "c1",
+      "desc": "incumbent features + inorganic-fraction proxy: STA residue in AIR (material mean) if the FSRI STA data has air runs, else a category flag (mineral/inorganic-containing category one-hot); RF incumbent settings"
+    },
+    {
+      "id": "c2",
+      "desc": "c1 features, HistGradientBoostingRegressor(learning_rate=0.05, max_iter=300, max_leaf_nodes=15, min_samples_leaf=10, random_state=0)"
+    },
+    {
+      "id": "c3",
+      "desc": "best of c1/c2 by GKF mean, with logit transform of residue fraction (clip to [0.005, 0.995]), predictions back-transformed to %"
+    }
+  ],
+  "diagnostic": "per-category error table (category, n materials, mean |error|, share of squared error) for incumbent and selected candidate; written to the run log. Not a selection input.",
+  "selection_rule": "highest repeated-GKF mean; promote only if >= 8/10 paired wins vs exp033 AND ci_lo >= 0.112",
+  "exit_triggers": "ci_lo > 0.82 -> EXIT 5",
+  "banned": "STA N2 residue as the target; MCC char yield as a feature for an STA target"
+}

@@ -1,0 +1,209 @@
+{
+  "runs": [
+    {
+      "peak_raw": 1156.406,
+      "peak_hrr_Wg": 1156.406,
+      "t_peak_C": 442.3,
+      "total_hr_bc_kJg": 38.44,
+      "t_onset_bc_C": 413.7,
+      "n_rows": 978,
+      "beta_C_s": 1.0,
+      "beta_src": "file name",
+      "hrc_JgK": 1156.41,
+      "file": "Wood/Calibration_Data/FZJ/FZJ_PS_MCC-raw_N2_60K_R1.csv",
+      "lab": "FZJ"
+    },
+    {
+      "peak_raw": 1077.98,
+      "peak_hrr_Wg": 1077.98,
+      "t_peak_C": 445.7,
+      "total_hr_bc_kJg": 40.164,
+      "t_onset_bc_C": 412.6,
+      "n_rows": 977,
+      "beta_C_s": 1.0,
+      "beta_src": "file name",
+      "hrc_JgK": 1077.98,
+      "file": "Wood/Calibration_Data/FZJ/FZJ_PS_MCC-raw_N2_60K_R2.csv",
+      "lab": "FZJ"
+    },
+    {
+      "peak_raw": 1203.592,
+      "peak_hrr_Wg": 1203.592,
+      "t_peak_C": 443.3,
+      "total_hr_bc_kJg": 40.103,
+      "t_onset_bc_C": 414.2,
+      "n_rows": 978,
+      "beta_C_s": 1.0,
+      "beta_src": "file name",
+      "hrc_JgK": 1203.59,
+      "file": "Wood/Calibration_Data/FZJ/FZJ_PS_MCC-raw_N2_60K_R3.csv",
+      "lab": "FZJ"
+    },
+    {
+      "peak_raw": 1208.979,
+      "peak_hrr_Wg": 1208.979,
+      "t_peak_C": 443.5,
+      "total_hr_bc_kJg": 38.762,
+      "t_onset_bc_C": 415.4,
+      "n_rows": 977,
+      "beta_C_s": 1.0,
+      "beta_src": "file name",
+      "hrc_JgK": 1208.98,
+      "file": "Wood/Calibration_Data/FZJ/FZJ_PS_MCC-raw_N2_60K_R4.csv",
+      "lab": "FZJ"
+    },
+    {
+      "peak_raw": 1154.581,
+      "peak_hrr_Wg": 1154.581,
+      "t_peak_C": 443.0,
+      "total_hr_bc_kJg": 40.205,
+      "t_onset_bc_C": 411.3,
+      "n_rows": 977,
+      "beta_C_s": 1.0,
+      "beta_src": "file name",
+      "hrc_JgK": 1154.58,
+      "file": "Wood/Calibration_Data/FZJ/FZJ_PS_MCC-raw_N2_60K_R5.csv",
+      "lab": "FZJ"
+    },
+    {
+      "peak_raw": 1195.206,
+      "peak_hrr_Wg": 1195.206,
+      "t_peak_C": 442.1,
+      "total_hr_bc_kJg": 39.896,
+      "t_onset_bc_C": 413.0,
+      "n_rows": 978,
+      "beta_C_s": 1.0,
+      "beta_src": "file name",
+      "hrc_JgK": 1195.21,
+      "file": "Wood/Calibration_Data/FZJ/FZJ_PS_MCC-raw_N2_60K_R6.csv",
+      "lab": "FZJ"
+    },
+    {
+      "peak_raw": 1059.824,
+      "peak_hrr_Wg": 1059.824,
+      "t_peak_C": 431.0,
+      "total_hr_bc_kJg": 42.747,
+      "t_onset_bc_C": 381.8,
+      "n_rows": 1377,
+      "beta_C_s": 1.0,
+      "beta_src": "file name",
+      "hrc_JgK": 1059.82,
+      "file": "Wood/Calibration_Data/Lund/Lund_PS_MCC-raw_N2_60K_R1.csv",
+      "lab": "Lund"
+    },
+    {
+      "peak_raw": 1156.921,
+      "peak_hrr_Wg": 1156.921,
+      "t_peak_C": 445.6,
+      "total_hr_bc_kJg": 40.453,
+      "t_onset_bc_C": 413.7,
+      "n_rows": 1378,
+      "beta_C_s": 1.0,
+      "beta_src": "header",
+      "hrc_JgK": 1156.92,
+      "file": "Wood/Calibration_Data/NIST/NIST_Polystyrene_MCC_N2_60K_R1.txt",
+      "lab": "NIST"
+    },
+    {
+      "peak_raw": 554.549,
+      "peak_hrr_Wg": 554.549,
+      "t_peak_C": 428.9,
+      "total_hr_bc_kJg": 40.579,
+      "t_onset_bc_C": 381.1,
+      "n_rows": 1703,
+      "beta_C_s": 0.5,
+      "beta_src": "file name",
+      "hrc_JgK": 1109.1,
+      "file": "Wood/Calibration_Data/TUBS/TUBS_PS_MCC-raw_N2_30K_R1.csv",
+      "lab": "TUBS"
+    },
+    {
+      "peak_raw": 1100.705,
+      "peak_hrr_Wg": 1100.705,
+      "t_peak_C": 447.4,
+      "total_hr_bc_kJg": 40.645,
+      "t_onset_bc_C": 409.9,
+      "n_rows": 1337,
+      "beta_C_s": 1.0,
+      "beta_src": "file name",
+      "hrc_JgK": 1100.7,
+      "file": "Wood/Calibration_Data/UDRI/UDRI_PS_MCC_N2_60K_R1.csv",
+      "lab": "UDRI"
+    },
+    {
+      "peak_raw": 1119.794,
+      "peak_hrr_Wg": 1119.794,
+      "t_peak_C": 447.9,
+      "total_hr_bc_kJg": 40.597,
+      "t_onset_bc_C": 411.9,
+      "n_rows": 1299,
+      "beta_C_s": 1.0,
+      "beta_src": "file name",
+      "hrc_JgK": 1119.79,
+      "file": "Wood/Calibration_Data/UDRI/UDRI_PS_MCC_N2_60K_R2.csv",
+      "lab": "UDRI"
+    },
+    {
+      "peak_raw": 1166.072,
+      "peak_hrr_Wg": 1166.072,
+      "t_peak_C": 445.9,
+      "total_hr_bc_kJg": 40.822,
+      "t_onset_bc_C": 412.4,
+      "n_rows": 1299,
+      "beta_C_s": 1.0,
+      "beta_src": "file name",
+      "hrc_JgK": 1166.07,
+      "file": "Wood/Calibration_Data/UDRI/UDRI_PS_MCC_N2_60K_R3.csv",
+      "lab": "UDRI"
+    }
+  ],
+  "per_lab": {
+    "FZJ": {
+      "n": 6,
+      "hrc_JgK": 1175.81,
+      "h_c_kJg": 39.9995,
+      "hrc_ratio": 1.0500272372498414,
+      "h_c_ratio": 0.9857192143719657,
+      "pass": true
+    },
+    "Lund": {
+      "n": 1,
+      "hrc_JgK": 1059.82,
+      "h_c_kJg": 42.747,
+      "hrc_ratio": 0.9464453156395395,
+      "h_c_ratio": 1.053426649252076,
+      "pass": true
+    },
+    "NIST": {
+      "n": 1,
+      "hrc_JgK": 1156.92,
+      "h_c_kJg": 40.453,
+      "hrc_ratio": 1.0331580028398182,
+      "h_c_ratio": 0.9968949456615491,
+      "pass": true
+    },
+    "TUBS": {
+      "n": 1,
+      "hrc_JgK": 1109.1,
+      "h_c_kJg": 40.579,
+      "hrc_ratio": 0.9904535671867046,
+      "h_c_ratio": 1.0,
+      "pass": true
+    },
+    "UDRI": {
+      "n": 3,
+      "hrc_JgK": 1119.79,
+      "h_c_kJg": 40.645,
+      "hrc_ratio": 1.0,
+      "h_c_ratio": 1.0016264570344267,
+      "pass": true
+    }
+  },
+  "reference": {
+    "hrc_JgK": 1119.79,
+    "h_c_kJg": 40.579
+  },
+  "pass_rule": "0.90 <= lab/reference <= 1.10 for both hrc and h_c",
+  "tubs_peak_used": true,
+  "context_only": "TUBS self-report 1099 J/gK, 38.8 kJ/g; UDRI self-report 1099-1166 W/g, 41.2-41.8 kJ/g"
+}

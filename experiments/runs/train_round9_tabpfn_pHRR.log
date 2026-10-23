@@ -1,0 +1,49 @@
+pHRR: 191 rows / 64 groups / 10 features; log1p: True; incumbent exp074
+torch threads 1, OMP 1, LOKY_MAX_CPU_COUNT 1, HF_HUB_OFFLINE 1
+inc  GKF 0.6113 +- 0.0893 CI [0.5155, 0.8376] pooled [0.4346, 0.8221]  category-GKF 0.3917  (4s)
+REPRO exp074 ok (record (0.6113, 0.5155, 0.8376))
+p1   GKF 0.6909 +- 0.0907 CI [0.4813, 0.8980] pooled [0.5096, 0.8859]  d +0.0796 wins 10/10  category-GKF 0.5532  (153s)
+p2   GKF 0.6895 +- 0.0901 CI [0.5677, 0.8901] pooled [0.5156, 0.8640]  d +0.0782 wins 10/10  category-GKF 0.4971  (190s)
+s1   GKF 0.5389 +- 0.0970 CI [0.2907, 0.7988] pooled [0.3070, 0.8141]  d -0.0724 wins 1/10  category-GKF 0.2582  (28s)
+TabPFN fitted attributes: {'n_estimators_': 8, 'devices_': ['cpu'], 'use_autocast_': False, 'forced_inference_dtype_': None}
+Triggers: none
+wrote experiments/results/r9_tabpfn_phrr_p1.json  top-k: {"drop_top1": {"mean_gain": 0.04321061830303924, "wins": 9}, "drop_top3": {"mean_gain": 0.005445126543783652, "wins": 5}, "drop_top5": {"mean_gain": -0.022101011341924725, "wins": 3}}
+wrote experiments/results/r9_tabpfn_phrr_p2.json  top-k: {"drop_top1": {"mean_gain": 0.052259725690234037, "wins": 10}, "drop_top3": {"mean_gain": 0.02514985214391815, "wins": 9}, "drop_top5": {"mean_gain": 0.008899180256768469, "wins": 6}}
+wrote experiments/results/r9_smear_phrr_s1.json  top-k: {"drop_top1": {"mean_gain": -0.09613058623142764, "wins": 0}, "drop_top3": {"mean_gain": -0.16137934006271412, "wins": 0}, "drop_top5": {"mean_gain": -0.24696774499775756, "wins": 0}}
+wrote experiments/runs/round9_phrr_oof.npz
+consistency checks passed (1e-9) for incumbent + ['p1', 'p2', 's1']
+{
+ "K": 3,
+ "q": 2.0131701270468985,
+ "q_raw": 0.12031708963675727,
+ "best": "p1",
+ "G1": true,
+ "G2": false,
+ "G3": false,
+ "adopt_if_critic_passes": false,
+ "ci_inc": [
+  0.5155008220158991,
+  0.837642834653652
+ ],
+ "n_rows": 191,
+ "n_groups": 64,
+ "n_boot": 2000,
+ "seed": 0,
+ "gate_config": "experiments/configs/adoption_gate_v2.json",
+ "order": [
+  "p1",
+  "p2",
+  "s1"
+ ],
+ "selectable": [
+  "p1",
+  "p2",
+  "s1"
+ ],
+ "npz": "experiments/runs/round9_phrr_oof.npz"
+}
+  p1  theta +0.0796 wins 10/10 ci_lo 0.4813 se 0.0633 lb_maxT -0.0479 lb_unadj -0.0408 p(d<=0) 0.046
+  p2  theta +0.0782 wins 10/10 ci_lo 0.5677 se 0.0473 lb_maxT -0.0170 lb_unadj -0.0148 p(d<=0) 0.004
+  s1  theta -0.0724 wins 1/10 ci_lo 0.2907 se 0.0606 lb_maxT -0.1943 lb_unadj -0.1429 p(d<=0) 0.955
+wrote ~/dravix/experiments/runs/round9_phrr_gate_v2.json
+runtime 795s

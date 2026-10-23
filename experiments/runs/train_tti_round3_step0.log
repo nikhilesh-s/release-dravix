@@ -1,0 +1,24 @@
+====================================================================================================
+STEP 0 (label-free self-tests and asserts) 2026-10-07T22:27:40-07:00
+  python 3.12.12 (~/dravix/.venv312/bin/python); {'numpy': '2.2.6', 'scipy': '1.16.1', 'scikit-learn': '1.7.1', 'pandas': '2.3.3', 'torch': '2.8.0', 'tabpfn': '9.1.0'}
+  self-test T1: PASS  {"rel_err": [2.660705187315282e-07, 2.77022732319868e-07, 1.3023743831973787e-07, 5.317900407479823e-08, 2.2528911305749505e-07, 3.1027483724725994e-07, 1.273285626132547e-07, 1.1103242553099792e-07], "p_a1": 8, "p_a2": 15}
+  self-test T2: PASS  {"cens_share": 0.364, "a1_raw_slopes": [0.49931615991591816, -0.29972833109274577, 0.20110715904586382], "a1_sigma": 0.602407015749672, "a1_converged": true, "a0_max_abs_dev": 0.0}
+  self-test T3: PASS  {"cens_share": 0.0825, "converged": true, "F_fit": -0.40128245375435073, "F_true": -0.39617400154509425}
+  self-test T4: PASS  {}
+  amendment check tti_round3 status approved: OK
+  amendment check D4a yes: OK
+  amendment check D4b S675 canonical: OK
+  amendment check D4c keep a2: OK
+  amendment check D4d family order (tti_round3): OK
+  amendment check D4d family order (round9): OK
+  amendment check round9: tti_round3 output names govern: OK
+  amendment check round9: TTI arm uses S675: OK
+  amendment check D1 yes (gate v2): OK
+  amendment check human_override struck: OK
+adoption_gate self-test OK (a draw identity, b null family, c perfect candidate, d K=1)
+  adoption_gate.py: pseudo_code lines present in order; self-test passed
+  QA regex on all 735 rows: POS 6, NEG 2, overlap 0, flagged 6 == the 6 listed ids
+  C materials with missing PHYS inputs: Feather_Pillow_Feathers ['log_kpc', 'log_rho']; Fiberglass_Insulation_R13_Paper_Faced ['log_kpc', 'log_rho']; Fiberglass_Insulation_R30 ['log_dT', 'log_kpc', 'log_rho']; Gypsum_Wallboard ['log_dT']; Mineral_Wool_Insulation ['log_dT']; Polyisocyanurate_Foam_Board ['log_kpc']
+  U 723 rows / 79 mats; S681 681; S675 675; C 42 rows / 8 mats (15 benchmark + 27 inert); flux S675 {15.0: 3, 25.0: 218, 35.0: 16, 50.0: 221, 75.0: 216, 100.0: 1}; C by flux {25.0: 22, 50.0: 11, 75.0: 9}
+  TabPFN arm: approved True; checks OK (size 44390977, sha256 2ab5a07d5c41dfe6db9aa7ae106fc6de898326c2765be66505a07e2868c10736, non-V2 files []; fresh-process predictions bitwise equal: True)
+STEP 0 PASSED

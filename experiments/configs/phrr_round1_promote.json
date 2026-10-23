@@ -1,0 +1,19 @@
+{
+  "round": "phrr_round1_promote",
+  "decision": "Arnav 2026-10-02: grouping yes (PlasticC and HIPS are one material group); promote option B = c2 (HGB, full exp043 features). Label per H5: 'ahead of the published number on a material-grouped protocol (harder than the competitor's random split), different population; not ahead when whole material families are held out'.",
+  "declared": "by Opus 5.5, see git commit time; before the rescoring run",
+  "grouping": "group key = material, except PlasticC -> HIPS (alias for grouping only; no rows dropped or changed)",
+  "runs": [
+    {
+      "id": "inc_merged",
+      "desc": "exp043 config (rf, BASE+PHYS, log target, --bc, replicate target) rescored with merged groups (reference; critic: 0.546 [0.322, 0.830])"
+    },
+    {
+      "id": "c2_merged",
+      "desc": "c2 = hgb() on exp043 features, log target, merged groups (critic: 0.611 [0.516, 0.838]) -> new pHRR number of record"
+    }
+  ],
+  "protocol": "eval_protocol repeated GroupKFold 5x10 on merged groups, CI = bootstrap_ci(repeat-0 OOF, merged groups); also report pooled-over-repeats CI and category-grouped (family held out) GKF mean + CI, supplementary",
+  "artifact": "fit c2 on all 191 rows; save NEW file models/v2/phrr_hgb_v4.joblib (same bundle keys as phrr_rf_v3.joblib); do NOT modify or delete phrr_rf_v3.joblib",
+  "comparable": "stays pending-human"
+}

@@ -1,0 +1,42 @@
+pHRR (exp074): 191 rows / 64 groups; groups = material, PlasticC -> HIPS (merged; 64 groups), as exp074; score: s = log1p(y); s_hat = model output (fitted on log1p(y)); back-transform expm1; display clip (0.0, inf)
+  stratum 25: 66 rows / 62 groups
+  stratum 50: 62 rows / 61 groups
+  stratum 75: 63 rows / 61 groups
+    raw flux  15: 1 rows / 1 groups
+    raw flux  25: 60 rows / 59 groups
+    raw flux  35: 5 rows / 5 groups
+    raw flux  50: 62 rows / 61 groups
+    raw flux  75: 62 rows / 61 groups
+    raw flux 100: 1 rows / 1 groups
+STEP 1 exp074: GKF 0.6113 +- 0.0893 CI [0.5155, 0.8376] (record 0.6113 [0.516, 0.838]); within 0.002: True  (14s)
+Nested GroupKFold 5x10 (outer r, inner r), variants ['P', 'V1', 'V2', 'CQR']
+  nested repeat 0: 43s
+  nested repeat 1: 36s
+  nested repeat 2: 32s
+  nested repeat 3: 37s
+  nested repeat 4: 20s
+  nested repeat 5: 16s
+  nested repeat 6: 14s
+  nested repeat 7: 16s
+  nested repeat 8: 16s
+  nested repeat 9: 14s
+nested-disjointness asserts passed; every row got exactly one interval per repeat
+  P    overall: group_all 0.897  group_mean 0.926 [0.874, 0.968] (consistent with nominal)  row 0.926  median raw width 940.7 kW/m2  unbounded 0  empty 0
+       stratum  25: group_all 0.932  group_mean 0.935 [0.874, 0.981] (consistent with nominal)  row 0.924  median raw width 523.6  (rows 66, groups 62, unbounded 0)
+       stratum  50: group_all 0.920  group_mean 0.920 [0.866, 0.966] (consistent with nominal)  row 0.921  median raw width 964.8  (rows 62, groups 61, unbounded 0)
+       stratum  75: group_all 0.931  group_mean 0.932 [0.881, 0.974] (consistent with nominal)  row 0.932  median raw width 1206  (rows 63, groups 61, unbounded 0)
+  V1   overall: group_all 0.914  group_mean 0.936 [0.886, 0.976] (consistent with nominal)  row 0.937  median raw width 942.2 kW/m2  unbounded 0  empty 0
+       stratum  25: group_all 0.950  group_mean 0.951 [0.898, 0.992] (consistent with nominal)  row 0.944  median raw width 632.7  (rows 66, groups 62, unbounded 0)
+       stratum  50: group_all 0.933  group_mean 0.933 [0.879, 0.977] (consistent with nominal)  row 0.934  median raw width 952  (rows 62, groups 61, unbounded 0)
+       stratum  75: group_all 0.931  group_mean 0.932 [0.880, 0.975] (consistent with nominal)  row 0.932  median raw width 1188  (rows 63, groups 61, unbounded 0)
+  V2   overall: group_all 0.900  group_mean 0.925 [0.873, 0.969] (consistent with nominal)  row 0.925  median raw width 925.3 kW/m2  unbounded 0  empty 0
+       stratum  25: group_all 0.940  group_mean 0.943 [0.886, 0.987] (consistent with nominal)  row 0.932  median raw width 587.1  (rows 66, groups 62, unbounded 0)
+       stratum  50: group_all 0.916  group_mean 0.916 [0.857, 0.966] (consistent with nominal)  row 0.918  median raw width 923.1  (rows 62, groups 61, unbounded 0)
+       stratum  75: group_all 0.925  group_mean 0.925 [0.870, 0.971] (consistent with nominal)  row 0.925  median raw width 1185  (rows 63, groups 61, unbounded 0)
+  CQR  overall: group_all 0.883  group_mean 0.929 [0.881, 0.973] (consistent with nominal)  row 0.930  median raw width 880.3 kW/m2  unbounded 0  empty 0
+       stratum  25: group_all 0.924  group_mean 0.924 [0.868, 0.973] (consistent with nominal)  row 0.915  median raw width 645.7  (rows 66, groups 62, unbounded 0)
+       stratum  50: group_all 0.938  group_mean 0.938 [0.884, 0.982] (consistent with nominal)  row 0.939  median raw width 949.1  (rows 62, groups 61, unbounded 0)
+       stratum  75: group_all 0.936  group_mean 0.936 [0.879, 0.982] (consistent with nominal)  row 0.938  median raw width 1166  (rows 63, groups 61, unbounded 0)
+wrote ~/Dravix/dravix-v2/experiments/runs/conformal/phrr_summary.json and phrr_rows.csv; runtime 261s
+pHRR artifact: repeat-0 OOF of the 5 fold models equals step-1 repeat-0 OOF (max |diff| 0.00e+00 kW/m2)
+wrote models/v2/phrr_hgb_v4_conformal.joblib; models/v2/phrr_hgb_v4.joblib mtime unchanged

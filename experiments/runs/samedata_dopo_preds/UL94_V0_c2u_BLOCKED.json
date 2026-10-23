@@ -1,0 +1,3 @@
+{
+ "P1_r0__f0": "TabPFNValidationError: Number of features `667` reaching the model is greater than the maximum number of features `500` officially supported by the TabPFN model. Set `ignore_pretraining_limits=True` to override this error!"
+}

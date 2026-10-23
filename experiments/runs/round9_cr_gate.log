@@ -1,0 +1,41 @@
+B2 y/groups identical: True; max |B2 step-1 exp117 OOF - cr_round2 OOF| = 0.00e+00
+consistency checks passed (1e-9) for incumbent + ['o1', 'o2', 'n1', 'p1', 'p2']
+{
+ "K": 5,
+ "q": 1.9100131250515424,
+ "q_raw": 0.06481337106892993,
+ "best": "o1",
+ "G1": false,
+ "G2": false,
+ "G3": false,
+ "adopt_if_critic_passes": false,
+ "ci_inc": [
+  0.43889737894271874,
+  0.7892826489871326
+ ],
+ "n_rows": 567,
+ "n_groups": 61,
+ "n_boot": 2000,
+ "seed": 0,
+ "gate_config": "experiments/configs/adoption_gate_v2.json",
+ "order": [
+  "o1",
+  "o2",
+  "n1",
+  "p1",
+  "p2"
+ ],
+ "selectable": [
+  "o1",
+  "n1",
+  "p1",
+  "p2"
+ ],
+ "npz": "experiments/runs/round9_cr_oof.npz"
+}
+  o1  theta +0.0156 wins 7/10 ci_lo 0.4349 se 0.0133 lb_maxT -0.0098 lb_unadj -0.0042 p(d<=0) 0.134
+  o2  theta -0.0321 wins 1/10 ci_lo 0.3380 se 0.0296 lb_maxT -0.0886 lb_unadj -0.0700 p(d<=0) 0.907
+  n1  theta +0.0011 wins 5/10 ci_lo 0.4257 se 0.0165 lb_maxT -0.0304 lb_unadj -0.0253 p(d<=0) 0.465
+  p1  theta -0.1002 wins 0/10 ci_lo 0.3560 se 0.0458 lb_maxT -0.1876 lb_unadj -0.1642 p(d<=0) 0.997
+  p2  theta -0.0211 wins 1/10 ci_lo 0.4404 se 0.0198 lb_maxT -0.0588 lb_unadj -0.0514 p(d<=0) 0.876
+wrote ~/dravix/experiments/runs/round9_cr_gate_v2.json

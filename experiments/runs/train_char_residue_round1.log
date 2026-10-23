@@ -1,0 +1,4 @@
+rows 567 / materials 62
+STA atmospheres present: ['N2'] -> no air runs; using category flags
+exp033 reproduction: rkf 0.4825 (std 0.0371) CI [0.234, 0.713] GSS 0.3914
+BLOCKED: exp033 did not reproduce: rows 567/62, rkf 0.4825, CI [0.234, 0.713] vs 0.538 [0.112, 0.713] 497/55

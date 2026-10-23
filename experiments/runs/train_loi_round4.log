@@ -1,0 +1,50 @@
+sanity: table-only recompute == committed el_* columns on all 499 rows
+element-feature coverage (benchmark rows with all el_* non-NaN): before 313/460 -> after 314/460
+rows with >=1 resolved FR (struct features non-NaN): 41/460; mean resolved_fr_wt_share over rows with FRs and loading ok: 0.082
+REPRO exp087: B 0.3109 CI [0.1459, 0.4666] (record B 0.3109, CI [0.1459, 0.4666]) in 16s
+Reproduction within 0.002: True
+
+F7 class-prior table (median element mass fraction %, over 429 resolved FR mentions; no LOI used):
+class                           n        P        N       Si        B  halogen    metal
+N-additive                     12     0.00    66.63     0.00     0.00     0.00     0.00
+P-N                            53    15.03    14.44     0.00     0.00     0.00     0.00
+P-additive                    106    17.00     0.00     0.00     0.00     0.00     0.00
+P-reactive                     12    18.42     0.00     0.00     0.00     0.00     0.00
+bio-based                      35     0.00     0.00     0.00     0.00     0.00     0.00
+boron                           6     0.00     0.00     0.00    12.85     0.00    28.89
+carbon_nano(graphene/CNT)       1     0.00     0.00     0.00    17.48     0.00     0.00
+expandable_graphite           106     0.00     0.00     0.00     0.00     0.00     0.00
+halogen                         4     9.46     0.00     0.00     0.00    32.47     0.00
+intumescent(APP-based)         32    31.93    14.44     0.00     0.00     0.00     0.00
+metal_hydroxide                12     0.00     0.00     0.00     0.00     0.00    33.08
+metal_oxide/salt               20     0.00     0.00     0.00     0.00     0.00     0.00
+nanoclay                        6     0.00     0.00     0.00     0.00     0.00     0.00
+other                          22     0.00     0.00     0.00     0.00     0.00     0.00
+silicon                         2     0.00     0.00    46.74     0.00     0.00     0.00
+GLOBAL (fallback)             429     0.00     0.00     0.00     0.00     0.00     0.00
+
+=== Coverage (benchmark 460 rows) ===
+polyol_type counts: {'polyether': 244, 'polyester_aromatic': 82, 'bio_based': 54, 'unknown': 80}
+iso_index_num non-null: 114/460 (raw iso_index non-empty: 124); is_PIR=1: 29
+el_* all non-NaN (before F7 / after F7): 314/460 -> 432/460; rows imputed: 118; mean imputed share over those: 0.861
+neat-control LOI available: 400/460 rows, 67/83 papers
+features: exp087 34, c1 40, c2/c3 45, baseline-aware 46
+  c1 done in 42s
+  c2 done in 43s
+  c3 done in 71s
+  ba done in 29s
+
+=== Summary (460 rows / 83 papers) ===
+cand                      A mean [p2.5, p97.5]    B mean ± std   B CI rep0         B CI pooled       C      wins  dB
+exp087 (record)           0.658 [0.476, 0.788]    0.311 ± 0.048  [0.146, 0.467]    [0.109, 0.442]    0.345
+c1 incumbent+F6           0.705 [0.532, 0.825]    0.337 ± 0.048  [0.172, 0.475]    [0.154, 0.460]    0.331  10/10 +0.0256
+c2 +F6+F7+F8              0.700 [0.552, 0.818]    0.354 ± 0.043  [0.169, 0.466]    [0.178, 0.479]    0.257  9/10  +0.0433
+c3 RF/HGB avg on c2       0.732 [0.592, 0.851]    0.321 ± 0.054  [0.128, 0.425]    [0.134, 0.450]    0.248  5/10  +0.0106
+
+SELECTION (highest B mean): c2 B 0.3542; paired wins 9/10 (need >= 8), B ci_lo 0.1694 (need >= 0.146) -> ADOPT candidate over exp087 pending critic
+Triggers: none
+
+=== REPORTED-NOT-SELECTABLE: baseline-aware variant (c2 + paper's neat-control LOI; a DIFFERENT task, never compared with Sun/Fu) ===
+A mean 0.742 [0.617, 0.824]; B 0.395 ± 0.047; B CI rep0 [0.211, 0.458]; pooled [0.240, 0.505]; paired B wins vs exp087 10/10, mean delta +0.0843 (no result JSON written)
+
+wrote 3 result JSONs; runtime 202s

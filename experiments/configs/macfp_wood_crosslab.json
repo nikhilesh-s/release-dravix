@@ -1,0 +1,189 @@
+{
+  "round": "macfp_wood_crosslab",
+  "status": "declared",
+  "tier": "A (plans/LEVER_SWEEP_2026-10-06.md item A2). Report-only external validation: no training, no tuning, no selection, no adoption, no number of record can change.",
+  "declared": "Drafted Oct 6 by an Opus 5.5 workflow subagent (lever sweep, item A2), before any Dravix model has been run on MaCFP-4 Wood or on Edinburgh PMMA ignition times. It binds from its git commit time, which must come before the first run.",
+  "authority": "Fable plan plans/LEVER_SWEEP_2026-10-06.md A2 ('Needs Arnav: no'). Evidence: findings macfp-wood-phrr-crosslab, macfp-wood-tti-crosslab and macfp-wood-cr-termination in plans/LEVER_SWEEP_2026-10-06_findings.json.",
+  "what": "External cross-lab check of the FSRI-trained records on MaCFP-4 Eastern White Pine (Pinus strobus, one grove, kiln-dried, ~100 x 100 x 25 mm slabs, 10 cone labs), plus Edinburgh black cast PMMA TTI. pHRR record exp074 and TTI record exp046 are scored per test. Char Residue record exp117 is a diagnostic only (absolute error, no R2). The models are the records exactly as fitted on FSRI.",
+  "banned_moves_checked": true,
+  "banned_moves_note": "(1) Thermal-property join: the primary sets log_kpc = NaN. TPS k*rho*c (S1) is used only at prediction time on this external population and is never trained on; it is declared here and never promotes anything. (2) HKPoly MaCFP PMMA rows: not used. Edinburgh is the only PMMA lab here, and HKPoly has no wood cone data. (3) No row is excluded after seeing its influence. Every exclusion below is an a-priori population rule from the plan or from MaCFP's own scripts. MaCFP's outcome-based averaging exclusion (IMT 25 kW R2/R5, chosen by ignition time) is NOT applied. (4) STA residue is a feature only. The CR definition (FSRI end-of-test cone residue, exp033/exp117) is unchanged; residue at flameout is a diagnostic comparison, never a CR target. (5) No win language and no comparison with any bar. (6) TTI is parked: this scores the existing record only and fits no new TTI model. (7) Plan Tier D: training on MaCFP Wood and HRR-derived PMMA TTI are rejected (see 'never').",
+  "never": [
+    "train, refit, tune or select any model on any MaCFP row (permanent: MaCFP data stays out of training)",
+    "derive TTI from HRR onset (rejected: 5-20 s offset against Edinburgh's reported values)",
+    "compare any number here with the pHRR 0.30, TTI 0.58 or CR 0.82 bars, or use win language",
+    "edit numbers_of_record.json, leaderboard.csv, STATUS.md record lines or model-card record values from these results",
+    "pool MaCFP wood with Edinburgh PMMA, UMET with the oxygen-consumption labs, or any of these with the exp054 PMMA cross-lab number",
+    "apply a PS-derived scale factor to any input",
+    "change the CR definition, or use residue at flameout as a CR target",
+    "touch data/v2/raw/matl-db (0896bc8), which the PMMA cross-lab history uses"
+  ],
+  "prior_looks": [
+    "Research pass (lever sweep, Oct 6) viewed MaCFP wood pHRR label summaries. Per-test pHRR ranges 113-358 kW/m2. Per-lab, per-flux means: FSRI 169/236/322 at 25/50/75; FZJ 195/278/326 at 30/60/75; UMET 126/157; BUWfd 146-184. At 75 kW/m2 FSRI perpendicular is 345 vs parallel 299. UQ THR is ~79 MJ/m2 vs 130-150 at the other labs.",
+    "Same pass, reported t_ign: per-lab, per-flux means for all 90 README values. Aalto 45.0/21.7/13.0; FPL 12.2; FSRI 96.4/21.6/8.25; FZJ 42.7/11.0/8.0; IMT 188.2/12.0/2.7; TUBS 26.0; UDRI 30.5/6.9; UMET 20.3/4.3; UQ 13.0; UCantabria 12.5. At 25 kW/m2 the ranges are FSRI 52-135 s and IMT 105-304 s, and FSRI perpendicular (104-135 s) is slower than parallel (52-92 s). IMT 2-3 s at 75 and FSRI 50 kW Par R3 at 39.75 s were noted as possible outliers.",
+    "Same pass, Edinburgh PMMA: reported TTI ranges (25 kW/m2: 98-136 s; 65: 12-17 s). It also derived HRR-onset TTI for Edinburgh 65 kW/m2 (21-35 s) and LCPP 65 kW/m2 (30-115 s, mean ~69 s), used only to reject HRR-derived TTI.",
+    "Same pass, residue at README flameout per lab (channel initial mass except FZJ): Aalto 20.3 (n=5), FPL 15.7 (5), FSRI 17.3 (18), IMT 16.5 (12), UDRI 16.9 (7), UMET 15.4 (3), UQ 44.4 (3); 53 tests. End-of-test residue: Aalto 20.9, BUWfd 11.2, FPL 15.3, FSRI 16.0 (16.5/16.1/15.5 at 25/50/75), FZJ ~0-1% in 19 of 20 files and 7.2% in one, IMT 15.5, TUBS 8.3, UDRI 16.2, UMET 9.1, UQ 44.4.",
+    "Same pass, label-free feature values. 30 K/min N2 MCC: peak FZJ 72-75 and TUBS 60-66 W/g; T_peak ~377-380 C; total HR ~12.4 kJ/g for FZJ and 8-10 kJ/g for TUBS. 60 K/min peaks 114-156 W/g. MCC char yield 13.5-16% (FZJ 30K) and 8-11% (IMT). TPS: k 0.134-0.147, rho*c 0.36-0.43 MJ/m3K. Specimen density ~370-410 kg/m3. UDRI's PS README reports 1099-1166 W/g and 41.2-41.8 kJ/g.",
+    "No Dravix model (exp074, exp046, exp117 or any other) has been run on any MaCFP Wood row or on Edinburgh TTI. The findings JSON, macfp angle, says: 'I deliberately did NOT run any Dravix model on MaCFP data'.",
+    "MaCFP PMMA pHRR labels from 12 labs, Edinburgh included, were used in exp008, exp020 and exp054 (pHRR only, older models). Edinburgh TTI has never been used.",
+    "This drafting session (Oct 6) read the README tables of every Wood cone lab and of Edinburgh PMMA to define rows and inputs. Those tables contain t_ign, t_flameout, initial masses and thickness. It also read the headers, row counts, sampling intervals and time spans of all 92 wood cone CSVs; the time spans were used to confirm that the 'flameout inside the mass record' rule gives 53 tests. It read the first and last rows of the FSRI MaCFP STA files (feature inputs) and of the MCC and PS files, and sampled the TUBS PS raw HRR (a calibration reference). It did not read any HRR or mass value in the wood cone files, did not compute any pHRR, residue or THR, and ran no model. It viewed FSRI DB features for Pine_Siding and Wood_Stud (categories, STA residues), and Black_PMMA row counts by flux but not their TTI values.",
+    "Skeptic pass (Oct 6, before any run) checked this config against the pin. It read README table headers and, in passing, some README rows that carry t_ign and t_flameout (FZJ 30 kW, FPL R1/R4, Edinburgh 25 kW R1), and counted finite values per column in every wood cone CSV (counts only; no HRR or mass value read). It ran no model. Its edits only fix unstated mechanics (TTI input construction, secondary-variant reporting, NaN handling, groups for step 1, failure rules); none was chosen from a label.",
+    "Nothing in this config was chosen from the label summaries above. The models are the frozen records. Each rule follows the FSRI ingest definitions, MaCFP's own scripts, or the plan's population rules."
+  ],
+  "source": {
+    "repo": "https://github.com/MaCFP/matl-db",
+    "commit": "0e4ad8bf6ddb7c52eea4022aade810672adabfd0",
+    "local_path": "data/v2/raw/matl-db-0e4ad8b (gitignored under data/v2/raw/; data only, ~81 MB with history)",
+    "fetch": "git clone https://github.com/MaCFP/matl-db data/v2/raw/matl-db-0e4ad8b && git -C data/v2/raw/matl-db-0e4ad8b checkout 0e4ad8b (done Oct 6 by the drafting agent)",
+    "pin_check": "The executor asserts that rev-parse HEAD equals the commit above and that the tree is clean; otherwise BLOCKED.",
+    "why_pinned": "The MaCFP-4 summary is still labelled preliminary. The FZJ README cone mass unit was fixed mg->g upstream in 3b9b376 (2026-09-30), and the Lund MCC files were reformatted on Oct 1.",
+    "license_citation": "MIT; DOI 10.18434/mds2-2586. Cite the per-lab READMEs (TUBS: doi 10.24355/dbbs.084-202604271326-0)."
+  },
+  "readme_parsing": "Row matching uses MaCFP's normalize_name from Scripts/MaCFP-4/Cone_analysis.py at the pin, copied verbatim (the module plots on import, so it is not imported). That function strips backslashes, '.csv' and 'wood', maps '-' to '_' and 'umet_mlc_' to 'umet_cone_ ... _hor_r', and moves the orientation token to the end. Initial mass and t_ign use MaCFP's get_reported_initial_mass and get_reported_ignition_time header rules. Thickness, planform and flameout use the per-lab columns listed under labs. Every primary and stratum row must match exactly one README row with all of its required values present; otherwise BLOCKED (no silent drop).",
+  "labs": {
+    "Aalto": {"files": "Aalto_Wood_Cone_{30,45,60}kW_hor_parallel_R{1,2,3}.csv (9; *_Gasification_* are N2 tests, never used)", "m0": "'Initial mass (g)' (specimen only, weighed before the holder)", "L": "'Initial thickness (mm)'", "planform": "'Planform (mm × mm)' (U+00D7), product of the two numbers in 'a × b'", "t_ign": "'t_ign (s)', measured from start of data acquisition", "t_flameout": "'t_flameout (s)'", "A_norm_m2": 0.01, "orientation": "parallel", "frame": "no", "sampling_s": 5},
+    "BUWfd": {"files": "BUWfd_Wood_Cone_{30,50,60}kW_hor_R{1,2}.csv minus BUWfd_Wood_Cone_50kW_hor_R1 (non-physical ~489 g mass; MaCFP's script excludes it) = 5", "readme": "no cone metadata, no t_ign, no flameout", "use": "End-of-test residue table only. Initial mass is the channel median over Time <= 5 s. Never used for pHRR, TTI or residue at flameout."},
+    "FPL": {"files": "FPL_Wood_Cone_50kW_hor_R1..R6.csv (6)", "m0": "'initial sample mass (g)'", "L": "'thickness (cm)' x 10", "planform": "nominal 0.01 m2", "t_ign": "'t_ign (s)'", "t_flameout": "'t_flameout (s)' (R2: DAQ lost at 1400 s, flameout recorded by hand)", "A_norm_m2": 0.00884, "orientation": "unknown", "frame": "yes", "sampling_s": 1, "note": "R4-R6 carry embedded thermocouples, which the README says affect the mass signal"},
+    "FSRI": {"files": "FSRI_Wood_Cone_{25,50,75}kW_hor_{Parallel,Perpendicular}_R{1,2,3}.csv (18)", "m0": "'Mass (g)'", "L": "'Sample Thickness (mm)'", "planform": "product of the two 'Sample Length (mm)' columns", "t_ign": "'Time to Ignition (s)' (operator button)", "t_flameout": "'Time to Flame Out (s)'", "A_norm_m2": 0.01, "orientation": "from file name", "frame": "no (tie wires)", "sampling_s": 1, "apparatus": "Deatak CC-2. Same lab as the FSRI database; whether it is the same apparatus is not verified."},
+    "FZJ": {"files": "FZJ_Wood_Cone_{30,60,75}kW_hor_{parallel,perpendicular}_R*.csv (22)", "m0": "'Initial Sample Mass (g)'", "mass_channel": "tared to 0: absolute mass = channel + README m0 (MaCFP read_cone_data)", "L": "'Thickness (mm)'", "planform": "'Surface area (cm^2)' x 1e-4", "t_ign": "'Time to ignition (s)'", "t_flameout": "not reported", "A_norm_m2": 0.01, "orientation": "from file name", "frame": "no", "sampling_s": 1, "note": "60 kW parallel R1-R3 and perpendicular R1-R2 were desiccator-stored for 20-333 h before testing. 60 kW perpendicular R3 and 75 kW parallel R1 have all-NaN mass."},
+    "IMT": {"files": "IMT_Wood_Cone_{25,50,75}kW_hor_R*.csv (12)", "m0": "'Initial mass (g)'", "L": "'Thickness (cm)' x 10 (reported as 2.5)", "planform": "nominal 0.01 m2", "t_ign": "'t_ign (s)'", "t_flameout": "'t_flameout (s)'", "A_norm_m2": 0.00884, "orientation": "unknown ('uncertain but consistent')", "frame": "yes", "sampling_s": 5},
+    "TUBS": {"files": "TUBS_Wood_Cone_30kW_hor_R1..R3.csv (3; *_Gasification_* never used)", "m0": "'Initial sample mass (g)'", "L": "'Thickness (cm)' x 10", "planform": "nominal 0.01 m2", "t_ign": "'t_ign (s)'", "t_flameout": "not reported ('-')", "A_norm_m2": 0.00884, "orientation": "README 'Grain orientation (-)' = parallel", "frame": "yes", "sampling_s": 1},
+    "UDRI": {"files": "UDRI_Wood_Cone_30kW_hor_R1..R3.csv, UDRI_Wood_Cone_60kW_hor_R1..R4.csv (7)", "m0": "'Initial sample mass (g)' (includes aluminium foil, as does the channel; no correction)", "L": "'Thickness (cm)' x 10", "planform": "nominal 0.01 m2", "t_ign": "'t_ign (s)'", "t_flameout": "'t_flameout (s)'", "A_norm_m2": 0.01, "orientation": "unknown", "frame": "no", "sampling_s": 1},
+    "UMET": {"files": "UMET_Wood_Cone_{30,60}kW_hor_R1..R3.csv (6; README rows UMET_MLC_*)", "m0": "'Initial Mass (g)'", "L": "'Thickness (cm)' x 10", "planform": "0.01 m2 (README 'Solid size 100mm*100mm')", "t_ign": "'t_ign (s)'", "t_flameout": "'t_flameout (s)'", "A_norm_m2": 0.00884, "orientation": "unknown", "frame": "no", "sampling_s": 1, "stratum": "ISO 13927 mass-loss cone (thermopile HRR, no extraction flow, 35 mm heater gap). Always a separate stratum, never in a primary pool."},
+    "UQ": {"files": "UQ_Wood_Cone_60kW_hor_Parallel_R1..R3.CSV (3)", "m0": "'Initial sample mass (g)'", "L": "25.3 mm from the README bullet 'Sample Initial Thickness: 2.53 cm' (the table's 'Final Thickness' is never used)", "planform": "nominal 0.01 m2", "t_ign": "'t_ign (s)'", "t_flameout": "'t_flameout (s)'", "A_norm_m2": 0.01, "orientation": "parallel", "frame": "no", "sampling_s": 1, "note": "README: 60 kW/m2 mass readings 'exhibited unexpected fluctuations'. Kept everywhere and flagged in every table."},
+    "UCantabria": {"use": "Excluded everywhere: 4 README-only rows with no CSV and no specimen mass."},
+    "Edinburgh_PMMA": {"files": "PMMA/Calibration_Data/Edinburgh/README.md table (12 rows: 25 kW/m2 x6, 65 kW/m2 x6); 'Time to ignition (s)', 'Heat Flux (kW/m2)'", "use": "TTI only, separate stratum. Probable overlap with FSRI Black_PMMA, which is in exp046's training rows: label it 'known material (probable), new lab'."}
+  },
+  "row_sets": {
+    "primary_80": "Aalto 9, FPL 6, FSRI 18, FZJ 22, IMT 12, TUBS 3, UDRI 7, UQ 3. By flux: 25: 11; 30: 15; 45: 3; 50: 16; 60: 19; 75: 16. By orientation: parallel 34, perpendicular 21, unknown 25. Used for both pHRR and TTI.",
+    "split": "FSRI-lab (18 tests: new material, same lab) vs the other 7 labs (62 tests: new lab).",
+    "tti_25": "FSRI 6 + IMT 5 = 11 (subset of primary_80)",
+    "umet_stratum": "6 (pHRR and TTI, never pooled)",
+    "tti_86_secondary": "primary_80 + UMET 6. A reported aggregate only, to match the plan's '86 rows' wording; the plan's population rule keeps UMET out of the primary.",
+    "edinburgh_pmma": "12 (TTI only)",
+    "cr_flameout": "A test enters if it has a README t_flameout and t_flameout <= the last Time with a finite mass (inclusive). Expected 53: Aalto 5, FPL 5, FSRI 18, IMT 12, UDRI 7, UMET 3, UQ 3.",
+    "end_of_test": "Every cone file with a finite-mass record. Expected 89: Aalto 9, BUWfd 5, FPL 6, FSRI 18, FZJ 20, IMT 12, TUBS 3, UDRI 7, UMET 6, UQ 3.",
+    "count_rule": "Any count different from the above -> BLOCKED with the per-lab counts."
+  },
+  "mcc_curve_algorithm": "One function for every MCC file (wood and PS), copied verbatim from data/v2/ingest_fsri_props.ingest_mcc_extras. Read Time (s), Temperature (C or K; K -> C by -273.15) and HRR (W/g); open with encoding utf-8-sig because the FZJ raw files carry a BOM. Drop rows with any NaN; need >= 10 rows. peak_hrr_Wg = max(HRR) with no baseline correction; T_peak = T at argmax. edge = max(n//20, 1); qb = q - linear interp in time between median(q[:edge]) and median(q[-edge:]); cum = trapezoid in time; total_hr_bc_kJg = cum[-1]/1000. If total_hr_bc >= 0.5, t_onset_bc_C = T at the first row with cum >= 0.05*cum[-1]. Self-test before use: applied to raw/fsri_materials_database/01_Data/Pine_Siding/MCC/Pine_Siding_30K_min_210608_R1.txt, it must reproduce that row of mcc_extras_fsri.csv (peak_hrr_Wg, t_peak_C, total_hr_bc_kJg, t_onset_bc_C) at its stored rounding; else BLOCKED.",
+  "mcc_ps_check": {
+    "when": "Step 2. Label-free; runs before any MaCFP MCC value is used as a model input.",
+    "runs": {"FZJ": "FZJ_PS_MCC-raw_N2_60K_R1..R6 (6)", "Lund": "Lund_PS_MCC-raw_N2_60K_R1 (1)", "NIST": "NIST_Polystyrene_MCC_N2_60K_R1.txt (1; Deatak text export, column header on the line after '@')", "TUBS": "TUBS_PS_MCC-raw_N2_30K_R1 (1)", "UDRI": "UDRI_PS_MCC_N2_60K_R1..R3 (3; only processed files exist, Temperature in K)"},
+    "file_rule": "Use the '-raw' file when the lab supplied one, else the only file. The wood inputs follow the same rule.",
+    "parse_rule": "Any PS or wood MCC file named in this config that yields < 10 complete rows or lacks Time/Temperature/HRR columns -> BLOCKED. No lab or run is silently dropped from the reference or the inputs.",
+    "per_run": "hrc_JgK = peak_hrr_Wg / beta. beta is the header 'Heating Rate (C/s)' when present, else nominal from the file name (60K -> 1.0, 30K -> 0.5). h_c = total_hr_bc_kJg.",
+    "per_lab": "median over that lab's runs",
+    "reference": "median of the 5 lab medians (FZJ, Lund, NIST, TUBS, UDRI), separately for hrc and h_c",
+    "pass_rule": "0.90 <= lab/reference <= 1.10 for both hrc and h_c",
+    "consequences": {
+      "FZJ_fails": "FLAG: write a blocker and run no pHRR, TTI or CR prediction, because FZJ supplies total HR, onset, T_peak and char yield. The PS table and the stop-time residue table are still written.",
+      "TUBS_fails": "Drop TUBS from mcc_peak_hrr_Wg (FZJ 30K runs only) and continue.",
+      "other_labs_fail": "Reported only; their wood MCC is never an input."
+    },
+    "no_rescaling": "No PS-derived factor is applied to any input. FSRI's own MCC has no PS run to anchor to, so rescaling would be a new researcher choice. The ratios are reported.",
+    "assumption_disclosed": "HRC and h_c are treated as rate-independent instrument checks, so FZJ's 60 K/min PS runs vouch for its 30 K/min wood runs.",
+    "context_only": "Printed beside the computed values, never part of the gate: TUBS self-report 1099 J/gK and 38.8 kJ/g (long-run 1108 +- 15 J/gK, 38.7 +- 0.2 kJ/g, at 30 K/min); UDRI self-report 1099-1166 W/g and 41.2-41.8 kJ/g (60 K/min)."
+  },
+  "features": {
+    "mcc": {
+      "rate_rule": "30 K/min N2 runs only (FSRI's rate, 0.5 C/s), with no rate normalisation. No 45/60 K/min run, no O2 run and no mass down-scaling run is ever an input.",
+      "FZJ_runs": "FZJ_Wood_MCC-raw_N2_30K_R1, R2 (main measurements). The raw files are used so that peak and baseline handling match the FSRI ingest.",
+      "TUBS_runs": "TUBS_Wood_MCC_N2_30K_R1, R2, R3 (only processed files exist; they start at 474 K and are lab-baseline-corrected)",
+      "mcc_peak_hrr_Wg": "Pooled mean of peak_hrr_Wg over FZJ R1-R2 and TUBS R1-R3 (5 runs); FZJ only if TUBS fails the PS gate.",
+      "mcc_t_peak_C": "mean over FZJ R1-R2 (the plan uses TUBS for its peak value only)",
+      "mcc_total_hr_kJg": "mean total_hr_bc_kJg over FZJ R1-R2",
+      "mcc_t_onset_C": "t_onset_bc_C over FZJ R1-R2. Mean for exp074 (as train_phrr_v3_robust.load) and median for exp046 (as train_tti_v5_physics); with 2 runs they are equal.",
+      "mcc_char_yield_pct": "Mean of 100*final/initial from the FZJ README MCC table: R1 0.64/4.0 mg and R2 0.54/4.01 mg. The parser must reproduce these numbers. TUBS README masses are not used: all 3 TUBS wood rows are labelled R1, and the plan restricts TUBS to its peak.",
+      "label_free_report": "Before any prediction, print a table of every Wood MCC file in the pin: lab, rate, atmosphere, purpose, peak, hrc, T_peak, total_hr_bc, t_onset_bc. Include the FZJ 30K values from the processed files beside the raw ones. Never an input."
+    },
+    "geometry_G1_primary": {
+      "rule": "Per test, from the README (lab columns above).",
+      "cone_thickness_mm": "L",
+      "density_kgm3": "m0[g]/1000 / (planform[m2] * L[mm]/1000)",
+      "cone_mass_per_area_kgm2": "m0[g]/1000 / A_norm. A_norm is MaCFP's get_cone_area: 0.01 for Aalto, FSRI, FZJ, UDRI, UQ; 0.00884 for FPL, IMT, TUBS, UMET. This mirrors the FSRI ingest's SPECIMEN MASS / SURF AREA."
+    },
+    "geometry_G2_secondary": "Medians of L, density and mass/area over primary_80, applied to every row. This mirrors the material-level aggregation of the FSRI training features and the exp054 convention.",
+    "log_kpc_primary": "NaN. exp074's HGB routes it natively; exp046's SimpleImputer(median, add_indicator=True) fills the FSRI training median and sets the indicator. Assert that the fitted exp046 imputer carries an indicator for log_kpc.",
+    "log_kpc_S1": "log(mean k * mean rho*c * 1e6) over the 4 TPS readings: UMET Wood_TPS_Sample1 0.147 W/mK / 0.362 MJ/m3K and Sample2 0.144 / 0.410; UQ_Wood_TPS_R1 0.142 / 0.406 and R2 0.134 / 0.430. One value for every wood row. Units match FSRI's Spc_Heat (J/m3K).",
+    "sta_for_cr": "sta_res_3K, sta_res_10K, sta_res_30K from Wood/Calibration_Data/FSRI/FSRI_Wood_STA_N2_{3K_R1; 10K_R1-R3; 30K_R1-R3}.csv. Per file, 100 * Mass(mg) at the last row / Mass at the first row, as ingest_fsri_sta_mcc.read_sta_percent normalises. Apply the same [-5, 105] QA gate, then take the mean per rate. Label-free report only: the same residues at 1023.15 K (750 C), because the MaCFP ramp ends near 1063-1070 K while the FSRI DB ramps end at ~640-750 C.",
+    "category_flags_for_cr": "Primary: cat_structural = 1 and cat_exterior_finish = 1, the other three 0. Rule: the intersection of the FSRI categories of its two solid-softwood lumber products, Pine_Siding ('structural; exterior finish') and Wood_Stud ('structural; exterior finish; interior finish'). S3: all five flags 0.",
+    "heat_flux_kWm2": "the lab's nominal flux per test, from the file name (Edinburgh: README 'Heat Flux (kW/m2)')",
+    "tti_phys_wood": "exp046 inputs per test, exactly as train_tti_v5_physics builds them: log_q = log(1e3 * heat_flux_kWm2); log_dT = log(mcc_t_onset_C - 20) (T0 = 20 C; onset as above); log_kpc per variant; log_L = log(cone_thickness_mm / 1000); log_rho = log(density_kgm3). Column order [log_q, log_dT, log_kpc, log_L, log_rho] (v5.PHYS).",
+    "edinburgh_tti": "log_q = log(1e3 * flux). log_dT, log_kpc and log_rho are the values on the FSRI Black_PMMA rows of exp046's training frame (identical across those rows; assert). log_L = log(0.006) (100 x 100 x 6 mm slabs). This is the exp054 convention: FSRI material-level features, with MaCFP thickness substituted.",
+    "sanity_gates": "Label-free; checked before any prediction, else BLOCKED. mcc_peak 40-120 W/g; total_hr 8-16 kJ/g; t_onset 200-400 C; t_peak 330-420 C; char yield 5-30%; per-test density 250-600 kg/m3; L 20-30 mm; mass/area 6-16 kg/m2; sta_res 5-40%.",
+    "freeze": "Write features.json (every per-test input row plus the material-level values) and its sha256 to the run log before any label column is read."
+  },
+  "models": {
+    "pHRR_exp074": "models/v2/phrr_hgb_v4.joblib (HGB, log1p target, fit on all 191 FSRI rows). Assert that its features equal [heat_flux_kWm2, mcc_peak_hrr_Wg, mcc_char_yield_pct, cone_mass_per_area_kgm2, cone_thickness_mm, density_kgm3, mcc_total_hr_kJg, mcc_t_peak_C, mcc_t_onset_C, log_kpc]. A refit of TransformedTargetRegressor(hgb(), log1p, expm1) on train_phrr_promote_c2's 191 rows must match its predictions on those 191 FSRI rows within 1e-6 kW/m2; else BLOCKED (pHRR only). MaCFP predictions use the saved joblib.",
+    "TTI_exp046": "make_pipeline(SimpleImputer(median, add_indicator=True), StandardScaler(), PoissonRegressor(alpha=0.01, max_iter=3000)) on PHYS [log_q, log_dT, log_kpc, log_L, log_rho]. Raw-seconds target; fit on all 681 rows of train_tti_v5_physics --onset-bc --replicate-table (the data_tti() path of train_blend_round1.py).",
+    "CR_exp117": "Avg([HGB(lr 0.05, max_iter 300, max_leaf_nodes 15, min_samples_leaf 10, random_state 0), ExtraTrees(500, min_samples_leaf 2, random_state 0), Ridge(alpha 10) after median impute + indicators (keep_empty_features) + scaler]). Raw target, fit on all 567 rows of train_blend_round1.data_cr(), features [heat_flux_kWm2, density_kgm3, mcc_char_yield_pct, sta_res_3K, sta_res_10K, sta_res_30K, cat_interior_finish, cat_exterior_finish, cat_insulation, cat_roofing, cat_structural]. Predictions are not clipped, as in the record.",
+    "step1_reproduce": "On FSRI rows only, before any MaCFP prediction: exp074 0.6113 [0.5155, 0.8376], exp046 0.3133 [0.0715, 0.4958] and exp117 0.6504 [0.4389, 0.7893] must reproduce within 0.002 on the mean and both CI ends (repeated GKF 5x10, repeat-0 bootstrap CI), each on its record groups exactly as the 'exp' rows of train_blend_round1.py (exp074: material with PlasticC -> HIPS, 64 groups; exp046: material, 76; exp117: data_cr merged groups, 61). Otherwise that target is BLOCKED.",
+    "environment": "python 3.12.4, scikit-learn 1.7.1, numpy 2.2.6, pandas 2.3.3, scipy 1.16.1 (as used for the records). Run with OMP_NUM_THREADS=1 and PYTHONDONTWRITEBYTECODE=1."
+  },
+  "variants": {
+    "primary": "G1 geometry, log_kpc NaN; CR flags {structural, exterior finish}",
+    "S1": "primary but log_kpc = TPS value (pHRR, TTI)",
+    "S2": "primary but G2 geometry (pHRR, TTI, CR density)",
+    "S3": "primary but all CR category flags 0 (CR only)",
+    "rule": "Each secondary changes one thing from the primary, on the same rows, in its own column. None is ever primary, compared for selection or quoted without its label. They are not crossed with each other.",
+    "reporting": "S1 and S2 (pHRR, TTI): the headline R2s only, on primary_80, FSRI-lab 18 and other-labs 62 (same lab-bootstrap CI as the primary) and on tti_25, plus UMET MAE and bias. S2 and S3 (CR): pooled MAE and bias on 50 (also 53 and 47). No per-lab, per-flux or per-orientation tables for secondaries. Edinburgh PMMA is primary only (S1-S3 do not apply)."
+  },
+  "labels": {
+    "pHRR_obs": "Max of the lab's 'HRR (kW/m2)' column over all finite rows (NaN rows skipped; FZJ files carry a few), with no smoothing or resampling (FSRI's target is likewise a raw max). For QA, also report the time of the peak minus reported t_ign.",
+    "TTI_obs": "Lab-reported t_ign from the README, used as reported. No time-zero correction: Aalto measures from the start of data acquisition and FSRI by operator button; definitions are not harmonised.",
+    "CR_at_flameout": "100 * m(t_flameout) / m0, with m(t) the mass channel linearly interpolated (np.interp over the finite-mass rows) at the README t_flameout (FZJ: channel + README m0) and m0 the README initial mass (MaCFP's preferred definition). An extra column, reported only, uses channel m0 (median over Time <= 5 s) to reconcile with the research-pass numbers.",
+    "end_of_test_residue": "100 * m(last finite-mass row) / m0, with m0 the README value or, without one (BUWfd), the channel median over Time <= 5 s; plus test duration (last Time)."
+  },
+  "scoring": {
+    "pHRR_headline": "R2 (kW/m2, sklearn r2_score) on primary_80, on FSRI-lab 18 and on other-labs 62. Lab-cluster bootstrap 95% CI (eval_protocol.bootstrap_ci with groups = lab, n_boot 2000, seed 0) for the 80 and 62 pools; no CI for single-lab pools.",
+    "pHRR_tables": "Per lab, per nominal flux and per orientation (parallel / perpendicular / unknown): n, mean obs, mean pred, MAE, bias (mean pred - obs), mean(obs)/mean(pred), sampling interval. Plus the FSRI and FZJ same-flux perpendicular-minus-parallel contrast, observed vs predicted.",
+    "TTI_headline": "R2 in seconds (exp046's record metric) on primary_80, FSRI-lab 18 and other-labs 62 (lab-bootstrap CI as for pHRR), and on tti_25 (11; no CI).",
+    "TTI_tables": "Same per-lab, per-flux and per-orientation tables as pHRR, plus log R2 and median |pred-obs|/obs.",
+    "strata_separate": "UMET (pHRR 6, TTI 6): MAE, bias and the per-test table only. Edinburgh PMMA (TTI 12): R2 seconds, log R2, and MAE and bias per flux. Reported only as a context row, no model: FSRI Black_PMMA's own replicate-mean TTI at 25 kW/m2 next to Edinburgh's 25 kW/m2 mean. tti_86_secondary: R2 seconds and MAE only.",
+    "CR_diagnostic": "Absolute error only, never R2. Per test: exp117 prediction vs residue at flameout. Per lab: n, mean obs, mean pred, MAE, bias, plus the FSRI-lab per-flux means. Pooled MAE and bias on 50 tests (cr_flameout minus UMET; the declared primary pool), with 53 (all) and 47 (minus UMET and UQ) also reported. Each lab's MAE against its end-of-test residue is an extra column, reported only.",
+    "stop_time_table": "Per lab: end-of-test residue (mean, min, max, n), test duration (mean, min, max) and the stop rule as described in its README (fixed duration, flameout, or run until char consumed). Context rows from training data, no model: FSRI DB Pine_Siding and Wood_Stud end_of_test_time_s and residue_pct ranges from cone_replicates_fsri.csv.",
+    "reported_only_extras": [
+      "R2 on lab x flux x orientation cell means (mirrors exp074's replicate-mean target), pHRR and TTI",
+      "flux response: OLS slope of log(obs) and of log(pred) on log(q), pooled over primary_80 and per lab with >= 3 fluxes (Aalto, FSRI, FZJ, IMT), pHRR and TTI",
+      "exp074 HGB predictions by flux, to show its step response at 30/45/60 kW/m2 (FSRI trains on 15/25/35/50/75/100)",
+      "label-free feature table: MaCFP pine inputs next to the FSRI training rows of Pine_Siding and Wood_Stud"
+    ],
+    "rounding": "R2 to 4 decimals; kW/m2, seconds and % to 1 decimal",
+    "selection_and_adoption": "None. Nothing here is a candidate, there is no incumbent comparison, and nothing is promoted."
+  },
+  "procedure": [
+    "0. Pin check, file and README-row counts (row_sets), MCC-algorithm self-test.",
+    "1. Reproduce exp074, exp046 and exp117 on FSRI (step1_reproduce).",
+    "2. PS check and gate (label-free).",
+    "3. Derive and freeze every MaCFP and Edinburgh input; run the sanity gates and the label-free reports. No label column has been read yet.",
+    "4. Predict all variants for all rows; write the predictions.",
+    "5. Read the labels (HRR max, README t_ign, mass channel); compute every metric and table above; write the outputs.",
+    "6. Fresh-context critic pass before any number is quoted in STATUS or a model card."
+  ],
+  "outputs": {
+    "script": "data/v2/validate_macfp_wood_crosslab.py",
+    "run": "OMP_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 python3 data/v2/validate_macfp_wood_crosslab.py > experiments/runs/validate_macfp_wood_crosslab.log",
+    "files": "experiments/results/macfp_wood_crosslab/{ps_check.json, features.json, tests.csv, summary.json}. tests.csv has one row per test: lab, file, stratum, flux, orientation, m0, L, planform, density, mass/area, sampling interval, reported t_ign and t_flameout, obs pHRR, pred pHRR [primary, S1, S2], obs TTI, pred TTI [primary, S1, S2], residue at flameout [README m0, channel m0], pred CR [primary, S2, S3], end-of-test residue, duration. Write it with the csv module or pandas.",
+    "tracker": "The files go in a subdirectory on purpose. scripts/update_trackers.py ingests only top-level experiments/results/*.json and hard-codes the leaderboard label 'rkf_mean (rgkf5x10)', which would mislabel an external cross-lab R2. Any leaderboard row (exp054 style) is the orchestrator's decision after the critic."
+  },
+  "interpretation": [
+    "One material: R2 mostly measures the flux response plus lab bias. The per-lab and per-flux tables are the real result, so quote R2 only together with them.",
+    "Quote as 'external cross-lab check, MaCFP-4 pine (one material, 8 oxygen-consumption labs), report-only'. Never call it SOTA, a win or 'validated'.",
+    "The PMMA cross-lab 0.588 (exp054) used exp043's model, not exp074. Show it side by side only with that label, never pooled.",
+    "Lab TTI definitions and time zeros are not harmonised. TPS is a different instrument from FSRI's HFM. Sampling is 5 s at Aalto and IMT and 1 s elsewhere, which can lower their raw pHRR max. Moisture is 23 C / 50% RH conditioning (UQ measured 10.2%), and some FZJ specimens were desiccated.",
+    "For charring materials the CR stop-time table is a warning about the FSRI end-of-test CR definition. It is never grounds to change that definition (banned)."
+  ],
+  "exit_and_flag": {
+    "BLOCKED_or_FLAG": "Pin mismatch; count mismatch; unmatched README row; MCC self-test failure; step-1 reproduction failure (that target only); FZJ failing the PS gate; any sanity gate. Write status 'blocked' in summary.json and a blocker file (orchestrator) per the exit protocol.",
+    "EXIT_5": "Not applicable: nothing here is compared with a bar and no number of record can change."
+  },
+  "open_choices_resolved": [
+    "The plan says '86 rows' for TTI and also keeps UMET out of the primary. Primary is 80; 86 is a reported aggregate.",
+    "'TUBS: only its peak is used' is read as peak HRR only. T_peak, total HR, onset and char yield come from FZJ 30K alone.",
+    "FZJ wood MCC: the raw files, not FZJ's processed ones, so the FSRI-ingest algorithm applies unchanged. The processed values are reported, label-free.",
+    "PS gate: +-10% on both HRC and h_c against the 5-lab median; no rescaling. FZJ failing blocks the item; TUBS failing drops TUBS.",
+    "Edinburgh features follow the exp054 convention (FSRI Black_PMMA material features, 6 mm thickness).",
+    "BUWfd appears only in the end-of-test residue table, which needs no thickness or density.",
+    "Results are not ingested by the tracker (label hard-coded to rgkf5x10).",
+    "The plan's 'other 8 labs' counts BUWfd or UMET; with both out of the primary, the non-FSRI primary pool has 7 labs (62 tests)."
+  ]
+}

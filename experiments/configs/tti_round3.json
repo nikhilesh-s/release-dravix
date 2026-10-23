@@ -1,0 +1,296 @@
+{
+  "round": "tti_round3",
+  "kind": "Model round, the final TTI round (lever sweep item B4; findings fsri-tti-censored-dni, models-tti-censored, models-tti-thick-offset). It carries one separate data-QA decision: score on 681 rows, or on 675 rows without 6 operator-flagged replicates (finding fsri-tti-operator-flag-qa).",
+  "status": "approved (D4: a yes, b S675, c keep a2, d yes; 2026-10-07, owner-delegated; see amendments)",
+  "declared": "Drafted by Opus 5.5 on Oct 6 2026 from plans/LEVER_SWEEP_2026-10-06.md B4, before any candidate below was trained or scored; see git commit time. It binds only after Arnav approves D4 in writing. The orchestrator then quotes his answers to every item of decisions_for_arnav_D4 under 'amendments' and sets status to 'declared'. Nothing in this file is computed before that, not even the exp046 re-baseline on 675 rows.",
+  "authority": "None yet. Plan B4: 'Needs Arnav: yes. Recommendation: keep TTI parked. Run this once only if Arnav wants a closing round.' Plan D4: 'un-park TTI or not (recommend no). If yes, choose 681 or 675 as canonical before scoring.' D1 (experiments/configs/adoption_gate_v2.json) must also be answered; see adoption.rule_in_force.",
+  "recommendation": "Keep TTI parked, as the plan says. Expected effect is 0 to +0.04 (0.31-0.35). At 25 kW/m2 the replicate ceiling (LORO) is 0.558, and an oracle that knows each material's own 50/75 kW/m2 times scores 0.29-0.49 there and 0.50-0.62 overall. So nothing here can approach the 0.58 bar.",
+  "final_round": "After this round TTI model rounds are closed, whatever the outcome. A further TTI model round needs new data and a new human decision.",
+  "target": "Time to ignition tti_s (s from start of exposure), FSRI data/v2/cone_replicates_fsri.csv. Scoring rows are the canonical set Arnav names: S681 or S675 (see data).",
+  "plan_ref": "plans/LEVER_SWEEP_2026-10-06.md B4, D4, B0/D1; findings fsri-tti-censored-dni, models-tti-censored, models-tti-thick-offset, fsri-tti-operator-flag-qa, tti-1, tti-2, tti-3 in plans/LEVER_SWEEP_2026-10-06_findings.json (use the skeptic-verdict versions where they differ).",
+
+  "banned_moves_checked": true,
+  "banned_moves_note": [
+    "Thermal-property joins: none added. Every candidate uses exp046's PHYS columns only (log_kpc is FSRI HFM data already inside exp046). data/v2/emissivity_fsri.csv is NOT used: its exemption covered TTI round 2 only.",
+    "'Excluding a material after seeing its influence' covers pHRR/CR. The TTI 675-row option is the borderline case the plan names. It removes rows, not materials (76 stay), by a comment-text regex declared here. Both row sets are scored and reported. Arnav fixes the canonical set before any score in this round, and nothing is ever chosen by score.",
+    "POST TEST CMT is used only by the row rule. It is never a feature (leakage; tti-3 verdict).",
+    "Re-tuning in disguise: no smearing, no rescue of b2, no ExtraTrees member, no extra q_cr variants. a2 is the plan's single learned-critical-flux form, with its cap and start fixed here. No variant of any candidate (other cap, start, sigma rule, offset exponent, penalty) may be run after any score.",
+    "Win rule / CI method: unchanged unless D1 approves adoption_gate_v2.json, which is prospective and declared before this round. eval_protocol.bootstrap_ci is unchanged.",
+    "Round budget: TTI's budget is spent (round 1, round 2, blend round 1). This round runs only on Arnav's explicit D4 un-park.",
+    "No new packages. lifelines and sksurv are not installed and are not to be installed; the AFT models are written with scipy.optimize."
+  ],
+
+  "environment": "OMP_NUM_THREADS=1; numpy 2.2.6, scipy 1.16.1, scikit-learn 1.7.1, pandas 2.3.3 (installed Oct 6 2026). Step 1 catches any drift.",
+  "code": {
+    "script": "data/v2/train_tti_round3.py (new; the executor writes it mechanically from this config)",
+    "imports_allowed": "eval_protocol (repeated_group_kfold, bootstrap_ci); train_tti_v5_physics imported with sys.argv = [argv0, '--onset-bc', '--replicate-table'] as train_tti_round2.py does (its __main__ block does not run); train_blend_round1 (Avg only; it has a main guard); adoption_gate (data/v2/adoption_gate.py, if D1 approved); scipy.optimize.minimize, scipy.optimize.check_grad, scipy.special.log_ndtr, scipy.special.expit, scipy.stats.norm; sklearn.",
+    "imports_forbidden": "train_tti_round1.py and train_tti_round2.py: their module-level code fits models and overwrites result JSONs.",
+    "run": "OMP_NUM_THREADS=1 python3 data/v2/train_tti_round3.py | tee experiments/runs/train_tti_round3.log"
+  },
+
+  "data": {
+    "source": "data/v2/cone_replicates_fsri.csv as of Oct 6 2026 (735 rows / 81 materials). Not modified by this round.",
+    "row_id": "'<material>|<hf_tag>|R<replicate>', e.g. 'HDPE|HF25|R3'. Checked unique over all 735 rows (0 duplicates).",
+    "universe_U": "rows with early_stop == False AND spark_ignitor == True: 723 rows / 79 materials (assert).",
+    "S681": "U with did_not_ignite == False: 681 rows / 76 materials. Assert they are the same rows, in the same order, as v5.df (index-aligned), with y == v5.df['time_to_ignition_s'] exactly. Flux counts {15: 3, 25: 223, 35: 16, 50: 221, 75: 217, 100: 1}.",
+    "S675": "S681 minus the 6 rows flagged by data_qa_decision.rule: 675 rows / 76 materials. Flux counts {15: 3, 25: 218, 35: 16, 50: 221, 75: 216, 100: 1} (assert). The 6 rows are removed from both training and scoring in every model and fold. They are never turned into censored rows.",
+    "C_censored": "U with did_not_ignite == True: 42 rows / 8 materials (assert, and assert the id set equals censored_rows.ids). Used ONLY as right-censored training rows by a1 and a2. Never scored and never predicted for a metric.",
+    "excluded_DNI": "PMMA|HF15-noSpark|R1, R2, R3 (spark_ignitor False: a no-spark protocol, while every scoring row is spark-ignited). Never used.",
+    "y": "tti_s (seconds), float. All scoring rows are > 0 (assert).",
+    "censor_time": "end_of_test_time_s (seconds from start of exposure, the same origin as tti_s) on the 42 C rows. Assert all 42 are finite and > 0. Right-censoring means the event time T > c.",
+    "groups": "material, with no merges (76 groups on S681 and S675).",
+    "family_groups (reported-only protocol)": "v5 'family' rule: first token of material_props categories split on ';', stripped; missing -> 'unknown'. Computed for U, including the C rows.",
+    "features": "PHYS = [log_q, log_dT, log_kpc, log_L, log_rho] in this order (v5.PHYS). Build them for all 723 U rows with v5's module-level tables and formulas: left-join v5.mcc, v5.mcc_x (onset-bc columns), v5.props and v5.thermal on material; then q = heat_flux_kWm2*1e3, dT = t_onset_C - 20, L = cone_thickness_mm/1e3, log_q = log(q), log_dT = v5.log_pos(dT), log_kpc = v5.log_pos(k_WmK*rhoc_Jm3K), log_L = v5.log_pos(L), log_rho = v5.log_pos(density_kgm3) (v5 lines 107-131). Assert np.array_equal(PHYS on S681, v5.df[v5.PHYS], equal_nan=True). Material-level PHYS inputs that are missing for the C materials (drafter's coverage check): Feather_Pillow_Feathers rho, kpc; Gypsum_Wallboard onset; Polyisocyanurate_Foam_Board kpc; Fiberglass_Insulation_R13_Paper_Faced rho, kpc; Fiberglass_Insulation_R30 onset, rho, kpc; Mineral_Wool_Insulation onset. They stay NaN and are handled by each model's own missing-value path.",
+    "leakage_guard": "No feature reads tti_s, end_of_test_time_s, did_not_ignite, early_stop, test_status, replicate, test_date or post_test_cmt (v5's assert covers PHYS). end_of_test_time_s and did_not_ignite enter a1/a2 only as the censoring time and indicator of TRAINING rows."
+  },
+
+  "censored_rows": {
+    "rule": "C = U with did_not_ignite True. This is the plan's 15 usable rows from benchmark materials plus the 27 never-ignite inert rows, with the 3 PMMA no-spark rows excluded.",
+    "ids_benchmark_materials (15; each material also has scoring rows)": [
+      "Feather_Pillow_Feathers|HF25|R2", "Feather_Pillow_Feathers|HF25|R3", "Feather_Pillow_Feathers|HF25|R4",
+      "Gypsum_Wallboard|HF25|R1", "Gypsum_Wallboard|HF25|R2", "Gypsum_Wallboard|HF25|R3",
+      "House_Wrap|HF25|R1", "House_Wrap|HF25|R2", "House_Wrap|HF25|R3",
+      "House_Wrap|HF50|R1", "House_Wrap|HF50|R3",
+      "PC|HF25|R1", "PC|HF25|R2", "PC|HF25|R3",
+      "Polyisocyanurate_Foam_Board|HF25|R1"
+    ],
+    "ids_never_ignite_materials (27; these materials have no scoring row)": [
+      "Fiberglass_Insulation_R13_Paper_Faced|HF25|R1", "Fiberglass_Insulation_R13_Paper_Faced|HF25|R2", "Fiberglass_Insulation_R13_Paper_Faced|HF25|R3",
+      "Fiberglass_Insulation_R13_Paper_Faced|HF50|R1", "Fiberglass_Insulation_R13_Paper_Faced|HF50|R2", "Fiberglass_Insulation_R13_Paper_Faced|HF50|R3",
+      "Fiberglass_Insulation_R13_Paper_Faced|HF75|R1", "Fiberglass_Insulation_R13_Paper_Faced|HF75|R2", "Fiberglass_Insulation_R13_Paper_Faced|HF75|R3",
+      "Fiberglass_Insulation_R30|HF25|R1", "Fiberglass_Insulation_R30|HF25|R2", "Fiberglass_Insulation_R30|HF25|R3",
+      "Fiberglass_Insulation_R30|HF50|R1", "Fiberglass_Insulation_R30|HF50|R2", "Fiberglass_Insulation_R30|HF50|R3",
+      "Fiberglass_Insulation_R30|HF75|R1", "Fiberglass_Insulation_R30|HF75|R2", "Fiberglass_Insulation_R30|HF75|R3",
+      "Mineral_Wool_Insulation|HF25|R1", "Mineral_Wool_Insulation|HF25|R2", "Mineral_Wool_Insulation|HF25|R3",
+      "Mineral_Wool_Insulation|HF50|R1", "Mineral_Wool_Insulation|HF50|R2", "Mineral_Wool_Insulation|HF50|R3",
+      "Mineral_Wool_Insulation|HF75|R1", "Mineral_Wool_Insulation|HF75|R2", "Mineral_Wool_Insulation|HF75|R3"
+    ],
+    "by_flux": "25 kW/m2: 22 (13 benchmark + 9 inert); 50: 11 (2 + 9); 75: 9 (0 + 9). Total 42.",
+    "fold_rule (the leakage trap)": "In fold k of repeat r, a C row enters training only if its material is NOT among that fold's test materials. So a benchmark material's own censored rows are always out of the fold in which it is tested. The 27 inert rows have no scoring row and are in training in every fold. Under family-GKF (reported only) the same rule uses family labels: a C row enters only if its family is not a test family in that fold.",
+    "fold_asserts": "every fold, both row sets, both groupings: set(groups of included C rows) & set(test groups) == empty set. Log the number of included C rows per fold to the diagnostics file."
+  },
+
+  "data_qa_decision": {
+    "what": "Should the 6 replicates whose FSRI operator comment says TTI is invalid or was shortened be scored and trained on (S681), or dropped (S675)? Both versions are computed and reported. Arnav names the canonical set under D4 before step 1 runs, on the comment text alone, i.e. before he or anyone sees any score in this round (including exp046 on 675 rows). If D4 approves the round but names no set, the round is BLOCKED; the executor never picks.",
+    "rule (text only; Python re, re.IGNORECASE, on post_test_cmt.fillna(''))": {
+      "POS": "(?:shorten\\w*|faster|reduc\\w*|earlier|decreas\\w*|lower\\w*)\\s+(?:the\\s+)?time\\s+to\\s+ignition|time\\s+to\\s+ignition\\s+(?:data\\s+|value\\s+)?(?:should\\s+be\\s+ignored|is\\s+invalid|was\\s+invalid|not\\s+valid)",
+      "NEG": "not\\s+(?:appear\\s+to\\s+)?(?:have\\s+)?(?:affect|impact|change)\\w*\\s+(?:the\\s+)?time\\s+to\\s+ignition",
+      "flag": "POS.search(cmt) and not NEG.search(cmt)",
+      "meaning": "The operator says the recorded TTI is invalid, or was shortened, faster or reduced, e.g. by specimen-igniter contact. Comments saying contact did NOT affect TTI are kept (ABS|HF75|R1, HIPS|HF25|R3 match NEG)."
+    },
+    "flagged_ids (6 rows / 4 materials; 5 at 25 kW/m2, 1 at 75; the skeptic-corrected list)": [
+      "HDPE|HF25|R3",
+      "HDPE|HF25|R4",
+      "Nylon|HF25-Frame|R4",
+      "Nylon|HF75|R1",
+      "PET|HF25|R2",
+      "Overstuffed_Chair_Polyester_Fabric|HF25|R2"
+    ],
+    "asserts (label-free, step 0)": "On all 735 rows the rule flags exactly flagged_ids, and all 6 are in S681. PET|HF25|R1 is NOT flagged: its comment only says the mass data were affected. The drafter ran this regex on Oct 6: POS matched 6 rows, NEG 2 rows, overlap 0, and the flagged set equals flagged_ids.",
+    "canonical_S681": "exp046 as on record is the incumbent. S675 results are reported only.",
+    "canonical_S675": "The exp046 pipeline re-scored on S675 becomes the TTI number of record whichever way it moves (snapshot-rule style, as loi_snapshot_update2), after the critic. It is also the incumbent for adoption in this round. exp046's 0.3133 on 681 rows stays as history in the record note. S681 results are reported only.",
+    "scope_of_rule": "From Arnav's D4 decision on, every NEW run that trains or scores a model on FSRI tti_s labels uses the canonical set and states it: this round, the round-9 TabPFN tti_arm if run, plan A4 conformal TTI intervals, demo/predict.py's TTI model, and plan A2's FSRI-trained exp046. This config does not amend other configs: if S675 becomes canonical, a committed config that fixes 681 rows and has not yet scored (e.g. macfp_wood_crosslab.json, whose step 1 reproduces exp046 on 681 rows) is amended by the orchestrator, before its first score, to use S675; with no amendment it runs as committed and labels its TTI output '681 rows, pre-D4 definition'. Outputs made earlier are not re-run, except where their own config says so (conformal_intervals.json: re-run unchanged if 675 becomes canonical), and stay labelled 681 rows; tti_secondary_metrics.json is declared on 681 rows and stays so. pHRR, THR, FIGRA and Char Residue are not TTI labels and keep these 6 replicates (see open_questions).",
+    "not_in_rule (declared, NOT applied)": "Other TTI-related comments seen while drafting describe a LATE-recorded TTI, which biases the other way: Black_PMMA|HF75|R4 (1-2 s human delay), Latex_Pillow_Foam|HF75|R1 and |R3 (actual ignition < 2 s), Wood_Stud|HF25|R3 (actual about 110-115 s), Nylon|HF25|R2 and |R3 (recorded when flame began spreading), Nylon_Carpet_High_Pile|HF25|R1 (recorded more than a minute after initial ignition). The HDPE material.json note that HF25 R5/R6 used 60 mm spacing is also not in the rule. The plan's decision covers the 6 shortened/invalid rows only. Adding any of these would create a third row set and needs an amendment before any score (see open_questions)."
+  },
+
+  "folds": {
+    "primary": "For each row set separately (S681, S675) and r = 0..9: GroupKFold(n_splits=5, shuffle=True, random_state=r).split(X_S, y_S, groups_S), exactly as eval_protocol.repeated_group_kfold. Every model uses the same splits, so comparisons are paired. Folds are recomputed on S675; nothing carries over from S681.",
+    "custom_loop": "All models run through one loop, rgkf_censored(model, X_S, y_S, g_S, X_C, c_C, g_C), whose splitting code is a copy of eval_protocol.repeated_group_kfold. It hands the fold's admissible C rows (censored_rows.fold_rule) to a1 and a2 through fit(X, y, X_cens, c_cens); every other model gets fit(X, y). Predictions are written to oof[r, te].",
+    "identity_check (step 1)": "For exp046 on S681 and on S675, the loop's (10, n) OOF array must be np.array_equal to eval_protocol.repeated_group_kfold(model, X, y, groups)[1]. Otherwise BLOCKED.",
+    "family_gkf (reported only)": "the same loop with groups = family labels on the scoring rows, r = 0..9."
+  },
+
+  "incumbent": {
+    "exp_id": "exp046",
+    "estimator": "v5.linear(PoissonRegressor(alpha=0.01, max_iter=3000)) on PHYS, raw seconds",
+    "record": {"rkf_mean": 0.3133, "ci": [0.0715, 0.4958], "rows": "S681"},
+    "on_S675": "the same pipeline re-scored on S675 in step 2 (no reference value). If S675 is canonical, it is the incumbent here and the tracker assigns it a new exp id."
+  },
+
+  "candidates (config order = tie order; nothing else is fitted on the scoring rows)": [
+    {
+      "id": "a0",
+      "role": "CONTROL, never selectable: lognormal AFT on ignited rows only. With no censored rows it is a ridge-penalised Gaussian regression of log t on PHYS, predicted on the seconds scale. It isolates what a1's censored rows add.",
+      "features": "PHYS",
+      "preprocessing": "SimpleImputer(strategy='median', add_indicator=True) then StandardScaler(), the v5.linear pipeline without its estimator. Fit on the fold's ignited training rows only (the same in a0 and a1, so a1 - a0 isolates the censored likelihood terms). Gives Xs with p = 5 + number of indicator columns. A feature missing at transform but not at fit is median-filled with no indicator (sklearn 1.7.1 SimpleImputer uses error_on_new=False; checked by the drafter).",
+      "training_rows": "ignited training rows of the fold (n_ign rows)",
+      "likelihood (Olsen parameterisation)": "w = (g0, g_1..g_p, th), th > 0; sigma = 1/th, mu = (g0 + Xs.g)/th. Ignited row i, l_i = log(y_i): r_i = th*l_i - g0 - Xs_i.g; nll_i = -log(th) + 0.5*r_i^2 (constants l_i + 0.5*log(2*pi) dropped).",
+      "objective": "F(w) = sum_i nll_i / n_ign + 0.5*0.01*sum_k g_k^2. g0 and th are not penalised. alpha 0.01 and the 1/n scaling copy exp046's PoissonRegressor (sklearn minimises mean deviance/2 = mean NLL plus alpha/2 ||w||^2). F is convex on th > 0, so the optimum is unique and the start does not matter.",
+      "gradient (analytic)": "dF/dg0 = -sum r_i / n_ign; dF/dg = -sum r_i Xs_i / n_ign + 0.01*g; dF/dth = sum(-1/th + r_i l_i) / n_ign.",
+      "start": "[b0, b] = numpy.linalg.lstsq([1, Xs], l, rcond=None)[0] on the fold's ignited training rows; s0 = sqrt(mean(residual^2)); w0 = (b0/s0, b/s0, 1/s0).",
+      "optimizer": "scipy.optimize.minimize(F, w0, jac=True, method='L-BFGS-B', bounds=[(None, None)]*(p+1) + [(1e-8, None)], options={'maxiter': 20000, 'maxfun': 200000, 'ftol': 1e-13, 'gtol': 1e-9}). One run, no restarts.",
+      "converged": "res.success is True, or max|grad F(res.x)| <= 1e-5. Predictions always use res.x, converged or not (a non-converged fit still predicts; it only removes its candidate from 'selectable', see adoption).",
+      "prediction": "pred = min(exp(mu + sigma^2/2), cap_fold): the lognormal mean, with sigma = this fit's single global MLE sigma. This is the plan's 'mean exp(mu + s^2/2), with sigma declared up front': one global sigma, mean not median, no stratification.",
+      "cap_fold": "max(y) over the fold's ignited training rows: the data-tied cap from the tti_round1 critic (caveat 3). Applied to a0, a1 and a2 alike so the AFT family is comparable. Not applied to exp046, o1 or o2."
+    },
+    {
+      "id": "a1",
+      "role": "selectable: a0 plus right-censored non-ignition rows",
+      "features": "PHYS",
+      "preprocessing": "exactly a0's: imputer and scaler fit on the fold's ignited training rows, then applied to the admissible C rows",
+      "training_rows": "the fold's ignited training rows plus admissible C rows (censored_rows.fold_rule): up to 42, of which the 27 inert rows are always included",
+      "likelihood": "a0's terms for ignited rows, plus for each censored row j with k_j = log(c_j): s_j = g0 + Xs_j.g - th*k_j; nll_j = -scipy.special.log_ndtr(s_j), i.e. -log P(T > c_j).",
+      "objective": "F(w) = (sum_i nll_i + sum_j nll_j) / n_ign + 0.5*0.01*sum_k g_k^2. The divisor is n_ign, the ignited training rows, as in a0, so a1 = a0 + censored terms exactly. Still convex.",
+      "gradient (analytic)": "lambda(s) = exp(scipy.stats.norm.logpdf(s) - log_ndtr(s)) (inverse Mills ratio, computed in log space). Censored contributions: dF/dg0 += -sum lambda_j / n_ign; dF/dg += -sum lambda_j Xs_j / n_ign; dF/dth += sum lambda_j k_j / n_ign.",
+      "start": "a0's start (OLS on the ignited training rows only)",
+      "optimizer": "as a0",
+      "converged": "as a0",
+      "prediction": "as a0: min(exp(mu + sigma^2/2), cap_fold), sigma = this fit's global MLE sigma",
+      "extra_adoption_condition": "see adoption.round_specific R1 (a1 must beat a0)"
+    },
+    {
+      "id": "o1",
+      "role": "selectable: HGB Poisson with the exact thermally-thick theory offset",
+      "estimator": "HistGradientBoostingRegressor(loss='poisson', **v5.HGB) = learning_rate 0.05, max_iter 300, max_leaf_nodes 15, min_samples_leaf 20, l2_regularization 1.0, random_state 0. Every other argument is the sklearn 1.7.1 default (early_stopping 'auto' is off for n < 10000).",
+      "features": "PHYS, NaN-native, no imputation. log_q stays a feature so the trees can learn the near-critical upturn.",
+      "wrapper": "class OffsetPoissonHGB(BaseEstimator, RegressorMixin). q_kW = numpy.round(exp(X[:, 0]) / 1000, 6) (X[:, 0] = log_q = log(1000*q_kW); the rounding undoes the float round-trip, e.g. exp(log(50000))/1000 = 50.00000000000001, so q_kW equals heat_flux_kWm2 exactly and o is exactly 1.0 at 50 kW/m2); o = (50/q_kW)^2. fit(X, y): hgb.fit(X, y * (q_kW/50)^2, sample_weight=o). predict(X): hgb.predict(X) * o. This is exactly a Poisson log-link model with offset log o = -2 log(q/50).",
+      "check": "once, on the full U table: np.array_equal(numpy.round(exp(log_q)/1000, 6), heat_flux_kWm2) (every flux in the table is a whole kW/m2: 15, 25, 35, 50, 75, 100)",
+      "coefficient": "-2 on log q'' comes from thermally-thick ignition theory. It is fixed, never estimated, never varied. The data median -2.08 is NOT its source.",
+      "training_rows": "ignited training rows only (no censored rows)",
+      "cap": "none"
+    },
+    {
+      "id": "o2",
+      "role": "selectable: equal average of the incumbent and o1",
+      "estimator": "train_blend_round1.Avg([v5.linear(PoissonRegressor(alpha=0.01, max_iter=3000)), OffsetPoissonHGB()]), raw seconds, equal weights",
+      "features": "PHYS",
+      "training_rows": "ignited training rows only",
+      "cap": "none"
+    },
+    {
+      "id": "a2",
+      "role": "selectable unless Arnav drops it under D4 (default: included): lognormal AFT with a learned, capped critical heat flux, t = A(x) / (q'' - q_cr(x))^2, trained with the censored rows",
+      "material_features": "Z = [log_dT, log_kpc, log_L, log_rho] (PHYS without log_q). Imputer + indicators + StandardScaler as in a0, fit on the fold's ignited training rows, applied to admissible C rows. Gives Zs with p_z columns.",
+      "parameters": "w = (a, b_1..b_pz, c, d_1..d_pz, eta); sigma = exp(eta)",
+      "structure": "q in kW/m2, taken from X[:, 0] exactly as o1's wrapper does: q = numpy.round(exp(X[:, 0]) / 1000, 6), which equals heat_flux_kWm2 (o1.check); Z = X[:, 1:5]. a2 receives the same PHYS matrix as every model, plus the admissible C rows' PHYS and censor times. p_i = expit(c + Zs_i.d); qcr_i = QCAP * p_i with QCAP = 13.5 kW/m2; e_i = q_i - qcr_i; m_i = a + Zs_i.b - 2*log(e_i). log A = a + Zs.b. The exponent -2 is from theory and is never varied.",
+      "QCAP": "13.5 kW/m2 = 0.9 x 15 kW/m2, the lowest heat flux among the scoring rows (a design setting). Every scoring and censored row has q >= 15, so e >= 1.5 kW/m2 always and every log-likelihood term is finite. Consequence, declared now: a2 cannot predict 'never ignites', and the largest TTI(25)/TTI(50) ratio it can express is ((50-13.5)/(25-13.5))^2 = 10.07.",
+      "likelihood": "ignited: z_i = (l_i - m_i)/sigma, nll_i = eta + 0.5*z_i^2. Censored (admissible C rows): s_j = (m_j - log c_j)/sigma, nll_j = -log_ndtr(s_j).",
+      "objective": "F(w) = (sum nll_i + sum nll_j) / n_ign + 0.5*0.01*(sum b^2 + sum d^2). a, c and eta are not penalised. F is not convex, so the single declared start below is part of the model.",
+      "gradient (analytic)": "dm/da = 1; dm/db = Zs; dm/dqcr = 2/e; dqcr/dc = QCAP*p*(1-p); dqcr/dd = QCAP*p*(1-p)*Zs. Ignited: dnll/dm = -z/sigma, dnll/deta = 1 - z^2. Censored: dnll/dm = -lambda(s)/sigma, dnll/deta = lambda(s)*s, with lambda as in a1. Then divide by n_ign and add the penalty gradients 0.01*b and 0.01*d.",
+      "start": "c0 = 0, d0 = 0 (q_cr = QCAP/2 = 6.75 kW/m2 for every row); [a_start, b_start] = numpy.linalg.lstsq([1, Zs], l + 2*log(q - 6.75), rcond=None)[0] over the fold's ignited training rows; eta_start = log(sqrt(mean(residual^2))) with residual = l + 2*log(q - 6.75) - (a_start + Zs.b_start).",
+      "optimizer": "scipy.optimize.minimize(F, w0, jac=True, method='L-BFGS-B', options={'maxiter': 20000, 'maxfun': 200000, 'ftol': 1e-13, 'gtol': 1e-9}), no bounds. One run, no restarts.",
+      "converged": "as a0",
+      "prediction": "pred = min(exp(m + sigma^2/2), cap_fold), cap_fold as a0",
+      "diagnostics_reported": "per fit: min/median/max of fitted qcr over the test rows, sigma, converged, n_iter"
+    }
+  ],
+
+  "candidates_not_run": "Smearing of any member; b2 or ExtraTrees variants; stratified-sigma or median-prediction AFT variants; an a2 without censored rows; other QCAP/start/cap values; per-material q_crit (impossible under GKF: a held-out material has none, tti_round1); emissivity; any feature beyond PHYS.",
+
+  "adoption": {
+    "primary_rows": "the canonical set named under D4 (S681 or S675)",
+    "family (adoption_gate_v2 'family')": "[a0, a1, o1, o2, a2] in this order: K = 5, or K = 4 if Arnav drops a2. If Arnav also approves round9_tabpfn_smearing.json's tti_arm under D4, its p1 and p2 join after a2 (K up to 7). They are scored on the same canonical rows with identical splits, and the TTI adoption decision waits until every member is scored. a0 is a control: it counts in K and is never selectable. Cross-config precondition if the tti_arm runs: adoption_gate_v2 definitions.order sorts configs by plan item label (B2 before B4), which would put p1, p2 first, while this config and round9_tabpfn_smearing.json (adoption.families.TTI) both put them after a2. The order only breaks exact ties and fills the npz 'order' array, but it must be single-valued: the D4 amendment, recorded in both configs before any TTI score, states the order the gate uses and that this config's TTI output names govern (outputs.oof_and_gate). Without that amendment the tti_arm is BLOCKED (FLAG) and the B4 family runs alone.",
+    "selectable": "a1, o1, o2, a2 (and p1, p2 if the tti_arm runs), MINUS any candidate with a non-converged fit (see 'converged') among its 50 primary-row fits. Non-convergence is known before any R2 is computed, so this is not a score-based choice. Such a candidate is still scored, reported and counted in K.",
+    "selection": "the selectable member with the highest repeated-GKF mean on the primary rows, at full precision; exact ties go to the first in family order. Only that candidate is tested. There is no fallback to the second-best.",
+    "rule_in_force": "Fixed from Arnav's D1 answer, quoted under 'amendments', before any score. D1 approved -> rule A. D1 explicitly declined, and this config approved under D4 -> rule B. D1 unanswered -> BLOCKED (adoption_gate_v2.json scope.if_D1_pending_or_declined). The executor never picks the rule.",
+    "rule_A_if_D1_approved": "experiments/configs/adoption_gate_v2.json exactly. G1: wins >= 8/10, strict. G2: repeat-0 ci_lo >= the incumbent's repeat-0 ci_lo as computed in this run on the primary rows. G3: studentised max-T paired group-bootstrap lower bound of the repeat-mean gain > 0 (B 2000, seed 0, draws identical to eval_protocol.bootstrap_ci, ddof 1, linear 0.95 quantile, over the whole family). If the approved gate file differs from this summary, the approved file governs.",
+    "rule_B_if_D1_declined": "the current rule (tti_round2 / blend_round1): adopt only if wins >= 8/10 strictly better than the incumbent AND repeat-0 ci_lo >= the incumbent's (0.0715 published, if S681 canonical; the run's re-baselined exp046 ci_lo, if S675 canonical). The gate_v2 quantities are still computed and reported, report-only.",
+    "round_specific": {
+      "R1": "If the selected candidate is a1, it is NOT adopted when rkf_mean(a0) >= rkf_mean(a1) on the primary rows: then censoring added nothing, and a0 is a control that can never be adopted. (Mirrors tti_round2's e4 identity-control clause.)",
+      "R2": "Any non-finite OOF prediction in any family member on the primary rows -> FLAG (blocker file), no adoption decision (adoption_gate_v2 exit_triggers)."
+    },
+    "then": "critic pass in a fresh context before numbers_of_record.json changes. The critic may block for a bug; it may not adopt a candidate that failed the rule in force. Only the orchestrator edits numbers_of_record / trackers (scripts/update_trackers.py).",
+    "non_canonical_rows": "Everything above is also computed on the non-canonical row set for exp046, a0, a1, o1, o2 and a2, and reported. The round-9 tti_arm members p1/p2 run on the canonical rows only (round9_tabpfn_smearing.json tti_arm.rows). Non-canonical numbers never select, adopt, demote or change wording of the record.",
+    "if_adopted": "TTI status stays 'SHORT OF SOTA'; comparable stays 'pending-human'; never 'beats SOTA'. The note names the row set (681 or 675)."
+  },
+
+  "procedure (in order; each step's stop rule applies)": [
+    "Step 0, label-free: build U, S681, S675, C and PHYS; every assert in data, censored_rows and data_qa_decision, plus o1.check; self_tests T1-T4; if the tti_arm is approved, confirm the adoption.family amendment is recorded (else that arm is BLOCKED). Any other failure -> FLAG (blocker), stop.",
+    "Step 1: exp046 on S681 through eval_protocol.repeated_group_kfold + bootstrap_ci(y, oof[0], groups) must give rkf_mean 0.3133 +-0.002 and CI [0.0715, 0.4958] +-0.002, else BLOCKED. Then folds.identity_check on S681.",
+    "Step 2: exp046 on S675 (re-baseline, always computed) and folds.identity_check on S675.",
+    "Step 3: a0, a1, o1, o2, a2 (a2 unless dropped) on S681 and on S675, each through rgkf_censored with its own row set's splits. Save every (10, n) OOF array.",
+    "Step 4: family-GKF for exp046 and every candidate on both row sets (reported only).",
+    "Step 5: the adoption rule in force on the primary rows only. If rule A, run adoption_gate_v2 exactly per its implementation block, after every family member (including tti_arm members, if any) is scored.",
+    "Step 6: reported_only quantities; write outputs; FLAG blocker summarising the round for Arnav; critic in a fresh context before any number from this round is quoted or any record changes."
+  ],
+
+  "self_tests_label_free (synthetic data only; must pass before step 1, else FLAG)": {
+    "T1_gradients": "rng = numpy.random.default_rng(0), n = 500, draws in this order: X = rng.normal(size=(500, 3)); l = 5 + X @ [0.5, -0.3, 0.2] + 0.6 * rng.normal(size=500); q = rng.choice([15.0, 25.0, 50.0, 75.0], size=500); cens = rng.random(500) < 0.10 (these rows are censored at c = exp(l)); then X[rng.random((500, 3)) < 0.10] = nan. Preprocessing exactly as a0 (imputer + indicators + scaler fit on the non-censored rows). a1 uses the 3 columns (+ indicators) as Xs; a2 uses them as Zs, with q. Points: each model's declared start w0, then 3 points w0 + 0.1 * rng.normal(size=w0.size), drawn after the data, a1's three then a2's three. At each point, scipy.optimize.check_grad(F, gradF, w) (default epsilon) / ||gradF(w)|| < 1e-5.",
+    "T2_aft_recovery": "rng = numpy.random.default_rng(1), n = 20000, draws in this order: X = rng.normal(size=(20000, 3)); eps = rng.normal(size=20000); l = 5 + 0.5 x1 - 0.3 x2 + 0.2 x3 + 0.6 eps. a1 part: rows with l > 5.3 are censored at c = exp(5.3) (about 36%); preprocessing fit on the non-censored rows as declared; penalty set to 0. Compare on the RAW feature scale: slope_k = g_k / (th * scaler.scale_[k]) and sigma = 1/th; pass if every |slope_k - true_k| < 0.03 and |sigma - 0.6| < 0.03. (The standardized-scale slopes g_k/th are not comparable: the scaler is fit on non-censored rows, where x1's SD is about 0.9.) a0 part: the same X and l with no censoring, preprocessing fit on all 20000 rows, penalty 0: g/th equals the OLS slopes of l on [1, Xs], g0/th the OLS intercept, and 1/th the OLS residual SD (ddof 0), each within 1e-6.",
+    "T3_a2_reaches_truth": "rng = numpy.random.default_rng(2), n = 2000, draws in this order: Z = rng.normal(size=(2000, 2)); q = rng.choice([15.0, 25.0, 50.0, 75.0], size=2000); eps = rng.normal(size=2000). True raw-scale parameters a = 10.0, b = (0.5, -0.3), c = 0.0, d = (1.0, -0.5), sigma = 0.4: l = a + Z.b - 2*log(q - 13.5*expit(c + Z.d)) + 0.4*eps; rows with l > log(600) are censored at 600 s (about 8%), the rest are ignited. Preprocessing fit on the ignited rows; penalty 0.01 as declared; a2's declared start and optimizer. F(true) is evaluated at the true parameters mapped to the standardized coordinates: b_s = b * scale_, a_s = a + b.mean_, d_s = d * scale_, c_s = c + d.mean_, eta = log(0.4). Pass if the fit converges and F(fit) <= F(true) + 1e-6.",
+    "T4_offset_identity": "rng = numpy.random.default_rng(3), n = 500: X = numpy.column_stack([numpy.full(500, log(50000.0)), rng.normal(size=(500, 4))]); y = exp(3 + 0.5 * X[:, 1] + 0.3 * rng.normal(size=500)). OffsetPoissonHGB (with its rounded q_kW) gives predictions np.array_equal to HistGradientBoostingRegressor(loss='poisson', **v5.HGB) fit without sample_weight on the same X, y. Without the rounding in the wrapper this check fails (o = 0.9999999999999998 at 50 kW/m2; relative differences about 1.6e-15).",
+    "provenance": "The skeptic ran T1-T4 exactly as specified here on synthetic data only (session scratchpad b4skeptic/t123.py, t4.py), with a straightforward implementation of the declared a1/a2 objectives and gradients: all pass (T1 relative errors 5.6e-8 to 7.6e-7; T2 raw-scale slopes 0.499 / -0.300 / 0.201, sigma 0.602; T3 converged, F(fit) -0.4013 <= F(true) -0.3962; T4 equal). No Dravix data was used."
+  },
+
+  "seeds": "GroupKFold random_state 0..9 (primary and family-GKF); bootstrap_ci n_boot 2000, seed 0; HGB random_state 0; self-test rng seeds 0, 1, 2, 3 (T1-T4). The AFT fits and the GLM are deterministic. There is no other randomness.",
+
+  "reported_only (never used to select, adopt, re-rank or demote; never compared with 0.58)": {
+    "standard": "for exp046 and every candidate on both row sets: rkf mean/std, per-repeat R2, repeat-0 bootstrap CI, paired delta and wins vs the incumbent of that row set; on the primary rows, the adoption_gate_v2 per-candidate quantities (theta, se, lb_maxT, lb_unadjusted, lb_raw_maxT, p_boot_gain_le_0) and q, K.",
+    "secondary_metrics": "the plan-A3 metrics exactly as defined in experiments/configs/tti_secondary_metrics.json 'metrics', 'aggregation', 'confidence_intervals' and 'paired_report': S25, S50, S75, S50_75, LOG_ALL, LOG25/50/75 (natural log, 1e-6 s floor), SPR25/50/75, SPM25/50/75. Computed on this round's OOF arrays for both row sets (masks re-derived on S675: F25 218 rows, F75 216 rows). Labelled 'report-only, defined post hoc'.",
+    "legacy": "repeat-0 seconds R2 at 25 kW/m2 and on the non-25 rows, labelled 'non-25 rows pooled (15/35/50/75/100)', never 'other fluxes' or '50/75' (tti-1).",
+    "family_gkf": "mean pooled R2 over r = 0..9 with family groups",
+    "top_k_removal": "per candidate c on the primary rows: contribution of material m = sum over its rows i of mean_r[(y_i - oof_inc[r,i])^2 - (y_i - oof_c[r,i])^2]. Rank materials by contribution, descending (ties by name). For k in (1, 3, 5), drop the top-k materials' rows and report the mean over r of [R2_c - R2_inc] on the remaining rows and wins/10. Also list the top-5 names and their share of the net contribution. Wording rule: if the top-5-removed mean gain <= 0 or wins < 8/10, every note about that candidate says 'gain concentrated in <= 5 materials, not established'. Diagnostic only; acting on it is banned.",
+    "sse_share": "repeat-0 SSE share of the top 5 materials, for exp046 and each candidate",
+    "fit_diagnostics": "for a0, a1, a2: converged count and n_iter per fit; the median and range of sigma over the 50 primary fits; for a1 and a2 the number of C rows included per fold; for a2 the fitted q_cr ranges; for every model the max OOF prediction and, for a0/a1/a2, the number of predictions equal to cap_fold",
+    "censored_cells_only_for_a1_a2": "on the primary row set's repeat-0 folds, each of the 15 benchmark-material censored rows is predicted by the a1 (and a2) fit of the fold in which its material is tested (so the row was not in that fit's training). Table per row: row_id, censor time, uncapped mean exp(mu + sigma^2/2) (a2: exp(m + sigma^2/2)), cap_fold, capped prediction. These rows are never scored; this shows only whether the model puts their ignition beyond the cap. A table, no R2."
+  },
+  "never_reported": "R2 on censored rows (meaningless); a median-prediction or stratified-sigma variant of any AFT; any score with the 6 flagged rows used as censored rows; any exclusion beyond the declared row sets.",
+
+  "outputs": {
+    "log": "experiments/runs/train_tti_round3.log",
+    "result_jsons": "experiments/results/tti_r3_<id>_<short>.json for each family member on the PRIMARY rows: a0 'aft_control', a1 'aft_censored', o1 'hgbpois_offset', o2 'avg_glm_offset', a2 'aft_qcr'. House schema: slug, target, round_config 'experiments/configs/tti_round3.json', dataset (names the row set and the C-row rule), features, model, hyperparameters, code 'data/v2/train_tti_round3.py', n_rows, n_groups, protocol 'gkf_material5x10', rkf_mean, rkf_std, ci_lo, ci_hi, paired_vs, paired_delta, paired_wins, sota 0.58, sota_source 'pomazi_2026', status, blocked_reason, note. Each note holds the family-GKF mean, the legacy R2@25, the convergence count, and the non-canonical row set's rkf_mean and CI. If S675 is canonical, add experiments/results/tti_r3_exp046_rows675.json for the re-baselined incumbent.",
+    "noncanonical": "experiments/runs/tti_round3_noncanonical.json: all numbers on the non-canonical row set. Not a result JSON, so no leaderboard row.",
+    "oof_and_gate": "experiments/runs/tti_round3_tti_oof.npz (y, groups, row_id, oof_incumbent, oof_<id> for every family member, inc_per_repeat_r2 (10) and inc_ci (2) of the incumbent on the primary rows at full precision, order, and selectable = the selectable members after removing any non-converged candidate) and experiments/runs/tti_round3_tti_gate_v2.json, per adoption_gate_v2 implementation. Written under rule A and rule B alike. If the round-9 tti_arm runs, its p1/p2 arrays go into this same npz (see adoption.family for the required amendment).",
+    "gate_consistency_fields": "every result JSON above also carries rkf_mean_full, ci_lo_full, ci_hi_full and per_repeat_r2 (10 floats) at full precision, as adoption_gate_v2 implementation.consistency_checks requires (the house fields are rounded to 4 decimals).",
+    "diagnostics": "experiments/runs/tti_round3_fit_diagnostics.json (fit_diagnostics, fold C-row counts, secondary metrics, top_k_removal, sse_share)",
+    "not_written": "no numbers_of_record.json, leaderboard.csv, xlsx, STATUS.md, model card or report edits by the executor; no model artifact (a promote/export would be a separate declared step)"
+  },
+
+  "exit_triggers": "Any family member's ci_lo > 0.58 on either row set -> EXIT (a claim question; the population differs from Pomazi's anyway). Step-1 mismatch, a failed identity_check, a failed self-test or assert, or any C-row leakage assert -> BLOCKED/FLAG, stop. Non-finite OOF on the primary rows -> FLAG, no adoption decision. A canonical-S675 re-baseline is a pre-declared record change (critic first), not an EXIT.",
+
+  "expected (not scored; plan and findings guesses, recorded for the critic)": "Round effect 0 to +0.04 (0.31-0.35). o1 about 0.25-0.33; o2 0 to +0.03 vs 0.313 (models-tti-thick-offset). a1 vs a0: small, because 27 of 42 censored rows are trivial inerts. The 6-row QA change is of order 0.01 at most (fsri-tti-operator-flag-qa), though the Overstuffed_Chair_Polyester_Fabric row is the largest label error.",
+
+  "honesty_notes": [
+    "Censor times are operator caps (30 min for R1, then 10 min for R2/R3 once R1 showed no mass loss). Short ones carry little information.",
+    "Feather_Pillow_Feathers HF25: 3 censored at 180-249 s, while its sibling ignited at 4 s. Polyisocyanurate_Foam_Board HF25: 1 of 4 did not ignite, with siblings at 2-3 s. House_Wrap HF50: 2 of 3 did not ignite; the lone ignition was at 34 s. Mixed cells like these inflate a global lognormal sigma, and the mean prediction exp(mu + sigma^2/2) then biases every AFT prediction upward. This config keeps the global-sigma mean deliberately (the plan's wording) and does not try alternatives.",
+    "27 of the 42 censored rows are never-ignite inerts whose onset/rho/kpc are partly NaN, so their signal lands on the missing-value indicators. A test material with the same missingness can then get a large prediction: Gypsum_Wallboard ignites at 50/75 and lacks onset like Fiberglass_R30 and Mineral_Wool. That is why the data-tied cap covers a0/a1/a2. The plan text names a cap only for a2; see choices.",
+    "a2's QCAP below 15 kW/m2 means it cannot represent materials that never ignite at 25 kW/m2 (PC, Gypsum, House_Wrap) as non-igniting, only as slow (ratio <= 10.07 vs 50 kW/m2).",
+    "o1 is the third HGB-Poisson form tried on TTI. The other two scored below exp046 (t3 0.212, e3 0.157). With fluxes almost all at 25/50/75, the offset mainly re-weights the loss (25 kW/m2 rows x4, 75 kW/m2 x0.44) and shares material structure across fluxes (models-tti-thick-offset verdict).",
+    "The 675-row option removes only rows whose TTI is biased LOW (shortened by igniter contact). Late-recorded rows, biased HIGH, stay. This one-sided cleaning is a known asymmetry, disclosed here, not corrected.",
+    "The 6 flagged rows were identified with their TTI values and sibling values in view (prior_looks). The regex is text-only, but it was written after the 6 rows were known, and it was checked to match exactly them.",
+    "The per-flux and log metrics are report-only and post hoc (tti_secondary_metrics.json). No number from this round is set against 0.58.",
+    "One material set (FSRI) and one lab: R2 here measures the flux response plus material separation, and the 25 kW/m2 rows hold 85% of the target SS (tti-1)."
+  ],
+
+  "prior_looks": [
+    "Committed results already seen: exp046 0.3133 [0.0715, 0.4958], repeat-0 R2 at 25 kW/m2 0.059 and non-25 0.798. tti_round1: t1 0.2979 (0/10), t2 -38.1, t3 HGB-Poisson 0.2123 (1/10), t4 0.2671 (1/10). tti_round2: e1 0.2833, e2 0.2711, e3 HGB-Poisson 0.1571, e4 0.2871. blend_round1: b1 0.3265 and b2 0.3316 (both 7/10; b2 R2@25 0.132). Max OOF predictions 394-736 s for the round-1/2 models (result notes).",
+    "v5 label diagnostics (committed log): within-material d log t / d log q'' median -2.08 (IQR -2.52 to -1.73); TTI(25)/TTI(50) median 4.79; 21 materials above 6 hold 0.59 of the ignited-row SS; replicate ceiling LORO 0.689, in-sample 0.842.",
+    "tti_round1 critic: MCC-onset q_cr 3.6-21.1 kW/m2 (median 6.1), no row with q'' <= q_cr; ratio Spearman +0.15; the inverse-square back-transform failed on a cap 2.3x above the data maximum (max observed TTI 1102 s), hence the advice to tie caps to the data.",
+    "Lever sweep tti-1/tti-2/tti-3 (finder and skeptic scratch): exp046 seconds R2 0.042/0.274/0.283 at 25/50/75, pooled 50+75 0.368, log 0.025/0.018/-0.006, overall log 0.391; Masonite 15 kW/m2 rows hold 74.5% of non-25 SS; b2 per-flux and log scores (50+75 0.572, log 0.567) and ET alone (log 0.633, 50+75 0.580, pooled seconds 0.255); C5 Ridge 8-10/10 on the secondary metrics; ceilings at 25 (LORO 0.558, in-sample 0.776) and the own-50/75 oracle (0.29-0.49 at 25, 0.50-0.62 overall); exp046 SSE by material (top 5 = 61%: Overstuffed_Chair_Polyester_Batting, Nylon_Carpet_High_Pile, PET, Latex_Pillow_Foam, Polyester_Microfiber_Sheet); POST TEST CMT flag shares of SSE; between-date share 35%; HRR-curve TTI p90 CV at 25 kW/m2 0.48 -> 0.36.",
+    "Censored rows (findings fsri-tti-censored-dni, models-tti-censored): counts by flux; censor times 180.5-1957.75 s (median 601.75); the mixed cells and sibling ignition times quoted in honesty_notes; the operator-cap pattern. These are label values of the C rows and their siblings.",
+    "Operator flags (finding fsri-tti-operator-flag-qa and its verdict): the TTI of each flagged row and of its siblings: HDPE HF25 R3 175.75 and R4 150.25 vs 190.5-197 s; Nylon HF25-Frame R4 468 s; Nylon HF75 R1 30.0 vs 30.25-30.75 s; PET HF25 R2 295.0 s (R1 343.5 s, not flagged); Overstuffed_Chair_Polyester_Fabric HF25 R2 27.75 vs 240.75 and 586.75 s. The skeptic found the Overstuffed row by reading comments and comparing it with its siblings. The finder's first list had PET R1 wrong. Late-recorded rows (Latex HF75 R1/R3, Black_PMMA HF75 R4, Wood_Stud HF25 R3) were noted there too.",
+    "This draft (Oct 6): read code, configs (including the parallel drafts tti_secondary_metrics.json, round9_tabpfn_smearing.json, cr_round2.json, adoption_gate_v2.json), committed result JSONs exp096-099, exp104-107, exp123-124 and leaderboard rows. Inspected cone_replicates_fsri.csv columns, row counts, DNI row identifiers and flags (no censor times printed), and PHYS-input coverage for the C materials. Ran the QA regex over post_test_cmt of all 735 rows and printed the TTI-related comment text of 19 rows; that surfaced the late-recorded comments in data_qa_decision.not_in_rule (Nylon HF25 R2/R3 and Nylon_Carpet_High_Pile HF25 R1 were new to the record). While listing columns the drafter incidentally printed the first 3 table rows, ABS|HF25|R1-R3, including their outcomes (tti_s 113.0, 110.0, 108.25). Ran a synthetic-only HGB offset/identity check. No model was fit on Dravix data, nothing was scored, and no new label statistic was computed.",
+    "Skeptic review (Oct 6, before D4): read the plan, the four findings, banned_moves, numbers_of_record, adoption_gate_v2.json, round9_tabpfn_smearing.json, tti_secondary_metrics.json, conformal_intervals.json, macfp_wood_crosslab.json, tti_round2.json, train_tti_v5_physics.py, train_blend_round1.py and eval_protocol.py. On cone_replicates_fsri.csv printed only column names, dtypes, row/material counts, flux counts of U/S681/S675/C, the C-row and flagged-row id sets (set equality with this file) and regex hit counts; no tti_s, end_of_test_time_s value or other label was printed. Ran the self-tests T1-T4 on synthetic data only (self_tests_label_free.provenance). No model was fit on Dravix data and nothing was scored.",
+    "Choices made with these numbers in view: the offset exponent -2 (theory; the data median -2.08 was known); QCAP 13.5 from the flux design (that Masonite ignited at 15 kW/m2 is an outcome seen in tti-1); the a2 start q_cr 6.75 = QCAP/2 (not taken from the MCC-onset median 6.1, though close); cap_fold from the round-1 critic; global-sigma mean prediction, chosen knowing the skeptic's warning that Feather/PIR inflate sigma; cap extended to a0/a1 knowing the inert rows' missingness pattern (a coverage fact, not a label)."
+  ],
+
+  "decisions_for_arnav_D4 (all answered in writing, quoted under amendments, before step 0)": [
+    "D4a: un-park TTI for this one final round: yes / no. Plan recommendation: no.",
+    "D4b: canonical scoring rows, S681 or S675. Decide on the comment text in data_qa_decision alone, before any score in this round. With no answer the round is BLOCKED.",
+    "D4c: keep a2 in the family (default) or drop it (K = 4).",
+    "D4d: add round9_tabpfn_smearing.json's tti_arm (p1, p2) to this family: yes / no (default no, per that config). If yes, the same amendment states the family order the gate uses and that this config's TTI output names govern (adoption.family).",
+    "D1 must be answered too (rule A or B in adoption.rule_in_force)."
+  ],
+  "choices_fixed_here_for_D4 (Arnav may change any before approving; none can change after any score)": [
+    "AFT prediction = lognormal mean with the fit's single global MLE sigma (alternatives: median exp(mu), or flux-stratified sigma).",
+    "cap_fold (max ignited training TTI of the fold) applied to a0, a1 and a2 (alternative: a2 only, the literal plan text).",
+    "a2: QCAP 13.5 kW/m2, start q_cr = 6.75, single start, no restarts.",
+    "L2 alpha 0.01 on slopes only, NLL divided by the ignited training count n_ign, for all AFT fits.",
+    "AFT preprocessing fit on ignited training rows only, in a0, a1 and a2.",
+    "All 27 inert censored rows included (plan); the 3 short Feather censored rows included (plan's 15).",
+    "QA rule limited to shortened/invalid comments (the 6 rows); late-recorded rows not covered.",
+    "Non-converged candidates are not selectable (still counted in K).",
+    "R1: a1 must beat a0 on rkf_mean to be adopted."
+  ],
+  "open_questions": [
+    "Late-recorded TTI comments (7 rows in the 681: Black_PMMA HF75 R4, Latex_Pillow_Foam HF75 R1/R3, Wood_Stud HF25 R3, Nylon HF25 R2/R3, Nylon_Carpet_High_Pile HF25 R1) are not in the plan's rule, so S675 cleans only one direction. If Arnav wants a two-sided rule, that is a third row set: it must be added by amendment, with its regex and ids, before any score. Nylon_Carpet_High_Pile already holds about 15% of exp046's SSE (tti-3), so adding it now would be made with its influence known.",
+    "Scope: pHRR and THR in cone_replicates_fsri.csv are computed over [recorded TTI, END OF TEST TIME]. For the 6 flagged rows the window starts slightly early, which is probably negligible but not checked. This config keeps the 6 rows for every non-TTI target. Arnav may rule otherwise, but not inside this round.",
+    "If the round-9 tti_arm runs, round9_tabpfn_smearing.json names its outputs round9_tti_oof.npz / round9_tti_gate_v2.json, while this config names tti_round3_tti_oof.npz / tti_round3_tti_gate_v2.json, and the two configs' family order (p1, p2 after a2) differs from adoption_gate_v2 definitions.order (B2 before B4). There must be ONE TTI npz, ONE order and ONE gate run over the merged family. adoption.family now makes the D4 amendment (recorded in both configs before any TTI score) a precondition of the tti_arm; without it the arm is BLOCKED.",
+    "The plan's 'with sigma declared up front' is read here as 'the sigma rule is fixed now' (one global MLE sigma per fit). If Arnav meant a fixed numeric sigma, he must give the value under D4; choosing a number from the data now would be a new look.",
+    "Extending the data-tied cap to a0/a1 is a declared deviation from the literal plan text (which names a cap only for a2)."
+  ],
+
+  "skeptic_review": "Oct 6 2026, before D4/D1 and before any score, label-free. Changes made: (1) o1 and a2 take q as numpy.round(exp(log_q)/1000, 6), and o1.check is now an exact equality, because exp(log(50000))/1000 != 50 in float64 and T4's np.array_equal failed as written; (2) self-tests T1-T4 now fix every synthetic draw, the true parameters and the comparison scale (T2 as written would have compared standardized slopes, about 0.449 vs 0.5, and failed); T4 got seed 3; all four pass on synthetic data; (3) non-converged fits still predict from res.x; (4) the npz now carries inc_per_repeat_r2, inc_ci and the post-convergence selectable list, and every result JSON the gate_v2 full-precision fields; (5) the non-canonical row set covers the B4 members only (p1/p2 run on canonical rows, per round9); (6) the tti_arm needs a D4 amendment fixing the family order (gate_v2 definitions.order puts B2's p1, p2 first; both drafts put them last) and the governing output names, else that arm is BLOCKED; (7) scope_of_rule no longer amends other configs on its own; (8) censored-cell table rows are predicted by the fit of the fold in which their material is tested. Candidate set, row sets, QA rule, likelihoods, gradients, starts, caps, adoption rules and open questions are unchanged.",
+
+  "amendments": ["D4a yes: un-park TTI for this one final round (the drafter recommended no; the owner asked for maximal experimentation and accepts null results). D4b: S675 is canonical, decided on the comment text in data_qa_decision alone (operator says the recorded TTI is invalid or was shortened), before any score in this round. Per the config, exp046 re-scored on S675 becomes the TTI number of record whichever way it moves, after the critic; S681 results are reported only. D4c: keep a2 (default). D4d: yes, add round9's tti_arm (p1, p2); family order a0, a1, o1, o2, a2, p1, p2 (a0 control, never selectable). All choices_fixed_here_for_D4 kept as drafted. D1 answered yes (gate v2 in force). Authority (2026-10-07 22:45 PDT): the repository moved to nikhilesh-s/dravix-master, owned by Nikhilesh S, which is the source of truth from 2026-10-08; Arnav Saini is a collaborator (write access). The owner's instruction this evening, quoted: 'improve Dravix ... do a lot of different experimentations', 'keep grinding, keep getting better ... I know that some stuff is not going to work, but you need to make sure that things are clean', and 'get agents up'. The owner delegated the pending D1-D8 decisions to the orchestrator (Claude Opus 5.5) for this overnight session. The orchestrator answers them here, before any score in any of these rounds, without having seen any result from them. Integrity rules unchanged: no 'beats SOTA', comparable is never set true, single writer, critic before records.", "Erratum (2026-10-08 ~02:00 PDT, environment only, no design change): the Python 3.12.4 interpreter named here exists only on Arnav's machine. All runs on the owner's machine use /Users/niks/dravix/.venv312 (Python 3.12.12) with identical package versions to the record pins (scikit-learn 1.7.1, numpy 2.2.6, scipy 1.16.1, pandas 2.3.3, torch 2.8.0; uv pip check clean). Every incumbent reproduced exactly in it, and the full numbers-of-record repro gives 48/48 matches. The orchestrator treats this patch-level interpreter difference as not triggering the version-mismatch BLOCKED clause.", "Timestamp note (2026-10-08, after critic experiments/critic/overnight_2026-10-08_critic.md): clock times written inside this session's amendments are approximate and several are later than the commit that contains them; git commit times govern. The interpreter erratum above was written after the tti_round3 run had finished. Outcome: no candidate adopted (gate v2, K=7, best p2 +0.027 7/10, G1 fail). exp046 re-scored on S675 = exp154 0.3179 [0.0917, 0.5067] is the TTI number of record after the critic (SOUND WITH CAVEATS)."]
+}

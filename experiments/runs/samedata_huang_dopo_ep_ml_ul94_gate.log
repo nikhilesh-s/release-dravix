@@ -1,0 +1,36 @@
+[INFO] File loaded with encoding: utf-8
+[SAVE] model=/private/tmp/claude-502/-Users-niks-Library-Application-Support-Claude-Nebula-scratch-workspaces-ca6b06e6-bffc-4cd0-a4b3-e25495b34af1-b80a362d-c429-45b3-ad2e-76e7f795b49a-scratch-2026-10-08-271631/a39767ff-af18-441e-b6db-7b73869d960e/scratchpad/r0full_UL94/UL94_V0/reference/formulation/without_BDE/UL94_V0_outer_fold_1_model.joblib
+[SAVE] model=/private/tmp/claude-502/-Users-niks-Library-Application-Support-Claude-Nebula-scratch-workspaces-ca6b06e6-bffc-4cd0-a4b3-e25495b34af1-b80a362d-c429-45b3-ad2e-76e7f795b49a-scratch-2026-10-08-271631/a39767ff-af18-441e-b6db-7b73869d960e/scratchpad/r0full_UL94/UL94_V0/reference/formulation/without_BDE/UL94_V0_outer_fold_2_model.joblib
+[SAVE] model=/private/tmp/claude-502/-Users-niks-Library-Application-Support-Claude-Nebula-scratch-workspaces-ca6b06e6-bffc-4cd0-a4b3-e25495b34af1-b80a362d-c429-45b3-ad2e-76e7f795b49a-scratch-2026-10-08-271631/a39767ff-af18-441e-b6db-7b73869d960e/scratchpad/r0full_UL94/UL94_V0/reference/formulation/without_BDE/UL94_V0_outer_fold_3_model.joblib
+[SAVE] model=/private/tmp/claude-502/-Users-niks-Library-Application-Support-Claude-Nebula-scratch-workspaces-ca6b06e6-bffc-4cd0-a4b3-e25495b34af1-b80a362d-c429-45b3-ad2e-76e7f795b49a-scratch-2026-10-08-271631/a39767ff-af18-441e-b6db-7b73869d960e/scratchpad/r0full_UL94/UL94_V0/reference/formulation/without_BDE/UL94_V0_outer_fold_4_model.joblib
+[SAVE] model=/private/tmp/claude-502/-Users-niks-Library-Application-Support-Claude-Nebula-scratch-workspaces-ca6b06e6-bffc-4cd0-a4b3-e25495b34af1-b80a362d-c429-45b3-ad2e-76e7f795b49a-scratch-2026-10-08-271631/a39767ff-af18-441e-b6db-7b73869d960e/scratchpad/r0full_UL94/UL94_V0/reference/formulation/without_BDE/UL94_V0_outer_fold_5_model.joblib
+{
+ "task": "UL94_V0",
+ "metric": "outer_Macro_F1",
+ "per_fold": [
+  0.858108574187763,
+  0.8386934311820995,
+  0.8295427717006374,
+  0.7902680197762164,
+  0.7429833503227998
+ ],
+ "mean": 0.8119192294339033,
+ "sd": 0.045776175568010176,
+ "gate": [
+  0.807,
+  0.827
+ ],
+ "passed": true,
+ "folds_equal_published": true,
+ "max_abs_pred_diff_vs_published": 1.0,
+ "selected_models": [
+  "ExtraTrees",
+  "ExtraTrees",
+  "ExtraTrees",
+  "ExtraTrees",
+  "ExtraTrees"
+ ],
+ "minutes": 1.27,
+ "modified_Macro_F1_mean": 0.7495542263497084
+}
+~/dravix/.venv_dopo/bin/python -I  gate UL94_V0 $S/r0full_UL94  100.99s user 1.01s system 99% cpu 1:42.86 total

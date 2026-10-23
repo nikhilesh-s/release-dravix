@@ -1,0 +1,41 @@
+fr_structures.csv: 162 distinct FR names -> accepted 17, rejected 112, not_found 33
+
+=== ACCEPTED structures (human audit list): fr_name | query | CID | formula | SMILES ===
+  Antiblaze TCMP (tris(2-chloro-1-methylethyl) phosphate) | tris(2-chloro-1-methylethyl) phosphate | 26176 | C9H18Cl3O4P | CC(CCl)OP(=O)(OC(C)CCl)OC(C)CCl
+  DEEP (diethyl ethylphosphonate) | diethyl ethylphosphonate | 6534 | C6H15O3P | CCOP(=O)(CC)OCC
+  DMMP | DMMP | 12958 | C3H9O3P | COP(=O)(C)OC
+  DMMP (dimethyl methylphosphonate) | dimethyl methylphosphonate | 12958 | C3H9O3P | COP(=O)(C)OC
+  KB (boric acid) | boric acid | 7628 | BH3O3 | B(O)(O)O
+  MEL (melamine) | melamine | 7955 | C3H6N6 | C1(=NC(=NC(=N1)N)N)N
+  Melamine | Melamine | 7955 | C3H6N6 | C1(=NC(=NC(=N1)N)N)N
+  PER (pentaerythritol) | pentaerythritol | 8285 | C5H12O4 | C(C(CO)(CO)CO)O
+  RE (diethyl bis(2-hydroxyethyl)aminomethylphosphonate) | diethyl bis(2-hydroxyethyl)aminomethylphosphonate | 17722 | C9H22NO5P | CCOP(=O)(CN(CCO)CCO)OCC
+  RM (diethyl (hydroxymethyl)phosphonate) | diethyl (hydroxymethyl)phosphonate | 76513 | C5H13O4P | CCOP(=O)(CO)OCC
+  TCEP (tris(2-chloroethyl) phosphate) | tris(2-chloroethyl) phosphate | 8295 | C6H12Cl3O4P | C(CCl)OP(=O)(OCCCl)OCCCl
+  TCPP (tris(1-chloro-2-propyl) phosphate) | tris(1-chloro-2-propyl) phosphate | 26176 | C9H18Cl3O4P | CC(CCl)OP(=O)(OC(C)CCl)OC(C)CCl
+  TCPP (tris(2-chloropropyl) phosphate) | tris(2-chloropropyl) phosphate | 22522 | C9H18Cl3O4P | CC(COP(=O)(OCC(C)Cl)OCC(C)Cl)Cl
+  TEP (triethyl phosphate) | triethyl phosphate | 6535 | C6H15O4P | CCOP(=O)(OCC)OCC
+  TEP (triethyl phosphate, Fyrol TEP) | TEP | 6535 | C6H15O4P | CCOP(=O)(OCC)OCC
+  TPP (triphenyl phosphate) | triphenyl phosphate | 8289 | C18H15O4P | C1=CC=C(C=C1)OP(=O)(OC2=CC=CC=C2)OC3=CC=CC=C3
+  melamine | melamine | 7955 | C3H6N6 | C1(=NC(=NC(=N1)N)N)N
+
+sanity: table-only recompute == committed el_* columns on all 499 rows
+element-feature coverage (benchmark rows with all el_* non-NaN): before 313/460 -> after 314/460
+rows with >=1 resolved FR (struct features non-NaN): 41/460; mean resolved_fr_wt_share over rows with FRs and loading ok: 0.082
+old subset (ref_id 'M*'): 333 rows / 56 papers
+SANITY exp085 on old subset: B 0.3627 CI [0.1667, 0.5175] (exp085: B 0.3627, CI [0.1667, 0.5175]) in 12s
+Sanity within 0.002: True
+
+structure features non-NaN: 41/460 benchmark rows, 14/83 papers (old M subset: 33/333 rows)
+el_* all non-NaN (c2 frame): 314/460 rows
+benchmark: 460 rows / 83 papers; features: rf 27, c2 34
+  c2 (exp085 config) done in 38s
+  rf (exp064 config) done in 37s
+
+=== Summary (460 rows / 83 papers) ===
+cfg     A mean [p2.5, p97.5]   B mean ± std   B CI rep0          B CI pooled        C mean
+exp085  0.658 [0.476, 0.788]  0.311 ± 0.048  [0.146, 0.467]     [0.109, 0.442]     0.344
+exp064  0.650 [0.469, 0.770]  0.287 ± 0.049  [0.111, 0.447]     [0.071, 0.428]     0.329
+Triggers: none
+
+wrote 2 result JSONs; runtime 88s

@@ -1,0 +1,73 @@
+{
+ "slug": "samedata_huang_dopo_ep_ml_c2_P1_pub_mol",
+ "target": "LOI (%)",
+ "round_config": "experiments/configs/samedata_huang_dopo_ep_ml.json",
+ "dataset": "Huang/Zheng/Shi DOPO-EP-ML (data/sources/incoming/huang_dopo_ep_ml/DOPO_EP_new.csv, 599 rows, 130 Reference groups), unpublished manuscript",
+ "features": "authors' LOI input: view compact, K=260, basic descriptors, V7 on, no BDE, neat-EP masking; their in-fold front end (nonempty/median impute/dedup/variance 1e-8/SelectKBest f_regression k=260)",
+ "code": "data/v2/train_samedata_dopo.py + data/v2/export_dopo_folds.py (step 0, authors' env)",
+ "n_rows": 599,
+ "n_groups": 130,
+ "sota": 0.709,
+ "sota_source": "Huang et al. DOPO-EP-ML Table 2 (Reference)",
+ "comparable_note": "comparability is a human decision; never set here",
+ "candidate": "c2",
+ "protocol": "P1_pub_mol",
+ "model": "TabPFNRegressor.create_default_for_version(ModelVersion.V2, device='cpu', random_state=0)",
+ "hyperparameters": "fixed a priori (samedata_common.json); no tuning",
+ "metric": "R2",
+ "status": "ok",
+ "blocked_reason": "",
+ "selected": false,
+ "per_repeat": [
+  0.6965487984894647
+ ],
+ "mean": 0.6965487984894647,
+ "repeat0": 0.6965487984894647,
+ "secondary_per_repeat": {
+  "R2": [
+   0.6965487984894647
+  ],
+  "RMSE": [
+   2.659592994224583
+  ],
+  "MAE": [
+   2.0509102221025746
+  ],
+  "mod_R2": [
+   0.38830922972851856
+  ]
+ },
+ "per_fold": {
+  "R2": [
+   0.6493719378445945,
+   0.6611378780645275,
+   0.6712321974617926,
+   0.7537545652858809,
+   0.747247413790528
+  ],
+  "RMSE": [
+   2.9249865875828474,
+   2.4225543951758084,
+   2.5181884653548017,
+   2.4073432426899237,
+   3.0248922803195346
+  ],
+  "MAE": [
+   2.288431264172038,
+   1.714962141603696,
+   2.0331725146693445,
+   1.9017888594370056,
+   2.316196330630789
+  ],
+  "mod_R2": [
+   0.36315955025561875,
+   0.23821447292624998,
+   0.2809681548365639,
+   0.5248756186658406,
+   0.5343283519583195
+  ]
+ },
+ "sd": 0.049908338735756945,
+ "attribution": "Built with PriorLabs-TabPFN",
+ "note": "LOI P1_pub_mol c2; published folds, information only (never selected on); Built with PriorLabs-TabPFN"
+}

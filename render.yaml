@@ -1,0 +1,26 @@
+# Dravix engine API (preview). Blueprint: Render dashboard > New > Blueprint > nikhilesh-s/dravix-master, branch relaunch-v2.
+# The model is the committed compact artifact api/dravix_engine_compact.joblib (17 MB, ~230 MB RSS),
+# so the build only installs packages. Rebuild the artifact locally with: python3 api/build_model.py
+services:
+  - type: web
+    name: dravix-engine-api
+    runtime: python
+    plan: free
+    branch: relaunch-v2
+    autoDeploy: false
+    buildCommand: pip install -r api/requirements.txt
+    startCommand: uvicorn api.main:app --host 0.0.0.0 --port $PORT --proxy-headers --forwarded-allow-ips "*"
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.12
+      - key: OMP_NUM_THREADS  # free plan has a fraction of one CPU; avoid OpenMP thread spin in HistGradientBoosting
+        value: "1"
+      - key: DRAVIX_PASSWORD
+        sync: false
+      - key: DRAVIX_SECRET
+        sync: false
+      - key: DRAVIX_CORS_ORIGINS
+        value: http://localhost:5173
+      - key: DRAVIX_CORS_ORIGIN_REGEX
+        value: 'https://dravix-master-engine-preview(?:-(?:[a-z0-9]{9}|[a-z0-9-]+-nikhilesh-suravarjjalas-projects))?\.vercel\.app'

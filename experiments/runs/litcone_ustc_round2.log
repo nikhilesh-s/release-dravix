@@ -1,0 +1,6 @@
+amendment 11 -- USTC Li et al. 2025 pHRR MAE 125.5 (unconfirmed)
+HEADLINE primary v4, B (EP + P-FRs, USTC-matched): n=262 papers=54 FR groups=46 | MAE 232.6 +- 15.2 CI [171.4, 249.4] | R2 0.406
+  ref primary v3, B: n=262 papers=54 FR groups=46 | MAE 227.3 +- 12.0 CI [191.0, 273.0] | R2 0.422
+  gt_protocol_et v4, B: n=262 papers=54 FR groups=46 | MAE 252.0 +- 14.5 CI [190.2, 287.0] | R2 0.346
+  primary v4, A (all EP): n=643 papers=126 FR groups=163 | MAE 218.2 +- 6.5 CI [173.2, 250.6] | R2 0.417
+  gt_protocol_et v4, A: n=643 papers=126 FR groups=163 | MAE 233.0 +- 4.6 CI [175.2, 276.4] | R2 0.345

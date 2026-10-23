@@ -1,0 +1,40 @@
+Round config: experiments/configs/phrr_round1.json
+load(replicate_target=True): 221 rows / 76 materials; has_mcc: 191 rows / 65 materials; no-MCC rows: 30 / 11 materials
+features (incumbent): ['heat_flux_kWm2', 'mcc_peak_hrr_Wg', 'mcc_char_yield_pct', 'cone_mass_per_area_kgm2', 'cone_thickness_mm', 'density_kgm3', 'mcc_total_hr_kJg', 'mcc_t_peak_C', 'mcc_t_onset_C', 'log_kpc']
+EXTRAS: {'hr': 'total_hr_bc_kJg', 'onset': 't_onset_bc_C'}
+
+=== Step 1: reproduce exp043 A1 (V3 rf_phys_log) ===
+exp043 A1 (measured)                0.5672  0.0617  [ 0.283,  0.836]  0.3750  n=191/65
+declared: rkf_mean 0.567, CI [0.283, 0.836] -> REPRODUCED
+
+=== Step 2: candidates (same splits: eval_protocol seeds, material groups) ===
+
+                                   rkf_mean     std    95% CI (rep 0)     gss   paired vs exp043
+exp043 incumbent                    0.5672  0.0617  [ 0.283,  0.836]  0.3750  n=191/65
+c1 nomccextras                      0.6641  0.0443  [ 0.463,  0.846]  0.4418  n=191/65   wins 9/10, delta +0.0969
+c2 hgb                              0.6610  0.0579  [ 0.440,  0.828]  0.4437  n=191/65   wins 10/10, delta +0.0939
+c3 rfhgb_avg                        0.6356  0.0532  [ 0.406,  0.842]  0.4416  n=191/65   wins 10/10, delta +0.0684
+c4 hgb_mono                         0.6616  0.0568  [ 0.407,  0.828]  0.4268  n=191/65   wins 10/10, delta +0.0944
+c5 impute                           0.5586  0.0609  [ 0.303,  0.825]  0.3844  n=191/65   wins 4/10, delta -0.0085
+c5 impute, ALL rows                 0.5373  0.0599  [ 0.301,  0.797]  0.3844  n=221/76   (not paired; different row set)
+  c5 per-repeat R2 on 191 rows: [0.62, 0.615, 0.569, 0.54, 0.441, 0.46, 0.614, 0.606, 0.581, 0.541]
+  exp043 per-repeat R2:         [0.584, 0.575, 0.581, 0.569, 0.452, 0.458, 0.66, 0.585, 0.623, 0.585]
+
+=== Step 3: selection rule (config, mechanical) ===
+Highest repeated-GKF mean among c1-c5(191 rows): c1 nomccextras (0.6641 vs exp043 0.5672)
+  beats exp043 mean: True; paired wins 9/10 (need >= 8): True; ci_lo 0.4634 >= exp043 ci_lo 0.2831 (declared 0.283): True
+VERDICT: PROMOTE c1 nomccextras
+Candidates with ci_lo > 0.3: ['c1', 'c2', 'c3', 'c4', 'c5']  -> EXIT condition 5 (claim ambiguity); wording per H5 only
+Incumbent ci_lo 0.2831 > 0.3: False
+
+=== Supplementary (NOT rules; never promote) ===
+  exp043 incumbent: CI pooled over all 10 repeats [0.157, 0.809]; share of bootstrap resamples with R2 > 0.3: 92.0% (repeat-averaged R2 per resample), 96.5% (repeat-0 R2 per resample, the rule's CI basis; its CI [0.283, 0.836])
+  c1 nomccextras (selected): CI pooled over all 10 repeats [0.425, 0.806]; share of bootstrap resamples with R2 > 0.3: 99.6% (repeat-averaged R2 per resample), 99.8% (repeat-0 R2 per resample, the rule's CI basis; its CI [0.463, 0.846])
+wrote experiments/results/phrr_r1_c1_nomccextras.json
+wrote experiments/results/phrr_r1_c2_hgb.json
+wrote experiments/results/phrr_r1_c3_rfhgb_avg.json
+wrote experiments/results/phrr_r1_c4_hgb_mono.json
+wrote experiments/results/phrr_r1_c5_impute.json
+
+runtime 59s
+python3 data/v2/train_phrr_round1.py  57.11s user 1.31s system 95% cpu 1:01.19 total

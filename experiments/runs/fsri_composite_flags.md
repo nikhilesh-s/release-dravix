@@ -1,0 +1,13 @@
+# C1 fsri_composite_snapshot -- worker flags
+
+Written before any score. FLAG = needs an orchestrator decision; NOTE = how a definition was implemented, for the critic.
+
+- FLAG (script name). `code.script` in the config names `data/v2/rescore_fsri_composite_snapshot.py`; the worker brief said `data/v2/train_fsri_composite_snapshot.py`. Used the config's name (the binding pre-registration). Nothing else depends on the name.
+- FLAG (environment). The config pins `python3 3.12.4 (/Library/Frameworks/.../3.12/bin/python3)` and says "if any version ... differs, stop BLOCKED". That interpreter does not exist on this machine (the round-9 erratum says the same). Ran `.venv312/bin/python` = Python 3.12.12 with the identical package pins (scikit-learn 1.7.1, numpy 2.2.6, pandas 2.3.3, scipy 1.16.1), as round 9 / round 10 did. The script checks the four package versions exactly, Python major.minor 3.12, and the clone commit a432697; the S0 reproduction (within 0.002) is the substantive guard. A literal reading of the pin would make this BLOCKED; the orchestrator decides.
+- NOTE (threads). OMP_NUM_THREADS=1 as declared. ExtraTrees keeps `n_jobs=-1` (record config unchanged); it is capped by LOKY_MAX_CPU_COUNT to respect the 3-core worker limit. Forest outputs do not depend on n_jobs.
+- NOTE (order). A label-free `--selftest-only` pass (builders + every listed assert, no fit) ran before any score, as the brief asked. The scoring run then follows the config's procedure order: S0 reproduction, self-test again, S1, S2, reported_only.
+- NOTE (assert b, material). `data_phrr()` / `data_cr()` do not return a material column, so "material identical" is checked against the mapping-off build's material column, which assert (a) proves bit-identical to `data_phrr()` / `data_cr()` in X, y and groups. Heat flux is checked against `data_*()['X'][:, 0]`.
+- NOTE (side CSV). `data/v2/fsri_composite_layers.csv`: `layer_order` is 1-based, in material.json order.
+- NOTE (precondition). Round 9, cr_round2 and round 10 pHRR/CR gates all show `adopt_if_critic_passes: false`; `numbers_of_record.json` still names exp074 / exp117 (the script blocks otherwise).
+- NOTE (exit triggers). The script prints whether the pHRR (ci_lo <= 0.30) or CR (ci_lo > 0.82) trigger fired; blocker files are left to the orchestrator.
+- NOTE (warnings, after the run). The CR log carries 1155 Apple Accelerate "divide by zero / overflow / invalid value encountered in matmul" RuntimeWarnings from the Ridge member (the spurious warnings round 10 also noted). They were not filtered. Every OOF array passed the script's isfinite check (it blocks otherwise), and S0 reproduced exp117 exactly (0.6504 [0.4389, 0.7893]). The pHRR log has none.

@@ -1,0 +1,23 @@
+[INFO] File loaded with encoding: utf-8
+UL94_V0 P1_pub: 5 folds, 20s
+UL94_V0 P1_r0: 5 folds, 42s
+UL94_V0 P1_r1: 5 folds, 65s
+UL94_V0 P1_r2: 5 folds, 87s
+UL94_V0 P1_r3: 5 folds, 108s
+UL94_V0 P1_r4: 5 folds, 129s
+UL94_V0 P1_r5: 5 folds, 147s
+UL94_V0 P1_r6: 5 folds, 165s
+UL94_V0 P1_r7: 5 folds, 183s
+UL94_V0 P1_r8: 5 folds, 203s
+UL94_V0 P1_r9: 5 folds, 236s
+UL94_V0 P2_r0: 5 folds, 267s
+UL94_V0 P2_r1: 5 folds, 285s
+UL94_V0 P2_r2: 5 folds, 304s
+UL94_V0 P2_r3: 5 folds, 318s
+UL94_V0 P2_r4: 5 folds, 334s
+UL94_V0 P2_r5: 5 folds, 354s
+UL94_V0 P2_r6: 5 folds, 385s
+UL94_V0 P2_r7: 5 folds, 428s
+UL94_V0 P2_r8: 5 folds, 470s
+UL94_V0 P2_r9: 5 folds, 514s
+~/dravix/.venv_dopo/bin/python -I -u  export UL94_V0  504.37s user 6.42s system 88% cpu 9:34.61 total

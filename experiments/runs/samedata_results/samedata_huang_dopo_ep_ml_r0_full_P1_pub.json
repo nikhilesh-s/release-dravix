@@ -1,0 +1,74 @@
+{
+ "slug": "samedata_huang_dopo_ep_ml_r0_full_P1_pub",
+ "target": "LOI (%)",
+ "round_config": "experiments/configs/samedata_huang_dopo_ep_ml.json",
+ "dataset": "Huang/Zheng/Shi DOPO-EP-ML (data/sources/incoming/huang_dopo_ep_ml/DOPO_EP_new.csv, 599 rows, 130 Reference groups), unpublished manuscript",
+ "features": "authors' LOI input: view compact, K=260, basic descriptors, V7 on, no BDE, neat-EP masking; their in-fold front end (nonempty/median impute/dedup/variance 1e-8/SelectKBest f_regression k=260)",
+ "code": "data/v2/train_samedata_dopo.py + data/v2/export_dopo_folds.py (step 0, authors' env)",
+ "n_rows": 599,
+ "n_groups": 130,
+ "sota": 0.709,
+ "sota_source": "Huang et al. DOPO-EP-ML Table 2 (Reference)",
+ "comparable_note": "comparability is a human decision; never set here",
+ "candidate": "r0_full",
+ "protocol": "P1_pub",
+ "model": "their evaluate_task_nested(split_strategy='reference', fixed, baseline_inclusive, no BDE, 5x5, random_state=42) in the authors' pinned env",
+ "hyperparameters": "fixed a priori (samedata_common.json); no tuning",
+ "metric": "R2",
+ "status": "ok",
+ "blocked_reason": "",
+ "selected": false,
+ "per_fold": [
+  0.696995484316278,
+  0.7112163161574543,
+  0.6981267950549748,
+  0.6447659578438086,
+  0.7547860277245105
+ ],
+ "mean": 0.7011781162194053,
+ "sd": 0.03931828524050356,
+ "gate": [
+  0.699,
+  0.719
+ ],
+ "gate_passed": true,
+ "folds_equal_published": false,
+ "max_abs_pred_diff_vs_published": 2.903410767499441,
+ "selected_models": [
+  "XGB",
+  "GBDT",
+  "ExtraTrees",
+  "XGB",
+  "XGB"
+ ],
+ "diagnostic_published_outer_folds": {
+  "task": "LOI",
+  "metric": "outer_R2",
+  "per_fold": [
+   0.707642977310796,
+   0.8346987989688637,
+   0.7040266283228925,
+   0.6635700510886423,
+   0.6149175755026516
+  ],
+  "mean": 0.7049712062387692,
+  "sd": 0.08164096851484501,
+  "gate": [
+   0.699,
+   0.719
+  ],
+  "passed": true,
+  "folds_equal_published": true,
+  "max_abs_pred_diff_vs_published": 1.5241599649590114,
+  "selected_models": [
+   "XGB",
+   "GBDT",
+   "GBDT",
+   "GBDT",
+   "GBDT"
+  ],
+  "minutes": 5.5,
+  "modified_R2_mean": 0.4144553336701162
+ },
+ "note": "LOI P1_pub r0_full; published folds, information only (never selected on)"
+}

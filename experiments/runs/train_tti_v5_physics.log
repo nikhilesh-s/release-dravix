@@ -1,0 +1,212 @@
+Feature coverage, materials with a value (of 80):
+  heat_flux_kWm2              80
+  specimen_mass_g             80
+  spark_ignitor               80
+  mcc_peak_hrr_Wg             61
+  mcc_char_yield_pct          61
+  density_kgm3                68
+  cone_thickness_mm           70
+  cone_mass_per_area_kgm2     80
+  t_onset_C                   61
+  t_peak_C                    61
+  hrc_JgK                     61
+  total_hr_kJg                61
+  log_kpc                     56
+  log_t_thick                 46
+  log_t_thin                  43
+  log_t_thin_mpa              61
+  log_q                       80
+  log_dT                      61
+  log_L                       70
+  log_rho                     68
+  k_cond: {'Dry': 29, 'Wet': 28} (Wet = no Dry reading, fell back)
+  c_cond: {'Wet': 31, 'Dry': 25} (Wet = no Dry reading, fell back)
+  k rho c from Dry k and Dry c: 25, with a Wet fallback: 31
+  families (first material.json category): {'general polymer': 14, 'engineered wood': 14, 'unknown': 12, 'interior finish': 11, 'insulation': 9, 'exterior finish': 6, 'sleeping product': 6, 'cellulosic materials': 2, 'roofing': 2, 'upholstered furniture': 2, 'structural': 2}
+Physical range check (material-level):
+  density_kgm3             min         16 (XPS)  max       2011 (Vinyl_Tile)
+  cone_thickness_mm        min       0.11 (House_Wrap)  max         51 (Fiberglass_Insulation_R30)
+  cone_mass_per_area_kgm2  min     0.0758 (House_Wrap)  max      34.52 (Engineered_Wood_Table)
+  t_onset_C                min      112.5 (Mineral_Wool_Insulation)  max      447.3 (HDPE)
+  k_WmK                    min    0.01105 (PEVA)  max     0.2663 (HDPE)
+  rhoc_Jm3K                min  1.636e+04 (Overstuffed_Chair_Polyester_Batting)  max  1.915e+06 (LDPE)
+TTI = 0 rows (non-ignitions per POST TEST CMT, see docstring): 45 rows / 9 materials
+Within-material d log(t_ig) / d log(q''): 67 materials, median -2.08 (IQR -2.52 to -1.73); theory: thick -2, thin -1
+TTI(25)/TTI(50) median over 67 materials: 4.79 (thick-solid law: 4). max 13.9 (Plastic_Laminate_Countertop). 21 materials exceed 6; their 25 kW/m2 rows hold 0.59 of the ignited-row SS
+  Spearman(log_t_thick, TTI), no fitting: +0.744 (45 materials)
+  Spearman(log_t_thin, TTI), no fitting: +0.660 (42 materials)
+  Spearman(log_t_thin_mpa, TTI), no fitting: +0.667 (59 materials)
+  Spearman(log_q, TTI), no fitting: -0.621 (77 materials)
+
+===== all rows: 717 rows / 80 materials / 11 families =====
+  cell-mean R2 in-sample (upper bound for any cell-constant feature set): 0.8448
+  leave-one-replicate-out cell-mean R2 (712 rows in cells with >=2 reps): 0.6940
+[all rows] C0 RF exp004 feats: 717 rows / 80 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.0988 std=0.3492 min=-0.8959 max=0.4088
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.1965 std=0.0523; material-bootstrap 95% CI [0.038, 0.340]
+  vs SOTA 0.58: delta (GKF mean) -0.3835; CI excludes SOTA from above: False
+  Family-grouped GKF 5x10 (pooled OOF):          mean R2=0.1759 std=0.0287; material-bootstrap 95% CI [0.090, 0.304]
+  SSE share by material (GKF repeat 0): Nylon_Carpet_High_Pile 0.15, PET 0.14, PC 0.12, Latex_Pillow_Foam 0.10, Overstuffed_Chair_Polyester_Batting 0.08
+  R2 on rows outside the 4 slowest-igniting materials (models still trained on them): -0.1271; max OOF prediction 554 s
+  OOF R2 in log1p space 0.3269; seconds R2 on 25 kW/m2 rows -0.0688, other fluxes 0.0897
+[all rows] C1 HGB exp004 feats: 717 rows / 80 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.0024 std=0.3863 min=-1.0974 max=0.3288
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.1349 std=0.0813; material-bootstrap 95% CI [-0.104, 0.367]
+  vs SOTA 0.58: delta (GKF mean) -0.4451; CI excludes SOTA from above: False
+  Family-grouped GKF 5x10 (pooled OOF):          mean R2=0.1667 std=0.0365; material-bootstrap 95% CI [0.063, 0.347]
+  SSE share by material (GKF repeat 0): PET 0.17, Nylon_Carpet_High_Pile 0.16, Latex_Pillow_Foam 0.14, Black_PMMA 0.08, Overstuffed_Chair_Polyester_Batting 0.05
+  R2 on rows outside the 4 slowest-igniting materials (models still trained on them): -0.0699; max OOF prediction 553 s
+  OOF R2 in log1p space -0.0092; seconds R2 on 25 kW/m2 rows -0.0218, other fluxes -0.0477
+[all rows] C2 HGB +props: 717 rows / 80 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=-0.0754 std=0.3020 min=-0.7455 max=0.3102
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.1137 std=0.0826; material-bootstrap 95% CI [-0.137, 0.204]
+  vs SOTA 0.58: delta (GKF mean) -0.4663; CI excludes SOTA from above: False
+  Family-grouped GKF 5x10 (pooled OOF):          mean R2=0.1171 std=0.0358; material-bootstrap 95% CI [-0.162, 0.206]
+  SSE share by material (GKF repeat 0): Nylon_Carpet_High_Pile 0.18, PET 0.17, Latex_Pillow_Foam 0.13, Overstuffed_Chair_Polyester_Batting 0.07, Masonite_Board 0.05
+  R2 on rows outside the 4 slowest-igniting materials (models still trained on them): -0.0964; max OOF prediction 581 s
+  OOF R2 in log1p space 0.0500; seconds R2 on 25 kW/m2 rows -0.1433, other fluxes -0.0533
+[all rows] C3 HGB +MCC extras +kpc: 717 rows / 80 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.0566 std=0.1503 min=-0.2301 max=0.3394
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.1226 std=0.0906; material-bootstrap 95% CI [0.104, 0.364]
+  vs SOTA 0.58: delta (GKF mean) -0.4574; CI excludes SOTA from above: False
+  Family-grouped GKF 5x10 (pooled OOF):          mean R2=0.1719 std=0.0248; material-bootstrap 95% CI [0.029, 0.332]
+  SSE share by material (GKF repeat 0): Nylon_Carpet_High_Pile 0.19, PET 0.16, Overstuffed_Chair_Polyester_Batting 0.08, Nylon 0.07, Polyester_Microfiber_Sheet 0.05
+  R2 on rows outside the 4 slowest-igniting materials (models still trained on them): 0.1649; max OOF prediction 346 s
+  OOF R2 in log1p space 0.1266; seconds R2 on 25 kW/m2 rows 0.0769, other fluxes 0.1459
+[all rows] C4 HGB +physics composites: 717 rows / 80 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=-0.0091 std=0.2191 min=-0.4690 max=0.3221
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.1135 std=0.0747; material-bootstrap 95% CI [-0.015, 0.304]
+  vs SOTA 0.58: delta (GKF mean) -0.4665; CI excludes SOTA from above: False
+  Family-grouped GKF 5x10 (pooled OOF):          mean R2=0.1555 std=0.0255; material-bootstrap 95% CI [0.070, 0.325]
+  SSE share by material (GKF repeat 0): Nylon_Carpet_High_Pile 0.19, PET 0.16, Overstuffed_Chair_Polyester_Batting 0.09, Nylon 0.07, Polyester_Microfiber_Sheet 0.06
+  R2 on rows outside the 4 slowest-igniting materials (models still trained on them): 0.2015; max OOF prediction 375 s
+  OOF R2 in log1p space 0.1517; seconds R2 on 25 kW/m2 rows 0.0842, other fluxes 0.2491
+[all rows] C5 Ridge physics log1p: 717 rows / 80 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.1482 std=0.1074 min=0.0009 max=0.4210
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.1564 std=0.0131; material-bootstrap 95% CI [0.022, 0.364]
+  vs SOTA 0.58: delta (GKF mean) -0.4236; CI excludes SOTA from above: False
+  Family-grouped GKF 5x10 (pooled OOF):          mean R2=0.1682 std=0.0618; material-bootstrap 95% CI [0.003, 0.382]
+  SSE share by material (GKF repeat 0): PET 0.16, Overstuffed_Chair_Polyester_Batting 0.15, Nylon_Carpet_High_Pile 0.15, Polyester_Microfiber_Sheet 0.09, Nylon 0.05
+  R2 on rows outside the 4 slowest-igniting materials (models still trained on them): 0.2159; max OOF prediction 193 s
+  OOF R2 in log1p space -0.1849; seconds R2 on 25 kW/m2 rows 0.0171, other fluxes -0.2052
+[all rows] C6 Poisson GLM physics: 717 rows / 80 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.1826 std=0.1154 min=-0.0539 max=0.3179
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.2081 std=0.0202; material-bootstrap 95% CI [-0.006, 0.357]
+  vs SOTA 0.58: delta (GKF mean) -0.3719; CI excludes SOTA from above: False
+  Family-grouped GKF 5x10 (pooled OOF):          mean R2=0.2281 std=0.0568; material-bootstrap 95% CI [0.007, 0.444]
+  SSE share by material (GKF repeat 0): Overstuffed_Chair_Polyester_Batting 0.17, Nylon_Carpet_High_Pile 0.17, PET 0.14, Polyester_Microfiber_Sheet 0.10, Plastic_Laminate_Countertop 0.05
+  R2 on rows outside the 4 slowest-igniting materials (models still trained on them): 0.2293; max OOF prediction 487 s
+  OOF R2 in log1p space 0.1351; seconds R2 on 25 kW/m2 rows -0.0538, other fluxes 0.4697
+[all rows] C7 HGB poisson C4 feats: 717 rows / 80 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.1116 std=0.3165 min=-0.7844 max=0.4051
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.2223 std=0.0897; material-bootstrap 95% CI [0.125, 0.391]
+  vs SOTA 0.58: delta (GKF mean) -0.3577; CI excludes SOTA from above: False
+  Family-grouped GKF 5x10 (pooled OOF):          mean R2=0.1974 std=0.0338; material-bootstrap 95% CI [0.097, 0.325]
+  SSE share by material (GKF repeat 0): Nylon_Carpet_High_Pile 0.20, PET 0.19, Overstuffed_Chair_Polyester_Batting 0.15, Polyester_Microfiber_Sheet 0.07, Nylon 0.07
+  R2 on rows outside the 4 slowest-igniting materials (models still trained on them): 0.3496; max OOF prediction 297 s
+  OOF R2 in log1p space 0.5341; seconds R2 on 25 kW/m2 rows 0.0217, other fluxes 0.4432
+[all rows] R0 heat flux only: 717 rows / 80 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.0156 std=0.0283 min=-0.0306 max=0.0524
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.0298 std=0.0056; material-bootstrap 95% CI [-0.002, 0.092]
+  vs SOTA 0.58: delta (GKF mean) -0.5502; CI excludes SOTA from above: False
+  Family-grouped GKF 5x10 (pooled OOF):          mean R2=0.0268 std=0.0103; material-bootstrap 95% CI [-0.030, 0.065]
+  SSE share by material (GKF repeat 0): PET 0.18, Nylon_Carpet_High_Pile 0.15, Overstuffed_Chair_Polyester_Batting 0.14, Polyester_Microfiber_Sheet 0.08, Nylon 0.06
+  R2 on rows outside the 4 slowest-igniting materials (models still trained on them): 0.2269; max OOF prediction 137 s
+  OOF R2 in log1p space 0.0376; seconds R2 on 25 kW/m2 rows -0.0061, other fluxes 0.2901
+
+===== ignited only: 672 rows / 77 materials / 11 families =====
+  cell-mean R2 in-sample (upper bound for any cell-constant feature set): 0.8422
+  leave-one-replicate-out cell-mean R2 (665 rows in cells with >=2 reps): 0.6889
+[ignited only] C0 RF exp004 feats: 672 rows / 77 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.2538 std=0.0948 min=0.1234 max=0.4282
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.2914 std=0.0320; material-bootstrap 95% CI [0.134, 0.484]
+  vs SOTA 0.58: delta (GKF mean) -0.2886; CI excludes SOTA from above: False
+  Family-grouped GKF 5x10 (pooled OOF):          mean R2=0.3292 std=0.0351; material-bootstrap 95% CI [0.236, 0.549]
+  SSE share by material (GKF repeat 0): Overstuffed_Chair_Polyester_Batting 0.11, Black_PMMA 0.11, PET 0.10, Latex_Pillow_Foam 0.09, Nylon 0.09
+  R2 on rows outside the 4 slowest-igniting materials (models still trained on them): 0.0690; max OOF prediction 562 s
+  OOF R2 in log1p space 0.5545; seconds R2 on 25 kW/m2 rows 0.2256, other fluxes 0.2975
+[ignited only] C1 HGB exp004 feats: 672 rows / 77 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.2095 std=0.0899 min=0.0168 max=0.3870
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.2670 std=0.0594; material-bootstrap 95% CI [0.212, 0.525]
+  vs SOTA 0.58: delta (GKF mean) -0.3130; CI excludes SOTA from above: False
+  Family-grouped GKF 5x10 (pooled OOF):          mean R2=0.2669 std=0.0200; material-bootstrap 95% CI [0.128, 0.427]
+  SSE share by material (GKF repeat 0): PET 0.17, Latex_Pillow_Foam 0.17, Nylon_Carpet_High_Pile 0.12, Overstuffed_Chair_Polyester_Batting 0.07, Nylon 0.06
+  R2 on rows outside the 4 slowest-igniting materials (models still trained on them): 0.1362; max OOF prediction 519 s
+  OOF R2 in log1p space 0.2761; seconds R2 on 25 kW/m2 rows 0.1559, other fluxes 0.3438
+[ignited only] C2 HGB +props: 672 rows / 77 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.2519 std=0.1074 min=0.0287 max=0.4187
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.1906 std=0.0567; material-bootstrap 95% CI [-0.337, 0.428]
+  vs SOTA 0.58: delta (GKF mean) -0.3894; CI excludes SOTA from above: False
+  Family-grouped GKF 5x10 (pooled OOF):          mean R2=0.2497 std=0.0238; material-bootstrap 95% CI [0.104, 0.456]
+  SSE share by material (GKF repeat 0): Nylon_Carpet_High_Pile 0.15, Latex_Pillow_Foam 0.15, PET 0.12, Overstuffed_Chair_Polyester_Batting 0.07, Nylon 0.07
+  R2 on rows outside the 4 slowest-igniting materials (models still trained on them): -0.0764; max OOF prediction 548 s
+  OOF R2 in log1p space 0.0410; seconds R2 on 25 kW/m2 rows -0.0414, other fluxes 0.2234
+[ignited only] C3 HGB +MCC extras +kpc: 672 rows / 77 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.2676 std=0.1581 min=-0.0101 max=0.5097
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.2873 std=0.0446; material-bootstrap 95% CI [0.123, 0.535]
+  vs SOTA 0.58: delta (GKF mean) -0.2927; CI excludes SOTA from above: False
+  Family-grouped GKF 5x10 (pooled OOF):          mean R2=0.2534 std=0.0198; material-bootstrap 95% CI [0.145, 0.424]
+  SSE share by material (GKF repeat 0): Nylon_Carpet_High_Pile 0.17, Overstuffed_Chair_Polyester_Batting 0.11, Nylon 0.08, Black_PMMA 0.07, PET 0.07
+  R2 on rows outside the 4 slowest-igniting materials (models still trained on them): -0.1182; max OOF prediction 419 s
+  OOF R2 in log1p space -0.0626; seconds R2 on 25 kW/m2 rows -0.1039, other fluxes 0.2649
+[ignited only] C4 HGB +physics composites: 672 rows / 77 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.2757 std=0.1681 min=0.0062 max=0.5538
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.2807 std=0.0397; material-bootstrap 95% CI [0.083, 0.486]
+  vs SOTA 0.58: delta (GKF mean) -0.2993; CI excludes SOTA from above: False
+  Family-grouped GKF 5x10 (pooled OOF):          mean R2=0.2355 std=0.0262; material-bootstrap 95% CI [0.155, 0.417]
+  SSE share by material (GKF repeat 0): Nylon_Carpet_High_Pile 0.16, Overstuffed_Chair_Polyester_Batting 0.11, Black_PMMA 0.08, PET 0.07, Nylon 0.06
+  R2 on rows outside the 4 slowest-igniting materials (models still trained on them): -0.0643; max OOF prediction 423 s
+  OOF R2 in log1p space 0.1260; seconds R2 on 25 kW/m2 rows -0.0394, other fluxes 0.1754
+[ignited only] C5 Ridge physics log1p: 672 rows / 77 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.2744 std=0.1779 min=-0.0324 max=0.5439
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.2491 std=0.0292; material-bootstrap 95% CI [0.080, 0.441]
+  vs SOTA 0.58: delta (GKF mean) -0.3309; CI excludes SOTA from above: False
+  Family-grouped GKF 5x10 (pooled OOF):          mean R2=0.2744 std=0.0189; material-bootstrap 95% CI [0.051, 0.486]
+  SSE share by material (GKF repeat 0): PET 0.17, Overstuffed_Chair_Polyester_Batting 0.16, Nylon_Carpet_High_Pile 0.15, Polyester_Microfiber_Sheet 0.09, Nylon 0.05
+  R2 on rows outside the 4 slowest-igniting materials (models still trained on them): 0.2624; max OOF prediction 212 s
+  OOF R2 in log1p space -0.2344; seconds R2 on 25 kW/m2 rows 0.0061, other fluxes -0.1600
+[ignited only] C6 Poisson GLM physics: 672 rows / 77 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.2815 std=0.1576 min=-0.0496 max=0.4959
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.2669 std=0.0481; material-bootstrap 95% CI [0.093, 0.409]
+  vs SOTA 0.58: delta (GKF mean) -0.3131; CI excludes SOTA from above: False
+  Family-grouped GKF 5x10 (pooled OOF):          mean R2=0.3115 std=0.0568; material-bootstrap 95% CI [0.069, 0.540]
+  SSE share by material (GKF repeat 0): Overstuffed_Chair_Polyester_Batting 0.19, Nylon_Carpet_High_Pile 0.17, PET 0.14, Polyester_Microfiber_Sheet 0.10, Plastic_Laminate_Countertop 0.04
+  R2 on rows outside the 4 slowest-igniting materials (models still trained on them): 0.3341; max OOF prediction 449 s
+  OOF R2 in log1p space 0.2996; seconds R2 on 25 kW/m2 rows -0.0502, other fluxes 0.7794
+[ignited only] C7 HGB poisson C4 feats: 672 rows / 77 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.2669 std=0.1515 min=-0.0416 max=0.5144
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.2883 std=0.0257; material-bootstrap 95% CI [0.114, 0.511]
+  vs SOTA 0.58: delta (GKF mean) -0.2917; CI excludes SOTA from above: False
+  Family-grouped GKF 5x10 (pooled OOF):          mean R2=0.2411 std=0.0325; material-bootstrap 95% CI [0.117, 0.375]
+  SSE share by material (GKF repeat 0): Nylon_Carpet_High_Pile 0.21, Overstuffed_Chair_Polyester_Batting 0.20, PET 0.08, Nylon 0.08, Plastic_Laminate_Countertop 0.05
+  R2 on rows outside the 4 slowest-igniting materials (models still trained on them): 0.3040; max OOF prediction 417 s
+  OOF R2 in log1p space 0.5856; seconds R2 on 25 kW/m2 rows 0.0709, other fluxes 0.4358
+[ignited only] R0 heat flux only: 672 rows / 77 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.0898 std=0.0567 min=-0.0227 max=0.1781
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.1248 std=0.0088; material-bootstrap 95% CI [0.085, 0.210]
+  vs SOTA 0.58: delta (GKF mean) -0.4552; CI excludes SOTA from above: False
+  Family-grouped GKF 5x10 (pooled OOF):          mean R2=0.1197 std=0.0108; material-bootstrap 95% CI [0.053, 0.183]
+  SSE share by material (GKF repeat 0): PET 0.19, Nylon_Carpet_High_Pile 0.15, Overstuffed_Chair_Polyester_Batting 0.14, Polyester_Microfiber_Sheet 0.09, Nylon 0.06
+  R2 on rows outside the 4 slowest-igniting materials (models still trained on them): 0.2741; max OOF prediction 152 s
+  OOF R2 in log1p space 0.2749; seconds R2 on 25 kW/m2 rows -0.0062, other fluxes 0.3823
+
+Summary (R2 in raw seconds):
+         set                  candidate  rows  materials             gss            gkf              ci            fam          fam_ci top4_share r2_excl_slow
+    all rows         C0 RF exp004 feats   717         80  0.099 +- 0.349 0.197 +- 0.052  [0.038, 0.340] 0.176 +- 0.029  [0.090, 0.304]       0.40       -0.127
+    all rows        C1 HGB exp004 feats   717         80  0.002 +- 0.386 0.135 +- 0.081 [-0.104, 0.367] 0.167 +- 0.037  [0.063, 0.347]       0.41       -0.070
+    all rows              C2 HGB +props   717         80 -0.075 +- 0.302 0.114 +- 0.083 [-0.137, 0.204] 0.117 +- 0.036 [-0.162, 0.206]       0.45       -0.096
+    all rows    C3 HGB +MCC extras +kpc   717         80  0.057 +- 0.150 0.123 +- 0.091  [0.104, 0.364] 0.172 +- 0.025  [0.029, 0.332]       0.48        0.165
+    all rows C4 HGB +physics composites   717         80 -0.009 +- 0.219 0.114 +- 0.075 [-0.015, 0.304] 0.155 +- 0.025  [0.070, 0.325]       0.50        0.202
+    all rows     C5 Ridge physics log1p   717         80  0.148 +- 0.107 0.156 +- 0.013  [0.022, 0.364] 0.168 +- 0.062  [0.003, 0.382]       0.56        0.216
+    all rows     C6 Poisson GLM physics   717         80  0.183 +- 0.115 0.208 +- 0.020 [-0.006, 0.357] 0.228 +- 0.057  [0.007, 0.444]       0.57        0.229
+    all rows    C7 HGB poisson C4 feats   717         80  0.112 +- 0.317 0.222 +- 0.090  [0.125, 0.391] 0.197 +- 0.034  [0.097, 0.325]       0.61        0.350
+    all rows          R0 heat flux only   717         80  0.016 +- 0.028 0.030 +- 0.006 [-0.002, 0.092] 0.027 +- 0.010 [-0.030, 0.065]       0.55        0.227
+ignited only         C0 RF exp004 feats   672         77  0.254 +- 0.095 0.291 +- 0.032  [0.134, 0.484] 0.329 +- 0.035  [0.236, 0.549]       0.29        0.069
+ignited only        C1 HGB exp004 feats   672         77  0.210 +- 0.090 0.267 +- 0.059  [0.212, 0.525] 0.267 +- 0.020  [0.128, 0.427]       0.39        0.136
+ignited only              C2 HGB +props   672         77  0.252 +- 0.107 0.191 +- 0.057 [-0.337, 0.428] 0.250 +- 0.024  [0.104, 0.456]       0.38       -0.076
+ignited only    C3 HGB +MCC extras +kpc   672         77  0.268 +- 0.158 0.287 +- 0.045  [0.123, 0.535] 0.253 +- 0.020  [0.145, 0.424]       0.39       -0.118
+ignited only C4 HGB +physics composites   672         77  0.276 +- 0.168 0.281 +- 0.040  [0.083, 0.486] 0.236 +- 0.026  [0.155, 0.417]       0.39       -0.064
+ignited only     C5 Ridge physics log1p   672         77  0.274 +- 0.178 0.249 +- 0.029  [0.080, 0.441] 0.274 +- 0.019  [0.051, 0.486]       0.57        0.262
+ignited only     C6 Poisson GLM physics   672         77  0.281 +- 0.158 0.267 +- 0.048  [0.093, 0.409] 0.312 +- 0.057  [0.069, 0.540]       0.60        0.334
+ignited only    C7 HGB poisson C4 feats   672         77  0.267 +- 0.152 0.288 +- 0.026  [0.114, 0.511] 0.241 +- 0.032  [0.117, 0.375]       0.55        0.304
+ignited only          R0 heat flux only   672         77  0.090 +- 0.057 0.125 +- 0.009  [0.085, 0.210] 0.120 +- 0.011  [0.053, 0.183]       0.56        0.274

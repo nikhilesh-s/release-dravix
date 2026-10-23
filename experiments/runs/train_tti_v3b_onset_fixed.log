@@ -1,0 +1,35 @@
+Same rows for all three: 495 rows / 54 materials
+onset material means (old -> fixed), spot checks:
+              onset_old_C  onset_fixed_C
+material                                
+ABS                 110.7          384.7
+Black_PMMA          291.8          291.8
+HDPE                 49.5          460.1
+Oak_Flooring         49.7          269.6
+PET                  49.5          403.9
+
+exp004 features, no onset
+  exp007 exact loop (rs=seed): mean R2=0.2011 std=0.1184 min=-0.0026 max=0.4440
+exp004 features, no onset: 495 rows / 54 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.1939 std=0.1186 min=0.0020 max=0.4286
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.2330 std=0.0578; material-bootstrap 95% CI [0.131, 0.465]
+  vs SOTA 0.58: delta (GKF mean) -0.3470; CI excludes SOTA from above: False
+
++ old committed onset (exp007 as run)
+  exp007 exact loop (rs=seed): mean R2=0.2429 std=0.1349 min=-0.0015 max=0.4983
++ old committed onset (exp007 as run): 495 rows / 54 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.2343 std=0.1426 min=-0.0014 max=0.5132
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.2330 std=0.0727; material-bootstrap 95% CI [0.096, 0.472]
+  vs SOTA 0.58: delta (GKF mean) -0.3470; CI excludes SOTA from above: False
+
++ corrected onset
+  exp007 exact loop (rs=seed): mean R2=0.3621 std=0.1454 min=-0.0040 max=0.5333
++ corrected onset: 495 rows / 54 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.3641 std=0.1499 min=-0.0103 max=0.5426
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.3349 std=0.0674; material-bootstrap 95% CI [0.218, 0.577]
+  vs SOTA 0.58: delta (GKF mean) -0.2451; CI excludes SOTA from above: False
+
+Paired same-rows same-folds deltas (repeated GroupKFold 5x10):
+  PAIRED corrected onset vs no onset: delta pooled-OOF R2 +0.1019 (improved in 10/10 repeats); material-bootstrap 95% CI of delta [-0.071, +0.216]
+  PAIRED corrected onset vs old onset: delta pooled-OOF R2 +0.1019 (improved in 10/10 repeats); material-bootstrap 95% CI of delta [-0.045, +0.216]
+  PAIRED old onset vs no onset: delta pooled-OOF R2 +0.0000 (improved in 6/10 repeats); material-bootstrap 95% CI of delta [-0.163, +0.139]

@@ -1,0 +1,8 @@
+{
+  "round": "loi_round8_supp",
+  "declared": "by Opus 5.5 on Oct 5, see git commit time; before any run",
+  "what": "Supplementary reporting only (never the record, no selection): the exp113 model (equal average of RF exp092 config, ExtraTrees 500/2, Ridge alpha 10 with median impute + indicators + scaler) on the proxy-free feature set (exp109 / round-6 c3: exp092 features minus the loi_standard one-hot), snapshot 2. Answers: how much of 0.425 survives without the lab-proxy feature.",
+  "candidate": {"id": "s8", "features": "FEAT_C3 (round 6)", "model": "Avg(RF, ET, Ridge) exactly as r8d"},
+  "protocols": "B GroupKFold by paper 5x10 + repeat-0 paper bootstrap + pooled CI; A random 80/20 x50; C by dominant FR class",
+  "report": "numbers_of_record LOI.proxy_free becomes s8 if run cleanly (it replaces the RF c3 proxy-free number because it is the proxy-free version of the current record model); no promotion rule applies"
+}

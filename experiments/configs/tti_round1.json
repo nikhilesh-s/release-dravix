@@ -1,0 +1,24 @@
+{
+  "round": "tti_round1",
+  "target": "Time to ignition (s), FSRI cone_replicates_fsri.csv minus did_not_ignite and early_stop: 681 rows / 76 materials",
+  "declared": "by Opus 5.5, see git commit time; before any run",
+  "authority": "plans/V3_PLAN_2026-10-04.md (Arnav approved Oct 4); banned_moves 'TTI compute before Oct 3' expired",
+  "banned_moves_checked": true,
+  "banned_moves_note": "No new thermal-property source is joined. The incumbent exp046 already uses log k*rho*c from the FSRI HFM tables; candidates may use exp046's existing columns only.",
+  "incumbent": {"exp_id": "exp046", "config": "train_tti_v5_physics.py --onset-bc --replicate-table, C6 Poisson GLM on PHYS", "B_mean": 0.313, "B_ci": [0.071, 0.496]},
+  "step1": "reproduce exp046 (GKF-by-material 5x10 mean 0.313 +-0.002, CI lo 0.071 / hi 0.496 +-0.002) or stop BLOCKED",
+  "physics_terms (fixed a priori, material-level bench data only)": {
+    "q_cr": "sigma*(T_ig^4 - T0^4) + h*(T_ig - T0), T_ig = MCC baseline-corrected onset, eps = 1, h = 10 W/m2K (as the v5 exploratory block)",
+    "log_q_excess": "log(q'' - q_cr), NaN when q'' <= q_cr or T_ig missing",
+    "log_t_thick_loss": "log(pi/4) + log kpc + 2 log dT - 2 log_q_excess"
+  },
+  "candidates": [
+    {"id": "t1", "desc": "Poisson GLM (alpha 0.01, median impute + indicators + scaler) on PHYS + log_q_excess"},
+    {"id": "t2", "desc": "Ridge(alpha 1) on z = TTI^-1/2 with features q''(kW/m2), q''/dT, log_L, log_rho, log_kpc (imputed + indicators + scaler); prediction = 1/max(z_hat, 0.02)^2 (cap 2500 s)"},
+    {"id": "t3", "desc": "HGB poisson loss (v5 HGB params) on v5 F3 + log_q_excess + log_t_thick_loss"},
+    {"id": "t4", "desc": "HGB log1p target (v5 HGB params) on v5 F0 (model-family control)"}
+  ],
+  "protocols": "eval_protocol.report(): GroupKFold by material 5x10, pooled OOF, repeat-0 material-bootstrap CI; family-grouped GKF reported; R2 at 25 kW/m2 vs other fluxes reported",
+  "selection_rule": "highest GKF mean; replaces exp046 only if >= 8/10 paired repeats better AND ci_lo >= 0.071; then critic. Otherwise TTI FLAGged parked with the reason.",
+  "exit_triggers": "ci_lo > 0.58 -> EXIT (claim question; different population from Pomazi anyway)"
+}

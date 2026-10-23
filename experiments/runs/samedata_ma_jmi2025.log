@@ -1,0 +1,38 @@
+[      1s] ma_jmi2025: python 3.12.12 sklearn 1.7.1 numpy 2.2.6 torch 2.8.0 tabpfn 9.1.0; checkpoint sha256 ok; HF_HUB_OFFLINE=1
+[      1s] ma: outlier rule reproduces No=[3, 18, 27, 32, 33, 34, 40, 42, 46, 54] -> 217 rows
+[      1s] wrote experiments/runs/samedata_ma_jmi2025_splits.json (P1: 10, P1_all227: 10)
+[      5s] P1 block (r0) 4s
+[      5s] GATE r0 P1 mean R2 0.9407 vs [0.889, 0.949] -> PASS
+[      8s] r0 LOOCV R2 on each training part: mean 0.9317 (published 0.945 on theirs)
+[     37s] P1 block (c1, c2) 30s
+[     67s] P1 block (r0, c1, c2) 29s
+[     67s] FLAG: common.c2.on_error: TabPFN raised on this dataset (P1_all227: 227-row set, seeds [6, 7]: ArpackError: ARPACK error 3: No shifts could be applied during a cycle of the Implicitly restarted Arnoldi iteration. One possibility is to increase the size of NCV relative to NEV. ) -> c2 and c3 BLOCKED for the dataset, not retried. Metrics already computed elsewhere are kept for transparency and are not selectable.
+[     67s] FLAG: exit trigger: c* c1 P1 mean R2 0.9548 > published bar 0.919; orchestrator writes the blocker for wording
+# samedata ma_jmi2025: summary
+
+Config: experiments/configs/samedata_ma_jmi2025.json (+ samedata_common.json). Code: data/v2/train_samedata.py. Bar: R2 0.919 (test set of one random 4:1 split, iteration 1, Ridge(alpha=0.1)). Built with PriorLabs-TabPFN (c2, c3).
+
+Reproduction gate: r0 P1 mean R2 0.9407, interval [0.889, 0.949]: **PASS** (no exact split exists). r0 LOOCV R2 on the training parts: mean 0.9317 (their 0.945, context only).
+
+
+## P1
+
+| cand | R2 mean ± SD (ddof 0) | R2 repeat 0 | RMSE mean | MAE mean | wins vs r0 |
+|---|---|---|---|---|---|
+| r0 | 0.9407 ± 0.0233 | 0.9524 | 1.879 | 1.409 | - |
+| c1 | 0.9548 ± 0.0192 | 0.9585 | 1.628 | 1.183 | 9/10 |
+| c2 (BLOCKED, not selectable) | 0.9499 ± 0.0234 | 0.9630 | 1.709 | 1.145 | 8/10 |
+| c3 (BLOCKED, not selectable) | 0.9552 ± 0.0191 | 0.9624 | 1.623 | 1.138 | 9/10 |
+
+Selected c* (P1, highest mean R2 among c1): **c1**. c* R2 > r0 R2 in 9/10 paired repeats (same splits); mean paired difference +0.0141.
+
+Sensitivity, all 227 rows (no exclusion; never selected on, never the claim): r0 0.9187 ± 0.0431; c1 0.9542 ± 0.0163; c2 blocked; c3 blocked
+
+Allowed sentence (P1, template verbatim):
+
+> On Ma and co-authors' data and their protocol (10 random splits instead of their one), Dravix's c1 reaches mean R2 0.955 (repeat 0: 0.959) vs their published 0.919 (their single split); their own model re-run on the same 10 splits gives 0.941.
+
+All three candidates and r0 are printed (multiplicity: c* is the best of 3 by mean; winner's curse applies). No p-values. Wording beyond the template is the owner's decision.
+
+Runtime: 67s wall.
+[     67s] done; c* = {'P1': 'c1'}

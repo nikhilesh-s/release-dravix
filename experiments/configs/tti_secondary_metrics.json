@@ -1,0 +1,253 @@
+{
+  "round": "tti_secondary_metrics",
+  "kind": "REPORT-ONLY secondary TTI metrics applied to every TTI model on the shelf. Not a modelling round: no candidate, no selection, no adoption, no number of record changes.",
+  "status": "declared",
+  "target": "Time to ignition (s), FSRI data/v2/cone_replicates_fsri.csv minus did_not_ignite and early_stop: 681 rows / 76 materials (the exp046 rows; all spark-ignited)",
+  "declared": "drafted Oct 6 by a lever-sweep workflow subagent (Opus 5.5) for plan item A3; it takes effect when the orchestrator commits it, before any metric below is computed under it. See git commit time.",
+  "authority": "plans/LEVER_SWEEP_2026-10-06.md item A3, Tier A ('no number of record changes', 'Needs Arnav: no'). TTI stays parked: this only refits models already scored on the 681-row table, with their recorded settings, to compute descriptive metrics.",
+  "plan_ref": "plans/LEVER_SWEEP_2026-10-06.md A3; findings tti-1, tti-2, tti-3 (and their skeptic verdicts) in plans/LEVER_SWEEP_2026-10-06_findings.json; narrative fixes in experiments/critic/tti_narrative_corrections.md",
+  "found_post_hoc": "YES. These metrics were chosen after the lever-sweep finder and skeptic had already scored exp046, b2, ET alone and C5 Ridge on them (see prior_looks). reports/sprint_0929/tti.md section 5(d) (Sep 29) had already recommended 'TTI in log space or per flux as a secondary metric' in general terms before any of those looks, but the exact masks, clip floor, Spearman forms, CI set and model list below were fixed after them. Declaring them here freezes the definitions and applies them to the whole shelf, so they cannot be re-chosen per model.",
+  "never_promotes": "No model is selected, ranked for adoption or promoted by any number here. exp046 stays the TTI number of record (pooled seconds R2 0.3133 [0.071, 0.496]). The win rule is unchanged (banned_moves: 'changing the win rule ... after seeing a result'). No secondary metric may become the TTI headline or an adoption metric without a new human decision, and never on the strength of this run.",
+  "bar_rule": "The 0.58 bar (pomazi_2026) is NEVER applied to any number produced under this config. In particular ET alone's pooled 50+75 R2 0.580 and b2's 0.572 (prior looks) must never be set against 0.58: different population (epoxy composites), different protocol (random split), Pomazi's data mixes 25 and 50 kW/m2 in seconds, and these metrics were chosen after the fact. No ci_lo here is compared with any bar.",
+  "banned_moves_checked": true,
+  "banned_moves_note": "Checked experiments/banned_moves.md. Not a round, so no round budget is spent and the TTI park stands. No new feature, no tuning, no new candidate, no material or row exclusion. Thermal-property joins: only those already inside the refitted models (exp046 PHYS uses the FSRI HFM log_kpc; e1-e4 use data/v2/emissivity_fsri.csv). The emissivity exemption was granted 'for TTI round 2 only' (Arnav, Oct 5); here it is used solely to refit the four round-2 candidates exactly as declared in experiments/configs/tti_round2.json, and no other model touches it. Declared reading: e1-e4 ARE included. The orchestrator confirms this reading by committing this config unchanged; if it rejects the reading, it removes e1-e4 from models and records that in amendments BEFORE the commit. The executor never makes this call and runs whatever model list is committed. CI method unchanged: eval_protocol.bootstrap_ci, applied to row subsets. Not re-tuning in disguise: ET alone and C5 Ridge are diagnostics run with their recorded settings and can never be adopted or proposed as candidates under this config.",
+  "prior_looks": [
+    "Committed repo logs (repeat 0): 'seconds R2 on 25 kW/m2 rows / other fluxes' and 'OOF R2 in log1p space' for every v5 candidate (experiments/runs/train_tti_v5_physics*.log; exp046 0.059 / 0.798, log1p 0.416; exp047 0.232 / 0.397, log1p 0.536); 'R2 at 25 / other fluxes' for t1-t4 and e1-e4 (experiments/runs/train_tti_round1.log, train_tti_round2.log, their result-JSON notes); R2 at 25 kW/m2 for b1 / b2 (0.120 / 0.132, experiments/runs/train_blend_round1_TTI.log).",
+    "Lever sweep, finding tti-1 (finder scratch tti/oof.py, an2.py, an3.py; skeptic skeptic_tti/oof.py, an1.py): exp046 10-repeat OOF scored by flux. Seconds R2 0.042 / 0.274 / 0.283 at 25 / 50 / 75 kW/m2; pooled 50+75 0.368 (repeat-0 CI [-0.42, 0.59]); log R2 0.025 / 0.018 / -0.006; overall log R2 0.391 (CI [0.09, 0.57]); material-median Spearman 0.51 / 0.50 / 0.44 (10-repeat means; repeat 0 0.50 / 0.46 / 0.40); row Spearman repeat 0 0.49 / 0.44 / 0.39; non-25 R2 0.768 +- 0.070 with and 0.294 +- 0.205 without the 15 kW/m2 rows; all-row R2 without 15 kW/m2 rows 0.285 +- 0.040; label shares: 25 kW/m2 rows 85.2% of target SS, 3 Masonite_Board 15 kW/m2 rows 74.5% of non-25 target SS; 25 kW/m2 rows 97.8% of repeat-0 OOF SSE.",
+    "Lever sweep, finding tti-2 (finder tti/blend10.py, ci.py, f50.py; skeptic skeptic_tti/an2.py): b2 (exp124 config) scored the same way. 50 0.501, 75 0.550, pooled 50+75 0.572 (CI [0.30, 0.69]), overall log 0.567 (CI [0.42, 0.68]), log at 25 0.216, S50 CI [0.115, 0.651], row Spearman repeat 0 0.57 / 0.61 / 0.62; 10/10 paired wins over exp046 on each. Also a material-exclusion look (without Latex_Pillow_Foam: 50 kW/m2 0.359 -> 0.539, 75 kW/m2 0.337 -> 0.572; f50.py also dropped Polyisocyanurate_Foam_Board). This config does NOT repeat any exclusion.",
+    "Lever sweep skeptic, skeptic_tti/alt.py: ET alone (log1p, PHYS, 500 trees / leaf 2; alt.py fits ExtraTrees with log_target=True, numerically the same model as log1p_wrap(et())) pooled seconds 0.255; overall log 0.633, log at 25 0.292, 75 kW/m2 0.613 and pooled 50+75 0.580, each of these four 10/10 vs exp046. alt.py also computed ET alone's 50 kW/m2 seconds R2; that value is not in the findings and was not seen by the drafter. C5 Ridge (log1p, PHYS) beats exp046 on the same five metrics in 8-10/10 repeats (values not reported). C0 RF log1p on F0 (= exp047's config) was also run by alt.py; its output is not in the findings and was not seen by the drafter.",
+    "The scratch scripts above compute further cells whose values are not in the findings (e.g. b2 log R2 at 50 and 75, log1p-space overall R2, b2 R2 on non-25 rows without 15 kW/m2). Not seen by the drafter; disclosed because they exist.",
+    "Lever sweep, finding tti-3 (label-only ceilings plus an own-50/75 'oracle' model on labels): 25 kW/m2 LORO 0.558 / in-sample 0.776; LORO 0.958 / 0.955 at 50 / 75; overall 0.843 / 0.690; own-50/75 oracle at 25 kW/m2 0.29-0.49 by aggregation, 0.50-0.62 overall; exp046 SSE by material; POST TEST CMT flag shares; HRR-curve TTI scatter (p90 CV at 25 kW/m2 0.48 -> 0.36-0.37). Context only; none of it is a metric here.",
+    "Sep 29, reports/sprint_0929/tti.md section 5(d): recommended a log-space or per-flux secondary metric in general terms, before any look above.",
+    "This draft (Oct 6): the drafter read the code (not the outputs) of the scratch scripts above to copy their definitions, read committed logs and result JSONs, and counted rows per flux in data/v2/cone_replicates_fsri.csv and data/v2/tti_fsri.csv (shapes only). No model was fit or scored and no new label statistic was computed.",
+    "Skeptic check of this draft (Oct 6, before commit): read the code (not the outputs) of the finder and skeptic scratch scripts, the committed logs, leaderboard rows and the files the corrections cite; imported train_tti_v5_physics (module-level data build only, no fit) to confirm the data.asserts row and material counts per flux and that spark_ignitor is 1 on all 681 rows. No model was fit or scored and no label statistic was computed. Edits were wording and specification only (environment pins, emissivity confirmation mechanism, paired-report metric list, NaN rule, headline empty case, interpretation criterion, this prior-looks detail); no definition, model, mask or expected value changed."
+  ],
+  "environment": "OMP_NUM_THREADS=1; python3 3.12.4 (/Library/Frameworks/Python.framework/Versions/3.12/bin/python3), scikit-learn 1.7.1, numpy 2.2.6, pandas 2.3.3, scipy 1.16.1 (as installed Oct 6 and pinned the same way in tti_round3.json / cr_round2.json; requirements.txt lists other numpy/pandas/scipy versions, which are NOT used). Step 1 catches any drift.",
+  "code": {
+    "script": "data/v2/report_tti_secondary_metrics.py (written by the executor; mechanical, per this config)",
+    "imports_allowed": "eval_protocol (repeated_group_kfold, bootstrap_ci); train_tti_v5_physics imported with sys.argv = [argv0, '--onset-bc', '--replicate-table'] exactly as train_blend_round1.data_tti() does (its __main__ block does not run); train_blend_round1 (Avg, et, ridge, log1p_wrap; it has a main guard); sklearn; scipy.stats.spearmanr",
+    "imports_forbidden": "Do NOT import data/v2/train_tti_round1.py or data/v2/train_tti_round2.py: their module-level code fits every candidate and overwrites experiments/results/*.json. Copy the lines cited under data.extra_columns and models verbatim instead.",
+    "run": "OMP_NUM_THREADS=1 python3 data/v2/report_tti_secondary_metrics.py | tee experiments/runs/tti_secondary_metrics.log"
+  },
+  "data": {
+    "build": "df = v5.df.copy() after importing train_tti_v5_physics as above",
+    "asserts": "len(df) == 681; df['material'].nunique() == 76; (df['time_to_ignition_s'] > 0).all(); (df['spark_ignitor'] == 1).all(); flux row counts == {15: 3, 25: 223, 35: 16, 50: 221, 75: 217, 100: 1}",
+    "y": "df['time_to_ignition_s'] (seconds), float",
+    "groups": "df['material'] (76 groups, no merges)",
+    "flux": "df['heat_flux_kWm2'] (float)",
+    "row_rule": "All 681 rows train every model in every fold and enter scoring. No row or material is excluded anywhere (no Latex_Pillow_Foam or other exclusion, no 15 kW/m2 exclusion). The 6 operator-flagged rows (plan B4 / D4) stay in; the 675-row set is never used here.",
+    "extra_columns": "round-1 columns q_kWm2 and q_over_dT exactly as train_tti_round1.py lines 32-33, and inv_z exactly as lines 39-40; round-2 columns exactly as train_tti_round2.py line 29 (SIGMA) and lines 35-55 (emissivity left join on material from data/v2/emissivity_fsri.csv: eps_h, eps_s, log_eps_h, log_q_excess_eps, has_emissivity). Extra columns never change a model's X: each model uses its explicit feature list."
+  },
+  "protocol": {
+    "cv": "one call per model: eval_protocol.repeated_group_kfold(model, X, y, groups, n_splits=5, repeats=10, log_target=<model flag>), i.e. GroupKFold(n_splits=5, shuffle=True, random_state=r) for r = 0..9, groups = material. Every metric below comes from that call's OOF array (10 x 681). No other fitting.",
+    "paired_folds": "all models share rows and groups, so repeat r has identical folds for every model",
+    "seeds": "CV repeats random_state 0..9; bootstrap seed 0, n_boot 2000; model seeds as recorded (ExtraTrees, RF and HGB random_state 0; GLM and Ridge deterministic)",
+    "pooled_seconds": "per repeat r2_score(y, oof[r]) over all 681 rows; rkf_mean = mean of the 10; record CI = bootstrap_ci(y, oof[0], groups). This is the existing headline, computed only for the step-1 check and printed for context. It is not a secondary metric."
+  },
+  "models (fixed order; nothing added, nothing dropped)": [
+    {
+      "id": "exp046",
+      "role": "TTI number of record",
+      "estimator": "v5.linear(PoissonRegressor(alpha=0.01, max_iter=3000))",
+      "features": "v5.PHYS = [log_q, log_dT, log_kpc, log_L, log_rho]",
+      "log_target": false,
+      "record": {
+        "rkf_mean": 0.3133,
+        "ci": [
+          0.0715,
+          0.4958
+        ]
+      }
+    },
+    {
+      "id": "exp047",
+      "role": "shelf: same-rows C0 baseline logged with exp046 (added for shelf completeness; not in the A3 task list)",
+      "estimator": "v5.MODELS[0][1] = RandomForestRegressor(n_estimators=300, max_depth=8, min_samples_leaf=2, random_state=0, n_jobs=-1)",
+      "features": "v5.F0",
+      "log_target": true,
+      "record": {
+        "rkf_mean": 0.2613,
+        "ci": [
+          0.13,
+          0.441
+        ]
+      }
+    },
+    {
+      "id": "b1",
+      "exp_id": "exp123",
+      "role": "shelf: blend round 1 TTI b1 (not adopted, 7/10)",
+      "estimator": "train_blend_round1.Avg([exp046 estimator, log1p_wrap(et()), log1p_wrap(ridge())])",
+      "features": "v5.PHYS",
+      "log_target": false,
+      "record": {
+        "rkf_mean": 0.3265,
+        "ci": [
+          0.2068,
+          0.535
+        ]
+      }
+    },
+    {
+      "id": "b2",
+      "exp_id": "exp124",
+      "role": "shelf: blend round 1 TTI b2 (not adopted, 7/10)",
+      "estimator": "train_blend_round1.Avg([exp046 estimator, log1p_wrap(et())])",
+      "features": "v5.PHYS",
+      "log_target": false,
+      "record": {
+        "rkf_mean": 0.3316,
+        "ci": [
+          0.2163,
+          0.5348
+        ]
+      }
+    },
+    {
+      "id": "et_alone",
+      "role": "DIAGNOSTIC ONLY: b2's ExtraTrees member alone. No exp id, no result JSON; can never be a candidate or record under this config",
+      "estimator": "train_blend_round1.log1p_wrap(train_blend_round1.et()) = TransformedTargetRegressor(ExtraTreesRegressor(n_estimators=500, min_samples_leaf=2, random_state=0, n_jobs=-1), func=np.log1p, inverse_func=np.expm1)",
+      "features": "v5.PHYS",
+      "log_target": false,
+      "record": null,
+      "anchor": {
+        "rkf_mean": 0.255,
+        "source": "tti-2 skeptic verdict (3 decimals)"
+      }
+    },
+    {
+      "id": "c5_ridge",
+      "role": "DIAGNOSTIC ONLY: v5 C5, named in plan A3. Never scored on the 681-row table in a committed run; no exp id",
+      "estimator": "v5.linear(Ridge(alpha=1.0))",
+      "features": "v5.PHYS",
+      "log_target": true,
+      "record": null,
+      "anchor": null
+    },
+    {
+      "id": "t1",
+      "exp_id": "exp096",
+      "estimator": "verbatim train_tti_round1.py CANDS['t1']: v5.linear(PoissonRegressor(alpha=0.01, max_iter=3000))",
+      "features": "v5.PHYS + ['log_q_excess']",
+      "log_target": false,
+      "record": {
+        "rkf_mean": 0.2979,
+        "ci": [
+          0.0467,
+          0.4938
+        ]
+      }
+    },
+    {
+      "id": "t2",
+      "exp_id": "exp097",
+      "estimator": "verbatim train_tti_round1.py CANDS['t2']: TransformedTargetRegressor(regressor=v5.linear(Ridge(alpha=1.0)), func=lambda t: t ** -0.5, inverse_func=inv_z, check_inverse=False), inv_z(z) = 1 / max(z, 0.02)^2 (cap 2500 s)",
+      "features": "['q_kWm2', 'q_over_dT', 'log_L', 'log_rho', 'log_kpc']",
+      "log_target": false,
+      "record": {
+        "rkf_mean": -38.1081,
+        "ci": [
+          -85.4366,
+          -25.1826
+        ]
+      }
+    },
+    {
+      "id": "t3",
+      "exp_id": "exp098",
+      "estimator": "verbatim train_tti_round1.py CANDS['t3']: HistGradientBoostingRegressor(loss='poisson', **v5.HGB)",
+      "features": "v5.F3 + ['log_q_excess', 'log_t_thick_loss']",
+      "log_target": false,
+      "record": {
+        "rkf_mean": 0.2123,
+        "ci": [
+          -0.0036,
+          0.4418
+        ]
+      }
+    },
+    {
+      "id": "t4",
+      "exp_id": "exp099",
+      "estimator": "verbatim train_tti_round1.py CANDS['t4']: HistGradientBoostingRegressor(**v5.HGB)",
+      "features": "v5.F0",
+      "log_target": true,
+      "record": {
+        "rkf_mean": 0.2671,
+        "ci": [
+          0.1705,
+          0.4649
+        ]
+      }
+    }
+  ],
+  "models_not_included": [
+    "Pre-replicate-table TTI models (exp003-exp039 on tti_fsri.csv rows, including exp024 / exp039) score a different row set; v5 C1-C4 / C7 / R0 were never scored on the 681-row table; Pomazi-reconstruction TTI models (exp063, exp079) are a different population. None is refit here.",
+    "e1-e4 (TTI round 2, emissivity): DROPPED by the orchestrator before commit (Oct 6). banned_moves grants the emissivity-join exemption 'for TTI round 2 only' (Arnav, Oct 5); a report-only refit is a new use, and a plan cannot widen a human-granted exemption. Strict reading applied."
+  ],
+  "metrics (all report-only)": {
+    "masks": {
+      "F25": "heat_flux_kWm2 == 25.0 (223 rows / 69 materials)",
+      "F50": "heat_flux_kWm2 == 50.0 (221 rows / 72 materials)",
+      "F75": "heat_flux_kWm2 == 75.0 (217 rows / 72 materials)",
+      "F50_75": "heat_flux_kWm2 in {50.0, 75.0} (438 rows / 72 materials)",
+      "ALL": "all 681 rows",
+      "note": "The 20 rows at 15, 35 and 100 kW/m2 get no separate metric; they enter only ALL and the legacy reconciliation."
+    },
+    "S25, S50, S75": "seconds-scale R2 within one flux: sklearn r2_score(y[m], oof[r][m]) on raw predictions, no clipping",
+    "S50_75": "seconds-scale R2 on F50_75 pooled, same formula",
+    "LOG_ALL": "overall log-space R2: r2_score(np.log(y), np.log(np.clip(oof[r], 1e-6, None))) on all 681 rows (natural log of seconds, not log1p)",
+    "LOG25, LOG50, LOG75": "within-flux log-space R2, same formula on F25 / F50 / F75",
+    "SPR25, SPR50, SPR75": "within-flux row-level Spearman: scipy.stats.spearmanr(y[m], oof[r][m]).statistic (default average ranks for ties)",
+    "SPM25, SPM50, SPM75": "within-flux material-median Spearman: within mask m, per material take median(y) and median(oof[r]); spearmanr of the two across materials",
+    "clip_floor": "1e-6 s, fixed (as skeptic_tti/alt.py and an1.py; the finder's blend10.py used 1e-3, identical for strictly positive predictions). Report n_clipped = number of (repeat, row) pairs with oof <= 1e-6, per model.",
+    "not_computed": "No other mask, metric, transform, exclusion or per-material breakdown is computed under this config (no log1p-space R2, no without-Latex or without-top-k checks, no 675-row variant, no family-GKF)."
+  },
+  "aggregation": "For every model x metric: the 10 per-repeat values (r = 0..9), their mean and std (numpy default ddof=0, as eval_protocol / rk.std()), and the repeat-0 value. The headline cell is the 10-repeat mean +- std. Printed to 3 decimals, stored to 4. NaN rule: use np.mean / np.std (not the nan-aware versions), so a NaN in any repeat (e.g. spearmanr on constant predictions) makes that cell NaN; print it as 'nan', store null, and list it for the critic. No value is imputed, dropped or recomputed.",
+  "confidence_intervals": "Repeat 0 only, eval_protocol.bootstrap_ci(y_s, p_s, g_s, n_boot=2000, seed=0) on the subset rows (materials resampled among those present in the subset). Computed for S25, S50, S75, S50_75 (y_s = y[m], p_s = oof[0][m]) and LOG_ALL (y_s = np.log(y), p_s = np.log(np.clip(oof[0], 1e-6, None))). No CI for LOG25/50/75 or any Spearman. A CI here is descriptive and is never compared with a bar.",
+  "paired_report": "For each model other than exp046 and each of the 16 secondary metrics (S25, S50, S75, S50_75, LOG_ALL, LOG25, LOG50, LOG75, SPR25, SPR50, SPR75, SPM25, SPM50, SPM75; not the pooled-seconds headline and not the legacy masks): wins = number of repeats r with metric(model, r) > metric(exp046, r) (strict >; ties are not wins; a NaN on either side is not a win). Report-only, never a selection rule. Folds are paired (protocol.paired_folds).",
+  "legacy_reconciliation (labelled 'legacy mask, NOT a secondary metric')": {
+    "NOT25": "heat_flux_kWm2 != 25.0 (458 rows: 15, 35, 50, 75, 100): seconds R2, repeat-0 value (equals the old 'other fluxes' log value) and 10-repeat mean +- std, for every model",
+    "NOT25_NO15": "heat_flux_kWm2 not in {15.0, 25.0} (455 rows): seconds R2, 10-repeat mean +- std, for every model. Printed only to show what drove the old 'other fluxes' figure; it is not a proposal to drop the 15 kW/m2 rows.",
+    "label_checks": "share of the NOT25 target sum of squares (around the NOT25 mean) held by the 3 Masonite_Board rows at 15 kW/m2 (expect 0.745); share of the all-row target sum of squares held by F25 rows (expect 0.852)"
+  },
+  "reference_ceilings (label-only, already reported in tti-3 and the v5 log; recomputed as a check and printed as context, not metrics)": "cells = material x heat_flux_kWm2 x spark_ignitor, as train_tti_v5_physics.ceiling(): in-sample cell-mean R2, and leave-one-replicate-out (LORO) cell-mean R2 on rows in cells with >= 2 replicates. Only these, with expected values: ALL in-sample 0.843 / LORO 0.690; F25 in-sample 0.776 / LORO 0.558; F50 LORO 0.958; F75 LORO 0.955. The own-50/75 oracle is NOT recomputed (aggregation-dependent; cite tti-3's range in prose only).",
+  "step1_reproduction": "Before any secondary metric is printed: every model with a record must reproduce its pooled-seconds rkf_mean within 0.002 and its repeat-0 CI bounds within 0.002 (exp047's 3-decimal CI within 0.002 of the 3-decimal value); et_alone must reproduce rkf_mean 0.255 within 0.002; c5_ridge has no anchor. Any failure: STOP the whole run, write blockers/BLOCKER-<YYYYMMDD-HHMM>-tti-secondary-repro.md, publish no table.",
+  "step2_definition_check": {
+    "purpose": "Confirms the script implements the same definitions that produced the findings. A mismatch is an implementation fault: STOP and write the blocker. Never change a definition to make a number match.",
+    "tolerance": "0.002 for values given to 3 decimals; equal after rounding for values given to 2 decimals",
+    "exp046": "S25 0.042, S50 0.274, S75 0.283, S50_75 0.368 (rep-0 CI [-0.42, 0.59]), LOG_ALL 0.391 (rep-0 CI [0.09, 0.57]), LOG25 0.025, LOG50 0.018, LOG75 -0.006, SPM 10-repeat 0.51 / 0.50 / 0.44 and repeat-0 0.50 / 0.46 / 0.40, SPR repeat-0 0.49 / 0.44 / 0.39, NOT25 repeat-0 0.798 and 10-repeat 0.768 (std 0.070), NOT25_NO15 0.294 (std 0.205)",
+    "b2": "S50 0.501 (rep-0 CI [0.115, 0.651]), S75 0.550, S50_75 0.572 (CI [0.30, 0.69]), LOG_ALL 0.567 (CI [0.42, 0.68]), LOG25 0.216, SPR repeat-0 0.57 / 0.61 / 0.62; wins 10/10 on S50, S75, S50_75, LOG_ALL, LOG25",
+    "et_alone": "LOG_ALL 0.633, LOG25 0.292, S75 0.613, S50_75 0.580; wins 10/10 on each of these four",
+    "c5_ridge": "wins vs exp046 between 8 and 10 on each of S50, S75, S50_75, LOG_ALL, LOG25",
+    "labels": "label_checks and reference_ceilings equal their expected values within 0.002"
+  },
+  "selection_rule": "none. No model is selected, ranked or adopted. Tables are printed in the fixed model order above, never sorted by a metric.",
+  "outputs": {
+    "log": "experiments/runs/tti_secondary_metrics.log (full stdout). Every table header line carries: 'REPORT-ONLY, defined post hoc (experiments/configs/tti_secondary_metrics.json); never promotes; not comparable to the 0.58 bar'.",
+    "json": "experiments/runs/tti_secondary_metrics.json: {config, generated_at, step1: {model: {rkf_mean, ci, record, ok}}, step2: {check: {expected, got, ok}}, models: {id: {metric: {per_repeat[10], mean, std, rep0, ci_rep0 or null, wins_vs_exp046 or null}}, n_clipped}, legacy_reconciliation, label_checks, reference_ceilings}",
+    "printed_tables": "(1) step-1 reproduction; (2) seconds per flux: S25, S50, S75, S50_75 mean +- std with rep-0 CI; (3) log: LOG_ALL [CI], LOG25, LOG50, LOG75; (4) Spearman: SPR and SPM per flux (10-repeat means; rep-0 in the JSON); (5) paired wins vs exp046 per metric; (6) legacy reconciliation and label checks; (7) reference ceilings",
+    "not_written": "No experiments/results/*.json, no exp id, no scripts/update_trackers.py ingest, no leaderboard.csv / xlsx / numbers_of_record.json / STATUS.md / model card / report edit by the executor. OOF arrays are not committed (scratch only)."
+  },
+  "critic": "A fresh-context critic writes experiments/critic/tti_secondary_metrics_critic.md before any number from this run is quoted anywhere (STATUS, model card, summary, blocker). It checks: the script against this config line by line; steps 1-2; that nothing is ranked, selected or set against 0.58; whether any metric is degenerate for a model (e.g. t2's capped back-transform in seconds, n_clipped); and the wording of any proposed doc text against reporting_rules.",
+  "reporting_rules": {
+    "always_attach": "Any quoted number from this run carries 'report-only, defined post hoc' and the pointer experiments/configs/tti_secondary_metrics.json.",
+    "headline_template (after critic)": "Report-only secondary TTI metrics (defined after per-flux results were seen; experiments/configs/tti_secondary_metrics.json): within a single heat flux exp046 separates materials poorly (seconds R2 {S25} / {S50} / {S75} at 25 / 50 / 75 kW/m2, {S50_75} pooled over 50+75; log R2 {LOG25} / {LOG50} / {LOG75}). On overall log R2, {models with >= 8/10 wins on LOG_ALL, in model order, with their LOG_ALL means} score above exp046 ({exp046 LOG_ALL}). The seconds-scale TTI number of record is unchanged: exp046 0.313 [0.071, 0.496]. None of these numbers is compared with the 0.58 bar.",
+    "headline_template_empty_case": "If no model is above exp046 on LOG_ALL in >= 8/10 repeats, the second sentence is replaced by: 'On overall log R2 no model on the shelf scores above exp046 ({exp046 LOG_ALL}) in at least 8 of 10 repeats.' Nothing else in the template changes.",
+    "allowed_interpretation": "The sentence 'log-target training separates materials better than the seconds-scale Poisson GLM on these report-only metrics; the seconds-scale record is unchanged.' may be added after the headline if and only if BOTH PHYS-feature log1p-target models (et_alone and c5_ridge, which differ from exp046 only in target scale and estimator) are above exp046 on LOG_ALL in >= 8/10 repeats. Otherwise it is not written, and no substitute interpretation is offered.",
+    "forbidden": [
+      "setting any number from this run (including ET alone or b2 pooled 50+75) against 0.58, Pomazi or any SOTA figure",
+      "the words 'beats', 'win', 'best TTI model' or 'record' attached to a secondary metric",
+      "calling ET alone or C5 Ridge a candidate, or relabelling b1 / b2 as the record",
+      "citing this run as a reason to un-park TTI or to choose, add or drop any B4 / future TTI candidate",
+      "'other fluxes' or 'at 50/75 kW/m2' for the NOT25 legacy mask (say 'non-25 rows pooled (15/35/50/75/100)')",
+      "computing any extra mask, metric or exclusion under this config"
+    ]
+  },
+  "exit_triggers": "None. No number here is compared with any bar, so nothing in this run can trigger EXIT. STOP conditions are step1 / step2 mismatches only (BLOCKED, blocker file, nothing published).",
+  "budget": "One run of the script. A rerun is allowed only to fix a crash or a code bug that caused a step-1/2 mismatch; each rerun is listed in the critic file with its cause. Never rerun to change a definition.",
+  "amendments": [
+    "Oct 6, orchestrator, before commit: e1-e4 removed from the model list (emissivity exemption is round-2 only). Everything else unchanged. 10 models remain.",
+    "Oct 6 (amendment 2), orchestrator, after the first run stopped at step 2 (blockers/BLOCKER-20261006-1501-tti-secondary-repro.md; critic experiments/critic/tti_secondary_metrics_critic.md) and before any table (2)-(7) was computed or seen: (a) step2_definition_check exp046 SPR50 repeat 0 reference corrected from 0.44 (2 dp) to 0.435 (3 dp, +-0.002). Cause: transcription double rounding; the finder's tti/an2.py and the skeptic's an2.py both print 0.435, and the critic recomputed 0.43456 from their saved OOF arrays (which predate this config). No definition, model, mask or tolerance rule changes; prior_looks and the lever-sweep findings JSON keep the stale 0.44 as the research record. (b) data.extra_columns: the round-2 emissivity columns are not built (follows from amendment 1; no listed model uses them; joining them would be a use outside the round-2-only exemption). (c) paired_report: '16 secondary metrics' is a typo for the 14 listed. (d) Exactly one rerun is allowed for this cause; the script's only change is the SPR50 check line (3-decimal check at 0.435). A fresh critic must review the rerun before any secondary-metric number is quoted."
+  ]
+}

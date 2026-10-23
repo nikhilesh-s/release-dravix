@@ -1,0 +1,61 @@
+Part A rows: 497 cone replicates / 55 materials (of 79 materials with a cone residue); target mean 25.3%, sd 25.2
+  missing: density 52 rows, sta_res_3K 164, sta_res_10K 0, sta_res_30K 152
+
+A0 flux+density (baseline): 497 rows / 55 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=-0.2211 std=0.4352 min=-0.9173 max=0.3944
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=-0.1680 std=0.1223; material-bootstrap 95% CI [-1.039, 0.278]
+  vs SOTA 0.82: delta (GKF mean) -0.9880; CI excludes SOTA from above: False
+
+A1 +MCC char yield: 497 rows / 55 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.4504 std=0.2660 min=-0.0186 max=0.7700
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.5198 std=0.0987; material-bootstrap 95% CI [0.173, 0.692]
+  vs SOTA 0.82: delta (GKF mean) -0.3002; CI excludes SOTA from above: False
+
+A2 +STA residue x3 rates: 497 rows / 55 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.5586 std=0.2380 min=-0.0556 max=0.8175
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.5978 std=0.0274; material-bootstrap 95% CI [0.266, 0.768]
+  vs SOTA 0.82: delta (GKF mean) -0.2222; CI excludes SOTA from above: False
+
+A3 +MCC +STA (full): 497 rows / 55 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.4950 std=0.2392 min=-0.0579 max=0.8118
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.5383 std=0.0469; material-bootstrap 95% CI [0.112, 0.713]
+  vs SOTA 0.82: delta (GKF mean) -0.2817; CI excludes SOTA from above: False
+
+Paired same-rows same-folds deltas vs A0 (repeated GroupKFold 5x10):
+  PAIRED A1 +MCC char yield vs A0: delta pooled-OOF R2 +0.6878 (improved in 10/10 repeats); material-bootstrap 95% CI of delta [+0.378, +1.106]
+  PAIRED A2 +STA residue x3 rates vs A0: delta pooled-OOF R2 +0.7658 (improved in 10/10 repeats); material-bootstrap 95% CI of delta [+0.421, +1.257]
+  PAIRED A3 +MCC +STA (full) vs A0: delta pooled-OOF R2 +0.7063 (improved in 10/10 repeats); material-bootstrap 95% CI of delta [+0.352, +1.186]
+  PAIRED A3 vs A1 (what STA adds on top of MCC): delta pooled-OOF R2 +0.0185 (improved in 4/10 repeats); material-bootstrap 95% CI of delta [-0.143, +0.177]
+
+Harder split: GroupKFold by material category (17 categories), 5-fold x10, same rows:
+  A0 flux+density (baseline): pooled OOF R2 mean=-0.6845 std=0.3367
+  A3 +MCC +STA (full): pooled OOF R2 mean=0.2025 std=0.0721
+
+Sensitivity, complete-case rows only (no NaN features): 293 rows / 33 materials; target sd 17.4 (all rows 25.2); materials dropped: ['Asphalt_Shingle', 'Cellulose_Insulation', 'Cotton_Raw', 'Cotton_Sheet', 'EPDM_Membrane', 'EPS_Foam_Board', 'Excelsior', 'FRP_Panel', 'Feather_Pillow_Feathers', 'House_Wrap', 'Latex_Pillow_Foam', 'Memory_Foam_Carpet_Pad', 'Mineral_Wool_Insulation', 'Nylon_Carpet_High_Pile', 'PE_Foam_Pipe_Insulation', 'PlasticC', 'Polyisocyanurate_Foam_Board', 'Rebond_Foam_Carpet_Pad', 'Rubber_Foam_Pipe_Insulation', 'Rug_Pad', 'Vinyl_Tile', 'Window_Screen']
+A0 flux+density (baseline) [complete-case]: 293 rows / 33 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=-1.5902 std=2.5728 min=-8.2493 max=0.3877
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=-0.6078 std=0.3812; material-bootstrap 95% CI [-1.155, -0.003]
+  vs SOTA 0.82: delta (GKF mean) -1.4278; CI excludes SOTA from above: False
+A3 +MCC +STA (full) [complete-case]: 293 rows / 33 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=-0.1122 std=0.7499 min=-2.2336 max=0.4052
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.2594 std=0.1276; material-bootstrap 95% CI [-0.247, 0.468]
+  vs SOTA 0.82: delta (GKF mean) -0.5606; CI excludes SOTA from above: False
+
+A3 feature importances (full-data fit, interpretation only): mcc_char_yield_pct 0.443, sta_res_10K 0.395, density_kgm3 0.058, heat_flux_kWm2 0.058, sta_res_3K 0.024, sta_res_30K 0.021
+Pearson r, cone residue vs material-mean STA 10K residue (rows with both): 0.805
+
+================ Part B: corrected STA N2 residue as target (exp005 config) ================
+exp005 row set with corrected target: 572 rows / 96 materials (exp005 had 574/96 before the fix: QA-gated rows are now dropped); target median 20.7%, rows at 0: 22
+exp005 exact loop (rs=seed): mean R2=0.7390 std=0.1608 min=0.3035 max=0.8896
+B1 exp005 features (heating rate, MCC peak HRR): 572 rows / 96 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.7391 std=0.1628 min=0.2968 max=0.8893
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.7204 std=0.0144; material-bootstrap 95% CI [0.509, 0.820]
+  vs SOTA 0.82: delta (GKF mean) -0.0996; CI excludes SOTA from above: False
+B1 same, groups with duplicate materials merged: 572 rows / 95 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.6571 std=0.1367 min=0.4703 max=0.8649
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.7105 std=0.0229; material-bootstrap 95% CI [0.513, 0.791]
+  vs SOTA 0.82: delta (GKF mean) -0.1095; CI excludes SOTA from above: False
+B2 +MCC char yield (near-tautological: MCC pyrolysis is also anaerobic): 572 rows / 95 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.9153 std=0.0517 min=0.7768 max=0.9753
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.9395 std=0.0069; material-bootstrap 95% CI [0.904, 0.955]
+  vs SOTA 0.82: delta (GKF mean) +0.1195; CI excludes SOTA from above: True

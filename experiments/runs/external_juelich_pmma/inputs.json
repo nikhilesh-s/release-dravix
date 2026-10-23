@@ -1,0 +1,40 @@
+{
+ "config_commit": "2dbc7c197aeaac6c68564f0e9e95577b826f996f",
+ "material_inputs": {
+  "Black": {
+   "mcc_peak_hrr_Wg": 203.9286666666667,
+   "mcc_char_yield_pct": 0.15333333333333335,
+   "cone_mass_per_area_kgm2": 10.2435,
+   "cone_thickness_mm": 8.375,
+   "density_kgm3": 1181.0,
+   "mcc_total_hr_kJg": 25.156333333333333,
+   "mcc_t_peak_C": 364.5333333333333,
+   "mcc_t_onset_C": 215.20000000000002,
+   "log_kpc": 12.380309254746674
+  },
+  "Transparent": {
+   "mcc_peak_hrr_Wg": 165.66633333333334,
+   "mcc_char_yield_pct": 0.7200000000000001,
+   "cone_mass_per_area_kgm2": 3.33,
+   "cone_thickness_mm": 2.785,
+   "density_kgm3": 1180.0,
+   "mcc_total_hr_kJg": 24.169999999999998,
+   "mcc_t_peak_C": 381.0,
+   "mcc_t_onset_C": 206.33333333333334,
+   "log_kpc": null
+  }
+ },
+ "features": [
+  "heat_flux_kWm2",
+  "mcc_peak_hrr_Wg",
+  "mcc_char_yield_pct",
+  "cone_mass_per_area_kgm2",
+  "cone_thickness_mm",
+  "density_kgm3",
+  "mcc_total_hr_kJg",
+  "mcc_t_peak_C",
+  "mcc_t_onset_C",
+  "log_kpc"
+ ],
+ "thickness_mm": 6.0
+}

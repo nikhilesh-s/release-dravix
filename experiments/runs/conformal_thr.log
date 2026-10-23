@@ -1,0 +1,40 @@
+THR (exp045): 191 rows / 65 groups; groups = material (unmerged; 65 groups), as exp045; score: s = y (raw units); back-transform identity; display clip (0.0, inf)
+  stratum 25: 66 rows / 63 groups
+  stratum 50: 62 rows / 62 groups
+  stratum 75: 63 rows / 62 groups
+    raw flux  15: 1 rows / 1 groups
+    raw flux  25: 60 rows / 60 groups
+    raw flux  35: 5 rows / 5 groups
+    raw flux  50: 62 rows / 62 groups
+    raw flux  75: 62 rows / 62 groups
+    raw flux 100: 1 rows / 1 groups
+STEP 1 exp045: GKF 0.9530 +- 0.0024 CI [0.9178, 0.9753] (record 0.953 [0.918, 0.975]); within 0.002: True  (0s)
+Nested GroupKFold 5x10 (outer r, inner r), variants ['P', 'V1', 'V2', 'CQR']
+  nested repeat 0: 9s
+  nested repeat 1: 10s
+  nested repeat 2: 10s
+  nested repeat 3: 8s
+  nested repeat 4: 9s
+  nested repeat 5: 9s
+  nested repeat 6: 9s
+  nested repeat 7: 17s
+  nested repeat 8: 14s
+  nested repeat 9: 15s
+nested-disjointness asserts passed; every row got exactly one interval per repeat
+  P    overall: group_all 0.848  group_mean 0.910 [0.852, 0.959] (consistent with nominal)  row 0.909  median raw width 51.46 MJ/m2  unbounded 0  empty 0
+       stratum  25: group_all 0.910  group_mean 0.910 [0.838, 0.964] (consistent with nominal)  row 0.914  median raw width 51.57  (rows 66, groups 63, unbounded 0)
+       stratum  50: group_all 0.910  group_mean 0.910 [0.842, 0.966] (consistent with nominal)  row 0.910  median raw width 50.24  (rows 62, groups 62, unbounded 0)
+       stratum  75: group_all 0.903  group_mean 0.903 [0.832, 0.965] (consistent with nominal)  row 0.905  median raw width 55.09  (rows 63, groups 62, unbounded 0)
+  V1   overall: group_all 0.875  group_mean 0.922 [0.863, 0.970] (consistent with nominal)  row 0.920  median raw width 53.55 MJ/m2  unbounded 0  empty 0
+       stratum  25: group_all 0.924  group_mean 0.924 [0.857, 0.978] (consistent with nominal)  row 0.927  median raw width 53.49  (rows 66, groups 63, unbounded 0)
+       stratum  50: group_all 0.927  group_mean 0.927 [0.863, 0.977] (consistent with nominal)  row 0.927  median raw width 53.47  (rows 62, groups 62, unbounded 0)
+       stratum  75: group_all 0.905  group_mean 0.905 [0.832, 0.966] (consistent with nominal)  row 0.906  median raw width 53.68  (rows 63, groups 62, unbounded 0)
+  V2   overall: group_all 0.848  group_mean 0.910 [0.852, 0.959] (consistent with nominal)  row 0.909  median raw width 51.46 MJ/m2  unbounded 0  empty 0
+       stratum  25: group_all 0.910  group_mean 0.910 [0.838, 0.964] (consistent with nominal)  row 0.914  median raw width 51.57  (rows 66, groups 63, unbounded 0)
+       stratum  50: group_all 0.910  group_mean 0.910 [0.842, 0.966] (consistent with nominal)  row 0.910  median raw width 50.24  (rows 62, groups 62, unbounded 0)
+       stratum  75: group_all 0.903  group_mean 0.903 [0.832, 0.965] (consistent with nominal)  row 0.905  median raw width 55.09  (rows 63, groups 62, unbounded 0)
+  CQR  overall: group_all 0.895  group_mean 0.943 [0.901, 0.976] (conservative)  row 0.944  median raw width 61.78 MJ/m2  unbounded 0  empty 0
+       stratum  25: group_all 0.940  group_mean 0.940 [0.884, 0.983] (consistent with nominal)  row 0.942  median raw width 59.51  (rows 66, groups 63, unbounded 0)
+       stratum  50: group_all 0.942  group_mean 0.942 [0.890, 0.982] (consistent with nominal)  row 0.942  median raw width 62.1  (rows 62, groups 62, unbounded 0)
+       stratum  75: group_all 0.947  group_mean 0.947 [0.895, 0.987] (consistent with nominal)  row 0.948  median raw width 63.15  (rows 63, groups 62, unbounded 0)
+wrote ~/Dravix/dravix-v2/experiments/runs/conformal/thr_summary.json and thr_rows.csv; runtime 116s

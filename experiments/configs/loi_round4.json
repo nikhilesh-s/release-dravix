@@ -1,0 +1,40 @@
+{
+  "round": "loi_round4",
+  "target": "LOI (%), RPUF literature benchmark of record: 460 rows / 83 papers",
+  "declared": "by Opus 5.5, see git commit time; before any run",
+  "authority": "blockers/resolved/DECISION-20261003-1431-loi-freeze-lifted.md (human lifted the freeze for LOI; 2 extra rounds)",
+  "banned_moves_checked": true,
+  "incumbent": {
+    "exp_id": "exp087",
+    "config": "exp085 config (RF n_estimators=500, min_samples_leaf=2, random_state=0, NaN-native; round-1 features + PubChem el_* + RDKit structure features)",
+    "B_mean": 0.3109,
+    "B_ci": [
+      0.146,
+      0.467
+    ]
+  },
+  "new_features": {
+    "F6_base_foam": "polyol_type one-hot {polyether, polyester_aromatic, bio_based, unknown} by regex on the row's polyol text (polyether|PET-4110|LY-4110|Voranol|Rokopol|4110 -> polyether; polyester|Stepanpol|PS-?2352|Isoexter|aromatic -> polyester_aromatic; soy|rapeseed|castor|tung|palm|lignin|canola|bio|HSBP|sucrose-free vegetable -> bio_based; first match in order bio, polyester, polyether); iso_index_num (ratio: values > 10 divided by 100; NaN if missing); is_PIR = iso_index_num >= 1.8 OR /PIR|isocyanurate/ in polyol/isocyanate/notes text",
+    "F7_element_fill": "el_* NaN filled from class priors: for each FR class, the median element mass fraction over FR mentions in the dataset whose names resolve in fr_element_table.csv or fr_structures.csv (computed from the element/structure tables only, never from LOI); loading-weighted as in build_loi_rpuf.py; flag el_imputed_share",
+    "F8_synergy": "el_P*el_N, el_P/(el_N+0.1), cls_expandable_graphite*el_P, total_fr_wtpct*density_kgm3/1000"
+  },
+  "candidates": [
+    {
+      "id": "c1",
+      "desc": "incumbent model + F6"
+    },
+    {
+      "id": "c2",
+      "desc": "incumbent model + F6 + F7 + F8"
+    },
+    {
+      "id": "c3",
+      "desc": "equal-weight average of c2-RF and HistGradientBoosting(learning_rate=0.05, max_iter=300, max_leaf_nodes=15, min_samples_leaf=5, random_state=0) on c2 features, per fold"
+    }
+  ],
+  "protocols": "identical to the record: B = GroupKFold by paper 5x10, paper-bootstrap CI on repeat 0 + pooled CI; A random 80/20 x50 (theirs); C by dominant FR class",
+  "selection_rule": "highest B mean; adopt over exp087 only if >= 8/10 paired B repeats better AND B ci_lo >= 0.146; then critic before the record changes",
+  "reported_not_selectable": "'baseline-aware' variant: c2 + the paper's own neat-control LOI as an input (a different task: predicting LOI given the base foam's LOI; never compared with Sun/Fu)",
+  "exit_triggers": "B ci_lo > 0.84 or A mean > 0.84 -> EXIT 5",
+  "round5": "only if round 4 adopts something and time remains before 16:15; declared separately"
+}

@@ -1,0 +1,4 @@
+UL94_V0 c2u: 105 fold fits; LOKY_MAX_CPU_COUNT=5 HF_HUB_OFFLINE=1
+  cached 0, to fit 105
+  1/105 P1_r0__f0 TabPFNValidationError: Number of features `667` reaching the model is greater than the maximum number of features `500` officially supported by the TabPFN model. Set `ignore_pretraining_limits=True` to override this error! 10s
+BLOCKED: 1 TabPFN errors, first: TabPFNValidationError: Number of features `667` reaching the model is greater than the maximum number of features `500` officially supported by the TabPFN model. Set `ignore_pretraining_limits=True` to override this error!

@@ -1,0 +1,1023 @@
+name,canonical,fr_class,reactive,smiles,P,N,Si,B,S,halogen,metal,metal_symbol,confidence,note
+app,ammonium polyphosphate,P_inorganic,0,,0.319,0.144,,,,,,,high,(NH4PO3)n
+none,none,other,,,,,,,,,,,none,no flame retardant
+zinc borate,zinc borate 2ZnO.3B2O3.3.5H2O,borate,0,,,,,0.0746,,,0.301,Zn,high,Firebrake ZB type
+melamine polyphosphate,melamine polyphosphate,P_N,0,,0.15,0.408,,,,,,,medium,1:1 melamine:HPO3 repeat
+pentaerythritol,pentaerythritol,other,0,OCC(CO)(CO)CO,0,0,0,0,0,0,0,,high,charring polyol
+kraft lignin,kraft lignin,bio_based,,,,,,,,,,,none,acronym or system; chemistry unresolved
+alpi/mpp,alpi/mpp,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+lignin,lignin,bio_based,,,,,,,,,,,none,acronym or system; chemistry unresolved
+exolit op935,aluminium diethylphosphinate,P_organic,0,,0.238,,,,,,0.069,Al,high,Al(Et2PO2)3
+app + mgbo2,app + mgbo2,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+nano-zno,zinc oxide,metal_oxide_salt,0,,,,,,,,0.803,Zn,high,metal oxide
+antimony trioxide,antimony trioxide,metal_oxide_salt,0,,,,,,,,0.835,Sb,high,Sb2O3 halogen synergist
+aluminum hydroxide,aluminium trihydroxide,metal_hydroxide,0,,0,0,0,0,0,0,0.346,Al,high,Al(OH)3
+ahp,aluminium hypophosphite,P_inorganic,0,,0.419,,,,,,0.121,Al,medium,Al(H2PO2)3
+cobalt hydroxystannate cosn6 + chicken feather protein + mmt,cobalt hydroxystannate cosn6 + chicken feather protein + mmt,clay_ldh,,,,,,,,,,,none,acronym or system; chemistry unresolved
+bc-m,bc-m,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+melamine phosphate,melamine phosphate,P_N,0,,0.138,0.375,,,,,,,high,C3H6N6.H3PO4
+aluminium phosphinate,aluminium diethylphosphinate,P_organic,0,,0.238,,,,,,0.069,Al,high,Al(Et2PO2)3
+fr cros 490,fr cros 490,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+eg-based water-soluble flame retardant coating,eg-based water-soluble flame retardant coating,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+tpc,tpc,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+zdp,zdp,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+melamine salt of montmorillonite phosphate,melamine salt of montmorillonite phosphate,clay_ldh,,,,,,,,,,,none,acronym or system; chemistry unresolved
+nickel phytate,nickel phytate,bio_based,,,,,,,,,,,none,acronym or system; chemistry unresolved
+rdp resorcinol bis,resorcinol bis(diphenyl phosphate),P_organic,0,,0.108,,,,,,,,medium,C30H24O8P2 oligomer
+mela,melamine,N,0,Nc1nc(N)nc(N)n1,,0.667,,,,,,,high,C3H6N6
+intumescent combination exolit op 1314,intumescent combination exolit op 1314,intumescent_system,,,,,,,,,,,none,acronym or system; chemistry unresolved
+activated carbon,activated carbon,carbon,,,,,,,,,,,none,acronym or system; chemistry unresolved
+roflam f6,roflam f6,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+il169phosphonium diethyl-phosphate),il169phosphonium diethyl-phosphate),P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+app + lignin,app + lignin,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+mgalzn-ldh-pmoa,mgalzn-ldh-pmoa,clay_ldh,,,,,,,,,,,none,acronym or system; chemistry unresolved
+urea,urea,N,0,NC(N)=O,0,0.466,0,0,0,0,0,,high,CH4N2O gas source
+resveratrol,resveratrol,bio_based,0,Oc1ccc(C=Cc2cc(O)cc(O)c2)cc1,0,0,0,0,0,0,0,,high,C14H12O3
+dcpcd,dcpcd,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+pentaerythritol phosphate,pentaerythritol phosphate (PEPA),P_organic,0,OCC12COP(=O)(OC1)OC2,0.172,0,0,0,0,0,0,,medium,C5H9O5P bicyclic phosphate
+go/mg-al ldh hybrid,go/mg-al ldh hybrid,clay_ldh,,,,,,,,,,,none,acronym or system; chemistry unresolved
+dopo-kh560 modified expandable graphite,dopo-kh560 modified expandable graphite,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+liquid glass,sodium silicate,silicon,0,,0,0,0.23,0,0,0,0.377,Na,low,Na2SiO3 assumed
+hnts@a-171,hnts@a-171,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+fly ash superpozz titanate kr-12-treated,fly ash superpozz titanate kr-12-treated,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+bddp tetrabromobisphenol a bis ether,"tetrabromobisphenol A bis(2,3-dibromopropyl ether)",halogen,0,,0,0,0,0,0,0.677,0,,medium,C21H20Br8O2
+p-si,p-si,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+pedscd,pedscd,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+budit 669,budit 669,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+aluminium trihydrate,aluminium trihydroxide,metal_hydroxide,0,,0,0,0,0,0,0,0.346,Al,high,Al(OH)3
+hfr binder,hfr binder,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+alpi aluminium diethylphosphinate,aluminium diethylphosphinate,P_organic,0,,0.238,,,,,,0.069,Al,high,Al(Et2PO2)3
+spms,spms,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+dba-ph,dba-ph,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+dpb,dpb,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+phosphorus fr,phosphorus fr,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+ommt,ommt,clay_ldh,,,,,,,,,,,none,acronym or system; chemistry unresolved
+phenolic resin hollow microspheres,phenolic resin hollow microspheres,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+nano-zro2,zirconium dioxide,metal_oxide_salt,0,,,,,,,,0.74,Zr,high,metal oxide
+boron trioxide,boron trioxide,borate,0,,0,0,0,0.31,0,0,0,,high,B2O3
+ferrocene,ferrocene,metal_oxide_salt,0,,0,0,0,0,0,0,0.3,Fe,high,Fe(C5H5)2 smoke suppressant
+mw-mh2 micro-whiskers),mw-mh2 micro-whiskers),other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+psf,psf,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+expandable graphite 3772,expandable graphite,carbon,0,,,,,,,,,,medium,intercalated graphite; S from acid residue
+hollow glass beads,hollow glass beads,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+abandoned 3a molecular sieve powder,abandoned 3a molecular sieve powder,metal_oxide_salt,,,,,,,,,,,none,acronym or system; chemistry unresolved
+app:eg 1:3 intumescent flame retardant,app:eg 1:3 intumescent flame retardant,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+aluminium tungstate,aluminium tungstate,metal_oxide_salt,0,,0,0,0,0,0,0,0.761,"W,Al",medium,Al2(WO4)3
+lactic casein 720,lactic casein 720,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+app@cnf ball-milled hybrid,app@cnf ball-milled hybrid,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+cmss,cmss,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+d-fu,d-fu,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+bpf resin,bpf resin,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+spdp-ptms@ath,spdp-ptms@ath,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+melamine formaldehyde resin,melamine formaldehyde resin,N,,,,,,,,,,,none,acronym or system; chemistry unresolved
+uio66-nh2/halloysite nanotube hybrid,uio66-nh2/halloysite nanotube hybrid,clay_ldh,,,,,,,,,,,none,acronym or system; chemistry unresolved
+clay,clay,clay_ldh,0,,,,,,,,,,none,unspecified
+dcsa-cu,dcsa-cu,metal_oxide_salt,,,,,,,,,,,none,acronym or system; chemistry unresolved
+zif-67,zeolitic imidazolate framework ZIF-67,other,0,,0,0.253,0,0,0,0,0.267,Co,medium,Co(C4H5N2)2
+microencapsulated sepiolite,microencapsulated sepiolite,clay_ldh,,,,,,,,,,,none,acronym or system; chemistry unresolved
+phvposs,phvposs,silicon,,,,,,,,,,,none,acronym or system; chemistry unresolved
+potassium carbonate k2co3,potassium carbonate,metal_oxide_salt,0,,0,0,0,0,0,0,0.566,K,high,K2CO3
+zinc borate zb 467,zinc borate 4ZnO.6B2O3.7H2O,borate,0,,,,,0.149,,,0.301,Zn,medium,ZB-467 formula
+mxene,mxene,carbon,,,,,,,,,,,none,acronym or system; chemistry unresolved
+s4sq-18,s4sq-18,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+dpbsi,dpbsi,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+arg-app,arg-app,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+hnts@nico-ldh,hnts@nico-ldh,clay_ldh,,,,,,,,,,,none,acronym or system; chemistry unresolved
+avd,avd,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+fr69,fr69,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+mno2@chs@sa@ni hybrid,MnO2/chitosan/alginate/Ni hybrid,other,0,,,,,,,,,,none,composite; unclear
+tdb,tdb,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+si-mcapp,si-mcapp,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+dpa-sin,dpa-sin,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+app/per 2/1 intumescent fr,app/per 2/1 intumescent fr,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+mb-fr,mb-fr,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+hexaphenoxycyclotriphosphazene hpctp,hexaphenoxycyclotriphosphazene,P_N,0,,0.134,0.061,0,0,0,0,0,,high,C36H30N3O6P3
+teopp),teopp),other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+nano-cuo,copper(II) oxide,metal_oxide_salt,0,,,,,,,,0.799,Cu,high,metal oxide
+bmc,bmc,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+iron poly chelate,iron poly chelate,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+steel slag/dimelamine pyrophosphate,steel slag/dimelamine pyrophosphate,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+15 wt% soybean oil-based polyol + 20 wt% app,15 wt% soybean oil-based polyol + 20 wt% app,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+ma-bppo + tep,ma-bppo + tep,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+zinc stannate,zinc stannate,metal_oxide_salt,0,,0,0,0,0,0,0,0.791,"Zn,Sn",high,ZnSnO3
+fr3,fr3,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+mbdac-dopo,mbdac-dopo,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+lmp grafted with diethylethyl) phosphonate,lmp grafted with diethylethyl) phosphonate,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+dmpp,dimethyl propylphosphonate,P_organic,0,CCCP(=O)(OC)OC,0.204,0,0,0,0,0,0,,medium,C5H13O3P
+nh4h2po4 ph 10.4-10.5,ammonium dihydrogen phosphate,P_inorganic,0,,0.269,0.122,0,0,0,0,0,,high,NH4H2PO4
+tahht-dopo-ddpo,tahht-dopo-ddpo,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+ammonium dihydrogen phosphate,ammonium dihydrogen phosphate,P_inorganic,0,,0.269,0.122,0,0,0,0,0,,high,NH4H2PO4
+ellagic acid,ellagic acid,bio_based,0,Oc1cc2c3c(c1O)oc(=O)c1cc(O)c(O)c(oc2=O)c13,0,0,0,0,0,0,0,,medium,C14H6O8
+polyethylenepolyamine,polyethylenepolyamine,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+fr 4,fr 4,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+calcium phosphinate,calcium hypophosphite,P_inorganic,0,,0.364,,,,,,0.236,Ca,low,Ca(H2PO2)2 assumed
+pi,pi,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+cp-6b,cp-6b,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+s-mgal,s-mgal,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+polyethylenimine,polyethylenimine,N,0,,0,0.325,0,0,0,0,0,,medium,(C2H5N)n
+cationic starch,cationic starch,bio_based,,,,,,,,,,,none,acronym or system; chemistry unresolved
+daso,daso,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+s4sq-8,s4sq-8,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+beta-cyclodextrin,beta-cyclodextrin,bio_based,0,,0,0,0,0,0,0,0,,high,C42H70O35 char source
+phytic acid-triethylenetetramine,phytic acid triethylenetetramine salt,bio_based,0,,,,,,,,,,low,P-N bio-based salt; ratio unknown
+fumed silica,fumed silica,silicon,0,,,,0.467,,,,,,medium,SiO2
+phosphazene oligomer fp100,phosphazene oligomer fp100,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+kssbenzenesulfonate),kssbenzenesulfonate),other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+cme,cme,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+boehmite alo,boehmite,metal_hydroxide,0,,0,0,0,0,0,0,0.45,Al,medium,AlOOH
+mzrp,mzrp,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+dmh polyphosphoramide,dmh polyphosphoramide,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+triazine charring-foaming agent,triazine charring-foaming agent,N,,,,,,,,,,,none,acronym or system; chemistry unresolved
+ppfbs,ppfbs,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+expandable graphite e300,expandable graphite,carbon,0,,,,,,,,,,medium,intercalated graphite; S from acid residue
+ao + bh + eg,ao + bh + eg,carbon,,,,,,,,,,,none,acronym or system; chemistry unresolved
+eg + dmmp + functionalized go,eg + dmmp + functionalized go,carbon,,,,,,,,,,,none,acronym or system; chemistry unresolved
+ceppg/mp/eg,ceppg/mp/eg,carbon,,,,,,,,,,,none,acronym or system; chemistry unresolved
+pfapp + lignin-poh,pfapp + lignin-poh,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+exolit op 935 + eg 290,exolit op935 + expandable graphite,other,0,,,,,,,,,,none,blend; ratio unknown
+dopo–go,dopo–go,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+phosphorylated wheat starch ws-k cleaned,phosphorylated wheat starch ws-k cleaned,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+phosphorylated wheat starch ws-o cleaned,phosphorylated wheat starch ws-o cleaned,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+lmp phosphorylated with diethyl chlorophosphate,lmp phosphorylated with diethyl chlorophosphate,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+magnesium hydroxide mg2,magnesium hydroxide,metal_hydroxide,0,,0,0,0,0,0,0,0.417,Mg,medium,Mg(OH)2; grade code unclear
+palonot p2,palonot p2,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+mhz2),mhz2),other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+mgalzn-ldh-co3,mgalzn-ldh-co3,clay_ldh,,,,,,,,,,,none,acronym or system; chemistry unresolved
+oddpo,oddpo,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+scp-vsil,scp-vsil,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+tda,tda,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+calcium bis cadmp,calcium bis cadmp,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+lmg3,lmg3,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+expandable graphite eg290,expandable graphite,carbon,0,,,,,,,,,,medium,intercalated graphite; S from acid residue
+app201,ammonium polyphosphate,P_inorganic,0,,0.319,0.144,,,,,,,high,(NH4PO3)n
+pepe-modified mo@mh,pepe-modified mo@mh,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+salen s1-zn complex,salen s1-zn complex,metal_oxide_salt,,,,,,,,,,,none,acronym or system; chemistry unresolved
+dihydroxysalen s2-ni complex,dihydroxysalen s2-ni complex,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+borated gallic acid derivative,borated gallic acid derivative,borate,,,,,,,,,,,none,acronym or system; chemistry unresolved
+al3 in surface film,al3 in surface film,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+silica-gel microencapsulated app,silica-gel microencapsulated app,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+al-mg hydroxycarbonate lh30,al-mg hydroxycarbonate lh30,carbon,,,,,,,,,,,none,acronym or system; chemistry unresolved
+al-mg hydroxycarbonate lh5,al-mg hydroxycarbonate lh5,carbon,,,,,,,,,,,none,acronym or system; chemistry unresolved
+layered ceo2,cerium dioxide,metal_oxide_salt,0,,,,,,,,0.814,Ce,high,metal oxide
+tgic,triglycidyl isocyanurate,N,1,O=C1N(CC2CO2)C(=O)N(CC2CO2)C(=O)N1CC1CO1,0,0.141,0,0,0,0,0,,high,epoxy crosslinker
+dcsa-na,dcsa-na,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+melamine-phytic acid supramolecular assembly,melamine-phytic acid supramolecular assembly,bio_based,,,,,,,,,,,none,acronym or system; chemistry unresolved
+zif-67@mxene hybrid,zif-67@mxene hybrid,carbon,,,,,,,,,,,none,acronym or system; chemistry unresolved
+tannin phosphate carbamate,tannin phosphate carbamate,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+no3-ldh,no3-ldh,clay_ldh,,,,,,,,,,,none,acronym or system; chemistry unresolved
+ma-ifr,ma-ifr,intumescent_system,,,,,,,,,,,none,acronym or system; chemistry unresolved
+cps/co cobalt-loaded peanut-shell carbon pyrolysed 700 c,cps/co cobalt-loaded peanut-shell carbon pyrolysed 700 c,carbon,,,,,,,,,,,none,acronym or system; chemistry unresolved
+ammonium phytate,ammonium phytate,bio_based,0,,,,,,,,,,low,ratio unknown
+ppso),ppso),other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+nsapp-3,nsapp-3,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+g-c3n4/pazn,g-c3n4/pazn,metal_oxide_salt,,,,,,,,,,,none,acronym or system; chemistry unresolved
+app-cu@pda,app-cu@pda,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+la-btc,la-btc,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+phosphorus-containing polysulfone arpn2,phosphorus-containing polysulfone arpn2,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+lig-p,lig-p,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+mcm-41,MCM-41 mesoporous silica,silicon,0,,,,0.467,,,,,,medium,SiO2 framework
+[bmim]pf6-functionalized ints,[bmim]pf6-functionalized ints,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+imogolite nanotubes,imogolite,clay_ldh,0,,,,0.142,,,,0.273,Al,medium,Al2SiO3(OH)4
+tetrabutyl titanate,tetrabutyl titanate,metal_oxide_salt,0,CCCCO[Ti](OCCCC)(OCCCC)OCCCC,0,0,0,0,0,0,0.141,Ti,high,Ti(OBu)4
+ldh3,ldh3,clay_ldh,,,,,,,,,,,none,acronym or system; chemistry unresolved
+zif-8,zeolitic imidazolate framework ZIF-8,other,0,,0,0.246,0,0,0,0,0.287,Zn,medium,Zn(C4H5N2)2
+fa-mgo,fa-mgo,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+dopo-mmt,dopo-mmt,clay_ldh,,,,,,,,,,,none,acronym or system; chemistry unresolved
+copper-boron preservative cbp,copper-boron preservative cbp,borate,,,,,,,,,,,none,acronym or system; chemistry unresolved
+go-hccp,go-hccp,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+zinc borate zn3b6o12.3.5h2o,zinc borate 2ZnO.3B2O3.3.5H2O,borate,0,,,,,0.0746,,,0.301,Zn,high,Firebrake ZB type
+nial-ldh,nial-ldh,clay_ldh,,,,,,,,,,,none,acronym or system; chemistry unresolved
+app@cncsi-da,app@cncsi-da,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+cobalt phosphomolybdate,cobalt phosphomolybdate,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+baaep,baaep,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+hfr 693,hfr 693,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+kaolinite-urea intercalation complex,kaolinite-urea complex,clay_ldh,0,,,,,,,,,,low,clay intercalate; ratio unknown
+diatoms,diatomaceous earth,silicon,0,,,,0.467,,,,,,medium,mostly SiO2
+pabg@zn,pabg@zn,metal_oxide_salt,,,,,,,,,,,none,acronym or system; chemistry unresolved
+diammonium phosphate + urea,diammonium phosphate + urea,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+cr2o3,chromium(III) oxide,metal_oxide_salt,0,,,,,,,,0.684,Cr,high,metal oxide
+bcpps,bcpps,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+chlorinated paraffin-70,chlorinated paraffin (70% Cl),halogen,0,,0,0,0,0,0,0.7,0,,high,named by Cl content
+sncl2,tin(II) chloride,metal_oxide_salt,0,,0,0,0,0,0,0.374,0.626,Sn,high,SnCl2
+"expandable graphite, ultrasound irradiation",expandable graphite,carbon,0,,,,,,,,,,medium,intercalated graphite; S from acid residue
+math,math,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+mf3.5,mf3.5,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+dm/pei/mwcnt-3,dm/pei/mwcnt-3,N,,,,,,,,,,,none,acronym or system; chemistry unresolved
+silicone rubber,polydimethylsiloxane,silicon,0,,0,0,0.379,0,0,0,0,,medium,(C2H6OSi)n
+ts,ts,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+dopo-dds,dopo-dds,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+mg-al ldh2,mg-al ldh2,clay_ldh,,,,,,,,,,,none,acronym or system; chemistry unresolved
+mg-al ldh6,mg-al ldh6,clay_ldh,,,,,,,,,,,none,acronym or system; chemistry unresolved
+pu-microencapsulated app,pu-microencapsulated app,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+n-p fire-resistant adhesive,n-p fire-resistant adhesive,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+mpcsn,mpcsn,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+wmaapp,wmaapp,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+w-uio66-nh2,w-uio66-nh2,metal_oxide_salt,,,,,,,,,,,none,acronym or system; chemistry unresolved
+zn-mof,zn-mof,metal_oxide_salt,,,,,,,,,,,none,acronym or system; chemistry unresolved
+bhappo,bhappo,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+melamine molybdate mamoo4,melamine molybdate mamoo4,N,,,,,,,,,,,none,acronym or system; chemistry unresolved
+montmorillonite ah20,montmorillonite ah20,clay_ldh,,,,,,,,,,,none,acronym or system; chemistry unresolved
+"1-butyl-2,3-dimethylimidazolium tetrafluoroborate","1-butyl-2,3-dimethylimidazolium tetrafluoroborate",other,0,,0,0.117,0,0.045,0,0.317,0,,high,ionic liquid C9H17BF4N2
+chitosan tungstate,chitosan tungstate,bio_based,,,,,,,,,,,none,acronym or system; chemistry unresolved
+mil-125,mil-125,metal_oxide_salt,,,,,,,,,,,none,acronym or system; chemistry unresolved
+ethylenediamine-modified app,ethylenediamine-modified app,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+aluminum diethyl phosphinate,aluminium diethylphosphinate,P_organic,0,,0.238,,,,,,0.069,Al,high,Al(Et2PO2)3
+mg-al-h2po4 ldh,mg-al-h2po4 ldh,clay_ldh,,,,,,,,,,,none,acronym or system; chemistry unresolved
+"expandable graphite, ultrasound-irradiation route",expandable graphite,carbon,0,,,,,,,,,,medium,intercalated graphite; S from acid residue
+k-hapcp,k-hapcp,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+vinyl poss,vinyl poss,silicon,,,,,,,,,,,none,acronym or system; chemistry unresolved
+zeolite 4a,zeolite 4A,clay_ldh,0,,,,,,,,,,low,sodium aluminosilicate
+polydopamine-modified multilayer graphene,polydopamine-modified multilayer graphene,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+pentaerythritol phosphate melamine salt,pentaerythritol phosphate melamine salt,P_N,0,,0.101,0.274,,,,,,,medium,PEPA + melamine 1:1
+ao,ao,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+eg only,expandable graphite,carbon,0,,,,,,,,,,medium,intercalated graphite; S from acid residue
+eg + dmmp,eg + dmmp,carbon,,,,,,,,,,,none,acronym or system; chemistry unresolved
+microencapsulated eg + microencapsulated app,microencapsulated eg + microencapsulated app,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+fu-dopo + tep,fu-dopo + tep,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+ba-bppo,ba-bppo,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+triphenyl phosphate,triphenyl phosphate,P_organic,0,O=P(Oc1ccccc1)(Oc1ccccc1)Oc1ccccc1,0.095,0,0,0,0,0,0,,high,C18H15O4P
+ba-bppo + tep,ba-bppo + tep,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+"depolymerized lignin polyol ol 30/70-b, 100% of polyol","depolymerized lignin polyol ol 30/70-b, 100% of polyol",bio_based,,,,,,,,,,,none,acronym or system; chemistry unresolved
+fa-bp + tep,fa-bp + tep,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+fu-dopo,fu-dopo,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+ifr + phytic acid-functionalized go,ifr + phytic acid-functionalized go,carbon,,,,,,,,,,,none,acronym or system; chemistry unresolved
+expandable graphite + dmmp,expandable graphite + dmmp,carbon,,,,,,,,,,,none,acronym or system; chemistry unresolved
+cppa polyol + expandable graphite,cppa polyol + expandable graphite,carbon,,,,,,,,,,,none,acronym or system; chemistry unresolved
+diethyl ethylphosphonate,diethyl ethylphosphonate,P_organic,0,CCOP(=O)(CC)OCC,0.186,0,0,0,0,0,0,,high,C6H15O3P
+tcpp + dmmp + copper ferrite,TCPP + DMMP + copper ferrite,other,0,,,,,,,,,,none,blend
+tbpbp + mof/mwcnts,tbpbp + mof/mwcnts,metal_oxide_salt,,,,,,,,,,,none,acronym or system; chemistry unresolved
+frp + mapp + organically modified ldh,frp + mapp + organically modified ldh,clay_ldh,,,,,,,,,,,none,acronym or system; chemistry unresolved
+lignin-based polyol,lignin-based polyol,bio_based,,,,,,,,,,,none,acronym or system; chemistry unresolved
+zeolitic imidazolate framework zif-8,zeolitic imidazolate framework ZIF-8,other,0,,0,0.246,0,0,0,0,0.287,Zn,medium,Zn(C4H5N2)2
+adpo2,adpo2,other,,,,,,,,,,,none,acronym or system; chemistry unresolved
+melamine + roflam b7 + roflam plo,melamine + roflam b7 + roflam plo,N,,,,,,,,,,,none,acronym or system; chemistry unresolved
+melamine + expanded graphite eg 290,melamine + expandable graphite,intumescent_system,0,,,,,,,,,,none,blend; ratio unknown
+polyacrylamide/mxene hydrogel coating,polyacrylamide/mxene hydrogel coating,carbon,,,,,,,,,,,none,acronym or system; chemistry unresolved
+phosphate frs + zinc borate + tio2,phosphate frs + zinc borate + tio2,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+phosphate frs + app + mwnt,phosphate frs + app + mwnt,P_organic,,,,,,,,,,,none,acronym or system; chemistry unresolved
+ifr,intumescent flame retardant (generic APP/PER/MEL),intumescent_system,,,0.2,0.14,,,,,,,low,Generic APP-based intumescent; typical composition assumed
+ammonium polyphosphate,ammonium polyphosphate,P_inorganic,0,,0.319,0.144,0.0,0.0,0.0,0,0,,high,(NH4PO3)n repeat unit
+mh,magnesium hydroxide,metal_hydroxide,0,[OH-].[OH-].[Mg+2],0.0,0.0,0.0,0.0,0.0,0,0.417,Mg,high,
+tcpp,tris(2-chloroisopropyl) phosphate,P_organic,0,CC(CCl)OP(=O)(OC(C)CCl)OC(C)CCl,0.095,0.0,0.0,0.0,0.0,0.325,0,,high,Chlorinated phosphate ester
+aluminium diethylphosphinate,aluminium tris(diethylphosphinate),P_organic,0,CCP(CC)(=O)[O-].CCP(CC)(=O)[O-].CCP(CC)(=O)[O-].[Al+3],0.238,0.0,0.0,0.0,0.0,0,0.069,Al,high,"AlPi, Exolit OP series"
+al3,aluminium trihydroxide,metal_hydroxide,0,[OH-].[OH-].[OH-].[Al+3],0.0,0.0,0.0,0.0,0.0,0,0.346,Al,medium,Likely Al(OH)3 with parentheses stripped
+microencapsulated red phosphorus,microencapsulated red phosphorus,P_inorganic,0,,0.8,,,,,,,,low,Red P with polymer or resin shell
+bdp,bisphenol A bis(diphenyl phosphate),P_organic,0,CC(C)(c1ccc(OP(=O)(Oc2ccccc2)Oc2ccccc2)cc1)c1ccc(OP(=O)(Oc2ccccc2)Oc2ccccc2)cc1,0.089,0.0,0.0,0.0,0.0,0,0,,high,"Oligomeric aryl phosphate, monomer used"
+exolit op1230,aluminium tris(diethylphosphinate),P_organic,0,CCP(CC)(=O)[O-].CCP(CC)(=O)[O-].CCP(CC)(=O)[O-].[Al+3],0.238,0.0,0.0,0.0,0.0,0,0.069,Al,high,Clariant trade name; AlPi
+melamine cyanurate,melamine cyanurate,N,0,NC1=NC(N)=NC(N)=N1.O=C1NC(=O)NC(=O)N1,0.0,0.494,0.0,0.0,0.0,0,0,,high,1:1 melamine-cyanuric acid complex
+chitosan,chitosan,bio_based,0,,0.0,0.087,0.0,0.0,0.0,0,0,,medium,Fully deacetylated repeat unit
+piperazine pyrophosphate,piperazine pyrophosphate,P_N,0,,0.235,0.106,0.0,0.0,0.0,0,0,,medium,Piperazine with pyrophosphoric acid 1:1
+mg/al/fe-co3 ldh,Mg/Al/Fe carbonate layered double hydroxide,clay_ldh,0,,0.0,0.0,0.0,0.0,0.0,0,0.392,"Mg,Al,Fe",low,Assumed M2+/M3+ ratio 3:1
+dper,dipentaerythritol,other,0,OCC(CO)(CO)COCC(CO)(CO)CO,0.0,0.0,0.0,0.0,0.0,0,0,,medium,Carbon source in intumescent systems
+poly,poly,other,,,,,,,,,,,none,Ambiguous fragment
+decabromodiphenyl ethane,"1,2-bis(pentabromophenyl)ethane",halogen,0,,0.0,0.0,0.0,0.0,0.0,0.823,0,,high,DBDPE
+fr2,fr2,other,,,,,,,,,,,none,Unidentifiable code
+egt,expandable graphite (treated),carbon,0,,,,,,,,,,low,Likely expandable graphite variant; S content unknown
+p-ppd-ph,p-ppd-ph,P_N,,,,,,,,,,,none,Unidentified P-N acronym
+hexabromocyclododecane hbcd,hexabromocyclododecane,halogen,0,BrC1CCC(Br)C(Br)CCC(Br)C(Br)CCC1Br,0.0,0.0,0.0,0.0,0.0,0.747,0,,high,HBCD
+triazine charring agent,triazine-based charring agent,N,0,,,0.3,,,,,,,low,Typical triazine polymer CFA nitrogen content
+dbdpe,"1,2-bis(pentabromophenyl)ethane",halogen,0,,0.0,0.0,0.0,0.0,0.0,0.823,0,,high,DBDPE
+pepa,"1-oxo-4-hydroxymethyl-2,6,7-trioxa-1-phosphabicyclo[2.2.2]octane",P_organic,1,OCC12COP(=O)(OC1)OC2,0.172,0.0,0.0,0.0,0.0,0,0,,high,Cage phosphate with hydroxyl
+app/mel/lignosulfonate ifr,APP/melamine/lignosulfonate intumescent system,intumescent_system,0,,0.2,0.2,,,,,,,low,Composition ratio unknown
+ppap,ppap,P_N,,,,,,,,,,,none,Unidentified acronym
+penta,pentaerythritol,other,0,OCC(CO)(CO)CO,0.0,0.0,0.0,0.0,0.0,0,0,,medium,Carbon source in intumescent systems
+hexaphenoxycyclotriphosphazene,hexaphenoxycyclotriphosphazene,P_N,0,c1ccccc1OP1(Oc2ccccc2)=NP(Oc2ccccc2)(Oc2ccccc2)=NP(Oc2ccccc2)(Oc2ccccc2)=N1,0.134,0.061,0.0,0.0,0.0,0,0,,high,HPCTP
+nio,nickel(II) oxide,metal_oxide_salt,0,O=[Ni],0.0,0.0,0.0,0.0,0.0,0,0.786,Ni,high,
+mgalfe-ldh,Mg/Al/Fe layered double hydroxide,clay_ldh,0,,0.0,0.0,0.0,0.0,0.0,0,0.392,"Mg,Al,Fe",low,Assumed composition
+mg2 magnifin h10a,magnesium hydroxide,metal_hydroxide,0,[OH-].[OH-].[Mg+2],0.0,0.0,0.0,0.0,0.0,0,0.417,Mg,medium,Magnifin H10A; coating ignored
+app + sepiolite,ammonium polyphosphate + sepiolite,P_inorganic,0,,0.28,0.13,,,,,,,low,Blend ratio unknown
+hacp,hexa(aminophenoxy)cyclotriphosphazene,P_N,1,,0.119,0.161,0.0,0.0,0.0,0,0,,low,Inferred from name; amino reactive groups
+bc phosphorus-containing composition,bc phosphorus-containing composition,P_organic,,,,,,,,,,,none,Unidentified
+sulfamic acid-intercalated mgal-ldh,sulfamate-intercalated Mg-Al LDH,clay_ldh,0,,0.0,0.045,0.0,0.0,0.104,0,0.244,"Mg,Al",low,Assumed Mg2Al stoichiometry
+k-app,k-app,P_inorganic,,,,,,,,,,,none,Ambiguous prefix
+mcapp,microencapsulated ammonium polyphosphate,P_inorganic,0,,0.28,0.17,,,,,,,low,Melamine-resin shell estimated
+decabromodiphenyloxide dbdpo,decabromodiphenyl oxide,halogen,0,,0.0,0.0,0.0,0.0,0.0,0.833,0,,high,DBDPO
+aluminum diisobutylphosphinate,aluminium tris(diisobutylphosphinate),P_organic,0,,0.166,0.0,0.0,0.0,0.0,0,0.048,Al,high,
+dap@sio2,diammonium phosphate on silica,P_N,0,,0.15,0.13,0.15,,,,,,low,Core-shell ratio assumed
+ddp,ddp,other,,,,,,,,,,,none,Ambiguous acronym
+fly ash superpozz untreated,coal fly ash,other,0,,,,0.22,,,,0.2,"Al,Fe,Ca",low,Typical class F oxide composition
+mbc,mbc,other,,,,,,,,,,,none,Unidentified
+spdscd,spdscd,other,,,,,,,,,,,none,Unidentified
+tahht-dopo,triacryloylhexahydrotriazine-DOPO adduct,P_N,,,0.103,0.047,0.0,0.0,0.0,0,0,,low,Inferred from name components
+th-ifr,th-ifr,intumescent_system,,,,,,,,,,,none,Unidentified
+melamine pyrophosphate,melamine pyrophosphate,P_N,0,,0.144,0.391,0.0,0.0,0.0,0,0,,medium,Two melamine per pyrophosphoric acid
+ahpp,ahpp,P_inorganic,,,,,,,,,,,none,Unidentified
+g-c3n4@fe3o4,graphitic carbon nitride on Fe3O4,carbon,0,,,0.3,,,,,0.36,Fe,low,Assumed 1:1 composition
+pcs,pcs,other,,,,,,,,,,,none,Unidentified
+avoph2[vo]2·5h2o,avoph2[vo]2·5h2o,other,,,,,,,,,,,none,Garbled formula
+al2o3,aluminium oxide,metal_oxide_salt,0,O=[Al]O[Al]=O,0.0,0.0,0.0,0.0,0.0,0,0.529,Al,high,
+simp-cmss,simp-cmss,silicon,,,,,,,,,,,none,Unidentified silsesquioxane-type
+enteromorpha,enteromorpha (green macroalgae),bio_based,0,,,,,,,,,,none,"Biomass, composition variable"
+phosphazene-based fr,phosphazene-based flame retardant,P_N,0,,0.134,0.061,0.0,0.0,0.0,0,0,,low,Assumed aryloxy cyclophosphazene
+cow horn ash particles,cow horn ash,bio_based,0,,,,,,,,,,none,Composition not reasoned
+iron oxide green,iron oxide pigment,metal_oxide_salt,0,,0.0,0.0,0.0,0.0,0.0,0,0.699,Fe,low,Assumed Fe2O3
+triazine,"1,3,5-triazine",N,0,c1ncncn1,0.0,0.518,0.0,0.0,0.0,0,0,,medium,Likely triazine-based charring unit
+mms,mms,other,,,,,,,,,,,none,Unidentified
+hgm@[eooemim][pf6],hollow glass microspheres with ionic liquid,other,0,,,,,,,,,,none,Ratio unknown
+graphite powder,graphite,carbon,0,,0.0,0.0,0.0,0.0,0.0,0,0,,high,
+micro-sized mdh,magnesium hydroxide,metal_hydroxide,0,[OH-].[OH-].[Mg+2],0.0,0.0,0.0,0.0,0.0,0,0.417,Mg,high,
+ea-bppo + tep,ea-bppo + triethyl phosphate,P_organic,,,,,,,,,,,none,"Mixture, acronym unresolved"
+adpo2 + sa,adpo2 + sa,P_organic,,,,,,,,,,,none,Unidentified
+tin tungstate,tin(II) tungstate,metal_oxide_salt,0,,0.0,0.0,0.0,0.0,0.0,0,0.825,"Sn,W",medium,
+ni@sio2-pa,ni@sio2-pa,metal_oxide_salt,,,,,,,,,,,none,Ratios unknown
+alpha-zrp,alpha-zirconium phosphate,clay_ldh,0,,0.206,0.0,0.0,0.0,0.0,0,0.303,Zr,high,Zr(HPO4)2.H2O
+cmss-fe,cmss-fe,silicon,,,,,,,,,,,none,Unidentified
+pani,polyaniline,other,0,,0.0,0.154,0.0,0.0,0.0,0,0,,medium,Repeat unit
+histidine,histidine,bio_based,0,NC(Cc1c[nH]cn1)C(=O)O,0.0,0.271,0.0,0.0,0.0,0,0,,high,Amino acid
+phosphate/urea-grafted bamboo charcoal,phosphate/urea-grafted bamboo charcoal,bio_based,1,,,,,,,,,,none,Grafting level unknown
+hpdal,hpdal,other,,,,,,,,,,,none,Unidentified
+octadecylamine-modified zirconium phosphate,octadecylamine-intercalated zirconium phosphate,clay_ldh,0,,0.112,0.025,0.0,0.0,0.0,0,0.165,Zr,low,Assumed 1:1 intercalation
+pbdoo,pbdoo,other,,,,,,,,,,,none,Unidentified
+pa-tham,phytic acid tris(hydroxymethyl)aminomethane salt,P_N,0,,0.182,0.041,0.0,0.0,0.0,0,0,,low,Assumed 1:3 salt
+siahp,siahp,other,,,,,,,,,,,none,Unidentified
+potassium trimethylsilylbenzenesulfonate,potassium trimethylsilylbenzenesulfonate,silicon,0,C[Si](C)(C)c1ccc(cc1)S(=O)(=O)[O-].[K+],0.0,0.0,0.105,0.0,0.119,0,0.146,K,medium,
+cellulose nanocrystals,cellulose nanocrystals,bio_based,0,,0.0,0.0,0.0,0.0,0.0,0,0,,high,
+rgo-app,reduced graphene oxide / APP hybrid,carbon,0,,0.28,0.13,,,,,,,low,Loading ratio unknown
+dopo-t-sio2,dopo-t-sio2,silicon,,,,,,,,,,,none,Grafting ratio unknown
+brominated epoxy resin,brominated epoxy resin (TBBPA-based),halogen,1,,,,,,,0.5,,,low,Typical high-bromine epoxy oligomer
+phosphorus-containing polyol op,phosphorus-containing polyol (Exolit OP type),P_organic,1,,0.11,,,,,,,,low,Typical OP 550/560 phosphorus content
+rdp,resorcinol bis(diphenyl phosphate),P_organic,0,c1ccc(OP(=O)(Oc2ccccc2)Oc2cccc(OP(=O)(Oc3ccccc3)Oc3ccccc3)c2)cc1,0.108,0.0,0.0,0.0,0.0,0,0,,high,
+ti-ifr,ti-ifr,intumescent_system,,,,,,,,,,,none,Unidentified
+bdd,bdd,other,,,,,,,,,,,none,Unidentified
+bacm,"4,4-methylenebis(cyclohexylamine)",N,1,NC1CCC(CC1)CC1CCC(N)CC1,0.0,0.133,0.0,0.0,0.0,0,0,,low,"Amine hardener, assumed"
+sep,sepiolite,clay_ldh,0,,0.0,0.0,0.26,0.0,0.0,0,0.15,Mg,high,
+spirocyclic pentaerythritol bisphosphorate disphosphoryl-di-prop-2-en-1-amine,spirocyclic pentaerythritol bisphosphate bis(allylamide),P_N,1,C=CCNP1(=O)OCC2(CO1)COP(=O)(NCC=C)OC2,0.183,0.083,0.0,0.0,0.0,0,0,,medium,Allyl groups make it reactive
+nickel citrate,nickel citrate,metal_oxide_salt,0,,0.0,0.0,0.0,0.0,0.0,0,0.318,Ni,medium,
+zno,zinc oxide,metal_oxide_salt,0,O=[Zn],0.0,0.0,0.0,0.0,0.0,0,0.803,Zn,high,
+mufapp,melamine-urea-formaldehyde coated APP,P_inorganic,0,,0.27,0.17,,,,,,,low,Shell fraction assumed
+bps,bps,other,,,,,,,,,,,none,Ambiguous
+ti3c2tx-mpcsn nanohybrid,MXene / polyphosphazene hybrid,carbon,,,,,,,,,,,none,Composition unknown
+aluminium hydroxide ath,aluminium trihydroxide,metal_hydroxide,0,[OH-].[OH-].[OH-].[Al+3],0.0,0.0,0.0,0.0,0.0,0,0.346,Al,high,
+tepp),tepp),other,,,,,,,,,,,none,Garbled
+co322 nanosheets,cobalt carbonate hydroxide nanosheets,metal_oxide_salt,0,,0.0,0.0,0.0,0.0,0.0,0,0.534,Co,low,Formula inferred from stripped parentheses
+geg,geg,carbon,,,,,,,,,,,none,Unidentified
+ppms-grafted carbon black,ppms-grafted carbon black,carbon,,,,,,,,,,,none,Unidentified graft
+iron tailing filler,iron tailing filler,other,0,,,,,,,,,,none,Variable mineral waste
+reactive p@n flame retardant tbpbp,reactive P-N flame retardant,P_N,1,,,,,,,,,,none,Structure unknown
+chitosan-coated phase-change microcapsule,chitosan-coated phase-change microcapsule,bio_based,0,,,,,,,,,,none,Composition unknown
+didopopiperazine),piperazine bis-DOPO,P_N,,,0.12,0.054,0.0,0.0,0.0,0,0,,low,Inferred as DOPO-piperazine-DOPO
+cresyl diphenyl phosphate,cresyl diphenyl phosphate,P_organic,0,,0.091,0.0,0.0,0.0,0.0,0,0,,high,Isomer mixture
+mbdac-bppo,mbdac-bppo,other,,,,,,,,,,,none,Unidentified
+lnp grafted with diethylethyl) phosphonate,lignin nanoparticle grafted with phosphonate,bio_based,1,,,,,,,,,,none,Grafting level unknown
+polysurf hp,polysurf hp,other,,,,,,,,,,,none,Unidentified
+in-situ carbonated hydroxyapatite,carbonated hydroxyapatite,metal_oxide_salt,0,,0.185,0.0,0.0,0.0,0.0,0,0.399,Ca,medium,Carbonate substitution ignored
+ba-dopo,ba-dopo (DOPO adduct),P_organic,,,0.1,,,,,,,,low,"DOPO derivative, estimate"
+carbon microspheres,carbon microspheres,carbon,0,,0.0,0.0,0.0,0.0,0.0,0,0,,medium,
+e20mi fr mat,e20mi fr mat,other,,,,,,,,,,,none,Unidentified
+dmp,dmp,P_organic,,,,,,,,,,,none,Ambiguous
+dopo-diamine,DOPO-based diamine,P_N,1,,0.07,0.06,,,,,,,low,Inferred from name
+diphenyl cresyl phosphate,cresyl diphenyl phosphate,P_organic,0,,0.091,0.0,0.0,0.0,0.0,0,0,,high,Isomer mixture
+dp,dp,other,,,,,,,,,,,none,Ambiguous acronym
+dopo@zif-67,DOPO loaded on ZIF-67,P_organic,0,,,,,,,,,,none,Loading unknown
+s-lamgal,s-lamgal,clay_ldh,,,,,,,,,,,none,Unidentified
+psncfr,psncfr,other,,,,,,,,,,,none,Unidentified
+lig-f,lig-f,bio_based,,,,,,,,,,,none,Unidentified
+dopo-poss,DOPO-functionalized POSS,silicon,,,0.07,,0.12,,,,,,low,Inferred from name
+fa-bis-dopo,furfural bis-DOPO adduct,P_organic,,,0.117,,,,,,,,low,Inferred from name
+polyethyleneimine,polyethyleneimine,N,0,,0.0,0.325,0.0,0.0,0.0,0,0,,high,Repeat unit
+flame retardant,flame retardant (unspecified),other,,,,,,,,,,,none,Generic
+dpdcppo,dpdcppo,P_organic,,,,,,,,,,,none,Unidentified
+mp/per 2:1,melamine phosphate / pentaerythritol 2:1,intumescent_system,0,,0.092,0.25,,,,,,,low,Assumed mass ratio 2:1
+poss-triol,trisilanol POSS,silicon,0,,,,0.22,,,,,,low,R group unknown
+disflamoll tp lxs 51064,disflamoll tp lxs 51064,P_organic,0,,,,,,,,,,none,Composition not reasoned
+"frc aqueous solution2co3 8, h3po4 20 wt%)",aqueous K2CO3/H3PO4 solution,P_inorganic,0,,0.063,,,,,,,,low,20 wt% H3PO4 phosphorus only
+tio2,titanium dioxide,metal_oxide_salt,0,O=[Ti]=O,0.0,0.0,0.0,0.0,0.0,0,0.599,Ti,high,
+app:triazine 4:1,APP + triazine charring agent 4:1,intumescent_system,0,,0.255,0.15,,,,,,,low,Assumed 4:1 mass ratio
+lppz oligomer),lppz oligomer,P_N,,,,,,,,,,,none,Unidentified
+pumapp,polyurethane-melamine microencapsulated APP,P_inorganic,0,,0.27,0.17,,,,,,,low,Shell fraction assumed
+dbdpo,decabromodiphenyl oxide,halogen,0,,0.0,0.0,0.0,0.0,0.0,0.833,0,,high,
+cyclic phosphonate addforce ct 901,cyclic phosphonate ester (Addforce CT 901),P_organic,0,,0.21,,,,,,,,low,Typical cyclic phosphonate ester
+si-containing tung oil polyol,Si-containing tung oil polyol,bio_based,1,,,,,,,,,,none,Si content unknown
+dmi-dopo + tep,dmi-dopo + triethyl phosphate,P_organic,,,,,,,,,,,none,Mixture ratio unknown
+expandable graphite + app,expandable graphite + APP,intumescent_system,0,,0.16,0.07,,,,,,,low,Assumed 1:1 blend
+exolit op 935 + app,aluminium diethylphosphinate + APP,P_inorganic,0,,0.28,0.07,,,,,0.035,Al,low,Assumed 1:1 blend
+kf commercial sulfur-based fr,kf commercial sulfur-based fr,other,,,,,,,,,,,none,Unidentified
+mos2 nanosheets,molybdenum disulfide,other,0,S=[Mo]=S,0.0,0.0,0.0,0.0,0.401,0,0.599,Mo,high,
+phosphorylated wheat starch ws-e uncleaned,phosphorylated wheat starch,bio_based,1,,,,,,,,,,none,Degree of substitution unknown
+lnp phosphorylated with diethyl chlorophosphate,phosphorylated lignin nanoparticles,bio_based,1,,,,,,,,,,none,Degree unknown
+magnesium chloride hydrate mgcl2·6h2o,magnesium chloride hexahydrate,metal_oxide_salt,0,,0.0,0.0,0.0,0.0,0.0,0.349,0.12,Mg,high,
+palonot p4,palonot p4,other,,,,,,,,,,,none,Unidentified trade name
+zr-pa,zr-pa,metal_oxide_salt,,,,,,,,,,,none,Unidentified
+depa-al,aluminium diethylphosphinate,P_organic,0,,0.238,0.0,0.0,0.0,0.0,0,0.069,Al,medium,Inferred from name
+sp10,sp10,other,,,,,,,,,,,none,Unidentified
+dopo-vsil,DOPO-vinylsilane adduct,P_organic,1,,0.075,,0.07,,,,,,low,Inferred from name
+bp-deta,bp-deta,P_N,,,,,,,,,,,none,Unidentified
+aluminum tris aldmp,aluminum tris aldmp,P_organic,0,,,,,,,,,,none,Garbled
+lmg2,lmg2,metal_hydroxide,,,,,,,,,,,none,Unidentified
+nofia ol1000,oligomeric phosphonate (Nofia OL1000),P_organic,0,,0.105,,,,,,,,medium,Commercial oligomeric phosphonate
+hotca,hotca,other,,,,,,,,,,,none,Unidentified
+salen s1,"salen (N,N-bis(salicylidene)ethylenediamine)",N,0,Oc1ccccc1C=NCCN=Cc1ccccc1O,0.0,0.104,0.0,0.0,0.0,0,0,,medium,Inferred
+dihydroxysalen s2,dihydroxy salen,N,0,Oc1ccc(C=NCCN=Cc2ccc(O)cc2O)c(O)c1,0.0,0.093,0.0,0.0,0.0,0,0,,medium,Inferred
+dihydroxysalen s2-zn complex,dihydroxy salen zinc complex,metal_oxide_salt,0,,0.0,0.077,0.0,0.0,0.0,0,0.18,Zn,medium,Inferred
+borated ellagic acid derivative,borated ellagic acid derivative,bio_based,,,,,,,,,,,none,Boron content unknown
+2so4 core impregnation,2so4 core impregnation,other,,,,,,,,,,,none,Garbled
+lh5/ac hybrid pigment,lh5/ac hybrid pigment,clay_ldh,,,,,,,,,,,none,Unidentified
+lh30/ac hybrid pigment,lh30/ac hybrid pigment,clay_ldh,,,,,,,,,,,none,Unidentified
+particulate ceo2,cerium dioxide,metal_oxide_salt,0,O=[Ce]=O,0.0,0.0,0.0,0.0,0.0,0,0.814,Ce,high,
+aluminum 2-carboxyethylphenylhypophosphite,aluminium 2-carboxyethyl(phenyl)phosphinate,P_organic,0,,0.139,0.0,0.0,0.0,0.0,0,0.04,Al,medium,
+psqsilsesquioxane),psqsilsesquioxane),silicon,,,,,,,,,,,none,Garbled
+zhs/go nanohybrid,zinc hydroxystannate / graphene oxide,metal_oxide_salt,0,,,,,,,,,,none,Ratio unknown
+cahpi20,cahpi20,other,,,,,,,,,,,none,Unidentified
+kappaflam t4/729,kappaflam t4/729,other,,,,,,,,,,,none,Unidentified trade name
+xylan phosphate carbamate,xylan phosphate carbamate,bio_based,1,,,,,,,,,,none,Degree of substitution unknown
+pc-ldh,pc-ldh,clay_ldh,,,,,,,,,,,none,Unidentified
+ma/ifr,ma/ifr,intumescent_system,,,,,,,,,,,none,Unidentified
+pdtbp,pdtbp,other,,,,,,,,,,,none,Unidentified
+tio2/po43- solid superacid,phosphated titanium dioxide,metal_oxide_salt,0,,,,,,,,0.55,Ti,low,Phosphate loading unknown
+nano-cu2o,copper(I) oxide,metal_oxide_salt,0,,0.0,0.0,0.0,0.0,0.0,0,0.888,Cu,high,
+nsapp-4,nsapp-4,P_inorganic,,,,,,,,,,,none,Unidentified
+tmapp,tmapp,P_inorganic,,,,,,,,,,,none,Unidentified
+nano-calcium borate,calcium borate,borate,0,,0.0,0.0,0.0,0.091,0.0,0,0.506,Ca,low,Stoichiometry assumed
+ce-btc,cerium trimesate MOF,other,0,,0.0,0.0,0.0,0.0,0.0,0,0.404,Ce,low,Assumed Ce(BTC)
+phosphorus-containing polysulfone arpo2,phosphorus-containing polysulfone,P_organic,,,,,,,,,,,none,Unidentified
+lig-m,lig-m,bio_based,,,,,,,,,,,none,Unidentified
+graphene oxide,graphene oxide,carbon,0,,0.0,0.0,0.0,0.0,0.0,0,0,,high,Heteroatoms negligible
+bisguanidine phosphate,bis(guanidinium) phosphate,P_N,0,,0.143,0.389,0.0,0.0,0.0,0,0,,medium,2 guanidine per H3PO4
+frsnadamantane),frsnadamantane),other,,,,,,,,,,,none,Garbled
+uio-66,UiO-66 (Zr terephthalate MOF),other,0,,0.0,0.0,0.0,0.0,0.0,0,0.329,Zr,medium,
+ldh4,ldh4,clay_ldh,,,,,,,,,,,none,Unidentified
+zif-8@sio2,zif-8@sio2,other,,,,,,,,,,,none,Ratio unknown
+avphvopo4·1.5h2o,avphvopo4·1.5h2o,other,,,,,,,,,,,none,Garbled
+na-mmt,sodium montmorillonite,clay_ldh,0,,0.0,0.0,0.306,0.0,0.0,0,0.165,"Na,Al,Mg",medium,
+2-benzoic acid,2-benzoic acid,other,,,,,,,,,,,none,Garbled
+hccp,hexachlorocyclotriphosphazene,P_N,1,ClP1(Cl)=NP(Cl)(Cl)=NP(Cl)(Cl)=N1,0.267,0.121,0.0,0.0,0.0,0.612,0,,high,Reactive precursor
+ldhs,layered double hydroxides,clay_ldh,0,,0.0,0.0,0.0,0.0,0.0,0,0.376,"Mg,Al",low,Assumed Mg-Al carbonate
+ucpr-ldh,ucpr-ldh,clay_ldh,,,,,,,,,,,none,Unidentified
+ppsq),ppsq),silicon,,,,,,,,,,,none,Garbled
+nickel phosphomolybdate,nickel phosphomolybdate,metal_oxide_salt,0,,,,,,,,,,none,Stoichiometry unknown
+organic phosphonate ester,organic phosphonate ester (generic),P_organic,,,,,,,,,,,none,Generic
+polydopamine-coated red phosphorus,polydopamine-coated red phosphorus,P_inorganic,0,,0.9,,,,,,,,low,Thin PDA coat assumed
+serpentine@app4),serpentine@app4),clay_ldh,,,,,,,,,,,none,Garbled
+pabg,pabg,other,,,,,,,,,,,none,Unidentified
+claa,claa,other,,,,,,,,,,,none,Unidentified
+la-containing 4a zeolite,lanthanum-containing zeolite 4A,clay_ldh,0,,,,0.15,,,,0.3,"Al,Na,La",low,La content unknown
+sepiolite,sepiolite,clay_ldh,0,,0.0,0.0,0.26,0.0,0.0,0,0.15,Mg,high,
+bifeo3,bismuth ferrite,metal_oxide_salt,0,,0.0,0.0,0.0,0.0,0.0,0,0.847,"Bi,Fe",high,
+zirconium oxide,zirconium dioxide,metal_oxide_salt,0,O=[Zr]=O,0.0,0.0,0.0,0.0,0.0,0,0.74,Zr,high,
+cucl2,copper(II) chloride,metal_oxide_salt,0,Cl[Cu]Cl,0.0,0.0,0.0,0.0,0.0,0.527,0.473,Cu,high,
+kh-570 silane-treated expanded graphite,silane-treated expandable graphite,carbon,0,,,,0.01,,,,,,low,Coating fraction assumed
+beg,beg,carbon,,,,,,,,,,,none,Unidentified
+dm/pei/mwcnt-4,dm/pei/mwcnt-4,carbon,,,,,,,,,,,none,Unidentified
+dm/pei/mwcnt-2,dm/pei/mwcnt-2,carbon,,,,,,,,,,,none,Unidentified
+nano-mg2,nano magnesium hydroxide,metal_hydroxide,0,[OH-].[OH-].[Mg+2],0.0,0.0,0.0,0.0,0.0,0,0.417,Mg,medium,Mg(OH)2 with parentheses stripped
+ovs,octavinylsilsesquioxane,silicon,0,,0.0,0.0,0.355,0.0,0.0,0,0,,medium,Inferred
+dopo-dde,DOPO-diaminodiphenyl ether derivative,P_N,1,,0.07,0.05,,,,,,,low,Inferred from name
+mg-al ldh1,Mg-Al layered double hydroxide,clay_ldh,0,,0.0,0.0,0.0,0.0,0.0,0,0.376,"Mg,Al",low,Assumed Mg-Al carbonate
+zncl2,zinc chloride,metal_oxide_salt,0,Cl[Zn]Cl,0.0,0.0,0.0,0.0,0.0,0.52,0.48,Zn,high,
+ec-microencapsulated app,ethyl cellulose-microencapsulated APP,P_inorganic,0,,0.28,0.13,,,,,,,low,Shell fraction assumed
+"a2""","a2""",other,,,,,,,,,,,none,Garbled
+tgd,tgd,other,,,,,,,,,,,none,Unidentified
+wmapp,wmapp,P_inorganic,,,,,,,,,,,none,Unidentified
+uio66-nh2,UiO-66-NH2,other,0,,0.0,0.048,0.0,0.0,0.0,0,0.312,Zr,medium,
+co-mof,cobalt MOF,other,0,,,,,,,,,,none,Ligand unknown
+bhappo phenyl phosphine oxide),bis(aminophenyl) phenyl phosphine oxide,P_N,1,,0.1,,,,,,,,low,Inferred from name
+melamine molybdate2moo4,melamine molybdate,metal_oxide_salt,0,,0.0,0.406,0.0,0.0,0.0,0,0.232,Mo,low,Assumed 2 melamine per molybdic acid
+montmorillonite ah2,montmorillonite,clay_ldh,0,,0.0,0.0,0.312,0.0,0.0,0,0.15,Al,low,Organic modification ignored
+phosphomolybdic acid,phosphomolybdic acid,metal_oxide_salt,0,,0.017,0.0,0.0,0.0,0.0,0,0.631,Mo,high,
+chitosan silicate,chitosan silicate,bio_based,0,,,,,,,,,,none,Ratio unknown
+pa6/ommt nanocomposite,pa6/organo-MMT nanocomposite,clay_ldh,0,,,,,,,,,,none,Polymer composite
+trimer phosphate),trimer phosphate),other,,,,,,,,,,,none,Garbled
+p-mmt,p-mmt,clay_ldh,,,,,,,,,,,none,Unidentified
+mg-al-co3 ldh,Mg-Al carbonate layered double hydroxide,clay_ldh,0,,0.0,0.0,0.0,0.0,0.0,0,0.376,"Mg,Al",medium,Assumed Mg:Al 3:1
+mdi/melamine polyurea co-microencapsulated app/ath 1/1 [m],microencapsulated APP/ATH 1:1,intumescent_system,0,,0.15,0.08,,,,,0.17,Al,low,Shell composition assumed
+kaolinite,kaolinite,clay_ldh,0,,0.0,0.0,0.218,0.0,0.0,0,0.209,Al,high,
+eg1,expandable graphite,carbon,0,,,,,,,,,,low,S content unknown
+lanthanum hypophosphite,lanthanum hypophosphite,P_inorganic,0,,0.278,0.0,0.0,0.0,0.0,0,0.416,La,high,
+papp,papp,P_N,,,,,,,,,,,none,Ambiguous acronym
+hgm@amp,hgm@amp,other,,,,,,,,,,,none,Unidentified
+bh + eg,bh + eg,other,,,,,,,,,,,none,Unidentified
+dmmp only,dimethyl methylphosphonate,P_organic,0,COP(C)(=O)OC,0.25,0.0,0.0,0.0,0.0,0,0,,high,
+app + cobalt phytate,app + cobalt phytate,other,,,,,,,,,,,none,Unidentified
+fa-bppo,fa-bppo,P_organic,,,,,,,,,,,none,Unidentified
+fu-bp + tep,fu-bp + triethyl phosphate,P_organic,,,,,,,,,,,none,Unidentified
+bua-dopo,butyl acrylate-DOPO adduct,P_organic,0,,0.09,0.0,0.0,0.0,0.0,0,0,,low,Assumed butyl acrylate adduct
+pfapp + phosphorus-functionalized lignin polyol,pfapp + phosphorus-functionalized lignin polyol,P_inorganic,,,,,,,,,,,none,Unidentified
+commercial polyol,commercial polyol (not an FR),other,1,,,,,,,,,,none,Non-FR matrix component
+"lignin polyol 40/60, 100% of polyol",lignin polyol,bio_based,1,,,,,,,,,,none,Non-FR matrix component
+op560 + tep,Exolit OP 560 + triethyl phosphate,P_organic,,,0.12,,,,,,,,low,Blend ratio unknown
+fu-bppo,fu-bppo,P_organic,,,,,,,,,,,none,Unidentified
+ifr + graphene oxide,intumescent system + graphene oxide,intumescent_system,0,,0.2,0.14,,,,,,,low,Generic IFR assumed
+hydrotalcite filler,hydrotalcite,clay_ldh,0,,0.0,0.0,0.0,0.0,0.0,0,0.331,"Mg,Al",medium,
+reactive phosphorus polyol cppa,reactive phosphorus polyol,P_organic,1,,,,,,,,,,none,Structure unknown
+mits + expandable graphite,mits + expandable graphite,carbon,,,,,,,,,,,none,Unidentified
+tcpp + dmmp + zinc ferrite,tcpp + dmmp + zinc ferrite,other,,,,,,,,,,,none,Unidentified
+tbpbp,tbpbp,P_N,,,,,,,,,,,none,Unidentified
+lignin polyol + frp + mapp,lignin polyol + frp + mapp,bio_based,,,,,,,,,,,none,Unidentified
+zeolitic imidazolate framework zif-11,ZIF-11,other,0,,0.0,0.187,0.0,0.0,0.0,0,0.218,Zn,medium,Zn benzimidazolate
+zeolitic imidazolate framework zif-7,ZIF-7,other,0,,0.0,0.187,0.0,0.0,0.0,0,0.218,Zn,medium,Zn benzimidazolate
+sodium alginate + expandable graphite,sodium alginate + expandable graphite,bio_based,,,,,,,,,,,none,Ratio unknown
+hq-dopo + tep,HQ-DOPO + triethyl phosphate,P_organic,,,0.1,,,,,,,,low,Blend ratio unknown
+melamine-formaldehyde resin coated app,melamine-formaldehyde coated APP,P_inorganic,0,,0.28,0.17,,,,,,,low,Shell fraction assumed
+mao-zn,mao-zn,other,,,,,,,,,,,none,Unidentified
+phosphate frs + app + tio2,phosphate frs + app + tio2,P_inorganic,,,,,,,,,,,none,Mixture
+phosphate frs + ath + mwnt,phosphate frs + ath + mwnt,P_organic,,,,,,,,,,,none,Mixture
+expandable graphite,expandable graphite,carbon,0,,,,,,,,,,medium,Intercalated graphite; sulfur content varies by grade
+magnesium hydroxide,magnesium hydroxide,metal_hydroxide,0,[OH-].[OH-].[Mg+2],0,0,0,0,0,0,0.417,Mg,high,Mg(OH)2
+expandable graphite ghl px 95 ht 270,expandable graphite,carbon,0,,,,,,,,,,medium,Intercalated graphite; sulfur content varies by grade
+per,pentaerythritol,intumescent_system,0,OCC(CO)(CO)CO,0,0,0,0,0,0,0,,medium,Carbon source; mp/per mixes also
+sb2o3,antimony trioxide,metal_oxide_salt,0,,0,0,0,0,0,0,0.835,Sb,high,"Sb2O3, halogen synergist"
+mel,melamine,N,0,Nc1nc(N)nc(N)n1,0,0.667,0,0,0,0,0,,high,C3H6N6
+syn,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+aluminum diethylphosphinate,aluminium diethylphosphinate,P_organic,0,,0.238,0,0,0,0,0,0.069,Al,high,"Al(C4H10PO2)3, Exolit OP type"
+aluminum hypophosphite,aluminium hypophosphite,P_inorganic,0,,0.419,0,0,0,0,0,0.122,Al,high,Al(H2PO2)3
+phytic acid,phytic acid (myo-inositol hexakisphosphate),bio_based,0,,0.282,0,0,0,0,0,0,,high,C6H18O24P6
+red phosphorus,red phosphorus,P_inorganic,0,,1.0,0,0,0,0,0,0,,high,Elemental P
+expanded graphite,expandable graphite,carbon,0,,,,,,,,,,medium,Intercalated graphite; sulfur content varies by grade
+fr1,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+aluminium diethyl phosphinate,aluminium diethylphosphinate,P_organic,0,,0.238,0,0,0,0,0,0.069,Al,high,"Al(C4H10PO2)3, Exolit OP type"
+lhp,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+ht-101 polyolefin fr,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+fr4,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+k-sep,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+sio2,silicon dioxide,silicon,0,O=[Si]=O,0,0,0.467,0,0,0,0,,high,SiO2
+"rm = diethylphosphonate, re = diethyl bis-aminomethylphosphonate",,P_organic,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+pn-dopo,,P_organic,1,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+naoh,sodium hydroxide,other,0,,0,0,0,0,0,0,0.575,Na,high,Not an FR; treatment reagent
+mca,melamine cyanurate,N,0,,0,0.494,0,0,0,0,0,,high,C6H9N9O3
+aldpi,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+rp,red phosphorus,P_inorganic,0,,1.0,0,0,0,0,0,0,,high,Elemental P
+expandable graphite ghl px 95 ht,expandable graphite,carbon,0,,,,,,,,,,medium,Intercalated graphite; sulfur content varies by grade
+mapp,ammonium dihydrogen phosphate,P_inorganic,0,[NH4+].OP(=O)([O-])O,0.269,0.122,0,0,0,0,0,,medium,NH4H2PO4; mapp may differ
+chlorinated paraffin,chlorinated paraffin,halogen,0,,0,0,0,0,0,0.5,0,,low,"Chlorine content ~50% typical, grade varies"
+zs,,zinc stannate,metal_oxide_salt,0,,0,0,0,0,0,0.793,"Zn,Sn",low,ZnSnO3 assumed; may be hydroxystannate
+mh/ath2/al3),,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+polydimethylsiloxane pdms,polydimethylsiloxane,silicon,,,0,0,0.379,0,0,0,0,,medium,Repeat unit C2H6OSi
+boehmite,boehmite,metal_hydroxide,0,,0,0,0,0,0,0,0.45,Al,high,AlOOH
+ppa,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+polycarbosilane,polycarbosilane,silicon,,,0,0,0.667,0,0,0,0,,medium,"Repeat (SiH2CH2), idealised"
+mp/per,pentaerythritol,intumescent_system,0,OCC(CO)(CO)CO,0,0,0,0,0,0,0,,medium,Carbon source; mp/per mixes also
+hollow glass microsphere,,hollow glass microspheres,other,0,,0,0,0.33,0,0,,,low,Soda-lime glass approx
+diglyceride borate,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+triethyl phosphate,triethyl phosphate,P_organic,0,CCOP(=O)(OCC)OCC,0.17,0,0,0,0,0,0,,high,C6H15O4P
+x-22-176dx y-type polydimethylsiloxane,,silicon,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+zn-pdh,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+fly ash superpozz amino-silane aptes-treated,,silicon,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+high-mw siloxane,,silicon,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+hpctp,hexaphenoxycyclotriphosphazene,P_N,0,,0.134,0.061,0,0,0,0,0,,medium,N3P3(OC6H5)6 assumed
+tahht-ddpo,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+lignosulfonate lignin,bio-based material,bio_based,,,,,,,,,,,low,Biomass filler or carbon source
+dt,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+clinoptilolite,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+glass frit,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+znmgal-co3-ldh,,clay_ldh,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+sposs-boz,,silicon,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+dopo-dam,,P_organic,1,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+mmt,,montmorillonite,clay_ldh,0,,0,0,0.3,0,0,,,low,Approximate; composition varies
+app/spe/t58 hardener 78.95/15.79/5.26 m/m%),,P_inorganic,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+ferric hydroxide,iron(III) hydroxide,metal_hydroxide,0,,0,0,0,0,0,0,0.523,Fe,medium,Fe(OH)3
+p-tab),,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+ba/bx 1:1,boric acid / borax 1:1,borate,0,,0,0,0,0.14,0,0,,,low,Rough mix average
+chicken eggshell powder,bio-based material,bio_based,,,,,,,,,,,low,Biomass filler or carbon source
+ind-mh2),,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+ifr adk stab fp-2200,,intumescent_system,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+expandable graphite eg2,expandable graphite,carbon,0,,,,,,,,,,medium,Intercalated graphite; sulfur content varies by grade
+sb-lh,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+pnc,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+ammonium pentaborate octahydrate,ammonium pentaborate octahydrate,borate,0,,0,0.051,0,0.199,0,0,0,,low,NH4B5O8·4H2O assumed
+zinc tungstate,zinc tungstate,metal_oxide_salt,0,,0,0,0,0,0,0,0.839,"Zn,W",medium,ZnWO4; Zn 0.220 W 0.619
+tris phosphate,,P_organic,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+tep,triethyl phosphate,P_organic,0,CCOP(=O)(OCC)OCC,0.17,0,0,0,0,0,0,,high,C6H15O4P
+corn starch,bio-based material,bio_based,,,,,,,,,,,low,Biomass filler or carbon source
+commercial fr,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+4a molecular sieve,,zeolite 4A,clay_ldh,0,,0,0,0.176,0,0,0.313,"Al,Na",low,Anhydrous Na12Al12Si12O48 basis
+app:per:mel,,P_inorganic,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+4p4gs,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+co/p-c3n4,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+phosphorus-nitrogen flame retardant,,P_organic,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+pec,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+hpn,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+potassium benzenesulfonylbenzenesulfonate,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+nano zinc oxide,zinc oxide,metal_oxide_salt,0,,0,0,0,0,0,0,0.803,Zn,high,ZnO
+ntpa,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+dipentaerythritol,dipentaerythritol,intumescent_system,0,,0,0,0,0,0,0,0,,high,Carbon source polyol
+nano-sb2o3,antimony trioxide,metal_oxide_salt,0,,0,0,0,0,0,0,0.835,Sb,high,"Sb2O3, halogen synergist"
+badps,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+silane-coated ammonium polyphosphate,ammonium polyphosphate (coated),P_inorganic,0,,,,,,,,,,low,Shell dilutes APP; core P 0.32 N 0.14
+nano-sio2,silicon dioxide,silicon,0,O=[Si]=O,0,0,0.467,0,0,0,0,,high,SiO2
+hp-mn,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+phosphated cellulose,bio-based material,bio_based,,,,,,,,,,,low,Biomass filler or carbon source
+mdh,magnesium hydroxide,metal_hydroxide,0,[OH-].[OH-].[Mg+2],0,0,0,0,0,0,0.417,Mg,high,Mg(OH)2
+phenol formaldehyde silane resin pfs2,,silicon,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+spdv,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+frep,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+s600,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+mppm,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+molecular sieve 4a,,zeolite 4A,clay_ldh,0,,0,0,0.176,0,0,0.313,"Al,Na",low,Anhydrous Na12Al12Si12O48 basis
+magnesium hydroxide mdh,magnesium hydroxide,metal_hydroxide,0,[OH-].[OH-].[Mg+2],0,0,0,0,0,0,0.417,Mg,high,Mg(OH)2
+app@si-171,,P_inorganic,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+cerium phosphate cep,cerium phosphate,metal_oxide_salt,0,,0.132,0,0,0,0,0,0.596,Ce,medium,CePO4
+[apmim]pf6,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+expandable graphite eg3,expandable graphite,carbon,0,,,,,,,,,,medium,Intercalated graphite; sulfur content varies by grade
+hazelnut shell + hydrotalcite,,clay_ldh,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+aluminium diethylphosphite + sodium alginate + expandable graphite,,P_organic,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+polyacrylamide/m-mxene hydrogel coating,,metal_oxide_salt,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+calcium stearate-modified calcium sulfate whisker from phosphogypsum,calcium sulfate whisker (stearate-modified),metal_oxide_salt,0,,,0,0,,0.236,0,,Ca,low,"CaSO4 basis, modifier ignored"
+polyhydric alcohol,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+mbdac-dpp,,P_organic,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+phytic acid + urea grafting treatment,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+sep@alpo4,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+zn-dopox,,P_organic,1,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+actilox b30,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+zno microspheres,zinc oxide,metal_oxide_salt,0,,0,0,0,0,0,0,0.803,Zn,high,ZnO
+g-c3n4,graphitic carbon nitride,N,0,,0,0.609,0,0,0,0,0,,medium,Idealised C3N4
+itap,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+dap,diammonium phosphate,P_inorganic,0,,0.235,0.212,0,0,0,0,0,,low,(NH4)2HPO4 assumed
+caal-po4-ldhs,,clay_ldh,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+co@cpa,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+black phosphorus nanosheets,black phosphorus,P_inorganic,0,,1.0,0,0,0,0,0,0,,medium,Elemental P; graphene hybrid not diluted
+s-cemgal,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+chitin,bio-based material,bio_based,,,,,,,,,,,low,Biomass filler or carbon source
+aph,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+ceo2,cerium(IV) oxide,metal_oxide_salt,0,,0,0,0,0,0,0,0.814,Ce,high,CeO2
+hbdt,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+ead,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+bapdp),,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+keratin powder kr,bio-based material,bio_based,,,,,,,,,,,low,Biomass filler or carbon source
+pvdc emulsion,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+ds-lzhn,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+cbp,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+egm,expandable graphite,carbon,0,,,,,,,,,,medium,Intercalated graphite; sulfur content varies by grade
+phytic acid sodium salt,sodium phytate,bio_based,0,,0.2,0,0,0,0,0,,Na,low,Degree of sodiation varies
+ac-fe2o3,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+pdepd),,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+aluminum beta- ethyl methyl phosphinate alnp,,P_organic,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+oyster shell powder,bio-based material,bio_based,,,,,,,,,,,low,Biomass filler or carbon source
+dimethyl propane phosphonate,dimethyl propylphosphonate,P_organic,0,CCCP(=O)(OC)OC,0.204,0,0,0,0,0,0,,high,C5H13O3P
+dopo-tung oil polyol,,P_organic,1,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+dmi-bppo + tep,,P_organic,1,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+app + deep,,P_inorganic,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+mfapp + alkali lignin,,P_inorganic,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+sodium casein 180,bio-based material,bio_based,,,,,,,,,,,low,Biomass filler or carbon source
+mos2–dopo hybrid,,P_organic,1,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+europium-tannic acid complex,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+lignin nanoparticles,bio-based material,bio_based,,,,,,,,,,,low,Biomass filler or carbon source
+bnno@co3o4 nanohybrid,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+"mhx2, taixing)",,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+zr-atmp,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+dehpa-alphosphate hybrid),,P_organic,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+hnts,,halloysite nanotubes,clay_ldh,0,,0,0,0.218,0,0,0.209,Al,medium,Al2Si2O5(OH)4
+spiro-vsil2,,silicon,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+bp-ppda,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+zinc bis zndmp,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+lmg1,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+fyrol pnx le,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+anaerobic digester sewage sludge,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+salen s1-cu complex,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+dihydroxysalen s2-cu complex,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+pmma-microencapsulated hpctp p,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+ahm/mel/sa 3:1:1 in surface film,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+phytic acid/silica nanosol hybrid,,silicon,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+al-mg hydroxycarbonate lh20,,clay_ldh,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+al-mg hydroxycarbonate lh70,,clay_ldh,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+attapulgite,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+g-c3n4/alcpa hybrid cnalcpa30,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+p5psq,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+cahpi5,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+ahpi,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+wheat starch phosphate carbamate,bio-based material,bio_based,,,,,,,,,,,low,Biomass filler or carbon source
+nanocarbon black,,carbon,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+pc-dpa-ldh,,clay_ldh,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+cps hydrothermal peanut-shell carbon,,bio_based,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+ce@app,,P_inorganic,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+ph-oda,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+nsapp-1,,P_inorganic,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+polysilsesquioxane,,silicon,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+eg@pda,,carbon,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+black phosphorene/graphene,black phosphorus,P_inorganic,0,,1.0,0,0,0,0,0,0,,medium,Elemental P; graphene hybrid not diluted
+y-btc,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+phosphorus-containing polysulfone aropn2,,P_organic,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+amino-silane modified zhs/sepiolite hybrid,,silicon,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+go-nh-mcm-41,,carbon,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+monoammonium phosphate nh4h2po4,ammonium dihydrogen phosphate,P_inorganic,0,[NH4+].OP(=O)([O-])O,0.269,0.122,0,0,0,0,0,,medium,NH4H2PO4; mapp may differ
+il@nh2-mil-101,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+sio2@uio-66 composite,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+ldh5,,clay_ldh,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+ldh2,,clay_ldh,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+vph vopo4·2h2o,,vanadyl phosphate dihydrate,metal_oxide_salt,0,,0.157,0,0,0,0,0.257,V,medium,VOPO4·2H2O
+pm,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+ppac-modified magnesium hydroxide,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+ppa-ath,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+coal-ldh,,clay_ldh,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+mcpr-ldh,,clay_ldh,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+ops,octaphenyl polyhedral silsesquioxane,silicon,0,,0,0,0.217,0,0,0,0,,medium,(C6H5SiO1.5)8
+zinc phosphomolybdate,,P_organic,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+px200,"resorcinol bis(di-2,6-xylyl phosphate)",P_organic,0,,0.091,0,0,0,0,0,0,,medium,"PX-200, C40H42O8P2"
+polydopamine/melamine microencapsulated red phosphorus,,P_organic,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+tflpm,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+tps-g-cpa,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+few-layer black phosphorus,black phosphorus,P_inorganic,0,,1.0,0,0,0,0,0,0,,medium,Elemental P; graphene hybrid not diluted
+4a zeolite from kaolinite,,zeolite 4A,clay_ldh,0,,0,0,0.176,0,0,0.313,"Al,Na",low,Anhydrous Na12Al12Si12O48 basis
+polyaminopropylphenylsilsesquioxane,,silicon,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+znfe2o4,zinc ferrite,metal_oxide_salt,0,,0,0,0,0,0,0,0.734,"Zn,Fe",high,ZnFe2O4
+app-10% de composite filler surface-modified with 2% kh550,,P_inorganic,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+psin,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+"expandable graphite, hydrothermal",expandable graphite,carbon,0,,,,,,,,,,medium,Intercalated graphite; sulfur content varies by grade
+silane-treated eg,expandable graphite,carbon,0,,,,,,,,,,medium,Intercalated graphite; sulfur content varies by grade
+4a zeolite,,zeolite 4A,clay_ldh,0,,0,0,0.176,0,0,0.313,"Al,Na",low,Anhydrous Na12Al12Si12O48 basis
+dm/pei/mwcnt-1,,carbon,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+s600),,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+thpm,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+dopo-ddm,,P_organic,1,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+mg-al ldh4,,clay_ldh,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+onsep,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+b,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+ppns-app,,P_inorganic,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+vinyl-silane-modified sio2-microencapsulated mg/zn/al-ldh,,clay_ldh,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+wmtapp,,P_inorganic,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+ap/mca,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+eg-bmp,,carbon,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+mg-al ldh,,clay_ldh,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+melamine tungstate2wo4,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+montmorillonite ana,,montmorillonite,clay_ldh,0,,0,0,0.3,0,0,,,low,Approximate; composition varies
+biomass-based fr,,bio_based,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+chitosan molybdate,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+zeolite,,zeolite 4A,clay_ldh,0,,0,0,0.176,0,0,0.313,"Al,Na",low,Anhydrous Na12Al12Si12O48 basis
+tio2-coated hollow glass microspheres,,hollow glass microspheres,other,0,,0,0,0.33,0,0,,,low,Soda-lime glass approx
+vtms,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+"expandable graphite, o3-hydrothermal route",expandable graphite,carbon,0,,,,,,,,,,medium,Intercalated graphite; sulfur content varies by grade
+la2o3,lanthanum oxide,metal_oxide_salt,0,,0,0,0,0,0,0,0.852,La,high,La2O3
+poss-vipsp,,silicon,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+om-so3k,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+[emim]pf6,1-ethyl-3-methylimidazolium hexafluorophosphate,other,0,,0.121,0.109,0,0,0.445,0,0,,high,C6H11N2PF6
+lahpp,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+ifr + ath 3 php,,intumescent_system,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+app/mel/per/lignosulfonate ifr,,P_inorganic,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+ifr + ath 5 php,,intumescent_system,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+ceppg,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+ta-dopo,,P_organic,1,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+pa-bppo + tep,,P_organic,1,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+op560,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+microencapsulated app,ammonium polyphosphate (coated),P_inorganic,0,,,,,,,,,,low,Shell dilutes APP; core P 0.32 N 0.14
+"depolymerized lignin polyol obl 30/70-c, 100% of polyol",,bio_based,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+"lignin polyol 30/70, 100% of polyol",,bio_based,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+ta-bp + tep,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+ba-dopo + tep,,P_organic,1,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+eg + app intumescent system,,P_inorganic,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+hazelnut shell filler,bio-based material,bio_based,,,,,,,,,,,low,Biomass filler or carbon source
+microencapsulated eg + mapp + organo-ldh,,clay_ldh,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+modified iron tailings,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+tbpbp + c-mof/mwcnts,,carbon,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+mof/mwcnts,,carbon,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+lignin polyol + microencapsulated app,,P_inorganic,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+tbpbp + silica aerogel powder,,silicon,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+adpo2 + sa + eg,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+uncoated,,other,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+hq-bppo + tep,,P_organic,1,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+eg + app + ionic-liquid functionalized go,,P_inorganic,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+mao-zn + app,,P_inorganic,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+phosphate frs + ath + tio2,,P_organic,,,,,,,,,,,none,Unidentified acronym or mixture; no numbers estimated
+ath,aluminium trihydroxide,metal_hydroxide,0,,0.0,0.0,0.0,0.0,0.0,0.0,0.3459,Al,high,Al(OH)3
+alpi,aluminium diethylphosphinate,P_organic,0,,0.2381,0.0,0.0,0.0,0.0,0.0,0.0691,Al,medium,AlPi assumed
+tannic acid,tannic acid,bio_based,0,,0.0,0.0,0.0,0.0,0.0,0.0,0,,medium,Polyphenol char former
+dopo,"9,10-dihydro-9-oxa-10-phosphaphenanthrene 10-oxide",P_organic,1,O=[PH]1Oc2ccccc2-c2ccccc12,0.1433,0.0,0.0,0.0,0.0,0.0,0,,high,C12H9O2P
+melamine,melamine,N,0,Nc1nc(N)nc(N)n1,0.0,0.6663,0.0,0.0,0.0,0.0,0,,high,C3H6N6
+eg,expandable graphite,carbon,0,,0,0,0,0,0,0,0,,medium,Intercalated sulfuric acid graphite; S small
+mpp,melamine polyphosphate,P_N,0,,0.1503,0.4078,0.0,0.0,0.0,0.0,0,,medium,Repeat unit melamine-HPO3
+sodium alginate,sodium alginate,bio_based,0,,0.0,0.0,0.0,0.0,0.0,0.0,0.116,Na,medium,Repeat unit C6H7NaO6
+cfa,cfa,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+zinc phosphinate,zinc diethylphosphinate,P_organic,0,,0.2014,0.0,0.0,0.0,0.0,0.0,0.2126,Zn,low,Assumed diethylphosphinate salt
+mg2,mg2,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+roflam b7,roflam b7,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+tad,tad,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+ath3),aluminium trihydroxide,metal_hydroxide,0,,0.0,0.0,0.0,0.0,0.0,0.0,0.3459,Al,low,Truncated name; ATH assumed
+graphene,graphene,carbon,0,,0,0,0,0,0,0,0,,high,Pure carbon
+moo3,molybdenum trioxide,metal_oxide_salt,0,,0.0,0.0,0.0,0.0,0.0,0.0,0.6666,Mo,high,MoO3
+mgal-ldh,magnesium aluminium layered double hydroxide,clay_ldh,0,,0.0,0.0,0.0,0.0,0.0,0.0,0.3308,Mg/Al,low,Typical hydrotalcite formula
+exolit rp607,Exolit RP 607 red phosphorus masterbatch,P_inorganic,0,,0.5,0,0,0,0,0,0,,low,Red phosphorus concentrate; P approximate
+didopo,bis-DOPO derivative,P_organic,1,,0.1,0,0,0,0,0,0,,low,Estimated from two DOPO units
+brominated polystyrene,brominated polystyrene,halogen,0,,0,0,0,0,0,0.68,0,,medium,Typical commercial Br ~68%
+tpp,triphenyl phosphate,P_organic,0,O=P(Oc1ccccc1)(Oc1ccccc1)Oc1ccccc1,0.0949,0.0,0.0,0.0,0.0,0.0,0,,medium,Assumed phosphate not phosphine
+dopo-modified novolac,DOPO-modified phenolic novolac,P_organic,1,,0.06,0,0,0,0,0,0,,low,P content estimated
+aluminium hypophosphite,aluminium hypophosphite,P_inorganic,0,,0.4187,0.0,0.0,0.0,0.0,0.0,0.1216,Al,high,Al(H2PO2)3
+lignosulphonate lignin,lignosulfonate,bio_based,0,,0,0,0,0,0.06,0,0,,low,Sulfonated lignin; S estimated
+zb,zinc borate,borate,0,,0.0,0.0,0.0,0.1492,0.0,0.0,0.3008,Zn,medium,2ZnO.3B2O3.3.5H2O
+aluminium diethylphosphinate exolit op 1230,aluminium diethylphosphinate,P_organic,0,,0.2381,0.0,0.0,0.0,0.0,0.0,0.0691,Al,high,Exolit OP1230
+pfaa-dopo-b-pdeaema,pfaa-dopo-b-pdeaema,P_organic,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+resorcinol bis,resorcinol bis(diphenyl phosphate),P_organic,0,O=P(Oc1ccccc1)(Oc1ccccc1)Oc1cccc(OP(=O)(Oc2ccccc2)Oc2ccccc2)c1,0.1078,0.0,0.0,0.0,0.0,0.0,0,,low,Name truncated; RDP assumed
+ammonium polyphosphate app,ammonium polyphosphate,P_inorganic,0,,0.3193,0.1444,0.0,0.0,0.0,0.0,0,,high,(NH4PO3)n
+app + nickel phytate,ammonium polyphosphate + nickel phytate,intumescent_system,0,,0.3,0.12,0,0,0,0,,Ni,low,Mixture estimate
+polyfr brominated polymeric fr,brominated polymeric flame retardant (brominated SBS),halogen,0,,0,0,0,0,0,0.65,0,,medium,PolyFR approx 65% Br
+gup/ba and/or mf resin per label,gup/ba and/or mf resin per label,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+zhs,zinc hydroxystannate,metal_oxide_salt,0,,0.0,0.0,0.0,0.0,0.0,0.0,0.6434,Zn/Sn,high,ZnSn(OH)6
+lamellar cobalt potassium pyrophosphate,cobalt potassium pyrophosphate,metal_oxide_salt,0,,0.1991,0.0,0.0,0.0,0.0,0.0,0.4408,Co/K,low,Formula assumed
+"p,n-doped cellulose fibrils","p,n-doped cellulose fibrils",bio_based,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+roflam f5,roflam f5,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+cerium hypophosphite,cerium(III) hypophosphite,P_inorganic,0,,0.2773,0.0,0.0,0.0,0.0,0.0,0.4182,Ce,high,Ce(H2PO2)3
+dmmp/eg,dmmp/eg,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+boron phenolic resin fb88,boron phenolic resin fb88,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+aluminium hydroxide,aluminium trihydroxide,metal_hydroxide,0,,0.0,0.0,0.0,0.0,0.0,0.0,0.3459,Al,high,Al(OH)3
+fly ash superpozz glycidoxy-silane gptes-treated,fly ash superpozz glycidoxy-silane gptes-treated,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+adp,adp,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+guanyl-urea phosphate,guanylurea phosphate,P_N,0,,0.1548,0.28,0.0,0.0,0.0,0.0,0,,medium,Guanylurea-H3PO4 salt
+melamine cyanurate mc50,melamine cyanurate,N,0,,0.0,0.494,0.0,0.0,0.0,0.0,0,,high,1:1 salt
+px200-m-phenylene bisphosphate),"resorcinol bis(di-2,6-xylyl phosphate)",P_organic,0,,0.0869,0.0,0.0,0.0,0.0,0.0,0,,medium,PX-200
+padl,padl,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+dopo-cupc,dopo-cupc,P_organic,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+4- di phthalate,4- di phthalate,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+nano-silica,silicon dioxide,silicon,0,,0.0,0.0,0.4674,0.0,0.0,0.0,0,,high,SiO2
+ldh,ldh,clay_ldh,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+ifr coating,ifr coating,intumescent_system,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+styrene-vinyl tetrazole copolymer,styrene-vinyl tetrazole copolymer,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+app/spe/t58 hardener 60.00/30.00/10.00 m/m%),app/spe/t58 hardener 60.00/30.00/10.00 m/m%),other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+hyperbranched polyphosphate ester hpe,hyperbranched polyphosphate ester hpe,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+mb3f3,mb3f3,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+fe2o3,iron(III) oxide,metal_oxide_salt,0,,0.0,0.0,0.0,0.0,0.0,0.0,0.6994,Fe,high,Fe2O3
+pamad,pamad,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+app + per,app + per,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+nano mg2,nano mg2,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+expandable graphite eg1,expandable graphite,carbon,0,,0,0,0,0,0,0,0,,medium,Intercalated graphite
+nanosized carbon black,carbon black,carbon,0,,0,0,0,0,0,0,0,,high,Pure carbon
+tcpp + dmmp + boron phosphate,tcpp + dmmp + boron phosphate,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+reactive phosphorus-containing soybean oil polyol,reactive phosphorus-containing soybean oil polyol,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+pa,phytic acid,bio_based,0,,0.2816,0.0,0.0,0.0,0.0,0.0,0,,low,Assumed phytic acid
+halloysite nanotubes,halloysite,clay_ldh,0,,0.0,0.0,0.2176,0.0,0.0,0.0,0.209,Al,high,Al2Si2O5(OH)4
+sbpdopo,sbpdopo,P_organic,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+mp/eg,mp/eg,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+exolit op550,Exolit OP 550 (reactive phosphorus polyol),P_organic,1,,0.18,0,0,0,0,0,0,,low,P approximate
+f-zrp-functionalized alpha-zrp),f-zrp-functionalized alpha-zrp),other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+b4c,boron carbide,other,0,,0.0,0.0,0.0,0.7826,0.0,0.0,0,,high,B4C
+8ps,8ps,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+dopo-hq,"10-(2,5-dihydroxyphenyl)-DOPO",P_organic,1,O=P1(c2cc(O)ccc2O)Oc2ccccc2-c2ccccc12,0.0955,0.0,0.0,0.0,0.0,0.0,0,,high,DOPO-hydroquinone adduct
+ppy-mapp,ppy-mapp,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+humic acid,humic acid,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+habp-dopo,habp-dopo,P_organic,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+zno-doped magnesium hydroxide,zinc oxide doped magnesium hydroxide,metal_hydroxide,0,,0,0,0,0,0,0,0.38,Mg,low,Mostly Mg(OH)2
+mphp,melamine phenylphosphonate,P_N,0,,0.109,0.2957,0.0,0.0,0.0,0.0,0,,low,Assumed melamine salt
+siloxane masterbatch silmaprocess ap1142a,siloxane masterbatch silmaprocess ap1142a,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+pipc,pipc,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+s4sq-h,s4sq-h,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+fba,fba,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+ctapp,surfactant-modified ammonium polyphosphate,P_inorganic,0,,0.28,0.13,0,0,0,0,0,,low,CTAB-type modifier assumed
+app@pei@ti3c2tx,MXene/PEI-coated ammonium polyphosphate,P_inorganic,0,,0.27,0.14,0,0,0,0,,Ti,low,Coating fractions unknown
+dopo-khcpa,dopo-khcpa,P_organic,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+dehmp,diethyl hydroxymethylphosphonate,P_organic,1,CCOP(=O)(CO)OCC,0.1842,0.0,0.0,0.0,0.0,0.0,0,,high,Reactive phosphonate diol-like
+biep-eta,biep-eta,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+phenol formaldehyde silane resin pfs1] ethylene diamine),phenol formaldehyde silane resin pfs1] ethylene diamine),other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+zinc ferrite znfe2o4,zinc ferrite,metal_oxide_salt,0,,0.0,0.0,0.0,0.0,0.0,0.0,0.7345,Zn/Fe,high,ZnFe2O4
+tposs,trisilanolphenyl POSS,silicon,0,,0.0,0.0,0.2111,0.0,0.0,0.0,0,,medium,Typical TSP-POSS formula
+iron-graphene,iron-graphene,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+ozrp,ozrp,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+spherical cosn6,spherical cosn6,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+hollow silica microsphere h-sio2,hollow silica microspheres,silicon,0,,0.0,0.0,0.4674,0.0,0.0,0.0,0,,high,SiO2
+"copper n,n'-piperazine cupb","copper n,n'-piperazine cupb",other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+ti4000-bmc,ti4000-bmc,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+mceg,microencapsulated expandable graphite,carbon,0,,0,0,0,0,0,0,0,,low,Coated EG
+nickel phytate only,nickel phytate,P_organic,0,,0.1858,0.0,0.0,0.0,0.0,0.0,0.3521,Ni,low,Formula assumed full Ni exchange
+pentaerythritol phosphate + expandable graphite,pentaerythritol phosphate + expandable graphite,carbon,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+eg + apb,eg + apb,carbon,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+tpp/tep,tpp/tep,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+fr5,fr5,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+melamine-coated app,melamine-coated ammonium polyphosphate,P_N,0,,0.28,0.17,0,0,0,0,0,,low,APP with melamine coating
+mbdac-dep,mbdac-dep,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+teap,teap,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+ca2 from eggshell,calcium carbonate (eggshell),metal_oxide_salt,0,,0.0,0.0,0.0,0.0,0.0,0.0,0.4004,Ca,low,Name ambiguous
+whf,whf,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+disperal 40,boehmite,metal_hydroxide,0,,0.0,0.0,0.0,0.0,0.0,0.0,0.4498,Al,medium,AlO(OH)
+otca@zno,otca@zno,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+vp phenylphosphonate),vp phenylphosphonate),other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+fr 3,fr 3,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+mono-ammonium phosphate,ammonium dihydrogen phosphate,P_inorganic,0,,0.2693,0.1218,0.0,0.0,0.0,0.0,0,,high,NH4H2PO4
+exolit ap750,Exolit AP 750 (APP-based intumescent),intumescent_system,0,,0.22,0.17,0,0,0,0,0,,low,Approx from datasheet memory
+odopb,odopb,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+h-bn nanosheets,hexagonal boron nitride,other,0,,0.0,0.5644,0.0,0.4356,0.0,0.0,0,,high,BN
+s-ndmgal,s-ndmgal,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+ba-ma,ba-ma,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+dopo-vtes,DOPO-vinyltriethoxysilane adduct,P_organic,1,,0.0762,0.0,0.0691,0.0,0.0,0.0,0,,medium,DOPO plus VTES
+fatp,fatp,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+caco3,calcium carbonate,metal_oxide_salt,0,,0.0,0.0,0.0,0.0,0.0,0.0,0.4004,Ca,high,CaCO3
+aluminum dihydrogen phosphate,aluminium dihydrogen phosphate,P_inorganic,0,,0.2923,0.0,0.0,0.0,0.0,0.0,0.0849,Al,high,Al(H2PO4)3
+petat,petat,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+hctp-modified graphite oxide,hctp-modified graphite oxide,carbon,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+fhplc,fhplc,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+pcp-cnt,pcp-cnt,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+pds,pds,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+ferrous powder,iron powder,metal_oxide_salt,0,,0.0,0.0,0.0,0.0,0.0,0.0,1.0,Fe,low,Assumed elemental iron
+papp:mpp:per 58:37:5,polyAPP/MPP/pentaerythritol intumescent,intumescent_system,0,,0.241,0.235,0,0,0,0,0,,low,Weighted by mass ratio
+bdmp,bdmp,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+pdepd/na-mmt nanocomposite,pdepd/na-mmt nanocomposite,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+hgm@[eooemim][bf4],hgm@[eooemim][bf4],other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+ath + bh + eg,ath + bh + eg,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+chicken feather protein + mmt,chicken feather protein + mmt,bio_based,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+ceppg/mpi/eg,ceppg/mpi/eg,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+ea-bppo,ea-bppo,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+tcpp + dmmp,tcpp + dmmp,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+dopo–vtes–go,dopo–vtes–go,P_organic,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+phosphorylated wheat starch ws-k physical mixture,phosphorylated wheat starch ws-k physical mixture,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+phosphorylated wheat starch ws-k uncleaned,phosphorylated wheat starch ws-k uncleaned,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+kraft lignin microparticles,kraft lignin microparticles,bio_based,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+basic magnesium carbonate 4mgco3·mg2·6h2o,basic magnesium carbonate,metal_oxide_salt,0,,0.0,0.0,0.0,0.0,0.0,0.0,0.2599,Mg,low,Formula garbled; hydromagnesite assumed
+bnno@co3o4@ppz nanohybrid,bnno@co3o4@ppz nanohybrid,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+"mhy2, albemarle)","mhy2, albemarle)",other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+gposs,gposs,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+dppa-al,dppa-al,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+pooph-vsil2diamidophosphorus phenylester),pooph-vsil2diamidophosphorus phenylester),other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+po2-vsil,po2-vsil,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+bp-pid,bp-pid,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+mh@dopo@mf microcapsule,mh@dopo@mf microcapsule,P_organic,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+lab-made fr,lab-made fr,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+fyrol hf5,fyrol hf5,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+moo3-hybridized magnesium hydroxide,MoO3-hybridised magnesium hydroxide,metal_hydroxide,0,,0,0,0,0,0,0,0.38,Mg,low,Mostly Mg(OH)2
+salen s1-ni complex,salen s1-ni complex,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+dihydroxysalen s2-mn complex,dihydroxysalen s2-mn complex,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+gallic acid,gallic acid,bio_based,0,OC(=O)c1cc(O)c(O)c(O)c1,0.0,0.0,0.0,0.0,0.0,0.0,0,,high,C7H6O5
+sodium silicate/sodium tetraborate core impregnation,sodium silicate/sodium tetraborate core impregnation,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+phosphorylated cellulose,phosphorylated cellulose,bio_based,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+lh20/ac hybrid pigment,lh20/ac hybrid pigment,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+lh70/ac hybrid pigment,lh70/ac hybrid pigment,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+zif-67@atp,zif-67@atp,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+bcep,bcep,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+go,graphene oxide,carbon,0,,0,0,0,0,0,0,0,,medium,Carbon/oxygen sheets
+~0.32 g g-c3n4 per batch),graphitic carbon nitride,N,0,,0.0,0.6086,0.0,0.0,0.0,0.0,0,,low,Truncated name
+clig,clig,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+wheat protein phosphate carbamate,wheat protein phosphate carbamate,bio_based,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+carbon nanotube,carbon nanotubes,carbon,0,,0,0,0,0,0,0,0,,high,Pure carbon
+si-ifr,si-ifr,intumescent_system,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+cps peanut-shell carbon pyrolysed 700 c,peanut-shell biochar,carbon,0,,0,0,0,0,0,0,0,,low,Biochar; mostly carbon
+kh-570 silane-modified zno-doped mh,silane-modified ZnO-doped magnesium hydroxide,metal_hydroxide,0,,0,0,0,0,0,0,0.38,Mg,low,Mostly Mg(OH)2
+dpp-pepa,dpp-pepa,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+nsapp-2,nsapp-2,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+amino-functionalized polyphosphazene microspheres,amino-functionalized polyphosphazene microspheres,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+app-cu,app-cu,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+rgo,reduced graphene oxide,carbon,0,,0,0,0,0,0,0,0,,medium,Mostly carbon
+ionic-liquid functionalized imogolite nanotubes,ionic-liquid functionalized imogolite nanotubes,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+phosphorus-containing polysulfone aropo2,phosphorus-containing polysulfone aropo2,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+alpo,aluminium phosphate,P_inorganic,0,,0.254,0.0,0.0,0.0,0.0,0.0,0.2213,Al,low,Assumed AlPO4
+beta-cd/dbpda inclusion complex,beta-cd/dbpda inclusion complex,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+diammonium phosphate2hpo4,diammonium hydrogen phosphate,P_inorganic,0,,0.2346,0.2121,0.0,0.0,0.0,0.0,0,,high,(NH4)2HPO4
+nh2-mil-101,nh2-mil-101,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+hb-dppa,hb-dppa,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+des,des,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+ldh1,ldh1,clay_ldh,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+fr cros484,FR CROS 484 (ammonium polyphosphate),P_inorganic,0,,0.31,0.14,0,0,0,0,0,,low,Budenheim APP grade
+pmrg-3,pmrg-3,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+ti-caco3,ti-caco3,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+ppoa-ath,ppoa-ath,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+app@pei,PEI-coated ammonium polyphosphate,P_inorganic,0,,0.28,0.14,0,0,0,0,0,,low,Thin PEI shell
+cncsi-da,cncsi-da,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+iron phosphomolybdate,iron phosphomolybdate,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+sacoflam 47201,sacoflam 47201,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+aflammit pco 900,aflammit pco 900,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+hspctp,hspctp,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+tflpp,tflpp,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+tps-g,tps-g,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+exolit ap462,Exolit AP 462 (microencapsulated APP),P_inorganic,0,,0.28,0.14,0,0,0,0,0,,low,Melamine-resin coated APP
+kh-550 surface-treated app,silane-treated ammonium polyphosphate,P_inorganic,0,,0.31,0.14,0,0,0,0,0,,low,Silane trace
+mp,melamine phosphate,P_N,0,,0.1382,0.375,0.0,0.0,0.0,0.0,0,,low,Assumed mono melamine phosphate
+lafeo3,lanthanum ferrite,metal_oxide_salt,0,,0.0,0.0,0.0,0.0,0.0,0.0,0.8023,La/Fe,high,LaFeO3
+app-10% de composite filler,app-10% de composite filler,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+aluminum triacetylacetonate [al],aluminum triacetylacetonate [al],other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+wool fibre,wool,bio_based,0,,0,0.16,0,0,0.03,0,0,,low,Keratin typical values
+untreated eg,expandable graphite,carbon,0,,0,0,0,0,0,0,0,,medium,Intercalated graphite
+gmfapp,gmfapp,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+cfr,cfr,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+hgm-fe2o3,hgm-fe2o3,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+ts-ifr,ts-ifr,intumescent_system,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+mg-al ldh3,mg-al ldh3,clay_ldh,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+mg-al ldh5,mg-al ldh5,clay_ldh,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+c,c,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+"a1""","a1""",other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+ppns,ppns,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+mg/zn/al-ldh,Mg/Zn/Al layered double hydroxide,clay_ldh,0,,0,0,0,0,0,0,0,,none,Composition unknown
+w-uio66-ppa,w-uio66-ppa,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+fe-mof,fe-mof,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+mbpne,mbpne,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+melamine molybdate23,melamine molybdate23,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+montmorillonite k10,montmorillonite K10,clay_ldh,0,,0,0,0.27,0,0,0,0.09,Al,low,Approx clay composition
+montmorillonite ah5,montmorillonite,clay_ldh,0,,0,0,0.27,0,0,0,0.09,Al,low,Approx clay composition
+[bmim]h2po2,1-butyl-3-methylimidazolium hypophosphite,P_inorganic,0,,0.1517,0.1372,0.0,0.0,0.0,0.0,0,,medium,Ionic liquid
+chitosan stannate,,bio_based,0,,,,,,,,,,none,
+tio2/so42- solid superacid,sulfated titanium dioxide,metal_oxide_salt,0,,0,0,0,0,0.02,0,0.55,Ti,low,Sulfate loading estimated
+hollow glass microspheres,hollow glass microspheres,silicon,0,,0,0,0.33,0,0,0,0,,low,Soda-lime-borosilicate approx
+ptfms,ptfms,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+"expandable graphite, hydrothermal route",expandable graphite,carbon,0,,0,0,0,0,0,0,0,,low,Modified EG
+smfapp,smfapp,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+poss-evim,poss-evim,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+eg2,expandable graphite,carbon,0,,0,0,0,0,0,0,0,,low,Assumed EG variant
+diatomite,diatomite (diatomaceous earth),silicon,0,,0.0,0.0,0.4674,0.0,0.0,0.0,0,,low,Mostly amorphous SiO2
+isopropyl tris titanate,isopropyl tris titanate,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+app/per/mc/eg/caco3 intumescent,app/per/mc/eg/caco3 intumescent,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+app/mel/per ifr,app/mel/per ifr,intumescent_system,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+eg + dmmp + go,eg + dmmp + go,carbon,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+potassium salt,potassium salt,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+ta-bppo,ta-bppo,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+bua-dopo + tep,bua-dopo + tep,P_organic,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+tpp + tep,tpp + tep,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+fa-bppo + tep,fa-bppo + tep,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+"depolymerized lignin polyol ol 30/70-c, 100% of polyol","depolymerized lignin polyol ol 30/70-c, 100% of polyol",bio_based,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+"oxypropylated lignin polyol 20/80, 100% of polyol","oxypropylated lignin polyol 20/80, 100% of polyol",bio_based,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+ta-bp,ta-bp,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+potassium salt + dfd,potassium salt + dfd,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+eg + dmmp + graphene oxide,eg + dmmp + graphene oxide,carbon,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+cppa polyol + eg + graphene oxide,cppa polyol + eg + graphene oxide,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+dfd,dfd,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+tcpp + dmmp + nickel ferrite,tcpp + dmmp + nickel ferrite,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+c-mof/mwcnts,c-mof/mwcnts,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+lignin polyol + frp + mapp + oldh,lignin polyol + frp + mapp + oldh,clay_ldh,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+lignin polyol + flame retardant polyol,lignin polyol + flame retardant polyol,bio_based,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+silica aerogel powder,silica aerogel,silicon,0,,0.0,0.0,0.4674,0.0,0.0,0.0,0,,medium,SiO2 network
+sa,sa,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+melamine + exolit op 935,melamine + exolit op 935,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+tbua-bppo + tep,tbua-bppo + tep,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+eg + app + graphene oxide,eg + app + graphene oxide,carbon,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+phosphate frs only,phosphate frs only,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition
+phosphate frs + zinc borate + mwnt,phosphate frs + zinc borate + mwnt,other,,,,,,,,,,,none,Ambiguous or unknown; no reliable composition

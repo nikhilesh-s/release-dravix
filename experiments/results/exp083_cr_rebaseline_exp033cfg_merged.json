@@ -1,0 +1,33 @@
+{
+  "slug": "cr_rebaseline_exp033cfg_merged",
+  "target": "Char Residue (cone residue %, FSRI)",
+  "round_config": "experiments/configs/stale_rebaseline_round1b.json + cr_round1.json",
+  "code": "data/v2/train_char_residue_round1b.py",
+  "protocol": "rgkf5x10",
+  "paired_vs": "CR re-baseline",
+  "sota": 0.82,
+  "sota_source": "pomazi_2026",
+  "dataset": "exp033 config on current data: char_residue_cone_fsri x STA/MCC/props, 567 rows / 62 materials",
+  "features": [
+    "heat_flux_kWm2",
+    "density_kgm3",
+    "mcc_char_yield_pct",
+    "sta_res_3K",
+    "sta_res_10K",
+    "sta_res_30K"
+  ],
+  "model": "RandomForestRegressor",
+  "hyperparameters": "RF(n_estimators=300, max_depth=6, min_samples_leaf=2, random_state=0)",
+  "n_rows": 567,
+  "n_groups": 61,
+  "rkf_mean": 0.4831,
+  "rkf_std": 0.0297,
+  "ci_lo": 0.1321,
+  "ci_hi": 0.6827,
+  "gss_mean": 0.4508,
+  "paired_delta": 0.0,
+  "paired_wins": "n/a",
+  "status": "ok",
+  "blocked_reason": "",
+  "note": "[merged groups PlasticC->HIPS] exp033 config re-run on post-f063d48 data; human decision 2026-10-02"
+}

@@ -1,0 +1,16 @@
+litcone_gt_round1 (REAL) -- rows after merge/dedupe 5015, after form filter 4529, papers 806; snapshot cone_lit_benchmark_v1.csv sha256 0b2af8e1817bdda1
+matrix categories (>=3 papers): ['ABS', 'EP', 'EPDM', 'EVA', 'FPUF', 'HDPE', 'HIPS', 'LDPE', 'LLDPE', 'NR', 'PA6', 'PA66', 'PBT', 'PC', 'PET', 'PF', 'PLA', 'PMMA', 'PP', 'PS', 'PVC', 'RPUF', 'SBR', 'SR', 'TPU', 'UPR', 'VER', 'WPC', 'other:CR/BR', 'other:LDPE/EVA', 'other:NBR', 'other:PA11', 'other:PBS', 'other:PVA', 'other:WPU', 'other:asphalt', 'other:calcium alginate']; forms: ['bulk', 'fibre_composite', 'film', 'foam', 'other', 'wood_plastic']; features 175
+
+=== TTI: 3368 rows / 598 papers; competitor 0.95 (training-data fit, their rows not released)
+  gt_protocol_et  P1 [THEIR PROTOCOL: computed on training data; not held-out evidence] ensemble 0.909 in-sample 0.919 | P2 random 5x10 0.543 +- 0.065 CI [0.480, 0.703] | P3 paper-grouped 5x10 0.272 +- 0.013 CI [0.170, 0.400]  (218s)
+
+=== pHRR: 4017 rows / 725 papers; competitor 0.94 (training-data fit, their rows not released)
+  gt_protocol_et  P1 [THEIR PROTOCOL: computed on training data; not held-out evidence] ensemble 0.918 in-sample 0.924 | P2 random 5x10 0.676 +- 0.015 CI [0.655, 0.739] | P3 paper-grouped 5x10 0.449 +- 0.016 CI [0.359, 0.520]  (286s)
+
+=== THR: 3355 rows / 619 papers; competitor 0.97 (training-data fit, their rows not released)
+  gt_protocol_et  P1 [THEIR PROTOCOL: computed on training data; not held-out evidence] ensemble 0.960 in-sample 0.965 | P2 random 5x10 0.785 +- 0.004 CI [0.755, 0.827] | P3 paper-grouped 5x10 0.600 +- 0.023 CI [0.506, 0.662]  (297s)
+
+=== avg_HRR: 759 rows / 130 papers; competitor 0.96 (training-data fit, their rows not released)
+  gt_protocol_et  P1 [THEIR PROTOCOL: computed on training data; not held-out evidence] ensemble 0.964 in-sample 0.971 | P2 random 5x10 0.700 +- 0.032 CI [0.630, 0.811] | P3 paper-grouped 5x10 0.365 +- 0.032 CI [0.220, 0.526]  (57s)
+
+runtime 861s; wrote ~/Dravix/dravix-master/experiments/runs/litcone_gt_round1.json

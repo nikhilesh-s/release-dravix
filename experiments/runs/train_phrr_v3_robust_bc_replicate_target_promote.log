@@ -1,0 +1,33 @@
+Using baseline-corrected MCC extras (total_hr_bc_kJg, t_onset_bc_C)
+Replicate-mean target: 221 material x flux pairs / 76 materials; with MCC features (the rows used): 191 / 65
+  replicates per pair {1: 7, 3: 159, 4: 20, 5: 2, 6: 3}; pairs with a truncated_test replicate kept: 43; pairs pooling >1 hf_tag: [['Nylon', 25.0]]
+  vs the default 196-row set: 190 pairs shared, 1 only here, 6 only there; on shared pairs new/old - 1: median +2.4%, > +5% on 36, < -5% on 0
+V0 rf_base: 191 rows / 65 materials, features=['heat_flux_kWm2', 'mcc_peak_hrr_Wg', 'mcc_char_yield_pct'], log_target=False
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=-0.3688 std=0.7385 min=-1.5726 max=0.5965
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.2012 std=0.0897; material-bootstrap 95% CI [-0.331, 0.557]
+  vs SOTA 0.3: delta (GKF mean) -0.0988; CI excludes SOTA from above: False
+  CATEGORY-grouped GroupKFold 5x10 (11 categories): mean R2=0.0680 std=0.1522; material-bootstrap CI [-0.803, 0.304], category-bootstrap CI [-3.735, 0.245]
+A1 V3 rf_phys_log: 191 rows / 65 materials
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.3750 std=0.4741 min=-0.6685 max=0.8455
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.5672 std=0.0617; material-bootstrap 95% CI [0.283, 0.836]
+  vs SOTA 0.3: delta (GKF mean) +0.2672; CI excludes SOTA from above: False
+  CATEGORY-grouped GroupKFold 5x10 (11 categories): mean R2=0.3151 std=0.1170; material-bootstrap CI [-0.384, 0.499], category-bootstrap CI [-2.116, 0.617]
+A2 V3 rf_phys_log, rate-normalised MCC peak: 191 rows / 65 materials, features=['heat_flux_kWm2', 'mcc_peak_norm_Wg', 'mcc_char_yield_pct', 'cone_mass_per_area_kgm2', 'cone_thickness_mm', 'density_kgm3', 'mcc_total_hr_kJg', 'mcc_t_peak_C', 'mcc_t_onset_C', 'log_kpc'], log_target=True
+  GroupShuffleSplit x10 (leaderboard protocol): mean R2=0.3817 std=0.4670 min=-0.6428 max=0.8332
+  Repeated GroupKFold 5x10 (pooled OOF):        mean R2=0.5645 std=0.0626; material-bootstrap 95% CI [0.284, 0.838]
+  vs SOTA 0.3: delta (GKF mean) +0.2645; CI excludes SOTA from above: False
+  CATEGORY-grouped GroupKFold 5x10 (11 categories): mean R2=0.3153 std=0.1145; material-bootstrap CI [-0.387, 0.493], category-bootstrap CI [-2.116, 0.610]
+
+=== Paired (same rows, same splits; delta CI = material bootstrap of the repeat-mean gain) ===
+  A1 V3 rf_phys_log vs V0 rf_base: material-grouped delta +0.3660 (improved 10/10, CI [+0.169, +0.678]); category-grouped delta +0.2471 (improved 10/10)
+  A2 V3 rf_phys_log, rate-normalised MCC peak vs A1 V3 rf_phys_log: material-grouped delta -0.0026 (improved 3/10, CI [-0.006, -0.000]); category-grouped delta +0.0002 (improved 4/10)
+
+A1 rule (beats pomazi_2026's 0.3 only if CI lower bound > 0.3): lower bound 0.283 -> does NOT beat
+A2 rule (adopt over A1 only if better in >= 8/10 paired repeats AND gain CI excludes 0): 3/10, CI [-0.006, -0.000] -> not met, A1 stays
+
+variant                                         GKF mean     std            95% CI  GSS mean  cat mean            cat CI
+V0 rf_base                                        0.2012  0.0897 [-0.331,  0.557]   -0.3688    0.0680 [-0.803,  0.304]
+A1 V3 rf_phys_log                                 0.5672  0.0617 [ 0.283,  0.836]    0.3750    0.3151 [-0.384,  0.499]
+A2 V3 rf_phys_log, rate-normalised MCC peak       0.5645  0.0626 [ 0.284,  0.838]    0.3817    0.3153 [-0.387,  0.493]
+
+Saved A1 refit to ../../models/v2/phrr_rf_v3.joblib (in-sample R2 0.9589, sanity only)

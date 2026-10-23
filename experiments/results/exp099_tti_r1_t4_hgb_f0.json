@@ -1,0 +1,31 @@
+{
+  "slug": "tti_r1_t4_hgb_f0",
+  "target": "Time to Ignition (s)",
+  "round_config": "experiments/configs/tti_round1.json",
+  "dataset": "data/v2/cone_replicates_fsri.csv minus did_not_ignite/early_stop (681 rows / 76 materials), left joins as exp046",
+  "features": [
+    "heat_flux_kWm2",
+    "specimen_mass_g",
+    "spark_ignitor",
+    "mcc_peak_hrr_Wg",
+    "mcc_char_yield_pct"
+  ],
+  "model": "HGB log1p",
+  "hyperparameters": "HGB log1p on v5 F0 (model-family control); fixed a priori",
+  "code": "data/v2/train_tti_round1.py",
+  "n_rows": 681,
+  "n_groups": 76,
+  "protocol": "gkf_material5x10",
+  "rkf_mean": 0.2671,
+  "rkf_std": 0.0355,
+  "ci_lo": 0.1705,
+  "ci_hi": 0.4649,
+  "paired_vs": "exp046",
+  "paired_delta": -0.0463,
+  "paired_wins": "1/10",
+  "sota": 0.58,
+  "sota_source": "pomazi_2026",
+  "status": "ok",
+  "blocked_reason": "",
+  "note": "family-GKF 0.306; R2 at 25 kW/m2 0.054, other fluxes 0.499; max OOF 410s; TTI round 1 per tti_round1.json"
+}
