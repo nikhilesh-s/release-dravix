@@ -7,7 +7,7 @@ title: "Dravix: formulation-to-cone-calorimeter property models and benchmark co
 version: "2.0.0"
 # date-released: "YYYY-MM-DD"            # fill on publication day
 # doi: "10.5281/zenodo.NNNNNNN"          # reserved software version DOI
-license: "Apache-2.0"                    # PENDING attorney review and consent of all three inventors
+license: "Apache-2.0"
 # repository-code: "https://github.com/nikhilesh-s/REPO-NAME"   # after the public repo exists
 authors:
   - family-names: "Suravarjjala"

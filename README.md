@@ -36,4 +36,4 @@ uv pip install --python .venv312/bin/python -r requirements-record-py312.txt
 
 ## Licence
 
-Pending. See `LICENSE.PENDING`.
+Code: Apache-2.0 (`LICENSE`, `NOTICE`). Benchmark dataset: CC BY 4.0, distributed separately with the dataset record. Patent pending: U.S. provisional application No. 64/054,493.
