@@ -25,6 +25,8 @@ export type Cfrps = {
   score: number;
   sigma: number;
   interval95: [number, number];
+  interval_80?: [number, number];
+  interval_90?: [number, number];
   coverage: number;
   used: string[];
   missing: string[];
@@ -33,10 +35,17 @@ export type Cfrps = {
   weights_used: Record<string, number>;
 };
 
+export type PropertyUncertainty = {
+  interval_80: [number, number];
+  interval_90: [number, number];
+  ood: boolean;
+  ood_reasons: string[];
+};
+
 export type PredictionResult = {
   name: string | null;
   properties: Record<PropertyKey, number>;
-  uncertainty: null;
+  uncertainty: Record<PropertyKey, PropertyUncertainty> | null;
   cfrps: Cfrps;
   warnings: string[];
 };
@@ -47,6 +56,36 @@ export type PredictResponse = {
   weights_provisional: boolean;
   notes: string[];
 };
+
+/** 1 decimal below 100, whole numbers above. */
+export const fmt = (v: number) => (Math.abs(v) >= 100 ? v.toFixed(0) : v.toFixed(1));
+
+/** Unique out-of-domain reasons across the four properties (empty when in domain or no uncertainty). */
+export const oodReasons = (r: PredictionResult) =>
+  [...new Set(Object.values(r.uncertainty ?? {}).flatMap((u) => (u.ood ? u.ood_reasons : [])))];
+
+/**
+ * Confidence badge. Rule: 80% interval width divided by the training p10-p90 span of that property
+ * (snapshot cone_lit_benchmark_v1, 4,529 rows). < 0.5 High, 0.5-1.0 Medium, > 1.0 Low; out-of-domain drops one level.
+ * Recompute TRAIN_SPAN when the engine is retrained (context/research/UNCERTAINTY.md section 8).
+ */
+export type Confidence = 'High' | 'Medium' | 'Low';
+const TRAIN_SPAN: Record<PropertyKey, number> = { TTI: 91, pHRR: 915, THR: 120, avg_HRR: 306 };
+const LEVELS: Confidence[] = ['High', 'Medium', 'Low'];
+export const CONFIDENCE_STYLE: Record<Confidence, string> = {
+  High: 'bg-[#eaf5ee] text-[#2f6b45]',
+  Medium: 'bg-[#fdf6e3] text-[#8a6d1a]',
+  Low: 'bg-[#fbeaea] text-[#9E2A2A]',
+};
+const level = (ratio: number, ood: boolean): Confidence =>
+  LEVELS[Math.min(2, (ratio < 0.5 ? 0 : ratio <= 1 ? 1 : 2) + (ood ? 1 : 0))];
+
+export const propertyConfidence = (key: PropertyKey, u: PropertyUncertainty): Confidence =>
+  level((u.interval_80[1] - u.interval_80[0]) / TRAIN_SPAN[key], u.ood);
+
+/** CFRPS badge: 80% width in score points (0-100), same cut-offs on width/50: < 25 High, 25-50 Medium, > 50 Low; any OOD property drops one level. */
+export const cfrpsConfidence = (r: PredictionResult): Confidence | null =>
+  r.cfrps.interval_80 ? level((r.cfrps.interval_80[1] - r.cfrps.interval_80[0]) / 50, oodReasons(r).length > 0) : null;
 
 export class ApiError extends Error {
   status: number;

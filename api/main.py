@@ -1,4 +1,4 @@
-"""Dravix engine API: password login -> bearer token -> /predict (engine properties + CFRPS).
+"""Dravix engine API: password login -> bearer token -> /predict (engine properties + conformal intervals + OOD flag + CFRPS).
 
 Env (no defaults for secrets; login and predict fail closed when unset):
   DRAVIX_PASSWORD          shared dashboard password
@@ -28,7 +28,7 @@ from fastapi.responses import JSONResponse
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from pydantic import BaseModel, ConfigDict, Field
 
-from api import model
+from api import model, uncertainty
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "engine/score"))
 from cfrps import ENGINE_OUTPUTS, UNITS, WEIGHTS, WEIGHTS_DIR, WEIGHTS_VERSION, cfrps  # noqa: E402
@@ -38,6 +38,7 @@ WEIGHTS_PROVISIONAL = json.loads((WEIGHTS_DIR / f"cfrs_weights_{WEIGHTS_VERSION}
 
 TTL = int(os.environ.get("DRAVIX_TOKEN_TTL", "28800"))
 META = model.load()
+UQ = uncertainty.Uncertainty()
 
 app = FastAPI(title="Dravix engine API", version="2.0.0-preview")
 app.add_middleware(
@@ -124,7 +125,7 @@ def warn(f: Formulation) -> list[str]:
 
 @app.get("/health")
 def health():
-    return {"status": "ok", "model": META, "weights_provisional": WEIGHTS_PROVISIONAL, "weights_version": WEIGHTS_VERSION}
+    return {"status": "ok", "model": META, "uncertainty": UQ.meta(), "weights_provisional": WEIGHTS_PROVISIONAL, "weights_version": WEIGHTS_VERSION}
 
 
 @app.post("/login")
@@ -151,14 +152,19 @@ def predict(body: Formulation | Annotated[list[Formulation], Field(min_length=1,
     rows = [f.model_dump(exclude={"name"} | ({"is_control"} if f.is_control is None else set())) for f in items]
     try:
         preds = model.E.predict(rows)
+        unc, mu, h90 = UQ.annotate(rows, model.E._B)
     except Exception as e:  # noqa: BLE001  engine raises plain errors for bad input
         raise HTTPException(400, f"engine error: {e}") from e
     results = []
-    for f, p in zip(items, preds):
+    for i, (f, p) in enumerate(zip(items, preds)):
         props = {k: p[k] for k in ENGINE_OUTPUTS}
-        results.append({"name": f.name, "properties": props, "uncertainty": None, "cfrps": cfrps(props), "warnings": warn(f)})
+        c = cfrps(props)
+        c.update(UQ.cfrs(c["score"], mu[i], h90[i], model.E._B, c["weights_used"]))
+        results.append({"name": f.name, "properties": props, "uncertainty": unc[i], "cfrps": c, "warnings": warn(f)})
     return {"results": results, "units": {k: UNITS[k] for k in ENGINE_OUTPUTS},
             "cfrps_weights": WEIGHTS, "weights_version": WEIGHTS_VERSION, "weights_provisional": WEIGHTS_PROVISIONAL,
-            "notes": ["The engine returns point predictions only (no uncertainty); CFRPS interval95 is therefore the point score.",
+            "uncertainty_method": UQ.meta(),
+            "notes": ["Ranges are 80% and 90% conformal intervals calibrated on papers the model never saw (paper-grouped); "
+                      "'out of domain' means the formulation is unlike the training data and the range may not hold.",
                       "CFRPS is 0-100, higher = more fire risk; compare formulations at the same heat flux.",
                       f"CFRPS weights {WEIGHTS_VERSION}: fitted to UL-94 outcomes; expert review pending." if WEIGHTS_PROVISIONAL else f"CFRPS weights {WEIGHTS_VERSION}."]}

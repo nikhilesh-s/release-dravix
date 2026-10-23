@@ -4,9 +4,19 @@ import MaterialCard from '../components/MaterialCard';
 import SectionBanner from '../components/SectionBanner';
 import { PRESETS, inputClass, useEngineOptions } from '../forms/FormulationForm';
 import PageContainer from '../layout/PageContainer';
-import { api, type Formulation, type PredictResponse } from '../services/api';
+import { CONFIDENCE_STYLE, api, cfrpsConfidence, oodReasons, type Formulation, type PredictResponse } from '../services/api';
 
-export type RankedRow = { rank: number; name: string; score: number; warnings: string[]; properties: PredictResponse['results'][0]['properties'] };
+export type RankedRow = {
+  rank: number;
+  name: string;
+  score: number;
+  range80?: [number, number];
+  range90?: [number, number];
+  confidence: ReturnType<typeof cfrpsConfidence>;
+  ood: string[];
+  warnings: string[];
+  properties: PredictResponse['results'][0]['properties'];
+};
 
 function ScreenPage() {
   const { matrices, forms } = useEngineOptions();
@@ -15,6 +25,7 @@ function ScreenPage() {
   const [units, setUnits] = useState<PredictResponse['units'] | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [showRange, setShowRange] = useState(false);
 
   const setRow = (i: number, patch: Partial<Formulation>) => setRows(rows.map((r, j) => (j === i ? { ...r, ...patch } : r)));
 
@@ -26,7 +37,16 @@ function ScreenPage() {
       setUnits(res.units);
       setRanking(
         res.results
-          .map((r, i) => ({ name: r.name || `Formulation ${i + 1}`, score: r.cfrps.score, warnings: r.warnings ?? [], properties: r.properties }))
+          .map((r, i) => ({
+            name: r.name || `Formulation ${i + 1}`,
+            score: r.cfrps.score,
+            range80: r.cfrps.interval_80,
+            range90: r.cfrps.interval_90,
+            confidence: cfrpsConfidence(r),
+            ood: oodReasons(r),
+            warnings: r.warnings ?? [],
+            properties: r.properties,
+          }))
           .sort((a, b) => a.score - b.score)
           .map((r, i) => ({ ...r, rank: i + 1 })),
       );
@@ -81,7 +101,20 @@ function ScreenPage() {
       </MaterialCard>
 
       <div className="grid gap-6 xl:grid-cols-[0.95fr_1.05fr]">
-        <MaterialCard title="Ranked formulations" subtitle="CFRPS 0-100, higher = more fire risk. Weights provisional.">
+        <MaterialCard
+          title="Ranked formulations"
+          subtitle="CFRPS 0-100, higher = more fire risk. Weights provisional. Overlapping 80% ranges mean the order is not settled."
+        >
+          {ranking.length ? (
+            <button
+              type="button"
+              onClick={() => setShowRange(!showRange)}
+              aria-expanded={showRange}
+              className="mb-3 rounded-full border border-[var(--dravix-border)] px-3 py-1 text-xs text-[var(--dravix-ink)]"
+            >
+              {showRange ? 'Hide range' : 'Show range'}
+            </button>
+          ) : null}
           <div className="space-y-3">
             {ranking.map((row) => (
               <div key={row.rank} className="flex flex-wrap items-center justify-between gap-3 rounded-[1.25rem] border border-[var(--dravix-border)] p-4">
@@ -91,8 +124,19 @@ function ScreenPage() {
                 </div>
                 <div className="text-right text-sm text-[var(--dravix-ink-soft)]">
                   <div className="text-xl font-light text-[var(--dravix-ink)]">CFRPS {row.score.toFixed(1)}</div>
+                  {row.confidence ? (
+                    <span className={`inline-block rounded-full px-2 py-0.5 text-[10px] font-medium ${CONFIDENCE_STYLE[row.confidence]}`}>
+                      {row.confidence} confidence
+                    </span>
+                  ) : null}
+                  {showRange && row.range80 && row.range90 ? (
+                    <div className="text-xs">
+                      80% range {row.range80[0].toFixed(1)} – {row.range80[1].toFixed(1)} · 90%: {row.range90[0].toFixed(1)} – {row.range90[1].toFixed(1)}
+                    </div>
+                  ) : null}
                   TTI {row.properties.TTI.toFixed(0)} {units?.TTI} • pHRR {row.properties.pHRR.toFixed(0)} {units?.pHRR} • THR{' '}
                   {row.properties.THR.toFixed(1)} {units?.THR}
+                  {row.ood.length ? <div className="mt-1 text-xs text-[#a65a1f]">Out of domain: {row.ood.join('; ')}</div> : null}
                   {row.warnings.length ? <div className="mt-1 text-xs text-[#a65a1f]">Warning: {row.warnings.join('; ')}</div> : null}
                 </div>
               </div>

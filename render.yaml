@@ -1,5 +1,5 @@
 # Dravix engine API (preview). Blueprint: Render dashboard > New > Blueprint > nikhilesh-s/dravix-master, branch relaunch-v2.
-# The model is the committed compact artifact api/dravix_engine_compact.joblib (17 MB, ~230 MB RSS),
+# The model is the committed compact artifact api/dravix_engine_compact.joblib (17 MB) plus api/uncertainty.joblib (47 kB); peak RSS ~260 MB,
 # so the build only installs packages. Rebuild the artifact locally with: python3 api/build_model.py
 services:
   - type: web

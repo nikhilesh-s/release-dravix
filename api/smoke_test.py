@@ -43,7 +43,7 @@ def check(name, ok):
 
 
 s, _, b = call("GET", "/health")
-check("GET /health 200", s == 200 and b["status"] == "ok" and b["weights_provisional"] is True and b["weights_version"] == "v1")
+check("GET /health 200", s == 200 and b["status"] == "ok" and b["uncertainty"]["levels"] == [0.8, 0.9] and b["weights_provisional"] is True and b["weights_version"] == "v1")
 check("POST /login bad password -> 401", call("POST", "/login", {"password": "wrong"})[0] == 401)
 s, _, b = call("POST", "/login", {"password": PW})
 check("POST /login good password -> token", s == 200 and "." in b.get("token", ""))
@@ -55,6 +55,14 @@ r = (b or {}).get("results", [{}])[0]
 check("POST /predict with token -> 4 properties + CFRPS",
       s == 200 and set(r.get("properties", {})) == {"TTI", "pHRR", "THR", "avg_HRR"} and 0 <= r["cfrps"]["score"] <= 100)
 print("  ", json.dumps(r.get("properties")), "CFRPS", round(r.get("cfrps", {}).get("score", -1), 2))
+u, c = r.get("uncertainty") or {}, r.get("cfrps", {})
+check("POST /predict -> interval_80 inside interval_90 around each property, ood flag",
+      set(u) == set(r.get("properties", {})) and all(
+          v["interval_90"][0] <= v["interval_80"][0] <= r["properties"][k] <= v["interval_80"][1] <= v["interval_90"][1]
+          and isinstance(v["ood"], bool) for k, v in u.items()))
+check("POST /predict -> CFRPS interval_80/90 contain the score",
+      c.get("interval_90", [1, 0])[0] <= c.get("interval_80", [1, 0])[0] <= c.get("score", -1) <= c["interval_80"][1] <= c["interval_90"][1])
+print("   intervals", json.dumps({k: v["interval_80"] for k, v in u.items()}), "CFRPS 80%", c.get("interval_80"))
 no_ctrl = {k: v for k, v in EXAMPLE.items() if k != "fr_total_wtpct"}
 s, _, b = call("POST", "/predict", [no_ctrl, dict(no_ctrl, is_control=1)], {"Authorization": f"Bearer {token}"})
 check("POST /predict list, no is_control (engine demo bug) -> 200", s == 200 and len(b["results"]) == 2)
@@ -67,6 +75,8 @@ s, _, b = call("POST", "/predict", dict(EXAMPLE, heat_flux_kWm2=500), {"Authoriz
 check("POST /predict flux 500 -> 422 with readable message", s == 422 and "heat_flux_kWm2" in str(b))
 s, _, b = call("POST", "/predict", dict(EXAMPLE, heat_flux_kWm2=150, matrix_canonical="XYZ"), {"Authorization": f"Bearer {token}"})
 check("POST /predict out-of-range flux + unknown matrix -> warnings", s == 200 and len(b["results"][0]["warnings"]) == 2)
+check("POST /predict out-of-range flux + unknown matrix -> ood on every property",
+      s == 200 and all(v["ood"] and len(v["ood_reasons"]) >= 2 for v in b["results"][0]["uncertainty"].values()))
 pre = {"Origin": ORIGIN, "Access-Control-Request-Method": "POST", "Access-Control-Request-Headers": "authorization,content-type"}
 s, h, _ = call("OPTIONS", "/predict", headers=pre)
 check(f"CORS preflight from {ORIGIN} allowed", s == 200 and h.get("access-control-allow-origin") == ORIGIN)
