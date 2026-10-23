@@ -13,6 +13,7 @@ Run: uvicorn api.main:app --port 8000
 import base64
 import hashlib
 import hmac
+import json
 import os
 import sys
 import time
@@ -30,7 +31,10 @@ from pydantic import BaseModel, ConfigDict, Field
 from api import model
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "engine/score"))
-from cfrps import ENGINE_OUTPUTS, UNITS, WEIGHTS, cfrps  # noqa: E402
+from cfrps import ENGINE_OUTPUTS, UNITS, WEIGHTS, WEIGHTS_DIR, WEIGHTS_VERSION, cfrps  # noqa: E402
+
+# provisional until the expert (AHP) prior is applied to the served weights config
+WEIGHTS_PROVISIONAL = json.loads((WEIGHTS_DIR / f"cfrs_weights_{WEIGHTS_VERSION}.json").read_text())["expert_prior"]["weights"] is None
 
 TTL = int(os.environ.get("DRAVIX_TOKEN_TTL", "28800"))
 META = model.load()
@@ -97,7 +101,7 @@ class Formulation(BaseModel):
     filler_total_wtpct: float | None = Field(None, ge=0, le=100)
     density_kgm3: float | None = Field(None, gt=0, le=20000)
     area_cm2: float | None = Field(None, gt=0, le=10000)
-    is_control: int = Field(0, ge=0, le=1)  # always sent to the engine (its _frame fails when absent)
+    is_control: int | None = Field(None, ge=0, le=1)  # omitted -> engine defaults to 0 (fixed upstream in c2f91e7)
 
 
 # training-set ranges (data/v2/cone_lit_benchmark_v1.csv): flux 10-95 kW/m2, thickness 0.04-70 mm
@@ -120,7 +124,7 @@ def warn(f: Formulation) -> list[str]:
 
 @app.get("/health")
 def health():
-    return {"status": "ok", "model": META, "weights_provisional": True}
+    return {"status": "ok", "model": META, "weights_provisional": WEIGHTS_PROVISIONAL, "weights_version": WEIGHTS_VERSION}
 
 
 @app.post("/login")
@@ -144,7 +148,7 @@ def login(body: Login, request: Request):
 @app.post("/predict", dependencies=[Depends(require_token)])
 def predict(body: Formulation | Annotated[list[Formulation], Field(min_length=1, max_length=50)]):
     items = body if isinstance(body, list) else [body]
-    rows = [f.model_dump(exclude={"name"}) for f in items]
+    rows = [f.model_dump(exclude={"name"} | ({"is_control"} if f.is_control is None else set())) for f in items]
     try:
         preds = model.E.predict(rows)
     except Exception as e:  # noqa: BLE001  engine raises plain errors for bad input
@@ -154,7 +158,7 @@ def predict(body: Formulation | Annotated[list[Formulation], Field(min_length=1,
         props = {k: p[k] for k in ENGINE_OUTPUTS}
         results.append({"name": f.name, "properties": props, "uncertainty": None, "cfrps": cfrps(props), "warnings": warn(f)})
     return {"results": results, "units": {k: UNITS[k] for k in ENGINE_OUTPUTS},
-            "cfrps_weights": WEIGHTS, "weights_provisional": True,
+            "cfrps_weights": WEIGHTS, "weights_version": WEIGHTS_VERSION, "weights_provisional": WEIGHTS_PROVISIONAL,
             "notes": ["The engine returns point predictions only (no uncertainty); CFRPS interval95 is therefore the point score.",
                       "CFRPS is 0-100, higher = more fire risk; compare formulations at the same heat flux.",
-                      "CFRPS weights are provisional pending sign-off."]}
+                      f"CFRPS weights {WEIGHTS_VERSION}: fitted to UL-94 outcomes; expert review pending." if WEIGHTS_PROVISIONAL else f"CFRPS weights {WEIGHTS_VERSION}."]}

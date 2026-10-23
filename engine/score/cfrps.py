@@ -12,8 +12,10 @@ renormalised over the inputs that are present; `coverage` reports how much weigh
 predicts no smoke property).
 
 Provenance (see context/facts/patent.md, CFRPS section):
-- Weights and ranges are Dravix choices, not the patent's. Weights: plans/FABLE_PLAN_2026-10-01.md:209
-  ranking, with the FIGRA slot (0.20) given to avg HRR because the engine does not predict FIGRA.
+- Weights and ranges are Dravix choices, not the patent's. Weights are versioned JSON configs in
+  weights/ (cfrs_weights_<version>.json, with provenance). Default v1: calibrated to within-paper UL-94
+  rankings (context/research/CFRS_WEIGHTS.md). v0 = the old placeholders (plans/FABLE_PLAN_2026-10-01.md:209,
+  FIGRA slot given to avg HRR), kept for reproducibility: cfrps(props, weights=load_weights("v0")).
 - Ranges: rounded 5th-95th percentiles of the engine's training snapshot
   data/v2/cone_lit_benchmark_v1.csv (all heat fluxes pooled; values > 0).
 - `dfrs_v1` reproduces the old engine's DFRS exactly (nikhilesh-s/dravix-engine
@@ -23,7 +25,9 @@ Compare scores at the same heat flux: TTI and pHRR depend on it and the ranges p
 """
 from __future__ import annotations
 
+import json
 import math
+from pathlib import Path
 
 import numpy as np
 
@@ -40,7 +44,21 @@ UNITS = {k: v[0] for k, v in PROPERTIES.items()}
 RANGES = {k: (v[1], v[2]) for k, v in PROPERTIES.items()}
 DIRECTION = {k: v[3] for k, v in PROPERTIES.items()}
 
-WEIGHTS = {"pHRR": 0.30, "TTI": 0.20, "avg_HRR": 0.20, "THR": 0.10, "LOI": 0.10, "char_residue": 0.10}
+WEIGHTS_DIR = Path(__file__).resolve().parent / "weights"
+DEFAULT_WEIGHTS_VERSION = "v1"
+
+
+def load_weights(version: str = DEFAULT_WEIGHTS_VERSION) -> dict:
+    """Weights dict from weights/cfrs_weights_<version>.json; checked >= 0, known keys, sum 1."""
+    w = json.loads((WEIGHTS_DIR / f"cfrs_weights_{version}.json").read_text())["weights"]
+    w = {k: float(v) for k, v in w.items()}
+    if set(w) != set(PROPERTIES) or any(v < 0 for v in w.values()) or not math.isclose(sum(w.values()), 1.0, abs_tol=1e-9):
+        raise ValueError(f"bad weights config {version}: {w}")
+    return w
+
+
+WEIGHTS = load_weights()
+WEIGHTS_VERSION = DEFAULT_WEIGHTS_VERSION
 ENGINE_OUTPUTS = ("TTI", "pHRR", "THR", "avg_HRR")  # keys of dravix_engine.predict() rows
 # patent FIG. 18 index names (spec [00276]-[00281], pp. 96-97); LOI placed with ignition as old DFRS did
 INDICES = {"ignition_resistance": ("TTI", "LOI"), "heat_release": ("pHRR", "THR", "avg_HRR"),

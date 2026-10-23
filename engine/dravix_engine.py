@@ -32,7 +32,7 @@ def _frame(rows):
     df = pd.DataFrame(rows)
     for c in T.NUM:
         df[c] = pd.to_numeric(df.get(c), errors="coerce")
-    df["is_control"] = pd.to_numeric(df.get("is_control", 0), errors="coerce").fillna(0)
+    df["is_control"] = pd.to_numeric(df.get("is_control", pd.Series(0, index=df.index)), errors="coerce").fillna(0)
     df["group"] = df.get("group", "query")
     return df
 
@@ -79,10 +79,14 @@ def predict(rows):
     idx = {k: i for i, k in enumerate(_B["vocab"])}
     A = np.zeros((len(df), len(idx)))
     for i, comp in enumerate(df["components"]):
-        for name, role, v, u in T.parse_components(comp):
+        cs = T.parse_components(comp)
+        # same unit handling as training (T.specific_features): phr -> wt% of the whole recipe
+        units = {c[3] for c in cs if c[1] != "matrix" and not np.isnan(c[2])}
+        tot = 100.0 + sum(c[2] for c in cs if c[1] != "matrix" and not np.isnan(c[2])) if units == {"phr"} else None
+        for name, role, v, u in cs:
             j = idx.get(T._norm(name))
             if j is not None and role != "matrix" and not np.isnan(v):
-                A[i, j] = v if u == "wt%" else 1.0
+                A[i, j] = 100.0 * v / tot if tot else (v if u == "wt%" else 1.0)
     X = pd.concat([X, pd.DataFrame(A, columns=[f"a_{i}" for i in range(len(idx))], index=df.index)], axis=1)
     X = X.reindex(columns=_B["columns"], fill_value=0.0).to_numpy(float)
     out = []

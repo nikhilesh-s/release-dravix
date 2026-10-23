@@ -43,7 +43,7 @@ def check(name, ok):
 
 
 s, _, b = call("GET", "/health")
-check("GET /health 200", s == 200 and b["status"] == "ok" and b["weights_provisional"] is True)
+check("GET /health 200", s == 200 and b["status"] == "ok" and b["weights_provisional"] is True and b["weights_version"] == "v1")
 check("POST /login bad password -> 401", call("POST", "/login", {"password": "wrong"})[0] == 401)
 s, _, b = call("POST", "/login", {"password": PW})
 check("POST /login good password -> token", s == 200 and "." in b.get("token", ""))
@@ -58,6 +58,10 @@ print("  ", json.dumps(r.get("properties")), "CFRPS", round(r.get("cfrps", {}).g
 no_ctrl = {k: v for k, v in EXAMPLE.items() if k != "fr_total_wtpct"}
 s, _, b = call("POST", "/predict", [no_ctrl, dict(no_ctrl, is_control=1)], {"Authorization": f"Bearer {token}"})
 check("POST /predict list, no is_control (engine demo bug) -> 200", s == 200 and len(b["results"]) == 2)
+# phr is converted to wt% exactly once, inside the engine (c2f91e7): 100 phr PP + 25 phr APP == 80/20 wt%
+phr = dict(EXAMPLE, components="PP|matrix|100 phr; APP|FR|25 phr")
+s, _, b = call("POST", "/predict", [EXAMPLE, phr], {"Authorization": f"Bearer {token}"})
+check("POST /predict phr input == wt% equivalent", s == 200 and b["results"][0]["properties"] == b["results"][1]["properties"])
 check("POST /predict invalid body -> 422", call("POST", "/predict", {"matrix_canonical": "PP"}, {"Authorization": f"Bearer {token}"})[0] == 422)
 s, _, b = call("POST", "/predict", dict(EXAMPLE, heat_flux_kWm2=500), {"Authorization": f"Bearer {token}"})
 check("POST /predict flux 500 -> 422 with readable message", s == 422 and "heat_flux_kWm2" in str(b))

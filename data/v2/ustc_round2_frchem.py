@@ -12,51 +12,7 @@ from rdkit import Chem, RDLogger
 from rdkit.Chem import Descriptors, rdMolDescriptors
 RDLogger.DisableLog("rdApp.*")
 
-ch = pd.read_csv(T.PARTS / "fr_chemistry.csv", dtype=str).set_index("name")
-EL = ["P", "N", "Si", "B", "S", "halogen", "metal"]
-CL = sorted(ch["fr_class"].dropna().unique())
-def num(x):
-    try: return float(x)
-    except Exception: return 0.0
-def desc(smi):
-    m = Chem.MolFromSmiles(smi) if isinstance(smi, str) else None
-    if m is None: return [np.nan] * 4
-    return [Descriptors.MolWt(m), rdMolDescriptors.CalcNumAromaticRings(m),
-            sum(a.GetSymbol() == "P" for a in m.GetAtoms()), Descriptors.TPSA(m)]
-
-def frchem(df):
-    rows = []
-    for comp in df["components"]:
-        cs = T.parse_components(comp)
-        units = {c[3] for c in cs if c[1] != "matrix" and not np.isnan(c[2])}
-        tot = 100.0 + sum(c[2] for c in cs if c[1] != "matrix" and not np.isnan(c[2])) if units == {"phr"} else None
-        f = dict.fromkeys([f"el_{e}" for e in EL] + [f"cl_{c}" for c in CL] + ["reactive_wt"], 0.0)
-        main, mainw = None, -1
-        for name, role, v, u in cs:
-            if role not in ("fr", "synergist") or np.isnan(v): continue
-            w = 100 * v / tot if tot else (v if u == "wt%" else np.nan)
-            if np.isnan(w): continue
-            n = T._norm(name)
-            if n in ch.index:
-                r = ch.loc[n]
-                for e in EL: f[f"el_{e}"] += w * num(r[e])
-                if isinstance(r["fr_class"], str): f[f"cl_{r['fr_class']}"] += w
-                if r["reactive"] == "1": f["reactive_wt"] += w
-                if w > mainw: main, mainw = r["smiles"], w
-        d = desc(main)
-        f.update(dict(fr_mw=d[0], fr_arom=d[1], fr_nP=d[2], fr_tpsa=d[3]))
-        rows.append(f)
-    return pd.DataFrame(rows, index=df.index)
-
-def fr_group(comp):
-    for name, role, v, u in T.parse_components(comp):
-        if role in ("fr", "synergist"): return T._norm(name)
-    return "none"
-
-def has_P(comp):
-    return any(role in ("fr", "synergist") and num(ch.loc[T._norm(n), "P"]) > 0
-               for n, role, v, u in T.parse_components(comp) if T._norm(n) in ch.index)
-
+from fr_chem_features import ch, EL, CL, num, desc, frchem, fr_group, has_P, strict_groups  # noqa: F401
 df = pd.read_csv(T.SNAP, low_memory=False)
 for c in T.NUM: df[c] = pd.to_numeric(df[c], errors="coerce")
 cm = pd.read_csv(T.CLASS_MAP, dtype=str); cmap = dict(zip(cm["component_name"].str.strip().str.lower(), cm["class"]))

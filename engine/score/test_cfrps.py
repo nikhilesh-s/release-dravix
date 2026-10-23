@@ -4,7 +4,7 @@ import math
 import pytest
 
 from cfrps import (DIRECTION, ENGINE_OUTPUTS, INDICES, PROPERTIES, RANGES, UNITS, WEIGHTS, cfrps,
-                   dfrs_v1, subscore)
+                   dfrs_v1, load_weights, subscore)
 
 # illustrative values shaped like dravix_engine.predict() rows for engine/example.json
 # (PP + 20 wt% APP vs neat PP); hand-picked, not model output. In UNITS.
@@ -69,12 +69,13 @@ def test_patent_indices_partition_inputs():
 
 def test_missing_inputs_renormalize_and_report_coverage():
     r = cfrps(FR)  # engine outputs only: no char/LOI
-    assert r["coverage"] == pytest.approx(0.80)
+    assert r["coverage"] == pytest.approx(sum(WEIGHTS[k] for k in ENGINE_OUTPUTS))
+    assert cfrps(FR, weights=load_weights("v0"))["coverage"] == pytest.approx(0.80)
     assert sorted(r["missing"]) == ["LOI", "char_residue"]
     assert math.isclose(sum(r["weights_used"].values()), 1.0)
     r2 = cfrps({"pHRR": 1300.0, "TTI": None, "THR": float("nan")})
     assert r2["used"] == ["pHRR"] and r2["score"] == pytest.approx(100.0)
-    assert r2["coverage"] == pytest.approx(0.30)
+    assert r2["coverage"] == pytest.approx(WEIGHTS["pHRR"])
     with pytest.raises(ValueError):
         cfrps({"TTI": None})
     assert cfrps(dict(FR, unrelated=5))["score"] == cfrps(FR)["score"]
