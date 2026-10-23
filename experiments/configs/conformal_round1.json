@@ -1,0 +1,64 @@
+{
+  "round": "conformal_round1",
+  "item": "context/research/ROADMAP_v2.md item 6 (grouped conformal intervals + applicability-domain flag in the engine API) and item 7(c) (Monte-Carlo the per-target intervals into a CFRS interval)",
+  "status": "declared",
+  "declared": "Drafted 2026-10-22 by the Uncertainty Engineer (Claude) on branch engine-uncertainty, cut from relaunch-v2 at aaf695f. Written before any interval, residual, coverage or width had been computed for the engine model; the git commit time is the timestamp. Committed before api/build_uncertainty.py runs.",
+  "report_only": "No R2, CI, leaderboard row or number of record changes. Nothing is written to experiments/results/. Output: experiments/runs/conformal_round1.json (+ .log) and the serving artifact api/uncertainty.joblib.",
+  "prior_looks": "None for this model. data/v2/conformal*.py covered the FSRI/LOI records (different populations and models). For the engine, only shapes were inspected while drafting: rows per target (TTI 3,368 / pHRR 4,017 / THR 3,355 / avg_HRR 759, from context/facts/engine.md), 806 papers, and the label-free count of components per row (p99 = 10, max = 12) and heat-flux range (10-95 kW/m2).",
+
+  "data": {
+    "snapshot": "data/v2/cone_lit_benchmark_v1.csv",
+    "sha256": "0b2af8e1817bdda1a9b1980e481b44d75ac62763f032696090aacd5545e05f99",
+    "sealed_set_rule": "context/decisions/SEALED_TEST_SET.md: wave 2 is never used to train, tune or calibrate. The snapshot is the 2026-10-17 engine training set and predates the wave-2 commit (0fcca80, Oct 20); the script asserts the sha above and the compact artifact's data_sha256 before doing anything, so no wave-2 row can enter.",
+    "rows_per_target": "engine rule: target > 0 and heat_flux_kWm2 present (engine/dravix_engine.py train)",
+    "groups": "paper = the snapshot's `group` column (DOI-level paper id used by every P3 run)"
+  },
+
+  "model": {
+    "what": "The engine's own model, unchanged: T.primary() (HGB + ExtraTrees + Ridge average) on log1p(y), engine features (v3 + the frozen top-100 additive vocabulary from the compact bundle), re-fit per fold. Point predictions served by the API stay exactly what engine/dravix_engine.py predict returns.",
+    "feature_builder": "api/uncertainty.features() re-implements the engine's predict-time feature block (engine/ is Arnav's and is not edited). The build script asserts it equals T.build_X(TOPN=100) on the training snapshot, and api/test_uncertainty.py asserts the mean of the compact model's members on it equals the engine's served prediction."
+  },
+
+  "method": {
+    "score_scale": "log1p; residual r = log1p(y) - mu, mu = mean of the three member predictions",
+    "candidates": {
+      "A_abs": "s = |r| (split/cross conformal, constant width on the log scale)",
+      "B_spread": "s = |r| / (sd_members + median(sd_members over calibration rows)); sd_members = std of the 3 member predictions on the log scale",
+      "C_knn": "s = |r| / (d_nn + median(d_nn over calibration rows)); d_nn = Euclidean distance to the nearest training row of the fitting set (other papers only) in the standardized feature space below"
+    },
+    "feature_space_for_distance": "engine feature matrix; NaN -> training column median; each column divided by its training std (std 0 -> column dropped). Label-free, fit on the whole snapshot.",
+    "quantile": "group-weighted conformal quantile, data/v2/conformal.py weighted_upper with weights = 1 / rows of the paper (each paper carries weight 1), alpha = 0.20 and 0.10",
+    "interval": "log scale [mu - q*sigma, mu + q*sigma], back-transformed with expm1 and clipped to the engine's training range [ymin, ymax] for that target (clipping cannot change coverage of a training row)",
+    "levels": [0.80, 0.90]
+  },
+
+  "validation": {
+    "outer": "repeats r = 0..4: GroupKFold(5, shuffle=True, random_state=r) by paper. Each fold refits the engine model on 4/5 of papers; held-out rows get OOF mu, sd_members and d_nn (nearest neighbour among the fitting rows of that target).",
+    "conformal_step": "within each repeat, GroupKFold(5, shuffle=True, random_state=1000+r) by paper over the OOF rows: the quantile is computed from 4/5 of papers' OOF scores and applied to the other 1/5. Every interval is scored on papers that neither fitted the model nor calibrated the quantile.",
+    "metrics_per_target_level_candidate": [
+      "row coverage (mean over the 5 repeats; min and max across repeats)",
+      "paper-mean coverage (mean over papers of each paper's row coverage)",
+      "mean and median width in raw units (clipped), mean full width on the log1p scale",
+      "coverage and median width split by the OOD flag (flagged vs not), 90% level"
+    ],
+    "cfrs_check": "rows with all four targets measured: measured CFRS (engine/score/cfrps.py, v1 weights) vs the Monte-Carlo CFRS 80/90% interval built from OOF mu, the selected candidate's sigma and per-target q (calibrated on the other 4/5 papers). Report-only coverage and mean width."
+  },
+
+  "selection_rule": "Per target, a candidate is eligible if its mean row coverage is >= nominal - 0.02 at both levels AND its paper-mean coverage is >= nominal - 0.05 at both levels. Among eligible candidates pick the smallest mean log-scale width at 90%. If none is eligible, ship A_abs and say so. The rule is applied once, mechanically, by the script.",
+
+  "ood_flag (fixed here, not tuned)": {
+    "unseen_matrix": "matrix_canonical not among the engine's mat_cats (matrices with >= 3 papers). In validation: fewer than 3 papers with that matrix in the fitting folds.",
+    "unseen_form": "material_form not in the engine's form_cats",
+    "additive_count": "number of non-matrix components > 99th percentile of the training snapshot (label-free; stored in the artifact)",
+    "heat_flux": "heat flux missing or outside 10-95 kW/m2 (the training range)",
+    "distance": "d_nn to the target's training rows > 95th percentile of the OOF d_nn distribution (repeat 0) for that target",
+    "use": "flag + reasons per target in the API response; the interval is not widened by the flag (C_knn widens by distance if selected). Coverage on flagged rows is reported so the flag's meaning is measured, not assumed."
+  },
+
+  "cfrs_interval": {
+    "how": "Monte Carlo, 4,000 draws, fixed seed (common random numbers, so for a fixed sigma every draw is monotone in each property and the percentiles are monotone too). Per draw: log1p value_t = mu_t + z_t * sigma_t * q90_t / 1.645 with z ~ N(0, Corr); Corr = Pearson correlation of the signed normalized OOF residuals r/sigma between targets (pairwise-complete rows, repeat 0, eigenvalues floored at 1e-6). Back-transform, clip to [ymin, ymax], score with the served CFRS weights (renormalized over the four engine outputs, exactly as cfrps() does). Interval = 10-90 / 5-95 / 2.5-97.5 percentiles, widened if needed to contain the point score.",
+    "monotonicity_test": "api/test_uncertainty.py: shifting one property's mu toward higher risk with sigma fixed never lowers the CFRS point or either bound."
+  },
+
+  "ram_budget": "API process peak RSS must stay < 512 MB (Render free). Measured after the change with the same method as ENGINE_QA (model load + predict)."
+}
