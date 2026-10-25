@@ -1,0 +1,13 @@
+attempt A0s: DIAGNOSTIC (coordinator request): Arnav's amendment 13 (A0) re-scored with the A3 strict groups, to measure the synonym-leak delta on his baseline.
+seeds 0-9
+  seed 0: MAE 162.0 R2 0.625
+  seed 1: MAE 158.3 R2 0.642
+  seed 2: MAE 177.4 R2 0.545
+  seed 3: MAE 166.1 R2 0.581
+  seed 4: MAE 173.8 R2 0.558
+  seed 5: MAE 195.6 R2 0.456
+  seed 6: MAE 170.0 R2 0.596
+  seed 7: MAE 169.8 R2 0.603
+  seed 8: MAE 169.6 R2 0.574
+  seed 9: MAE 160.1 R2 0.622
+RESULT A0s: n=183 papers=54 FR groups=37 features=207 | MAE 170.3 +- 10.2 CI [136.5, 197.6] R2 0.580 | baseline ctrl x median ratio MAE 197.5

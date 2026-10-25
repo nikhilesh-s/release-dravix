@@ -1,0 +1,172 @@
+{
+ "a_FRI_FPI_vs_CFRS": {
+  "n_groups": 429,
+  "n_rows": 2531,
+  "note": "FRI/FPI higher = better, so negative tau = agreement; both are functions of the same cone inputs (consistency check).",
+  "FRI_v0": {
+   "n_groups": 429,
+   "mean_tau": -0.8109047242900392,
+   "median_tau": -0.909090909090909,
+   "share_tau_lt_0": 0.9766899766899767,
+   "row_weighted_mean_tau": -0.8075814184720459
+  },
+  "FRI_eq": {
+   "n_groups": 429,
+   "mean_tau": -0.8004114043182164,
+   "median_tau": -0.9047619047619049,
+   "share_tau_lt_0": 0.9743589743589743,
+   "row_weighted_mean_tau": -0.7888834660083464
+  },
+  "FRI_fitted": {
+   "n_groups": 429,
+   "mean_tau": -0.7674366161443034,
+   "median_tau": -0.9007896044148775,
+   "share_tau_lt_0": 0.9557109557109557,
+   "row_weighted_mean_tau": -0.7640103883036795
+  },
+  "FPI_v0": {
+   "n_groups": 429,
+   "mean_tau": -0.7423875569481405,
+   "median_tau": -0.8666666666666666,
+   "share_tau_lt_0": 0.9487179487179487,
+   "row_weighted_mean_tau": -0.7409075574364893
+  },
+  "FPI_eq": {
+   "n_groups": 429,
+   "mean_tau": -0.7006868078004659,
+   "median_tau": -0.7999999999999999,
+   "share_tau_lt_0": 0.9347319347319347,
+   "row_weighted_mean_tau": -0.6884367994168301
+  },
+  "FPI_fitted": {
+   "n_groups": 429,
+   "mean_tau": -0.694562645437216,
+   "median_tau": -0.7999999999999999,
+   "share_tau_lt_0": 0.9370629370629371,
+   "row_weighted_mean_tau": -0.6896152191489426
+  }
+ },
+ "b_faa_tables": {
+  "note": "Pairs are across polymers (no within-paper control); single small-scale index vs UL-94 class.",
+  "polymers_AR0514": {
+   "LOI_subscore": {
+    "C": 0.9685792349726776,
+    "n_pairs": 366,
+    "n_rows": 35
+   },
+   "char_subscore": {
+    "C": 0.8070175438596491,
+    "n_pairs": 228,
+    "n_rows": 27
+   },
+   "HRC_raw_lyon": {
+    "C": 0.9889196675900277,
+    "n_pairs": 361,
+    "n_rows": 34
+   }
+  },
+  "ar9956_ar0131": {
+   "LOI_subscore": {
+    "C": 0.9684684684684685,
+    "n_pairs": 333,
+    "n_rows": 34
+   },
+   "char_subscore": {
+    "C": 0.9129129129129129,
+    "n_pairs": 333,
+    "n_rows": 34
+   },
+   "HRC_raw_lyon": {
+    "C": 1.0,
+    "n_pairs": 32,
+    "n_rows": 12
+   }
+  },
+  "ar0153_epoxies": {
+   "n_rows": 9,
+   "note": "OSU pHRR (30-144 kW/m2) is mostly below the cone pHRR range (75-1300), so its subscore saturates at 0; no TTI/avg_HRR.",
+   "v0": {
+    "C": 1.0,
+    "n_pairs": 10,
+    "n_rows": 7
+   },
+   "eq": {
+    "C": 1.0,
+    "n_pairs": 10,
+    "n_rows": 7
+   },
+   "fitted": {
+    "C": 1.0,
+    "n_pairs": 10,
+    "n_rows": 7
+   },
+   "LOI_alone": {
+    "C": 1.0,
+    "n_pairs": 5,
+    "n_rows": 6
+   },
+   "HRC_raw_lyon": {
+    "C": 1.0,
+    "n_pairs": 10,
+    "n_rows": 7
+   }
+  }
+ },
+ "c_standards": {
+  "MIL-STD-2031(SH)": {
+   "criteria": "Navy submarine interior composites: flame spread (ASTM E162), smoke (ASTM E662), cone calorimeter (ASTM E1354) time to ignition, peak and average HRR and gas generation, at several fluxes up to 75-100 kW/m2, plus burn-through and larger scale tests. Pass/fail numbers could not be confirmed from an open copy in this search (not recorded here).",
+   "sources": [
+    "Sorathia et al., NIST FireDoc https://firedoc.nist.gov/article/OXczXYQBWEcjUZEYCPTo",
+    "CARDIVNSWC-TR-54-95/07 via NIST FireDoc https://firedoc.nist.gov/article/N3czXYQBWEcjUZEYCPTl"
+   ],
+   "usable_labels_in_repo": false,
+   "why": "Needs 75-100 kW/m2 cone data with smoke/gas; repo cone data is 25-65 kW/m2 (mostly 35/50), no smoke column used. No open per-material pass/fail table found."
+  },
+  "FAA 14 CFR 25.853 / App. F Part IV": {
+   "criteria": "OSU heat release at 35 kW/m2 with pilot flame: peak HRR <= 65 kW/m2 and total heat release in first 2 min <= 65 kW-min/m2 (the '65/65' rule) for large cabin interior panels.",
+   "sources": [
+    "Federal Register 60(22), 2 Feb 1995 https://www.govinfo.gov/content/pkg/FR-1995-02-02/html/95-2114.htm"
+   ],
+   "usable_labels_in_repo": "partial, not cone",
+   "why": "OSU pHRR/THR exist in data/v2/loi_faa_ar0153.csv for 9 epoxies, so 65/65 pass/fail could be derived (THR in kW-min/m2 over the full test, not the first 2 min, so only an upper bound on THR). Different apparatus from cone; not usable to score cone-based CFRS."
+  }
+ },
+ "open_dataset_leads": [
+  {
+   "name": "DOPO-EP-ML (Huang, Zheng, Shi)",
+   "url": "https://data.mendeley.com/datasets/6wxr5hsd48",
+   "licence": "CC BY 4.0",
+   "carries": "599 epoxy records, 130 papers: UL-94 + LOI + cone pHRR (406) / THR (397) at 35 and 50 kW/m2; no TTI. Best candidate to enlarge D1 (check DOI overlap with the lit snapshot)."
+  },
+  {
+   "name": "IMDEA bio-FR PA56",
+   "url": "https://zenodo.org/records/15097536",
+   "licence": "CC BY 4.0",
+   "carries": "101 PA56 rows: LOI + cone pHRR/THR/TSP; no UL-94 and no TTI in the sheet; one paper (D2-type only)."
+  },
+  {
+   "name": "Chen et al. CEJ 2023 / Scikit-FlameRetardancy",
+   "url": "https://github.com/ZevChan/Scikit-FlameRetardancy",
+   "licence": "none stated (contact authors)",
+   "carries": "Separate UL-94 (1041 rows) and LOI+TTI+pHRR+THR (383 rows) databases; descriptor-only, not linkable to a paper-level pairing."
+  },
+  {
+   "name": "Jafari epoxy / PLA (Song group)",
+   "url": "https://github.com/Pooya1234567/Epoxy_Flame_Retardant",
+   "licence": "none (repo); articles CC BY 4.0",
+   "carries": "UL-94 + LOI, pHRR mostly empty; epoxy file has no paper column. Not usable for within-paper pairing."
+  },
+  {
+   "name": "Ma et al. JMI 2025",
+   "url": "https://www.oaepublish.com/articles/jmi.2025.09",
+   "licence": "repo none; article CC BY 4.0",
+   "carries": "PP LOI only, no source-paper column. No."
+  },
+  {
+   "name": "Juelich PMMA cone",
+   "url": "https://zenodo.org/records/6301397",
+   "licence": "CC BY 4.0",
+   "carries": "HRR curves at 25-75 kW/m2, no UL-94; useful only for flux-dependence / 75 kW/m2 checks."
+  }
+ ]
+}

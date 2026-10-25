@@ -1,0 +1,6 @@
+attempt d4: DEV ONLY: d3 + ECFP4 128-bit of the main SMILES-resolved FR.
+seeds 0-2 DEV
+  seed 0: MAE 186.9 R2 0.441
+  seed 1: MAE 191.6 R2 0.385
+  seed 2: MAE 188.8 R2 0.409
+RESULT d4 DEV: n=305 papers=91 FR groups=125 features=237 | MAE 189.1 +- 1.9 CI [167.4, 204.7] R2 0.412 | baseline ctrl x median ratio MAE 188.4

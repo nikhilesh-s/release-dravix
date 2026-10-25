@@ -20,7 +20,7 @@
     "Step 2: one re-score of the exp115 config and the exp116 config with the chemfix stage applied (rescore_loi_snapshot.py with --stage wave4_staging --stage wave5_staging and the chemfix tables; the rescore tool may be extended only to let a stage REPLACE element-table / structure entries, with no other behaviour change, and the step-1 self-test must still pass after the extension).",
     "Report: B mean, 95% material bootstrap CI, pooled CI, protocol A (random split) and protocol C (unseen FR class), as exp115 reports them; paired per-repeat difference vs exp115 (report-only; the snapshot rule, not a gate, decides)."
   ],
-  "environment": "/Users/niks/dravix/.venv312/bin/python (record-producing pins).",
+  "environment": "~/dravix/.venv312/bin/python (record-producing pins).",
   "exit_triggers": "B ci_lo > 0.84 or A mean > 0.84 -> FLAG (owner wording). Self-test failure -> BLOCKED.",
   "expected (unscored)": "small: -0.02 to +0.02 on B (fr_structure_resolution.md: structure features still describe under a third of FR mass).",
   "honesty_notes": [

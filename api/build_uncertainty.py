@@ -31,6 +31,8 @@ import conformal as C  # noqa: E402
 
 E, T = model.E, model.E.T
 SHA = "0b2af8e1817bdda1a9b1980e481b44d75ac62763f032696090aacd5545e05f99"
+# same rows and inputs, evidence text reduced to locators (release/build_public_repo.sh, OA_EVIDENCE=locator)
+PUBLIC_SHA = "ab4b5f5ba5f6880ef0459083e5e5b3eb7c40543ec9342c87ee2fd656db8f4b0e"
 REPEATS, K = 5, 5
 LEVELS = {"80": 0.20, "90": 0.10}
 METHODS = ("A_abs", "B_spread", "C_knn")
@@ -129,9 +131,10 @@ def main():
     a = ap.parse_args()
     T0 = time.time()
     snap = Path(T.SNAP).read_bytes()
-    assert hashlib.sha256(snap).hexdigest() == SHA, "snapshot changed: not the engine training set"
+    sha = hashlib.sha256(snap).hexdigest()
+    assert sha in (SHA, PUBLIC_SHA), "snapshot changed: not the engine training set"
     B = joblib.load(model.ARTIFACT)
-    assert B["meta"]["data_sha256"] == SHA, "compact artifact was not trained on the declared snapshot"
+    assert B["meta"]["data_sha256"] == sha, "compact artifact was not trained on this snapshot"
     E._B = B
     df = pd.read_csv(T.SNAP, low_memory=False)
     for c in T.NUM:

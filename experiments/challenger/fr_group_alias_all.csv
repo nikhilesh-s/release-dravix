@@ -1,0 +1,707 @@
+fr_group_current,fr_identity,confidence,note
+2-benzoic acid,2-(diphenylphosphino)benzoic acid (PPAC),high,"Phosphine, P-C. Key garbled; identity from component text."
+4- di phthalate,4- di phthalate,medium,no synonym found in pool; unique identity
+4p4gs,4P4GS (POSS with DOPO-derived phosphate),high,[hybrid] POSS cage.
+8ps,8PS (POSS with 8 DOPO-derived phosphates),high,[hybrid] POSS cage.
+[apmim]pf6,[apmim]pf6,medium,no synonym found in pool; unique identity
+[bmim]h2po2,[bmim]h2po2,medium,no synonym found in pool; unique identity
+[emim]pf6,[emim]pf6,medium,no synonym found in pool; unique identity
+"a1""","a1"" [unresolved]",low,acronym/generic; chemistry not identifiable from names data; kept unique
+"a2""","a2"" [unresolved]",low,acronym/generic; chemistry not identifiable from names data; kept unique
+abandoned 3a molecular sieve powder,abandoned 3a molecular sieve powder,medium,no synonym found in pool; unique identity
+ac-fe2o3,AC-Fe2O3,high,no P
+actilox b30,boehmite AlOOH,medium,MERGE: PURAL SB / Disperal 40 / Actilox B30 are boehmite grades. CAUTION actilox b30 and disperal 40: first FR/synergist is boehmite but every row also carries TAHHT-DDPO (organophosphorus) as 2nd FR; group-key view hides the P.
+activated carbon,activated carbon,medium,no synonym found in pool; unique identity
+adp,aluminium diethylphosphinate (AlPi),high,synonym/trade name of Al(Et2PO2)3
+aflammit pco 900,aflammit pco 900,medium,no synonym found in pool; unique identity
+ahm/mel/sa 3:1:1 in surface film,ahm/mel/sa 3:1:1 in surface film,medium,no synonym found in pool; unique identity
+ahp,aluminium hypophosphite,high,Al(H2PO2)3
+ahpi,aluminium hypophosphite,high,Al(H2PO2)3
+al-mg hydroxycarbonate lh20,al-mg hydroxycarbonate lh20,medium,no synonym found in pool; unique identity
+al-mg hydroxycarbonate lh30,al-mg hydroxycarbonate lh30,medium,no synonym found in pool; unique identity
+al-mg hydroxycarbonate lh5,al-mg hydroxycarbonate lh5,medium,no synonym found in pool; unique identity
+al-mg hydroxycarbonate lh70,al-mg hydroxycarbonate lh70,medium,no synonym found in pool; unique identity
+al3,aluminium trihydroxide (ATH),high,Al(OH)3; no P
+al3 in surface film,aluminium trihydroxide (ATH),high,ATH = Al(OH)3 = aluminium hydroxide = aluminium trihydrate
+aldpi,aluminium diethylphosphinate (AlPi),high,synonym/trade name of Al(Et2PO2)3
+alpha-zrp,alpha-zrp,medium,no synonym found in pool; unique identity
+alpi,aluminium diethylphosphinate (AlPi),high,MERGE: AlPi = Exolit OP 930/935/1230 (Clariant grades of Al(Et2PO2)3). Metal phosphinate P-C.
+alpo,alpo,medium,no synonym found in pool; unique identity
+aluminium diethyl phosphinate,aluminium diethylphosphinate (AlPi),high,synonym/trade name of Al(Et2PO2)3
+aluminium diethylphosphinate,aluminium diethylphosphinate (AlPi),high,synonym/trade name of Al(Et2PO2)3
+aluminium diethylphosphinate exolit op 1230,aluminium diethylphosphinate (AlPi),high,synonym/trade name of Al(Et2PO2)3
+aluminium hydroxide,aluminium trihydroxide (ATH),high,ATH = Al(OH)3 = aluminium hydroxide = aluminium trihydrate
+aluminium hypophosphite,aluminium hypophosphite,low,"Paper name says hypophosphite but example text labels it Exolit OP935 (an AlPi grade); kept literal name, possible AlPi"
+aluminium phosphinate,aluminium diethylphosphinate (AlPi),high,synonym/trade name of Al(Et2PO2)3
+aluminium trihydrate,aluminium trihydroxide (ATH),high,ATH = Al(OH)3 = aluminium hydroxide = aluminium trihydrate
+aluminum 2-carboxyethylphenylhypophosphite,aluminum 2-carboxyethylphenylhypophosphite,medium,no synonym found in pool; unique identity
+aluminum beta- ethyl methyl phosphinate alnp,aluminum beta- ethyl methyl phosphinate alnp,medium,no synonym found in pool; unique identity
+aluminum diethylphosphinate,aluminium diethylphosphinate (AlPi),high,synonym/trade name of Al(Et2PO2)3
+aluminum dihydrogen phosphate,aluminum dihydrogen phosphate,medium,no synonym found in pool; unique identity
+aluminum diisobutylphosphinate,aluminium diisobutylphosphinate (AlPBu),high,"Metal phosphinate, different alkyl from AlPi. Foam rows (out of bulk scope)."
+aluminum hydroxide,aluminium trihydroxide (ATH),high,ATH = Al(OH)3 = aluminium hydroxide = aluminium trihydrate
+aluminum hypophosphite,aluminium hypophosphite,high,"Metal hypophosphite, inorganic P."
+aluminum tris aldmp,aluminum tris aldmp,medium,no synonym found in pool; unique identity
+amino-functionalized polyphosphazene microspheres,amino-functionalized polyphosphazene microspheres,medium,no synonym found in pool; unique identity
+ammonium dihydrogen phosphate,ammonium dihydrogen phosphate,high,MAP = NH4H2PO4
+ammonium pentaborate octahydrate,ammonium pentaborate octahydrate,medium,no synonym found in pool; unique identity
+ammonium phytate,ammonium phytate,medium,no synonym found in pool; unique identity
+ammonium polyphosphate,ammonium polyphosphate (APP),high,"MERGE: APP / ammonium polyphosphate / Budenheim FR CROS484 (APP grade). One paper lists Exolit AP 462 (microencapsulated APP) under this key (kept, medium risk). Inorganic polyphosphate salt."
+ao,ao,medium,no synonym found in pool; unique identity
+ao + bh + eg,ATH + BH + EG blend,low,both keys show identical printed composition (8%ATH/14%BH/6%EG)
+ap/mca,ap/mca,medium,no synonym found in pool; unique identity
+aph,APH (DOPO/KH-550/naphthalene P-N-Si),high,DOPO derivative.
+app,ammonium polyphosphate (APP),high,"MERGE: APP / ammonium polyphosphate / Budenheim FR CROS484 (APP grade). One paper lists Exolit AP 462 (microencapsulated APP) under this key (kept, medium risk). Inorganic polyphosphate salt."
+app + cobalt phytate,app + cobalt phytate,medium,no synonym found in pool; unique identity
+app + deep,app + deep,medium,no synonym found in pool; unique identity
+app + lignin,app + lignin,medium,no synonym found in pool; unique identity
+app + per,app + per,medium,no synonym found in pool; unique identity
+app + sepiolite,app + sepiolite,medium,no synonym found in pool; unique identity
+app-10% de composite filler,app-10% de composite filler,medium,no synonym found in pool; unique identity
+app-10% de composite filler surface-modified with 2% kh550,app-10% de composite filler surface-modified with 2% kh550,medium,no synonym found in pool; unique identity
+app-cu,app-cu,medium,no synonym found in pool; unique identity
+app-cu@pda,app-cu@pda,medium,no synonym found in pool; unique identity
+app/per 2/1 intumescent fr,app/per 2/1 intumescent fr,medium,no synonym found in pool; unique identity
+app/per/mc/eg/caco3 intumescent,app/per/mc/eg/caco3 intumescent,medium,no synonym found in pool; unique identity
+app/spe/t58 hardener 60.00/30.00/10.00 m/m%),app/spe/t58 hardener 60.00/30.00/10.00 m/m%),medium,no synonym found in pool; unique identity
+app/spe/t58 hardener 78.95/15.79/5.26 m/m%),app/spe/t58 hardener 78.95/15.79/5.26 m/m%),medium,no synonym found in pool; unique identity
+app:eg 1:3 intumescent flame retardant,app:eg 1:3 intumescent flame retardant,medium,no synonym found in pool; unique identity
+app:per:mel,APP:PER:MEL 5:2:3 intumescent,medium,APP-based IFR; other-form row (not bulk).
+app:triazine 4:1,app:triazine 4:1,medium,no synonym found in pool; unique identity
+app@cncsi-da,app@cncsi-da,medium,no synonym found in pool; unique identity
+app@cnf ball-milled hybrid,app@cnf ball-milled hybrid,medium,no synonym found in pool; unique identity
+app@pei,app@pei,medium,no synonym found in pool; unique identity
+app@pei@ti3c2tx,app@pei@ti3c2tx,medium,no synonym found in pool; unique identity
+arg-app,arginine-exchanged APP,medium,Overrides fr_chemistry P_organic: arginine is a cation; polyphosphate backbone has no P-C/P-O-C. Kept separate from APP (modified).
+ath,aluminium trihydroxide (ATH),high,ATH = Al(OH)3 = aluminium hydroxide = aluminium trihydrate
+ath + bh + eg,ATH + BH + EG blend,low,both keys show identical printed composition (8%ATH/14%BH/6%EG)
+ath3),aluminium trihydroxide (ATH),high,ATH = Al(OH)3 = aluminium hydroxide = aluminium trihydrate
+avd,AVD (DOPO-vanillin-2-aminobenzothiazole),high,From formulation text.
+avoph2[vo]2·5h2o,AVOPh ammonium vanadyl hydrogenphosphate oxalate,medium,"Inorganic vanadyl phosphate (oxalate ligand, no P-C/P-O-C)."
+avphvopo4·1.5h2o,AVPh ammonium vanadyl phosphate hydrate,high,Inorganic.
+b,b [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+ba-dopo,BA-DOPO,medium,DOPO adduct (inferred). Fibre composite rows.
+ba-ma,ba-ma,medium,no synonym found in pool; unique identity
+ba/bx 1:1,ba/bx 1:1,medium,no synonym found in pool; unique identity
+bacm,bacm,medium,no synonym found in pool; unique identity
+badps,badps,medium,no synonym found in pool; unique identity
+bapdp),bapdp),medium,no synonym found in pool; unique identity
+bc phosphorus-containing composition,bc phosphorus-containing composition,medium,no synonym found in pool; unique identity
+bc-m,bc-m,medium,no synonym found in pool; unique identity
+bcep,BCEP (P-containing cycloaliphatic epoxide),medium,TGIC listed as synergist in rows.
+bdd,BDD (DOPO-based bis-phosphaphenanthrene amine),high,From formulation text.
+bdp,bisphenol A bis(diphenyl phosphate) (BDP),high,Aryl phosphate.
+beta-cyclodextrin,beta-cyclodextrin,medium,no synonym found in pool; unique identity
+bh + eg,bh + eg,medium,no synonym found in pool; unique identity
+biep-eta,biep-eta [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+bifeo3,bifeo3,medium,no synonym found in pool; unique identity
+biomass-based fr,biomass-based fr [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+bisguanidine phosphate,bisguanidine phosphate,medium,no synonym found in pool; unique identity
+black phosphorene/graphene,black phosphorene/graphene,medium,no synonym found in pool; unique identity
+black phosphorus nanosheets,black phosphorus (few-layer),medium,black phosphorus nanosheets = few-layer BP
+bmc,bmc [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+bnno@co3o4 nanohybrid,bnno@co3o4 nanohybrid,medium,no synonym found in pool; unique identity
+bnno@co3o4@ppz nanohybrid,bnno@co3o4@ppz nanohybrid,medium,no synonym found in pool; unique identity
+boehmite,boehmite AlOOH,medium,MERGE: PURAL SB / Disperal 40 / Actilox B30 are boehmite grades. CAUTION actilox b30 and disperal 40: first FR/synergist is boehmite but every row also carries TAHHT-DDPO (organophosphorus) as 2nd FR; group-key view hides the P.
+boehmite alo,boehmite AlOOH,medium,MERGE: PURAL SB / Disperal 40 / Actilox B30 are boehmite grades. CAUTION actilox b30 and disperal 40: first FR/synergist is boehmite but every row also carries TAHHT-DDPO (organophosphorus) as 2nd FR; group-key view hides the P.
+borated ellagic acid derivative,borated ellagic acid derivative,high,B not P; no P
+borated gallic acid derivative,borated gallic acid derivative,high,B not P; no P
+boron phenolic resin fb88,boron phenolic resin fb88,medium,no synonym found in pool; unique identity
+boron trioxide,boron trioxide,medium,no synonym found in pool; unique identity
+bp-deta,BP-DETA (amine-functionalised black phosphorus),low,Elemental P core with organic amine; no clear P-C/P-O-C; treated inorganic. Borderline.
+bp-pid,BP-Pid (cyclamine-functionalised black phosphorus),low,As bp-deta.
+bp-ppda,BP-PPDA (amine-functionalised black phosphorus),low,As bp-deta.
+bpf resin,bpf resin,medium,no synonym found in pool; unique identity
+bps,bps [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+brominated epoxy resin,brominated epoxy resin,medium,no synonym found in pool; unique identity
+brominated polystyrene,brominated polystyrene,medium,no synonym found in pool; unique identity
+budit 669,budit 669,medium,no synonym found in pool; unique identity
+c,c [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+ca2 from eggshell,ca2 from eggshell,medium,no synonym found in pool; unique identity
+caal-po4-ldhs,caal-po4-ldhs,medium,no synonym found in pool; unique identity
+cahpi20,cahpi20,medium,no synonym found in pool; unique identity
+cahpi5,cahpi5,medium,no synonym found in pool; unique identity
+calcium bis cadmp,calcium bis cadmp,medium,no synonym found in pool; unique identity
+calcium phosphinate,calcium phosphinate,medium,no synonym found in pool; unique identity
+calcium stearate-modified calcium sulfate whisker from phosphogypsum,calcium stearate-modified calcium sulfate whisker from phosphogypsum,medium,no synonym found in pool; unique identity
+cationic starch,cationic starch,medium,no synonym found in pool; unique identity
+cbp,CBP,low,"UNRESOLVED acronym, no chemistry in names data; P status unknown -> coded 0/0 (excluded). Revisit if the paper is read."
+ce-btc,Ce-BTC MOF,high,no P
+cellulose nanocrystals,cellulose nanocrystals,medium,no synonym found in pool; unique identity
+ceppg,ceppg,medium,no synonym found in pool; unique identity
+ceppg/mp/eg,ceppg/mp/eg,medium,no synonym found in pool; unique identity
+ceppg/mpi/eg,ceppg/mpi/eg,medium,no synonym found in pool; unique identity
+cerium hypophosphite,cerium hypophosphite,medium,no synonym found in pool; unique identity
+cfa,cfa [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+cfr,cfr [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+chitin,chitin,medium,no synonym found in pool; unique identity
+chitosan,chitosan,high,no P
+chitosan molybdate,chitosan molybdate,medium,no synonym found in pool; unique identity
+chitosan silicate,chitosan silicate,medium,no synonym found in pool; unique identity
+chitosan stannate,chitosan stannate,medium,no synonym found in pool; unique identity
+chitosan tungstate,chitosan tungstate,medium,no synonym found in pool; unique identity
+chitosan-coated phase-change microcapsule,chitosan-coated phase-change microcapsule,medium,no synonym found in pool; unique identity
+chlorinated paraffin-70,chlorinated paraffin-70,medium,no synonym found in pool; unique identity
+claa,claa,medium,no synonym found in pool; unique identity
+clinoptilolite,clinoptilolite,medium,no synonym found in pool; unique identity
+cncsi-da,cncsi-da,medium,no synonym found in pool; unique identity
+co/p-c3n4,co/p-c3n4,medium,no synonym found in pool; unique identity
+coal-ldh,coal-ldh,medium,no synonym found in pool; unique identity
+commercial fr,commercial fr [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+"copper n,n'-piperazine cupb",CuPB copper piperazine bis(methylene phosphonate),medium,"Phosphonate, P-C."
+copper-boron preservative cbp,copper-boron preservative cbp,medium,no synonym found in pool; unique identity
+cow horn ash particles,cow horn ash particles,medium,no synonym found in pool; unique identity
+cp-6b,CP-6B,low,"UNRESOLVED acronym, no chemistry in names data; P status unknown -> coded 0/0 (excluded). Revisit if the paper is read."
+cppa polyol + eg + graphene oxide,cppa polyol + eg + graphene oxide,medium,no synonym found in pool; unique identity
+cppa polyol + expandable graphite,cppa polyol + expandable graphite,medium,no synonym found in pool; unique identity
+cps hydrothermal peanut-shell carbon,CPS-180 hydrothermal peanut-shell carbon,high,no P
+cps peanut-shell carbon pyrolysed 700 c,CPS-700 peanut-shell biochar,high,no P
+cps/co cobalt-loaded peanut-shell carbon pyrolysed 700 c,CPS-700/Co,high,no P
+cresyl diphenyl phosphate,cresyl diphenyl phosphate,medium,no synonym found in pool; unique identity
+ctapp,ctapp,medium,no synonym found in pool; unique identity
+cyclic phosphonate addforce ct 901,cyclic phosphonate addforce ct 901,medium,no synonym found in pool; unique identity
+d-fu,d-fu,medium,no synonym found in pool; unique identity
+dap,dap,medium,no synonym found in pool; unique identity
+dap@sio2,diammonium phosphate on silica (DAP@SiO2),high,DAP inorganic.
+dbdpo,dbdpo,medium,no synonym found in pool; unique identity
+dcpcd,dcpcd,medium,no synonym found in pool; unique identity
+ddp,DDM-modified APP (DDP),medium,APP cation-exchanged with DDM; inorganic polyphosphate backbone; separate from APP.
+dehmp,diethyl hydroxymethylphosphonate (DEHMP),high,Phosphonate.
+dehpa-alphosphate hybrid),DEHPA-Al (boehmite-bis(2-ethylhexyl) phosphate hybrid),medium,[hybrid]
+depa-al,DEPA-Al (boehmite-diethyl phosphate hybrid),medium,NOT AlPi: fr_chemistry says aluminium diethylphosphinate but the component text says boehmite-diethyl phosphate hybrid. [hybrid]
+dfd,dfd,medium,no synonym found in pool; unique identity
+diammonium phosphate2hpo4,diammonium phosphate2hpo4,medium,no synonym found in pool; unique identity
+diatomite,diatomite,medium,no synonym found in pool; unique identity
+didopo,DiDOPO (bis-DOPO),high,"DOPO derivative, separate from DOPO."
+didopopiperazine),didopopiperazine),medium,no synonym found in pool; unique identity
+diethyl ethylphosphonate,diethyl ethylphosphonate (DEEP),high,
+dihydroxysalen s2,dihydroxysalen s2,medium,no synonym found in pool; unique identity
+dihydroxysalen s2-cu complex,dihydroxysalen s2-cu complex,medium,no synonym found in pool; unique identity
+dihydroxysalen s2-mn complex,dihydroxysalen s2-mn complex,medium,no synonym found in pool; unique identity
+dihydroxysalen s2-ni complex,dihydroxysalen s2-ni complex,medium,no synonym found in pool; unique identity
+dihydroxysalen s2-zn complex,dihydroxysalen s2-zn complex,medium,no synonym found in pool; unique identity
+dimethyl propane phosphonate,dimethyl propylphosphonate (DMPP),high,
+dipentaerythritol,dipentaerythritol,medium,no synonym found in pool; unique identity
+disflamoll tp lxs 51064,disflamoll tp lxs 51064,medium,no synonym found in pool; unique identity
+disperal 40,boehmite AlOOH,medium,MERGE: PURAL SB / Disperal 40 / Actilox B30 are boehmite grades. CAUTION actilox b30 and disperal 40: first FR/synergist is boehmite but every row also carries TAHHT-DDPO (organophosphorus) as 2nd FR; group-key view hides the P.
+dm/pei/mwcnt-1,dm/pei/mwcnt-1,medium,no synonym found in pool; unique identity
+dm/pei/mwcnt-2,dm/pei/mwcnt-2,medium,no synonym found in pool; unique identity
+dm/pei/mwcnt-3,dm/pei/mwcnt-3,medium,no synonym found in pool; unique identity
+dm/pei/mwcnt-4,dm/pei/mwcnt-4,medium,no synonym found in pool; unique identity
+dmh polyphosphoramide,dmh polyphosphoramide,medium,no synonym found in pool; unique identity
+dmi-bppo + tep,dmi-bppo + tep,medium,no synonym found in pool; unique identity
+dmi-dopo + tep,dmi-dopo + tep,medium,no synonym found in pool; unique identity
+dmmp only,dimethyl methylphosphonate (DMMP),high,
+dmmp/eg,dmmp/eg,medium,no synonym found in pool; unique identity
+dmp,DMP (aryl phosphate),medium,Per formulation text.
+dmpp,dimethyl propylphosphonate (DMPP),high,
+dopo,DOPO,high,"9,10-dihydro-9-oxa-10-phosphaphenanthrene 10-oxide. Derivatives kept separate."
+dopo-cupc,DOPO-CuPc,high,[hybrid] DOPO hyperbranched Cu phthalocyanine.
+dopo-diamine,dopo-diamine,medium,no synonym found in pool; unique identity
+dopo-hq,dopo-hq,medium,no synonym found in pool; unique identity
+dopo-khcpa,DOPO-KhCPA (P/N/Si/B),medium,DOPO-based.
+dopo-mmt,DOPO-MMT,medium,"[hybrid] DOPO + montmorillonite (2:1), mostly physical mix."
+dopo-modified novolac,DOPO-modified novolac (Struktol VP 3760),high,Rows also carry nano-SiO2 in some formulations.
+dopo-poss,dopo-poss,medium,no synonym found in pool; unique identity
+dopo-vsil,DOPO-VSil phosphasilazane,high,Fibre composite rows.
+dopo-vtes,dopo-vtes,medium,no synonym found in pool; unique identity
+dopo@zif-67,DOPO@ZIF-67,high,[hybrid] DOPO loaded on MOF.
+dopo–go,DOPO-GO,high,[hybrid] DOPO on graphene oxide.
+dopo–vtes–go,DOPO-VTES-GO,high,[hybrid] DOPO silane on GO.
+dpa-sin,dpa-sin,medium,no synonym found in pool; unique identity
+dpb,DPB,low,"UNRESOLVED acronym, no chemistry in names data; P status unknown -> coded 0/0 (excluded). Revisit if the paper is read."
+dpbsi,DPBSi (P/N/Si vanillin-based),medium,
+dpdcppo,DPDCPPO (phosphine oxide dicarboxylic acid),high,"Phosphine oxide, P-C."
+dpp-pepa,dpp-pepa,medium,no synonym found in pool; unique identity
+dppa-al,DPPA-Al (boehmite-diphenyl phosphate hybrid),medium,[hybrid]
+dt,dt,medium,no synonym found in pool; unique identity
+e20mi fr mat,E20MI FR mat,low,"UNRESOLVED acronym, no chemistry in names data; P status unknown -> coded 0/0 (excluded). Revisit if the paper is read."
+ea-bppo,ea-bppo,medium,no synonym found in pool; unique identity
+ea-bppo + tep,ea-bppo + tep,medium,no synonym found in pool; unique identity
+ead,EAD,low,"UNRESOLVED acronym, no chemistry in names data; P status unknown -> coded 0/0 (excluded). Revisit if the paper is read."
+ec-microencapsulated app,ec-microencapsulated app,medium,no synonym found in pool; unique identity
+eg,expandable graphite,medium,8 wt% EG + 22 wt% ATH in one paper; no P
+eg + apb,eg + apb,medium,no synonym found in pool; unique identity
+eg + app + graphene oxide,eg + app + graphene oxide,medium,no synonym found in pool; unique identity
+eg + app + ionic-liquid functionalized go,eg + app + ionic-liquid functionalized go,medium,no synonym found in pool; unique identity
+eg + app intumescent system,eg + app intumescent system,medium,no synonym found in pool; unique identity
+eg + dmmp + functionalized go,eg + dmmp + functionalized go,medium,no synonym found in pool; unique identity
+eg + dmmp + graphene oxide,eg + dmmp + graphene oxide,medium,no synonym found in pool; unique identity
+eg only,expandable graphite,high,"EG, size/grade variants and untreated EG (substance same)"
+eg-bmp,eg-bmp,medium,no synonym found in pool; unique identity
+eg1,expandable graphite,high,"EG, size/grade variants and untreated EG (substance same)"
+eg2,expandable graphite,high,"EG, size/grade variants and untreated EG (substance same)"
+eg@pda,eg@pda,medium,no synonym found in pool; unique identity
+egm,"EGM (expandable graphite, grade unresolved)",medium,kept separate from EG; no P
+ellagic acid,ellagic acid,high,no P
+ethylenediamine-modified app,ethylenediamine-modified app,medium,no synonym found in pool; unique identity
+exolit ap750,Exolit AP 750 (APP-based intumescent formulation),medium,"NOT merged with APP: AP 750 is a formulated APP + N-synergist IFR, not the pure salt. Treated as inorganic-P (no P-C/P-O-C)."
+exolit op 935 + app,exolit op 935 + app,medium,no synonym found in pool; unique identity
+exolit op 935 + eg 290,exolit op 935 + eg 290,medium,no synonym found in pool; unique identity
+exolit op1230,aluminium diethylphosphinate (AlPi),high,MERGE: AlPi = Exolit OP 930/935/1230 (Clariant grades of Al(Et2PO2)3). Metal phosphinate P-C.
+exolit op550,exolit op550,medium,no synonym found in pool; unique identity
+exolit op935,aluminium diethylphosphinate (AlPi),high,MERGE: AlPi = Exolit OP 930/935/1230 (Clariant grades of Al(Et2PO2)3). Metal phosphinate P-C.
+exolit rp607,Exolit RP 607 (encapsulated red phosphorus),high,Microencapsulated RP masterbatch; kept separate from plain RP (coated).
+expandable graphite,expandable graphite,high,"EG, size/grade variants and untreated EG (substance same)"
+expandable graphite + app,expandable graphite + APP blend,medium,"same blend, two spellings"
+expandable graphite + dmmp,expandable graphite + dmmp,medium,no synonym found in pool; unique identity
+expandable graphite 3772,expandable graphite,high,"EG, size/grade variants and untreated EG (substance same)"
+expandable graphite eg1,expandable graphite,high,"EG, size/grade variants and untreated EG (substance same)"
+expandable graphite eg2,expandable graphite,high,"EG, size/grade variants and untreated EG (substance same)"
+expandable graphite eg3,expandable graphite,high,"EG, size/grade variants and untreated EG (substance same)"
+expandable graphite ghl px 95 ht,expandable graphite,high,"EG, size/grade variants and untreated EG (substance same)"
+expandable graphite ghl px 95 ht 270,expandable graphite,high,"EG, size/grade variants and untreated EG (substance same)"
+"expandable graphite, hydrothermal route","expandable graphite, hydrothermal route",medium,no synonym found in pool; unique identity
+"expandable graphite, o3-hydrothermal route","expandable graphite, o3-hydrothermal route",medium,no synonym found in pool; unique identity
+"expandable graphite, ultrasound-irradiation route","expandable graphite, ultrasound-irradiation route",medium,no synonym found in pool; unique identity
+expanded graphite,expanded graphite,medium,no synonym found in pool; unique identity
+f-zrp-functionalized alpha-zrp),f-zrp-functionalized alpha-zrp),medium,no synonym found in pool; unique identity
+fa-bis-dopo,FA-bis-DOPO,medium,Furfural bis-DOPO adduct (inferred).
+fa-mgo,fa-mgo,medium,no synonym found in pool; unique identity
+fba,fba,medium,no synonym found in pool; unique identity
+few-layer black phosphorus,black phosphorus (few-layer),high,Elemental P.
+fhplc,fhplc [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+flame retardant,flame retardant [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+fr 3,fr 3,medium,no synonym found in pool; unique identity
+fr 4,fr 4,medium,no synonym found in pool; unique identity
+fr cros 490,melamine-coated APP,medium,Budit 620 / FR CROS 490 melamine-coated APP grades
+fr cros484,ammonium polyphosphate (APP),high,"MERGE: APP / ammonium polyphosphate / Budenheim FR CROS484 (APP grade). One paper lists Exolit AP 462 (microencapsulated APP) under this key (kept, medium risk). Inorganic polyphosphate salt."
+fr1,fr1 [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+fr2,fr2 [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+fr3,fr3 [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+fr4,fr4 [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+fr5,fr5 [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+"frc aqueous solution2co3 8, h3po4 20 wt%)","frc aqueous solution2co3 8, h3po4 20 wt%)",medium,no synonym found in pool; unique identity
+frp + mapp + organically modified ldh,frp + mapp + organically modified ldh,medium,no synonym found in pool; unique identity
+frsnadamantane),frsnadamantane),medium,no synonym found in pool; unique identity
+fyrol hf5,fyrol hf5,medium,no synonym found in pool; unique identity
+fyrol pnx le,fyrol pnx le,medium,no synonym found in pool; unique identity
+g-c3n4,graphitic carbon nitride,high,no P
+g-c3n4/alcpa hybrid cnalcpa30,g-c3n4/alcpa hybrid cnalcpa30,medium,no synonym found in pool; unique identity
+g-c3n4/pazn,g-C3N4/PAZn,low,PAZn presumed zinc phytate (unconfirmed). [hybrid]
+gallic acid,gallic acid,high,no P
+geg,geg,medium,no synonym found in pool; unique identity
+glass frit,glass frit,medium,no synonym found in pool; unique identity
+go,graphene oxide,high,
+go-hccp,go-hccp,medium,no synonym found in pool; unique identity
+gposs,glycidyl POSS,medium,fibre composite; no P
+graphene,graphene,medium,no synonym found in pool; unique identity
+guanyl-urea phosphate,guanyl-urea phosphate,medium,no synonym found in pool; unique identity
+h-bn nanosheets,h-bn nanosheets,medium,no synonym found in pool; unique identity
+habp-dopo,habp-dopo,medium,no synonym found in pool; unique identity
+hacp,hexa(aminophenoxy)cyclotriphosphazene (HACP),medium,Phosphazene with aryloxy P-O-C.
+halloysite nanotubes,halloysite nanotubes (HNTs),high,
+hb-dppa,HB-DPPA (reactive P-N co-curing agent),medium,
+hbdt,hbdt [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+hccp,hccp,medium,no synonym found in pool; unique identity
+hctp-modified graphite oxide,hctp-modified graphite oxide,medium,no synonym found in pool; unique identity
+hexaphenoxycyclotriphosphazene,hexaphenoxycyclotriphosphazene (HPCP),high,Phosphazene.
+hexaphenoxycyclotriphosphazene hpctp,hexaphenoxycyclotriphosphazene (HPCP),medium,HPCTP = HPCP
+hfr 693,hfr 693,medium,no synonym found in pool; unique identity
+hfr binder,hfr binder,medium,no synonym found in pool; unique identity
+hgm-fe2o3,hgm-fe2o3,medium,no synonym found in pool; unique identity
+hgm@[eooemim][bf4],hgm@[eooemim][bf4],medium,no synonym found in pool; unique identity
+hgm@[eooemim][pf6],hgm@[eooemim][pf6],medium,no synonym found in pool; unique identity
+hgm@amp,hgm@amp,medium,no synonym found in pool; unique identity
+histidine,histidine,medium,no synonym found in pool; unique identity
+hnts,halloysite nanotubes (HNTs),high,
+hnts@a-171,hnts@a-171,medium,no synonym found in pool; unique identity
+hnts@nico-ldh,hnts@nico-ldh,medium,no synonym found in pool; unique identity
+hollow glass microspheres,hollow glass microspheres,medium,no synonym found in pool; unique identity
+hp-mn,hp-mn,medium,no synonym found in pool; unique identity
+hpctp,hexaphenoxycyclotriphosphazene (HPCP),medium,HPCTP = HPCP
+hpdal,HPDAl,low,"Presumed Al salt of DOPO/hypophosphite hybrid (paper also tests AHP, DOPO); unconfirmed."
+hq-bppo + tep,hq-bppo + tep,medium,no synonym found in pool; unique identity
+hq-dopo + tep,hq-dopo + tep,medium,no synonym found in pool; unique identity
+humic acid,humic acid,medium,no synonym found in pool; unique identity
+hyperbranched polyphosphate ester hpe,hyperbranched polyphosphate ester (HPE),high,Phosphate ester. Rows at 0 wt% HPE are effectively controls.
+ifr,"IFR generic (APP/PER/MEL-type, paper-specific)",low,"Key pools 6 papers with different IFRs (APP/PER, APP/MEL/PER, phosphoric acid/MEL/PER); not one chemical. Inorganic-P by APP-based rule; the phosphoric acid/MEL/PER paper may form P-O-C esters in situ."
+ifr + ath 3 php,ifr + ath 3 php,medium,no synonym found in pool; unique identity
+ifr + ath 5 php,ifr + ath 5 php,medium,no synonym found in pool; unique identity
+ifr + graphene oxide,ifr + graphene oxide,medium,no synonym found in pool; unique identity
+ifr + phytic acid-functionalized go,ifr + phytic acid-functionalized go,medium,no synonym found in pool; unique identity
+ifr adk stab fp-2200,ifr adk stab fp-2200,medium,no synonym found in pool; unique identity
+ifr coating,ifr coating,medium,no synonym found in pool; unique identity
+il@nh2-mil-101,IL@NH2-MIL-101(Al) ([DPP-NC3bim][PMo]),low,[hybrid] ionic liquid with P-containing cation (assumed) and PMo anion.
+ind-mh2),magnesium hydroxide Mg(OH)2,medium,"MERGE: Mg(OH)2 incl. micro-whisker and industrial grades (morphology differs, substance same). mh in acsomega.8b03333 is presumed Mg(OH)2 (unconfirmed)."
+intumescent combination exolit op 1314,intumescent combination exolit op 1314,medium,no synonym found in pool; unique identity
+iron poly chelate,iron poly chelate,medium,no synonym found in pool; unique identity
+iron tailing filler,iron tailing filler,medium,no synonym found in pool; unique identity
+itap,itap [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+k-app,silane-modified APP (KH550/silane coated),medium,KH-550/silane-coated APP; separate from plain APP
+kappaflam t4/729,kappaflam t4/729,medium,no synonym found in pool; unique identity
+kf commercial sulfur-based fr,kf commercial sulfur-based fr,medium,no synonym found in pool; unique identity
+kh-550 surface-treated app,silane-modified APP (KH550/silane coated),medium,KH-550/silane-coated APP; separate from plain APP
+kh-570 silane-modified zno-doped mh,kh-570 silane-modified zno-doped mh,medium,no synonym found in pool; unique identity
+kh-570 silane-treated expanded graphite,kh-570 silane-treated expanded graphite,medium,no synonym found in pool; unique identity
+kraft lignin,kraft lignin,high,no P
+kssbenzenesulfonate),kssbenzenesulfonate),medium,no synonym found in pool; unique identity
+la-btc,La-BTC MOF,high,no P
+lab-made fr,lab-made fr [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+lactic casein 720,lactic casein 720,medium,no synonym found in pool; unique identity
+lafeo3,lafeo3,medium,no synonym found in pool; unique identity
+lamellar cobalt potassium pyrophosphate,cobalt potassium pyrophosphate,high,Pyrophosphate.
+lanthanum hypophosphite,lanthanum hypophosphite,medium,no synonym found in pool; unique identity
+ldh1,ldh1 [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+ldh2,ldh2 [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+ldh3,ldh3 [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+ldh4,ldh4 [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+ldh5,ldh5 [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+lh20/ac hybrid pigment,lh20/ac hybrid pigment,medium,no synonym found in pool; unique identity
+lh30/ac hybrid pigment,lh30/ac hybrid pigment,medium,no synonym found in pool; unique identity
+lh5/ac hybrid pigment,lh5/ac hybrid pigment,medium,no synonym found in pool; unique identity
+lh70/ac hybrid pigment,lh70/ac hybrid pigment,medium,no synonym found in pool; unique identity
+lhp,lhp,medium,no synonym found in pool; unique identity
+lig-f,Lig-F (PA-DOPO + DOPO grafted lignin),high,[hybrid] DOPO-grafted lignin.
+lig-m,Lig-M (PA-DOPO grafted lignin),high,[hybrid] DOPO-grafted lignin.
+lig-p,Lig-P (pretreated lignin),low,Read as no P (pretreated); unconfirmed.
+lignin,lignin,medium,no synonym found in pool; unique identity
+lignin polyol + flame retardant polyol,lignin polyol + flame retardant polyol,medium,no synonym found in pool; unique identity
+lignin polyol + frp + mapp,lignin polyol + frp + mapp,medium,no synonym found in pool; unique identity
+lignin polyol + frp + mapp + oldh,lignin polyol + frp + mapp + oldh,medium,no synonym found in pool; unique identity
+lignin polyol + microencapsulated app,lignin polyol + microencapsulated app,medium,no synonym found in pool; unique identity
+lignin-based polyol,lignin-based polyol,medium,no synonym found in pool; unique identity
+lignosulfonate lignin,lignosulfonate lignin,medium,no synonym found in pool; unique identity
+liquid glass,liquid glass,medium,no synonym found in pool; unique identity
+ma-bppo + tep,ma-bppo + tep,medium,no synonym found in pool; unique identity
+ma-ifr,ma-ifr,medium,no synonym found in pool; unique identity
+ma/ifr,ma/ifr,medium,no synonym found in pool; unique identity
+magnesium hydroxide,magnesium hydroxide Mg(OH)2,medium,"MERGE: Mg(OH)2 incl. micro-whisker and industrial grades (morphology differs, substance same). mh in acsomega.8b03333 is presumed Mg(OH)2 (unconfirmed)."
+mapp,"MAPP (modified APP, unresolved)",low,"Presumed modified/encapsulated APP, appears in 2 papers; fr_chemistry guess (NH4H2PO4) is doubtful."
+mb-fr,mb-fr [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+mb3f3,mb3f3 [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+mbc,mbc,medium,no synonym found in pool; unique identity
+mbdac-bppo,mbdac-bppo,medium,no synonym found in pool; unique identity
+mbdac-dep,mbdac-dep,medium,no synonym found in pool; unique identity
+mbdac-dopo,mbdac-dopo,medium,no synonym found in pool; unique identity
+mbdac-dpp,mbdac-dpp,medium,no synonym found in pool; unique identity
+mbpne,mbpne,medium,no synonym found in pool; unique identity
+mca,melamine cyanurate (MCA),high,MCA = melamine cyanurate (incl. MC50 grade)
+mcapp,mcapp [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+mceg,mceg,medium,no synonym found in pool; unique identity
+mcpr-ldh,mcpr-ldh,medium,no synonym found in pool; unique identity
+mdh,magnesium hydroxide Mg(OH)2,high,"Mg(OH)2 / MDH / MH, commercial and nano grades (morphology only)"
+mdi/melamine polyurea co-microencapsulated app/ath 1/1 [m],mdi/melamine polyurea co-microencapsulated app/ath 1/1 [m],medium,no synonym found in pool; unique identity
+mela,mela [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+melamine,melamine,high,no P
+melamine + exolit op 935,melamine + exolit op 935,medium,no synonym found in pool; unique identity
+melamine + expanded graphite eg 290,melamine + expanded graphite eg 290,medium,no synonym found in pool; unique identity
+melamine + roflam b7 + roflam plo,melamine + roflam b7 + roflam plo,medium,no synonym found in pool; unique identity
+melamine cyanurate,melamine cyanurate (MCA),high,MCA = melamine cyanurate (incl. MC50 grade)
+melamine cyanurate mc50,melamine cyanurate (MCA),high,MCA = melamine cyanurate (incl. MC50 grade)
+melamine formaldehyde resin,melamine formaldehyde resin,medium,no synonym found in pool; unique identity
+melamine molybdate mamoo4,melamine molybdate mamoo4,medium,no synonym found in pool; unique identity
+melamine molybdate23,melamine molybdate23,medium,no synonym found in pool; unique identity
+melamine molybdate2moo4,melamine molybdate2moo4,medium,no synonym found in pool; unique identity
+melamine phosphate,melamine phosphate,medium,no synonym found in pool; unique identity
+melamine polyphosphate,melamine polyphosphate (MPP),high,Melapur 200 = melamine polyphosphate
+melamine pyrophosphate,melamine pyrophosphate,medium,no synonym found in pool; unique identity
+melamine salt of montmorillonite phosphate,melamine salt of montmorillonite phosphate,medium,no synonym found in pool; unique identity
+melamine tungstate2wo4,melamine tungstate2wo4,medium,no synonym found in pool; unique identity
+melamine-coated app,melamine-coated APP,medium,Budit 620 / FR CROS 490 melamine-coated APP grades
+melamine-formaldehyde resin coated app,melamine-formaldehyde resin coated app,medium,no synonym found in pool; unique identity
+melamine-phytic acid supramolecular assembly,melamine-phytic acid supramolecular assembly,medium,no synonym found in pool; unique identity
+mf3.5,mf3.5 [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+mfapp + alkali lignin,mfapp + alkali lignin,medium,no synonym found in pool; unique identity
+mg-al ldh1,mg-al ldh1,medium,no synonym found in pool; unique identity
+mg-al ldh2,mg-al ldh2,medium,no synonym found in pool; unique identity
+mg-al ldh3,mg-al ldh3,medium,no synonym found in pool; unique identity
+mg-al ldh4,mg-al ldh4,medium,no synonym found in pool; unique identity
+mg-al ldh5,mg-al ldh5,medium,no synonym found in pool; unique identity
+mg-al ldh6,mg-al ldh6,medium,no synonym found in pool; unique identity
+mg-al-co3 ldh,Mg-Al-CO3 LDH,low,generic MgAl-LDH assumed carbonate
+mg-al-h2po4 ldh,mg-al-h2po4 ldh,medium,no synonym found in pool; unique identity
+mg/al/fe-co3 ldh,mg/al/fe-co3 ldh,medium,no synonym found in pool; unique identity
+mg/zn/al-ldh,mg/zn/al-ldh,medium,no synonym found in pool; unique identity
+mg2,magnesium hydroxide Mg(OH)2,medium,"MERGE: Mg(OH)2 incl. micro-whisker and industrial grades (morphology differs, substance same). mh in acsomega.8b03333 is presumed Mg(OH)2 (unconfirmed)."
+mg2 magnifin h10a,magnesium hydroxide Mg(OH)2,high,"Mg(OH)2 / MDH / MH, commercial and nano grades (morphology only)"
+mgal-ldh,Mg-Al-CO3 LDH,low,generic MgAl-LDH assumed carbonate
+mgalfe-ldh,mgalfe-ldh,medium,no synonym found in pool; unique identity
+mgalzn-ldh-co3,MgAlZn-LDH-CO3,high,no P
+mgalzn-ldh-pmoa,MgAlZn-LDH intercalated PMoA,low,"PMoA presumed phosphomolybdic acid (inorganic polyoxometalate), unconfirmed."
+mh,magnesium hydroxide Mg(OH)2,medium,"MERGE: Mg(OH)2 incl. micro-whisker and industrial grades (morphology differs, substance same). mh in acsomega.8b03333 is presumed Mg(OH)2 (unconfirmed)."
+mh/ath2/al3),mh/ath2/al3),medium,no synonym found in pool; unique identity
+mh@dopo@mf microcapsule,mh@dopo@mf microcapsule,medium,no synonym found in pool; unique identity
+"mhx2, taixing)",magnesium hydroxide Mg(OH)2,high,"Mg(OH)2 / MDH / MH, commercial and nano grades (morphology only)"
+"mhy2, albemarle)",magnesium hydroxide Mg(OH)2,high,"Mg(OH)2 / MDH / MH, commercial and nano grades (morphology only)"
+mhz2),magnesium hydroxide Mg(OH)2,high,"Mg(OH)2 / MDH / MH, commercial and nano grades (morphology only)"
+micro-sized mdh,magnesium hydroxide Mg(OH)2,high,"Mg(OH)2 / MDH / MH, commercial and nano grades (morphology only)"
+microencapsulated app,microencapsulated app,medium,no synonym found in pool; unique identity
+microencapsulated eg + mapp + organo-ldh,microencapsulated eg + mapp + organo-ldh,medium,no synonym found in pool; unique identity
+microencapsulated eg + microencapsulated app,microencapsulated eg + microencapsulated app,medium,no synonym found in pool; unique identity
+microencapsulated red phosphorus,microencapsulated red phosphorus,medium,no synonym found in pool; unique identity
+microencapsulated sepiolite,microencapsulated sepiolite,medium,no synonym found in pool; unique identity
+mits + expandable graphite,mits + expandable graphite,medium,no synonym found in pool; unique identity
+mms,mms,medium,no synonym found in pool; unique identity
+mno2@chs@sa@ni hybrid,MnO2@CHS@SA@Ni hybrid,high,no P
+modified iron tailings,modified iron tailings,medium,no synonym found in pool; unique identity
+mono-ammonium phosphate,ammonium dihydrogen phosphate,high,MAP = NH4H2PO4
+monoammonium phosphate nh4h2po4,ammonium dihydrogen phosphate,high,MAP = NH4H2PO4
+moo3,molybdenum trioxide,high,no P
+moo3-hybridized magnesium hydroxide,moo3-hybridized magnesium hydroxide,medium,no synonym found in pool; unique identity
+mos2 nanosheets,mos2 nanosheets,medium,no synonym found in pool; unique identity
+mos2–dopo hybrid,mos2–dopo hybrid,medium,no synonym found in pool; unique identity
+mp/eg,mp/eg,medium,no synonym found in pool; unique identity
+mp/per,mp/per,medium,no synonym found in pool; unique identity
+mp/per 2:1,mp/per 2:1,medium,no synonym found in pool; unique identity
+mpcsn,mpcsn,medium,no synonym found in pool; unique identity
+mphp,melamine phenylphosphonate (MPhP),medium,Phenylphosphonate salt: P-C bond present although melamine salt.
+mpp,melamine polyphosphate (MPP),high,Inorganic-P salt -> 0 per brief (melamine is the cation; no P-C/P-O-C).
+mppm,mppm,medium,no synonym found in pool; unique identity
+mufapp,mufapp [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+mw-mh2 micro-whiskers),magnesium hydroxide Mg(OH)2,medium,"MERGE: Mg(OH)2 incl. micro-whisker and industrial grades (morphology differs, substance same). mh in acsomega.8b03333 is presumed Mg(OH)2 (unconfirmed)."
+n-p fire-resistant adhesive,n-p fire-resistant adhesive,medium,no synonym found in pool; unique identity
+nano-calcium borate,nano-calcium borate,medium,no synonym found in pool; unique identity
+nano-cu2o,nano-cu2o,medium,no synonym found in pool; unique identity
+nano-mg2,magnesium hydroxide Mg(OH)2,high,"Mg(OH)2 / MDH / MH, commercial and nano grades (morphology only)"
+naoh,naoh,medium,no synonym found in pool; unique identity
+nh2-mil-101,NH2-MIL-101(Al),high,no P
+ni@sio2-pa,Ni@SiO2-PA (nickel phytate on aminated SiO2),medium,[hybrid] phytate.
+nial-ldh,nial-ldh,medium,no synonym found in pool; unique identity
+nickel phytate,nickel phytate,medium,no synonym found in pool; unique identity
+nio,nio,medium,no synonym found in pool; unique identity
+no3-ldh,NO3-LDH,high,no P
+nofia ol1000,nofia ol1000,medium,no synonym found in pool; unique identity
+none,none,high,control / no FR
+nsapp-1,nsapp-1 [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+nsapp-2,nsapp-2 [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+nsapp-3,nsapp-3 [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+nsapp-4,nsapp-4 [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+ntpa,ntpa [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+oddpo,ODDPO,low,P stated (1.2 wt%); name suggests DPO-type organophosphorus; unconfirmed.
+om-so3k,om-so3k,medium,no synonym found in pool; unique identity
+ommt,ommt,medium,no synonym found in pool; unique identity
+ops,ops,medium,no synonym found in pool; unique identity
+organic phosphonate ester,organic phosphonate ester,medium,no synonym found in pool; unique identity
+otca@zno,otca@zno,medium,no synonym found in pool; unique identity
+ovs,ovs [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+oyster shell powder,oyster shell powder,medium,no synonym found in pool; unique identity
+"p,n-doped cellulose fibrils","p,n-doped cellulose fibrils",medium,no synonym found in pool; unique identity
+p-ppd-ph,p-ppd-ph [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+p-tab),p-tab),medium,no synonym found in pool; unique identity
+p5psq,p5psq,medium,no synonym found in pool; unique identity
+pa-tham,pa-tham,medium,no synonym found in pool; unique identity
+padl,padl,medium,no synonym found in pool; unique identity
+palonot p2,palonot p2,medium,no synonym found in pool; unique identity
+palonot p4,palonot p4,medium,no synonym found in pool; unique identity
+pamad,pamad [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+pani,pani,medium,no synonym found in pool; unique identity
+papp,piperazine pyrophosphate (PPAP),high,PAPP = PPAP = piperazine pyrophosphate
+papp:mpp:per 58:37:5,papp:mpp:per 58:37:5,medium,no synonym found in pool; unique identity
+pbdoo,pbdoo,medium,no synonym found in pool; unique identity
+pc-dpa-ldh,PC-DPA-LDH (phosphocreatine/dodecyl phosphate LDH),medium,[hybrid] dodecylphosphoric acid P-O-C.
+pc-ldh,phosphocreatine-intercalated LDH,low,Phosphocreatine has P-N only (no P-C/P-O-C) -> 0 by strict bond rule; arguable as organic-P.
+pcp-cnt,pcp-cnt,medium,no synonym found in pool; unique identity
+pcs,PCS,low,"UNRESOLVED acronym, no chemistry in names data; P status unknown -> coded 0/0 (excluded). Revisit if the paper is read."
+pdepd),pdepd),medium,no synonym found in pool; unique identity
+pdepd/na-mmt nanocomposite,pdepd/na-mmt nanocomposite,medium,no synonym found in pool; unique identity
+pds,PDS (melamine salt of CBP),low,"UNRESOLVED acronym, no chemistry in names data; P status unknown -> coded 0/0 (excluded). Revisit if the paper is read."
+pec,pec,medium,no synonym found in pool; unique identity
+pedscd,PEDSCD,low,Unresolved acronym; as spdscd. Guess.
+penta,penta [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+pentaerythritol,pentaerythritol,medium,no synonym found in pool; unique identity
+pentaerythritol phosphate,pentaerythritol phosphate,medium,no synonym found in pool; unique identity
+pentaerythritol phosphate + expandable graphite,pentaerythritol phosphate + expandable graphite,medium,no synonym found in pool; unique identity
+pentaerythritol phosphate melamine salt,pentaerythritol phosphate melamine salt,medium,PEPA-type cage phosphate ester P-O-C.
+pepe-modified mo@mh,pepe-modified mo@mh,medium,no synonym found in pool; unique identity
+petat,petat [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+pfapp + lignin-poh,pfapp + lignin-poh,medium,no synonym found in pool; unique identity
+pfapp + phosphorus-functionalized lignin polyol,pfapp + phosphorus-functionalized lignin polyol,medium,no synonym found in pool; unique identity
+phenol formaldehyde silane resin pfs1] ethylene diamine),phenol formaldehyde silane resin pfs1] ethylene diamine),medium,no synonym found in pool; unique identity
+phenol formaldehyde silane resin pfs2,phenol formaldehyde silane resin pfs2,medium,no synonym found in pool; unique identity
+phenolic resin hollow microspheres,phenolic resin hollow microspheres,medium,no synonym found in pool; unique identity
+phosphate frs + app + mwnt,phosphate frs + app + mwnt,medium,no synonym found in pool; unique identity
+phosphate frs + app + tio2,phosphate frs + app + tio2,medium,no synonym found in pool; unique identity
+phosphate frs + ath + mwnt,phosphate frs + ath + mwnt,medium,no synonym found in pool; unique identity
+phosphate frs + ath + tio2,phosphate frs + ath + tio2,medium,no synonym found in pool; unique identity
+phosphate frs + zinc borate + mwnt,phosphate frs + zinc borate + mwnt,medium,no synonym found in pool; unique identity
+phosphate frs + zinc borate + tio2,phosphate frs + zinc borate + tio2,medium,no synonym found in pool; unique identity
+phosphate frs only,phosphate frs only,medium,no synonym found in pool; unique identity
+phosphate/urea-grafted bamboo charcoal,phosphate/urea-grafted bamboo charcoal,medium,no synonym found in pool; unique identity
+phosphated cellulose,phosphated cellulose,medium,no synonym found in pool; unique identity
+phosphazene oligomer fp100,phosphazene oligomer fp100,medium,no synonym found in pool; unique identity
+phosphorus fr,phosphorus fr [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+phosphorus-containing polyol op,phosphorus-containing polyol op,medium,no synonym found in pool; unique identity
+phosphorus-containing polysulfone aropn2,P-polysulfone ArOPN2,medium,
+phosphorus-containing polysulfone aropo2,P-polysulfone ArOPO2,medium,
+phosphorus-containing polysulfone arpn2,P-polysulfone ArPN2,medium,
+phosphorus-containing polysulfone arpo2,P-polysulfone ArPO2,medium,P-containing polymer (P stated 1.25 wt%).
+phosphorus-nitrogen flame retardant,phosphorus-nitrogen flame retardant [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+phosphorylated cellulose,phosphorylated cellulose,medium,no synonym found in pool; unique identity
+phosphorylated wheat starch ws-e uncleaned,phosphorylated wheat starch ws-e uncleaned,medium,no synonym found in pool; unique identity
+phosphorylated wheat starch ws-k cleaned,phosphorylated wheat starch ws-k cleaned,medium,no synonym found in pool; unique identity
+phosphorylated wheat starch ws-k physical mixture,phosphorylated wheat starch ws-k physical mixture,medium,no synonym found in pool; unique identity
+phosphorylated wheat starch ws-k uncleaned,phosphorylated wheat starch ws-k uncleaned,medium,no synonym found in pool; unique identity
+phosphorylated wheat starch ws-o cleaned,phosphorylated wheat starch ws-o cleaned,medium,no synonym found in pool; unique identity
+phvposs,phvposs,medium,no synonym found in pool; unique identity
+phytic acid,phytic acid,high,Inositol hexakisphosphate: P-O-C esters (organic-P by brief).
+phytic acid + urea grafting treatment,phytic acid + urea grafting treatment,medium,no synonym found in pool; unique identity
+phytic acid-triethylenetetramine,phytic acid-triethylenetetramine,medium,no synonym found in pool; unique identity
+phytic acid/silica nanosol hybrid,phytic acid/silica nanosol hybrid,medium,no synonym found in pool; unique identity
+pi,pi,medium,no synonym found in pool; unique identity
+pipc,PIPC (spirocyclic pentaerythritol bisphosphonate),high,Phosphonate.
+piperazine pyrophosphate,piperazine pyrophosphate (PPAP),high,PAPP = PPAP = piperazine pyrophosphate
+pm,pm,medium,no synonym found in pool; unique identity
+pmrg-3,pmrg-3,medium,no synonym found in pool; unique identity
+pn-dopo,pn-dopo,medium,no synonym found in pool; unique identity
+pnc,pnc [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+po2-vsil,PO(OPh)2-VSil,medium,Fibre composite.
+poly,poly,medium,no synonym found in pool; unique identity
+polyaminopropylphenylsilsesquioxane,aminopropylphenyl silsesquioxane,high,no P
+polycarbosilane,polycarbosilane,medium,no synonym found in pool; unique identity
+polydimethylsiloxane pdms,polydimethylsiloxane pdms,medium,no synonym found in pool; unique identity
+polydopamine-coated red phosphorus,RP@PDA,high,Coated RP.
+polydopamine/melamine microencapsulated red phosphorus,RP@PDA/MA,high,Coated RP.
+polyethylenimine,polyethylenimine,medium,no synonym found in pool; unique identity
+polysilsesquioxane,aminopropylphenyl silsesquioxane,medium,poly(aminopropyl/phenyl)silsesquioxane
+polysurf hp,polysurf hp,medium,no synonym found in pool; unique identity
+pooph-vsil2diamidophosphorus phenylester),POOPh-VSil2,medium,Phosphoramidate phenyl ester; fibre composite.
+poss-evim,poss-evim,medium,no synonym found in pool; unique identity
+poss-triol,POSS-triol,high,no P
+poss-vipsp,poss-vipsp,medium,no synonym found in pool; unique identity
+potassium carbonate k2co3,potassium carbonate k2co3,medium,no synonym found in pool; unique identity
+potassium salt,potassium salt,medium,no synonym found in pool; unique identity
+potassium salt + dfd,potassium salt + dfd,medium,no synonym found in pool; unique identity
+ppa,PPA (polyphosphate amide),low,Presumed organic polyphosphoramide; unconfirmed.
+ppa-ath,ppa-ath,medium,no synonym found in pool; unique identity
+ppac-modified magnesium hydroxide,MH@PPAC,low,[hybrid] Mg(OH)2 with PPAC surface modifier; mostly inorganic hydroxide.
+ppap,piperazine pyrophosphate (PPAP),medium,Pyrophosphate salt; inorganic P.
+ppms-grafted carbon black,PPMS-grafted carbon black,low,[hybrid] pentaerythritol phosphate melamine salt on carbon black.
+ppoa-ath,ppoa-ath,medium,no synonym found in pool; unique identity
+ppso),ppso),medium,no synonym found in pool; unique identity
+ppsq),ppsq),medium,no synonym found in pool; unique identity
+ppy-mapp,polypyrrole-modified MAPP,low,APP-derived; inorganic P.
+psf,psf,medium,no synonym found in pool; unique identity
+psncfr,psncfr [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+psqsilsesquioxane),psqsilsesquioxane),medium,no synonym found in pool; unique identity
+pu-microencapsulated app,PU-microencapsulated APP,medium,
+pumapp,PU-microencapsulated APP,medium,
+pvdc emulsion,pvdc emulsion,medium,no synonym found in pool; unique identity
+px200,"PX-200 (resorcinol bis(di-2,6-xylyl) phosphate)",high,PX200
+px200-m-phenylene bisphosphate),"PX-200 (resorcinol bis(di-2,6-xylyl) phosphate)",high,PX200
+rdp,resorcinol bis(diphenyl phosphate) (RDP),high,MERGE: RDP spelled three ways (resorcinol bis is a truncated name). Aryl phosphate P-O-C.
+rdp resorcinol bis,resorcinol bis(diphenyl phosphate) (RDP),high,MERGE: RDP spelled three ways (resorcinol bis is a truncated name). Aryl phosphate P-O-C.
+reactive phosphorus polyol cppa,reactive phosphorus polyol cppa,medium,no synonym found in pool; unique identity
+reactive phosphorus-containing soybean oil polyol,reactive phosphorus-containing soybean oil polyol,medium,no synonym found in pool; unique identity
+red phosphorus,red phosphorus,high,Elemental P.
+resorcinol bis,resorcinol bis(diphenyl phosphate) (RDP),high,MERGE: RDP spelled three ways (resorcinol bis is a truncated name). Aryl phosphate P-O-C.
+resveratrol,resveratrol,medium,no synonym found in pool; unique identity
+rgo,reduced graphene oxide,medium,"RGO first, APP second in the 15RGO@APP row; no P"
+rgo-app,RGO-APP hybrid,medium,APP on reduced graphene oxide.
+"rm = diethylphosphonate, re = diethyl bis-aminomethylphosphonate","rm = diethylphosphonate, re = diethyl bis-aminomethylphosphonate",medium,no synonym found in pool; unique identity
+roflam b7,Roflam B7 (tert-butylphenyl phosphate),high,Aryl phosphate; 2nd FR Mg(OH)2 in some rows.
+roflam f5,Roflam F5 (phenyl-isopropylphenyl phosphate),high,Aryl phosphate; 2nd FR Mg(OH)2 in some rows.
+roflam f6,roflam f6,medium,no synonym found in pool; unique identity
+s-cemgal,s-cemgal,medium,no synonym found in pool; unique identity
+s-lamgal,s-lamgal,medium,no synonym found in pool; unique identity
+s-mgal,s-mgal,medium,no synonym found in pool; unique identity
+s-ndmgal,s-ndmgal,medium,no synonym found in pool; unique identity
+s4sq-18,s4sq-18,medium,no synonym found in pool; unique identity
+s4sq-8,s4sq-8,medium,no synonym found in pool; unique identity
+s4sq-h,s4sq-h,medium,no synonym found in pool; unique identity
+s600,melamine poly(magnesium phosphate) S600,medium,MERGE: S600 and S600) same additive (paper s10973-016-5934-4). Inorganic-P melamine polyphosphate-type salt; s600 key rows also contain MPP/AlPi/boehmite as 2nd FR in some rows.
+s600),melamine poly(magnesium phosphate) S600,medium,MERGE: S600 and S600) same additive (paper s10973-016-5934-4). Inorganic-P melamine polyphosphate-type salt; s600 key rows also contain MPP/AlPi/boehmite as 2nd FR in some rows.
+sacoflam 47201,sacoflam 47201,medium,no synonym found in pool; unique identity
+salen s1,salen s1,medium,no synonym found in pool; unique identity
+salen s1-cu complex,salen s1-cu complex,medium,no synonym found in pool; unique identity
+salen s1-ni complex,salen s1-ni complex,medium,no synonym found in pool; unique identity
+salen s1-zn complex,salen s1-zn complex,medium,no synonym found in pool; unique identity
+sb-lh,sb-lh [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+sb2o3,antimony trioxide,high,no P
+sbpdopo,SBPDOPO,medium,Name contains DOPO.
+scp-vsil,SCP-VSil (salicylic phosphasilazane),medium,Fibre composite.
+sep,sep,medium,no synonym found in pool; unique identity
+sep@alpo4,sep@alpo4,medium,no synonym found in pool; unique identity
+serpentine@app4),serpentine@app4),medium,no synonym found in pool; unique identity
+si-ifr,si-ifr,medium,no synonym found in pool; unique identity
+si-mcapp,si-mcapp,medium,no synonym found in pool; unique identity
+siahp,siahp,medium,no synonym found in pool; unique identity
+silane-coated ammonium polyphosphate,silane-modified APP (KH550/silane coated),medium,KH-550/silane-coated APP; separate from plain APP
+silane-treated eg,silane-treated eg,medium,no synonym found in pool; unique identity
+silica-gel microencapsulated app,silica-gel microencapsulated app,medium,no synonym found in pool; unique identity
+silicone rubber,silicone rubber,medium,no synonym found in pool; unique identity
+simp-cmss,simp-cmss,medium,no synonym found in pool; unique identity
+sio2@uio-66 composite,sio2@uio-66 composite,medium,no synonym found in pool; unique identity
+smfapp,smfapp,medium,no synonym found in pool; unique identity
+sodium alginate,sodium alginate,medium,no synonym found in pool; unique identity
+sodium casein 180,sodium casein 180,medium,no synonym found in pool; unique identity
+spdp-ptms@ath,SPDP-PTMS@ATH (N-P-Si grafted ATH),medium,[hybrid]
+spdscd,SPDSCD,low,Unresolved acronym; probable spirocyclic P/cyclodextrin charring agent. Guess.
+spdv,spdv,medium,no synonym found in pool; unique identity
+spherical cosn6,CoSn(OH)6 spherical,high,no P
+spiro-vsil2,Spiro-VSil2 (spiro-phosphate bis-silazane),medium,Fibre composite.
+spms,SPMS,low,UNRESOLVED; co-added with APP in rows (13.33%); P status unknown -> coded 0/0. Row also contains APP.
+sposs-boz,sposs-boz,medium,no synonym found in pool; unique identity
+steel slag/dimelamine pyrophosphate,steel slag/dimelamine pyrophosphate,medium,no synonym found in pool; unique identity
+styrene-vinyl tetrazole copolymer,styrene-vinyl tetrazole copolymer,medium,no synonym found in pool; unique identity
+sulfamic acid-intercalated mgal-ldh,sulfamic acid-intercalated mgal-ldh,medium,no synonym found in pool; unique identity
+tad,TAD (phosphaphenanthrene triazine),high,DOPO-type derivative.
+tahht-ddpo,TAHHT-DDPO,medium,"DDPO = diaryl phosphine-oxide type, P-C."
+tahht-dopo,TAHHT-DOPO,high,DOPO adduct.
+tahht-dopo-ddpo,TAHHT-DOPO-DDPO,medium,Both P units.
+tannic acid,tannic acid,high,no P
+tannin phosphate carbamate,tannin phosphate carbamate,medium,no synonym found in pool; unique identity
+tbua-bppo + tep,tbua-bppo + tep,medium,no synonym found in pool; unique identity
+tcpp,tris(1-chloro-2-propyl) phosphate (TCPP),high,
+tcpp + dmmp,tcpp + dmmp,medium,no synonym found in pool; unique identity
+tcpp + dmmp + boron phosphate,tcpp + dmmp + boron phosphate,medium,no synonym found in pool; unique identity
+tcpp + dmmp + copper ferrite,tcpp + dmmp + copper ferrite,medium,no synonym found in pool; unique identity
+tcpp + dmmp + nickel ferrite,tcpp + dmmp + nickel ferrite,medium,no synonym found in pool; unique identity
+tcpp + dmmp + zinc ferrite,tcpp + dmmp + zinc ferrite,medium,no synonym found in pool; unique identity
+tda,TDA (TGIC-DOPO-APTES),high,DOPO derivative.
+tdb,TDB (P/B triazine-trione),low,Organic P presumed.
+teap,teap,medium,no synonym found in pool; unique identity
+tep,triethyl phosphate (TEP),high,
+tgd,tgd [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+th-ifr,th-ifr [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+thpm,thpm [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+ti-ifr,ti-ifr,medium,no synonym found in pool; unique identity
+ti3c2tx-mpcsn nanohybrid,ti3c2tx-mpcsn nanohybrid,medium,no synonym found in pool; unique identity
+ti4000-bmc,ti4000-bmc [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+tio2-coated hollow glass microspheres,tio2-coated hollow glass microspheres,medium,no synonym found in pool; unique identity
+tmapp,"TMAPP (modified APP, unresolved)",low,Presumed modified APP; no name evidence of P-C/P-O-C.
+tpc,tpc,medium,no synonym found in pool; unique identity
+tpp,triphenyl phosphate (TPP),high,
+tpp/tep,tpp/tep,medium,no synonym found in pool; unique identity
+tps-g,tps-g,medium,no synonym found in pool; unique identity
+tps-g-cpa,tps-g-cpa,medium,no synonym found in pool; unique identity
+triazine charring agent,triazine charring agent,medium,no synonym found in pool; unique identity
+triethyl phosphate,triethyl phosphate (TEP),high,
+trimer phosphate),trimer phosphate),medium,no synonym found in pool; unique identity
+ts-ifr,ts-ifr [unresolved],low,acronym/generic; chemistry not identifiable from names data; kept unique
+ucpr-ldh,ucpr-ldh,medium,no synonym found in pool; unique identity
+uio-66,uio-66,medium,no synonym found in pool; unique identity
+uio66-nh2,UiO-66-NH2 MOF,medium,"MERGE: solid vs hollow UiO-66-NH2, same substance."
+untreated eg,expandable graphite,high,"EG, size/grade variants and untreated EG (substance same)"
+vinyl poss,vinyl poss,medium,no synonym found in pool; unique identity
+vinyl-silane-modified sio2-microencapsulated mg/zn/al-ldh,vinyl-silane-modified sio2-microencapsulated mg/zn/al-ldh,medium,no synonym found in pool; unique identity
+vp phenylphosphonate),vp phenylphosphonate),medium,no synonym found in pool; unique identity
+vph vopo4·2h2o,VOPO4 dihydrate,high,Inorganic.
+w-uio66-nh2,UiO-66-NH2 MOF,medium,"MERGE: solid vs hollow UiO-66-NH2, same substance."
+w-uio66-ppa,W-UiO66-PPA (phenylphosphonic acid grafted),high,[hybrid] phenylphosphonate P-C; paraffin PCM co-additive.
+wheat protein phosphate carbamate,wheat protein phosphate carbamate,medium,no synonym found in pool; unique identity
+wheat starch phosphate carbamate,wheat starch phosphate carbamate,medium,no synonym found in pool; unique identity
+wmaapp,wmaapp,medium,no synonym found in pool; unique identity
+wmapp,wmapp,medium,no synonym found in pool; unique identity
+wmtapp,wmtapp,medium,no synonym found in pool; unique identity
+x-22-176dx y-type polydimethylsiloxane,x-22-176dx y-type polydimethylsiloxane,medium,no synonym found in pool; unique identity
+xylan phosphate carbamate,xylan phosphate carbamate,medium,no synonym found in pool; unique identity
+y-btc,Y-BTC MOF,high,no P
+zeolitic imidazolate framework zif-11,zeolitic imidazolate framework zif-11,medium,no synonym found in pool; unique identity
+zeolitic imidazolate framework zif-7,zeolitic imidazolate framework zif-7,medium,no synonym found in pool; unique identity
+zeolitic imidazolate framework zif-8,ZIF-8,high,
+zhs,zinc hydroxystannate,high,no P
+zhs/go nanohybrid,zhs/go nanohybrid,medium,no synonym found in pool; unique identity
+zif-67,zif-67,medium,no synonym found in pool; unique identity
+zif-67@mxene hybrid,zif-67@mxene hybrid,medium,no synonym found in pool; unique identity
+zif-8,ZIF-8,high,no P
+zif-8@sio2,ZIF-8@SiO2,high,no P
+zinc bis zndmp,zinc bis zndmp,medium,no synonym found in pool; unique identity
+zinc borate,zinc borate,high,Firebrake ZB
+zinc phosphinate,zinc phosphinate,medium,no synonym found in pool; unique identity
+zn-pdh,Zn-PDH (phosphazene-modified organozinc complex),medium,
+znfe2o4,znfe2o4,medium,no synonym found in pool; unique identity
+znmgal-co3-ldh,MgAlZn-LDH-CO3,medium,"ZnMgAl-CO3 LDH, same composition"
+zno-doped magnesium hydroxide,zno-doped magnesium hydroxide,medium,no synonym found in pool; unique identity
+zs,zinc stannate ZnSnO3,medium,assumed; no P
+~0.32 g g-c3n4 per batch),~0.32 g g-c3n4 per batch),medium,no synonym found in pool; unique identity

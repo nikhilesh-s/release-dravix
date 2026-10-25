@@ -1,0 +1,6 @@
+attempt d11: DEV ONLY: d7 with pool = EP rows with control only (does the non-EP data help?).
+seeds 0-2 DEV
+  seed 0: MAE 181.9 R2 0.462
+  seed 1: MAE 185.0 R2 0.451
+  seed 2: MAE 186.3 R2 0.431
+RESULT d11 DEV: n=305 papers=91 FR groups=125 features=237 | MAE 184.4 +- 1.8 CI [163.1, 206.8] R2 0.448 | baseline ctrl x median ratio MAE 193.7

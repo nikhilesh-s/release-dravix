@@ -1,0 +1,6 @@
+attempt d10: DEV ONLY: d7 + same-paper neat-control baselines (TTI, THR, avg HRR, t_pHRR, char, TSR, EHC; log1p, blank on control rows).
+seeds 0-2 DEV
+  seed 0: MAE 158.9 R2 0.586
+  seed 1: MAE 159.6 R2 0.587
+  seed 2: MAE 161.6 R2 0.572
+RESULT d10 DEV: n=305 papers=91 FR groups=125 features=244 | MAE 160.0 +- 1.2 CI [140.3, 174.8] R2 0.582 | baseline ctrl x median ratio MAE 200.9

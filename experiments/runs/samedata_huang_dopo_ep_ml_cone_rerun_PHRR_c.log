@@ -1,0 +1,31 @@
+[INFO] File loaded with encoding: utf-8
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpgosbv4eb/PHRR/reference/formulation/without_BDE/PHRR_outer_fold_1_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpgosbv4eb/PHRR/reference/formulation/without_BDE/PHRR_outer_fold_2_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpgosbv4eb/PHRR/reference/formulation/without_BDE/PHRR_outer_fold_3_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpgosbv4eb/PHRR/reference/formulation/without_BDE/PHRR_outer_fold_4_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpgosbv4eb/PHRR/reference/formulation/without_BDE/PHRR_outer_fold_5_model.joblib
+PHRR P2_r0: mean R2 0.5830 ['GBDT', 'GBDT', 'ExtraTrees', 'ExtraTrees', 'XGB'] 2.97 min
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpdvsq80ee/PHRR/reference/formulation/without_BDE/PHRR_outer_fold_1_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpdvsq80ee/PHRR/reference/formulation/without_BDE/PHRR_outer_fold_2_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpdvsq80ee/PHRR/reference/formulation/without_BDE/PHRR_outer_fold_3_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpdvsq80ee/PHRR/reference/formulation/without_BDE/PHRR_outer_fold_4_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpdvsq80ee/PHRR/reference/formulation/without_BDE/PHRR_outer_fold_5_model.joblib
+PHRR P2_r1: mean R2 0.6052 ['GBDT', 'GBDT', 'SoftVote', 'LGBM', 'LGBM'] 2.81 min
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp0ibmz59f/PHRR/reference/formulation/without_BDE/PHRR_outer_fold_1_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp0ibmz59f/PHRR/reference/formulation/without_BDE/PHRR_outer_fold_2_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp0ibmz59f/PHRR/reference/formulation/without_BDE/PHRR_outer_fold_3_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp0ibmz59f/PHRR/reference/formulation/without_BDE/PHRR_outer_fold_4_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp0ibmz59f/PHRR/reference/formulation/without_BDE/PHRR_outer_fold_5_model.joblib
+PHRR P2_r2: mean R2 0.5995 ['GBDT', 'GBDT', 'ExtraTrees', 'GBDT', 'XGB'] 2.55 min
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpk2956fkt/PHRR/reference/formulation/without_BDE/PHRR_outer_fold_1_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpk2956fkt/PHRR/reference/formulation/without_BDE/PHRR_outer_fold_2_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpk2956fkt/PHRR/reference/formulation/without_BDE/PHRR_outer_fold_3_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpk2956fkt/PHRR/reference/formulation/without_BDE/PHRR_outer_fold_4_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpk2956fkt/PHRR/reference/formulation/without_BDE/PHRR_outer_fold_5_model.joblib
+PHRR P2_r3: mean R2 0.5819 ['LGBM', 'GBDT', 'GBDT', 'SoftVote', 'XGB'] 3.86 min
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp19a3lu2x/PHRR/reference/formulation/without_BDE/PHRR_outer_fold_1_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp19a3lu2x/PHRR/reference/formulation/without_BDE/PHRR_outer_fold_2_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp19a3lu2x/PHRR/reference/formulation/without_BDE/PHRR_outer_fold_3_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp19a3lu2x/PHRR/reference/formulation/without_BDE/PHRR_outer_fold_4_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp19a3lu2x/PHRR/reference/formulation/without_BDE/PHRR_outer_fold_5_model.joblib
+PHRR P2_r4: mean R2 0.5986 ['GBDT', 'GBDT', 'LGBM', 'GBDT', 'GBDT'] 12.37 min

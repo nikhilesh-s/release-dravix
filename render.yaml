@@ -1,4 +1,4 @@
-# Dravix engine API (preview). Blueprint: Render dashboard > New > Blueprint > nikhilesh-s/dravix-master, branch relaunch-v2.
+# Dravix engine API. Blueprint: Render dashboard > New > Blueprint > this repository.
 # The model is the committed compact artifact api/dravix_engine_compact.joblib (17 MB) plus api/uncertainty.joblib (47 kB); peak RSS ~260 MB,
 # so the build only installs packages. Rebuild the artifact locally with: python3 api/build_model.py
 services:
@@ -21,6 +21,6 @@ services:
       - key: DRAVIX_SECRET
         sync: false
       - key: DRAVIX_CORS_ORIGINS
-        value: http://localhost:5173
+        value: http://localhost:5173,https://dravix-engine.materiamse.com
       - key: DRAVIX_CORS_ORIGIN_REGEX
-        value: 'https://dravix-master-engine-preview(?:-(?:[a-z0-9]{9}|[a-z0-9-]+-nikhilesh-suravarjjalas-projects))?\.vercel\.app'
+        value: 'https://your-dashboard(?:-[a-z0-9-]+)?\.vercel\.app'

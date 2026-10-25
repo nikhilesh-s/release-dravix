@@ -1,0 +1,13 @@
+attempt A2: A1 + ECFP4 (Morgan r2, 128 bits) of the main SMILES-resolved FR (fr_smiles_extra.csv, names-only annotation), the USTC input. Not testable on dev (dev FRs mostly lack SMILES). Rule fixed now: the better of A1/A2 on B' carries forward to A3/A4; this selection is disclosed.
+seeds 0-9
+  seed 0: MAE 125.2 R2 0.774
+  seed 1: MAE 129.4 R2 0.768
+  seed 2: MAE 126.3 R2 0.772
+  seed 3: MAE 127.4 R2 0.772
+  seed 4: MAE 127.1 R2 0.771
+  seed 5: MAE 124.4 R2 0.778
+  seed 6: MAE 125.8 R2 0.785
+  seed 7: MAE 126.5 R2 0.778
+  seed 8: MAE 128.6 R2 0.772
+  seed 9: MAE 121.3 R2 0.793
+RESULT A2: n=183 papers=54 FR groups=45 features=244 | MAE 126.2 +- 2.2 CI [106.8, 147.9] R2 0.776 | baseline ctrl x median ratio MAE 195.4

@@ -1,0 +1,190 @@
+name,smiles,kind,P_mass_frac,confidence,note
+none,,undefined,,high,no flame retardant
+dopo,O=[PH]1Oc2ccccc2-c2ccccc12,small_molecule,0.1433,high,DOPO P-H tautomer (copied from fr_chemistry)
+dopo–vtes–go,,undefined,,high,"DOPO/VTES grafted graphene oxide, nanomaterial"
+dap@sio2,,undefined,0.15,high,silica-coated diammonium phosphate core-shell particle
+dopo–go,,undefined,,high,"DOPO grafted graphene oxide, nanomaterial"
+ni@sio2-pa,,undefined,,high,"nickel phytate on aminated silica, hybrid nanoparticle"
+tad,,undefined,,low,"phosphaphenanthrene triazine compound, structure not given"
+zn-pdh,,undefined,,low,"phosphazene-modified organozinc complex, structure not given"
+rdp resorcinol bis,O=P(Oc1ccccc1)(Oc1ccccc1)Oc1cccc(OP(=O)(Oc2ccccc2)Oc2ccccc2)c1,small_molecule,0.1078,high,RDP; key truncated at paren
+gposs,,undefined,,high,"glycidyl POSS, cage with variable functionalisation"
+mgalzn-ldh-co3,,undefined,,high,layered double hydroxide
+mgalzn-ldh-pmoa,,undefined,,high,layered double hydroxide intercalated with phosphomolybdate
+hacp,Nc1ccc(OP2(Oc3ccc(N)cc3)=NP(Oc3ccc(N)cc3)(Oc3ccc(N)cc3)=NP(Oc3ccc(N)cc3)(Oc3ccc(N)cc3)=N2)cc1,small_molecule,0.1186,low,guess: hexa(4-aminophenoxy)cyclotriphosphazene; computed P matches fr_chemistry 0.119 but acronym not expanded in rows
+depa-al,,undefined,0.238,low,"boehmite-diethyl phosphate hybrid, not AlPi; composition unknown (existing P 0.238 in fr_chemistry looks like AlPi value, doubtful)"
+dehpa-alphosphate hybrid),,undefined,,high,boehmite-bis(2-ethylhexyl)phosphate hybrid; key mangled
+dehpa-al phosphate hybrid),,undefined,,high,boehmite-bis(2-ethylhexyl)phosphate hybrid; key mangled
+dppa-al,,undefined,,high,"boehmite-diphenyl phosphate hybrid, composition unknown"
+oddpo,,undefined,,low,"DOPO-type derivative, structure not recoverable from rows"
+sbpdopo,,undefined,,low,"DOPO-type derivative, structure not recoverable from rows"
+pooph-vsil2diamidophosphorus phenylester),C=C[Si](C)(C)NP(=O)(Oc1ccccc1)N[Si](C)(C)C=C,small_molecule,0.091,medium,"from full name N,N-bis(dimethylvinylsilyl)diamidophosphorus phenylester; P=O assumed; key mangled"
+pooph-vsil2 diamidophosphorus phenylester),C=C[Si](C)(C)NP(=O)(Oc1ccccc1)N[Si](C)(C)C=C,small_molecule,0.091,medium,"from full name N,N-bis(dimethylvinylsilyl)diamidophosphorus phenylester; P=O assumed; key mangled"
+scp-vsil,,undefined,,low,"salicylic acid based phosphasilazane, exact structure not given"
+dopo-vsil,,undefined,0.075,low,"DOPO phosphasilazane, P-Si linkage not specified"
+spiro-vsil2,C=C[Si](C)(C)NP1(=O)OCC2(CO1)COP(=O)(N[Si](C)(C)C=C)OC2,small_molecule,0.1452,medium,spirocyclic pentaerythritol bisphosphoramide with 2 NH-SiMe2Vinyl; analogue of the allylamine spiro compound in fr_chemistry
+po2-vsil,C=C[Si](C)(C)NP(=O)(Oc1ccccc1)Oc1ccccc1,small_molecule,0.0929,medium,from full name PO(OPh)2-VSil: N-dimethylvinylsilyl amidophosphorus diphenylester
+tda,,undefined,,low,"TGIC-DOPO-APTES adduct, stoichiometry/oligomer not defined"
+bp-deta,,undefined,,high,"functionalised black phosphorus, nanomaterial"
+bp-ppda,,undefined,,high,"functionalised black phosphorus, nanomaterial"
+bp-pid,,undefined,,high,"functionalised black phosphorus, nanomaterial"
+ppap,C1CNCCN1.OP(O)(=O)OP(O)(O)=O,small_molecule,0.2346,medium,piperazine pyrophosphate 1:1 salt (neutral acid+base drawn)
+spdscd,,undefined,,low,"spirocyclic phosphate derivative, structure not given"
+app,[*]P(=O)([O-])O[*].[NH4+],repeat_unit,0.3193,medium,"(NH4PO3)n repeat, [*] chain ends; chain length/phase not defined"
+ath,[OH-].[OH-].[OH-].[Al+3],small_molecule,0.0,high,Al(OH)3 as ions (same as fr_chemistry al3)
+eg,,undefined,0.0,high,expandable graphite
+mel,Nc1nc(N)nc(N)n1,small_molecule,0.0,high,melamine (copied)
+pedscd,,undefined,,low,structure not given
+tahht-dopo,O=C(CCP1(=O)Oc2ccccc2-c2ccccc12)N1CN(C(=O)CCP2(=O)Oc3ccccc3-c3ccccc23)CN(C(=O)CCP2(=O)Oc3ccccc3-c3ccccc23)C1,small_molecule,0.1035,medium,tris-DOPO Michael adduct of triacryloylhexahydrotriazine; computed P matches fr_chemistry 0.103
+tahht-ddpo,,undefined,,low,DDPO analogue of TAHHT-DOPO; DDPO identity not certain
+tahht-dopo-ddpo,,undefined,,low,"mixed adduct, composition not defined"
+ba-dopo,,undefined,0.1,low,"DOPO derivative, acronym BA not expanded; existing P 0.1 unverified"
+actilox b30,O=[Al]O,small_molecule,0.0,medium,"commercial boehmite, AlO(OH); P-flag in row group comes from co-added TAHHT-DOPO"
+disperal 40,O=[Al]O,small_molecule,0.0,medium,"commercial boehmite, AlO(OH); P-flag in row group comes from co-added TAHHT-DOPO"
+bdp,CC(C)(c1ccc(OP(=O)(Oc2ccccc2)Oc2ccccc2)cc1)c1ccc(OP(=O)(Oc2ccccc2)Oc2ccccc2)cc1,small_molecule,0.0894,high,bisphenol A bis(diphenyl phosphate) (copied)
+exolit op935,CCP(CC)(=O)[O-].CCP(CC)(=O)[O-].CCP(CC)(=O)[O-].[Al+3],small_molecule,0.2381,high,Exolit OP935 = aluminium diethylphosphinate; salt form
+exolit op1230,CCP(CC)(=O)[O-].CCP(CC)(=O)[O-].CCP(CC)(=O)[O-].[Al+3],small_molecule,0.2381,medium,copied; salt form of AlPi (OP1230 may carry a synergist)
+exolit rp607,,undefined,0.5,high,"red phosphorus, encapsulated allotrope"
+boehmite,O=[Al]O,small_molecule,0.0,medium,AlO(OH) formula unit
+spdp-ptms@ath,,undefined,,high,grafted ATH particle
+app:per:mel,,undefined,,high,blend
+b4c,,undefined,0.0,high,boron carbide ceramic
+hpdal,,undefined,,low,structure not given
+aluminum hypophosphite,[O-][PH2]=O.[O-][PH2]=O.[O-][PH2]=O.[Al+3],small_molecule,0.4187,high,Al(H2PO2)3 as ions
+ammonium polyphosphate,[*]P(=O)([O-])O[*].[NH4+],repeat_unit,0.3193,medium,"(NH4PO3)n repeat; Exolit AP 462 variant is melamine-resin coated, coating ignored"
+gallic acid,OC(=O)c1cc(O)c(O)c(O)c1,small_molecule,0.0,high,copied
+ellagic acid,Oc1cc2c3c(c1O)oc(=O)c1cc(O)c(O)c(oc2=O)c13,small_molecule,0.0,high,copied
+borated gallic acid derivative,,undefined,,low,structure not defined
+borated ellagic acid derivative,,undefined,,low,structure not defined
+4p4gs,,undefined,,high,"DOPO-phosphate functionalised POSS cage, variable"
+8ps,,undefined,,high,"DOPO-phosphate functionalised POSS cage, variable"
+hexaphenoxycyclotriphosphazene,c1ccccc1OP1(Oc2ccccc2)=NP(Oc2ccccc2)(Oc2ccccc2)=NP(Oc2ccccc2)(Oc2ccccc2)=N1,small_molecule,0.134,high,HPCP (copied)
+uio66-nh2/halloysite nanotube hybrid,,undefined,,high,MOF/clay hybrid
+e20mi fr mat,,undefined,,high,commercial product
+dmp,,undefined,,low,"aryl phosphate, structure not given"
+bcep,,undefined,,low,"P-containing cycloaliphatic epoxide, structure not given"
+tgic,O=C1N(CC2CO2)C(=O)N(CC2CO2)C(=O)N1CC1CO1,small_molecule,0.0,high,triglycidyl isocyanurate (copied)
+ppy-mapp,,undefined,,high,polypyrrole-coated modified APP
+no3-ldh,,undefined,,high,layered double hydroxide
+pc-ldh,,undefined,,high,LDH with intercalated phosphocreatine
+pc-dpa-ldh,,undefined,,high,LDH co-modified
+exolit ap750,,undefined,0.22,high,commercial APP-based intumescent blend
+cps hydrothermal peanut-shell carbon,,undefined,,high,biochar
+cps peanut-shell carbon pyrolysed 700 c,,undefined,0.0,high,biochar
+cps/co cobalt-loaded peanut-shell carbon pyrolysed 700 c,,undefined,,high,biochar
+dopo-cupc,,undefined,,high,"hyperbranched DOPO-copper phthalocyanine, polymeric"
+mapp,[NH4+].OP(=O)([O-])O,small_molecule,0.2693,low,"copied: monoammonium phosphate. In 10.3390/polym14122375 (PPy-MAPP) MAPP is more likely microencapsulated/modified APP, so existing SMILES may be wrong for that paper"
+mh,[OH-].[OH-].[Mg+2],small_molecule,0.0,medium,Mg(OH)2 formula unit as ions (copied); MH in acsomega.8b03333 assumed magnesium hydroxide
+cp-6b,,undefined,,low,unidentified additive
+dopo@zif-67,,undefined,,high,DOPO loaded on MOF
+g-c3n4,,undefined,0.0,high,polymeric carbon nitride sheet
+g-c3n4/pazn,,undefined,,high,hybrid nanomaterial
+spms,,undefined,,low,structure not given
+tmapp,,undefined,,low,"modified APP, structure not given"
+mphp,Nc1nc(N)nc(N)n1.OP(O)(=O)c1ccccc1,small_molecule,0.109,medium,assumed melamine phenylphosphonate 1:1; matches existing P 0.109 in fr_chemistry
+rgo-app,,undefined,0.28,high,graphene/APP hybrid
+rgo,,undefined,0.0,high,reduced graphene oxide
+la-btc,,undefined,,high,MOF
+ce-btc,,undefined,0.0,high,MOF
+y-btc,,undefined,,high,MOF
+ionic-liquid functionalized imogolite nanotubes,,undefined,,high,nanotube hybrid
+phosphorus-containing polysulfone arpn2,,undefined,,high,"P-polysulfone polymer, repeat unit not given"
+phosphorus-containing polysulfone arpo2,,undefined,,high,"P-polysulfone polymer, repeat unit not given"
+phosphorus-containing polysulfone aropn2,,undefined,,high,"P-polysulfone polymer, repeat unit not given"
+phosphorus-containing polysulfone aropo2,,undefined,,high,"P-polysulfone polymer, repeat unit not given"
+lig-p,,undefined,,high,"modified lignin, polymer"
+lig-m,,undefined,,high,"DOPO-grafted lignin, polymer"
+lig-f,,undefined,,high,"DOPO-grafted lignin, polymer"
+ddp,,undefined,,high,"DDM-modified APP, polymer salt"
+aph,,undefined,,low,"DOPO/KH-550/naphthalene P-N-Si compound, structure not given"
+didopo,,undefined,0.1,low,"bis-DOPO compound; bridge not certain, existing P 0.1 unverified"
+lamellar cobalt potassium pyrophosphate,,undefined,0.1991,high,"layered inorganic phosphate, stoichiometry not given"
+il@nh2-mil-101,,undefined,,high,ionic liquid on MOF
+nh2-mil-101,,undefined,,high,MOF
+hb-dppa,,undefined,,high,hyperbranched P-N polymer
+zif-8,,undefined,0.0,high,MOF framework
+zif-8@sio2,,undefined,,high,core-shell MOF
+pipc,,undefined,,low,"spirocyclic bisphosphonate, linking group not specified"
+avoph2[vo]2·5h2o,,undefined,,high,layered vanadium phosphate
+avoph 2[vo]2·5h2o,,undefined,,high,layered vanadium phosphate
+avphvopo4·1.5h2o,,undefined,,high,layered vanadium phosphate
+avph vopo4·1.5h2o,,undefined,,high,layered vanadium phosphate
+vph vopo4·2h2o,,undefined,,high,"layered vanadyl phosphate (fr_chemistry smiles ""0"" is a placeholder)"
+fa-bis-dopo,,undefined,0.117,low,"bis-DOPO compound from furan amine/aldehyde, structure uncertain"
+dpb,,undefined,,low,structure not given
+dpbsi,,undefined,,low,"P/N/Si vanillin-based, structure not given"
+fr cros484,[*]P(=O)([O-])O[*].[NH4+],repeat_unit,0.3193,low,FR CROS 484 labelled APP; any coating/synergist ignored
+chitosan,[*]C1OC(CO)C(O[*])C(O)C1N,repeat_unit,0.0,medium,fully deacetylated glucosamine repeat; degree of deacetylation ignored
+kraft lignin,,undefined,,high,biopolymer
+tannic acid,,undefined,0.0,high,mixture of galloyl esters
+phytic acid,OP(O)(=O)OC1C(OP(O)(O)=O)C(OP(O)(O)=O)C(OP(O)(O)=O)C(OP(O)(O)=O)C1OP(O)(O)=O,small_molecule,0.2816,high,"myo-inositol hexakisphosphate, no stereo"
+dopo-mmt,,undefined,,high,DOPO intercalated clay
+na-mmt,,undefined,0.0,high,clay
+alpi,CCP(CC)(=O)[O-].CCP(CC)(=O)[O-].CCP(CC)(=O)[O-].[Al+3],small_molecule,0.2381,high,aluminium diethylphosphinate as 3 anions + Al3+ (same salt convention as fr_chemistry exolit op1230)
+rdp,c1ccc(OP(=O)(Oc2ccccc2)Oc2cccc(OP(=O)(Oc3ccccc3)Oc3ccccc3)c2)cc1,small_molecule,0.1078,high,resorcinol bis(diphenyl phosphate) (copied)
+magnesium hydroxide,[OH-].[OH-].[Mg+2],small_molecule,0.0,high,Mg(OH)2 as ions (copied)
+2-benzoic acid,OC(=O)c1ccccc1P(c1ccccc1)c1ccccc1,small_molecule,0.1011,high,"key is mangled ""2-(diphenylphosphino)benzoic acid"" (PPAC); P(III) phosphine"
+ppac-modified magnesium hydroxide,,undefined,,high,surface-modified particle
+arg-app,,undefined,,high,arginine-modified APP
+resorcinol bis,O=P(Oc1ccccc1)(Oc1ccccc1)Oc1cccc(OP(=O)(Oc2ccccc2)Oc2ccccc2)c1,small_molecule,0.1078,high,RDP; key truncated at paren (copied)
+bdd,,undefined,,low,"bis-DOPO amine, bridge not specified"
+red phosphorus,,undefined,1.0,high,allotrope
+polydopamine-coated red phosphorus,,undefined,0.9,high,coated allotrope
+polydopamine/melamine microencapsulated red phosphorus,,undefined,,high,microcapsule
+dopo-khcpa,,undefined,,low,"P/N/Si/B DOPO derivative, structure not given"
+avd,O=P1(C(Nc2nc3ccccc3s2)c2ccc(O)c(OC)c2)Oc2ccccc2-c2ccccc12,small_molecule,0.0619,medium,Kabachnik-Fields adduct DOPO + vanillin + 2-aminobenzothiazole; exact regiochemistry assumed from name
+pcs,,undefined,,low,unidentified
+ead,,undefined,,low,unidentified (borated ellagic acid derivative?)
+dehmp,CCOP(=O)(CO)OCC,small_molecule,0.1842,medium,diethyl hydroxymethylphosphonate (copied); row group also includes TFLPM/TFLPP silsesquioxanes
+tflpm,,undefined,,high,polysilsesquioxane
+tflpp,,undefined,,high,polysilsesquioxane
+dopo-modified novolac,,undefined,0.06,low,"Struktol VP 3760 commercial novolac-DOPO, substitution degree unknown"
+mno2@chs@sa@ni hybrid,,undefined,,high,hybrid nanomaterial
+few-layer black phosphorus,,undefined,1.0,high,allotrope nanosheet
+dpdcppo,,undefined,,low,"phosphine oxide dicarboxylic acid, aryl groups not specified"
+tdb,,undefined,,low,"P/B triazine-trione, structure not given"
+zs,,undefined,,high,"zinc stannate-type inorganic; fr_chemistry smiles ""0"" is a placeholder"
+keratin powder kr,,undefined,,high,protein powder
+zhs,,undefined,0.0,low,"likely zinc hydroxystannate, not confirmed"
+ifr,,undefined,0.2,high,"intumescent blend (APP/MEL/PER etc), varies by row"
+hyperbranched polyphosphate ester hpe,,undefined,,high,hyperbranched polymer
+polyaminopropylphenylsilsesquioxane,,undefined,,high,polysilsesquioxane
+zinc borate,,undefined,,high,2ZnO.3B2O3.3.5H2O hydrated mixed oxide
+zirconium oxide,O=[Zr]=O,small_molecule,0.0,medium,ZrO2 formula unit (copied)
+poss-triol,,undefined,,low,phenyltrisilanol POSS cage; not drawn
+aluminum triacetylacetonate [al],CC(=CC(C)=O)O[Al](OC(C)=CC(C)=O)OC(C)=CC(C)=O,small_molecule,0.0,high,Al(acac)3 covalent enolate drawing (no P)
+cbp,,undefined,,low,acronym not expanded
+moo3,O=[Mo](=O)=O,small_molecule,0.0,medium,formula unit
+sb2o3,O=[Sb]O[Sb]=O,small_molecule,0.0,medium,formula unit
+melamine,Nc1nc(N)nc(N)n1,small_molecule,0.0,high,melamine (copied)
+pds,,undefined,,low,"melamine salt of CBP, CBP unknown"
+s600,,undefined,,high,"melamine poly(magnesium phosphate), composition variable"
+mpp,Nc1nc(N)nc(N)n1.[*]P(=O)(O)O[*],repeat_unit,0.1503,medium,melamine + HPO3 1:1 repeat (matches fr_chemistry P 0.150)
+boehmite alo,O=[Al]O,small_molecule,0.0,medium,AlO(OH) formula unit; key mangled
+s600),,undefined,,high,melamine poly(magnesium phosphate); key mangled
+s600 ),,undefined,,high,melamine poly(magnesium phosphate); key mangled
+hollow glass microsphere,,undefined,,high,glass filler
+iron oxide green,,undefined,0.0,low,"pigment, composition not stated"
+egm,,undefined,,low,unidentified
+per,OCC(CO)(CO)CO,small_molecule,0.0,high,pentaerythritol (copied)
+ferrocene,[CH-]1C=CC=C1.[CH-]1C=CC=C1.[Fe+2],small_molecule,0.0,high,ionic drawing
+w-uio66-ppa,,undefined,,high,MOF
+w-uio66-nh2,,undefined,,high,MOF
+uio66-nh2,,undefined,0.0,high,MOF
+ppa,,undefined,,low,"polyphosphate amide polymer, repeat unit not given"
+chicken eggshell powder,[O-]C([O-])=O.[Ca+2],small_molecule,0.0,low,CaCO3 main component only
+ac-fe2o3,,undefined,,high,supported oxide
+spherical cosn6,,undefined,,high,CoSn(OH)6 nanoparticle
+roflam f5,,undefined,,high,commercial mixture of isopropylated aryl phosphates
+mg2,[OH-].[OH-].[Mg+2],small_molecule,0.0,high,key is Mg(OH)2 mangled by paren strip
+al3,[OH-].[OH-].[OH-].[Al+3],small_molecule,0.0,high,Al(OH)3 as ions (copied); key is Al(OH)3 mangled by paren strip
+mw-mh2 micro-whiskers),[OH-].[OH-].[Mg+2],small_molecule,0.0,high,Mg(OH)2 as ions; key mangled by paren strip
+mw-mh 2 micro-whiskers),[OH-].[OH-].[Mg+2],small_molecule,0.0,high,Mg(OH)2 as ions; key mangled by paren strip
+ind-mh2),[OH-].[OH-].[Mg+2],small_molecule,0.0,high,Mg(OH)2 as ions; key mangled by paren strip
+ind-mh 2),[OH-].[OH-].[Mg+2],small_molecule,0.0,high,Mg(OH)2 as ions; key mangled by paren strip
+roflam b7,,undefined,,high,commercial mixture of tert-butylphenyl phosphates
+"copper n,n'-piperazine cupb",[Cu+2].[O-]P(O)(=O)CN1CCN(CP(O)([O-])=O)CC1,small_molecule,0.1845,low,"Cu2+ piperazine-1,4-diylbis(methylenephosphonate); protonation state and hydration guessed; real material is a coordination polymer"
+la2o3,O=[La]O[La]=O,small_molecule,0.0,medium,formula unit
+aluminum diisobutylphosphinate,CC(C)CP(CC(C)C)(=O)[O-].CC(C)CP(CC(C)C)(=O)[O-].CC(C)CP(CC(C)C)(=O)[O-].[Al+3],small_molecule,0.1663,high,"Al(diisobutylphosphinate)3 as anion salt, same convention as AlPi"
+ppms-grafted carbon black,,undefined,,high,grafted carbon black
+pentaerythritol phosphate melamine salt,,undefined,0.101,low,PPMS; mono- vs cyclic phosphate and stoichiometry unclear

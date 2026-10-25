@@ -1,0 +1,6 @@
+attempt d14: DEV ONLY: d10 without ECFP (noA + pload + ctrlbase).
+seeds 0-2 DEV
+  seed 0: MAE 156.8 R2 0.595
+  seed 1: MAE 157.9 R2 0.593
+  seed 2: MAE 158.3 R2 0.587
+RESULT d14 DEV: n=305 papers=91 FR groups=125 features=116 | MAE 157.6 +- 0.6 CI [137.8, 172.8] R2 0.592 | baseline ctrl x median ratio MAE 200.9

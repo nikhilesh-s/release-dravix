@@ -13,7 +13,7 @@
     "Third-party data stay in data/sources/incoming/<name>/ (git-ignored apart from SOURCE.md). Workers write experiments/results/samedata_*.json and experiments/runs/samedata_* only."
   ],
   "software": {
-    "interpreter": "/Users/niks/dravix/.venv312/bin/python (scikit-learn 1.7.1, numpy 2.2.6, pandas 2.3.3, torch 2.8.0, tabpfn 9.1.0, as installed 2026-10-07). Record pip freeze for these to experiments/runs/samedata_env.txt before the first fit.",
+    "interpreter": "~/dravix/.venv312/bin/python (scikit-learn 1.7.1, numpy 2.2.6, pandas 2.3.3, torch 2.8.0, tabpfn 9.1.0, as installed 2026-10-07). Record pip freeze for these to experiments/runs/samedata_env.txt before the first fit.",
     "per-dataset extra environments": "only where a dataset config says so (huang_dopo_ep_ml needs the authors' pinned env for feature construction and r0); installing anything needs owner approval."
   },
   "candidates_regression (fixed a priori; identical for every dataset)": {

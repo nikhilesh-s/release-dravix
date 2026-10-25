@@ -1,0 +1,13 @@
+attempt A1: HEADLINE CANDIDATE 1. Config chosen on the dev population only (d14; B' never scored before this). Arnav's amendment-13 protocol on B' (same population, first-FR groups, seeds 0-9, 5 folds, repeat-0 group bootstrap) with: training pool = every non-control row (any matrix) with a same-paper same-flux control, minus all rows whose FR identity is in the test fold; features v4 minus the 100 per-name a_ columns, plus P_load_wt / fr_load_wt, plus same-paper neat-control TTI/THR/avgHRR/t_pHRR/char/TSR/EHC; log(pHRR/control) target; primary blend. Reported whatever the result.
+seeds 0-9
+  seed 0: MAE 130.9 R2 0.760
+  seed 1: MAE 132.2 R2 0.763
+  seed 2: MAE 130.5 R2 0.764
+  seed 3: MAE 130.0 R2 0.765
+  seed 4: MAE 129.0 R2 0.769
+  seed 5: MAE 125.0 R2 0.779
+  seed 6: MAE 129.8 R2 0.768
+  seed 7: MAE 129.2 R2 0.772
+  seed 8: MAE 129.8 R2 0.765
+  seed 9: MAE 125.4 R2 0.779
+RESULT A1: n=183 papers=54 FR groups=45 features=116 | MAE 129.2 +- 2.2 CI [111.8, 150.8] R2 0.769 | baseline ctrl x median ratio MAE 195.4

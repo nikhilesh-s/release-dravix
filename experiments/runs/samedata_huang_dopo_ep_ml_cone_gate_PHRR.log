@@ -1,0 +1,47 @@
+[INFO] File loaded with encoding: utf-8
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp7brm_yf8/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_1_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp7brm_yf8/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_2_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp7brm_yf8/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_3_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp7brm_yf8/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_4_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp7brm_yf8/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_5_model.joblib
+{
+ "task": "PHRR",
+ "per_fold": [
+  0.7585733880196961,
+  0.6279632711314906,
+  0.6733536595003303,
+  0.4946049968348246,
+  0.5631512419619901
+ ],
+ "mean": 0.6235293114896663,
+ "sd": 0.10124971413262256,
+ "MAE_per_fold": [
+  116.43066465182488,
+  143.00085920005603,
+  157.19786251394677,
+  160.4305734436949,
+  195.13945754351437
+ ],
+ "modified_R2_per_fold": [
+  0.7527065694089852,
+  0.5364320354483527,
+  0.6663128395787388,
+  0.5012393078685471,
+  0.707951358076381
+ ],
+ "gate": [
+  0.594,
+  0.614
+ ],
+ "passed": false,
+ "folds_equal_published": false,
+ "max_abs_pred_diff_vs_published": 414.2096715526575,
+ "selected_models": [
+  "GBDT",
+  "ExtraTrees",
+  "GBDT",
+  "SoftVote",
+  "GBDT"
+ ],
+ "minutes": 1.51
+}

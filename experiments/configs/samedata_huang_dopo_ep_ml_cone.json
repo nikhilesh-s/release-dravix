@@ -1,0 +1,42 @@
+{
+  "round": "samedata_huang_dopo_ep_ml_cone",
+  "shared": "experiments/configs/samedata_common.json (candidates c1-c3, selection rule, wording rules, multiplicity note)",
+  "status": "declared 2026-10-22 by the DOPO Benchmark Engineer (Opus 5.5, Claude) on branch dopo-cone, committed before any Dravix fit on these labels; task from Nik's relaunch orchestrator ('fill the pending DOPO-EP-ML cone rows'). Not merged; the owner decides wording.",
+  "source": {
+    "work": "Huang X., Zheng W., Shi M. (Shanghai Univ. of Engineering Science), DOPO-EP-ML manuscript (unpublished, not peer-reviewed); code github.com/huangxueling027/DOPO-EP-ML @ e550e4a247d01c837041afd1aa6702f62a8f2ccf (v1.0.2, MIT); data Mendeley doi:10.17632/6wxr5hsd48.1 (CC BY 4.0)",
+    "local_copy": "data/v2/raw/dopo_ep_ml/ (git-ignored; SOURCE.md there). Data file code/data/DOPO_EP_new.csv sha256 6970ac8d847eeda9c62d70f5871cd89ffd3bc3f5ac6523febe77efe1c0eccae3"
+  },
+  "targets": {
+    "PHRR": "PHRR_kw_m2 (kW/m2), absolute, rows = their evaluate_task_nested valid mask with row_policy 'baseline_inclusive' (expected n = 406: 114 neat EP + 292 modified)",
+    "THR": "THR_MJ_m2 (MJ/m2), same rule (expected n = 397: 111 neat + 286 modified)"
+  },
+  "features": {
+    "PHRR": "the authors' frozen input: view 'compact', K = 330, descriptor_mode 'basic', V7 off, no BDE, screening 'formulation', neat-EP masking (incl. EP_matrix_PHRR set NaN on neat rows). Their in-fold front end (NonEmptyColumnSelector -> median SimpleImputer -> DuplicateColumnRemover -> VarianceThreshold(1e-8) -> SafeSelectKBest(f_regression, k=330)) is fitted on each outer-training fold in their pinned env (~/dravix/.venv_dopo) and the post-front-end matrices are exported; c1-c4 replace only the final model.",
+    "THR": "same, view 'descriptors', K = 30, descriptor_mode 'advanced', V7 on.",
+    "note": "their raw matrix already contains the same paper's neat-EP value (EP_matrix_PHRR / EP_matrix_THR and transforms) for modified rows, so every model here, theirs included, may see the control. Whether SelectKBest keeps it is logged per fold."
+  },
+  "bars": {
+    "PHRR": {"metric": "R2, mean of 5 outer-fold R2 (SD over folds)", "value": 0.604, "sd": 0.042, "set": "molecule-grouped (MAIN+CO) nested 5x5 CV, GroupKFold(5) unshuffled outer, inner grouped 5-fold model choice among Ridge/RF/ExtraTrees/GBDT/XGB/LGBM/SVR/SoftVote", "where": "README 'Main grouped-CV results'; results/09_MainTextTables Table 1 (MAE 161.57, RMSE 216.78) and Table 2 (Reference-grouped 0.576 +- 0.052)"},
+    "THR": {"metric": "same", "value": 0.483, "sd": 0.133, "set": "same", "where": "same; Table 1 MAE 12.43, RMSE 18.17; Table 2 Reference-grouped 0.362 +- 0.248"}
+  },
+  "controls": {
+    "r0_full (their re-run)": "their evaluate_task_nested(bundle, TASK, tmp, EvaluationOptions(split_strategy='molecule', selection_scope='fixed', row_policy='baseline_inclusive', use_bde=False, outer_splits=5, inner_splits=5, random_state=42)) in their pinned env. On P1_pub_mol unchanged; on every P1_mol / P2 repeat the same routine with only its outer folds replaced by that repeat's folds (P2 runs use split_strategy='reference' so inner CV also groups by paper). Paired wins are counted against r0_full.",
+    "r0 (cheap control)": "their front end + their GBDT (GradientBoostingRegressor(n_estimators=220, learning_rate=0.03, max_depth=2, subsample=0.85, random_state=42); the model of their final PHRR and THR bundles), no inner selection; reported only."
+  },
+  "reproduction_gate": "r0_full on P1_pub_mol: mean outer-fold R2 within +-0.010 of the published value (PHRR [0.594, 0.614], THR [0.473, 0.493]) and its outer folds equal the published per-row folds (results/scientific_validation/FINAL_core_fixed_baseline_inclusive_5x5/<TASK>/molecule/formulation/without_BDE/<TASK>_outer_predictions.csv). Outside -> no same-protocol sentence for that target.",
+  "candidates": {
+    "c1, c2, c3": "exactly samedata_common.json candidates_regression (c2 on_error rule applies: any TabPFN exception blocks c2 and c3 for that target).",
+    "c4 (ratio model, amendment-13 analogue)": "rows with loading > 0 and the same paper's neat-EP value ctrl = EP_matrix_<TASK> > 0: c1 blend fitted on training such rows with target log(y / ctrl); prediction = ctrl * exp(pred), clipped to [min, max] of training y. Neat rows and rows without ctrl get the c1 prediction (never their own label). Same post-front-end matrix as c1.",
+    "b0 (baseline, reported only, not selectable)": "ctrl * median training-fold ratio y/ctrl for rows with ctrl; c1 prediction elsewhere."
+  },
+  "protocols": {
+    "P1_pub_mol": "their exact published outer folds (by Record_ID). Gate + information; never selected on.",
+    "P1_mol": "their rule (molecule groups from their get_groups(), 5 folds, metric = mean of 5 per-fold R2) with GroupKFold(5, shuffle=True, random_state=r), r = 0..9. Report mean, SD over repeats, repeat-0, MAE, modified-only R2; paired wins vs r0_full per repeat.",
+    "P2": "Dravix paper-grouped protocol: GroupKFold(5, shuffle=True, random_state=r) by Reference, r = 0..9 (= eval_protocol.repeated_group_kfold splits), pooled OOF R2 per repeat, repeat-0 paper-bootstrap 95% CI (eval_protocol.bootstrap_ci, 2000, seed 0); r0_full re-run on the same folds; paired wins."
+  },
+  "selection": "within each protocol, c* = highest 10-repeat mean among c1-c4 (b0 excluded). All candidates, r0 and r0_full printed.",
+  "wording": "'reaches X vs their published Y; their model re-run on the same folds gives R0'. Never 'beats SOTA'. c4 and any c* whose features include the control are labelled 'uses the same paper's neat-epoxy value, which the authors' input also contains'.",
+  "exit_trigger": "c* P1_mol mean above the published bar, or P2 ci_lo above it -> FLAG to the owner in the summary for wording; nothing goes to numbers_of_record.json, leaderboard.csv or the xlsx trackers.",
+  "outputs": "experiments/runs/samedata_huang_dopo_ep_ml_cone_splits.json (written before any fit), experiments/runs/samedata_dopo_cone_folds/ (git-ignored size permitting), experiments/results/samedata/samedata_huang_dopo_ep_ml_cone.json (subfolder so scripts/update_trackers.py ingest, which globs experiments/results/*.json, does not pick it up), experiments/runs/samedata_huang_dopo_ep_ml_cone_summary.md.",
+  "code": "data/v2/export_dopo_cone.py (authors' env: meta, gate, rerun, export) + data/v2/train_samedata_dopo_cone.py (Dravix env: splits, fit, report)"
+}

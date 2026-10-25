@@ -1,0 +1,6 @@
+attempt d9: DEV ONLY: d2 + ECFP4 128 (keep a_ columns) + P_load.
+seeds 0-2 DEV
+  seed 0: MAE 165.5 R2 0.558
+  seed 1: MAE 164.1 R2 0.564
+  seed 2: MAE 163.9 R2 0.569
+RESULT d9 DEV: n=305 papers=91 FR groups=125 features=337 | MAE 164.5 +- 0.7 CI [147.6, 181.7] R2 0.564 | baseline ctrl x median ratio MAE 200.9

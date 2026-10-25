@@ -1,0 +1,707 @@
+fr_group_current,n_rows,matrices,example,in_alias_file
+2-benzoic acid,1,EP,epoxy (EP)|matrix|77.4 wt%; DDM|curing_agent|17.6 wt%; 2-(diphenylphosphino)benzoic acid (PPAC)|FR|5 wt%,True
+4- di phthalate,4,TPU,"TPU (MDI/PTMG/BDO, molar ratio MDI:PTMG:BDO:PEPE 2:1:0.80:0.20)|matrix|balance; 4-(phenylethynyl) di(ethylene glycol) phthalate (PEPE, reactive chain extender)|FR|2.68 wt%",False
+4p4gs,3,EP,"Epidian 652 epoxy resin|matrix|40 g; isophoronediamine (IDA)|curing_agent|20.056 g; 4P4GS (POSS with 4 glycidoxypropyl + 4 DOPO-derived phosphate groups, reactive)|FR|0.4 g (1% per label)",True
+8ps,3,EP,"Epidian 652 epoxy resin|matrix|40 g; isophoronediamine (IDA)|curing_agent|20 g; 8PS (POSS with 8 DOPO-derived phosphate groups, additive)|FR|0.4 g (1% per label)",True
+[apmim]pf6,3,TPU,TPU 9380A|matrix|99.0 mass%; [APMIm]PF6|FR|1.0 mass%,False
+[bmim]h2po2,1,WPC,HDPE|matrix|40 mass%; wood flour|filler|45 mass%; HDPE-g-MAH|compatibilizer|5 mass%; [Bmim]H2PO2 (BMP)|FR|10 mass%,False
+[emim]pf6,1,TPU,TPU 9380A|matrix|99.0 mass%; [EMIM]PF6 (1-butyl-3-methylimidazolium hexafluorophosphate)|FR|1.0 mass%,False
+"a1""",1,PP,"MPP (PP, 2 wt% ethylene)|matrix|91.0 wt%; A1"" (modified PVA)|FR|9.0 wt%",False
+"a2""",1,PP,"MPP (PP, 2 wt% ethylene)|matrix|89.2 wt%; A2"" (modified PVA)|FR|10.8 wt%",False
+abandoned 3a molecular sieve powder,4,TPU,TPU (Bayer 9380A)|matrix|99.0 mass%; abandoned 3A molecular sieve (AMS) powder|FR|1.0 mass%,False
+ac-fe2o3,1,EP,EP|matrix|100 g; MPD (m-phenylenediamine)|curing_agent|11 g; AC-Fe2O3 (activated carbon-supported Fe2O3)|synergist|4 g,True
+actilox b30,2,EP,RTM6 epoxy|matrix|65 wt%; Actilox B30|synergist|30 wt%; TAHHT-DDPO|FR|5 wt%,True
+activated carbon,6,PP,PP|matrix|85 g; activated carbon (AC)|synergist|15 g,False
+adp,3,"PA6,other:asphalt (SBS-modified, 70# binder)",70# matrix asphalt|matrix|100; SBS|other|5 wt %; ADP (aluminium diethyl phosphinate)|FR|5 wt %; ATH|FR|3 wt %,False
+aflammit pco 900,1,PET,PET|matrix|97.4; Aflammit PCO 900 (organic phosphonate)|FR|2.6,False
+ahm/mel/sa 3:1:1 in surface film,1,other:wood,eucalyptus wood scrimber core (15 wt% phenolic resin solution impregnated)|matrix|n.r.; three-ply cross-laminated veneer|matrix|n.r.; LDPE/HDPE (7:3) surface film 0.2 mm|other|n.r.; AHM (ATMP-HEDP 2:1 + melamine salt)/MEL/SA 3:1:1 in surface film|FR|25 wt% of film; sodium silicate/sodium tetraborate core impregnation|FR|10 wt% solution,False
+ahp,10,"EVA,PLA",PLA|matrix|balance; GNR (GMA-grafted natural rubber)|other|20 wt%; antioxidant 1010|other|0.2 wt%; DCP|curing_agent|1.5 wt% of GNR; AHP|FR|16 wt%,False
+ahpi,1,TPU,TPU|matrix|90 wt%; AHPi (aluminum hypophosphite)|FR|10 wt%,False
+al-mg hydroxycarbonate lh20,1,other:ethylene-norbornene copolymer,ethylene-norbornene copolymer|matrix|100 phr; Al-Mg hydroxycarbonate LH20 (Mg/Al 20/80)|FR|5 phr,False
+al-mg hydroxycarbonate lh30,1,other:ethylene-norbornene copolymer,ethylene-norbornene copolymer|matrix|100 phr; Al-Mg hydroxycarbonate LH30 (Mg/Al 30/70)|FR|5 phr,False
+al-mg hydroxycarbonate lh5,1,other:ethylene-norbornene copolymer,ethylene-norbornene copolymer|matrix|100 phr; Al-Mg hydroxycarbonate LH5 (Mg/Al 5/95)|FR|5 phr,False
+al-mg hydroxycarbonate lh70,1,other:ethylene-norbornene copolymer,ethylene-norbornene copolymer|matrix|100 phr; Al-Mg hydroxycarbonate LH70 (Mg/Al 70/30)|FR|5 phr,False
+al3,19,"EP,other:PE",polyethylene TR 161 powder|matrix|5 g; Al(OH)3|FR|15 g,True
+al3 in surface film,1,other:wood,eucalyptus wood scrimber core (15 wt% phenolic resin solution impregnated)|matrix|n.r.; three-ply cross-laminated veneer|matrix|n.r.; LDPE/HDPE (7:3) surface film 0.2 mm|other|n.r.; Al(OH)3 in surface film|FR|25 wt% of film; (NH4)2SO4 core impregnation|FR|10 wt% solution,False
+aldpi,3,ABS,ABS|matrix|90 wt%; AlDPi (aluminum diethylphosphinate)|FR|10 wt%,False
+alpha-zrp,1,PA6,PA6 (UBE 1030B)|matrix|90 wt%; alpha-ZrP|FR|10 wt%,False
+alpi,29,"EP,PA6,PET,PLA","PA6|matrix|85 wt%; AlPi (Exolit OP1230, aluminum diethylphosphinate)|FR|15 wt%",True
+alpo,1,PA6,PA6|matrix|85 wt%; AlPo (aluminum methylmethoxyphosphonate)|FR|15 wt%,False
+aluminium diethyl phosphinate,10,other:POK,POK M330|matrix|balance; aluminium diethyl phosphinate (Exolit OP 1230)|FR|10 wt%,False
+aluminium diethylphosphinate,22,"PA6,PF,TPU",phenolic resin|matrix|90 wt%; aluminium diethylphosphinate|FR|10 wt%,False
+aluminium diethylphosphinate exolit op 1230,6,PA6,PA6 B27E|matrix|90 wt%; aluminium diethylphosphinate Exolit OP 1230|FR|10 wt%,False
+aluminium hydroxide,3,"EVA,PLA",PLA Ingeo 3D450|matrix|balance; aluminium hydroxide (Apyral 120)|FR|15 wt%; Irganox B215|other|not printed,False
+aluminium hypophosphite,7,PA66,PA66 (LUMID GP1000B(W))|matrix|100 phr; aluminium hypophosphite (Exolit OP935)|FR|20 phr; zinc borate (20 nm)|synergist|4 phr; Irganox 1010|other|0.1 phr,False
+aluminium phosphinate,8,"FPUF,other:PA11","PA11|matrix|80 wt%; aluminium phosphinate (AlP, OP1230)|FR|10 wt%; kraft lignin (DL, UPM)|synergist|10 wt%",False
+aluminium trihydrate,2,other:melamine-formaldehyde,"melamine-formaldehyde resin (catalyzed)|matrix|49 wt%; OFMSW (organic fraction of municipal solid waste, wet)|filler|50 wt%; aluminium trihydrate (ATH)|FR|1 wt%",False
+aluminum 2-carboxyethylphenylhypophosphite,1,PA6,PA6|matrix|80 wt%; aluminum 2-carboxyethylphenylhypophosphite (ALCPA)|FR|20 wt%,False
+aluminum beta- ethyl methyl phosphinate alnp,2,ABS,ABS (Qimei)|matrix|75 wt%; aluminum beta-(p-nitrobenzamide) ethyl methyl phosphinate AlNP|FR|22 wt%; zeolite 4A|synergist|3 wt%,False
+aluminum diethylphosphinate,16,"PA6,PA66,PF",PA6 (Technyl C206)|matrix|75 wt%; aluminum diethylphosphinate (Exolit OP1230)|FR|25 wt%,False
+aluminum dihydrogen phosphate,2,PS,PS|matrix|100 phr; aluminum dihydrogen phosphate (ADP)|FR|10 phr,False
+aluminum diisobutylphosphinate,5,EP,EP (DGEBA) + polyamide 651 hardener|matrix|77.5 mass%; K25 hollow glass microspheres (HGM)|filler|10 mass%; aluminum diisobutylphosphinate (AlPBu)|FR|12.5 mass%,True
+aluminum hydroxide,2,SR,methylvinyl silicone rubber|matrix|100 phr; dicumyl peroxide|curing_agent|1 phr; aluminum hydroxide|FR|40 phr; boron trioxide|synergist|15 phr,False
+aluminum hypophosphite,11,"EP,EVA,PBT,PLA,WPC",PLA (4032D)|matrix|60 wt%; bamboo charcoal (BC)|filler|25 wt%; aluminum hypophosphite (AHP)|FR|15 wt%,True
+aluminum tris aldmp,1,other:PBS,PBS|matrix|80 wt%; aluminum tris(dimethyl phosphate) AlDMP|FR|20 wt%,False
+amino-functionalized polyphosphazene microspheres,1,PA66,PA66|matrix|91 wt%; amino-functionalized polyphosphazene microspheres (HCNP)|FR|9 wt%,False
+ammonium dihydrogen phosphate,2,other:Scots pine wood,Scots pine wood|matrix|n/a; ammonium dihydrogen phosphate (ADP)|FR|7.2 wt% in impregnation solution; urea|FR|14.4 wt% in impregnation solution,False
+ammonium pentaborate octahydrate,4,RPUF,ammonium pentaborate octahydrate (APB)|FR|5 wt% APB,False
+ammonium phytate,1,other:Xuan paper (cellulose),"Xuan paper|matrix|; ammonium phytate|FR|10 wt% solution, 12.11 % add-on",False
+ammonium polyphosphate,38,"EP,EVA,NR,PLA,PP,RPUF,TPU,other:PA12,other:PVA",PLA 4032D|matrix|80 wt%; ammonium polyphosphate (APP)|FR|20 wt%,True
+ao,1,RPUF,AO (aluminum oxide)|FR|28%AO,False
+ao + bh + eg,2,RPUF,AO + BH + EG|FR|8%ATH/14%BH/6%EG (as printed in Table 1; sample name says AO),False
+ap/mca,1,WPC,PP|matrix|not printed; wood flour (80 mesh)|filler|not printed; MA-g-PP|compatibilizer|not printed; antioxidant 1010|other|not printed; AP/MCA (mass ratio 5:1)|FR|20%,False
+aph,2,EP,EP (E51)|matrix|80.00 g; DDM|curing_agent|20.00 g; APH (DOPO/KH-550/naphthalene P-N-Si FR)|FR|2.04 g,True
+app,235,"ABS,EP,EPDM,EVA,FPUF,HDPE,LDPE,NR,PLA,PP,PVC,RPUF,SBR,TPU,UPR,WPC,other,other:LDPE/EVA,other:PA11,other:PBS,other:PEG,other:PP/EPDM,other:PU foam/wood flour (FWPC),other:TPS (thermoplastic starch-polyester blend, Mater-Bi EF05B),other:UHMWPE,other:asphalt binder,other:holocellulose nanofibril (HCNF) aerogel,other:leather",PP|matrix|85 %; APP|FR|15 %,True
+app + cobalt phytate,1,RPUF,"APP + cobalt phytate (PA-Co)|FR|APP 40 g + PA-Co 10 g (per 100 g polyol, 150 g PM-200)",False
+app + deep,2,RPUF,APP + DEEP|FR|APP 5 php / DEEP 15 php,False
+app + lignin,6,"PLA,other",APP + lignin|FR|12 wt% APP; 8 wt% lignin,False
+app + per,4,PS,PS|matrix|70 mass%; APP + PER (1:1 by mass)|FR|28.0 mass%; hollow silica microsphere h-SiO2|synergist|2.0 mass%,False
+app + sepiolite,6,"PLA,other",APP + sepiolite|FR|12 wt% APP; 8 wt% sepiolite,False
+app-10% de composite filler,1,other:cellulose paper,softwood/hardwood pulp 25:75 (100 g/m2 sheet)|matrix|; CPAM|other|0.2%; silica sol|other|0.3%; APP-10% DE composite filler (APP with DE at 10% of APP mass)|FR|20 mass %,False
+app-10% de composite filler surface-modified with 2% kh550,1,other:cellulose paper,softwood/hardwood pulp 25:75 (100 g/m2 sheet)|matrix|; CPAM|other|0.2%; silica sol|other|0.3%; APP-10% DE composite filler surface-modified with 2% KH550|FR|20 mass %,False
+app-cu,1,TPU,TPU|matrix|95 g; APP-Cu|FR|5 g,False
+app-cu@pda,1,TPU,TPU|matrix|95 g; APP-Cu@PDA|FR|5 g,False
+app/per 2/1 intumescent fr,3,RPUF,"rigid PU foam (PMDI 92140 / Evopour 1122-28 polyol, NCO/OH 1.18/1)|matrix|; APP/PER 2/1 intumescent FR (KAG)|FR|15 wt%",False
+app/per/mc/eg/caco3 intumescent,1,RPUF,APP/PER/MC/EG/CaCO3 intumescent|FR|APP 15; PER 5; MC 5; EG 15; CC 5 php,False
+app/spe/t58 hardener 60.00/30.00/10.00 m/m%),4,PP,"PP|matrix|65 m/m%; physical mixture of APP + cured ground SPE bio-epoxy resin (pmAPP5, APP:SPE 10:5; APP/SPE/T58 hardener 60.00/30.00/10.00 m/m%)|FR|35 m/m%",False
+app/spe/t58 hardener 78.95/15.79/5.26 m/m%),4,PP,"PP|matrix|70 m/m%; physical mixture of APP + cured ground SPE bio-epoxy resin (pmAPP2, APP:SPE 10:2; APP/SPE/T58 hardener 78.95/15.79/5.26 m/m%)|FR|30 m/m%",False
+app:eg 1:3 intumescent flame retardant,1,RPUF,APP:EG 1:3 intumescent flame retardant|FR|20%,False
+app:per:mel,2,EP,E-51 epoxy|matrix|65 wt.%; 14BDDE|other|30 wt.%; APP:PER:MEL (5:2:3)|FR|16 wt.%; palygorskite:sepiolite (1:1)|filler|5 wt.%; B4C|synergist|3 wt.%; MK silicone resin|other|10 wt.%; T403|curing_agent|30 wt.%,True
+app:triazine 4:1,2,PLA,PLA 2003D|matrix|160 g; APP:triazine 4:1|FR|40 g per 200 g (20 wt% of PLA resin); jute plain-weave fabric (114 g/m2)|reinforcement|3 plies (fraction not printed),False
+app@cncsi-da,1,PP,PP|matrix|70 wt%; APP@CNCSi-DA (APP:CNCSi-DA 2:1)|FR|30 wt%,False
+app@cnf ball-milled hybrid,3,PLA,PLA 4032D|matrix|95 wt%; APP@CNF ball-milled hybrid (APP:CNF 6:1 by mass)|FR|5 wt%,False
+app@pei,1,TPU,TPU|matrix|52.8 g; APP@PEI (PEI-encapsulated APP)|FR|7.2 g,False
+app@pei@ti3c2tx,3,TPU,TPU|matrix|52.8 g; APP@PEI@Ti3C2Tx (APP@PEI:Ti3C2Tx 20:1)|FR|7.2 g,False
+arg-app,3,EP,"epoxy resin|matrix|100 phr; hardener|curing_agent|20 phr; Arg-APP (arginine surface-modified APP, cation exchange)|FR|15 phr",True
+ath,48,"EPDM,EVA,EVA/LLDPE,PP,RPUF,WPC,other:LDPE/EVA,other:LLDPE/EVA,other:asphalt,other:asphalt binder",LLDPE/EVA (+MAA-g-LLDPE)|matrix|40%; ATH|FR|50%; LMG3|synergist|10%,False
+ath + bh + eg,2,RPUF,ATH + BH + EG|FR|8%ATH/14%BH/6%EG,False
+ath3),10,other:recycled cotton fibre/PVAc-starch,"recycled cotton fibres (EN-TEX)|matrix|78 wt%; PVAc dispersion (binder, 50% solids, as supplied)|other|12 wt%; corn starch (binder)|other|10 wt%; ATH (Al(OH)3)|FR|15% of dry base-mixture mass",False
+avd,3,EP,EP|matrix|40 g; DDM|curing_agent|9.36 g; AVD (DOPO-vanillin-2-aminobenzothiazole)|FR|4.0 g (7.5 wt%),True
+avoph2[vo]2·5h2o,4,EP,EP (NPEL 128) + DDM (EP:DDM 4:1)|matrix|96 wt%; AVOPh (NH4)2[VO(HPO4)]2(C2O4)·5H2O|FR|4 wt%,True
+avphvopo4·1.5h2o,1,EP,EP (NPEL 128) + DDM (EP:DDM 4:1)|matrix|96 wt%; AVPh (NH4)VOPO4·1.5H2O|FR|4 wt%,True
+b,1,PP,"MPP (PP, 2 wt% ethylene)|matrix|88.4 wt%; B (modified PVA)|FR|11.6 wt%",False
+ba-dopo,1,EP,RTM6 epoxy|matrix|n/a; carbon fibre fabric G0939 (8 plies)|reinforcement|n/a; BA-DOPO|FR|10% by matrix weight,True
+ba-ma,2,PS,"polystyrene (PS)|matrix|99 wt%; BA-MA (biphenyl-4,4'-diphosphonic acid-melamine nanosheets)|FR|1 wt%",False
+ba/bx 1:1,4,WPC,wood flour|filler|56.4 wt%; chitosan|other|3.6 wt%; HDPE|matrix|36.0 wt%; MAPE|compatibilizer|4.0 wt%; PE wax|other|2.0 (% of base); BA/BX 1:1|FR|6.0 (% of base),False
+bacm,3,PLA,PLA|matrix|97.0 wt%; BACm (P/N-grafted bamboo activated carbon)|FR|3.0 wt%,False
+badps,3,UPR,unsaturated polyester 196 (38 wt% styrene)|matrix|balance; BPO|curing_agent|2 wt%; BADPS (reactive P/S monomer)|FR|10 wt%,False
+bapdp),2,PC/ABS,PC/ABS|matrix|85 wt%; BAPDP (bisphenol AP bis(diphenyl phosphate))|FR|15 wt%; PTFE|other|0.4 wt%,False
+bc phosphorus-containing composition,4,other:siloxane resin/ethylene-vinyl chloride copolymer,BC phosphorus-containing composition (siloxane resin + ethylene-vinyl chloride copolymer)|FR|coating film (bulk); expandable graphite|FR|5 parts dry per 400 parts wet BC,False
+bc-m,9,PLA,PLA 4032D|matrix|85 wt%; BC-m (P/N graft-modified bamboo charcoal)|FR|10 wt%; chitosan|synergist|5 wt%,False
+bcep,1,EP,BCEP (P-containing cycloaliphatic epoxide)|FR|3.78 g; TGIC|synergist|11.34 g; MeHHPA|curing_agent|22.01 g,True
+bdd,3,EP,DGEBA|matrix|100 g; DDM|curing_agent|24.73 g; BDD (DOPO-based bis-phosphaphenanthrene amine)|FR|4.19 g,True
+bdp,17,"EP,PC,PMMA,UPR",PMMA resin|matrix|75 wt%; BDP|FR|25 wt%,True
+beta-cyclodextrin,2,other:PVA,PVA|matrix|1.0 (mass ratio); beta-cyclodextrin|FR|0.75 (mass ratio),False
+bh + eg,1,RPUF,BH + EG|FR|BH:EG 14:6,False
+biep-eta,3,other:WPU,waterborne polyurethane (WPU; PPG2000/IPDI/DMPA/BDO/TEA)|matrix|100 parts (solid); BIEP-ETA|FR|5% of solid WPU,False
+bifeo3,1,PVC,PVC TL-1000|matrix|100 phr; DOP|plasticizer|40 phr; diisooctyl dioctyltin bis(thioglycolate) heat stabilizer|other|3 phr; calcium stearate lubricant|other|1 phr; NDZ-311 titanate coupling agent|compatibilizer|1 phr; BiFeO3|FR|20 phr,False
+biomass-based fr,1,RPUF,polyurethane foam|matrix|; biomass-based FR|FR|15 wt%,False
+bisguanidine phosphate,1,other:cellulose paper (Kraft pulp),Kraft cellulose sheet|matrix|; bisguanidine phosphate (22.5% solution)|FR|WPG 15.90%,False
+black phosphorene/graphene,1,other:WPU (waterborne polyurethane),WPU|matrix|; black phosphorene/graphene (BP/G)|FR|3.55%,False
+black phosphorus nanosheets,2,other:WPU,WPU (waterborne polyurethane)|matrix|99.6 wt%; black phosphorus nanosheets|FR|0.20 wt%; h-BN nanosheets|FR|0.20 wt%,False
+bmc,3,PVC,PVC (SG-5)|matrix|100 phr; DOP|plasticizer|40 phr; organic tin|other|2 phr; ACR|other|4 phr; paraffin wax|other|0.4 phr; GMS|other|0.6 phr; BMC|FR|50 phr,False
+bnno@co3o4 nanohybrid,1,TPU,TPU Wanhua WHT-1570IC|matrix|98 wt%; BNNO@Co3O4 nanohybrid|FR|2 wt%,False
+bnno@co3o4@ppz nanohybrid,1,TPU,TPU Wanhua WHT-1570IC|matrix|98 wt%; BNNO@Co3O4@PPZ nanohybrid|FR|2 wt%,False
+boehmite,1,EP,Epidian 601 epoxy|matrix|12 g; IDA curing agent|curing_agent|6 g; boehmite (PURAL SB)|FR|3.6 g,True
+boehmite alo,1,EP,DGEBA/IPDA epoxy|matrix|; boehmite AlO(OH)|FR|20 mass%,True
+borated ellagic acid derivative,1,EP,DGEBA|matrix|72 wt%; IPDA|curing_agent|18 wt%; borated ellagic acid derivative (EAD)|FR|10 wt%,True
+borated gallic acid derivative,1,EP,DGEBA|matrix|72 wt%; IPDA|curing_agent|18 wt%; borated gallic acid derivative (GAD)|FR|10 wt%,True
+boron phenolic resin fb88,1,other:WPU,waterborne polyurethane (PPG-1000/IPDI/DMPA/BDO)|matrix|balance; boron phenolic resin FB88 (Mw 600)|FR|amount not printed (Table S1),False
+boron trioxide,3,SR,methylvinyl silicone rubber|matrix|100 phr; dicumyl peroxide|curing_agent|1 phr; iron-coated cenospheres|filler|40 phr; boron trioxide|synergist|15 phr,False
+bp-deta,1,EP,"E44 bisphenol-A epoxy|matrix|; DDS (4,4'-diaminodiphenyl sulfone)|curing_agent|; BP-DETA (black phosphorus functionalised with diethylenetriamine)|FR|5 wt%",True
+bp-pid,1,EP,"E44 bisphenol-A epoxy|matrix|; DDS (4,4'-diaminodiphenyl sulfone)|curing_agent|; BP-Pid (black phosphorus functionalised with tetramethylpiperidine-type cyclamine)|FR|5 wt%",True
+bp-ppda,1,EP,"E44 bisphenol-A epoxy|matrix|; DDS (4,4'-diaminodiphenyl sulfone)|curing_agent|; BP-PPDA (black phosphorus functionalised with p-phenylenediamine)|FR|5 wt%",True
+bpf resin,3,other:poplar wood,poplar wood|matrix|-; BPF resin (boron-modified phenol formaldehyde)|FR|30% w/w solution impregnation,False
+bps,2,PS,PS|matrix|94; BPS|FR|6; GNPs|nanofiller|1; AlCl3|other|0.8,False
+brominated epoxy resin,3,PBT,PBT (1100-211M)|matrix|79 wt%; brominated epoxy resin (BEO)|FR|16 wt%; nano-Sb2O3|synergist|5 wt%,False
+brominated polystyrene,4,PA66,"PA66 (Invista, compounding grade)|matrix|85 wt%; brominated polystyrene (BrPS, FR803, 66 wt% Br)|FR|10 wt%; tin(II) tungstate (SnW)|synergist|5 wt%",False
+budit 669,4,HDPE,HDPE 56020S|matrix|25.9 wt% (co-ex layer); wheat straw|filler|24.1 wt% (co-ex layer); Budit 669 (APP-based intumescent)|FR|40.0 wt% (co-ex layer only); MAPE|compatibilizer|3 wt%; lubricant|other|4.0 wt%; core HDPE/wheat straw|other|46/50 wt%,False
+c,1,PP,"MPP (PP, 2 wt% ethylene)|matrix|88.4 wt%; C (modified PVA)|FR|11.6 wt%",False
+ca2 from eggshell,2,other:wood (Scots pine sapwood),Scots pine sapwood|matrix|; Ca(CH3COO)2 from eggshell (Cycle I impregnation)|FR|0.5 M; NH4H2PO4 pH 10.4-10.5 (Cycle II impregnation)|FR|0.3 M; in-situ carbonated hydroxyapatite|FR|,False
+caal-po4-ldhs,2,other:bamboo scrimber,"bamboo scrimber|matrix|; CaAl-PO4-LDHs (S120-6, 120 C/6 h)|FR|1% suspension (impregnation)",False
+cahpi20,1,TPU,"TPU|matrix|90 wt%; CAHPi20 (AHPi/g-C3N4 hybrid, g-C3N4:AHPi 20/80)|FR|10 wt%",False
+cahpi5,1,TPU,"TPU|matrix|90 wt%; CAHPi5 (AHPi/g-C3N4 hybrid, g-C3N4:AHPi 5/95)|FR|10 wt%",False
+calcium bis cadmp,1,other:PBS,PBS|matrix|80 wt%; calcium bis(dimethyl phosphate) CaDMP|FR|20 wt%,False
+calcium phosphinate,2,FPUF,flexible PUR foam (polyol:isocyanate 2:1 by weight)|matrix|; calcium phosphinate (HPCA)|FR|10 parts by weight; diphenyl cresyl phosphate (CDP)|FR|25 parts by weight,False
+calcium stearate-modified calcium sulfate whisker from phosphogypsum,1,other:PEO,polyethylene oxide (PEO)|matrix|85 wt%; calcium stearate-modified calcium sulfate whisker from phosphogypsum (MCSW)|synergist|15 wt%,False
+cationic starch,2,FPUF,"flexible polyurethane foam|matrix|substrate; cationic starch (CS)|FR|5 bilayers (spray LbL, 0.1 wt% solution); montmorillonite (MMT)|nanofiller|5 bilayers (spray LbL, 0.1 wt% solution)",False
+cbp,2,EP,EP|matrix|100; EDA|curing_agent|10; CBP|FR|30 wt%,True
+ce-btc,1,EP,epoxy (EP)|matrix|10 parts (EP/DDM 10:3); DDM|curing_agent|3 parts; Ce-BTC (Ce-MOF)|FR|4 wt%,True
+cellulose nanocrystals,3,HDPE,"HDPE (Marlex 9006)|matrix|98.8 wt%; cellulose nanocrystals (CNC)|FR|0.6 wt%; nano zinc oxide (ZnO, coated on CNC)|FR|0.6 wt%",False
+ceppg,1,RPUF,CEPPG|FR|CEPPG 45.06 g,False
+ceppg/mp/eg,2,RPUF,CEPPG/MP/EG|FR|CEPPG 45.06 g; MP 8.82 g; EG 8.82 g,False
+ceppg/mpi/eg,2,RPUF,CEPPG/MPi/EG|FR|CEPPG 45.06 g; MPi 8.82 g; EG 8.82 g,False
+cerium hypophosphite,5,"PA6,PBT","PBT 4500|matrix|50 wt% (balance, by difference); silane-coated short glass fibre|reinforcement|30 wt%; cerium hypophosphite (CHP)|FR|20 wt%",False
+cfa,1,PP,PP|matrix|70 wt%; CFA|FR|30 wt%,False
+cfr,1,EVA,EVA|matrix|100 phr; CFR (Si-R/NMH 4/1 w/w)|FR|50 phr,False
+chitin,2,PLA,PLA|matrix|80 wt%; chitin|FR|10 wt%; APP|FR|10 wt%; MEL|FR|0 wt%,False
+chitosan,1,EP,"SR FireGreen 37 (bio-based epoxy, inherently FR-certified)|matrix|100 phr; SD 8202|curing_agent|20 phr; chitosan|FR|15 phr",True
+chitosan molybdate,1,PVC,PVC TL-1000|matrix|100 phr; DOP|plasticizer|40 phr; organotin stabilizer|other|3 phr; KH-550 silane|compatibilizer|1 phr; calcium stearate|other|0.5 phr; stearic acid|other|0.5 phr; chitosan molybdate (Mo-CS)|FR|10 phr,False
+chitosan silicate,1,PVC,PVC TL-1000|matrix|100 phr; DOP|plasticizer|40 phr; organotin stabilizer|other|3 phr; KH-550 silane|compatibilizer|1 phr; calcium stearate|other|0.5 phr; stearic acid|other|0.5 phr; chitosan silicate (Si-CS)|FR|10 phr,False
+chitosan stannate,1,PVC,PVC TL-1000|matrix|100 phr; DOP|plasticizer|40 phr; organotin stabilizer|other|3 phr; KH-550 silane|compatibilizer|1 phr; calcium stearate|other|0.5 phr; stearic acid|other|0.5 phr; chitosan stannate (Sn-CS)|FR|10 phr,False
+chitosan tungstate,1,PVC,PVC TL-1000|matrix|100 phr; DOP|plasticizer|40 phr; organotin stabilizer|other|3 phr; KH-550 silane|compatibilizer|1 phr; calcium stearate|other|0.5 phr; stearic acid|other|0.5 phr; chitosan tungstate (W-CS)|FR|10 phr,False
+chitosan-coated phase-change microcapsule,3,RPUF,chitosan-coated phase-change microcapsule (CS/PCM)|FR|30 wt% CS/PCM,False
+chlorinated paraffin-70,1,other:plant_fibre_ULDF,kraft pulp fibre (spruce-pine-fir)|matrix|; B-Zn-Al-Si compounds|other|; adhesive|other|20 mL; sodium dodecylbenzene sulfonate surfactant|other|40 mL; alkyl ketene dimer water repellent|other|50 mL; chlorinated paraffin-70|FR|24 g,False
+claa,1,other:polyacrylate emulsion sealant,polyacrylate emulsion (PAA)|matrix|; PVA|other|; HFSNPs (hydrophobic fumed silica)|filler|; CLAA (CNTs/LDHs/ADP/AMWP)|FR|40 wt%,False
+clinoptilolite,4,PP,PP|matrix|240 g; clinoptilolite (natural zeolite)|FR|40 g; lignin|FR|20 g,False
+cncsi-da,1,PP,PP|matrix|70 wt%; CNCSi-DA (silicon-containing triazine oligomeric charring agent)|FR|30 wt%,False
+co/p-c3n4,3,PLA,PLA|matrix|98 wt%; Co/P-C3N4 (cobalt/phosphorus co-doped g-C3N4)|FR|2 wt%,False
+coal-ldh,1,SR,Vi-PDMS|matrix|24.0 wt%; HO-PDMS|matrix|64.0 wt% (48.0 Part A + 16.0 Part B); Low-H PMHS|curing_agent|3.0 wt%; High-H PMHS|curing_agent|9.0 wt%; CoAl-LDH (CO3 intercalated)|FR|1.0 phr; Karstedt Pt catalyst|other|0.5 phr; V4 inhibitor|other|0.08 phr; DI water (blowing)|other|0.5 phr,False
+commercial fr,3,other:hemp fibre,hemp fibre|matrix|; commercial FR|FR|,False
+"copper n,n'-piperazine cupb",3,EP,"DGEBA epoxy E51|matrix|73.7 mass%; 4,4'-diaminodiphenyl sulfone DDS|curing_agent|24.3 mass%; copper N,N'-piperazine (bismethylene phosphonate) CuPB|FR|2.0 mass%",True
+copper-boron preservative cbp,1,other:wood,"Pinus sylvestris wood|matrix|substrate; copper-boron preservative CBP (Cu2+:borate 1:1)|FR|impregnated from 10 wt% aqueous solution, 24 h soak",False
+cow horn ash particles,4,UPR,unsaturated polyester resin|matrix|95 wt%; banana peduncle fibre (BPF)|reinforcement|2.5 wt%; cow horn ash particles (CHAp)|FR|2.5 wt%,False
+cp-6b,2,EP,E-44 epoxy|matrix|100 g; DDM|curing_agent|25 g; CP-6B|FR|3.75 g,True
+cppa polyol + eg + graphene oxide,1,RPUF,CPPA polyol + EG + graphene oxide|FR|5.5 wt% EG; 0.5 wt% GO,False
+cppa polyol + expandable graphite,1,RPUF,CPPA polyol + expandable graphite|FR|6 wt% EG,False
+cps hydrothermal peanut-shell carbon,1,EP,epoxy resin|matrix|27 g; curing agent (unspecified)|curing_agent|6 g; CPS (180) hydrothermal peanut-shell carbon|FR|1.0 g (3 wt%),True
+cps peanut-shell carbon pyrolysed 700 c,1,EP,epoxy resin|matrix|27 g; curing agent (unspecified)|curing_agent|6 g; CPS (700) peanut-shell carbon pyrolysed 700 C|FR|1.0 g (3 wt%),True
+cps/co cobalt-loaded peanut-shell carbon pyrolysed 700 c,1,EP,epoxy resin|matrix|27 g; curing agent (unspecified)|curing_agent|6 g; CPS/Co cobalt-loaded peanut-shell carbon pyrolysed 700 C|FR|1.0 g (3 wt%),True
+cresyl diphenyl phosphate,2,PLA,PLA Ingeo 3D450|matrix|balance; cresyl diphenyl phosphate (Disflamoll DPK)|FR|15 wt%; Irganox B215|other|not printed,False
+ctapp,3,NR,"NR|matrix|100 phr; carbon black N330|filler|30 phr; ZnO|other|5 phr; stearic acid|other|2 phr; antioxidant 4020NA|other|1 phr; Si69 silane|compatibilizer|3.5 phr; sulfur|curing_agent|1.4 phr; accelerator|curing_agent|1.2 phr; CTAPP (TA-modified CNT-wrapped APP, APP:CNT:TA 12:2:1)|FR|10 phr",False
+cyclic phosphonate addforce ct 901,2,RPUF,cyclic phosphonate Addforce CT 901|FR|20 g (20 wt% relative to polyols),False
+d-fu,3,other:PBZ (polybenzoxazine),"bisphenol-A benzoxazine (Ba, cured to PBa)|matrix|balance; D-fu (DOPO-HQ/furfurylamine phosphorus benzoxazine)|FR|1 wt%",False
+dap,2,PLA,PLA|matrix|98 wt%; DAP (dihydroxy-containing ammonium phosphate)|FR|2 wt%,False
+dap@sio2,4,EP,"epoxy resin E-51|matrix|balance; 4,4'-diaminodiphenylmethane (DDM)|curing_agent|amount not printed; DAP@SiO2 (silica-coated diammonium hydrogen phosphate, KH550-treated)|FR|3 wt%",True
+dbdpo,2,PC,PC AD-5503|matrix|92 wt%; DBDPO (decabromodiphenyl oxide)|FR|7 wt%; LaHPP (lanthanum phenylphosphonate)|synergist|1 wt%,False
+dcpcd,5,TPU,TPU|matrix|88 wt%; DCPCD (phosphoramide from diethylenetriamine + diphenyl phosphorochloridate)|FR|12 wt%,False
+ddp,4,"EP,PA6",PA6|matrix|95 wt%; DDP (copolymerized phosphaphenanthrene comonomer)|FR|5 wt%,True
+dehmp,3,EP,DGEBA|matrix|85 wt%; m-XDA|curing_agent|10 wt%; DEHMP|FR|5 wt%,True
+dehpa-alphosphate hybrid),1,EP,Epidian 601 epoxy|matrix|12 g; IDA curing agent|curing_agent|6 g; DEHPA-Al (boehmite-bis(2-ethylhexyl)phosphate hybrid)|FR|3.6 g,True
+depa-al,1,EP,Epidian 601 epoxy|matrix|12 g; IDA curing agent|curing_agent|6 g; DEPA-Al (boehmite-diethyl phosphate hybrid)|FR|3.6 g,True
+dfd,1,RPUF,DFD (reactive P diol)|FR|DFD 10 g,False
+diammonium phosphate2hpo4,1,other:cellulose paper (Kraft pulp),Kraft cellulose sheet|matrix|; diammonium phosphate (NH4)2HPO4 (42.9% solution)|FR|WPG 14.79%,False
+diatomite,1,SR,room-temperature-vulcanised silicone rubber (RTV)|matrix|base; diatomite (DM)|synergist|10 phr; melamine (MEL)|FR|20 phr; curing agent|curing_agent|amount not printed,False
+didopo,8,"EP,PP",PP|matrix|; DiDOPO|FR|4 wt%,True
+didopopiperazine),2,other:PEO,"polyethylene oxide (PEO)|matrix|85 wt%; DIDOPO (1,4-bis(diphenoxyphosphoryl)piperazine)|FR|15 wt%",False
+diethyl ethylphosphonate,1,RPUF,diethyl ethylphosphonate (DEEP)|FR|DEEP 20 php,False
+dihydroxysalen s2,1,TPU,TPU|matrix|10 (TPU:additive 10:1 weight ratio); dihydroxysalen s2|FR|1 (TPU:additive 10:1 weight ratio),False
+dihydroxysalen s2-cu complex,1,TPU,TPU|matrix|10 (TPU:additive 10:1 weight ratio); dihydroxysalen s2-Cu complex|FR|1 (TPU:additive 10:1 weight ratio),False
+dihydroxysalen s2-mn complex,1,TPU,TPU|matrix|10 (TPU:additive 10:1 weight ratio); dihydroxysalen s2-Mn complex|FR|1 (TPU:additive 10:1 weight ratio),False
+dihydroxysalen s2-ni complex,1,TPU,TPU|matrix|10 (TPU:additive 10:1 weight ratio); dihydroxysalen s2-Ni complex|FR|1 (TPU:additive 10:1 weight ratio),False
+dihydroxysalen s2-zn complex,1,TPU,TPU|matrix|10 (TPU:additive 10:1 weight ratio); dihydroxysalen s2-Zn complex|FR|1 (TPU:additive 10:1 weight ratio),False
+dimethyl propane phosphonate,2,RPUF,dimethyl propane phosphonate (DMPP)|FR|20 g (20 wt% relative to polyols),False
+dipentaerythritol,3,PA66,PA66|matrix|98 wt%; dipentaerythritol (Di-PE)|FR|2 wt%,False
+disflamoll tp lxs 51064,2,WPC,PP|matrix|37 wt%; wood|filler|54 wt%; Disflamoll TP LXS 51064 (ammonium phosphonate)|FR|10 wt%,False
+disperal 40,2,EP,RTM6 epoxy|matrix|65 wt%; Disperal 40|synergist|30 wt%; TAHHT-DDPO|FR|5 wt%,True
+dm/pei/mwcnt-1,1,SR,RTV-silicone|matrix|; DM/PEI/MWCNT-1 (DM 10 g:PEI 97 mg:MWCNT 1 g)|synergist|10 phr; curing agent|curing_agent|3-4 phr,False
+dm/pei/mwcnt-2,1,SR,RTV-silicone|matrix|; DM/PEI/MWCNT-2 (DM 10 g:PEI 97 mg:MWCNT 0.50 g)|synergist|10 phr; curing agent|curing_agent|3-4 phr,False
+dm/pei/mwcnt-3,1,SR,RTV-silicone|matrix|; DM/PEI/MWCNT-3 (DM 10 g:PEI 97 mg:MWCNT 0.33 g)|synergist|10 phr; curing agent|curing_agent|3-4 phr,False
+dm/pei/mwcnt-4,1,SR,RTV-silicone|matrix|; DM/PEI/MWCNT-4 (DM 10 g:PEI 97 mg:MWCNT 0.25 g)|synergist|10 phr; curing agent|curing_agent|3-4 phr,False
+dmh polyphosphoramide,2,PLA,PLA 2003D|matrix|196 g; DMH polyphosphoramide|FR|4 g per 200 g (2 wt% of PLA resin); jute plain-weave fabric (114 g/m2)|reinforcement|3 plies (fraction not printed),False
+dmi-bppo + tep,1,other,DMI-BPPO (phosphorus additive) + TEP|FR|P-content 1.0 wt.%,False
+dmi-dopo + tep,1,other,DMI-DOPO (phosphorus additive) + TEP|FR|P-content 1.0 wt.%,False
+dmmp only,1,RPUF,DMMP only|FR|10 wt% DMMP (22.32 g),False
+dmmp/eg,5,RPUF,"DMMP/EG (1:4 by weight)|FR|16 wt% total FR; DMMP 7.63 g, EG 30.53 g",False
+dmp,2,EP,EP (E-51)|matrix|; m-phenylenediamine|curing_agent|; DMP (aryl phosphate)|FR|7 wt%,True
+dmpp,2,RPUF,UCO_DEG bio-polyol|matrix|100 php; Ongronat 2100 pMDI|matrix|289 g per 100 g polyol; Polycat 218|other|4 php; Tegostab B 8870|other|4.5 php; Ortegol 500|other|0.5 php; water (blowing agent)|other|15 php; DMPP|FR|30 php,False
+dopo,17,"EP,FPUF",epoxy resin|matrix|60 g; DDM|curing_agent|20 g; DOPO|FR|3 g,True
+dopo-cupc,4,EP,epoxy resin|matrix|100 phr; DDS|curing_agent|27 phr; DOPO-CuPc (DOPO hyperbranched copper phthalocyanine)|FR|5 phr,True
+dopo-diamine,2,PLA,PLA (Ingeo 3052D)|matrix|90 wt%; DOPO-diamine|FR|10 wt%,False
+dopo-hq,3,other:polybenzoxazine,polybenzoxazine aerogel (bisphenol A benzoxazine)|matrix|balance; DOPO-HQ|FR|1%,False
+dopo-khcpa,3,EP,E-51 epoxy|matrix|79.2 g; DDM|curing_agent|19.8 g; DOPO-KhCPA (P/N/Si/B flame retardant)|FR|1 g,True
+dopo-mmt,1,EP,"DGEBA E-44|matrix|DGEBA:DDS 10:3 w/w; DDS|curing_agent|DGEBA:DDS 10:3 w/w; DOPO-MMT (melt-intercalated, DOPO:MMT 2:1)|FR|6 wt% (4% DOPO 2% MMT)",True
+dopo-modified novolac,7,EP,D.E.N. 431 epoxy novolac|matrix|; Heloxy BD reactive diluent|other|5 wt% of D.E.N. 431; IPDA/D230 50:50|curing_agent|stoichiometric; DOPO-modified novolac (Struktol VP 3760)|FR|2 wt% P; nano-SiO2 (NANOPOX F700)|nanofiller|2.7 vol% (5.7 wt%),True
+dopo-poss,2,VER,MFE-711 epoxy vinyl ester resin|matrix|100 g; methyl ethyl ketone peroxide (LPT-IN)|curing_agent|1 g; cobalt isooctanoate (P002)|other|0.08 g; DOPO-POSS|FR|4 wt% (4 g); tetrabutyl titanate (TBT)|synergist|0.5 wt% (0.5 g),False
+dopo-vsil,1,EP,RTM 6 epoxy|matrix|; carbon fibre fabric G0939 (8 plies)|reinforcement|; DOPO-VSil (DOPO-based phosphasilazane)|FR|10 wt% (of resin),True
+dopo-vtes,2,other:PVA,PVA (8 wt% aqueous solution)|matrix|100 g solution; DOPO-VTES|FR|50 g,False
+dopo@zif-67,2,EP,epoxy resin|matrix|; DDM|curing_agent|; DOPO@ZIF-67|FR|1%,True
+dopo–go,1,EP,epoxy resin|matrix|60 g; DDM|curing_agent|20 g; DOPO–GO|FR|3 g,True
+dopo–vtes–go,1,EP,epoxy resin|matrix|60 g; DDM|curing_agent|20 g; DOPO–VTES–GO|FR|3 g,True
+dpa-sin,3,PC/ABS,PC (Dow)|matrix|49 wt%; ABS (PA757)|matrix|21 wt%; DPA-SiN (DOPO-propanoic acid/aminosilicone salt)|FR|30 wt%,False
+dpb,4,EP,E-51 (DGEBA)|matrix|100 g; DDM|curing_agent|25.0 g; DPB|FR|2.5 g (2.5 phr),True
+dpbsi,3,EP,DGEBA (epoxy value 0.51)|matrix|100 g; DDM|curing_agent|25 g; DPBSi (P/N/Si vanillin-based)|FR|2.55 g,True
+dpdcppo,2,EP,epoxy E-44|matrix|; DPDCPPO (phosphine oxide dicarboxylic acid curing agent)|FR|20 wt% of curing agent; phthalic anhydride|curing_agent|80 wt% of curing agent,True
+dpp-pepa,1,PA66,PA66 (Zytel 101L)|matrix|85 wt%; DPP-PEPA|FR|15 wt%,False
+dppa-al,1,EP,Epidian 601 epoxy|matrix|12 g; IDA curing agent|curing_agent|6 g; DPPA-Al (boehmite-diphenyl phosphate hybrid)|FR|3.6 g,True
+dt,4,"PA66,other:MXD6 (poly(m-xylylene adipamide))","PA66|matrix|900 g; tris(2,4-di-tert-butylphenyl) phosphite|other|1 g; antioxidant 1010|other|2 g; DT (DOPO-triallyl cyanurate adduct)|FR|100 g",False
+e20mi fr mat,2,EP,rosin-based epoxy (AGMP-3600)|matrix|31.1 wt% resin content; T700 unidirectional carbon fibre|reinforcement|balance; E20MI FR mat|FR|on both exterior surfaces,True
+ea-bppo,1,other,EA-BPPO (phosphorus additive)|FR|P-content 0.7 wt.%,False
+ea-bppo + tep,3,other,EA-BPPO (phosphorus additive) + TEP|FR|P-content 1.5 wt.%,False
+ead,2,EP,"DGEBA epoxy|matrix|32 +- 1 wt% matrix content; DDM|curing_agent|; aramid fabric (plain weave, 200 g/m2)|reinforcement|balance (~68 wt%); EAD|FR|2 wt% of epoxy resin",True
+ec-microencapsulated app,1,other:PBS,PBS|matrix|80 mass%; EC-microencapsulated APP (MAPP)|FR|15 mass%; CFA (charring-foaming agent)|synergist|5 mass%,False
+eg,14,"EP,EPDM,RPUF,other:UHMWPE",EPDM 4640|matrix|100 phr; EG|FR|40 phr; DCP|curing_agent|amount not printed,True
+eg + apb,3,RPUF,EG + APB|FR|5 wt% EG + 15 wt% APB,False
+eg + app + graphene oxide,1,FPUF,EG + APP + graphene oxide|FR|7.5 phr EG; 7.5 phr APP; 0.05 phr GO,False
+eg + app + ionic-liquid functionalized go,1,FPUF,EG + APP + ionic-liquid functionalized GO (ILGO)|FR|7.5 phr EG; 7.5 phr APP; 0.05 phr ILGO,False
+eg + app intumescent system,1,RPUF,EG + APP intumescent system (IFR)|FR|IFR 12 wt% (EG 9 wt%; APP 3 wt%),False
+eg + dmmp + functionalized go,1,RPUF,EG + DMMP + functionalized GO|FR|EG 7.5 phr; DMMP 2.5 phr; fGO 0.25 phr,False
+eg + dmmp + graphene oxide,1,RPUF,EG + DMMP + graphene oxide|FR|EG 7.5 phr; DMMP 2.5 phr; GO 0.25 phr,False
+eg only,1,RPUF,EG only|FR|10 wt% EG (22.32 g),False
+eg-bmp,1,WPC,HDPE|matrix|30 mass%; wood flour|filler|35 mass%; HDPE-g-MAH|compatibilizer|5 mass%; EG-BMP (EG:BMP 2:1)|FR|30 mass%,False
+eg1,1,other:PP/TPU,"PP/TPU 80/20 wt% blend|matrix|100 phr; MAH-g-PP|compatibilizer|3 phr; EG1 (expandable graphite, 45 um)|FR|20 phr",False
+eg2,1,other:PP/TPU,"PP/TPU 80/20 wt% blend|matrix|100 phr; MAH-g-PP|compatibilizer|3 phr; EG2 (expandable graphite, 150 um)|FR|20 phr",False
+eg@pda,1,other:UHMWPE,UHMWPE|matrix|80 wt%; EG@PDA|FR|13.33 wt%; APP|FR|6.66 wt%,False
+egm,2,EP,epoxy E-44|matrix|42.5 mass%; polyamide|curing_agent|42.5 mass%; EGM|FR|15 mass%,True
+ellagic acid,2,EP,DGEBA|matrix|72 wt%; IPDA|curing_agent|18 wt%; ellagic acid (EA)|FR|10 wt%,True
+ethylenediamine-modified app,1,WPC,HDPE|matrix|28%; wood fiber (pine)|filler|42%; ethylenediamine-modified APP (MAPP)|FR|30%,False
+exolit ap750,2,EP,epoxy resin E-44|matrix|100 phr; DDS|curing_agent|35.68 g (per 100 g EP); Exolit AP750 (intumescent APP-based FR)|FR|13.57 phr,True
+exolit op 935 + app,2,RPUF,Exolit OP 935 + APP|FR|30 wt.% Exolit OP 935 + 30 wt.% APP,False
+exolit op 935 + eg 290,2,RPUF,Exolit OP 935 + EG 290|FR|30 wt.% Exolit OP 935 + 30 wt.% EG 290,False
+exolit op1230,16,"EP,PMMA,UPR,other:paraffin",paraffin|matrix|95 wt%; Exolit OP1230 (AlPi)|FR|5 wt%,True
+exolit op550,3,FPUF,viscoelastic polyurethane foam|matrix|; Exolit OP550|FR|15 php; expandable graphite EG290|FR|15 php,False
+exolit op935,16,"EP,PMMA,UPR,other:paraffin",paraffin|matrix|95 wt%; Exolit OP935 (AlPi-based)|FR|5 wt%,True
+exolit rp607,8,"EP,other:paraffin",paraffin|matrix|95 wt%; Exolit RP607 (red phosphorus)|FR|5 wt%,True
+expandable graphite,85,"FPUF,LDPE,PA6,PLA,PP,RPUF,SR,TPU,WPC,other:PA1010,other:PBT/PET",vinyl-terminated PDMS|matrix|100 wt%; F36D expandable microsphere foaming agent|other|10 wt%; poly(methylhydrosiloxane)|curing_agent|2.0 wt%; platinum complex|curing_agent|0.2 wt%; 2-methyl-3-butyn-2-ol|other|0.01 wt%; expandable graphite (EG)|FR|10 wt%,False
+expandable graphite + app,2,"FPUF,RPUF",expandable graphite + APP|FR|EG 10 php; APP 10 php,False
+expandable graphite + dmmp,1,RPUF,expandable graphite + DMMP|FR|EG 7.5 phr; DMMP 2.5 phr,False
+expandable graphite 3772,4,LLDPE/COC,"LLDPE (Dow, MI 2.0)|matrix|42.8 wt%; COC (Apel APL6509T)|matrix|10.7 wt%; PEgDMAE (PE-g-MA/amino alcohol compatibilizer)|compatibilizer|15 wt%; graphene oxide|nanofiller|1.5 wt%; expandable graphite 3772|FR|10 wt%; Mg(OH)2 Magnifin H10A|FR|20 wt%",False
+expandable graphite eg1,3,RPUF,expandable graphite EG1|FR|10 wt%,False
+expandable graphite eg2,3,RPUF,expandable graphite EG2|FR|10 wt%,False
+expandable graphite eg3,3,RPUF,expandable graphite EG3|FR|10 wt%,False
+expandable graphite ghl px 95 ht,6,PA6,PA6 B27E|matrix|90 wt%; expandable graphite GHL PX 95 HT|FR|10 wt%,False
+expandable graphite ghl px 95 ht 270,34,PA6,PA6 (BASF B27E)|matrix|75 wt%; expandable graphite GHL PX 95 HT 270|FR|25 wt%,False
+"expandable graphite, hydrothermal route",1,HDPE,"HDPE (Chi-Mei, Mw 135,700)|matrix|70 wt%; expandable graphite, hydrothermal route (HEG)|FR|30 wt%",False
+"expandable graphite, o3-hydrothermal route",1,HDPE,"HDPE (Chi-Mei, Mw 135,700)|matrix|70 wt%; expandable graphite, O3-hydrothermal route (O3-HEG)|FR|30 wt%",False
+"expandable graphite, ultrasound-irradiation route",1,HDPE,"HDPE (Chi-Mei, Mw 135,700)|matrix|70 wt%; expandable graphite, ultrasound-irradiation route (UEG)|FR|30 wt%",False
+expanded graphite,11,"FPUF,other:PP/TPU,other:paraffin/HDPE","flexible PUR foam (polyol/MDI, OH:NCO 2:1)|matrix|balance; expanded graphite|FR|1 wt%",False
+f-zrp-functionalized alpha-zrp),3,PA6,PA6 (UBE 1030B)|matrix|97 wt%; f-ZrP (poly(HCCP-co-bPEI)-functionalized alpha-ZrP)|FR|3 wt%,False
+fa-bis-dopo,2,EP,DGEBA|matrix|80.3 g; DDM|curing_agent|17.2 g; FA-bis-DOPO|FR|2.5 g,True
+fa-mgo,1,EVA,EVA18 (18 wt% VA)|matrix|50 wt%; FA-MgO (roasted fly-ash/MgO)|FR|50 wt%,False
+fba,3,PA66,PA66|matrix|97 wt%; FBA (4-formylphenylboronic acid)|FR|3 wt%,False
+few-layer black phosphorus,1,EP,"DGEBA epoxy|matrix|30 g; DDS (4,4'-diaminodiphenylsulfone)|curing_agent|8.57 g; few-layer black phosphorus (BPs)|FR|0.9 wt%",True
+fhplc,2,other:WPU,IPDI|matrix|6.00 g; PCL (Mn 2000)|matrix|14.08 g; DMPA|matrix|1.0 g; TMP|other|0.5 g; TEA|other|0.8 g; FHPLC|FR|0.67 g (3.0 wt%),False
+flame retardant,1,PVC,PVC resin|matrix|not stated; flame retardant|FR|not stated; plasticizer|plasticizer|not stated; stabilizer|other|not stated,False
+fr 3,2,PLA,"PLA (low viscosity, MFR 80 g/10 min)|matrix|90 wt%; FR 3 (polymeric acrylate, phosphonate + DOPO phosphinate)|FR|10 wt%",False
+fr 4,2,PLA,"PLA (low viscosity, MFR 80 g/10 min)|matrix|90 wt%; FR 4 (polymeric acrylate, phosphate + DOPO phosphinate)|FR|10 wt%",False
+fr cros 490,8,HDPE,HDPE 56020S|matrix|25.9 wt% (co-ex layer); wheat straw|filler|24.1 wt% (co-ex layer); FR CROS 490 (melamine-coated APP)|FR|40.0 wt% (co-ex layer only); MAPE|compatibilizer|3 wt%; lubricant|other|4.0 wt%; core HDPE/wheat straw|other|46/50 wt%,False
+fr cros484,1,EP,"SR FireGreen 37 (bio-based epoxy, inherently FR-certified)|matrix|100 phr; SD 8202|curing_agent|20 phr; FR CROS484 (APP)|FR|15 phr",True
+fr1,10,PP,PP1|matrix|; Cross (silane/peroxide crosslinker)|other|1.3 wt%; FR1 (P-based FR)|FR|5 wt%; Syn (NOR116)|synergist|0.8 wt%,False
+fr2,8,PP,PP1|matrix|; Cross (silane/peroxide crosslinker)|other|1.3 wt%; FR2 (P-based FR)|FR|10 wt%; Syn (NOR116)|synergist|0.8 wt%,False
+fr3,2,PP,PP1|matrix|; Cross (silane/peroxide crosslinker)|other|1.3 wt%; FR3 (P-based FR)|FR|10 wt%; Syn (NOR116)|synergist|0.8 wt%,False
+fr4,8,PP,PP1|matrix|; FR4 (P-based FR)|FR|12.5 wt%,False
+fr5,2,PP,PP1|matrix|; FR5 (P-based FR)|FR|6 wt%,False
+"frc aqueous solution2co3 8, h3po4 20 wt%)",2,other:wood (Pinus densiflora),"Pinus densiflora sapwood|matrix|; FRC aqueous solution (NH4H2PO4 20, Na2B4O7 3, K2CO3 20, (NH4)2CO3 8, H3PO4 20 wt%)|FR|impregnated, uptake not given",False
+frp + mapp + organically modified ldh,1,RPUF,FRP + MAPP + organically modified LDH (no lignin polyol)|FR|FRP 20; MAPP 20; OLDH 3.0 php,False
+frsnadamantane),1,PC,PC|matrix|99.92 wt%; FRSN (tetrakis(phenyl-4-sulfonamide)adamantane)|FR|0.08 wt%,False
+fyrol hf5,1,FPUF,viscoelastic polyurethane foam|matrix|; Fyrol HF5|FR|20 php,False
+fyrol pnx le,1,FPUF,viscoelastic polyurethane foam|matrix|; Fyrol PNX LE|FR|20 php,False
+g-c3n4,2,"EP,PLA",PLA|matrix|98 wt%; g-C3N4|FR|2 wt%,True
+g-c3n4/alcpa hybrid cnalcpa30,1,PA6,PA6|matrix|80 wt%; g-C3N4/ALCPA hybrid CNALCPA30 (g-C3N4:ALCPA 30:100 by weight)|FR|20 wt%,False
+g-c3n4/pazn,1,EP,EP|matrix|100 phr; m-phenylenediamine|curing_agent|11 phr; g-C3N4/PAZn|FR|5 phr,True
+gallic acid,1,EP,DGEBA|matrix|72 wt%; IPDA|curing_agent|18 wt%; gallic acid (GA)|FR|10 wt%,True
+geg,3,LDPE,LDPE|matrix|85 wt%; GEG (CEPPA-IPTS grafted expandable graphite)|FR|15 wt%,False
+glass frit,3,SBR,SBR|matrix|100 phr; mica|filler|200 phr; glass frit (fluxing agent)|synergist|100 phr; dicumyl peroxide|curing_agent|1.5 phr,False
+go,1,PVC,flexible PVC (plasticized)|matrix|balance; GO|FR|5 wt%,False
+go-hccp,1,PET,PET|matrix|; GO-HCCP (HCCP-grafted GO)|FR|0.4 wt% GO + 0.2 Pwt% HCCP,False
+gposs,1,EP,TGMDA/BDE epoxy blend (75:25 wt%)|matrix|; DDS|curing_agent|stoichiometric; GPOSS (glycidyl POSS)|FR|5 wt% of epoxy precursor blend; MWCNT (Nanocyl 3100)|nanofiller|0.5 wt% of epoxy precursor blend; UD carbon fabric GV 501 U TFX|reinforcement|50:50 fibre:matrix ratio,True
+graphene,4,RPUF,polyether polyol V3010|matrix|50 g; polymeric isocyanate|matrix|50 g; dibutyltin dilaurate|other|0.5 g; triethanolamine|other|1.0 g; silicone oil AK8805 and A-33 catalyst|other|not printed; graphene|FR|3 %,False
+guanyl-urea phosphate,4,other:wood (Scots pine),Scots pine sapwood|matrix|substrate; furfuryl alcohol (polymerized in situ)|other|30 wt% in impregnation solution; maleic anhydride|curing_agent|3 wt% in impregnation solution; guanyl-urea phosphate (GUP)|FR|5 wt% in impregnation solution; triethanolamine|other|1 wt% in impregnation solution,False
+h-bn nanosheets,1,other:WPU,WPU (waterborne polyurethane)|matrix|99.6 wt%; h-BN nanosheets|FR|0.40 wt%,False
+habp-dopo,3,PLA,PLA|matrix|85 wt%; HABP-DOPO (DOPO-cyclotriphosphazene)|FR|15 wt%,False
+hacp,1,EP,E-51 epoxy|matrix|100 g; DDM|curing_agent|20.0 % (w1 column as printed); HACP|FR|5.0 wt%,True
+halloysite nanotubes,3,other:PA610,PA610|matrix|90 wt%; halloysite nanotubes (HNTs)|FR|10 wt%,False
+hb-dppa,1,EP,DGEBA|matrix|78.94 wt%; DDM|curing_agent|19.06 wt%; HB-DPPA (reactive P-N co-curing agent)|FR|2.0 wt%,True
+hbdt,2,PET,PET|matrix|98 wt%; hbDT|FR|2 wt%,False
+hccp,1,PET,PET|matrix|; HCCP|FR|0.2 Pwt% (phosphorus wt%),False
+hctp-modified graphite oxide,2,EVA,EVA|matrix|80 wt%; HCTP-modified graphite oxide (M-GO)|FR|20 wt%,False
+hexaphenoxycyclotriphosphazene,5,"EP,RPUF","epoxy resin|matrix|68.4 wt%; 4,4-diaminodiphenylsulfone (DDS)|curing_agent|22.6 wt%; hexaphenoxycyclotriphosphazene (HPCP)|FR|9.0 wt%",True
+hexaphenoxycyclotriphosphazene hpctp,3,PA6,"anionic PA6 (in situ RTM from caprolactam, C1 activator/C20 initiator)|matrix|resin balance; S-glass plain-woven fabric (11 layers)|reinforcement|about 67 wt% of composite; hexaphenoxycyclotriphosphazene HPCTP|FR|20% of resin matrix",False
+hfr 693,1,PET,PET|matrix|89.9; HFR 693 (phosphorus FR)|FR|10.1,False
+hfr binder,4,PS,EPS beads|matrix|13 g; HFR binder (APP:PER:DBDPE:CaCO3 15:5:5:5)|FR|55 g per HFR batch; expandable graphite|FR|40 g per HFR batch; gypsum|filler|0 g per HFR batch; EVA emulsion|other|binder (amount not printed),False
+hgm-fe2o3,1,TPU,TPU|matrix|99.5 mass%; HGM-Fe2O3|FR|0.5 mass%,False
+hgm@[eooemim][bf4],2,TPU,TPU 9380A|matrix|99.75 mass%; HGM@[EOOEMIm][BF4] (KH550-silanized HGM loaded with ionic liquid)|FR|0.25 mass%,False
+hgm@[eooemim][pf6],4,TPU,TPU 9380A|matrix|99.0 mass% (by difference); HGM@[EOOEMIm][PF6]|FR|1.000 mass%,False
+hgm@amp,1,TPU,TPU (Bayer 9380A)|matrix|99.5 mass%; HGM@AMP (ammonium molybdophosphate-coated hollow glass microspheres)|FR|0.5 mass%,False
+histidine,3,PVC,PVC-P|matrix|90 wt%; histidine|FR|6 wt%; nanoclay|nanofiller|4 wt%,False
+hnts,1,"other:asphalt (SBS-modified, 70# binder)",70# matrix asphalt|matrix|100; SBS|other|5 wt %; HNTs (halloysite nanotubes)|synergist|1 wt %; ADP (aluminium diethyl phosphinate)|FR|5 wt %; ATH|FR|3 wt %,False
+hnts@a-171,1,SR,vinyl-terminated PDMS|matrix|100 wt%; F36D expandable microsphere foaming agent|other|10 wt%; poly(methylhydrosiloxane)|curing_agent|2.0 wt%; platinum complex|curing_agent|0.2 wt%; 2-methyl-3-butyn-2-ol|other|0.01 wt%; HNTs@A-171|FR|10 wt%,False
+hnts@nico-ldh,3,UPR,UPR|matrix|balance (not printed); curing agent (unspecified)|curing_agent|1.5 wt%; HNTs@NiCo-LDH|FR|2 wt%,False
+hollow glass microspheres,1,TPU,TPU 9380A|matrix|99.5 wt%; hollow glass microspheres (HGM 5020)|FR|0.5 wt%,False
+hp-mn,1,PP,PP|matrix|75 wt%; HP-Mn (Mn2+-doped piperazine-HEDP phosphate char-forming agent)|FR|25,False
+hpctp,3,RPUF,HPCTP|FR|HPCTP 20 wt%,False
+hpdal,3,EP,DGEBA|matrix|100.0 g; DDM|curing_agent|25.3 g; HPDAl|FR|1.3 g (1.0 wt%),True
+hq-bppo + tep,1,other,HQ-BPPO (phosphorus additive) + TEP|FR|P-content 1.0 wt.%,False
+hq-dopo + tep,1,other,HQ-DOPO (phosphorus additive) + TEP|FR|P-content 1.0 wt.%,False
+humic acid,3,EVA,EVA|matrix|balance; hemp hurd biochar (HHB)|filler|20 wt%; humic acid (HA)|FR|10 wt% (with respect to EVA or EVA/HHB),False
+hyperbranched polyphosphate ester hpe,3,EP,DGEBA SM618 epoxy|matrix|not printed; hyperbranched polyphosphate ester HPE|FR|33 wt% of curing agent; bisphenol-A|curing_agent|67 wt% of curing agent; Ph3P|other|0.2 wt% of curing agent,True
+ifr,97,"EP,EVA,HDPE,HDPE/EVA,HIPS,NR,PLA,POM,PP,RPUF,SR,other:NR/EUG blend,other:PBS,other:paraffin",PLA|matrix|86; IFR (MP:PER 1:1)|FR|9; OMMT-2|nanofiller|5%,True
+ifr + ath 3 php,1,RPUF,IFR + ATH 3 php|FR|APP 15; PER 5; MC 5; EG 15; CC 5; ATH 3 php,False
+ifr + ath 5 php,1,RPUF,IFR + ATH 5 php|FR|APP 15; PER 5; MC 5; EG 15; CC 5; ATH 5 php,False
+ifr + graphene oxide,1,RPUF,IFR + graphene oxide|FR|IFR 12 wt% + 0.3 wt% GO,False
+ifr + phytic acid-functionalized go,1,RPUF,IFR + phytic acid-functionalized GO (PA-GO)|FR|IFR 12 wt% + 0.3 wt% PA-GO,False
+ifr adk stab fp-2200,4,PLA,PLA 4032D|matrix|82 wt%; IFR ADK STAB FP-2200 (piperazine pyrophosphate-based)|FR|18 wt%; anti-drip agent SN80-SA7|other|0.2 wt%,False
+ifr coating,4,PS,"expanded polystyrene beads|matrix|13 g; IFR coating (per 100 mL water: EVA emulsion 55 g, gypsum 9 g, EG 35 g, talc 1 g, APP 15 g, PER 7.5 g, CaCO3 7.5 g, MC 0 g)|FR|39 g IFR solution mixed (1:3); coated mass not printed",False
+il@nh2-mil-101,1,EP,epoxy resin (EP)|matrix|80 g; m-phenylenediamine|curing_agent|8.8 g; IL@NH2-MIL-101(Al) ([DPP-NC3bim][PMo] ionic liquid on MOF)|FR|3 wt%,True
+ind-mh2),4,EP,EP (E44) + DDM|matrix|93 wt%; ind-MH (Albemarle H-5 Mg(OH)2)|FR|7 wt%,True
+intumescent combination exolit op 1314,6,PA6,PA6 B27E|matrix|90 wt%; intumescent combination Exolit OP 1314|FR|10 wt%,False
+iron poly chelate,3,LLDPE,LLDPE|matrix|70 %; iron poly(acrylic acid-co-acrylamide) chelate (FeAA)|FR|10 %; melamine polyphosphate (MPP)|FR|20 %,False
+iron tailing filler,3,RPUF,iron tailing (ITS) filler|FR|ITS 50 g (Table 1; text calls 10/30/50 php),False
+itap,2,PLA,"PLA (low viscosity, MFR 80 g/10 min)|matrix|90 wt%; ItaP (DOPO-itaconate polyester)|FR|10 wt%",False
+k-app,5,HIPS,HIPS|matrix|85 wt%; k-APP (KH-550 modified APP)|FR|15 wt%,False
+kappaflam t4/729,1,other:wood fibre,softwood fibres (loose)|matrix|; Kappaflam T4/729 (sulfur-based commercial FR)|FR|10 wt%,False
+kf commercial sulfur-based fr,1,other:wood fiber,softwood fibers (GUTEX)|matrix|; Acrodur DS 3558 binder|other|10 wt%; KF commercial sulfur-based FR (proprietary)|FR|10 wt% (on wood fiber),False
+kh-550 surface-treated app,1,UPR,UPR|matrix|75 mass%; KH-550 surface-treated APP (STAPP)|FR|15 mass%; MEL|FR|5 mass%; PER|FR|5 mass%; BPO|curing_agent|2 mass%,False
+kh-570 silane-modified zno-doped mh,1,PP,PP|matrix|100 phr; antioxidant 1010|other|; KH-570 silane-modified ZnO-doped MH (KZO@MH)|FR|40 phr,False
+kh-570 silane-treated expanded graphite,1,other:PP/TPU,"PP|matrix|80 (PP/TPU 80/20, 100 phr); TPU|matrix|20; PP-g-MAH|compatibilizer|3 phr; KH-570 silane-treated expanded graphite|FR|20 phr",False
+kraft lignin,15,"EP,other:PA11,other:recycled cotton fibre/PVAc-starch",PA11|matrix|80 wt%; Kraft lignin (KL)|FR|20 wt%,True
+kssbenzenesulfonate),2,PC,PC|matrix|99.5 mass%; KSS (potassium-4-(phenylsulfonyl)benzenesulfonate)|FR|0.5 mass%,False
+la-btc,1,EP,epoxy (EP)|matrix|10 parts (EP/DDM 10:3); DDM|curing_agent|3 parts; La-BTC (La-MOF)|FR|4 wt%,True
+lab-made fr,1,other:hemp fibre,hemp fibre|matrix|; lab-made FR|FR|,False
+lactic casein 720,3,PP,PP|matrix|50 %; lactic casein 720 (LAC)|FR|50 %,False
+lafeo3,1,PVC,PVC TL-1000|matrix|100 phr; DOP|plasticizer|40 phr; diisooctyl dioctyltin bis(thioglycolate) heat stabilizer|other|3 phr; calcium stearate lubricant|other|1 phr; NDZ-311 titanate coupling agent|compatibilizer|1 phr; LaFeO3|FR|20 phr,False
+lamellar cobalt potassium pyrophosphate,5,EP,epoxy resin NPEL128 + DDM curing agent|matrix|94 wt%; lamellar cobalt potassium pyrophosphate (LCPP)|FR|6 wt%,True
+lanthanum hypophosphite,1,PBT,"PBT 4500|matrix|50 wt% (balance, by difference); silane-coated short glass fibre|reinforcement|30 wt%; lanthanum hypophosphite (LHP)|FR|20 wt%",False
+ldh1,1,EVA,EVA18 (18 wt% VA)|matrix|50 wt%; LDH1 (fly-ash-derived Mg-Al-Fe LDH)|FR|50 wt%,False
+ldh2,1,EVA,EVA18 (18 wt% VA)|matrix|50 wt%; LDH2 (fly-ash-derived Mg-Al-Fe LDH)|FR|50 wt%,False
+ldh3,1,EVA,EVA18 (18 wt% VA)|matrix|50 wt%; LDH3 (fly-ash-derived Mg-Al-Fe LDH)|FR|50 wt%,False
+ldh4,1,EVA,EVA18 (18 wt% VA)|matrix|50 wt%; LDH4 (fly-ash-derived Mg-Al-Fe LDH)|FR|50 wt%,False
+ldh5,1,EVA,EVA18 (18 wt% VA)|matrix|50 wt%; LDH5 (fly-ash-derived Mg-Al-Fe LDH)|FR|50 wt%,False
+lh20/ac hybrid pigment,1,other:ethylene-norbornene copolymer,"ethylene-norbornene copolymer|matrix|100 phr; LH20/AC hybrid pigment (azo dye on Al-Mg hydroxycarbonate, Mg/Al 20/80)|FR|5 phr",False
+lh30/ac hybrid pigment,1,other:ethylene-norbornene copolymer,"ethylene-norbornene copolymer|matrix|100 phr; LH30/AC hybrid pigment (azo dye on Al-Mg hydroxycarbonate, Mg/Al 30/70)|FR|5 phr",False
+lh5/ac hybrid pigment,1,other:ethylene-norbornene copolymer,"ethylene-norbornene copolymer|matrix|100 phr; LH5/AC hybrid pigment (azo dye on Al-Mg hydroxycarbonate, Mg/Al 5/95)|FR|5 phr",False
+lh70/ac hybrid pigment,1,other:ethylene-norbornene copolymer,"ethylene-norbornene copolymer|matrix|100 phr; LH70/AC hybrid pigment (azo dye on Al-Mg hydroxycarbonate, Mg/Al 70/30)|FR|5 phr",False
+lhp,9,"PVC,UPR",UP|matrix|90 wt%; LHP (L-histidinium dihydrogen phosphate-phosphoric acid)|FR|10 wt%; initiator|curing_agent|1 wt%,False
+lig-f,1,EP,EP|matrix|75.0 wt%; DDM|curing_agent|15 wt%; Lig-F (PA-DOPO + DOPO grafted lignin)|FR|10 wt%,True
+lig-m,1,EP,EP|matrix|75.0 wt%; DDM|curing_agent|15.0 wt%; Lig-M (PA-DOPO grafted lignin)|FR|10 wt%,True
+lig-p,1,EP,EP|matrix|75.0 wt%; DDM|curing_agent|15.0 wt%; Lig-P (pretreated lignin)|FR|10 wt%,True
+lignin,4,PP,PP|matrix|270 g; TiO2|filler|20 g; lignin (agave by-product)|FR|10 g,False
+lignin polyol + flame retardant polyol,1,RPUF,lignin polyol + flame retardant polyol|FR|LBP80 30 php; FRP 20 php,False
+lignin polyol + frp + mapp,1,RPUF,lignin polyol + FRP + MAPP|FR|LBP80 30; FRP 20; MAPP 20 php,False
+lignin polyol + frp + mapp + oldh,1,RPUF,lignin polyol + FRP + MAPP + OLDH|FR|LBP80 30; FRP 20; MAPP 20; OLDH 3.0 php,False
+lignin polyol + microencapsulated app,1,RPUF,lignin polyol + microencapsulated APP|FR|LBP80 30 php; MAPP 20 php,False
+lignin-based polyol,1,RPUF,lignin-based polyol (30 php substituting polyether)|FR|LBP80 30 php,False
+lignosulfonate lignin,4,other:PA11,PA11|matrix|80 wt%; lignosulfonate lignin (LL)|FR|5 wt%; zinc phosphinate (ZnP)|FR|15 wt%,False
+liquid glass,4,other:wood scobs (pine),"pinewood scobs (WS, bulk density 83.0 kg/m3)|matrix|100 wt.% by WS; liquid glass (sodium silicate, 9.3% Na2O, 28.0% SiO2)|FR|100 wt.% by WS",False
+ma-bppo + tep,3,other,MA-BPPO (phosphorus additive) + TEP|FR|P-content 1.4 wt.%,False
+ma-ifr,1,PP,"PP|matrix|73 wt%; MA-IFR (KH550 + SBS-g-MAH coated IFR, APP:CFA 83:17)|FR|27 wt%",False
+ma/ifr,1,PP,PP|matrix|73 wt%; MA/IFR (IFR physically mixed with SBS-g-MAH)|FR|27 wt%,False
+magnesium hydroxide,24,"EP,EVA,LDPE,LLDPE,PP,PVC,other:EVM/NBR",PVC|matrix|100 phr; DOP|plasticizer|40 phr; ACR-401|other|4 phr; glycerol monostearate|other|0.6 phr; organic tin stabilizer|other|2 phr; paraffin|other|0.4 phr; magnesium hydroxide (MH)|FR|20 phr,True
+mapp,6,"EP,PP,TPU",EP (DGEBA)|matrix|68 wt%; DDM|curing_agent|17 wt%; MAPP|FR|15 wt%,True
+mb-fr,3,PP,PP|matrix|56 wt%; MB-FR|FR|40 wt%; ONSep (organo-modified nanosepiolite)|synergist|4 wt%,False
+mb3f3,4,RPUF,YD-380 polyether polyol|matrix|35 g; PM-200 isocyanate|matrix|150 g; silicone 8804|other|4 g; PC-8|other|1.5 g; DMP-30|other|1.5 g; HCFC-141b|other|32 g; water|other|1 g; MB3F3 (P/N flame-retardant polyol)|FR|67.9 g,False
+mbc,4,PLA,PLA|matrix|95 wt%; mBC (phytic acid/urea-modified bamboo biochar)|FR|5 wt%; lubricant|other|0.5-1 wt%,False
+mbdac-bppo,2,other:PHU,MBDAC|matrix|balance of carbonate; MBDAC-BPPO (P-grafted cyclic carbonate)|FR|1% P (wt% phosphorus in PHU); PPO DC|matrix|not printed; Jeffamine EDR-148|curing_agent|1 eq; thiourea catalyst|other|5 wt% (0.03 eq.),False
+mbdac-dep,2,other:PHU,MBDAC|matrix|balance of carbonate; MBDAC-DEP (P-grafted cyclic carbonate)|FR|1% P (wt% phosphorus in PHU); PPO DC|matrix|not printed; Jeffamine EDR-148|curing_agent|1 eq; thiourea catalyst|other|5 wt% (0.03 eq.),False
+mbdac-dopo,2,other:PHU,MBDAC|matrix|balance of carbonate; MBDAC-DOPO (P-grafted cyclic carbonate)|FR|1% P (wt% phosphorus in PHU); PPO DC|matrix|not printed; Jeffamine EDR-148|curing_agent|1 eq; thiourea catalyst|other|5 wt% (0.03 eq.),False
+mbdac-dpp,2,other:PHU,MBDAC|matrix|balance of carbonate; MBDAC-DPP (P-grafted cyclic carbonate)|FR|1% P (wt% phosphorus in PHU); PPO DC|matrix|not printed; Jeffamine EDR-148|curing_agent|1 eq; thiourea catalyst|other|5 wt% (0.03 eq.),False
+mbpne,1,other:POE,"POE (Dow 8150)|matrix|78 mass%; MBPNE (P/N/B mono-component IFR, MA:BA 95:5)|FR|22 mass%",False
+mca,1,PLA,PLA|matrix|49.4 wt%; ramie fibre|reinforcement|20 wt%; TGIC|compatibilizer|0.6 wt%; MCA|FR|30 wt%,False
+mcapp,4,"LDPE,PP",PP|matrix|75 wt%; MCAPP|FR|15.7 wt%; PEPA|FR|7.8 wt%; La-containing 4A zeolite (4A-La)|synergist|1.5 wt%,False
+mceg,3,RPUF,"RPUF (Polyether polyol 100 g, PAPI 120 g, 33% TEDA soln 4.2 g + DBTDL 0.6 g, silicone stabilizer 6 g, phosphate (2,3-dichloropropyl) ester 17.5 g, HFC-365mfc 7 g (Table 2; column alignment as printed))|matrix|remainder; MCEG (EG microencapsulated with melamine cyanurate)|FR|9.0 wt%",False
+mcpr-ldh,1,other:wood (poplar plywood),"poplar veneer (3-ply, 1.5 mm plies)|matrix|three layers; API adhesive (PVA/EVA emulsion + P-MDI)|other|amount not printed; MCPR-LDH (melamine-Pyrovatex CP resin intercalated Mg/Al-LDH)|FR|veneer impregnated with 5% suspension 48 h; also replaces CaCO3 filler in API adhesive",False
+mdh,1,ABS,rABS|matrix|85 wt%; MDH (magnesium hydroxide)|FR|15 wt%,False
+mdi/melamine polyurea co-microencapsulated app/ath 1/1 [m],1,PP,PP|matrix|70 wt%; MDI/melamine polyurea co-microencapsulated APP/ATH 1/1 [M(A&A)]|FR|30 wt%,False
+mela,2,other:leather,bovine chrome-tanned leather|matrix|; MELA|FR|12 wt% (on wet blue leather mass),False
+melamine,7,"EP,PF,PLA,PVC,RPUF",phenolic resin|matrix|96 wt%; melamine|FR|4 wt%,True
+melamine + exolit op 935,1,RPUF,melamine + Exolit OP 935|FR|30 wt.% melamine + 30 wt.% Exolit OP 935,False
+melamine + expanded graphite eg 290,1,RPUF,melamine + expanded graphite EG 290|FR|15 wt.% melamine + 15 wt.% EG 290,False
+melamine + roflam b7 + roflam plo,1,RPUF,melamine + Roflam B7 + Roflam PLO|FR|10 wt.% melamine + 10 wt.% Roflam B7 + 10 wt.% Roflam PLO,False
+melamine cyanurate,6,"TPU,WPC,other:EVM/NBR",EVM Levapren 450|matrix|70 (EVM:NBR ratio); NBR|matrix|30; melamine cyanurate|FR|50 phr; DCP|curing_agent|,False
+melamine cyanurate mc50,4,PA6,PA6 B27E|matrix|77 wt%; melamine cyanurate MC50|FR|20 wt%; TAIC masterbatch TAICROS PA6 60 (40% TAIC/60% PA6)|curing_agent|3 wt%,False
+melamine formaldehyde resin,3,UPR,unsaturated polyester (Crystic 2-406PA)|matrix|42 wt% resin (UP/MF 50/50); melamine formaldehyde resin (SD-MF:DEG 1:1)|FR|50 % w/w of resin; E-glass woven fabric (8 plies)|reinforcement|58 wt%,False
+melamine molybdate mamoo4,1,PVC,PVC TL-1000|matrix|100 phr; DOP|plasticizer|40 phr; organotin stabilizer|other|3 phr; calcium stearate|other|1 phr; melamine molybdate MAMoO4|FR|30 phr,False
+melamine molybdate23,1,PVC,PVC TL-1000|matrix|100 phr; DOP|plasticizer|40 phr; organotin stabilizer|other|3 phr; calcium stearate|other|1 phr; melamine molybdate (MA)2(MoO4)3|FR|30 phr,False
+melamine molybdate2moo4,1,PVC,PVC TL-1000|matrix|100 phr; DOP|plasticizer|40 phr; organotin stabilizer|other|3 phr; calcium stearate|other|1 phr; melamine molybdate (MA)2MoO4|FR|30 phr,False
+melamine phosphate,8,SR,"107 rubber (alpha,omega-dihydroxy-PDMS)|matrix|100 phr; nano-silica|filler|20 phr; KH-550/KH-560 coupling agent (1:1)|compatibilizer|0.8 phr; melamine phosphate (MP)|FR|15 phr; ZnO|filler|5 phr; TiO2|filler|5 phr; methyl triethoxysilane|curing_agent|4 phr; dibutyltin dilaurate|curing_agent|1.2 phr",False
+melamine polyphosphate,19,"FPUF,LLDPE,NR,PA6",PA6 (Technyl C206)|matrix|75 wt%; melamine polyphosphate (Melapur 200)|FR|18.75 wt%; fly ash SuperPozz titanate KR-12-treated|synergist|6.25 wt%,False
+melamine pyrophosphate,4,PP,PP fibre|matrix|47.5 wt%; bamboo fibre|reinforcement|47.5 wt%; melamine pyrophosphate (MPP)|FR|3.33 wt%; aluminum hypophosphite (AP)|FR|1.67 wt%,False
+melamine salt of montmorillonite phosphate,7,LLDPE,LLDPE|matrix|65 wt%; melamine salt of montmorillonite phosphate (MMP)|FR|30 wt%; zinc borate (ZB)|synergist|5 wt%,False
+melamine tungstate2wo4,1,PVC,PVC TL-1000|matrix|100 phr; DOP|plasticizer|40 phr; organotin stabilizer|other|3 phr; calcium stearate|other|1 phr; melamine tungstate (MA)2WO4|FR|30 phr,False
+melamine-coated app,2,PLA,PLA Ingeo 3D450|matrix|balance; melamine-coated APP (Budit 620)|FR|15 wt%; Irganox B215|other|not printed,False
+melamine-formaldehyde resin coated app,1,RPUF,melamine-formaldehyde resin coated APP (MFAPP)|FR|MFAPP 7 wt% (label),False
+melamine-phytic acid supramolecular assembly,1,other:sodium alginate,sodium alginate (Ca2+ crosslinked aerogel)|matrix|; melamine-phytic acid (MEL:PA 6:1 molar) supramolecular assembly|FR|1.0 wt% (initial MEL-PA solution concentration),False
+mf3.5,1,RPUF,YD-380 polyether polyol|matrix|65 g; PM-200 isocyanate|matrix|150 g; silicone 8804|other|4 g; PC-8|other|1.5 g; DMP-30|other|1.5 g; HCFC-141b|other|32 g; water|other|1 g; MF3.5 (P/N flame-retardant polyol)|FR|59.9 g,False
+mfapp + alkali lignin,2,RPUF,MFAPP + alkali lignin (A-lignin)|FR|MFAPP 12 + A-lignin 3 (label; 15 wt% total per text),False
+mg-al ldh1,1,EVA,EVA|matrix|50%; Mg-Al LDH1 (synthesized with 0 g mesoporous silica per 1 L solution B)|FR|50%,False
+mg-al ldh2,1,EVA,EVA|matrix|50%; Mg-Al LDH2 (synthesized with 0.5 g mesoporous silica per 1 L solution B)|FR|50%,False
+mg-al ldh3,1,EVA,EVA|matrix|50%; Mg-Al LDH3 (synthesized with 1.0 g mesoporous silica per 1 L solution B)|FR|50%,False
+mg-al ldh4,1,EVA,EVA|matrix|50%; Mg-Al LDH4 (synthesized with 1.5 g mesoporous silica per 1 L solution B)|FR|50%,False
+mg-al ldh5,1,EVA,EVA|matrix|50%; Mg-Al LDH5 (synthesized with 2.0 g mesoporous silica per 1 L solution B)|FR|50%,False
+mg-al ldh6,1,EVA,EVA|matrix|50%; Mg-Al LDH6 (synthesized with 2.5 g mesoporous silica per 1 L solution B)|FR|50%,False
+mg-al-co3 ldh,1,PP,PP t30s|matrix|100 phr; Mg-Al-CO3 LDH|FR|12 phr,False
+mg-al-h2po4 ldh,1,PP,PP t30s|matrix|100 phr; Mg-Al-H2PO4 LDH (M-LDH)|FR|12 phr,False
+mg/al/fe-co3 ldh,5,EVA,EVA18|matrix|50 wt%; Mg/Al/Fe-CO3 LDH|FR|30 wt%; graphite powder|synergist|20 wt%,False
+mg/zn/al-ldh,1,SR,silicone foam (SiFs)|matrix|70 wt%; Mg/Zn/Al-LDH|FR|30 mass%,False
+mg2,4,"EP,PP",Epidian 5 epoxy resin|matrix|base; hardener Z-1 (triethylenetetramine)|curing_agent|12 pbw per 100 pbw resin; Mg(OH)2|FR|5 wt%,True
+mg2 magnifin h10a,4,LLDPE/COC,"LLDPE (Dow, MI 2.0)|matrix|36 wt%; COC (Apel APL6509T)|matrix|9 wt%; Mg(OH)2 Magnifin H10A|FR|55 wt%",False
+mgal-ldh,8,"EVA,other:PA11","EVA (DuPont 265, 28% VA)|matrix|40 wt%; MgAl-LDH|FR|55 wt%; MC226 PE-g-MA|compatibilizer|5 wt%",False
+mgalfe-ldh,6,EVA,EVA (18 mass% VA)|matrix|50 mass%; MgAlFe-LDH (in situ LDH-Si hybrid)|FR|50 mass%,False
+mgalzn-ldh-co3,1,EP,E-51 epoxy|matrix|100 g; DDM|curing_agent|20.0 % (w1 column as printed); MgAlZn-LDH-CO3|FR|5.0 wt%,True
+mgalzn-ldh-pmoa,5,EP,E-51 epoxy|matrix|100 g; DDM|curing_agent|20.0 % (w1 column as printed); MgAlZn-LDH-PMoA|FR|5.0 wt%,True
+mh,22,"EP,EVA,LLDPE,PVC","PVC (TMP-31, K=70)|matrix|100 g; DOP|plasticizer|50 g; Ba/Zn stabilizer CZ-707|other|2.5 g; MH|FR|20 wt%",True
+mh/ath2/al3),6,LLDPE/EVA,"LLDPE/EVA blend (LLDPE DFDA7042 + EVA 7240M, 15 wt% VA)|matrix|100 phr; MH/ATH (Mg(OH)2/Al(OH)3)|FR|90 phr; DOPO-KH560 modified expandable graphite (MEG)|FR|10 phr",False
+mh@dopo@mf microcapsule,1,PVC,"PVC (TMP-31, K=70)|matrix|100 g; DOP|plasticizer|50 g; Ba/Zn stabilizer CZ-707|other|2.5 g; MH@DOPO@MF microcapsule|FR|10 wt%",False
+"mhx2, taixing)",1,EVA,"EVA|matrix|40 wt%; MHx (commercial Mg(OH)2, Taixing)|FR|60 wt%",False
+"mhy2, albemarle)",1,EVA,"EVA|matrix|40 wt%; MHy (commercial Mg(OH)2, Albemarle)|FR|60 wt%",False
+mhz2),1,EVA,EVA|matrix|40 wt%; MHz (hydrothermal hexagonal Mg(OH)2)|FR|60 wt%,False
+micro-sized mdh,4,other:EVM/NBR (EVA 80% VA / nitrile rubber 70/30),EVM Levaprene 800 (80 wt% VA)|matrix|70 phr; NBR Perbunan 2840|matrix|30 phr; DCP|curing_agent|4 phr; TAIC|curing_agent|0.5 phr; ZnO/stearic acid/zinc stearate|other|2/1/1 phr; CaO|other|3 phr; micro-sized MDH (mMDH)|FR|200 phr,False
+microencapsulated app,1,RPUF,microencapsulated APP (PFAPP)|FR|PFAPP 15 wt.%,False
+microencapsulated eg + mapp + organo-ldh,1,RPUF,microencapsulated EG + MAPP + organo-LDH|FR|MEG 10 php; MAPP 10 php; OLDH 3.0 php,False
+microencapsulated eg + microencapsulated app,1,RPUF,microencapsulated EG + microencapsulated APP|FR|MEG 10 php; MAPP 10 php,False
+microencapsulated red phosphorus,5,PBT,"PBT (Tecodur PB70 NL)|matrix|60 mass% (balance, by difference); chopped basalt fibre (APTES silane-modified, 6 mm)|reinforcement|20 mass%; microencapsulated red phosphorus (Exolit RP 6500)|FR|20 mass%",False
+microencapsulated sepiolite,3,SR,"silicone rubber foam|matrix|91 wt%; microencapsulated sepiolite (MSEP, SiO2-coated)|FR|3 wt%; zinc borate (ZB)|synergist|6 wt%",False
+mits + expandable graphite,1,RPUF,MITS + expandable graphite (EG)|FR|MITS 10 wt% / EG 10 wt%,False
+mms,4,TPU,TPU (Bayer 9380A)|matrix|99.000 mass%; MMS (3A molecular sieve modified by [EOOEMIm][PF6])|FR|1.000 mass%,False
+mno2@chs@sa@ni hybrid,3,EP,epoxy resin|matrix|; DDM|curing_agent|; MnO2@CHS@SA@Ni hybrid|FR|0.5 wt%,True
+modified iron tailings,1,RPUF,modified iron tailings (MITS)|FR|MITS 20 wt%,False
+mono-ammonium phosphate,2,other:melamine-formaldehyde,"melamine-formaldehyde resin (catalyzed)|matrix|49 wt%; OFMSW (organic fraction of municipal solid waste, wet)|filler|50 wt%; mono-ammonium phosphate (PFR)|FR|1 wt%",False
+monoammonium phosphate nh4h2po4,1,other:cellulose paper (Kraft pulp),Kraft cellulose sheet|matrix|; monoammonium phosphate NH4H2PO4 (35% solution)|FR|WPG 12.19%,False
+moo3,8,"EP,UPR",Polimal 1033 APy orthophthalic unsaturated polyester resin|matrix|93 wt%; MoO3|FR|7 wt%,True
+moo3-hybridized magnesium hydroxide,1,PVC,PVC|matrix|100 phr; DOP|plasticizer|40 phr; ACR-401|other|4 phr; glycerol monostearate|other|0.6 phr; organic tin stabilizer|other|2 phr; paraffin|other|0.4 phr; MoO3-hybridized magnesium hydroxide (MO@MH)|FR|20 phr,False
+mos2 nanosheets,1,FPUF,polyether polyol (jmdyc-3000)|matrix|100 g; TDI|curing_agent|45 g; tin 2-ethylhexanoate (chain extender)|other|0.3 g; A-33 catalyst|other|0.3 g; silicone oil L-580 surfactant|other|0.5 g; distilled water (blowing agent)|other|3.5 g; MoS2 nanosheets|FR|9 g,False
+mos2–dopo hybrid,1,FPUF,polyether polyol (jmdyc-3000)|matrix|100 g; TDI|curing_agent|45 g; tin 2-ethylhexanoate (chain extender)|other|0.3 g; A-33 catalyst|other|0.3 g; silicone oil L-580 surfactant|other|0.5 g; distilled water (blowing agent)|other|3.5 g; MoS2–DOPO hybrid|FR|9 g,False
+mp/eg,3,PS,PS|matrix|75 wt%; MP/EG (1:2)|FR|25 wt%,False
+mp/per,5,EPDM/PP,"EPDM/PP (EPDM:PP 40:60 in final product)|matrix|80 wt%; MP/PER (molar ratio 1.8, reactive-extruded masterbatch 70 wt% MP/PER in PP)|FR|20 wt%; naphthenic oil|plasticizer|30 wt% of EPDM (soak; mostly volatilized); DCP|curing_agent|1.2 wt% of EPDM; TAIC|curing_agent|1.5 wt% of EPDM",False
+mp/per 2:1,2,PP,PP (F401)|matrix|balance; MP/PER 2:1 (IFR)|FR|26 %; Cr2O3|synergist|1 %,False
+mpcsn,1,TPU,TPU (65E85)|matrix|98 mass%; MPCSN (melamine-phytic acid-Cu2+ supermolecular network)|FR|2.0 mass%,False
+mphp,3,EP,EP|matrix|66.7 wt%; curing agent T-31|curing_agent|23.3 wt%; MPhP|FR|10.0 wt%; defoamer|other|0.5 wt% of EP + curing agent,True
+mpp,10,"ABS,EP,PA66,PP",ABS|matrix|90 wt%; MPP (melamine polyphosphate)|FR|10 wt%,True
+mppm,3,LLDPE,LLDPE|matrix|65%; MPPM (melamine/pentaerythritol phosphate/montmorillonite IFR)|FR|35%,False
+mufapp,3,PP,PP|matrix|60 wt%; MUFAPP|FR|40 wt%,False
+mw-mh2 micro-whiskers),4,EP,EP (E44) + DDM|matrix|97 wt%; mw-MH (Mg(OH)2 micro-whiskers)|FR|3 wt%,True
+n-p fire-resistant adhesive,1,other:cellulose fibre (kraft pulp),"kraft pulp fibre|matrix|46 g; N-P fire-resistant adhesive (phosphoric acid/urea/PVOH/starch, 4.2 wt% solution)|FR|300 mL",False
+nano-calcium borate,1,other:calcium alginate,calcium alginate|matrix|; nano-calcium borate|FR|,False
+nano-cu2o,1,other:zinc alginate,zinc alginate|matrix|; nano-Cu2O|FR|amount not printed as wt% (from 2.34 g CuSO4.5H2O per 20.00 g NaAlg),False
+nano-mg2,1,EVA,EVA|matrix|100 phr; nano-Mg(OH)2|FR|50 phr,False
+naoh,5,other:PVA,PVA|matrix|5 g/90%; NaOH|synergist|0.587 g/10%,False
+nh2-mil-101,1,EP,epoxy resin (EP)|matrix|80 g; m-phenylenediamine|curing_agent|8.8 g; NH2-MIL-101(Al)|FR|3 wt%,True
+ni@sio2-pa,3,EP,EP|matrix|100 parts; DDM|curing_agent|25 wt% relative to EP; Ni@SiO2-PA (nickel phytate on aminated SiO2)|FR|1.0 wt% relative to EP,True
+nial-ldh,1,SR,Vi-PDMS|matrix|24.0 wt%; HO-PDMS|matrix|64.0 wt% (48.0 Part A + 16.0 Part B); Low-H PMHS|curing_agent|3.0 wt%; High-H PMHS|curing_agent|9.0 wt%; NiAl-LDH (CO3 intercalated)|FR|1.0 phr; Karstedt Pt catalyst|other|0.5 phr; V4 inhibitor|other|0.08 phr; DI water (blowing)|other|0.5 phr,False
+nickel phytate,7,RPUF,nickel phytate (PA-Ni)|FR|3 wt% PA-Ni (inferred from naming),False
+nio,1,PP,PP|matrix|85 g; NiO|FR|15 g,False
+no3-ldh,1,EP,epoxy resin|matrix|balance; DDM|curing_agent|not stated; NO3-LDH (unmodified Mg/Al LDH)|FR|7 wt%,True
+nofia ol1000,1,FPUF,viscoelastic polyurethane foam|matrix|; Nofia OL1000|FR|30 php,False
+none,435,"ABS,BMI,EP,EPDM,EVA,EVA/LLDPE,FPUF,HDPE,HIPS,LLDPE/COC,NR,PA6,PBT,PC,PET,PF,PLA,PMMA,PP,PS,PVC,RPUF,SBR,SR,TPU,UPR,WPC,other:CPVC/ABS,other:CR/BR,other:MF,other:NBR,other:PA11,other:PA12,other:PA6/PP,other:PA6T,other:PE,other:PLA/ABS,other:PU (solid polyether polyurethane),other:PVA,other:PVA aerogel,other:PVA/alginate,other:TPS (thermoplastic starch-polyester blend, Mater-Bi EF05B),other:UF (urea-formaldehyde),other:WPU,other:WPU (waterborne polyurethane),other:ammonium alginate,other:asphalt,other:cable PVC insulation/FR-PE sheath,other:cable PVC insulation/FR-PVC sheath,other:cable PVC insulation/FR-XLPE sheath,other:calcium alginate,other:cellulose paper (bleached kraft pulp),other:chitosan,other:ethylene-norbornene copolymer,other:miscanthus,other:paraffin,other:polyacrylate emulsion sealant,other:polybenzoxazine (PBF-a, bisphenol F/aniline),other:tannin-furanic (bio-based phenolic),other:thermoplastic starch (TPS),other:wheat gluten,other:wheat grain / Trametes versicolor mycelium,other:wood (OSB strands, PF-bonded),other:wood (Scots pine),other:wood-cement (Portland cement/spruce particles)",epoxy resin|matrix|60 g; DDM|curing_agent|20 g; GO|nanofiller|3 g,True
+nsapp-1,1,PP,PP (T30S)|matrix|74.7 wt%; NSAPP-1|FR|17.2 wt%; DPER|FR|7.8 wt%; antioxidant 1010|other|0.1 wt%; antioxidant 168|other|0.2 wt%,False
+nsapp-2,1,PP,PP (T30S)|matrix|74.7 wt%; NSAPP-2|FR|17.2 wt%; DPER|FR|7.8 wt%; antioxidant 1010|other|0.1 wt%; antioxidant 168|other|0.2 wt%,False
+nsapp-3,1,PP,PP (T30S)|matrix|74.7 wt%; NSAPP-3|FR|17.2 wt%; DPER|FR|7.8 wt%; antioxidant 1010|other|0.1 wt%; antioxidant 168|other|0.2 wt%,False
+nsapp-4,1,PP,PP (T30S)|matrix|74.7 wt%; NSAPP-4|FR|17.2 wt%; DPER|FR|7.8 wt%; antioxidant 1010|other|0.1 wt%; antioxidant 168|other|0.2 wt%,False
+ntpa,3,PLA,PLA|matrix|97.0 wt%; NTPA (phosphoramide P-N FR)|FR|2.5 wt%; MKF (alkali-treated kapok fibre)|reinforcement|0.5 wt%,False
+oddpo,1,EP,DGEBA|matrix|100 g; DDS|curing_agent|26.91 g; ODDPO|FR|11.04 g (1.2 wt% P),True
+om-so3k,1,PC,PC|matrix|99.4 mass%; OM-SO3K (potassium sulfonate functionalized organosilica microspheres)|FR|0.3 mass%; antioxidant 1098|other|0.3 mass%,False
+ommt,1,other:PEG,PEG|matrix|83.3 wt%; wood flour|filler|6.7 wt%; OMMT|synergist|10.0 wt%,False
+ops,1,other:PTPET,ATPET|matrix|15 g; GAP (glycidyl azide polymer)|curing_agent|0.76 g; C2610 (organic Cu(I) catalyst)|other|0.079 g; OPS (octaphenyl POSS)|FR|1.6 g (10 wt% as stated),False
+organic phosphonate ester,1,PMMA,jute fabric|reinforcement|40 vol% fibre; Elium acrylic (PMMA)|matrix|; organic phosphonate ester (Exfire T)|FR|0.72 wt% P + 0.22 wt% C in composite,False
+otca@zno,1,EVA,EVA|matrix|75.00 wt%; OTCA@ZnO (triazine charring agent hybridised with ZnO)|FR|25.00 wt%,False
+ovs,1,PC,PC|matrix|99.0 g; OVS|FR|1.0 g,False
+oyster shell powder,2,TPU,TPU (Bayer 9380A)|matrix|90 (mass ratio); oyster shell powder (>95% CaCO3)|FR|9.9 (mass ratio); isopropyl tris(dioctylphosphoryloxy) titanate|synergist|0.1 (mass ratio),False
+"p,n-doped cellulose fibrils",5,HDPE,"HDPE|matrix|100 parts; P,N-doped cellulose fibrils (rice straw)|FR|1 wt% (based on HDPE mass)",False
+p-ppd-ph,3,PLA,PLA|matrix|; ADR-5481 epoxy chain extender|other|4 wt‰; P-PPD-Ph|FR|5 wt%,False
+p-tab),4,PLA,PLA (NatureWorks 6201D)|matrix|77 wt%; P-TAB (phenylphosphonic tri(2-aminobenzothiazole))|FR|3 wt%; recycled short wool fibre (2-3 mm)|reinforcement|20 wt%,False
+p5psq,1,PLA,PLA|matrix|90 wt%; P5PSQ (phosphate-grafted polysilsesquioxane)|FR|10 wt%,False
+pa-tham,3,PLA,"PLA|matrix|90 wt%; oxidized corn pith fiber (OCC)|filler|10 wt%; PA-THAM (phytic acid-THAM salt, coated on OCC)|FR|3 phr",False
+padl,4,other:sodium alginate,sodium alginate (SA)|matrix|balance; PADL (phytic acid/DL-arginine)|FR|5 wt%,False
+palonot p2,1,PLA,PLA|matrix|50 wt% of fibre/PLA; NaOH-treated hemp fibre|reinforcement|50 wt% of fibre/PLA; Palonot P2 (protic ionic liquid FR)|FR|amount not printed,False
+palonot p4,1,PLA,PLA|matrix|50 wt% of fibre/PLA; NaOH-treated hemp fibre|reinforcement|50 wt% of fibre/PLA; Palonot P4 (protic ionic liquid FR)|FR|amount not printed,False
+pamad,4,other:WPU,PPG-1000|matrix|51.4 wt%; TDI 80/20|matrix|29.6 wt%; DMPA|other|8 wt%; PAMAD (reactive bio-based IFR chain extender)|FR|11 wt%,False
+pani,1,EPDM,EPDM|matrix|100 phr; PANI|synergist|7.0 phr; carbon black|reinforcement|30 phr; antioxidant HS|other|0.5 phr; zinc oxide|curing_agent|5.0 phr; stearic acid|curing_agent|1.0 phr; CZ|curing_agent|1.0 phr; Thiuram MS|curing_agent|2.0 phr; sulfur|curing_agent|1.5 phr,False
+papp,1,other:TPE,TPE (BASF H3048)|matrix|60 wt-%; PAPP (piperazine pyrophosphate)|FR|28.5 wt-%; MPP (melamine phosphate)|FR|9.5 wt-%; TiO2 (10-30 nm)|synergist|2 wt-%,False
+papp:mpp:per 58:37:5,2,PLA,PLA 2003D|matrix|140 g; PAPP:MPP:PER 58:37:5|FR|60 g per 200 g (30 wt% of PLA resin); jute plain-weave fabric (114 g/m2)|reinforcement|3 plies (fraction not printed),False
+pbdoo,3,VER,vinyl ester resin|matrix|47.50 g; BPO (dibenzoyl peroxide)|curing_agent|1.43 g; PBDOO (DOPO-acetophenone bridged bis-DOPO)|FR|2.50 g,False
+pc-dpa-ldh,1,EP,epoxy resin|matrix|balance; DDM|curing_agent|not stated; PC-DPA-LDH (phosphocreatine/dodecylphosphoric acid co-modified LDH)|FR|7 wt%,True
+pc-ldh,1,EP,epoxy resin|matrix|balance; DDM|curing_agent|not stated; PC-LDH (phosphocreatine-intercalated LDH)|FR|7 wt%,True
+pcp-cnt,2,PBT,PBT|matrix|85 wt%; PCP-CNT (phosphazene polymer-wrapped CNT)|FR|15 wt%,False
+pcs,4,"EP,other:UF (urea-formaldehyde)",MUF|matrix|100 g; PCS|FR|0.5 g; DOP|plasticizer|1 g; NH4Cl|curing_agent|0.5 g; APP|curing_agent|0.5 g,True
+pdepd),2,"PS,TPU","TPU 4190|matrix|80 wt%; PDEPD (poly(4,4'-diaminodiphenyl ether phenyl dichlorophosphate))|FR|20 wt%",False
+pdepd/na-mmt nanocomposite,2,"PS,TPU",PS 158K|matrix|80 wt%; PDEPD/Na-MMT nanocomposite (5Na)|FR|20 wt%,False
+pds,2,EP,EP|matrix|100; EDA|curing_agent|10; PDS (melamine salt of CBP)|FR|30 wt%,True
+pec,3,WPC,HDPE (5000S)|matrix|ratio not printed (Table S1); wood fibre 60-80 mesh|filler|ratio not printed (Table S1); PEC (APP/CNC/PEI polyelectrolyte complex)|FR|15%,False
+pedscd,4,EP,EP (E-44)|matrix|90 wt%; DDM|curing_agent|17.5 wt%; PEDSCD|FR|10 wt%,True
+penta,1,other:leather,bovine chrome-tanned leather|matrix|; PENTA|FR|12 wt% (on wet blue leather mass),False
+pentaerythritol,1,EVA,"EVA (18 wt% VA, Sumitomo)|matrix|60 wt%; pentaerythritol (PER)|synergist|40 wt%",False
+pentaerythritol phosphate,1,RPUF,pentaerythritol phosphate (PEPA)|FR|15 wt%,False
+pentaerythritol phosphate + expandable graphite,3,RPUF,pentaerythritol phosphate (PEPA) + expandable graphite (PEPA:EG 1:3)|FR|20 wt%,False
+pentaerythritol phosphate melamine salt,1,EP,cured EP (E-44 / polyamide PA610 2:1 by mass)|matrix|85 mass%; pentaerythritol phosphate melamine salt (PPMS)|FR|15 mass%,True
+pepe-modified mo@mh,1,PVC,"PVC|matrix|100 phr; DOP|plasticizer|40 phr; ACR-401|other|4 phr; glycerol monostearate|other|0.6 phr; organic tin stabilizer|other|2 phr; paraffin|other|0.4 phr; PEPE-modified MO@MH (MO@MH-PEPE, MO@MH:PEPE 100:5)|FR|20 phr",False
+petat,1,PP,PP|matrix|75 wt%; PETAT|FR|25 wt%,False
+pfapp + lignin-poh,2,RPUF,PFAPP + Lignin-POH|FR|PFAPP 15 wt.%; Lignin-POH 30 wt.%,False
+pfapp + phosphorus-functionalized lignin polyol,1,RPUF,PFAPP + phosphorus-functionalized lignin polyol (Lignin-POH)|FR|PFAPP 15 wt.%; Lignin-POH 10 wt.%,False
+phenol formaldehyde silane resin pfs1] ethylene diamine),3,HDPE,HDPE|matrix|93 %; phenol formaldehyde silane resin PFS1 (novolac + N-[(3-trimethoxysilylpropyl)] ethylene diamine)|FR|7 %,False
+phenol formaldehyde silane resin pfs2,3,HDPE,HDPE|matrix|93 %; phenol formaldehyde silane resin PFS2 (novolac + 3-triethoxysilylpropyl amine)|FR|7 %,False
+phenolic resin hollow microspheres,4,TPU,TPU 9380A|matrix|99.0 wt%; phenolic resin hollow microspheres (PHM)|FR|1.0 wt%,False
+phosphate frs + app + mwnt,1,RPUF,"phosphate FRs + APP + MWNT|FR|TEP 7, FR CT 93 4.5, DMPP 3, APP 15, MWNTs 0.5 ; total additives 30 % mas.",False
+phosphate frs + app + tio2,1,RPUF,"phosphate FRs + APP + TiO2|FR|TEP 6, FR CT 93 3.5, DMPP 2.5, APP 15, TT 3 ; total additives 30 % mas.",False
+phosphate frs + ath + mwnt,1,RPUF,"phosphate FRs + ATH + MWNT|FR|TEP 7, FR CT 93 4.5, DMPP 3, ATH 15, MWNTs 0.5 (% mas.) ; total additives 30 % mas.",False
+phosphate frs + ath + tio2,1,RPUF,"phosphate FRs + ATH + TiO2|FR|TEP 6, FR CT 93 3.5, DMPP 2.5, ATH 15, TT 3 ; total additives 30 % mas.",False
+phosphate frs + zinc borate + mwnt,1,RPUF,"phosphate FRs + zinc borate + MWNT|FR|TEP 7, FR CT 93 4.5, DMPP 3, ZB 15, MWNTs 0.5 ; total additives 30 % mas.",False
+phosphate frs + zinc borate + tio2,1,RPUF,"phosphate FRs + zinc borate + TiO2|FR|TEP 6, FR CT 93 3.5, DMPP 2.5, ZB 15, TT 3 ; total additives 30 % mas.",False
+phosphate frs only,1,RPUF,"phosphate FRs only|FR|TEP 15, FR CT 93 9, DMPP 6 ; total additives 30 % mas.",False
+phosphate/urea-grafted bamboo charcoal,3,PLA,PLA 4032D|matrix|90.0 wt%; phosphate/urea-grafted bamboo charcoal (BC-m)|FR|10.0 wt%,False
+phosphated cellulose,3,other:polybenzoxazine (PBa),bisphenol-A benzoxazine (PBa)|matrix|100; phosphated cellulose (PCF)|FR|5%,False
+phosphazene oligomer fp100,2,PI,CHDA-ODA polyimide|matrix|90 wt%; phosphazene oligomer FP100|FR|10 wt%,False
+phosphorus fr,4,"PA66,other:Ca-alginate/PA66",FR-PA66 fibre pulp|matrix|100 wt%; phosphorus FR (in fibre)|FR|5 wt%,False
+phosphorus-containing polyol op,3,other:cast PU,"phosphorus-containing polyol OP (reactive)|FR|50.81 wt%; MDI|matrix|41.36 wt%; 1,4-butanediol|curing_agent|7.83 wt%",False
+phosphorus-containing polysulfone aropn2,1,EP,DGEBA epoxy|matrix|50.00 g; m-PDA|curing_agent|6.00 g; phosphorus-containing polysulfone ArOPN2|FR|10.35 g (P 1.25 wt%),True
+phosphorus-containing polysulfone aropo2,1,EP,DGEBA epoxy|matrix|50.00 g; m-PDA|curing_agent|6.00 g; phosphorus-containing polysulfone ArOPO2|FR|10.35 g (P 1.25 wt%),True
+phosphorus-containing polysulfone arpn2,1,EP,DGEBA epoxy|matrix|50.00 g; m-PDA|curing_agent|6.00 g; phosphorus-containing polysulfone ArPN2|FR|9.88 g (P 1.25 wt%),True
+phosphorus-containing polysulfone arpo2,1,EP,DGEBA epoxy|matrix|50.00 g; m-PDA|curing_agent|6.00 g; phosphorus-containing polysulfone ArPO2|FR|9.88 g (P 1.25 wt%),True
+phosphorus-nitrogen flame retardant,3,POM,POM (DuPont)|matrix|balance; phosphorus-nitrogen flame retardant|FR|not stated,False
+phosphorylated cellulose,1,PP,"PP|matrix|70 wt%; phosphorylated cellulose (Cel-P, 4.15 wt% P)|FR|30 wt%",False
+phosphorylated wheat starch ws-e uncleaned,1,other:wood fiber,"softwood fibers (GUTEX)|matrix|; Acrodur DS 3558 binder|other|10 wt%; phosphorylated wheat starch WS-E (extruder, urea phosphate) uncleaned|FR|10 wt% (on wood fiber)",False
+phosphorylated wheat starch ws-k cleaned,1,other:wood fiber,"softwood fibers (GUTEX)|matrix|; Acrodur DS 3558 binder|other|10 wt%; phosphorylated wheat starch WS-K (kneader, MAP/urea) cleaned|FR|10 wt% (on wood fiber)",False
+phosphorylated wheat starch ws-k physical mixture,1,other:wood fiber,"softwood fibers (GUTEX)|matrix|; Acrodur DS 3558 binder|other|10 wt%; phosphorylated wheat starch WS-K (kneader, MAP/urea) physical mixture|FR|10 wt% (on wood fiber)",False
+phosphorylated wheat starch ws-k uncleaned,1,other:wood fiber,"softwood fibers (GUTEX)|matrix|; Acrodur DS 3558 binder|other|10 wt%; phosphorylated wheat starch WS-K (kneader, MAP/urea) uncleaned|FR|10 wt% (on wood fiber)",False
+phosphorylated wheat starch ws-o cleaned,1,other:wood fiber,"softwood fibers (GUTEX)|matrix|; Acrodur DS 3558 binder|other|10 wt%; phosphorylated wheat starch WS-O (oven, MAP/urea) cleaned|FR|10 wt% (on wood fiber)",False
+phvposs,2,"EVA,other:PTPET",EVA (18.5 wt% VA)|matrix|95 wt%; PhVPOSS (ladder phenyl/vinyl polysilsesquioxane)|synergist|5 wt%,False
+phytic acid,14,"EP,PS,other:poly(ChCl/AA/IA) PDES ionic conductive elastomer,other:wood (poplar)",choline chloride|matrix|4.84 g; AA|matrix|5 g; itaconic acid|matrix|1.35 g; phytic acid|FR|5 wt%,True
+phytic acid + urea grafting treatment,2,other:miscanthus,phosphorus-grafted (phytic acid/urea) steam-exploded Miscanthus x giganteus particles|matrix|60 wt%; phytic acid + urea grafting treatment|FR|grafted (P content of panel batch not printed); olive pomace|filler|40 wt%,False
+phytic acid-triethylenetetramine,1,PS,PS|matrix|100 phr; phytic acid-triethylenetetramine (PA-TETA)|FR|15 phr,False
+phytic acid/silica nanosol hybrid,1,other:wood (poplar),poplar sapwood (Populus cathayana)|matrix|-; phytic acid/silica nanosol hybrid (PA 70% aq + silica sol 30% SiO2)|FR|impregnated; FR loading 181.4 kg/m3,False
+pi,1,PA66,PA66|matrix|64.3 wt%; glass fibre|reinforcement|30 wt%; PI (polyimide charring agent)|synergist|5.1 wt%; antioxidant 1010/168 (2:1)|other|0.6 wt%,False
+pipc,3,EP,DGEBA epoxy (E-44)|matrix|; DDM|curing_agent|epoxy:DDM 4:1; PIPC (diphenylimidazole spirocyclic pentaerythritol bisphosphonate)|FR|1 wt%,True
+piperazine pyrophosphate,11,"PP,other:PBS",hPP (homopolymer PP)|matrix|74.7 wt%; piperazine pyrophosphate (PAPP)|FR|14.2 wt%; ammonium polyphosphate (APP)|FR|7.1 wt%; triazine charring agent (CF)|FR|3.7 wt%; Irganox 1010|other|0.1 wt%; Irgafos 168|other|0.2 wt%,False
+pm,1,PLA,PLA|matrix|90 wt%; PM (melamine/phytic acid 1:5)|FR|10 wt%,False
+pmrg-3,1,PLA,PLA|matrix|90 wt%; PMrG-3 (rGO/melamine/phytic acid 1:1:5 self-assembled)|FR|10 wt%,False
+pn-dopo,7,"other:PA6T,other:PEO/PBAT 60/40",PEO|matrix|60 wt%; PBAT|matrix|40 wt%; PN-DOPO (DOPO-based derivative)|FR|15 wt%,False
+pnc,4,RPUF,PNC (cellulose phosphate-based P/N FR)|FR|5 (sample name; PNC wt% per text 'content reached 15 wt%'),False
+po2-vsil,1,EP,RTM 6 epoxy|matrix|; carbon fibre fabric G0939 (8 plies)|reinforcement|; PO(OPh)2-VSil (N-dimethylvinylsilyl-amidophosphorus diphenylester)|FR|10 wt% (of resin),True
+poly,6,"PA66,other:PVA","PA66 (Invista, compounding grade)|matrix|85 wt%; poly(pentabromobenzyl acrylate) (BrPBz, FR1025, 71 wt% Br)|FR|10 wt%; aluminium tungstate (AlW)|synergist|5 wt%",False
+polyaminopropylphenylsilsesquioxane,1,EP,EPON 826|matrix|71.25 g; Jeffamine D230|curing_agent|23.75 g; polyaminopropylphenylsilsesquioxane (PA)|FR|5 g,True
+polycarbosilane,1,EVA,EVA 7470M|matrix|98 wt%; polycarbosilane (PCS)|synergist|2 wt%,False
+polydimethylsiloxane pdms,5,other:WPU,waterborne polyurethane (PPG-1000/IPDI/DMPA/BDO)|matrix|balance; polydimethylsiloxane PDMS (Mw 4200)|FR|amount not printed (Table S1); X-22-176DX Y-type polydimethylsiloxane (Mw 3600)|FR|amount not printed (Table S1),False
+polydopamine-coated red phosphorus,1,EP,bisphenol A epoxy|matrix|epoxy:hardener 4:1; hardener|curing_agent|; polydopamine-coated red phosphorus (RP@PDA)|FR|7 wt%,True
+polydopamine/melamine microencapsulated red phosphorus,1,EP,bisphenol A epoxy|matrix|epoxy:hardener 4:1; hardener|curing_agent|; polydopamine/melamine microencapsulated red phosphorus (RP@PDA/MA)|FR|7 wt%,True
+polyethylenimine,2,FPUF,polyurethane foam|matrix|substrate; polyethylenimine (PEI)|FR|coating; ammonium polyphosphate (APP)|FR|coating; poly(acrylic acid)|other|primer 1% solution,False
+polysilsesquioxane,1,other:thiol-ene,"thiol-ene (3T + TAE, equal amounts)|matrix|balance; DMPA|curing_agent|1 wt% (in 3T); poly(aminopropyl/phenyl)silsesquioxane (PA)|FR|5 wt%",False
+polysurf hp,1,other:flax short fibres,"short flax fibres|matrix|; PolySurF HP (phosphonated methacrylate, pre-irradiation e-beam 50 kGy grafting)|FR|P 2.05 wt%",False
+pooph-vsil2diamidophosphorus phenylester),1,EP,"RTM 6 epoxy|matrix|; carbon fibre fabric G0939 (8 plies)|reinforcement|; POOPh-VSil2 (N,N'-bis(dimethylvinylsilyl)diamidophosphorus phenylester)|FR|10 wt% (of resin)",True
+poss-evim,1,PS,PS (GPPS 525)|matrix|97 wt%; POSS-EVIM (vinyl POSS-poly[EVIm]BF4 hybrid)|FR|3 wt%,False
+poss-triol,2,EP,DGEBA (D.E.R. 332)|matrix|; DETDA (EPI-CURE W)|curing_agent|stoichiometric; POSS-triol (phenyltrisilanol POSS)|FR|10 wt%,True
+poss-vipsp,1,PS,"PS (GPPS 525)|matrix|97 wt%; POSS-VIPSP (vinyl POSS-Bronsted ionic liquid hybrid, H3PO4 treated)|FR|3 wt%",False
+potassium carbonate k2co3,3,other:cellulose paper (Kraft pulp),Kraft cellulose sheet|matrix|; potassium carbonate K2CO3 (20% solution)|FR|WPG 11.38%,False
+potassium salt,1,RPUF,potassium salt|FR|potassium salt 2 g (2 wt.% per text),False
+potassium salt + dfd,1,RPUF,potassium salt + DFD (reactive P diol)|FR|potassium salt 2 g; DFD 10 g,False
+ppa,5,"EP,other:chitosan",CS solution|matrix|85.3 wt%; SA (silica) solution|filler|14.2 wt%; PPA|FR|0.5 wt%,True
+ppa-ath,1,EVA,"EVA 260 (28 wt% VA)|matrix|50 wt%; PPA-ATH (ATH ball-milled with phenylphosphinic acid, 10 g per 100 g ATH)|FR|50 wt%",False
+ppac-modified magnesium hydroxide,1,EP,epoxy (EP)|matrix|77.4 wt%; DDM|curing_agent|17.6 wt%; PPAC-modified magnesium hydroxide (MH@PPAC)|FR|5 wt%,True
+ppap,2,EP,E-51 epoxy|matrix|100 g; DETA|curing_agent|epoxy/curing agent ~100/8 by weight; PPAP (piperazine pyrophosphate)|FR|7 wt%,True
+ppms-grafted carbon black,3,EP,cured EP (E-44 / polyamide PA610 2:1 by mass)|matrix|85 mass%; PPMS-grafted carbon black (PPMS-CB)|FR|15 mass%,True
+ppoa-ath,1,EVA,EVA 260 (28 wt% VA)|matrix|50 wt%; PPOA-ATH (ATH ball-milled with phenylphosphonic acid)|FR|50 wt%,False
+ppso),1,PC,PC|matrix|100 phr; talc|filler|5 phr; PPSO (oligo(phenylphosphonic dihydroxypropyl silicone oil))|FR|1.3 phr,False
+ppsq),1,other:PTPET,ATPET|matrix|15 g; GAP (glycidyl azide polymer)|curing_agent|0.76 g; C2610 (organic Cu(I) catalyst)|other|0.079 g; PPSQ (poly(phenylsilsesquioxane))|FR|1.6 g (10 wt% as stated),False
+ppy-mapp,3,EP,EP (DGEBA)|matrix|76 wt%; DDM|curing_agent|19 wt%; PPy-MAPP|FR|5 wt%,True
+psf,4,CE,"bisphenol A dicyanate (CE)|matrix|; PSF (phosphorus-containing Schiff base, DOPO/furfurylamine/salicylaldehyde)|FR|1.0 wt% P",False
+psncfr,2,PF,phenolic resin|matrix|100 g; Tween-80/modified silicone oil|other|5 g; n-pentane|other|8.5 g; curing agent|curing_agent|8.5 g; PSNCFR|FR|10 wt%,False
+psqsilsesquioxane),1,PLA,PLA|matrix|90 wt%; PSQ (poly(amino-epoxy)silsesquioxane)|FR|10 wt%,False
+pu-microencapsulated app,1,PP,PP|matrix|70 wt%; PU-microencapsulated APP (MAPP)|FR|30 wt%,False
+pumapp,2,other:PP/EPDM,PP|matrix|60 parts; EPDM|matrix|40 parts; PUMAPP (PU-microencapsulated APP)|FR|21.5 phr; DPER (dipentaerythritol)|FR|21.5 phr; DCP|other|0.1 phr; DBTDL|other|0.1 phr; VTMS (vinyltrimethoxysilane)|synergist|2 phr,False
+pvdc emulsion,2,other:plant_fibre_ULDF,kraft pulp fibre (spruce-pine-fir)|matrix|; B-Zn-Al-Si compounds|other|; adhesive|other|20 mL; sodium dodecylbenzene sulfonate surfactant|other|40 mL; alkyl ketene dimer water repellent|other|50 mL; PVDC emulsion (40 wt%)|FR|60 mL,False
+px200,1,PET,PET|matrix|92.73; PX200 (phosphorus FR)|FR|7.27,False
+px200-m-phenylene bisphosphate),4,ABS,"ABS|matrix|95 wt%; PX200 (tetrakis(2,6-dimethylphenyl)-m-phenylene bisphosphate)|FR|5 wt%",False
+rdp,3,EP,sorbitol polyglycidyl ether (ERYSIS GE-60)|matrix|75 wt% of matrix; MH 3122 cycloaliphatic amine|curing_agent|25 wt% of matrix; RDP|FR|3 wt% P,True
+rdp resorcinol bis,6,EP,epoxy Ipox MR-3012 + MH-3111 anhydride hardener (100:116)|matrix|balance; RDP resorcinol bis(diphenyl phosphate)|FR|2.5% P in matrix,True
+reactive phosphorus polyol cppa,1,RPUF,reactive phosphorus polyol CPPA|FR|CPPA 92.5 (parts in polyol blend),False
+reactive phosphorus-containing soybean oil polyol,4,RPUF,reactive phosphorus-containing soybean oil polyol (Soy-DGP)|FR|80 wt% Soy-DGP in polyol mix,False
+red phosphorus,7,"EP,WPC,other:recycled PE",bisphenol A epoxy|matrix|epoxy:hardener 4:1; hardener|curing_agent|; red phosphorus (RP)|FR|7 wt%,True
+resorcinol bis,6,EP,"sorbitol polyglycidyl ether (SPE, ERYSIS GE-60)|matrix|stoichiometric; cycloaliphatic amine MH 3122|curing_agent|stoichiometric; carbon fibre weave [0]5|reinforcement|; resorcinol bis(diphenyl phosphate) (RDP)|FR|2% P (of matrix); APP|FR|1% P (of matrix)",True
+resveratrol,1,other:PVA,PVA|matrix|5 g; resveratrol (RE)|FR|4.2 g,False
+rgo,1,EP,EP|matrix|68 wt%; DDM|curing_agent|17 wt%; RGO|synergist|12.86 wt%; APP|FR|2.14 wt%,True
+rgo-app,3,EP,EP|matrix|76 wt%; DDM|curing_agent|19 wt%; RGO-APP|FR|5 wt%,True
+"rm = diethylphosphonate, re = diethyl bis-aminomethylphosphonate",8,RPUF,"AD = dimethyl propane phosphonate (additive); RM = diethyl (hydroxymethyl)phosphonate, RE = diethyl bis-(2-hydroxyethyl)aminomethylphosphonate (reactive)|FR|AD 20 g, RM 20 g, RE 20 g (Table 9 formula grams; code digit = 0/1/2 -> 0/10/20)",False
+roflam b7,11,"EP,FPUF",flexible PU foam|matrix|; ground tire rubber (GTR)|filler|5 wt%; Roflam B7 (organophosphorus)|FR|10 wt%; expandable graphite (EG)|FR|10 wt%; nanoclay Nanomer I.31PS (N2)|nanofiller|2 wt%,True
+roflam f5,5,EP,Epidian 5 epoxy resin|matrix|base; hardener Z-1 (triethylenetetramine)|curing_agent|12 pbw per 100 pbw resin; Roflam F5 (phenyl-isopropylphenyl phosphate)|FR|10 wt%; Mg(OH)2|FR|5 wt%,True
+roflam f6,6,FPUF,flexible PU foam|matrix|; ground tire rubber (GTR)|filler|5 wt%; Roflam F6 (organophosphorus)|FR|5 wt%; expandable graphite (EG)|FR|15 wt%; nanoclay Nanomer I.31PS (N2)|nanofiller|2 wt%,False
+s-cemgal,2,EVA,EVA|matrix|80 wt%; S-CeMgAl (stearate-modified LDH)|FR|20 wt%,False
+s-lamgal,2,EVA,EVA|matrix|80 wt%; S-LaMgAl (stearate-modified LDH)|FR|20 wt%,False
+s-mgal,2,EVA,EVA|matrix|80 wt%; S-MgAl (stearate-modified LDH)|FR|20 wt%,False
+s-ndmgal,2,EVA,EVA|matrix|80 wt%; S-NdMgAl (stearate-modified LDH)|FR|20 wt%,False
+s4sq-18,3,PP,PP|matrix|99 wt%; S4SQ-18 (n-octadecyl siloxane-silsesquioxane resin)|FR|1 wt%,False
+s4sq-8,2,PP,PP|matrix|99 wt%; S4SQ-8 (n-octyl siloxane-silsesquioxane resin)|FR|1 wt%,False
+s4sq-h,3,PP,PP|matrix|99 wt%; S4SQ-H (non-functionalized siloxane-silsesquioxane resin)|FR|1 wt%,False
+s600,3,EP,DGEBA/IPDA epoxy|matrix|; S600|FR|10 mass%; MPP|FR|10 mass%,True
+s600),1,EP,DGEBA/IPDA epoxy|matrix|; S600 (melamine poly(magnesium phosphate))|FR|20 mass%,True
+sacoflam 47201,1,PET,PET|matrix|93; Sacoflam 47201 (liquid phosphorus FR)|FR|7,False
+salen s1,1,TPU,TPU|matrix|10 (TPU:additive 10:1 weight ratio); salen s1|FR|1 (TPU:additive 10:1 weight ratio),False
+salen s1-cu complex,1,TPU,TPU|matrix|10 (TPU:additive 10:1 weight ratio); salen s1-Cu complex|FR|1 (TPU:additive 10:1 weight ratio),False
+salen s1-ni complex,1,TPU,TPU|matrix|10 (TPU:additive 10:1 weight ratio); salen s1-Ni complex|FR|1 (TPU:additive 10:1 weight ratio),False
+salen s1-zn complex,1,TPU,TPU|matrix|10 (TPU:additive 10:1 weight ratio); salen s1-Zn complex|FR|1 (TPU:additive 10:1 weight ratio),False
+sb-lh,4,TPU,TPU (9380A)|matrix|98 mass%; Sb-LH|FR|2 mass%,False
+sb2o3,17,"EP,PVC,UPR",PVC|matrix|100 phr; DOP|plasticizer|40 phr; Pb4O3(SO4) (tribasic lead sulfate)|other|2 phr; 2PbO.PbHPO3.1/2H2O (dibasic lead phosphite)|other|2 phr; calcium stearate|other|0.5 phr; Sb2O3|FR|6 phr,True
+sbpdopo,3,EP,E-51 (DGEBA)|matrix|40 g; DDM|curing_agent|9 g; SBPDOPO|FR|1.52 g,True
+scp-vsil,1,EP,RTM 6 epoxy|matrix|; carbon fibre fabric G0939 (8 plies)|reinforcement|; SCP-VSil (salicylic-acid-based phosphasilazane)|FR|10 wt% (of resin),True
+sep,3,ABS,"rABS|matrix|85 wt%; SEP (sepiolite nanoclay, Pangel S9)|FR|15 wt%",False
+sep@alpo4,1,other:PEO/PBAT 60/40,PEO|matrix|60 wt%; PBAT|matrix|40 wt%; Sep@AlPO4 (aluminium phosphate-coated sepiolite)|synergist|15 wt%,False
+serpentine@app4),1,PLA,PLA (Ingeo 4032D)|matrix|98 wt%; serpentine@APP (APP self-assembled on silane-modified Ni3Si2O5(OH)4)|FR|2 wt%,False
+si-ifr,1,PP,"PP|matrix|73 wt%; Si-IFR (KH550-treated IFR, APP:CFA 83:17)|FR|27 wt%",False
+si-mcapp,3,PP,PP|matrix|70 wt%; Si-MCAPP|FR|10 wt%; CFA|FR|20 wt%,False
+siahp,3,PLA,PLA|matrix|balance; GNR (GMA-grafted natural rubber)|other|20 wt%; antioxidant 1010|other|0.2 wt%; DCP|curing_agent|1.5 wt% of GNR; SiAHP (silane-modified AHP)|FR|16 wt%,False
+silane-coated ammonium polyphosphate,3,PP,PP (T03)|matrix|45 wt%; processing auxiliaries (compatibilizer + antioxidant)|other|5 wt%; silane-coated ammonium polyphosphate (Si-APP)|FR|22.5 wt%; pentaerythritol (PER)|FR|7.5 wt%; sisal fibre (SF)|reinforcement|20 wt%,False
+silane-treated eg,1,HDPE/EVA,HDPE|matrix|50 phr; EVA (VA 15 wt%)|matrix|50 phr; silane-treated EG|FR|20 phr,False
+silica-gel microencapsulated app,1,PLA,PLA|matrix|85 wt%; banana peel powder (BPP)|filler|15 wt%; silica-gel microencapsulated APP (MCAPP)|FR|5 wt%,False
+silicone rubber,1,EVA,EVA|matrix|100 phr; silicone rubber|synergist|50 phr,False
+simp-cmss,4,PET,"PET|matrix|99.5 wt%; SiMP-CMSs (silane melamine phosphate on carbon microspheres, SiMP:CMS ~16:9)|FR|0.5 wt%",False
+sio2@uio-66 composite,1,PMMA,PMMA|matrix|98.5 wt%; SiO2@UiO-66 composite|FR|1.5 wt%,False
+smfapp,1,PP,"PP F401|matrix|70 wt%; SMFAPP (APP microencapsulated with starch-melamine-formaldehyde resin, 24.8% resin, 15 g starch prepolymer)|FR|30 wt%",False
+sodium alginate,3,other:PVA,PVA|matrix|100 g of 8 wt% solution; sodium alginate (to Ca alginate)|FR|40 g of 2 wt% solution; H3BO3|curing_agent|10 g of 6 wt% solution; CaCl2|curing_agent|50 g of 5 wt% solution; HNTs|nanofiller|10 g,False
+sodium casein 180,1,PP,PP|matrix|50 %; sodium casein 180 (SC)|FR|50 %,False
+spdp-ptms@ath,3,EP,E-44 epoxy (DGEBA)|matrix|; DDM|curing_agent|; SPDP-PTMS@ATH (N-P-Si grafted ATH)|FR|1 wt%,True
+spdscd,4,EP,epoxy EP-44|matrix|95 wt%; DDM|curing_agent|17.5 wt%; SPDSCD|FR|5 wt%,True
+spdv,3,EVA,EVM rubber (Levaprene 500HV)|matrix|100 phr; SPDV (P/Si spirocyclic phosphate-DOPO-silane FR)|FR|40 phr,False
+spherical cosn6,1,EP,EP (epoxy resin)|matrix|100 phr; m-phenylenediamine (MPD)|curing_agent|11 phr; spherical CoSn(OH)6 (T-CHS)|FR|6 phr,True
+spiro-vsil2,1,EP,RTM 6 epoxy|matrix|; carbon fibre fabric G0939 (8 plies)|reinforcement|; Spiro-VSil2 (spiro-phosphate bis-silazane)|FR|10 wt% (of resin),True
+spms,4,EP,EP + PDA|matrix|80%; SPMS|FR|6.67%; APP|FR|13.33%,True
+sposs-boz,4,other:PBZ/EP,allyl benzoxazine (BOZ)|matrix|1:1 mass ratio with E-44; E-44 epoxy|matrix|1:1 mass ratio with BOZ; SPOSS-BOZ (POSS-benzoxazine hybrid)|FR|20 wt%,False
+steel slag/dimelamine pyrophosphate,3,RPUF,steel slag/dimelamine pyrophosphate|FR|Table 5: SS 0 g; DMPY 60.9 g,False
+styrene-vinyl tetrazole copolymer,1,other:LDPE/EVA,LDPE (PE-20020X)/EVA (ELVAX 360) blend|matrix|90 (unit not printed; ratio LDPE:EVA not printed); styrene-vinyl tetrazole copolymer (StVTz)|FR|10,False
+sulfamic acid-intercalated mgal-ldh,3,"EVA,other:PA11",PA11|matrix|100 phr; sulfamic acid-intercalated MgAl-LDH (SA-LDH)|FR|2.5 phr,False
+tad,10,"EP,TPU,other:PBT/PET","epoxy resin E-51|matrix|100 g; DDM (4,4-diaminodiphenylmethane)|curing_agent|25.3 g; TAD (phosphaphenanthrene triazine compound)|FR|5.22 g",True
+tahht-ddpo,2,EP,RTM6 epoxy|matrix|90 wt%; TAHHT-DDPO|FR|10 wt%,True
+tahht-dopo,2,EP,RTM6 epoxy|matrix|90 wt%; TAHHT-DOPO|FR|10 wt%,True
+tahht-dopo-ddpo,2,EP,RTM6 epoxy|matrix|90 wt%; TAHHT-DOPO-DDPO|FR|10 wt%,True
+tannic acid,25,"EP,other:PVA,other:ammonium alginate",PVA|matrix|5 g/100 mL; tannic acid (TA)|FR|2 g/100 mL; sodium alginate (SA)|synergist|1 g/100 mL; NaOH|other|to pH 8.5,True
+tannin phosphate carbamate,1,other:wood fibre,softwood fibres (loose)|matrix|; tannin phosphate carbamate (MAP/urea modified)|FR|10 wt%,False
+tbua-bppo + tep,1,other,tBuA-BPPO (phosphorus additive) + TEP|FR|P-content 1.0 wt.%,False
+tcpp,22,"FPUF,RPUF",UCO_DEG bio-polyol|matrix|100 php; Ongronat 2100 pMDI|matrix|289 g per 100 g polyol; Polycat 218|other|4 php; Tegostab B 8870|other|4.5 php; Ortegol 500|other|0.5 php; water (blowing agent)|other|15 php; TCPP|FR|30 php,False
+tcpp + dmmp,2,"RPUF,other",TCPP + DMMP|FR|TCPP:DMMP 20:10 g per 100 g polyol,False
+tcpp + dmmp + boron phosphate,4,other,TCPP + DMMP + boron phosphate|FR|10 mass% FR + 1 mass% BP,False
+tcpp + dmmp + copper ferrite,1,RPUF,TCPP + DMMP + copper ferrite|FR|TCPP:DMMP 20:10 g/100 g polyol; ferrite 5 mass%,False
+tcpp + dmmp + nickel ferrite,1,RPUF,TCPP + DMMP + nickel ferrite|FR|TCPP:DMMP 20:10 g/100 g polyol; ferrite 5 mass%,False
+tcpp + dmmp + zinc ferrite,1,RPUF,TCPP + DMMP + zinc ferrite|FR|TCPP:DMMP 20:10 g/100 g polyol; ferrite 5 mass%,False
+tda,1,EP,DGEBA (E-51)|matrix|100 g; DDS|curing_agent|35.0 g; TDA (TGIC-DOPO-APTES P/N/Si FR)|FR|45.0 g (25 wt%),True
+tdb,3,EP,DGEBA E-51|matrix|80 g; DDS|curing_agent|25.30 g; TDB (P/B triazine-trione)|FR|11.70 g,True
+teap,2,PLA,PLA|matrix|99 wt%; TEAP (triethylamine phenylphosphonate)|FR|1 wt%,False
+tep,3,"RPUF,other",UCO_DEG bio-polyol|matrix|100 php; Ongronat 2100 pMDI|matrix|289 g per 100 g polyol; Polycat 218|other|4 php; Tegostab B 8870|other|4.5 php; Ortegol 500|other|0.5 php; water (blowing agent)|other|15 php; TEP|FR|30 php,False
+tgd,1,TPU,TPU 9380A|matrix|170 g; TGD|FR|30 g (15 wt%),False
+th-ifr,4,PP,PP (T30S)|matrix|78.0 wt%; TH-IFR (ME·PA…PER H-bonded complex)|FR|22.0 wt%,False
+thpm,1,other:leather,pig leather|matrix|; THPM|FR|,False
+ti-ifr,3,POM,POM|matrix|69.5 wt%; Ti-IFR (Ti-APP/BOZ/ME 10:2:3)|FR|30 wt%; antioxidant|other|0.5 wt%,False
+ti3c2tx-mpcsn nanohybrid,3,TPU,TPU (65E85)|matrix|99 mass%; Ti3C2Tx-MPCSN nanohybrid (MPCSN/MXene 3/1)|FR|1.0 mass% (Table 1 prints 1.5),False
+ti4000-bmc,3,PVC,PVC (SG-5)|matrix|100 phr; DOP|plasticizer|40 phr; organic tin|other|2 phr; ACR|other|4 phr; paraffin wax|other|0.4 phr; GMS|other|0.6 phr; Ti4000-BMC|FR|50 phr,False
+tio2-coated hollow glass microspheres,1,TPU,TPU 9380A|matrix|99.5 wt%; TiO2-coated hollow glass microspheres (HGM@TiO2)|FR|0.5 wt%,False
+tmapp,1,EP,epoxy resin|matrix|63.5 g; curing agent|curing_agent|21.5 g; TMAPP|FR|15 g,True
+tpc,7,other:wood (Scots pine),Scots pine sapwood (Pinus sylvestris)|matrix|substrate; SorCA (sorbitol:citric acid 1:3 molar)|other|30% solution; TPC (tripotassium citrate)|FR|30% solution,False
+tpp,6,"PMMA,other",PMMA|matrix|80 wt%; TPP|FR|15 wt%; nano-ZrO2|synergist|5 wt%,False
+tpp/tep,3,other,TPP/TEP|FR|P-content 1.5 wt.%,False
+tps-g,1,LDPE,"LDPE|matrix|47.5 wt%; TPS-G (thermoplastic starch, glycerol/water)|FR|38 wt%; FR69 (FR L069, halogenated)|FR|9.5 wt%; PE-g-MA|compatibilizer|5 wt%",False
+tps-g-cpa,1,LDPE,"LDPE|matrix|47.5 wt%; TPS-G-CPA (thermoplastic starch, glycerol/water/choline phytate)|FR|19 wt%; FR69 (FR L069, halogenated)|FR|28.5 wt%; PE-g-MA|compatibilizer|5 wt%",False
+triazine charring agent,4,PLA,PLA|matrix|160 g; triazine charring agent|FR|8 g (4 wt%); ammonium polyphosphate (APP)|FR|32 g,False
+triethyl phosphate,4,"RPUF,other",triethyl phosphate (TEP)|FR|20 g (20 wt% relative to polyols),False
+trimer phosphate),1,EVA,"EVA (14% VA)|matrix|70 wt%; Trimer (tri(1-oxo-2,6,7-trioxa-1-phosphabicyclo[2.2.2]octane-methyl) phosphate)|FR|30 wt%",False
+ts-ifr,1,NR,NR|matrix|100 phr; TS-IFR|FR|35 phr,False
+ucpr-ldh,1,other:wood (poplar plywood),"poplar veneer (3-ply, 1.5 mm plies)|matrix|three layers; API adhesive (PVA/EVA emulsion + P-MDI)|other|amount not printed; UCPR-LDH (urea-Pyrovatex CP resin intercalated Mg/Al-LDH)|FR|veneer impregnated with 5% suspension 48 h; also replaces CaCO3 filler in API adhesive",False
+uio-66,1,PMMA,PMMA|matrix|98.5 wt%; UiO-66|FR|1.5 wt%,False
+uio66-nh2,1,EP,epoxy E-51|matrix|24 g; DDM|curing_agent|6.0 g; paraffin (PCM)|other|16 g; UiO66-NH2|FR|1.5 g,True
+untreated eg,1,HDPE/EVA,HDPE|matrix|50 phr; EVA (VA 15 wt%)|matrix|50 phr; untreated EG|FR|20 phr,False
+vinyl poss,1,PS,PS (GPPS 525)|matrix|97 wt%; Vinyl POSS|FR|3 wt%,False
+vinyl-silane-modified sio2-microencapsulated mg/zn/al-ldh,1,SR,silicone foam (SiFs)|matrix|70 wt%; vinyl-silane-modified SiO2-microencapsulated Mg/Zn/Al-LDH (modified MLDHs)|FR|30 mass%,False
+vp phenylphosphonate),2,PLA,PLA|matrix|95 wt%; VP (bis(5-formyl-2-methoxyphenyl) phenylphosphonate)|FR|5 wt%,False
+vph vopo4·2h2o,1,EP,EP (NPEL 128) + DDM (EP:DDM 4:1)|matrix|96 wt%; VPh VOPO4·2H2O|FR|4 wt%,True
+w-uio66-nh2,1,EP,epoxy E-51|matrix|24 g; DDM|curing_agent|6.0 g; paraffin (PCM)|other|16 g; W-UiO66-NH2 (hollow)|FR|1.5 g,True
+w-uio66-ppa,1,EP,epoxy E-51|matrix|24 g; DDM|curing_agent|6.0 g; paraffin (PCM)|other|16 g; W-UiO66-PPA (phenylphosphonic acid grafted hollow MOF)|FR|1.5 g,True
+wheat protein phosphate carbamate,1,other:wood fibre,softwood fibres (loose)|matrix|; wheat protein phosphate carbamate (MAP/urea modified)|FR|10 wt%,False
+wheat starch phosphate carbamate,1,other:wood fibre,softwood fibres (loose)|matrix|; wheat starch phosphate carbamate (MAP/urea modified)|FR|10 wt%,False
+wmaapp,1,TPU,TPU 9380A|matrix|95 wt%; WMAAPP (wet ball-milled APP modified with KH550)|FR|5 wt%,False
+wmapp,1,TPU,TPU 9380A|matrix|95 wt%; WMAPP (wet ball-milled APP)|FR|5 wt%,False
+wmtapp,1,TPU,TPU 9380A|matrix|95 wt%; WMTAPP (wet ball-milled APP modified with triazine silane coupling agent)|FR|5 wt%,False
+x-22-176dx y-type polydimethylsiloxane,1,other:WPU,waterborne polyurethane (PPG-1000/IPDI/DMPA/BDO)|matrix|balance; X-22-176DX Y-type polydimethylsiloxane (Mw 3600)|FR|amount not printed (Table S1); boron phenolic resin FB88 (Mw 600)|FR|amount not printed (Table S1),False
+xylan phosphate carbamate,1,other:wood fibre,softwood fibres (loose)|matrix|; xylan phosphate carbamate (MAP/urea modified)|FR|10 wt%,False
+y-btc,1,EP,epoxy (EP)|matrix|10 parts (EP/DDM 10:3); DDM|curing_agent|3 parts; Y-BTC (Y-MOF)|FR|4 wt%,True
+zeolitic imidazolate framework zif-11,1,RPUF,zeolitic imidazolate framework ZIF-11|FR|12 wt% ZIFs,False
+zeolitic imidazolate framework zif-7,1,RPUF,zeolitic imidazolate framework ZIF-7|FR|12 wt% ZIFs,False
+zeolitic imidazolate framework zif-8,1,RPUF,zeolitic imidazolate framework ZIF-8|FR|12 wt% ZIFs,False
+zhs,5,"EP,PVC",flexible PVC (plasticized)|matrix|balance; ZHS|FR|5 wt%,True
+zhs/go nanohybrid,1,PVC,flexible PVC (plasticized)|matrix|balance; ZHS/GO nanohybrid|FR|5 wt%,False
+zif-67,1,TPU,TPU|matrix|99.5 wt%; ZIF-67 (Co-MOF)|FR|0.5 wt%,False
+zif-67@mxene hybrid,1,TPU,TPU|matrix|99.5 wt%; ZIF-67@MXene (Ti3C2Tx) hybrid|FR|0.5 wt%,False
+zif-8,1,EP,EP|matrix|98 wt%; ZIF-8|FR|2 wt%,True
+zif-8@sio2,1,EP,EP|matrix|98 wt%; ZIF-8@SiO2 (core-shell)|FR|2 wt%,True
+zinc bis zndmp,1,other:PBS,PBS|matrix|80 wt%; zinc bis(dimethyl phosphate) ZnDMP|FR|20 wt%,False
+zinc borate,5,other:PA12,PA12 (PA2200)|matrix|70 wt%; zinc borate (Firebrake ZB)|FR|30 wt%,False
+zinc phosphinate,7,other:PA11,"PA11|matrix|80 wt%; zinc phosphinate (ZnP, OP950)|FR|10 wt%; kraft lignin (DL, UPM)|synergist|10 wt%",False
+zn-pdh,1,EP,"epoxy resin E-51|matrix|100 g; DDM (4,4-diaminodiphenylmethane)|curing_agent|25.3 g; Zn-PDH (phosphazene-modified organozinc complex)|FR|5.22 g",True
+znfe2o4,1,PVC,PVC TL-1000|matrix|100 phr; DOP|plasticizer|40 phr; diisooctyl dioctyltin bis(thioglycolate) heat stabilizer|other|3 phr; calcium stearate lubricant|other|1 phr; NDZ-311 titanate coupling agent|compatibilizer|1 phr; ZnFe2O4|FR|20 phr,False
+znmgal-co3-ldh,4,other:asphalt binder,"asphalt binder (base, pen 65.8)|matrix|balance; ZnMgAl-CO3-LDH|FR|5 wt%",False
+zno-doped magnesium hydroxide,3,PP,PP|matrix|100 phr; antioxidant 1010|other|; ZnO-doped magnesium hydroxide (ZO@MH)|FR|10 phr,False
+zs,6,EP,Epidian 5 epoxy resin|matrix|; triethylenetetramine Z-1|curing_agent|; ZS|FR|10 wt% of resin,True
+~0.32 g g-c3n4 per batch),1,TPU,"TPU|matrix|90 wt%; CAHPi10 (AHPi/g-C3N4 hybrid, g-C3N4:AHPi 10/90 implied by label; ~0.32 g g-C3N4 per batch)|FR|10 wt%",False

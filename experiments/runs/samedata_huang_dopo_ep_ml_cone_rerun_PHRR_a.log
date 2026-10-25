@@ -1,0 +1,31 @@
+[INFO] File loaded with encoding: utf-8
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpjoo1to_4/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_1_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpjoo1to_4/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_2_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpjoo1to_4/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_3_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpjoo1to_4/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_4_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpjoo1to_4/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_5_model.joblib
+PHRR P1_mol_r0: mean R2 0.6339 ['ExtraTrees', 'LGBM', 'GBDT', 'XGB', 'GBDT'] 2.91 min
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmphglhut78/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_1_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmphglhut78/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_2_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmphglhut78/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_3_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmphglhut78/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_4_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmphglhut78/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_5_model.joblib
+PHRR P1_mol_r1: mean R2 0.5958 ['GBDT', 'ExtraTrees', 'GBDT', 'ExtraTrees', 'GBDT'] 2.91 min
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpofz7cjvg/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_1_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpofz7cjvg/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_2_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpofz7cjvg/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_3_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpofz7cjvg/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_4_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpofz7cjvg/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_5_model.joblib
+PHRR P1_mol_r2: mean R2 0.6107 ['SoftVote', 'GBDT', 'GBDT', 'XGB', 'ExtraTrees'] 2.62 min
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpemxgayoq/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_1_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpemxgayoq/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_2_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpemxgayoq/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_3_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpemxgayoq/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_4_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpemxgayoq/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_5_model.joblib
+PHRR P1_mol_r3: mean R2 0.6249 ['SoftVote', 'LGBM', 'GBDT', 'GBDT', 'ExtraTrees'] 4.9 min
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmprsp4ttlg/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_1_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmprsp4ttlg/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_2_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmprsp4ttlg/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_3_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmprsp4ttlg/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_4_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmprsp4ttlg/PHRR/molecule/formulation/without_BDE/PHRR_outer_fold_5_model.joblib
+PHRR P1_mol_r4: mean R2 0.6220 ['GBDT', 'GBDT', 'GBDT', 'SoftVote', 'GBDT'] 11.84 min

@@ -1,0 +1,4 @@
+strict  pop=B pool=ep blend ratio: MAE 151.5 +- 6.7  R2 0.652  n=166 groups=36
+strict  pop=B pool=all blend ratio: MAE 221.5 +- 49.4  R2 -0.977  n=166 groups=36
+strict  pop=A pool=ep blend ratio: MAE 184.7 +- 11.6  R2 0.438  n=519 groups=149
+strict  pop=A pool=all blend ratio: MAE 200.3 +- 2.0  R2 -0.265  n=519 groups=149

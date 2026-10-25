@@ -1,0 +1,6 @@
+attempt d6: DEV ONLY: d2 (all-matrix pool) + noA + P_load/fr_load.
+seeds 0-2 DEV
+  seed 0: MAE 162.9 R2 0.577
+  seed 1: MAE 162.4 R2 0.578
+  seed 2: MAE 162.8 R2 0.578
+RESULT d6 DEV: n=305 papers=91 FR groups=125 features=109 | MAE 162.7 +- 0.2 CI [144.5, 178.7] R2 0.578 | baseline ctrl x median ratio MAE 200.9

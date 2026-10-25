@@ -14,7 +14,7 @@
     "Report: B mean, paper-bootstrap 95% CI, pooled CI, protocol A, protocol C, paired per-repeat difference vs exp159 (report-only), and a label-free check that no row exceeds 60 wt% total FR."
   ],
   "rule_in_one_line": "After a fresh critic, the unit-corrected exp113-config result becomes the LOI number of record whichever way it moves (exp114-config result: proxy-free supplementary).",
-  "environment": "/Users/niks/dravix/.venv312/bin/python (record pins).",
+  "environment": "~/dravix/.venv312/bin/python (record pins).",
   "exit_triggers": "B ci_lo > 0.84 or A mean > 0.84 -> FLAG (owner wording). Self-test failure -> BLOCKED.",
   "honesty_notes": [
     "A data correction; any R2 change is reported as such, never as a model gain.",

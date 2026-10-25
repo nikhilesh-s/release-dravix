@@ -1,0 +1,57 @@
+{
+  "slug": "bme_fullfit_tti_s",
+  "target": "TTI (s)",
+  "round_config": "experiments/configs/bme_fullfit_round1.json",
+  "code": "data/v2/train_bme_fullfit_round1.py",
+  "dataset": "data/v2/pomazi_recon_inputs.csv, filter identical to pomazi_round1b: has_inputs & target notna & dup_of empty & fibre_type != hemp (pHRR 72 rows, others 60)",
+  "n_rows": 60,
+  "n_groups": 32,
+  "model": "rf",
+  "hyperparameters": "RandomForestRegressor(n_estimators=500, min_samples_leaf=2, random_state=0), NaN native",
+  "full_fit": {
+    "protocol": "training fit (same protocol as BME: full-dataset fit)",
+    "r2": 0.9231,
+    "ci_lo": 0.8817,
+    "ci_hi": 0.9634,
+    "mae": 3.936,
+    "bme": 0.95,
+    "higher": false,
+    "clear": false
+  },
+  "full_fit_other_candidates": {
+    "gbr_theirs": {
+      "r2": 0.9896,
+      "ci_lo": 0.965,
+      "ci_hi": 1.0,
+      "mae": 0.571
+    },
+    "hgb": {
+      "r2": 0.9842,
+      "ci_lo": 0.9521,
+      "ci_hi": 0.9985,
+      "mae": 1.431
+    },
+    "ridge": {
+      "r2": 0.7483,
+      "ci_lo": 0.6231,
+      "ci_hi": 0.8171,
+      "mae": 9.017
+    }
+  },
+  "protocol_A": {
+    "protocol": "random 80/20 x 50, seeds 0-49",
+    "mean": 0.6148,
+    "mean_ci": [
+      0.5426,
+      0.6741
+    ],
+    "split_p025": -0.1646,
+    "split_p975": 0.902,
+    "share_splits_above_bme": 0.74,
+    "bme": 0.58,
+    "higher": true,
+    "clear": false
+  },
+  "comparable": "pending-human",
+  "note": "Reconstruction, not BME's population (Arnav 2026-10-02)."
+}

@@ -1,0 +1,13 @@
+attempt A6: Data Matcher population v2 (EP, bulk only, organophosphorus first FR per fr_group_alias.csv, with control) with the A3 model and groups. Closer to USTC's stated scope; reported alongside A3, not instead.
+seeds 0-9
+  seed 0: MAE 148.7 R2 0.547
+  seed 1: MAE 153.8 R2 0.526
+  seed 2: MAE 154.8 R2 0.517
+  seed 3: MAE 154.9 R2 0.506
+  seed 4: MAE 161.3 R2 0.470
+  seed 5: MAE 152.0 R2 0.532
+  seed 6: MAE 156.5 R2 0.504
+  seed 7: MAE 159.3 R2 0.499
+  seed 8: MAE 157.4 R2 0.507
+  seed 9: MAE 153.1 R2 0.512
+RESULT A6: n=168 papers=53 FR groups=65 features=244 | MAE 155.2 +- 3.5 CI [129.9, 170.8] R2 0.512 | baseline ctrl x median ratio MAE 194.4

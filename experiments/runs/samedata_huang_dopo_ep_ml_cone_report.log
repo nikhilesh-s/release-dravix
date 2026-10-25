@@ -1,0 +1,49 @@
+wrote ~/dravix-dopo-cone/experiments/results/samedata/samedata_huang_dopo_ep_ml_cone.json
+
+== PHRR gate 0.6235 passed False folds_equal False sel {'P1_mol': 'c2', 'P2': 'c2'} ctrl kept ['EP_matrix_PHRR', 'EP_matrix_PHRR_sq', 'EP_matrix_PHRR_sqrt', 'Loading_x_EP_matrix_PHRR', 'P_content_x_EP_matrix_PHRR', 'Synergy_x_EP_matrix_PHRR']
+r0_full_pubfolds|P1_pub_mol mean 0.6070 sd 0.0378 MAE 159.92 modR2 0.618 
+r0_full|P1_pub_mol     mean 0.6235 sd 0.1012 MAE 154.44 modR2 0.633 
+r0_full|P1_mol         mean 0.6168 sd 0.0173 MAE 161.88 modR2 0.614 
+r0_full|P2             mean 0.6121 sd 0.0149 MAE 163.96 modR2 0.616 ci_lo=0.49856224888677564 ci_hi=0.6686708783421047
+r0|P1_pub_mol          mean 0.6265 sd 0.0552 MAE 157.70 modR2 0.638 
+r0|P1_mol              mean 0.6355 sd 0.0148 MAE 158.69 modR2 0.630 paired_wins_vs_r0_full=9/10
+r0|P2                  mean 0.6209 sd 0.0110 MAE 162.53 modR2 0.630 ci_lo=0.5259909054943114 ci_hi=0.6853166838597045 paired_wins_vs_r0_full=7/10
+c1|P1_pub_mol          mean 0.5938 sd 0.0356 MAE 165.34 modR2 0.580 
+c1|P1_mol              mean 0.5417 sd 0.1251 MAE 164.99 modR2 0.495 paired_wins_vs_r0_full=1/10 paired_wins_vs_r0=0/10
+c1|P2                  mean 0.5856 sd 0.0267 MAE 168.12 modR2 0.584 ci_lo=0.5163459315045676 ci_hi=0.667959973806049 paired_wins_vs_r0_full=3/10 paired_wins_vs_r0=0/10
+c2|P1_pub_mol          mean 0.6585 sd 0.0432 MAE 153.17 modR2 0.679 
+c2|P1_mol              mean 0.6607 sd 0.0122 MAE 154.92 modR2 0.661 paired_wins_vs_r0_full=10/10 paired_wins_vs_r0=10/10
+c2|P2                  mean 0.6585 sd 0.0097 MAE 155.17 modR2 0.682 ci_lo=0.5548053711630724 ci_hi=0.704835811030389 paired_wins_vs_r0_full=10/10 paired_wins_vs_r0=10/10
+c3|P1_pub_mol          mean 0.6508 sd 0.0334 MAE 155.51 modR2 0.669 
+c3|P1_mol              mean 0.6390 sd 0.0307 MAE 155.48 modR2 0.638 paired_wins_vs_r0_full=9/10 paired_wins_vs_r0=6/10
+c3|P2                  mean 0.6455 sd 0.0103 MAE 157.22 modR2 0.668 ci_lo=0.5592556683919688 ci_hi=0.6999814208329759 paired_wins_vs_r0_full=10/10 paired_wins_vs_r0=10/10
+c4|P1_pub_mol          mean 0.6053 sd 0.1075 MAE 156.67 modR2 0.595 
+c4|P1_mol              mean 0.6098 sd 0.0305 MAE 156.88 modR2 0.607 paired_wins_vs_r0_full=5/10 paired_wins_vs_r0=3/10
+c4|P2                  mean 0.6156 sd 0.0256 MAE 159.98 modR2 0.636 ci_lo=0.42412399573412307 ci_hi=0.7042629686002305 paired_wins_vs_r0_full=4/10 paired_wins_vs_r0=3/10
+b0|P1_pub_mol          mean 0.5532 sd 0.0524 MAE 178.71 modR2 0.507 
+b0|P1_mol              mean 0.5629 sd 0.0134 MAE 178.59 modR2 0.525 paired_wins_vs_r0_full=0/10 paired_wins_vs_r0=0/10
+b0|P2                  mean 0.5757 sd 0.0110 MAE 179.72 modR2 0.567 ci_lo=0.5043129792008568 ci_hi=0.6315887571349313 paired_wins_vs_r0_full=0/10 paired_wins_vs_r0=0/10
+
+== THR gate 0.3692 passed False folds_equal False sel {'P1_mol': 'c4', 'P2': 'c2'} ctrl kept ['EP_matrix_THR', 'EP_matrix_THR_sq', 'EP_matrix_THR_sqrt', 'Synergy_x_EP_matrix_THR']
+r0_full_pubfolds|P1_pub_mol mean 0.4798 sd 0.1415 MAE 12.48 modR2 0.595 
+r0_full|P1_pub_mol     mean 0.3692 sd 0.1826 MAE 13.20 modR2 0.421 
+r0_full|P1_mol         mean 0.3905 sd 0.0363 MAE 13.28 modR2 0.442 
+r0_full|P2             mean 0.4138 sd 0.0273 MAE 13.06 modR2 0.518 ci_lo=0.2825421612896008 ci_hi=0.4988359795171674
+r0|P1_pub_mol          mean 0.4791 sd 0.1233 MAE 12.69 modR2 0.592 
+r0|P1_mol              mean 0.4194 sd 0.0371 MAE 12.91 modR2 0.495 paired_wins_vs_r0_full=8/10
+r0|P2                  mean 0.4274 sd 0.0241 MAE 12.92 modR2 0.548 ci_lo=0.32021779809035217 ci_hi=0.5453955634014113 paired_wins_vs_r0_full=7/10
+c1|P1_pub_mol          mean 0.4906 sd 0.1127 MAE 12.28 modR2 0.623 
+c1|P1_mol              mean 0.4194 sd 0.0381 MAE 12.85 modR2 0.508 paired_wins_vs_r0_full=8/10 paired_wins_vs_r0=6/10
+c1|P2                  mean 0.4249 sd 0.0333 MAE 12.92 modR2 0.549 ci_lo=0.3433618309756319 ci_hi=0.5475139602978507 paired_wins_vs_r0_full=7/10 paired_wins_vs_r0=6/10
+c2|P1_pub_mol          mean 0.4890 sd 0.1150 MAE 12.32 modR2 0.612 
+c2|P1_mol              mean 0.4375 sd 0.0313 MAE 12.61 modR2 0.531 paired_wins_vs_r0_full=10/10 paired_wins_vs_r0=10/10
+c2|P2                  mean 0.4435 sd 0.0144 MAE 12.63 modR2 0.567 ci_lo=0.3474279286531002 ci_hi=0.5510405514269046 paired_wins_vs_r0_full=9/10 paired_wins_vs_r0=8/10
+c3|P1_pub_mol          mean 0.4935 sd 0.1133 MAE 12.23 modR2 0.625 
+c3|P1_mol              mean 0.4351 sd 0.0297 MAE 12.67 modR2 0.532 paired_wins_vs_r0_full=10/10 paired_wins_vs_r0=8/10
+c3|P2                  mean 0.4400 sd 0.0209 MAE 12.69 modR2 0.568 ci_lo=0.34838021399651475 ci_hi=0.5537058103954018 paired_wins_vs_r0_full=10/10 paired_wins_vs_r0=8/10
+c4|P1_pub_mol          mean 0.4937 sd 0.1029 MAE 12.09 modR2 0.640 
+c4|P1_mol              mean 0.4399 sd 0.0221 MAE 12.55 modR2 0.556 paired_wins_vs_r0_full=9/10 paired_wins_vs_r0=8/10
+c4|P2                  mean 0.4416 sd 0.0223 MAE 12.59 modR2 0.585 ci_lo=0.3654505032411362 ci_hi=0.5481277453861962 paired_wins_vs_r0_full=9/10 paired_wins_vs_r0=9/10
+b0|P1_pub_mol          mean 0.4384 sd 0.1458 MAE 13.52 modR2 0.481 
+b0|P1_mol              mean 0.3844 sd 0.0217 MAE 13.67 modR2 0.423 paired_wins_vs_r0_full=3/10 paired_wins_vs_r0=1/10
+b0|P2                  mean 0.3964 sd 0.0108 MAE 13.67 modR2 0.488 ci_lo=0.2877758055653265 ci_hi=0.5180424309347914 paired_wins_vs_r0_full=2/10 paired_wins_vs_r0=1/10

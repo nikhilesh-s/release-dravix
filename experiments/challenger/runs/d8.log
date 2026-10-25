@@ -1,0 +1,6 @@
+attempt d8: DEV ONLY: d2 with ratio_w target + hgb_l1.
+seeds 0-2 DEV
+  seed 0: MAE 166.3 R2 0.548
+  seed 1: MAE 168.3 R2 0.537
+  seed 2: MAE 168.5 R2 0.544
+RESULT d8 DEV: n=305 papers=91 FR groups=125 features=207 | MAE 167.7 +- 1.0 CI [149.5, 186.0] R2 0.543 | baseline ctrl x median ratio MAE 200.9

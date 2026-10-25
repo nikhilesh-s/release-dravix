@@ -1,0 +1,21 @@
+lit prior: {'n_rows': 1650, 'n_dois': 310} excluded ['10.3311/ppch.19468', '10.3390/ma10050467', '10.3390/polym11020303', '10.3390/polym8090322']
+residue_pct baseline_hgb: A 0.807 LOSO 0.695
+  C1_mass_balance      FULL 0.991 [0.976,1.000] vs 0.95 | A 0.804 CI[0.774,0.833] split[0.565,0.955] wins 24/50 vs 0.82 clear=False | LOSO 0.657
+  C2_logit             FULL 0.974 [0.937,0.999] vs 0.95 | A 0.799 CI[0.749,0.844] split[0.353,0.968] wins 27/50 vs 0.82 clear=False | LOSO 0.628
+  C3_lit_prior         FULL 0.976 [0.941,0.999] vs 0.95 | A 0.807 CI[0.764,0.846] split[0.402,0.973] wins 24/50 vs 0.82 clear=False | LOSO 0.638
+Traceback (most recent call last):
+  File "~/dravix-bme-fit/data/v2/train_bme_char_round1.py", line 163, in <module>
+    main()
+  File "~/dravix-bme-fit/data/v2/train_bme_char_round1.py", line 135, in main
+    assert np.allclose(y, d[tcol].values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/dravix/.venv312/lib/python3.12/site-packages/numpy/_core/numeric.py", line 2329, in allclose
+    res = all(isclose(a, b, rtol=rtol, atol=atol, equal_nan=equal_nan))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/dravix/.venv312/lib/python3.12/site-packages/numpy/_core/numeric.py", line 2447, in isclose
+    result = (less_equal(abs(x-y), atol + rtol * abs(y))
+                             ~^~
+TypeError: unsupported operand type(s) for -: 'float' and 'str'
+lit prior: {'n_rows': 1650, 'n_dois': 310} excluded ['10.3311/ppch.19468', '10.3390/ma10050467', '10.3390/polym11020303', '10.3390/polym8090322']
+tti_s baseline_rf: A 0.615 LOSO 0.336
+  T1_ignition_physics  FULL 0.912 [0.854,0.971] vs 0.95 | A 0.649 CI[0.578,0.712] split[0.063,0.930] wins 31/50 vs 0.58 clear=False | LOSO 0.237

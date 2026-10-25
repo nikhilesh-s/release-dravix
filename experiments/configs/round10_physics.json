@@ -11,7 +11,7 @@
     "No cr_round2, tti_round3 or round-9 CR/LOI score had been read when this config was written.",
     "The methods researcher computed label-free feature ranges only (MCC peak min 3.5 W/g, T95-T5 min 47 K, total_hr_bc min -1.5 kJ/g)."
   ],
-  "environment": "/Users/niks/dravix/.venv312/bin/python (Python 3.12.12, scikit-learn 1.7.1, numpy 2.2.6, scipy 1.16.1, pandas 2.3.3: the record-producing versions). OMP/n_jobs <= 4.",
+  "environment": "~/dravix/.venv312/bin/python (Python 3.12.12, scikit-learn 1.7.1, numpy 2.2.6, scipy 1.16.1, pandas 2.3.3: the record-producing versions). OMP/n_jobs <= 4.",
   "incumbents (step 1: each must be reproduced in the same run, else that target is BLOCKED)": {
     "pHRR": "exp074 (data/v2/train_phrr_promote_c2.py, HGB on log1p, 10 features, 191 rows / 64 merged groups), 0.6113",
     "FIGRA": "exp119 (data/v2/train_blend_round1.py --target FIGRA b1), 0.4975",

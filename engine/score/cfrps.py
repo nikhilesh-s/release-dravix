@@ -11,11 +11,11 @@ renormalised over the inputs that are present; `coverage` reports how much weigh
 `indices` groups the subscores into the patent's FIG. 18 index names (no smoke index: the engine
 predicts no smoke property).
 
-Provenance (see context/facts/patent.md, CFRPS section):
+Provenance:
 - Weights and ranges are Dravix choices, not the patent's. Weights are versioned JSON configs in
   weights/ (cfrs_weights_<version>.json, with provenance). Default v1: calibrated to within-paper UL-94
-  rankings (context/research/CFRS_WEIGHTS.md). v0 = the old placeholders (plans/FABLE_PLAN_2026-10-01.md:209,
-  FIGRA slot given to avg HRR), kept for reproducibility: cfrps(props, weights=load_weights("v0")).
+  rankings (weights/DECLARATIONS.md). v0 = the old placeholders (FIGRA slot given to avg HRR),
+  kept for reproducibility: cfrps(props, weights=load_weights("v0")).
 - Ranges: rounded 5th-95th percentiles of the engine's training snapshot
   data/v2/cone_lit_benchmark_v1.csv (all heat fluxes pooled; values > 0).
 - `dfrs_v1` reproduces the old engine's DFRS exactly (nikhilesh-s/dravix-engine

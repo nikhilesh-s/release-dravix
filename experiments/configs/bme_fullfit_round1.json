@@ -1,0 +1,16 @@
+{
+  "round": "bme_fullfit_round1",
+  "declared": "2026-10-22, before any full-dataset fit is scored; see git commit time",
+  "purpose": "Fill the pending 'training fit (same protocol as BME: full-dataset fit)' column (context/facts/benchmarks.md rows 5-8). BME Pomazi 2026 Table 8 reports R2 of a model scored on train+test combined; this mirrors that.",
+  "bars_full_fit": {"phrr_kWm2": 0.96, "tti_s": 0.95, "thr_MJm2": 0.88, "residue_pct": 0.95},
+  "bars_held_out": {"phrr_kWm2": 0.30, "tti_s": 0.58, "thr_MJm2": 0.67, "residue_pct": 0.82},
+  "dataset": "data/v2/pomazi_recon_inputs.csv, filter identical to pomazi_round1b: has_inputs & target notna & dup_of empty & fibre_type != hemp (pHRR 72 rows, others 60)",
+  "features": "the 14 round-1 inputs (train_pomazi_round1.FEATS), unchanged",
+  "models": "per target, the candidate round 1b selected on its primary protocol (no re-selection on fit): pHRR rf, TTI rf, THR gbr_theirs (sklearn stand-in for XGBoost Table 1 settings), residue_pct hgb; settings exactly as train_pomazi_round1.make(). The other three candidates are also scored and reported as context only.",
+  "protocol_full_fit": "fit once on all rows (random_state 0), predict the same rows, R2 and MAE. 95% CI = tolerance-formulation-group bootstrap (eval_protocol.bootstrap_ci, 2000, seed 0) of the in-sample predictions. Labelled 'training fit (same protocol as BME: full-dataset fit)', never held-out.",
+  "protocol_A_recheck": "re-run protocol A (50 x random 80/20, seeds 0-49) for the selected candidates to add a 95% CI of the mean (bootstrap over the 50 split R2s, 2000, seed 0) and the share of splits above BME's held-out bar. Diagnostic: the overlapping splits make this CI too narrow; the 2.5-97.5 split percentiles are reported alongside.",
+  "protocol_A_vs_BME": "Protocol A = random 80/20 x 50 (pomazi_round1.json). BME = one random split (ratio 80/20 per LIT_REVIEW / critic; ~15-19 test rows) pooled with 4 external RDP validation composites (their Table 9). Same ratio and split type; theirs is a single draw plus external rows, ours is the mean of 50 draws with no external rows.",
+  "claim_rule": "Full fit: Dravix higher than BME if R2 > BME bar; 'clear' only if the bootstrap ci_lo > bar. Held-out: Dravix protocol A higher if mean > bar; 'clear' only if the 2.5th split percentile > bar (a single random draw like theirs would still clear it). Wording is the owner's call; comparable stays pending-human (reconstruction, not their population; Arnav 2026-10-02).",
+  "outputs": "experiments/results/bme_fullfit_<target>.json, experiments/runs/bme_fullfit_round1.md; no edits to numbers_of_record.json, leaderboards or trackers",
+  "code": "data/v2/train_bme_fullfit_round1.py"
+}

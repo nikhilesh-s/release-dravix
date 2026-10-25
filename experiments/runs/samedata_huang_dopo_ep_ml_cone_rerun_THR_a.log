@@ -1,0 +1,31 @@
+[INFO] File loaded with encoding: utf-8
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpyvt_si7w/THR/molecule/formulation/without_BDE/THR_outer_fold_1_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpyvt_si7w/THR/molecule/formulation/without_BDE/THR_outer_fold_2_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpyvt_si7w/THR/molecule/formulation/without_BDE/THR_outer_fold_3_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpyvt_si7w/THR/molecule/formulation/without_BDE/THR_outer_fold_4_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpyvt_si7w/THR/molecule/formulation/without_BDE/THR_outer_fold_5_model.joblib
+THR P1_mol_r0: mean R2 0.3937 ['SoftVote', 'Ridge', 'GBDT', 'GBDT', 'LGBM'] 1.26 min
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpmz9u9m2i/THR/molecule/formulation/without_BDE/THR_outer_fold_1_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpmz9u9m2i/THR/molecule/formulation/without_BDE/THR_outer_fold_2_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpmz9u9m2i/THR/molecule/formulation/without_BDE/THR_outer_fold_3_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpmz9u9m2i/THR/molecule/formulation/without_BDE/THR_outer_fold_4_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpmz9u9m2i/THR/molecule/formulation/without_BDE/THR_outer_fold_5_model.joblib
+THR P1_mol_r1: mean R2 0.3588 ['LGBM', 'Ridge', 'GBDT', 'GBDT', 'ExtraTrees'] 1.08 min
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpppww_x3l/THR/molecule/formulation/without_BDE/THR_outer_fold_1_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpppww_x3l/THR/molecule/formulation/without_BDE/THR_outer_fold_2_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpppww_x3l/THR/molecule/formulation/without_BDE/THR_outer_fold_3_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpppww_x3l/THR/molecule/formulation/without_BDE/THR_outer_fold_4_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpppww_x3l/THR/molecule/formulation/without_BDE/THR_outer_fold_5_model.joblib
+THR P1_mol_r2: mean R2 0.4247 ['SoftVote', 'ExtraTrees', 'ExtraTrees', 'LGBM', 'LGBM'] 1.24 min
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpb541mw0n/THR/molecule/formulation/without_BDE/THR_outer_fold_1_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpb541mw0n/THR/molecule/formulation/without_BDE/THR_outer_fold_2_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpb541mw0n/THR/molecule/formulation/without_BDE/THR_outer_fold_3_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpb541mw0n/THR/molecule/formulation/without_BDE/THR_outer_fold_4_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpb541mw0n/THR/molecule/formulation/without_BDE/THR_outer_fold_5_model.joblib
+THR P1_mol_r3: mean R2 0.3464 ['ExtraTrees', 'XGB', 'GBDT', 'Ridge', 'ExtraTrees'] 1.1 min
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp36iyi5bd/THR/molecule/formulation/without_BDE/THR_outer_fold_1_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp36iyi5bd/THR/molecule/formulation/without_BDE/THR_outer_fold_2_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp36iyi5bd/THR/molecule/formulation/without_BDE/THR_outer_fold_3_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp36iyi5bd/THR/molecule/formulation/without_BDE/THR_outer_fold_4_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp36iyi5bd/THR/molecule/formulation/without_BDE/THR_outer_fold_5_model.joblib
+THR P1_mol_r4: mean R2 0.4031 ['XGB', 'ExtraTrees', 'LGBM', 'ExtraTrees', 'ExtraTrees'] 1.18 min

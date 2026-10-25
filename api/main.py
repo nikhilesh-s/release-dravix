@@ -6,7 +6,7 @@ Env (no defaults for secrets; login and predict fail closed when unset):
   DRAVIX_TOKEN_TTL         token lifetime in seconds (default 28800 = 8 h)
   DRAVIX_CORS_ORIGINS      comma-separated exact origins (e.g. http://localhost:5173)
   DRAVIX_CORS_ORIGIN_REGEX regex for Vercel preview URLs
-                           (default: this project's <hash>.vercel.app and <hash|git-branch>-<team>.vercel.app URLs)
+                           (default: Vercel URLs of a dashboard project named your-dashboard)
 
 Run: uvicorn api.main:app --port 8000
 """
@@ -45,7 +45,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[o.strip() for o in os.environ.get("DRAVIX_CORS_ORIGINS", "").split(",") if o.strip()],
     allow_origin_regex=os.environ.get("DRAVIX_CORS_ORIGIN_REGEX",
-                                      r"https://dravix-master-engine-preview(?:-(?:[a-z0-9]{9}|[a-z0-9-]+-nikhilesh-suravarjjalas-projects))?\.vercel\.app"),
+                                      r"https://your-dashboard(?:-[a-z0-9-]+)?\.vercel\.app"),
     allow_methods=["GET", "POST"],
     allow_headers=["Authorization", "Content-Type"],
 )

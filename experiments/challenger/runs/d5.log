@@ -1,0 +1,6 @@
+attempt d5: DEV ONLY: d1 with linear ratio target weighted by control pHRR and absolute-error HGB (loss in kW/m2).
+seeds 0-2 DEV
+  seed 0: MAE 184.1 R2 0.481
+  seed 1: MAE 183.5 R2 0.452
+  seed 2: MAE 191.2 R2 0.380
+RESULT d5 DEV: n=305 papers=91 FR groups=125 features=207 | MAE 186.2 +- 3.5 CI [165.0, 199.6] R2 0.438 | baseline ctrl x median ratio MAE 188.4

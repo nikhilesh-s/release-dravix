@@ -1,0 +1,23 @@
+{
+  "round": "bme_char_round1",
+  "declared": "2026-10-22, before any of these attempts is fit or scored; see git commit time",
+  "purpose": "Nik's three char-residue attempts against the BME Pomazi 2026 bars on the reconstruction, plus one cheap ignition-physics TTI attempt. Report every attempt, win or lose.",
+  "dataset": "data/v2/pomazi_recon_inputs.csv, filter identical to bme_fullfit_round1 (has_inputs & target notna & dup_of empty & fibre_type != hemp; 60 rows for residue_pct and tti_s)",
+  "bars_full_fit": {"residue_pct": 0.95, "tti_s": 0.95},
+  "bars_held_out": {"residue_pct": 0.82, "tti_s": 0.58},
+  "baselines": {"residue_pct": "hgb, 14 FEATS, raw target (bme_fullfit_round1: full 0.975, A 0.807 [0.766, 0.845])", "tti_s": "rf, 14 FEATS, raw target (bme_fullfit_round1: full 0.923, A 0.615 [0.543, 0.674])"},
+  "attempts": {
+    "C1_mass_balance": "baseline model (hgb settings unchanged) + features: inorganic_floor_pct = sum_i w_i * yield_i (stoichiometric: ATH->Al2O3 0.654, MDH->MgO 0.69, silica/clay/glass/metal oxides/ZnO/TiO2 1.0, carbon or glass fibre 1.0 on fibre_wtpct); neat_char_pct = mean residue of TRAINING-fold matrix rows (fibre 0) with the same system and same FR set and P_pct, else same system with no FR, else all training matrix rows, always excluding the row itself; floor_pct = inorganic_floor_pct + (1 - fibre_wtpct/100) * neat_char_pct; P-based char-promoter features P_APP, P_RDP, P_TEDAP (wt% P from each FR, from fr1/fr2 loading in wt% P) and is_P_promoter flag. Computed in-fold for every split.",
+    "C2_logit": "baseline model and features; target logit(residue_pct/100) clipped to [0.005, 0.995]; predictions inverted with the sigmoid x 100; R2 in raw % units.",
+    "C3_lit_prior": "baseline model + one feature lit_prior_pct: HGB (same hgb settings) pretrained once on cone_lit_benchmark_v1.csv rows with char_residue_pct in [0, 100], features heat_flux_kWm2, fr_total_wtpct, filler_total_wtpct, is_EP, is_fibre_composite, is_P_FR (components match phosph|APP|DOPO|RDP|TEDAP|phosphate|phosphonate). Excluded: DOIs with a component matching T58|ERYSIS|GE-60|sorbitol polyglycidyl|pentaerythritol polyglycidyl|glycerol polyglycidyl|GFTE|DETDA, plus DOIs containing polym11020303, ppch.19468, polym8090322, ma10050467 (Toldy group / Pomazi sources). Mapping for reconstruction rows: fr_total = fr1_ratio_pct + fr2_ratio_pct (NaN -> 0), filler = fibre_wtpct, is_EP 1, is_fibre_composite = fibre_wtpct > 0, is_P_FR = P_pct > 0.",
+    "T1_ignition_physics": "TTI baseline rf; target transformed by thermally-thick ignition theory: z = sqrt(tti_s) * heat_flux_kWm2 (proportional to sqrt(k rho c) (T_ig - T0), a material property pooled across 25 and 50 kW/m2); predictions inverted tti = (z / heat_flux)^2; R2 in seconds."
+  },
+  "protocols": {
+    "full_fit": "fit once on all rows, predict the same rows; 95% CI = tolerance-group bootstrap (eval_protocol.bootstrap_ci, 2000, seed 0). Labelled training fit (same protocol as BME).",
+    "A": "random 80/20 x 50, seeds 0-49 (identical splits to bme_fullfit_round1); mean, 95% CI of the mean (bootstrap over the 50 split R2s, 2000, seed 0), 2.5/97.5 split percentiles, paired wins vs baseline on the same 50 splits.",
+    "LOSO": "leave-one-system-out pooled R2 (diagnostic)"
+  },
+  "claim_rule": "Held-out clearly ahead of BME: A mean > bar AND mean-CI lo > bar AND >= 40/50 paired wins vs baseline. Full fit clearly ahead: bootstrap ci_lo > bar. No selection among attempts on the score beyond reporting each; comparable stays pending-human.",
+  "outputs": "experiments/results/bme_char_round1_<attempt>.json, experiments/runs/bme_char_round1.md, log bme_char_round1.log; no edits to numbers_of_record.json, leaderboards or trackers",
+  "code": "data/v2/train_bme_char_round1.py"
+}

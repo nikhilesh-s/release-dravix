@@ -1,0 +1,6 @@
+attempt d3: DEV ONLY: d1 + drop 100 per-name a_ columns, add P_load_wt and fr_load_wt.
+seeds 0-2 DEV
+  seed 0: MAE 190.0 R2 0.411
+  seed 1: MAE 191.8 R2 0.365
+  seed 2: MAE 192.1 R2 0.383
+RESULT d3 DEV: n=305 papers=91 FR groups=125 features=109 | MAE 191.3 +- 0.9 CI [169.3, 207.1] R2 0.386 | baseline ctrl x median ratio MAE 188.4

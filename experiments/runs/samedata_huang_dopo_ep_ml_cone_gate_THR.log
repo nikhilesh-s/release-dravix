@@ -1,0 +1,47 @@
+[INFO] File loaded with encoding: utf-8
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpr89omvhh/THR/molecule/formulation/without_BDE/THR_outer_fold_1_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpr89omvhh/THR/molecule/formulation/without_BDE/THR_outer_fold_2_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpr89omvhh/THR/molecule/formulation/without_BDE/THR_outer_fold_3_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpr89omvhh/THR/molecule/formulation/without_BDE/THR_outer_fold_4_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpr89omvhh/THR/molecule/formulation/without_BDE/THR_outer_fold_5_model.joblib
+{
+ "task": "THR",
+ "per_fold": [
+  0.4702436790527801,
+  0.5690747632492134,
+  0.3698394197633431,
+  0.3556087240808993,
+  0.08099635341484801
+ ],
+ "mean": 0.3691525879122167,
+ "sd": 0.18262407314250909,
+ "MAE_per_fold": [
+  10.009215689953447,
+  11.857819408055239,
+  14.90228580479279,
+  14.173295175878293,
+  15.051178030402436
+ ],
+ "modified_R2_per_fold": [
+  0.5870277539398983,
+  0.7593365380296764,
+  0.41280750760248663,
+  0.47503931988008274,
+  -0.1275760468500846
+ ],
+ "gate": [
+  0.473,
+  0.493
+ ],
+ "passed": false,
+ "folds_equal_published": false,
+ "max_abs_pred_diff_vs_published": 97.78432112900757,
+ "selected_models": [
+  "ExtraTrees",
+  "ExtraTrees",
+  "ExtraTrees",
+  "GBDT",
+  "Ridge"
+ ],
+ "minutes": 0.67
+}

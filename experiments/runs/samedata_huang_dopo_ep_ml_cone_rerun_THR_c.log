@@ -1,0 +1,31 @@
+[INFO] File loaded with encoding: utf-8
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpxgwak5ns/THR/reference/formulation/without_BDE/THR_outer_fold_1_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpxgwak5ns/THR/reference/formulation/without_BDE/THR_outer_fold_2_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpxgwak5ns/THR/reference/formulation/without_BDE/THR_outer_fold_3_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpxgwak5ns/THR/reference/formulation/without_BDE/THR_outer_fold_4_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpxgwak5ns/THR/reference/formulation/without_BDE/THR_outer_fold_5_model.joblib
+THR P2_r0: mean R2 0.3938 ['GBDT', 'GBDT', 'Ridge', 'ExtraTrees', 'ExtraTrees'] 1.26 min
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpaqaickas/THR/reference/formulation/without_BDE/THR_outer_fold_1_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpaqaickas/THR/reference/formulation/without_BDE/THR_outer_fold_2_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpaqaickas/THR/reference/formulation/without_BDE/THR_outer_fold_3_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpaqaickas/THR/reference/formulation/without_BDE/THR_outer_fold_4_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpaqaickas/THR/reference/formulation/without_BDE/THR_outer_fold_5_model.joblib
+THR P2_r1: mean R2 0.4132 ['Ridge', 'SoftVote', 'XGB', 'SoftVote', 'ExtraTrees'] 1.17 min
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpk1rvk5uy/THR/reference/formulation/without_BDE/THR_outer_fold_1_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpk1rvk5uy/THR/reference/formulation/without_BDE/THR_outer_fold_2_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpk1rvk5uy/THR/reference/formulation/without_BDE/THR_outer_fold_3_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpk1rvk5uy/THR/reference/formulation/without_BDE/THR_outer_fold_4_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmpk1rvk5uy/THR/reference/formulation/without_BDE/THR_outer_fold_5_model.joblib
+THR P2_r2: mean R2 0.3848 ['SoftVote', 'ExtraTrees', 'ExtraTrees', 'RF', 'LGBM'] 1.25 min
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp5qjek0ir/THR/reference/formulation/without_BDE/THR_outer_fold_1_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp5qjek0ir/THR/reference/formulation/without_BDE/THR_outer_fold_2_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp5qjek0ir/THR/reference/formulation/without_BDE/THR_outer_fold_3_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp5qjek0ir/THR/reference/formulation/without_BDE/THR_outer_fold_4_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp5qjek0ir/THR/reference/formulation/without_BDE/THR_outer_fold_5_model.joblib
+THR P2_r3: mean R2 0.4567 ['ExtraTrees', 'GBDT', 'LGBM', 'RF', 'GBDT'] 1.1 min
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp44ub3vwi/THR/reference/formulation/without_BDE/THR_outer_fold_1_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp44ub3vwi/THR/reference/formulation/without_BDE/THR_outer_fold_2_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp44ub3vwi/THR/reference/formulation/without_BDE/THR_outer_fold_3_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp44ub3vwi/THR/reference/formulation/without_BDE/THR_outer_fold_4_model.joblib
+[SAVE] model=/private/var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp44ub3vwi/THR/reference/formulation/without_BDE/THR_outer_fold_5_model.joblib
+THR P2_r4: mean R2 0.4469 ['ExtraTrees', 'SoftVote', 'GBDT', 'RF', 'ExtraTrees'] 1.22 min

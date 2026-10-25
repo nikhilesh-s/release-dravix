@@ -1,0 +1,13 @@
+attempt A0: Reproduction of Arnav amendment 13 through the challenger harness: B', first-FR groups, log ratio target, primary blend, v4 features, train on B' only. Must give 171.8.
+seeds 0-9
+  seed 0: MAE 173.9 R2 0.578
+  seed 1: MAE 178.7 R2 0.539
+  seed 2: MAE 170.6 R2 0.598
+  seed 3: MAE 172.0 R2 0.584
+  seed 4: MAE 163.9 R2 0.600
+  seed 5: MAE 163.4 R2 0.610
+  seed 6: MAE 163.8 R2 0.623
+  seed 7: MAE 171.0 R2 0.577
+  seed 8: MAE 184.0 R2 0.557
+  seed 9: MAE 177.1 R2 0.563
+RESULT A0: n=183 papers=54 FR groups=45 features=207 | MAE 171.8 +- 6.5 CI [149.4, 207.6] R2 0.583 | baseline ctrl x median ratio MAE 200.4

@@ -1,0 +1,3 @@
+attempt A8: Arnav 2026-10-22, before running: A3 with the Ridge member removed from the blend (HGB + ExtraTrees). Reported as part of a best-of-N search.
+seeds 0-4
+  seed 0: MAE 128.3 R2 0.763

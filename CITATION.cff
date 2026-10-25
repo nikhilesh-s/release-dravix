@@ -1,5 +1,3 @@
-# DRAFT. Placeholders are commented out so the file validates; fill them before release.
-# Author order is fixed: Suravarjjala, Gupta, Saini. No emails, no affiliations (see release/README.md).
 cff-version: 1.2.0
 message: "If you use this software, please cite it using the metadata below, and cite the benchmark dataset record for the data."
 type: software
@@ -8,14 +6,13 @@ version: "2.0.0"
 # date-released: "YYYY-MM-DD"            # fill on publication day
 # doi: "10.5281/zenodo.NNNNNNN"          # reserved software version DOI
 license: "Apache-2.0"
-# repository-code: "https://github.com/nikhilesh-s/REPO-NAME"   # after the public repo exists
+repository-code: "https://github.com/nikhilesh-s/release-dravix"
+url: "https://dravix.materiamse.com"
 authors:
   - family-names: "Suravarjjala"
     given-names: "Nikhilesh"
-    # orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"   # only if he has one (age 16+ rule)
   - family-names: "Gupta"
     given-names: "Jaanya"
-    # orcid: "https://orcid.org/XXXX-XXXX-XXXX-XXXX"
   - family-names: "Saini"
     given-names: "Arnav"
     orcid: "https://orcid.org/0009-0007-7209-1545"
@@ -53,7 +50,30 @@ references:
     title: "Polymer composites informatics for flammability, thermal, mechanical and electrical property predictions"
     doi: "10.1039/D4PY01417K"
     journal: "Polymer Chemistry"
+    volume: 16
+    start: 3459
+    end: 3467
     year: 2025
     authors:
       - family-names: "Tran"
         given-names: "H."
+      - family-names: "Kim"
+        given-names: "C."
+      - family-names: "Gurnani"
+        given-names: "R."
+      - family-names: "Hvidsten"
+        given-names: "O."
+      - family-names: "DeSimpliciis"
+        given-names: "J."
+      - family-names: "Ramprasad"
+        given-names: "R."
+      - family-names: "Gadelrab"
+        given-names: "K."
+      - family-names: "Tuffile"
+        given-names: "C."
+      - family-names: "Molinari"
+        given-names: "N."
+      - family-names: "Kitchaev"
+        given-names: "D."
+      - family-names: "Kornbluth"
+        given-names: "M."

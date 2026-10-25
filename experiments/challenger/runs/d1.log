@@ -1,0 +1,6 @@
+attempt d1: DEV ONLY (scored on non-P EP rows, never on B'): A0 config.
+seeds 0-2 DEV
+  seed 0: MAE 186.3 R2 0.448
+  seed 1: MAE 188.4 R2 0.403
+  seed 2: MAE 186.9 R2 0.413
+RESULT d1 DEV: n=305 papers=91 FR groups=125 features=207 | MAE 187.2 +- 0.9 CI [163.0, 202.4] R2 0.422 | baseline ctrl x median ratio MAE 188.4

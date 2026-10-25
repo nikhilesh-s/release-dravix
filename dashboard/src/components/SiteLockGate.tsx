@@ -1,4 +1,4 @@
-import { FlaskConical, LockKeyhole } from 'lucide-react';
+import { Eye, EyeOff, FlaskConical, LockKeyhole } from 'lucide-react';
 import { useState } from 'react';
 import chemistryIcon from '../assets/chemistry-svgrepo-com.svg';
 import { api } from '../services/api';
@@ -16,6 +16,7 @@ function SiteLockGate({ onUnlock, notice }: Props) {
   const [value, setValue] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const submit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -54,16 +55,28 @@ function SiteLockGate({ onUnlock, notice }: Props) {
         <form onSubmit={submit} className="mt-6 space-y-4">
           <label className="block text-sm text-[var(--dravix-ink-soft)]">
             Site password
-            <input
-              type="password"
-              value={value}
-              onChange={(event) => {
-                setValue(event.target.value);
-                if (error) setError('');
-              }}
-              placeholder="Enter access password"
-              className="mt-2 w-full rounded-xl border border-[#762123]/10 bg-[#f8f8f8] px-4 py-3 text-sm"
-            />
+            <span className="relative mt-2 block">
+              <input
+                type={showPassword ? 'text' : 'password'}
+                value={value}
+                onChange={(event) => {
+                  setValue(event.target.value);
+                  if (error) setError('');
+                }}
+                placeholder="Enter access password"
+                autoComplete="current-password"
+                className="w-full rounded-xl border border-[#762123]/10 bg-[#f8f8f8] px-4 py-3 pr-12 text-sm"
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword((v) => !v)}
+                aria-label={showPassword ? 'Hide password' : 'Show password'}
+                aria-pressed={showPassword}
+                className="absolute inset-y-0 right-0 flex w-11 items-center justify-center rounded-r-xl text-[var(--dravix-ink-soft)] hover:text-[#762123]"
+              >
+                {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+              </button>
+            </span>
           </label>
 
           {notice && !error ? <div className="text-sm text-[var(--dravix-ink-soft)]">{notice}</div> : null}

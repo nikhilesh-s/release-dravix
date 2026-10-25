@@ -1,0 +1,164 @@
+fr_group_current,fr_identity,organophosphorus,any_P,confidence,note
+2-benzoic acid,2-(diphenylphosphino)benzoic acid (PPAC),1,1,high,"Phosphine, P-C. Key garbled; identity from component text."
+4p4gs,4P4GS (POSS with DOPO-derived phosphate),1,1,high,[hybrid] POSS cage.
+8ps,8PS (POSS with 8 DOPO-derived phosphates),1,1,high,[hybrid] POSS cage.
+ac-fe2o3,AC-Fe2O3,0,0,high,no P
+actilox b30,boehmite AlOOH,0,0,medium,MERGE: PURAL SB / Disperal 40 / Actilox B30 are boehmite grades. CAUTION actilox b30 and disperal 40: first FR/synergist is boehmite but every row also carries TAHHT-DDPO (organophosphorus) as 2nd FR; group-key view hides the P.
+al3,aluminium trihydroxide (ATH),0,0,high,Al(OH)3; no P
+alpi,aluminium diethylphosphinate (AlPi),1,1,high,MERGE: AlPi = Exolit OP 930/935/1230 (Clariant grades of Al(Et2PO2)3). Metal phosphinate P-C.
+aluminum diisobutylphosphinate,aluminium diisobutylphosphinate (AlPBu),1,1,high,"Metal phosphinate, different alkyl from AlPi. Foam rows (out of bulk scope)."
+aluminum hypophosphite,aluminium hypophosphite,0,1,high,"Metal hypophosphite, inorganic P."
+ammonium polyphosphate,ammonium polyphosphate (APP),0,1,high,"MERGE: APP / ammonium polyphosphate / Budenheim FR CROS484 (APP grade). One paper lists Exolit AP 462 (microencapsulated APP) under this key (kept, medium risk). Inorganic polyphosphate salt."
+aph,APH (DOPO/KH-550/naphthalene P-N-Si),1,1,high,DOPO derivative.
+app,ammonium polyphosphate (APP),0,1,high,"MERGE: APP / ammonium polyphosphate / Budenheim FR CROS484 (APP grade). One paper lists Exolit AP 462 (microencapsulated APP) under this key (kept, medium risk). Inorganic polyphosphate salt."
+app:per:mel,APP:PER:MEL 5:2:3 intumescent,0,1,medium,APP-based IFR; other-form row (not bulk).
+arg-app,arginine-exchanged APP,0,1,medium,Overrides fr_chemistry P_organic: arginine is a cation; polyphosphate backbone has no P-C/P-O-C. Kept separate from APP (modified).
+avd,AVD (DOPO-vanillin-2-aminobenzothiazole),1,1,high,From formulation text.
+avoph2[vo]2·5h2o,AVOPh ammonium vanadyl hydrogenphosphate oxalate,0,1,medium,"Inorganic vanadyl phosphate (oxalate ligand, no P-C/P-O-C)."
+avphvopo4·1.5h2o,AVPh ammonium vanadyl phosphate hydrate,0,1,high,Inorganic.
+ba-dopo,BA-DOPO,1,1,medium,DOPO adduct (inferred). Fibre composite rows.
+bcep,BCEP (P-containing cycloaliphatic epoxide),1,1,medium,TGIC listed as synergist in rows.
+bdd,BDD (DOPO-based bis-phosphaphenanthrene amine),1,1,high,From formulation text.
+bdp,bisphenol A bis(diphenyl phosphate) (BDP),1,1,high,Aryl phosphate.
+boehmite,boehmite AlOOH,0,0,medium,MERGE: PURAL SB / Disperal 40 / Actilox B30 are boehmite grades. CAUTION actilox b30 and disperal 40: first FR/synergist is boehmite but every row also carries TAHHT-DDPO (organophosphorus) as 2nd FR; group-key view hides the P.
+boehmite alo,boehmite AlOOH,0,0,medium,MERGE: PURAL SB / Disperal 40 / Actilox B30 are boehmite grades. CAUTION actilox b30 and disperal 40: first FR/synergist is boehmite but every row also carries TAHHT-DDPO (organophosphorus) as 2nd FR; group-key view hides the P.
+borated ellagic acid derivative,borated ellagic acid derivative,0,0,high,B not P; no P
+borated gallic acid derivative,borated gallic acid derivative,0,0,high,B not P; no P
+bp-deta,BP-DETA (amine-functionalised black phosphorus),0,1,low,Elemental P core with organic amine; no clear P-C/P-O-C; treated inorganic. Borderline.
+bp-pid,BP-Pid (cyclamine-functionalised black phosphorus),0,1,low,As bp-deta.
+bp-ppda,BP-PPDA (amine-functionalised black phosphorus),0,1,low,As bp-deta.
+cbp,CBP,0,0,low,"UNRESOLVED acronym, no chemistry in names data; P status unknown -> coded 0/0 (excluded). Revisit if the paper is read."
+ce-btc,Ce-BTC MOF,0,0,high,no P
+chitosan,chitosan,0,0,high,no P
+"copper n,n'-piperazine cupb",CuPB copper piperazine bis(methylene phosphonate),1,1,medium,"Phosphonate, P-C."
+cp-6b,CP-6B,0,0,low,"UNRESOLVED acronym, no chemistry in names data; P status unknown -> coded 0/0 (excluded). Revisit if the paper is read."
+cps hydrothermal peanut-shell carbon,CPS-180 hydrothermal peanut-shell carbon,0,0,high,no P
+cps peanut-shell carbon pyrolysed 700 c,CPS-700 peanut-shell biochar,0,0,high,no P
+cps/co cobalt-loaded peanut-shell carbon pyrolysed 700 c,CPS-700/Co,0,0,high,no P
+dap@sio2,diammonium phosphate on silica (DAP@SiO2),0,1,high,DAP inorganic.
+ddp,DDM-modified APP (DDP),0,1,medium,APP cation-exchanged with DDM; inorganic polyphosphate backbone; separate from APP.
+dehmp,diethyl hydroxymethylphosphonate (DEHMP),1,1,high,Phosphonate.
+dehpa-alphosphate hybrid),DEHPA-Al (boehmite-bis(2-ethylhexyl) phosphate hybrid),1,1,medium,[hybrid]
+depa-al,DEPA-Al (boehmite-diethyl phosphate hybrid),1,1,medium,NOT AlPi: fr_chemistry says aluminium diethylphosphinate but the component text says boehmite-diethyl phosphate hybrid. [hybrid]
+didopo,DiDOPO (bis-DOPO),1,1,high,"DOPO derivative, separate from DOPO."
+disperal 40,boehmite AlOOH,0,0,medium,MERGE: PURAL SB / Disperal 40 / Actilox B30 are boehmite grades. CAUTION actilox b30 and disperal 40: first FR/synergist is boehmite but every row also carries TAHHT-DDPO (organophosphorus) as 2nd FR; group-key view hides the P.
+dmp,DMP (aryl phosphate),1,1,medium,Per formulation text.
+dopo,DOPO,1,1,high,"9,10-dihydro-9-oxa-10-phosphaphenanthrene 10-oxide. Derivatives kept separate."
+dopo-cupc,DOPO-CuPc,1,1,high,[hybrid] DOPO hyperbranched Cu phthalocyanine.
+dopo-khcpa,DOPO-KhCPA (P/N/Si/B),1,1,medium,DOPO-based.
+dopo-mmt,DOPO-MMT,1,1,medium,"[hybrid] DOPO + montmorillonite (2:1), mostly physical mix."
+dopo-modified novolac,DOPO-modified novolac (Struktol VP 3760),1,1,high,Rows also carry nano-SiO2 in some formulations.
+dopo-vsil,DOPO-VSil phosphasilazane,1,1,high,Fibre composite rows.
+dopo@zif-67,DOPO@ZIF-67,1,1,high,[hybrid] DOPO loaded on MOF.
+dopo–go,DOPO-GO,1,1,high,[hybrid] DOPO on graphene oxide.
+dopo–vtes–go,DOPO-VTES-GO,1,1,high,[hybrid] DOPO silane on GO.
+dpb,DPB,0,0,low,"UNRESOLVED acronym, no chemistry in names data; P status unknown -> coded 0/0 (excluded). Revisit if the paper is read."
+dpbsi,DPBSi (P/N/Si vanillin-based),1,1,medium,
+dpdcppo,DPDCPPO (phosphine oxide dicarboxylic acid),1,1,high,"Phosphine oxide, P-C."
+dppa-al,DPPA-Al (boehmite-diphenyl phosphate hybrid),1,1,medium,[hybrid]
+e20mi fr mat,E20MI FR mat,0,0,low,"UNRESOLVED acronym, no chemistry in names data; P status unknown -> coded 0/0 (excluded). Revisit if the paper is read."
+ead,EAD,0,0,low,"UNRESOLVED acronym, no chemistry in names data; P status unknown -> coded 0/0 (excluded). Revisit if the paper is read."
+eg,expandable graphite,0,0,medium,8 wt% EG + 22 wt% ATH in one paper; no P
+egm,"EGM (expandable graphite, grade unresolved)",0,0,medium,kept separate from EG; no P
+ellagic acid,ellagic acid,0,0,high,no P
+exolit ap750,Exolit AP 750 (APP-based intumescent formulation),0,1,medium,"NOT merged with APP: AP 750 is a formulated APP + N-synergist IFR, not the pure salt. Treated as inorganic-P (no P-C/P-O-C)."
+exolit op1230,aluminium diethylphosphinate (AlPi),1,1,high,MERGE: AlPi = Exolit OP 930/935/1230 (Clariant grades of Al(Et2PO2)3). Metal phosphinate P-C.
+exolit op935,aluminium diethylphosphinate (AlPi),1,1,high,MERGE: AlPi = Exolit OP 930/935/1230 (Clariant grades of Al(Et2PO2)3). Metal phosphinate P-C.
+exolit rp607,Exolit RP 607 (encapsulated red phosphorus),0,1,high,Microencapsulated RP masterbatch; kept separate from plain RP (coated).
+fa-bis-dopo,FA-bis-DOPO,1,1,medium,Furfural bis-DOPO adduct (inferred).
+few-layer black phosphorus,black phosphorus (few-layer),0,1,high,Elemental P.
+fr cros484,ammonium polyphosphate (APP),0,1,high,"MERGE: APP / ammonium polyphosphate / Budenheim FR CROS484 (APP grade). One paper lists Exolit AP 462 (microencapsulated APP) under this key (kept, medium risk). Inorganic polyphosphate salt."
+g-c3n4,graphitic carbon nitride,0,0,high,no P
+g-c3n4/pazn,g-C3N4/PAZn,1,1,low,PAZn presumed zinc phytate (unconfirmed). [hybrid]
+gallic acid,gallic acid,0,0,high,no P
+gposs,glycidyl POSS,0,0,medium,fibre composite; no P
+hacp,hexa(aminophenoxy)cyclotriphosphazene (HACP),1,1,medium,Phosphazene with aryloxy P-O-C.
+hb-dppa,HB-DPPA (reactive P-N co-curing agent),1,1,medium,
+hexaphenoxycyclotriphosphazene,hexaphenoxycyclotriphosphazene (HPCP),1,1,high,Phosphazene.
+hpdal,HPDAl,1,1,low,"Presumed Al salt of DOPO/hypophosphite hybrid (paper also tests AHP, DOPO); unconfirmed."
+hyperbranched polyphosphate ester hpe,hyperbranched polyphosphate ester (HPE),1,1,high,Phosphate ester. Rows at 0 wt% HPE are effectively controls.
+ifr,"IFR generic (APP/PER/MEL-type, paper-specific)",0,1,low,"Key pools 6 papers with different IFRs (APP/PER, APP/MEL/PER, phosphoric acid/MEL/PER); not one chemical. Inorganic-P by APP-based rule; the phosphoric acid/MEL/PER paper may form P-O-C esters in situ."
+il@nh2-mil-101,IL@NH2-MIL-101(Al) ([DPP-NC3bim][PMo]),1,1,low,[hybrid] ionic liquid with P-containing cation (assumed) and PMo anion.
+ind-mh2),magnesium hydroxide Mg(OH)2,0,0,medium,"MERGE: Mg(OH)2 incl. micro-whisker and industrial grades (morphology differs, substance same). mh in acsomega.8b03333 is presumed Mg(OH)2 (unconfirmed)."
+kraft lignin,kraft lignin,0,0,high,no P
+la-btc,La-BTC MOF,0,0,high,no P
+lamellar cobalt potassium pyrophosphate,cobalt potassium pyrophosphate,0,1,high,Pyrophosphate.
+lig-f,Lig-F (PA-DOPO + DOPO grafted lignin),1,1,high,[hybrid] DOPO-grafted lignin.
+lig-m,Lig-M (PA-DOPO grafted lignin),1,1,high,[hybrid] DOPO-grafted lignin.
+lig-p,Lig-P (pretreated lignin),0,0,low,Read as no P (pretreated); unconfirmed.
+magnesium hydroxide,magnesium hydroxide Mg(OH)2,0,0,medium,"MERGE: Mg(OH)2 incl. micro-whisker and industrial grades (morphology differs, substance same). mh in acsomega.8b03333 is presumed Mg(OH)2 (unconfirmed)."
+mapp,"MAPP (modified APP, unresolved)",0,1,low,"Presumed modified/encapsulated APP, appears in 2 papers; fr_chemistry guess (NH4H2PO4) is doubtful."
+melamine,melamine,0,0,high,no P
+mg2,magnesium hydroxide Mg(OH)2,0,0,medium,"MERGE: Mg(OH)2 incl. micro-whisker and industrial grades (morphology differs, substance same). mh in acsomega.8b03333 is presumed Mg(OH)2 (unconfirmed)."
+mgalzn-ldh-co3,MgAlZn-LDH-CO3,0,0,high,no P
+mgalzn-ldh-pmoa,MgAlZn-LDH intercalated PMoA,0,1,low,"PMoA presumed phosphomolybdic acid (inorganic polyoxometalate), unconfirmed."
+mh,magnesium hydroxide Mg(OH)2,0,0,medium,"MERGE: Mg(OH)2 incl. micro-whisker and industrial grades (morphology differs, substance same). mh in acsomega.8b03333 is presumed Mg(OH)2 (unconfirmed)."
+mno2@chs@sa@ni hybrid,MnO2@CHS@SA@Ni hybrid,0,0,high,no P
+moo3,molybdenum trioxide,0,0,high,no P
+mphp,melamine phenylphosphonate (MPhP),1,1,medium,Phenylphosphonate salt: P-C bond present although melamine salt.
+mpp,melamine polyphosphate (MPP),0,1,high,Inorganic-P salt -> 0 per brief (melamine is the cation; no P-C/P-O-C).
+mw-mh2 micro-whiskers),magnesium hydroxide Mg(OH)2,0,0,medium,"MERGE: Mg(OH)2 incl. micro-whisker and industrial grades (morphology differs, substance same). mh in acsomega.8b03333 is presumed Mg(OH)2 (unconfirmed)."
+nh2-mil-101,NH2-MIL-101(Al),0,0,high,no P
+ni@sio2-pa,Ni@SiO2-PA (nickel phytate on aminated SiO2),1,1,medium,[hybrid] phytate.
+no3-ldh,NO3-LDH,0,0,high,no P
+none,none,0,0,high,control / no FR
+oddpo,ODDPO,1,1,low,P stated (1.2 wt%); name suggests DPO-type organophosphorus; unconfirmed.
+pc-dpa-ldh,PC-DPA-LDH (phosphocreatine/dodecyl phosphate LDH),1,1,medium,[hybrid] dodecylphosphoric acid P-O-C.
+pc-ldh,phosphocreatine-intercalated LDH,0,1,low,Phosphocreatine has P-N only (no P-C/P-O-C) -> 0 by strict bond rule; arguable as organic-P.
+pcs,PCS,0,0,low,"UNRESOLVED acronym, no chemistry in names data; P status unknown -> coded 0/0 (excluded). Revisit if the paper is read."
+pds,PDS (melamine salt of CBP),0,0,low,"UNRESOLVED acronym, no chemistry in names data; P status unknown -> coded 0/0 (excluded). Revisit if the paper is read."
+pedscd,PEDSCD,1,1,low,Unresolved acronym; as spdscd. Guess.
+pentaerythritol phosphate melamine salt,pentaerythritol phosphate melamine salt,1,1,medium,PEPA-type cage phosphate ester P-O-C.
+phosphorus-containing polysulfone aropn2,P-polysulfone ArOPN2,1,1,medium,
+phosphorus-containing polysulfone aropo2,P-polysulfone ArOPO2,1,1,medium,
+phosphorus-containing polysulfone arpn2,P-polysulfone ArPN2,1,1,medium,
+phosphorus-containing polysulfone arpo2,P-polysulfone ArPO2,1,1,medium,P-containing polymer (P stated 1.25 wt%).
+phytic acid,phytic acid,1,1,high,Inositol hexakisphosphate: P-O-C esters (organic-P by brief).
+pipc,PIPC (spirocyclic pentaerythritol bisphosphonate),1,1,high,Phosphonate.
+po2-vsil,PO(OPh)2-VSil,1,1,medium,Fibre composite.
+polyaminopropylphenylsilsesquioxane,aminopropylphenyl silsesquioxane,0,0,high,no P
+polydopamine-coated red phosphorus,RP@PDA,0,1,high,Coated RP.
+polydopamine/melamine microencapsulated red phosphorus,RP@PDA/MA,0,1,high,Coated RP.
+pooph-vsil2diamidophosphorus phenylester),POOPh-VSil2,1,1,medium,Phosphoramidate phenyl ester; fibre composite.
+poss-triol,POSS-triol,0,0,high,no P
+ppa,PPA (polyphosphate amide),1,1,low,Presumed organic polyphosphoramide; unconfirmed.
+ppac-modified magnesium hydroxide,MH@PPAC,1,1,low,[hybrid] Mg(OH)2 with PPAC surface modifier; mostly inorganic hydroxide.
+ppap,piperazine pyrophosphate (PPAP),0,1,medium,Pyrophosphate salt; inorganic P.
+ppms-grafted carbon black,PPMS-grafted carbon black,1,1,low,[hybrid] pentaerythritol phosphate melamine salt on carbon black.
+ppy-mapp,polypyrrole-modified MAPP,0,1,low,APP-derived; inorganic P.
+rdp,resorcinol bis(diphenyl phosphate) (RDP),1,1,high,MERGE: RDP spelled three ways (resorcinol bis is a truncated name). Aryl phosphate P-O-C.
+rdp resorcinol bis,resorcinol bis(diphenyl phosphate) (RDP),1,1,high,MERGE: RDP spelled three ways (resorcinol bis is a truncated name). Aryl phosphate P-O-C.
+red phosphorus,red phosphorus,0,1,high,Elemental P.
+resorcinol bis,resorcinol bis(diphenyl phosphate) (RDP),1,1,high,MERGE: RDP spelled three ways (resorcinol bis is a truncated name). Aryl phosphate P-O-C.
+rgo,reduced graphene oxide,0,0,medium,"RGO first, APP second in the 15RGO@APP row; no P"
+rgo-app,RGO-APP hybrid,0,1,medium,APP on reduced graphene oxide.
+roflam b7,Roflam B7 (tert-butylphenyl phosphate),1,1,high,Aryl phosphate; 2nd FR Mg(OH)2 in some rows.
+roflam f5,Roflam F5 (phenyl-isopropylphenyl phosphate),1,1,high,Aryl phosphate; 2nd FR Mg(OH)2 in some rows.
+s600,melamine poly(magnesium phosphate) S600,0,1,medium,MERGE: S600 and S600) same additive (paper s10973-016-5934-4). Inorganic-P melamine polyphosphate-type salt; s600 key rows also contain MPP/AlPi/boehmite as 2nd FR in some rows.
+s600),melamine poly(magnesium phosphate) S600,0,1,medium,MERGE: S600 and S600) same additive (paper s10973-016-5934-4). Inorganic-P melamine polyphosphate-type salt; s600 key rows also contain MPP/AlPi/boehmite as 2nd FR in some rows.
+sb2o3,antimony trioxide,0,0,high,no P
+sbpdopo,SBPDOPO,1,1,medium,Name contains DOPO.
+scp-vsil,SCP-VSil (salicylic phosphasilazane),1,1,medium,Fibre composite.
+spdp-ptms@ath,SPDP-PTMS@ATH (N-P-Si grafted ATH),1,1,medium,[hybrid]
+spdscd,SPDSCD,1,1,low,Unresolved acronym; probable spirocyclic P/cyclodextrin charring agent. Guess.
+spherical cosn6,CoSn(OH)6 spherical,0,0,high,no P
+spiro-vsil2,Spiro-VSil2 (spiro-phosphate bis-silazane),1,1,medium,Fibre composite.
+spms,SPMS,0,0,low,UNRESOLVED; co-added with APP in rows (13.33%); P status unknown -> coded 0/0. Row also contains APP.
+tad,TAD (phosphaphenanthrene triazine),1,1,high,DOPO-type derivative.
+tahht-ddpo,TAHHT-DDPO,1,1,medium,"DDPO = diaryl phosphine-oxide type, P-C."
+tahht-dopo,TAHHT-DOPO,1,1,high,DOPO adduct.
+tahht-dopo-ddpo,TAHHT-DOPO-DDPO,1,1,medium,Both P units.
+tannic acid,tannic acid,0,0,high,no P
+tda,TDA (TGIC-DOPO-APTES),1,1,high,DOPO derivative.
+tdb,TDB (P/B triazine-trione),1,1,low,Organic P presumed.
+tmapp,"TMAPP (modified APP, unresolved)",0,1,low,Presumed modified APP; no name evidence of P-C/P-O-C.
+uio66-nh2,UiO-66-NH2 MOF,0,0,medium,"MERGE: solid vs hollow UiO-66-NH2, same substance."
+vph vopo4·2h2o,VOPO4 dihydrate,0,1,high,Inorganic.
+w-uio66-nh2,UiO-66-NH2 MOF,0,0,medium,"MERGE: solid vs hollow UiO-66-NH2, same substance."
+w-uio66-ppa,W-UiO66-PPA (phenylphosphonic acid grafted),1,1,high,[hybrid] phenylphosphonate P-C; paraffin PCM co-additive.
+y-btc,Y-BTC MOF,0,0,high,no P
+zhs,zinc hydroxystannate,0,0,high,no P
+zif-8,ZIF-8,0,0,high,no P
+zif-8@sio2,ZIF-8@SiO2,0,0,high,no P
+zn-pdh,Zn-PDH (phosphazene-modified organozinc complex),1,1,medium,
+zs,zinc stannate ZnSnO3,0,0,medium,assumed; no P

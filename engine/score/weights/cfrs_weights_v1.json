@@ -1,0 +1,25 @@
+{
+  "version": "v1",
+  "status": "current default; data-calibrated, expert prior pending",
+  "weights": {"TTI": 0.10, "pHRR": 0.18, "THR": 0.08, "avg_HRR": 0.21, "char_residue": 0.05, "LOI": 0.38},
+  "uncertainty_90pct": {
+    "TTI": [0.05, 0.18], "pHRR": [0.05, 0.28], "THR": [0.05, 0.18],
+    "avg_HRR": [0.15, 0.26], "char_residue": [0.05, 0.18], "LOI": [0.25, 0.46]
+  },
+  "provenance": {
+    "method": "Pairwise logistic ranking fit on the simplex (weight floor 0.05, ridge lambda 0.1 toward equal weights), engine/score/weights/calibrate.py --floor 0.05; pre-declared in engine/score/weights/DECLARATIONS.md (A1 + amendment A1-1).",
+    "data": "data/v2/cone_lit_benchmark_v1.csv (sha256 in results/calibration_floor05.json): 2573 within-paper, same-heat-flux pairs of formulations with different UL-94 class, 308 papers, 1511 rows.",
+    "result": "Paper-grouped 5-fold CV x10: out-of-fold concordance 0.880 vs 0.861 for v0 and 0.874 for equal weights; beats v0 in 10/10 repeats; paper-bootstrap 95% CI of the gain over v0 [+0.002, +0.035]. Adoption rule met.",
+    "rounding": "Full-data fit (TTI .102, pHRR .175, THR .081, avg_HRR .209, char .050, LOI .383) rounded to 0.01 so the weights sum to 1.",
+    "uncertainty": "5th-95th percentile of 500 paper-bootstrap refits; the lower ends sit on the 0.05 floor, so those bands are truncated, not tight.",
+    "caveats": "Calibrated to UL-94, a small-flame test, which favours LOI (also small-flame). avg_HRR is present in both rows of only 165 pairs. Scores are comparable only at the same heat flux. Smoke is not an input. The patent (US 64/054,493) gives no numeric weights; these are Dravix choices.",
+    "report": "context/research/CFRS_WEIGHTS.md"
+  },
+  "expert_prior": {
+    "status": "pending: survey not yet sent",
+    "experts": ["Dr. Stanislav I. Stoliarov", "Dr. Fernando Raffan-Montoya"],
+    "weights": null,
+    "how_to_apply": "Export Google Form CSV -> python ahp.py responses.csv --out results/ahp_weights.json (check CR < 0.10) -> python calibrate.py --prior results/ahp_weights.json --floor 0.05 --out results/calibration_ahp.json -> adopt as v1.1 under the A1 rule; record both."
+  },
+  "supersedes": "cfrs_weights_v0.json"
+}

@@ -1,0 +1,13 @@
+attempt A5: ABLATION: A3 without the neat-control baseline features (ctrl TTI/THR/...), which can act as a paper fingerprint.
+seeds 0-9
+  seed 0: MAE 130.9 R2 0.758
+  seed 1: MAE 125.8 R2 0.776
+  seed 2: MAE 134.3 R2 0.752
+  seed 3: MAE 142.3 R2 0.726
+  seed 4: MAE 133.4 R2 0.754
+  seed 5: MAE 138.7 R2 0.739
+  seed 6: MAE 126.2 R2 0.776
+  seed 7: MAE 134.2 R2 0.755
+  seed 8: MAE 132.7 R2 0.762
+  seed 9: MAE 132.3 R2 0.758
+RESULT A5: n=183 papers=54 FR groups=37 features=237 | MAE 133.1 +- 4.7 CI [115.3, 152.0] R2 0.756 | baseline ctrl x median ratio MAE 195.3

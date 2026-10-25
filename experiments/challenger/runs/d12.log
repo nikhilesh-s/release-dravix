@@ -1,0 +1,6 @@
+attempt d12: DEV ONLY: d10 with ExtraTrees only (gt_protocol_et).
+seeds 0-2 DEV
+  seed 0: MAE 162.8 R2 0.558
+  seed 1: MAE 165.0 R2 0.547
+  seed 2: MAE 168.1 R2 0.529
+RESULT d12 DEV: n=305 papers=91 FR groups=125 features=244 | MAE 165.3 +- 2.2 CI [146.9, 183.0] R2 0.545 | baseline ctrl x median ratio MAE 200.9

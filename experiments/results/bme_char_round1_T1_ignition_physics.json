@@ -1,0 +1,41 @@
+{
+  "slug": "bme_char_round1_T1_ignition_physics",
+  "target": "TTI (s)",
+  "attempt": "T1_ignition_physics",
+  "desc": "TTI baseline rf; target transformed by thermally-thick ignition theory: z = sqrt(tti_s) * heat_flux_kWm2 (proportional to sqrt(k rho c) (T_ig - T0), a material property pooled across 25 and 50 kW/m2); predictions inverted tti = (z / heat_flux)^2; R2 in seconds.",
+  "round_config": "experiments/configs/bme_char_round1.json",
+  "code": "data/v2/train_bme_char_round1.py",
+  "n_rows": 60,
+  "n_groups": 32,
+  "baseline": "baseline_rf",
+  "full_fit": {
+    "protocol": "training fit (same protocol as BME: full-dataset fit)",
+    "r2": 0.9124,
+    "ci_lo": 0.8542,
+    "ci_hi": 0.9711,
+    "mae": 3.706,
+    "bme": 0.95,
+    "higher": false,
+    "clear": false
+  },
+  "protocol_A": {
+    "protocol": "random 80/20 x 50, seeds 0-49",
+    "mean": 0.6491,
+    "mean_ci": [
+      0.5777,
+      0.7122
+    ],
+    "split_p025": 0.0628,
+    "split_p975": 0.9299,
+    "baseline_mean": 0.6148,
+    "paired_wins_vs_baseline": 31,
+    "bme": 0.58,
+    "higher": true,
+    "clear": false
+  },
+  "loso_r2": 0.237,
+  "baseline_loso_r2": 0.3355,
+  "lit_prior": null,
+  "comparable": "pending-human",
+  "note": "Reconstruction, not BME's population (Arnav 2026-10-02)."
+}

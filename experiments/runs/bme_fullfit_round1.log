@@ -1,0 +1,8 @@
+phrr_kWm2    rf         n=72 FULL 0.895 [0.841,0.928] MAE 51.27 vs 0.96 | A 0.604 CI[0.557,0.650] split[0.213,0.832] >bar 0.94 vs 0.3
+   others: {'rf': 0.8948, 'gbr_theirs': 0.9794, 'hgb': 0.9692, 'ridge': 0.7327}
+tti_s        rf         n=60 FULL 0.923 [0.882,0.963] MAE 3.94 vs 0.95 | A 0.615 CI[0.543,0.674] split[-0.165,0.902] >bar 0.74 vs 0.58
+   others: {'rf': 0.9231, 'gbr_theirs': 0.9896, 'hgb': 0.9842, 'ridge': 0.7483}
+thr_MJm2     gbr_theirs n=60 FULL 0.994 [0.991,0.997] MAE 1.55 vs 0.88 | A 0.828 CI[0.791,0.861] split[0.575,0.970] >bar 0.84 vs 0.67
+   others: {'rf': 0.9561, 'gbr_theirs': 0.9943, 'hgb': 0.9964, 'ridge': 0.8094}
+residue_pct  hgb        n=60 FULL 0.975 [0.939,0.999] MAE 1.47 vs 0.95 | A 0.807 CI[0.766,0.845] split[0.459,0.960] >bar 0.62 vs 0.82
+   others: {'rf': 0.9601, 'gbr_theirs': 0.9919, 'hgb': 0.9746, 'ridge': 0.8505}

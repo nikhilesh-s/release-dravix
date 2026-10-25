@@ -1,0 +1,3 @@
+attempt A7: Arnav 2026-10-22, before running: A3 with ECFP4 512 bits instead of 128 (more FR structure resolution). Reported as part of a best-of-N search.
+seeds 0-4
+  seed 0: MAE 133.7 R2 0.751

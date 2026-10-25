@@ -1,0 +1,37 @@
+{
+  "round": "wave2_exam_round1",
+  "status": "declared (unscored); committed before the engine predicts any wave-2 row",
+  "declared": "2026-10-22, Exam Proctor, after counting the population (row/paper counts only; no prediction, residual or label statistic looked at)",
+  "authority": "context/decisions/SEALED_TEST_SET.md (Nik): score the current engine once on wave 2 for TTI, THR, avg HRR; pre-declare script, metric and population.",
+  "run_once": "The script runs exactly once in scoring mode and refuses to run if experiments/results/wave2_exam_round1.json exists. No change to model, features, rows, metrics or baselines after the score is seen; any re-run needs a new config and is labelled as such.",
+  "code": "data/v2/wave2_exam_round1.py (committed with this config)",
+  "model": {
+    "what": "the current engine, engine/dravix_engine.py on relaunch-v2: litcone primary blend (HGB + ExtraTrees + Ridge on log1p, v3 features, top-100 additive vocabulary, predictions clipped to the training range)",
+    "training_data": "data/v2/cone_lit_benchmark_v1.csv, 4,529 rows / 806 papers, sha256 0b2af8e1817bdda1a9b1980e481b44d75ac62763f032696090aacd5545e05f99 (built by litcone_gt_round1 FINAL from 5,015 merged rows, before wave 2 landed). Script asserts the sha and the per-target training counts TTI 3368 / pHRR 4017 / THR 3355 / avg_HRR 759.",
+    "fit": "E.train() into a temporary path (the repo's gitignored bundle is not used or overwritten); predictions via E.predict(rows), the same call the demo/server uses."
+  },
+  "population": {
+    "source": "wave-2 OA extraction, commit 0fcca80 (master): data/v2/cone_lit_parts/oa_staging/rows_oa_w*.csv",
+    "processing": "train_litcone_gt_round1.load_rows() on the current tree (identical merge, figure-row exclusion, numeric parsing, DOI normalisation, paper-level source dedupe and (paper, formulation_label, flux, thickness) dedupe as the snapshot build), keep rows whose pmcid is a wave-2 pmcid, drop material_form in {textile, coated_substrate}.",
+    "leakage_rule": "drop any row whose paper group, DOI or pmcid appears in the training snapshot, or whose (DOI, formulation_label) appears there.",
+    "counts_before_scoring": {"wave2_after_dedupe": 773, "papers": 133, "after_form_filter": 655, "papers_after_form_filter": 116, "dropped_paper_leak": 0, "exam_rows": 655, "exam_papers": 116},
+    "per_target": {"rule": "target > 0 and heat_flux_kWm2 non-blank (same as training)",
+                   "TTI": [329, 49], "pHRR": [514, 89], "THR": [528, 90], "avg_HRR": [209, 25], "format": "[rows, papers]"}
+  },
+  "targets": {
+    "sealed": ["TTI (tti_s)", "THR (thr_MJm2)", "avg_HRR (avg_hrr_kWm2)"],
+    "also_reported": "pHRR (phrr_kWm2), reported separately: wave 2 is no longer sealed for pHRR (amendment 14 fits), but the engine itself never saw wave 2, so it is a valid held-out score for this engine only."
+  },
+  "metrics": {
+    "headline": "R2 in raw units (s, kW/m2, MJ/m2), as in litcone_gt_round1",
+    "also": ["MAE (raw units)", "Spearman rho"],
+    "ci": "95% percentile CI by paper bootstrap: 2,000 resamples of papers with replacement (numpy default_rng seed 0), same resamples for every predictor; paired engine-minus-baseline R2 difference with CI on the same resamples"
+  },
+  "baselines": {
+    "matrix_median": "training-snapshot median of the target per matrix_canonical (rows in that target's training set); unseen matrix -> overall training median. Scored on every exam row.",
+    "neat_control": "same wave-2 paper's is_control row, same target, same heat flux (thickness-matched if several), raw value. Scored on non-control rows that have one (control rows themselves excluded); engine and matrix_median re-scored on that same subset. Reported only if >= 10 rows and >= 5 papers. Note: uses the paper's own measured control, information the engine does not get."
+  },
+  "comparison": "engine's earlier unseen-paper scores on the training snapshot (litcone_gt_round1_FINAL.log, primary, P3 paper-grouped 5x10 mean): TTI -0.247, pHRR 0.286, THR 0.244, avg_HRR 0.234",
+  "reporting": "experiments/results/wave2_exam_round1.json, experiments/runs/wave2_exam_round1.log and .md; one line appended to context/decisions/SEALED_TEST_SET.md. Nothing on the site; wording is Nik's call. Quote as 'held-out, collected after the model was built'. Never 'beats SOTA'; comparable stays a human decision.",
+  "never": ["no row dropped after seeing its residual", "no second scoring run under this config", "no edit to numbers_of_record.json, leaderboard or trackers"]
+}

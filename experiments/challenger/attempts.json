@@ -1,0 +1,255 @@
+{
+ "A0": {
+  "declared": "2026-10-21",
+  "declaration": "Reproduction of Arnav amendment 13 through the challenger harness: B', first-FR groups, log ratio target, primary blend, v4 features, train on B' only. Must give 171.8.",
+  "population": "Bprime",
+  "groups": "first_fr",
+  "train_pool": "test_pop",
+  "target": "logratio",
+  "model": "primary",
+  "features": "v4"
+ },
+ "d1": {
+  "declared": "2026-10-21",
+  "declaration": "DEV ONLY (scored on non-P EP rows, never on B'): A0 config.",
+  "population": "Bprime",
+  "groups": "first_fr",
+  "train_pool": "test_pop",
+  "target": "logratio",
+  "model": "primary",
+  "features": "v4"
+ },
+ "d2": {
+  "declared": "2026-10-21",
+  "declaration": "DEV ONLY: d1 + train pool = all matrices' non-control rows with a same-paper control (test-fold FR identities removed).",
+  "population": "Bprime",
+  "groups": "first_fr",
+  "train_pool": "all_ctrl",
+  "target": "logratio",
+  "model": "primary",
+  "features": "v4"
+ },
+ "d3": {
+  "declared": "2026-10-21",
+  "declaration": "DEV ONLY: d1 + drop 100 per-name a_ columns, add P_load_wt and fr_load_wt.",
+  "population": "Bprime",
+  "groups": "first_fr",
+  "train_pool": "test_pop",
+  "target": "logratio",
+  "model": "primary",
+  "features": "v4_noA_pload"
+ },
+ "d4": {
+  "declared": "2026-10-21",
+  "declaration": "DEV ONLY: d3 + ECFP4 128-bit of the main SMILES-resolved FR.",
+  "population": "Bprime",
+  "groups": "first_fr",
+  "train_pool": "test_pop",
+  "target": "logratio",
+  "model": "primary",
+  "features": "v4_noA_pload_ecfp"
+ },
+ "d5": {
+  "declared": "2026-10-21",
+  "declaration": "DEV ONLY: d1 with linear ratio target weighted by control pHRR and absolute-error HGB (loss in kW/m2).",
+  "population": "Bprime",
+  "groups": "first_fr",
+  "train_pool": "test_pop",
+  "target": "ratio_w",
+  "model": "hgb_l1",
+  "features": "v4"
+ },
+ "d6": {
+  "population": "Bprime",
+  "groups": "first_fr",
+  "train_pool": "all_ctrl",
+  "target": "logratio",
+  "model": "primary",
+  "features": "v4_noA_pload",
+  "declared": "2026-10-21",
+  "declaration": "DEV ONLY: d2 (all-matrix pool) + noA + P_load/fr_load."
+ },
+ "d7": {
+  "population": "Bprime",
+  "groups": "first_fr",
+  "train_pool": "all_ctrl",
+  "target": "logratio",
+  "model": "primary",
+  "features": "v4_noA_pload_ecfp",
+  "declared": "2026-10-21",
+  "declaration": "DEV ONLY: d2 + noA + P_load + ECFP4 128."
+ },
+ "d8": {
+  "population": "Bprime",
+  "groups": "first_fr",
+  "train_pool": "all_ctrl",
+  "target": "ratio_w",
+  "model": "hgb_l1",
+  "features": "v4",
+  "declared": "2026-10-21",
+  "declaration": "DEV ONLY: d2 with ratio_w target + hgb_l1."
+ },
+ "d9": {
+  "population": "Bprime",
+  "groups": "first_fr",
+  "train_pool": "all_ctrl",
+  "target": "logratio",
+  "model": "primary",
+  "features": "v4_pload_ecfp",
+  "declared": "2026-10-21",
+  "declaration": "DEV ONLY: d2 + ECFP4 128 (keep a_ columns) + P_load."
+ },
+ "d10": {
+  "population": "Bprime",
+  "groups": "first_fr",
+  "train_pool": "all_ctrl",
+  "target": "logratio",
+  "model": "primary",
+  "features": "v4_noA_pload_ecfp_ctrlbase",
+  "declared": "2026-10-21",
+  "declaration": "DEV ONLY: d7 + same-paper neat-control baselines (TTI, THR, avg HRR, t_pHRR, char, TSR, EHC; log1p, blank on control rows)."
+ },
+ "d11": {
+  "population": "Bprime",
+  "groups": "first_fr",
+  "train_pool": "ep_ctrl",
+  "target": "logratio",
+  "model": "primary",
+  "features": "v4_noA_pload_ecfp",
+  "declared": "2026-10-21",
+  "declaration": "DEV ONLY: d7 with pool = EP rows with control only (does the non-EP data help?)."
+ },
+ "d12": {
+  "population": "Bprime",
+  "groups": "first_fr",
+  "train_pool": "all_ctrl",
+  "target": "logratio",
+  "model": "et",
+  "features": "v4_noA_pload_ecfp_ctrlbase",
+  "declared": "2026-10-21",
+  "declaration": "DEV ONLY: d10 with ExtraTrees only (gt_protocol_et)."
+ },
+ "d13": {
+  "population": "Bprime",
+  "groups": "first_fr",
+  "train_pool": "all_ctrl",
+  "target": "logratio",
+  "model": "hgb",
+  "features": "v4_noA_pload_ecfp_ctrlbase",
+  "declared": "2026-10-21",
+  "declaration": "DEV ONLY: d10 with the blend's HGB member only."
+ },
+ "d14": {
+  "population": "Bprime",
+  "groups": "first_fr",
+  "train_pool": "all_ctrl",
+  "target": "logratio",
+  "model": "primary",
+  "features": "v4_noA_pload_ctrlbase",
+  "declared": "2026-10-21",
+  "declaration": "DEV ONLY: d10 without ECFP (noA + pload + ctrlbase)."
+ },
+ "A1": {
+  "population": "Bprime",
+  "groups": "first_fr",
+  "train_pool": "all_ctrl",
+  "target": "logratio",
+  "model": "primary",
+  "declared": "2026-10-21",
+  "features": "v4_noA_pload_ctrlbase",
+  "declaration": "HEADLINE CANDIDATE 1. Config chosen on the dev population only (d14; B' never scored before this). Arnav's amendment-13 protocol on B' (same population, first-FR groups, seeds 0-9, 5 folds, repeat-0 group bootstrap) with: training pool = every non-control row (any matrix) with a same-paper same-flux control, minus all rows whose FR identity is in the test fold; features v4 minus the 100 per-name a_ columns, plus P_load_wt / fr_load_wt, plus same-paper neat-control TTI/THR/avgHRR/t_pHRR/char/TSR/EHC; log(pHRR/control) target; primary blend. Reported whatever the result."
+ },
+ "A2": {
+  "population": "Bprime",
+  "groups": "first_fr",
+  "train_pool": "all_ctrl",
+  "target": "logratio",
+  "model": "primary",
+  "declared": "2026-10-21",
+  "features": "v4_noA_pload_ctrlbase_ecfp",
+  "declaration": "A1 + ECFP4 (Morgan r2, 128 bits) of the main SMILES-resolved FR (fr_smiles_extra.csv, names-only annotation), the USTC input. Not testable on dev (dev FRs mostly lack SMILES). Rule fixed now: the better of A1/A2 on B' carries forward to A3/A4; this selection is disclosed."
+ },
+ "A3": {
+  "population": "Bprime",
+  "groups": "alias_all",
+  "train_pool": "all_ctrl",
+  "target": "logratio",
+  "model": "primary",
+  "declared": "2026-10-21",
+  "features": "v4_noA_pload_ctrlbase_ecfp",
+  "declaration": "HEADLINE CANDIDATE 2 (A2 won A1/A2 per the A2 rule). A2 with stricter FR identity groups: names-only synonym map over every first-FR key in the all-matrix pool (fr_group_alias_all.csv, built blind) + merge of identities sharing an InChIKey skeleton. Fixes the synonym leak (app vs ammonium polyphosphate, rdp variants, AlPi grades, cross-matrix synonyms). Fold map = seed-r permutation of the new group set (cannot equal Arnav's exactly). Becomes the headline if it runs, whatever the result, because it is the fairer split."
+ },
+ "A0s": {
+  "declared": "2026-10-21",
+  "declaration": "DIAGNOSTIC (coordinator request): Arnav's amendment 13 (A0) re-scored with the A3 strict groups, to measure the synonym-leak delta on his baseline.",
+  "population": "Bprime",
+  "groups": "alias_all",
+  "train_pool": "test_pop",
+  "target": "logratio",
+  "model": "primary",
+  "features": "v4"
+ },
+ "A4": {
+  "population": "Bprime",
+  "groups": "alias_all",
+  "train_pool": "all_ctrl",
+  "target": "logratio",
+  "model": "primary",
+  "declared": "2026-10-21",
+  "features": "v4_noA_pload_ctrlbase_ecfp",
+  "declaration": "DIAGNOSTIC: A3 + also drop every row from the test fold's papers from training (FR-and-paper held out). Measures how much of A3 comes from same-paper rows / paper-identifying control features. Not the USTC protocol.",
+  "exclude_test_papers": true
+ },
+ "A5": {
+  "population": "Bprime",
+  "groups": "alias_all",
+  "train_pool": "all_ctrl",
+  "target": "logratio",
+  "model": "primary",
+  "declared": "2026-10-21",
+  "features": "v4_noA_pload_ecfp",
+  "declaration": "ABLATION: A3 without the neat-control baseline features (ctrl TTI/THR/...), which can act as a paper fingerprint."
+ },
+ "A6": {
+  "population": "v2",
+  "groups": "alias_all",
+  "train_pool": "all_ctrl",
+  "target": "logratio",
+  "model": "primary",
+  "declared": "2026-10-21",
+  "features": "v4_noA_pload_ctrlbase_ecfp",
+  "declaration": "Data Matcher population v2 (EP, bulk only, organophosphorus first FR per fr_group_alias.csv, with control) with the A3 model and groups. Closer to USTC's stated scope; reported alongside A3, not instead."
+ },
+ "RC1": {
+  "declared": "2026-10-21",
+  "declaration": "RUN CHECK (leak check, not a model change): A3 but also drop from training every row that shares ANY FR/synergist identity (norm + fr_group_alias_all + InChIKey-skeleton merge) with any row in the test fold, not only the first-FR identity (exclude_any_fr). Quantifies the non-first-component leak. Reported with A3; changes no headline.",
+  "population": "Bprime",
+  "groups": "alias_all",
+  "train_pool": "all_ctrl",
+  "target": "logratio",
+  "model": "primary",
+  "features": "v4_noA_pload_ctrlbase_ecfp",
+  "exclude_any_fr": true
+ },
+ "A7": {
+  "population": "Bprime",
+  "groups": "alias_all",
+  "train_pool": "all_ctrl",
+  "target": "logratio",
+  "model": "primary",
+  "declared": "2026-10-22",
+  "features": "v4_noA_pload_ctrlbase_ecfp",
+  "ecfp_bits": 512,
+  "declaration": "Arnav 2026-10-22, before running: A3 with ECFP4 512 bits instead of 128 (more FR structure resolution). Reported as part of a best-of-N search."
+ },
+ "A8": {
+  "population": "Bprime",
+  "groups": "alias_all",
+  "train_pool": "all_ctrl",
+  "target": "logratio",
+  "model": "hgb_et",
+  "declared": "2026-10-22",
+  "features": "v4_noA_pload_ctrlbase_ecfp",
+  "declaration": "Arnav 2026-10-22, before running: A3 with the Ridge member removed from the blend (HGB + ExtraTrees). Reported as part of a best-of-N search."
+ }
+}

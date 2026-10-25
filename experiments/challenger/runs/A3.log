@@ -1,0 +1,13 @@
+attempt A3: HEADLINE CANDIDATE 2 (A2 won A1/A2 per the A2 rule). A2 with stricter FR identity groups: names-only synonym map over every first-FR key in the all-matrix pool (fr_group_alias_all.csv, built blind) + merge of identities sharing an InChIKey skeleton. Fixes the synonym leak (app vs ammonium polyphosphate, rdp variants, AlPi grades, cross-matrix synonyms). Fold map = seed-r permutation of the new group set (cannot equal Arnav's exactly). Becomes the headline if it runs, whatever the result, because it is the fairer split.
+seeds 0-9
+  seed 0: MAE 130.0 R2 0.761
+  seed 1: MAE 121.2 R2 0.793
+  seed 2: MAE 128.5 R2 0.772
+  seed 3: MAE 133.7 R2 0.755
+  seed 4: MAE 131.4 R2 0.767
+  seed 5: MAE 130.8 R2 0.771
+  seed 6: MAE 123.0 R2 0.790
+  seed 7: MAE 126.0 R2 0.778
+  seed 8: MAE 129.9 R2 0.770
+  seed 9: MAE 124.1 R2 0.783
+RESULT A3: n=183 papers=54 FR groups=37 features=244 | MAE 127.8 +- 3.9 CI [113.5, 149.9] R2 0.774 | baseline ctrl x median ratio MAE 195.3

@@ -1,0 +1,36 @@
+population: {"wave2_after_dedupe": 773, "wave2_papers_after_dedupe": 133, "after_form_filter": 655, "papers_after_form_filter": 116, "dropped_paper_leak_rows": 0, "dropped_paper_leak_papers": 0, "exam_rows": 655, "exam_papers": 116, "n_TTI": 329, "papers_TTI": 49, "n_pHRR": 514, "papers_pHRR": 89, "n_THR": 528, "papers_THR": 90, "n_avg_HRR": 209, "papers_avg_HRR": 25}
+trained TTI: 3368 rows
+trained pHRR: 4017 rows
+trained THR: 3355 rows
+trained avg_HRR: 759 rows
+wrote /var/folders/02/5t57twj10lqfwpkgwr2px9kc0000gp/T/tmp6xqgf3ix/dravix_engine.joblib
+
+=== TTI (SEALED) ===
+  all                      engine        n= 329/ 49p  R2   0.186 [0.113, 0.636]  MAE    23.97 [12.4, 45.6]  rho 0.739 [0.507, 0.874]
+  all                      matrix_median n= 329/ 49p  R2   0.055 [-0.020, 0.423]  MAE    28.25 [15.4, 52.0]  rho 0.610 [0.351, 0.795]  dR2(engine-this) 0.131 [0.083, 0.306]
+  noncontrol_with_control  engine        n= 271/ 49p  R2   0.170 [0.098, 0.634]  MAE    25.46 [12.4, 50.2]  rho 0.721 [0.460, 0.883]
+  noncontrol_with_control  matrix_median n= 271/ 49p  R2   0.046 [-0.028, 0.421]  MAE    29.42 [15.1, 56.6]  rho 0.610 [0.327, 0.803]  dR2(engine-this) 0.124 [0.061, 0.306]
+  noncontrol_with_control  neat_control  n= 271/ 49p  R2   0.436 [0.382, 0.676]  MAE    22.18 [11.5, 41.5]  rho 0.816 [0.656, 0.904]  dR2(engine-this) -0.266 [-0.301, 0.093]
+
+=== pHRR (not sealed; engine unseen) ===
+  all                      engine        n= 514/ 89p  R2   0.509 [0.417, 0.595]  MAE   170.39 [142.2, 200.5]  rho 0.794 [0.713, 0.851]
+  all                      matrix_median n= 514/ 89p  R2   0.273 [0.140, 0.400]  MAE   208.33 [177.6, 242.4]  rho 0.640 [0.481, 0.743]  dR2(engine-this) 0.236 [0.130, 0.340]
+  noncontrol_with_control  engine        n= 408/ 87p  R2   0.483 [0.332, 0.606]  MAE   147.97 [121.6, 177.5]  rho 0.771 [0.658, 0.839]
+  noncontrol_with_control  matrix_median n= 408/ 87p  R2   0.366 [0.151, 0.505]  MAE   174.89 [148.0, 207.2]  rho 0.657 [0.471, 0.778]  dR2(engine-this) 0.117 [-0.014, 0.285]
+  noncontrol_with_control  neat_control  n= 408/ 87p  R2  -2.369 [-6.381, -0.278]  MAE   313.32 [220.5, 438.5]  rho 0.827 [0.714, 0.885]  dR2(engine-this) 2.852 [0.754, 6.879]
+
+=== THR (SEALED) ===
+  all                      engine        n= 528/ 90p  R2   0.486 [0.342, 0.603]  MAE    23.24 [19.1, 27.8]  rho 0.743 [0.624, 0.824]
+  all                      matrix_median n= 528/ 90p  R2   0.125 [-0.304, 0.357]  MAE    33.70 [27.5, 40.0]  rho 0.531 [0.298, 0.704]  dR2(engine-this) 0.360 [0.095, 0.773]
+  noncontrol_with_control  engine        n= 420/ 88p  R2   0.481 [0.336, 0.605]  MAE    22.36 [18.1, 26.9]  rho 0.728 [0.588, 0.824]
+  noncontrol_with_control  matrix_median n= 420/ 88p  R2   0.057 [-0.597, 0.362]  MAE    33.79 [26.9, 40.4]  rho 0.536 [0.269, 0.712]  dR2(engine-this) 0.423 [0.095, 1.060]
+  noncontrol_with_control  neat_control  n= 420/ 88p  R2   0.593 [0.389, 0.716]  MAE    20.19 [16.5, 24.1]  rho 0.937 [0.887, 0.958]  dR2(engine-this) -0.113 [-0.266, 0.098]
+
+=== avg_HRR (SEALED) ===
+  all                      engine        n= 209/ 25p  R2   0.642 [0.426, 0.716]  MAE    56.71 [44.0, 73.4]  rho 0.827 [0.649, 0.900]
+  all                      matrix_median n= 209/ 25p  R2   0.423 [0.197, 0.570]  MAE    66.02 [45.9, 98.5]  rho 0.731 [0.455, 0.821]  dR2(engine-this) 0.219 [-0.006, 0.387]
+  noncontrol_with_control  engine        n= 179/ 25p  R2   0.632 [0.331, 0.716]  MAE    54.62 [41.9, 71.2]  rho 0.803 [0.577, 0.888]
+  noncontrol_with_control  matrix_median n= 179/ 25p  R2   0.477 [0.259, 0.623]  MAE    59.79 [40.2, 92.1]  rho 0.775 [0.494, 0.858]  dR2(engine-this) 0.156 [-0.148, 0.332]
+  noncontrol_with_control  neat_control  n= 179/ 25p  R2   0.184 [-0.981, 0.511]  MAE    80.46 [59.4, 109.4]  rho 0.837 [0.631, 0.909]  dR2(engine-this) 0.448 [0.161, 1.445]
+
+wrote ~/dravix/experiments/results/wave2_exam_round1.json (752s)

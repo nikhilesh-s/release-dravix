@@ -1,0 +1,6 @@
+attempt d2: DEV ONLY: d1 + train pool = all matrices' non-control rows with a same-paper control (test-fold FR identities removed).
+seeds 0-2 DEV
+  seed 0: MAE 163.5 R2 0.574
+  seed 1: MAE 162.5 R2 0.573
+  seed 2: MAE 164.0 R2 0.570
+RESULT d2 DEV: n=305 papers=91 FR groups=125 features=207 | MAE 163.3 +- 0.6 CI [146.0, 179.2] R2 0.572 | baseline ctrl x median ratio MAE 200.9

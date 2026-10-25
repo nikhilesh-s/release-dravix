@@ -1,0 +1,57 @@
+snapshot ok: 4529 rows / 806 papers; X (4529, 175); query builder == training builder
+  repeat 0 fold 0 done (45 s)
+  repeat 0 fold 1 done (78 s)
+  repeat 0 fold 2 done (125 s)
+  repeat 0 fold 3 done (159 s)
+  repeat 0 fold 4 done (218 s)
+  repeat 1 fold 0 done (283 s)
+  repeat 1 fold 1 done (352 s)
+  repeat 1 fold 2 done (375 s)
+  repeat 1 fold 3 done (393 s)
+  repeat 1 fold 4 done (415 s)
+  repeat 2 fold 0 done (437 s)
+  repeat 2 fold 1 done (458 s)
+  repeat 2 fold 2 done (483 s)
+  repeat 2 fold 3 done (508 s)
+  repeat 2 fold 4 done (528 s)
+  repeat 3 fold 0 done (546 s)
+  repeat 3 fold 1 done (568 s)
+  repeat 3 fold 2 done (586 s)
+  repeat 3 fold 3 done (602 s)
+  repeat 3 fold 4 done (615 s)
+  repeat 4 fold 0 done (637 s)
+  repeat 4 fold 1 done (653 s)
+  repeat 4 fold 2 done (678 s)
+  repeat 4 fold 3 done (706 s)
+  repeat 4 fold 4 done (727 s)
+
+TTI: 3368 rows / 598 papers; eligible ['A_abs', 'B_spread', 'C_knn']; selected A_abs
+  A_abs     80%: cov 0.796 (paper 0.801) width mean 67.2 median 63.1 | 90%: cov 0.900 [0.896, 0.902] (paper 0.901) width mean 113.6 median 106.8 log 2.073 | OOD {'ood_rate': 0.2667, 'cov_flagged': 0.7921, 'cov_unflagged': 0.9388, 'width_median_flagged': 96.9812, 'width_median_unflagged': 111.5242}
+  B_spread  80%: cov 0.802 (paper 0.801) width mean 79.0 median 55.2 | 90%: cov 0.906 [0.903, 0.910] (paper 0.901) width mean 130.4 median 86.1 log 2.274 | OOD {'ood_rate': 0.2667, 'cov_flagged': 0.8482, 'cov_unflagged': 0.9266, 'width_median_flagged': 97.8962, 'width_median_unflagged': 81.8714}
+  C_knn     80%: cov 0.817 (paper 0.802) width mean 152.1 median 66.9 | 90%: cov 0.907 [0.903, 0.910] (paper 0.900) width mean 248.5 median 110.7 log 3.155 | OOD {'ood_rate': 0.2667, 'cov_flagged': 0.8591, 'cov_unflagged': 0.9245, 'width_median_flagged': 137.8897, 'width_median_unflagged': 102.6812}
+
+pHRR: 4017 rows / 725 papers; eligible ['A_abs', 'B_spread', 'C_knn']; selected A_abs
+  A_abs     80%: cov 0.787 (paper 0.800) width mean 643.3 median 533.8 | 90%: cov 0.890 [0.889, 0.891] (paper 0.901) width mean 1025.2 median 852.5 log 2.042 | OOD {'ood_rate': 0.2467, 'cov_flagged': 0.7804, 'cov_unflagged': 0.9261, 'width_median_flagged': 601.1736, 'width_median_unflagged': 942.8786}
+  B_spread  80%: cov 0.787 (paper 0.800) width mean 690.5 median 538.4 | 90%: cov 0.893 [0.890, 0.896] (paper 0.901) width mean 1057.0 median 839.0 log 2.271 | OOD {'ood_rate': 0.2467, 'cov_flagged': 0.8353, 'cov_unflagged': 0.9123, 'width_median_flagged': 730.8261, 'width_median_unflagged': 866.2261}
+  C_knn     80%: cov 0.805 (paper 0.801) width mean 1055.6 median 666.6 | 90%: cov 0.900 [0.898, 0.902] (paper 0.901) width mean 1516.3 median 1067.7 log 3.276 | OOD {'ood_rate': 0.2467, 'cov_flagged': 0.8383, 'cov_unflagged': 0.9206, 'width_median_flagged': 967.3046, 'width_median_unflagged': 1081.4457}
+
+THR: 3355 rows / 619 papers; eligible ['A_abs', 'B_spread', 'C_knn']; selected A_abs
+  A_abs     80%: cov 0.791 (paper 0.801) width mean 97.9 median 99.6 | 90%: cov 0.896 [0.893, 0.901] (paper 0.900) width mean 166.6 median 170.9 log 2.096 | OOD {'ood_rate': 0.2292, 'cov_flagged': 0.7943, 'cov_unflagged': 0.9257, 'width_median_flagged': 143.4593, 'width_median_unflagged': 178.6653}
+  B_spread  80%: cov 0.807 (paper 0.800) width mean 100.7 median 83.5 | 90%: cov 0.907 [0.900, 0.912] (paper 0.901) width mean 152.1 median 128.3 log 2.261 | OOD {'ood_rate': 0.2292, 'cov_flagged': 0.857, 'cov_unflagged': 0.9225, 'width_median_flagged': 144.0691, 'width_median_unflagged': 125.268}
+  C_knn     80%: cov 0.815 (paper 0.801) width mean 151.3 median 95.6 | 90%: cov 0.906 [0.903, 0.908] (paper 0.900) width mean 205.5 median 158.7 log 3.233 | OOD {'ood_rate': 0.2292, 'cov_flagged': 0.8624, 'cov_unflagged': 0.9185, 'width_median_flagged': 195.5881, 'width_median_unflagged': 149.5445}
+
+avg_HRR: 759 rows / 130 papers; eligible ['A_abs', 'B_spread', 'C_knn']; selected A_abs
+  A_abs     80%: cov 0.795 (paper 0.806) width mean 310.3 median 274.7 | 90%: cov 0.897 [0.885, 0.909] (paper 0.903) width mean 499.6 median 449.6 log 2.524 | OOD {'ood_rate': 0.2717, 'cov_flagged': 0.8681, 'cov_unflagged': 0.9078, 'width_median_flagged': 385.0198, 'width_median_unflagged': 497.2011}
+  B_spread  80%: cov 0.800 (paper 0.808) width mean 344.9 median 278.0 | 90%: cov 0.903 [0.897, 0.906] (paper 0.906) width mean 533.8 median 440.3 log 2.845 | OOD {'ood_rate': 0.2717, 'cov_flagged': 0.836, 'cov_unflagged': 0.928, 'width_median_flagged': 318.3707, 'width_median_unflagged': 505.7687}
+  C_knn     80%: cov 0.816 (paper 0.806) width mean 507.7 median 336.6 | 90%: cov 0.914 [0.909, 0.920] (paper 0.906) width mean 664.2 median 519.6 log 3.588 | OOD {'ood_rate': 0.2717, 'cov_flagged': 0.859, 'cov_unflagged': 0.9341, 'width_median_flagged': 345.3496, 'width_median_unflagged': 589.8519}
+
+residual correlation ['TTI', 'pHRR', 'THR', 'avg_HRR']:
+[[ 1.    -0.009 -0.034 -0.013]
+ [-0.009  1.     0.523  0.584]
+ [-0.034  0.523  1.     0.509]
+ [-0.013  0.584  0.509  1.   ]]
+
+CFRS check (518 rows with all 4 targets): {'rows': 518, 'papers': 86, 'coverage_80': 0.8282, 'coverage_90': 0.8919, 'width90_mean': 52.41, 'width90_median': 57.35}
+
+wrote ~/dravix-uncertainty/api/uncertainty.joblib (0.05 MB) and ~/dravix-uncertainty/experiments/runs/conformal_round1.json in 728.6 s
+EXIT 0

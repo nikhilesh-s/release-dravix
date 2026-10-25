@@ -1,0 +1,6 @@
+{
+  "version": "v0",
+  "status": "superseded placeholder, kept for reproducibility",
+  "weights": {"TTI": 0.20, "pHRR": 0.30, "THR": 0.10, "avg_HRR": 0.20, "char_residue": 0.10, "LOI": 0.10},
+  "provenance": "Provisional ranking by judgement in plans/FABLE_PLAN_2026-10-01.md:209 (pHRR .30, TTI .20, FIGRA .20, THR .10, LOI .10, CR .10), with the FIGRA slot given to avg_HRR because the engine does not predict FIGRA. Not fitted to data; the patent (US 64/054,493) gives no numeric weights."
+}

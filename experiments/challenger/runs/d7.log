@@ -1,0 +1,6 @@
+attempt d7: DEV ONLY: d2 + noA + P_load + ECFP4 128.
+seeds 0-2 DEV
+  seed 0: MAE 165.9 R2 0.565
+  seed 1: MAE 164.2 R2 0.573
+  seed 2: MAE 164.6 R2 0.571
+RESULT d7 DEV: n=305 papers=91 FR groups=125 features=237 | MAE 164.9 +- 0.7 CI [147.9, 181.6] R2 0.570 | baseline ctrl x median ratio MAE 200.9
