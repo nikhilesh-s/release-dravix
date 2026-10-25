@@ -4,15 +4,13 @@
 
 Dravix predicts cone-calorimeter results (time to ignition, peak and average heat release rate, total heat released) for flame-retarded polymer formulations, scores them with a composite fire-risk screening score (CFRS Score), and benchmarks the predictions on data extracted from the published literature.
 
-Authors: Nikhilesh Suravarjjala, Jaanya Gupta, Arnav Saini. Version 2.0.0. See `CITATION.cff` to cite.
+Authors: Nikhilesh Suravarjjala, Arnav Saini. Version 2.0.0. See `CITATION.cff` to cite.
 
 | | |
 |---|---|
 | Website | https://dravix.materiamse.com |
 | Engine (web app) | https://dravix-engine.materiamse.com |
-| Write-up | https://www.materiamse.com/blog/tri-valley-students-beat-georgia-tech-ustc-bme-budapest |
-| Software record (Zenodo) | DOI added on publication |
-| Benchmark dataset (Zenodo) | DOI added on publication |
+| Blog post (Materia MSE) | https://www.materiamse.com/blog/tri-valley-students-beat-georgia-tech-ustc-bme-budapest |
 
 **Read this first.** Dravix is a screening aid. It is not a substitute for a fire test and is not for certifying a material. Held-out accuracy depends heavily on how the data is split: random row splits overstate skill on new materials, so use the paper-grouped protocol. The protocol, the reference results and every comparison with published models (with its caveats) are in `BENCHMARK.md`.
 
@@ -58,6 +56,10 @@ Then run the dashboard (`dashboard/`, `npm install && npm run dev`, with `VITE_A
 
 Issues and pull requests are welcome, especially reports of extraction errors in the benchmark dataset (cite the row's `row_id` and DOI).
 
+## Acknowledgements
+
+We thank Jaanya Gupta, Dravix's business lead, for her work on the project.
+
 ## Licence
 
-Code: Apache-2.0 (`LICENSE`, `NOTICE`). Benchmark dataset: CC BY 4.0, distributed separately with the dataset record. Patent pending: U.S. provisional application No. 64/054,493.
+Code: Apache-2.0 (`LICENSE`, `NOTICE`). Benchmark dataset: CC BY 4.0, published as a separate dataset record; the copy at `data/v2/cone_lit_benchmark_v1.csv` is identical and is also CC BY 4.0, not Apache-2.0. Patent pending: U.S. provisional application No. 64/054,493.

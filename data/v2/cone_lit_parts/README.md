@@ -1,3 +1,5 @@
+> Verbatim working document. In the released CSV, `notes` is blank and `evidence` holds a locator only (see the dataset README, section 3).
+
 # Cone-calorimeter literature rows (multi-property), started 2026-10-11 (Claude, Arnav's session)
 
 Purpose: a separate, new literature dataset of fire properties of flame-retarded polymers and foams (TTI, pHRR, THR, residue, and LOI where reported). It is NOT part of the FSRI-based records (pHRR/TTI/THR/CR) and not part of the LOI benchmark; it has no MCC/STA inputs. Whether and how it is used for modelling is a human/orchestrator decision.

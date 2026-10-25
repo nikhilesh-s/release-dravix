@@ -3,16 +3,13 @@ message: "If you use this software, please cite it using the metadata below, and
 type: software
 title: "Dravix: formulation-to-cone-calorimeter property models and benchmark code"
 version: "2.0.0"
-# date-released: "YYYY-MM-DD"            # fill on publication day
-# doi: "10.5281/zenodo.NNNNNNN"          # reserved software version DOI
 license: "Apache-2.0"
 repository-code: "https://github.com/nikhilesh-s/release-dravix"
 url: "https://dravix.materiamse.com"
 authors:
   - family-names: "Suravarjjala"
     given-names: "Nikhilesh"
-  - family-names: "Gupta"
-    given-names: "Jaanya"
+    orcid: "https://orcid.org/0009-0004-7227-2213"
   - family-names: "Saini"
     given-names: "Arnav"
     orcid: "https://orcid.org/0009-0007-7209-1545"
@@ -41,11 +38,8 @@ references:
     authors:
       - family-names: "Suravarjjala"
         given-names: "Nikhilesh"
-      - family-names: "Gupta"
-        given-names: "Jaanya"
       - family-names: "Saini"
         given-names: "Arnav"
-    # doi: "10.5281/zenodo.NNNNNNN"          # reserved benchmark version DOI
   - type: article
     title: "Polymer composites informatics for flammability, thermal, mechanical and electrical property predictions"
     doi: "10.1039/D4PY01417K"

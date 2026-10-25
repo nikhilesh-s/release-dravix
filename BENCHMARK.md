@@ -2,7 +2,7 @@
 
 This file defines how to score a model on `cone_lit_benchmark_v1.csv`, which numbers count as evidence, and what "comparable" means. The same file ships in the software and dataset records. Numbers below are from the run logs shipped with software release 2.0.0 (`experiments/runs/litcone_gt_round1_FINAL.log`, `..._GTPROTO2.log`, `litcone_ustc_style.log`, `samedata_*`, `experiments/challenger/`, `wave2_exam_round1.*`).
 
-Paths are relative to the software record. In the dataset record the main logs are in `results/`, the config and critic are in `protocol/`, and the other cited files are in the software record only.
+Paths are relative to the software record. In the dataset record the main logs are in `results/`, the config and critic are in `protocol/`, and the other cited files are in the software record only. `splits_v1.csv` and `make_splits.py` are in the dataset record only.
 
 ## 1 - Tasks
 
@@ -32,7 +32,7 @@ The exact folds are in `splits_v1.csv` (columns `target, protocol, repeat, row_i
 - **R²**, in raw target units (a model may fit log1p internally but must back-transform), **pooled over all out-of-fold predictions of one repeat**. Report the mean ± SD over the 10 repeats (SD is NumPy's default, ddof = 0).
 - **95% CI**: 2,000 bootstrap resamples (NumPy `default_rng(0)`) of the repeat-0 out-of-fold predictions. P3 resamples **papers** (all rows of a drawn paper); P2 resamples rows. The CI is for repeat 0 only, so it need not contain the 10-repeat mean (e.g. primary TTI P3).
 - Also report **MAE** (repeat 0) and the number of rows and papers scored.
-- A model "improves" on another only if it wins on P3 in at least 8 of 10 **paired** repeats (same folds) and its CI lower bound is not lower than the other model's. That is the repo's adoption gate.
+- A model "improves" on another only if it wins on P3 in at least 8 of 10 **paired** repeats (same folds) and its CI lower bound is not lower than the other model's. That is the project's adoption gate.
 
 ## 4 - Reference results (v1)
 
@@ -99,12 +99,12 @@ One draw from one extraction wave with small paper counts and wide CIs; it is a 
 
 ## 8 - What we do not claim
 
-- We do not claim to beat any state of the art. No result is marked comparable.
+- We do not claim any result is better than a published model. No result is marked comparable.
 - We do not claim that the engine predicts new materials well. Paper-grouped R² (P3) is 0.23-0.29 for pHRR, THR and average HRR, and **negative for TTI**, i.e. worse than predicting the mean.
 - We do not claim training-fit R² near 1 shows skill.
 - We do not claim the dataset is error-free. 0.22% is measured on a 20% sample; the rest is unchecked.
 - We do not claim results transfer across dataset versions. New rows mean new folds.
-- The repository's "48/48 reproduced" check covers the FSRI and LOI records, not this benchmark.
+- The project's "48/48 reproduced" check covers the FSRI and LOI records, not this benchmark.
 
 ## 9 - How to report a result
 

@@ -17,8 +17,8 @@ Population B' (organophosphorus flame retardants in epoxy, 183 rows, 54 papers).
 - **A3 mean over its 12 seeds:** 127.9. That is consistent with the challenger's 10-seed 127.8 [113.5, 149.9].
 
 ## How to quote it
-- **OK:** "Our best of 14 runs reaches MAE 121.2, below USTC's 125.5."
-- **Always next to it:** the A3 average (127.9 over 12 seeds, 127.8 [113.5, 149.9] over seeds 0–9), so "comparable to USTC" stays visible.
+- **OK:** "Our best of 28 runs reaches MAE 121.2, below USTC's 125.5; the mean over 26 A3 seeds is 128.0, and 8 of 26 are below 125.5." (Was "best of 14"; superseded, see the addendum.)
+- **Always next to it:** the A3 average (128.0 over 26 seeds; was 127.9 over 12 before the recount; 127.8 [113.5, 149.9] over seeds 0–9), so "comparable to USTC" stays visible.
 - **Not OK:** "beats USTC" or "beats SOTA" without the "best of N" qualifier.
 - **Caveats from the challenger handoff still apply:**
   - A4 (test papers also held out) scores 141.7.
