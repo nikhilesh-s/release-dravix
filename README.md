@@ -58,7 +58,7 @@ Issues and pull requests are welcome, especially reports of extraction errors in
 
 ## Acknowledgements
 
-We thank Jaanya Gupta, Dravix's business lead, for her work on the project.
+We thank Jaanya Gupta, Dravix's business lead.
 
 ## Licence
 
