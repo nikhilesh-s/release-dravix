@@ -3,6 +3,8 @@ message: "If you use this software, please cite it using the metadata below, and
 type: software
 title: "Dravix: formulation-to-cone-calorimeter property models and benchmark code"
 version: "2.0.0"
+doi: "10.5281/zenodo.23653502"
+date-released: "2026-10-25"
 license: "Apache-2.0"
 repository-code: "https://github.com/nikhilesh-s/release-dravix"
 url: "https://dravix.materiamse.com"
@@ -35,6 +37,10 @@ references:
   - type: data
     title: "Dravix cone-calorimeter literature benchmark"
     version: "v1"
+    doi: "10.5281/zenodo.23654307"
+    year: 2026
+    publisher:
+      name: "Zenodo"
     authors:
       - family-names: "Suravarjjala"
         given-names: "Nikhilesh"

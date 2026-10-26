@@ -1,14 +1,22 @@
 # Dravix
 
 [![Licence: Apache-2.0](https://img.shields.io/badge/licence-Apache--2.0-blue.svg)](LICENSE)
+[![Software DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23653502.svg)](https://doi.org/10.5281/zenodo.23653502)
+[![Dataset DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23654307.svg)](https://doi.org/10.5281/zenodo.23654307)
 
 Dravix predicts cone-calorimeter results (time to ignition, peak and average heat release rate, total heat released) for flame-retarded polymer formulations, scores them with a composite fire-risk screening score (CFRS Score), and benchmarks the predictions on data extracted from the published literature.
 
 Authors: Nikhilesh Suravarjjala, Arnav Saini. Version 2.0.0. See `CITATION.cff` to cite.
 
+Cite the software as: Suravarjjala, N., & Saini, A. (2026). *Dravix: formulation-to-cone-calorimeter property models and benchmark code* (Version 2.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.23653502
+
+Cite the data as: Suravarjjala, N., & Saini, A. (2026). *Dravix cone-calorimeter literature benchmark* (Version v1) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23654307
+
 | | |
 |---|---|
 | Website | https://dravix.materiamse.com |
+| Software record (Zenodo) | https://doi.org/10.5281/zenodo.23653502 |
+| Benchmark dataset (Zenodo, CC BY 4.0) | https://doi.org/10.5281/zenodo.23654307 |
 | Engine (web app) | https://dravix-engine.materiamse.com |
 | Blog post (Materia MSE) | https://www.materiamse.com/blog/tri-valley-students-beat-georgia-tech-ustc-bme-budapest |
 
