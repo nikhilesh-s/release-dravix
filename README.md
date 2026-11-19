@@ -15,6 +15,7 @@ Dravix is a screening aid. It helps rank candidates before a fire test. It does 
 |---|---|
 | Software record, v2.0.0 | [10.5281/zenodo.23653502](https://doi.org/10.5281/zenodo.23653502) |
 | Benchmark dataset, v1, CC BY 4.0 | [10.5281/zenodo.23654307](https://doi.org/10.5281/zenodo.23654307) |
+| Full dataset, v2 preview: 5,788 rows from 1,016 papers, CC BY 4.0 (Zenodo deposit planned) | [`dataset-v2/`](dataset-v2/) on branch `dataset-v2` |
 | Protocol, results and comparisons | [`BENCHMARK.md`](BENCHMARK.md) |
 | Pre-declared configs, critic reviews, run logs | `experiments/` |
 | Live site and engine demo | [dravix.materiamse.com](https://dravix.materiamse.com), [dravix-engine.materiamse.com](https://dravix-engine.materiamse.com) |
